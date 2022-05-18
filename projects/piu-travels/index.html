@@ -1,0 +1,543 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<title>Page Name | Site Name</title>
+<link rel="stylesheet" type="text/css" href="styles/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<script src="scripts/jquery-min.js" type="text/javascript"></script>
+<script src="scripts/jquery.bxslider.min.js"></script><script>
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+      });
+    } 
+  });
+  	$('.navigation-links ul li a').click(function(){
+    if($('.hamburger').hasClass('is-active'))
+    { $('.hamburger').removeClass('is-active');
+      $('.hamburger').addClass('is-inactive');
+      $('.navigation-overlay').fadeOut();
+      $('.main-nav-container').removeClass('open-nav-cntr bounceInRight')
+    } 
+  });
+});
+</script>
+</head>
+<body>
+<div class="loader"></div>
+<div class="wrapper">
+  <header class="header">
+    <div class="container">
+      <div class="navigation-box">
+        <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="PIU Travels" title="PIU Travels"></a> </div>
+        <div class="navigation-cntr">
+          <div class="hamberger-navicon">
+            <div class="hamberger-cntr">
+              <div class="hamburger hamburger--squeeze is-inactive" id="hamburger"> <span class="hamburger--outer"><span class="hamburger--inner"></span></span> <span class="hamburger--outer"><span class="hamburger--inner"></span></span> <span class="hamburger--outer"><span class="hamburger--inner"></span></span> <span class="hamburger--outer"><span class="hamburger--inner"></span></span> <span class="hamburger--outer"><span class="hamburger--inner"></span></span> <span class="hamburger--outer"><span class="hamburger--inner"></span></span> <span class="hamburger--outer"><span class="hamburger--inner"></span></span> </div>
+            </div>
+            <div class="navigation">
+              <div class="navigation-overlay"></div>
+              <div class="main-nav-container animated">
+                <div class="nav-logo"> <a href="#"><img src="images/gray-logo.png"></a> </div>
+                <div class="navigation-links">
+                  <ul>
+                    <li><a href="index.html" class="sliding-u-l-r-l">Home</a></li>
+                    <li><a href="about-us.html" class="sliding-u-l-r-l">About</a></li>
+                    <li><a href="index.html#destination" class="sliding-u-l-r-l">Destination</a></li>
+                    <li><a href="index.html#packages" class="sliding-u-l-r-l">Packages</a></li>
+                    <li><a href="index.html#services" class="sliding-u-l-r-l">Services</a></li>
+                    <li><a href="index.html#contact-us" class="sliding-u-l-r-l">Contact</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </header>
+  <div class="banner-box">
+    <div class="full-slider">
+      <div class="custom-pre-control"><a href="javascript:void(0);" id="slider-prev"> </a> </div>
+      <ul class="bxslider">
+        <li data-image-src="images/banner.jpg">
+          <div class="container">
+            <div class="slider-Large-txt slide-overlay blue-overlay">
+              <div class="s-Big-txt"> Dis <span>Cover</span>
+                <div class="slider-smalltxt">The world with Piu Travels</div>
+              </div>
+            </div>
+            <div class="join-us-btn slide-overlay2 blue-overlay">
+              <div class="join-us-link"><a href="index.html#contact-us" class="Sliderjoin-us-icon">Join Us</a></div>
+            </div>
+          </div>
+        </li>
+        <li data-image-src="images/banner-1.jpg">
+          <div class="container">
+            <div class="slider-Large-txt slide-overlay blue-overlay">
+              <div class="s-Big-txt"> Dis <span>Cover</span>
+                <div class="slider-smalltxt">The world with Piu Travels</div>
+              </div>
+            </div>
+            <div class="join-us-btn slide-overlay2 blue-overlay">
+              <div class="join-us-link"><a href="index.html#contact-us" class="Sliderjoin-us-icon">Join Us</a></div>
+            </div>
+          </div>
+        </li>
+        <li data-image-src="images/banner-2.jpg">
+          <div class="container">
+            <div class="slider-Large-txt slide-overlay grey-overlay">
+              <div class="s-Big-txt"> Dis <span>Cover</span>
+                <div class="slider-smalltxt">The world with Piu Travels</div>
+              </div>
+            </div>
+            <div class="join-us-btn slide-overlay2 grey-overlay">
+              <div class="join-us-link"><a href="index.html#contact-us" class="Sliderjoin-us-icon">Join Us</a></div>
+            </div>
+          </div>
+        </li>
+        <li data-image-src="images/banner-3.jpg">
+          <div class="container">
+            <div class="slider-Large-txt slide-overlay orange-overlay">
+              <div class="s-Big-txt"> Dis <span>Cover</span>
+                <div class="slider-smalltxt">The world with Piu Travels</div>
+              </div>
+            </div>
+            <div class="join-us-btn slide-overlay2 orange-overlay">
+              <div class="join-us-link"><a href="index.html#contact-us" class="Sliderjoin-us-icon">Join Us</a></div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="custom-next-control"><a href="javascript:void(0);" id="slider-next"> </a> </div>
+    </div>
+  </div>
+  <div class="section event-section">
+    <div class="container">
+      <div class="event-content">
+        <h2 class="wow animated fadeInDown" data-wow-delay="0.1s" data-wow-offset="50">Events</h2>
+        <div class="event-desc wow animated fadeInUp" data-wow-delay="0.1s" data-wow-offset="50"> There are several exciting events around the year that you can avail as a perk of being an associate of Piu Travels. We organise many fun activities and refreshing trips throughout the year and events you can gladly partake in.  </div>
+        <div class="event-and-exhibition">
+          <div class="events-list-cols">
+            <ul>
+              <li class="wow animated fadeInDown" data-wow-delay="0.1s" data-wow-offset="50">
+                <div class="event-box-count">01</div>
+                <h3>MICE</h3>
+                <p>In the contemporary world<br>
+                  today, travelling is not jus</p>
+                  
+                <div class="know-morelink"> <a href="javascript:void(0);" onClick="overlayBox('mice')">KNOW MORE</a> </div>
+              </li>
+              <li class="wow animated fadeInUp" data-wow-delay="0.4s" data-wow-offset="50">
+                <div class="event-box-count">02</div>
+                <h3>GIT</h3>
+                <p>Being a lone traveller is hardly<br>
+                  easy when the journey</p>
+                <div class="know-morelink"> <a href="javascript:void(0);" onClick="overlayBox('git')">KNOW MORE</a> </div>
+              </li>
+              <li class="wow animated fadeInDown" data-wow-delay="0.8s" data-wow-offset="50">
+                <div class="event-box-count">03</div>
+                <h3>FIT</h3>
+                <p>For those of us who prefer a<br>
+                  solo tour across the places</p>
+                <div class="know-morelink"> <a href="javascript:void(0);" onClick="overlayBox('fit')">KNOW MORE</a> </div>
+              </li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+          <div class="exhibitions-slider wow animated fadeIn" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="custom-pre-control"><a href="javascript:void(0);" id="exslider-prev"> <img src="images/exhibition-pre.png"> </a> </div>
+            <ul class="exhibition-bxslider">
+              <li> <img src="images/event1.jpg">
+                <!--<div class="exhibition-txt">
+                  <h3>Exhibitions</h3>
+                  <p>Cras iaculis velit nec tortor fringilla, id<br>
+                    vehicula velit ultricies. Aenean tempus<br>
+                    lectus in justo</p>
+                </div>-->
+              </li>
+              <li> <img src="images/event2.jpg">
+                <!--<div class="exhibition-txt">
+                  <h3>Exhibitions2</h3>
+                  <p>Cras iaculis velit nec tortor fringilla, id<br>
+                    vehicula velit ultricies. Aenean tempus<br>
+                    lectus in justo</p>
+                </div>-->
+              </li>
+              <li> <img src="images/event3.jpg">
+                <!--<div class="exhibition-txt">
+                  <h3>Exhibitions2</h3>
+                  <p>Cras iaculis velit nec tortor fringilla, id<br>
+                    vehicula velit ultricies. Aenean tempus<br>
+                    lectus in justo</p>
+                </div>-->
+              </li>
+            </ul>
+            <div class="custom-next-control"><a href="javascript:void(0);" id="exslider-next"> <img src="images/exhibition-next.png"> </a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section destination-section">
+    <div class="container">
+    <div id="destination"></div>
+      <h2 class="wow animated fadeInDown" data-wow-delay="0.2s" data-wow-offset="50">Destination</h2>
+      <div class="event-desc wow animated fadeInUp" data-wow-delay="0.4s" data-wow-offset="50"> From the breathtaking mountains in Kashmir to sunkissed Goa beaches, from watery bylanes of Venice to the scintillating landscape of Istanbul, we all have a list of dream destinations. Piu Travels strives to make you live your dream. </div>
+      <div class="destions-cols">
+        <ul>
+          <li class="wow animated fadeInLeft" data-wow-delay="0.6s" data-wow-offset="50">
+            <div class="destination-txt"> Travel<br>
+              packages </div>
+            <div class="know-morelink"> <a href="travel-packages.html">KNOW MORE</a> </div>
+          </li>
+          <li class="wow animated fadeInRight" data-wow-delay="0.8s" data-wow-offset="50">
+            <div class="destination-txt">Wedding<br>
+              packages</div>
+            <div class="know-morelink"> <a href="wedding-packages.html">KNOW MORE</a> </div>
+          </li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <div class="section packages-section">
+    <div class="container">
+    <div id="packages"></div>
+      <h2 class="wow animated fadeInDown" data-wow-delay="0.2s" data-wow-offset="50">Exciting <span>Packages</span></h2>
+      <div class="event-desc wow animated fadeInUp" data-wow-delay="0.4s" data-wow-offset="50"> It is very tricky to have a tour that is both emotionally fulfilling as well as economic. Piu Travels finds you the right balance with the right package. Because compromising is not something to look forward to when you are planning a vacation.   </div>
+      <div class="packages-cols">
+      	<div class="side-block wow animated fadeInLeft" data-wow-delay="0.4s" data-wow-offset="50">
+        	<span class="top">01</span>
+          <span class="bottom">03</span>
+        </div>
+        <ul>
+          <li class="wow animated fadeInDown" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="package-col-image"> <img src="images/hotel.jpg"> </div>
+            <div class="packages-col-txt">
+              <div class="dis-table">
+                <div class="dis-tablecell">
+                  <h3>Hotel</h3>
+                  <div class="know-morelink"> <a href="hotel.html">KNOW MORE</a> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="wow animated fadeInDown" data-wow-delay="0.4s" data-wow-offset="50">
+            <div class="package-col-image"> <img src="images/adventure-tour.jpg"> </div>
+            <div class="packages-col-txt">
+              <div class="dis-table">
+                <div class="dis-tablecell">
+                  <h3>Adventure Tour</h3>
+                  <div class="know-morelink"> <a href="adventure-tour.html">KNOW MORE</a> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="wow animated fadeInUp" data-wow-delay="0.6s" data-wow-offset="50">
+            <div class="package-col-image"> <img src="images/golf-tea-tourism.jpg"> </div>
+            <div class="packages-col-txt">
+              <div class="dis-table">
+                <div class="dis-tablecell">
+                  <h3>Golf & <br>
+                    Tea Tourism</h3>
+                  <div class="know-morelink"> <a href="golf-tea-tourism.html">KNOW MORE</a> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="wow animated fadeInUp" data-wow-delay="0.8s" data-wow-offset="50">
+            <div class="package-col-image"> <img src="images/educational-tour.jpg"> </div>
+            <div class="packages-col-txt">
+              <div class="dis-table">
+                <div class="dis-tablecell">
+                  <h3>Educational<br>
+                    Tour</h3>
+                  <div class="know-morelink"> <a href="educational-tour.html">KNOW MORE</a> </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="clear"></div>
+        <div class="side-block right-side-block wow animated fadeInRight" data-wow-delay="0.6s" data-wow-offset="50">
+        	<span class="top">02</span>
+          <span class="bottom">04</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section international-section">
+  	<div class="container">
+    <div id="services"></div>
+    	<div class="international-tabs">
+      	<div class="tabCnt">
+          <div class="tabNav wow animated fadeInLeft" data-wow-delay="0.2s" data-wow-offset="50">
+            <ul>
+              <li><a href="javascript:void(0)" rel="forex-tab" class="active">Forex<span>Money exchange</span></a></li>
+              <li><a href="javascript:void(0)" rel="visa-tab">Visa <span>passport asst</span></a></li>
+              <li><a href="javascript:void(0)" rel="international-tab">International <span>Packages</span></a></li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+          <div class="tabResult wow animated fadeInRight" data-wow-delay="0.4s" data-wow-offset="50">
+            <div class="tabBx overview" id="forex-tab" style="display:block">
+              <div class="content">
+                <div class="international-txt">
+                	<h3>Forex</h3>
+                  <p>One of the main difficulties pertaining to a trip abroad involves the rigorous currency exchange routine one has to undergo before the trip and post the trip. To facilitate easy conversion of  money, Piu Travels undertakes this job for you to ensure you are never short of cash on a trip. The actual process requires heavy investment in terms of time and man power and our busy schedules hardly allow us space for such errands. As a travelling agency catering to all your needs, we provide fast and immediate conversion of currency so that you can perform any transaction at any time according to your convenience. We also, simultaneously, look after your finances to prevent you from exceeding your budget.</p>
+                </div>
+              </div>
+            </div>
+            <div class="tabBx overview" id="visa-tab">
+              <div class="content">
+                <div class="international-txt">
+                	<h3>Visa</h3>
+                  <p>One of the main difficulties pertaining to a trip abroad involves the rigorous currency exchange routine one has to undergo before the trip and post the trip. To facilitate easy conversion of  money, Piu Travels undertakes this job for you to ensure you are never short of cash on a trip. The actual process requires heavy investment in terms of time and man power and our busy schedules hardly allow us space for such errands. As a travelling agency catering to all your needs, we provide fast and immediate conversion of currency so that you can perform any transaction at any time according to your convenience. We also, simultaneously, look after your finances to prevent you from exceeding your budget.</p>
+                </div>
+              </div>
+            </div>
+            <div class="tabBx overview" id="international-tab">
+              <div class="content">
+                <div class="international-txt">
+                	<h3>International</h3>
+                  <p>One of the main difficulties pertaining to a trip abroad involves the rigorous currency exchange routine one has to undergo before the trip and post the trip. To facilitate easy conversion of  money, Piu Travels undertakes this job for you to ensure you are never short of cash on a trip. The actual process requires heavy investment in terms of time and man power and our busy schedules hardly allow us space for such errands. As a travelling agency catering to all your needs, we provide fast and immediate conversion of currency so that you can perform any transaction at any time according to your convenience. We also, simultaneously, look after your finances to prevent you from exceeding your budget.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="section footer">
+    <div class="container"> 
+    <div id="contact-us"></div>
+    	<div class="footer-content">
+      	<div class="footer-logo wow animated fadeInDown" data-wow-delay="0.2s" data-wow-offset="50">
+        	<img src="images/gray-logo.png">
+        </div>
+        <div class="footer-form">
+        	<div class="grid-layout">
+          	<div class="grid-5">
+            	<div class="footer-address wow animated fadeInLeft" data-wow-delay="0.4s" data-wow-offset="50"><h3>Contact Us</h3>
+                <p><strong>Regd. Office: </strong>Ranaghat: 92, Swami Vivekananda Sarani. Rajbagan Para Court More, Ranaghat, Nadia, West Bengal, India. 741 201. 
+                <br><a href="mailto:ranaghat@piutravelsindia.com">ranaghat@piutravelsindia.com </a><br>Reach us:  +91 -9735008008.</p>
+                
+                <p><strong>Corp. Office: </strong>Kolkata: Sunbeam, Aa 26, <br>New Town, Street No- 61 Action Area I, <br>2nd Floor. Kolkata - 700 156 
+                <br><a href="mailto:kolkata@piutravelsindia.com">kolkata@piutravelsindia.com </a><br>Reach us:  +91 - 9083263904.</p>
+                
+                <p><strong>Branch Office: </strong>27/2/2 M.M. Ghosh Street, Sadar More, Krishnanagar Nadia, Pin - 741 101 
+                <br><a href="mailto:krishnanagar@piutravelsindia.com">krishnanagar@piutravelsindia.com </a><br>Reach us:  +91 9732845000</p>
+              </div>
+            </div>
+            <div class="grid-7">
+            	<div class="footer-form form-cntr wow animated fadeInRight" data-wow-delay="0.6s" data-wow-offset="50">
+              	<div class="grid-layout form-layout">
+                	<div class="form-row">
+                  	<div class="grid-6">
+                    	<div class="form-field"><label>NAME</label>
+                      <input type="text"></div>
+                    </div>
+                    <div class="grid-6">
+                    	<div class="form-field"><label>EMAIL ID</label>
+                      <input type="text"></div>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                  <div class="form-row">
+                  	<div class="grid-6">
+                    	<div class="form-field"><label>PHONE</label>
+                      <input type="text"></div>
+                    </div>
+                    <div class="grid-6">
+                    	<div class="form-field"><label>MESSAGE</label>
+                      <input type="text"></div>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                  <div class="form-row">
+                  	<div class="grid-6">
+                    	&nbsp;
+                    </div>
+                    <div class="grid-6">
+                    	<div class="form-field form-buttoncntr"><input type="submit" value="SUBMIT"></div>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="footer-bottom">
+    <div class="container"> 
+    	<div class="designed-and-developed">
+        <ul>
+        <li> Designed by <a href="http://www.anonymousdigital.com" target="_blank">Anonymous</a> </li>
+        <li class="mob-dspn"> | </li>
+        <li> Developed by <a href="http://kalptech.com" target="_blank">Kalptech Systems</a></li>
+        </ul>
+        </div>
+    </div>
+  </div>
+    <div class="fl-join-us" style="display: none;">
+        <div class="join-us-btn slide-overlay2 blue-overlay wow">
+            <div class="join-us-link"><a href="index.html#contact-us" class="Sliderjoin-us-icon">Join Us</a></div>
+        </div>
+    </div>
+</div>
+
+<div class="overlay" id="mice" data-animation-in="rollIn" data-animation-out="rollOut">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-header"> MICE </div>
+      <div class="overlay-content">
+        <p>In the contemporary world today, travelling is not just synonymous with holidays or vacations. In fact, most of the travelling today are related to important work or business related trips. The main concept of MICE is bringing a moderate to a large number of people together for a specific purpose. Thus, trips and tourisms of such genres are planned well in advance, depending thoroughly on the scale of the tour and it takes rigorous detailing. Piu Travels looks to resolve all your hassles regarding such grand scale tours and trips to ensure a smooth running of trips that do not interfere with or jeopardise your work in any possible way.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="overlay" id="git" data-animation-in="rollIn" data-animation-out="rollOut">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-header"> GIT </div>
+      <div class="overlay-content">
+        <p>Being a lone traveller is hardly easy when the journey gets tedious or weary. Piu Travels takes care of your travelling needs and makes sure you travel with people who are compatible with you so that you have a vacation with suitable company and easy on your pockets.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="fit" data-animation-in="rollIn" data-animation-out="rollOut">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-header"> FIT </div>
+      <div class="overlay-content">
+        <p>For those of us who prefer a solo tour across the places of their choice and exploring places on their own.  Piu Travels keeps your priorities in mind and arranges a tour plan that is tailor made for you.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+var animationIn, target, animationOut;
+function overlayBox(popupID)
+{
+  target = $('#' + popupID)
+  animationIn = target.attr('data-animation-in');
+  animationOut = target.attr('data-animation-out');
+  if (typeof (animationIn) == 'undefined' || animationIn === '(an empty string)' || animationIn === null || animationIn === '')
+  {    
+    animationIn = 'zoomIn';
+  }
+  if (typeof (animationOut) == 'undefined' || animationOut === '(an empty string)' || animationOut === null || animationOut === '')
+  {
+    animationOut = 'zoomOut';
+  }
+  $('body').append('<div class="overlay-bg"></div>')
+  target.find('.overlay-header').append('<div class="closeBtn">X</div>');
+  target.css('visibility', 'visible').css('display', 'block').find('.overlay-box').addClass('animated').addClass(animationIn);
+  $(document).on('click', '.closeBtn', function () {
+    $('.overlay').find('.overlay-box').removeClass('animated').removeClass(animationIn).addClass('animated ' + animationOut);
+    $('body .overlay-bg').fadeOut(1000, function () {
+      $(this).remove();
+      $('.overlay').css('visibility', 'hidden').css('display', 'none').find('.overlay-box').removeClass('animated').removeClass(animationIn).removeClass(animationOut);
+    });
+  });
+}
+
+</script>
+<script src="scripts/wow.min.js"></script> 
+<script>
+	new WOW().init();
+</script> 
+<script>
+      $(window).load(function(){
+				slider=$('.bxslider').bxSlider({
+				auto: true,
+				preloadImages: 'all',
+				mode: 'horizontal',
+				captions: false,
+				controls: false,
+				pager:false,
+				pause:7000,
+				speed:1000,
+				touchEnabled:false,
+				onSliderLoad: function () {
+						$('.bxslider>li .slide-overlay').eq(1).addClass('active-slide');
+						$(".slide-overlay.active-slide").addClass("wow animated fadeInLeft");
+						$('.bxslider>li .slide-overlay2').eq(1).addClass('active-slide');
+						$(".slide-overlay2.active-slide").addClass("wow animated fadeInRight");
+				},
+				onSlideAfter: function (currentSlideNumber, totalSlideQty, currentSlideHtmlObject) {
+						console.log(currentSlideHtmlObject);
+						$('.active-slide').removeClass('active-slide');
+						$('.bxslider>li .slide-overlay').eq(currentSlideHtmlObject + 1).addClass('active-slide');
+						$(".slide-overlay.active-slide").addClass("animated fadeInLeft");
+						$('.bxslider>li .slide-overlay2').eq(currentSlideHtmlObject + 1).addClass('active-slide');
+						$(".slide-overlay2.active-slide").addClass("animated fadeInRight");
+				
+				},
+				onSlideBefore: function () {
+						$(".slide-overlay.active-slide").removeClass("animated fadeInLeft");
+						$(".slide-overlay.blue-overlay.active-slide").removeAttr('style');
+						$(".slide-overlay2.active-slide").removeClass("animated fadeInRight");
+						$(".slide-overlay2.blue-overlay.active-slide").removeAttr('style');
+				
+				}
+		});
+		$('#slider-next').click(function(){
+			slider.goToNextSlide();
+			return false;
+		});
+		
+		$('#slider-prev').click(function(){
+			slider.goToPrevSlide();
+			return false;
+		});
+		
+		slider2=$('.exhibition-bxslider').bxSlider({
+				auto: true,
+				preloadImages: 'all',
+				mode: 'fade',
+				captions: false,
+				controls: false,
+				pager:false,
+				pause:7000,
+				speed:1000,
+				touchEnabled:false
+		});
+		$('#exslider-next').click(function(){
+			slider2.goToNextSlide();
+			return false;
+		});
+		
+		$('#exslider-prev').click(function(){
+			slider2.goToPrevSlide();
+			return false;
+		});
+		
+	})
+    </script> 
+<script src="scripts/common.js" type="text/javascript"></script>
+</body>
+</html>
