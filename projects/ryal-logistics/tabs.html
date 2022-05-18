@@ -1,0 +1,504 @@
+<html>
+
+<head>
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid cl">
+            <a href="#" class="logo fl">
+                <img src="images/rayal-logo.png" alt="">
+            </a>
+            <div id="main_nav" class="fl">
+                <ul>
+                    <li class="active"><a href="#">Master</a>
+                        <ul>
+                            <li><a href="#">Master 1</a></li>
+                            <li><a href="#">Master 2</a></li>
+                            <li><a href="#">Master 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Transaction</a>
+                        <ul>
+                            <li><a href="#">Master 1</a></li>
+                            <li><a href="#">Master 2</a></li>
+                            <li><a href="#">Master 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="right_nav" class="fr">
+                <ul>
+                    <li class="login-user">Hi, <person>Sean</person> (All Departments/Full Rights)<br>
+                        <a href="#" class="inline">Logout</a> <time>Time out 24:12</time><a href="#"
+                            class="inline inline-btn">Reset</a>
+                    </li>
+                    <!--li class="login-user"><a href="#">User Name</a>
+                            <ul>
+                                <li><a href="#">My Profile</a></li>
+                                <li><a href="#">My Tasks</a></li>
+                                <li><a href="#">Logout</a></li>
+                            </ul>
+                        </li-->
+                    <li id="notification-bar-wrap"><a href="#" class="noti-ico">
+                            <span class="count">4</span><i class="las la-bell" style="font-size:26px"></i>
+                        </a>
+                        <div class="notification-bar">
+                            <h3>
+                                <i class="las la-bell" style="font-size: 42px;position: relative;top: 6px;">
+                                    <span class="count">4</span>
+                                </i>
+                                Notification
+                            </h3>
+                            <ul>
+                                <li>The Metronic Datatable component supports local</li>
+                                <li>For the local data you can pass javascript array as data source</li>
+                                <li>The Metronic Datatable component supports local</li>
+                                <li>For the local data you can pass javascript array as data source</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <section id="breadcrumb">
+            <div class="container-fluid cl">
+                <ul>
+                    <li class="page-name">ADD BUSINESS COMPANY MASTER</li>
+                    <li><a href="#"><i class="las la-home"></i></a></li>
+                    <li><span class="dot"></span></li>
+                    <li><a href="#">Master</a></li>
+                    <li><span class="dot"></span></li>
+                    <li><a href="#">Business Master</a></li>
+                    <li><span class="dot"></span></li>
+                    <li><a href="#">Manage Business Company</a></li>
+                </ul>
+                <ul class="fr btn-head-group">
+                    <li><a href="index.html" class="green"><i class="las la-save"></i><span>Save</span></a></li>
+                    <li><a href="index.html" class="red"><i class="las la-times"></i><span>Cancel</span></a></li>
+                </ul>
+            </div>
+        </section>
+    </header>
+    <section id="main-container">
+        <div class="container-fluid">
+            <div class="panel">
+                <div class="panel-body">
+                    <div class="tabs">
+                        <div class="tab-nav cl">
+                            <ul>
+                                <li class="active"><a href="#">Account Details</a></li>
+                                <li><a href="#">Airline Details</a></li>
+                                <li><a href="#">Cargo Details</a></li>
+                                <li><a href="#">Charges &amp; Other Details</a></li>
+                            </ul>
+                        </div>
+                        <div class="tab-content-wrap form-design">
+                            <div class="tab-content show">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="fgroup">
+                                            <label for="hawb">HAWB No.</label>
+                                            <input type="text" id="hawb">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="fgroup">
+                                            <label for="hawbname">HAWB Name</label>
+                                            <input type="text" id="hawbname">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="fgroup">
+                                            <label for="date">Date</label>
+                                            <input type="text" id="date" class="datepicker">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="fgroup">
+                                            <label for="expinvno">EXP Invoice No.</label>
+                                            <input type="text" id="expinvno">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="fgroup">
+                                            <label for="shipbillno">Shipping Bill No.</label>
+                                            <input type="text" id="shipbillno">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="fgroup">
+                                            <label for="shipper">Shipper</label>
+                                            <input type="text" id="shipper">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="fgroup">
+                                            <label for="consignee">Consignee</label>
+                                            <input type="text" id="consignee">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="fgroup">
+                                            <label for="expinvoicedate">EXP Invoice Date</label>
+                                            <input type="text" id="expinvoicedate" class="datepicker">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col col-50">
+                                        <div class="fgroup">
+                                            <label for="shipbillno">Shipping Bill No.</label>
+                                            <textarea id="shipbillno" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col col-50">
+                                        <div class="fgroup">
+                                            <label for="shipper">Shipper</label>
+                                            <textarea id="shipper" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-content">
+                                <div class="row">
+                                    <div class="col col-50">
+                                        <div class="fgroup">
+                                            <label for="destination">Destination</label>
+                                            <input type="text" id="destination">
+                                        </div>
+                                    </div>
+                                    <div class="col col-50">
+                                        <div class="fgroup">
+                                            <label for="tracknumber">Tracking Number</label>
+                                            <input type="text" id="tracknumber">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="fgroup">
+                                            <label for="currency">Currency</label>
+                                            <input type="text" id="currency">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="fgroup">
+                                            <label for="freight">Freight</label>
+                                            <input type="text" id="freight">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="fgroup">
+                                            <label for="others">Others</label>
+                                            <input type="text" id="others">
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="fgroup">
+                                            <label for="status">Status</label>
+                                            <input type="text" id="status">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cl">
+                                    <table>
+                                        <thead>
+                                            <th>From</th>
+                                            <th>To</th>
+                                            <th>By</th>
+                                            <th>Flight No</th>
+                                            <th>Dept Date</th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><input type="text"></td>
+                                                <td><input type="text"></td>
+                                                <td>
+                                                    <div class="fgroup"><select>
+                                                            <option value="">--Select--</option>
+                                                            <option value="24">AC - google</option>
+                                                            <option selected="selected" value="25"> - Airlines123
+                                                            </option>
+                                                            <option value="39">AZ - SAPPHIRE CARGO</option>
+                                                            <option value="40">AC - RI Airlines Test1</option>
+                                                            <option value="49">AC - Rituraj CARGO</option>
+                                                            <option value="61">AZ - RI TEST AIR1</option>
+                                                            <option value="65">AZ - RI TEST AIR2</option>
+                                                            <option value="79">AZ - RI TEST AIR3</option>
+                                                            <option value="82">AZ - RI TEST AIR4</option>
+                                                        </select>
+                                                        <i class="las la-angle-down dropdown-ico"></i>
+                                                    </div>
+                                                </td>
+                                                <td><input type="text"></td>
+                                                <td><input type="text"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text"></td>
+                                                <td><input type="text"></td>
+                                                <td>
+                                                    <div class="fgroup"><select>
+                                                            <option value="">--Select--</option>
+                                                            <option value="24">AC - google</option>
+                                                            <option selected="selected" value="25"> - Airlines123
+                                                            </option>
+                                                            <option value="39">AZ - SAPPHIRE CARGO</option>
+                                                            <option value="40">AC - RI Airlines Test1</option>
+                                                            <option value="49">AC - Rituraj CARGO</option>
+                                                            <option value="61">AZ - RI TEST AIR1</option>
+                                                            <option value="65">AZ - RI TEST AIR2</option>
+                                                            <option value="79">AZ - RI TEST AIR3</option>
+                                                            <option value="82">AZ - RI TEST AIR4</option>
+                                                        </select>
+                                                        <i class="las la-angle-down dropdown-ico"></i>
+                                                    </div>
+                                                </td>
+                                                <td><input type="text"></td>
+                                                <td><input type="text"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text"></td>
+                                                <td><input type="text"></td>
+                                                <td>
+                                                    <div class="fgroup"><select>
+                                                            <option value="">--Select--</option>
+                                                            <option value="24">AC - google</option>
+                                                            <option selected="selected" value="25"> - Airlines123
+                                                            </option>
+                                                            <option value="39">AZ - SAPPHIRE CARGO</option>
+                                                            <option value="40">AC - RI Airlines Test1</option>
+                                                            <option value="49">AC - Rituraj CARGO</option>
+                                                            <option value="61">AZ - RI TEST AIR1</option>
+                                                            <option value="65">AZ - RI TEST AIR2</option>
+                                                            <option value="79">AZ - RI TEST AIR3</option>
+                                                            <option value="82">AZ - RI TEST AIR4</option>
+                                                        </select>
+                                                        <i class="las la-angle-down dropdown-ico"></i>
+                                                    </div>
+                                                </td>
+                                                <td><input type="text"></td>
+                                                <td><input type="text"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><input type="text"></td>
+                                                <td><input type="text"></td>
+                                                <td>
+                                                    <div class="fgroup"><select>
+                                                            <option value="">--Select--</option>
+                                                            <option value="24">AC - google</option>
+                                                            <option selected="selected" value="25"> - Airlines123
+                                                            </option>
+                                                            <option value="39">AZ - SAPPHIRE CARGO</option>
+                                                            <option value="40">AC - RI Airlines Test1</option>
+                                                            <option value="49">AC - Rituraj CARGO</option>
+                                                            <option value="61">AZ - RI TEST AIR1</option>
+                                                            <option value="65">AZ - RI TEST AIR2</option>
+                                                            <option value="79">AZ - RI TEST AIR3</option>
+                                                            <option value="82">AZ - RI TEST AIR4</option>
+                                                        </select>
+                                                        <i class="las la-angle-down dropdown-ico"></i>
+                                                    </div>
+                                                </td>
+                                                <td><input type="text"></td>
+                                                <td><input type="text"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab-content">
+                                <div class="row cl marB10">
+                                    <div class="col col-50">
+                                        <label>COMMODITY : <strong>General</strong></label>
+                                    </div>
+                                    <div class="col col-50 text-right">
+                                        <label>Pull Data From: <strong><a href="#"
+                                                    class="btn btn-small">Warehouse</a></strong></label>
+                                    </div>
+                                </div>
+                                <div>
+                                    <table cellpadding="0" cellspacing="0" border="0" class="table marB10">
+                                        <thead>
+                                            <tr>
+                                                <th>Package type</th>
+                                                <th>No of Pieces</th>
+                                                <th>Gross Weight(Kg)</th>
+                                                <th>Charge Wt(Kg)</th>
+                                                <th>Unit Rate</th>
+                                                <th>Rate Class</th>
+                                                <th>Amount</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Drum</td>
+                                                <td>8</td>
+                                                <td>700</td>
+                                                <td>4</td>
+                                                <td>60</td>
+                                                <td>M</td>
+                                                <td>42000</td>
+                                                <td><a href="#" class="btn btn-small btn-clean"><i
+                                                            class="las la-edit"></i></a><a href="#"
+                                                        class="btn btn-small btn-clean"><i class="las la-trash"></i></a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Total</td>
+                                                <td>8</td>
+                                                <td>700</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>42000</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div><a href="#" class="btn">Add</a></div>
+                                </div>
+                            </div>
+                            <div class="tab-content">
+                                <div class="row">
+                                    <div class="col col-50">
+                                        <div class="row">
+                                            <div class="col col-50">
+                                                <div class="fgroup">
+                                                    <label for="dsrdate">DSR Date</label>
+                                                    <input type="text" id="dsrdate" class="datepicker">
+                                                </div>
+                                            </div>
+                                            <div class="col col-50">
+                                                <div class="fgroup">
+                                                    <label for="csrdate">CSR Date</label>
+                                                    <input type="text" id="csrdate" class="datepicker">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col col-33">
+                                                <div class="fgroup">
+                                                    <label for="insurance">Insurance</label>
+                                                    <input type="text" id="insurance">
+                                                </div>
+                                            </div>
+                                            <div class="col col-33">
+                                                <div class="fgroup">
+                                                    <label for="vfcustoms">Value for Customs</label>
+                                                    <input type="text" id="vfcustoms">
+                                                </div>
+                                            </div>
+                                            <div class="col col-33">
+                                                <div class="fgroup">
+                                                    <label for="vfcarrige">Value for Carrige</label>
+                                                    <input type="text" id="vfcarrige">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col col-50">
+                                                <div class="fgroup">
+                                                    <label for="cargotype">Cargo Type</label>
+                                                    <input type="text" id="cargotype">
+                                                </div>
+                                            </div>
+                                            <div class="col col-50">
+                                                <div class="fgroup">
+                                                    <label for="service">Service</label>
+                                                    <input type="text" id="service">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="check-group">
+                                                <div class="row marTB10">
+                                                    <div class="col"><input type="checkbox" id="check-1"><label
+                                                            for="check-1">IS
+                                                            Updating</label>
+                                                    </div>
+                                                    <div class="col"><input type="checkbox" id="check-2"><label
+                                                            for="check-2">IS
+                                                            Completed</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col col-50 b-right">
+                                        <div class="row">
+                                            <div class="col col-33">
+                                                <div class="fgroup">
+                                                    <label for="freightc">Freight Charges</label>
+                                                    <input type="text" id="freightc">
+                                                </div>
+                                            </div>
+                                            <div class="col col-33">
+                                                <div class="fgroup">
+                                                    <label for="dccharge">Due Carrier Charges</label>
+                                                    <input type="text" id="dccharge">
+                                                </div>
+                                            </div>
+                                            <div class="col col-33">
+                                                <div class="fgroup">
+                                                    <a href="#" class="btn">Add Charges</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col col-33">
+                                                <div class="fgroup">
+                                                    <label for="dacharges">Due Agent Charges</label>
+                                                    <input type="text" id="dacharges">
+                                                </div>
+                                            </div>
+                                            <div class="col" style="width: 132px;">
+                                                <div class="fgroup">
+                                                    <a href="#" class="btn">Add Charges</a>
+                                                </div>
+                                            </div>
+                                            <div class="col col-33">
+                                                <div class="fgroup">
+                                                    <label for="gfreight">Gross Freight</label>
+                                                    <input type="text" id="gfreight">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-right">
+                                            <a href="#" class="btn">Description of Goods, Acct & Handling</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+
+            </div>
+        </div>
+
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

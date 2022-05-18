@@ -1,0 +1,27 @@
+ErrorDocument 403 https://www.lexlink.com.au/404.html
+ErrorDocument 404 https://www.lexlink.com.au/404.html
+ErrorDocument 500 https://www.lexlink.com.au/404.html
+
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^(www\.)?lexlink\.com.au$
+RewriteRule (.*) https://www.lexlink.com.au/$1 [R=301,L]
+
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^lexlink\.com.au$
+RewriteRule (.*) https://www.lexlink.com.au/$1 [R=301,L]
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_URI} !^/ipg
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress

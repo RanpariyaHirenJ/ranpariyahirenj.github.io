@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<title>Kasino Bar -  Mumbai's first casino themed restro bar</title>
+
+<link rel="stylesheet" type="text/css" href="styles/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link rel="stylesheet" type="text/css" href="styles/jquery.fullPage.css" />
+<link rel="stylesheet" type="text/css" href="styles/fotorama.css">
+<script src="scripts/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="scripts/fotorama.js" type="text/javascript"></script>
+
+<script>
+new WOW().init();
+</script> 
+<script type="text/javascript" src="scripts/jquery.fullPage.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            'verticalCentered': false,
+            'css3': true,
+            'sectionsColor': ['#F0F2F4', '#fff', '#fff', '#fff'],
+            'navigation': true,
+            'navigationPosition': 'right',
+            'navigationTooltips': ['', '', '', ''],
+
+            'afterLoad': function(anchorLink, index){
+                if(index == 2){
+                    $('#iphone3, #iphone2, #iphone4').addClass('active');
+                }
+            },
+
+            'onLeave': function(index, nextIndex, direction){
+                if (index == 3 && direction == 'down'){
+                    $('.section').eq(index -1).removeClass('moveDown').addClass('moveUp');
+                }
+                else if(index == 3 && direction == 'up'){
+                    $('.section').eq(index -1).removeClass('moveUp').addClass('moveDown');
+                }
+
+                $('#staticImg').toggleClass('active', (index == 2 && direction == 'down' ) || (index == 4 && direction == 'up'));
+                $('#staticImg').toggleClass('moveDown', nextIndex == 4);
+                $('#staticImg').toggleClass('moveUp', index == 4 && direction == 'up');
+            }
+        });
+    });
+</script>
+
+<style>
+.inner-banner .inner-bannertxt {padding-top:0px; }
+.inner-banner .inner-bannertxt h2 {font-size: 42px;width: 50%;}
+.inner-banner{position:absolute;width: 100%;}
+.overlay-box .closeBtn {top: -25px;}
+.overlay-info {padding: 0px;display:inline-flex;}
+.overlay-box .overlay-content {display: flex;}
+.overlay-box .overlay-header{position: absolute;right: 0;font-size: 22px;line-height: 25px;}
+.overlay-box .closeBtn {top: -20px;position: absolute;right: 0;width: 20px;height: 20px;}
+@media screen and (min-width: 1600px) and (max-width:1920px) {
+.inner-banner .inner-bannertxt {padding-top:0px; }
+.inner-banner .inner-bannertxt h2 {font-size: 54px;width: 40%;line-height:64px;}
+.inner-banner{position:absolute;width: 100%;}
+}
+
+
+@media screen and (min-width: 0) and (max-width:1199px) {
+.inner-banner .inner-bannertxt {padding-left: 40px;}
+.inner-banner .inner-bannertxt h2 {font-size: 26px;width: 80%;}
+#myVideo{width: 100%;}
+.overlay-info {display: grid;}
+}
+</style>
+
+<!--<script>
+$(document).ready(function(){
+overlayBox('video')
+ });
+</script>-->
+</head>
+<body>
+<div class="overlay" id="video" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-content">
+      	<div class="overlay-header"></div>
+      	  <div class="overlay-info">
+            <!--<video id="myVideo" playsinline autoplay loop>
+                    <source src="video/video.ogg" type="video/ogg">
+                    <source src="video/video.mp4" type="video/mp4">
+            </video>-->
+			<script> 
+			var vid = document.getElementById("myVideo"); 
+			
+			function playVid() { 
+				vid.play(); 
+			} 
+			
+			function pauseVid() { 
+				vid.pause(); 
+			} 
+			</script> 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="loader-wrapper">                
+    <div id="loader">
+        <div>
+            <div class="preloader-cntr infinite animated pulse"> </div>
+        </div>
+    </div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+<div class="wrapper">
+  <div class="banner">
+    <div class="header">
+      <div class="container">
+        <div class="topBand">
+          <ul>
+          	<li class="mobile-navicon">
+            	<div class="mobile-nav-icon">
+              <button class="menu-icon mobil-icon-toggle"> <span>toggle menu</span> </button>
+            </div>
+            </li>
+            <li class="no-margin-ryt"></li>
+            <li class="mobile-nav-cntr">
+              <div class="fixed-left-nav">
+                <div class="dis-table">
+                  <div class="dis-tablecell">
+                    <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="logo"></a> </div>
+                    <div class="menubar">
+                    <div class="leftNav-bar">
+                      <ul>
+                        <li> <a href="cuisine.html">Cuisine</a> </li>
+                        <li> <a href="bar.html">Bar</a></li>
+                        <li> <a href="music.html">Music</a></li>
+                        <li> <a href="packages.html">Packages</a> </li>
+                        <li> <a href="events.html">Events</a> </li>
+                        <li> <a href="">Guest Book</a> </li>
+                        <li> <a href="">Virtual Tour</a> </li>
+                        <li> <a href="contact.html">Contact</a> </li>
+                      </ul>
+                      <div class="clear"></div>
+                        <div class="social-medialeft">
+                      <ul>
+                        <li> <a href="" target="_blank" class="fb-small"><i></i></a> </li>
+                        <li> <a href="" target="_blank" class="instagram-small"><i></i></a> </li>
+                      </ul>
+                      <div class="clear"></div>
+                    </div>
+                    </div>
+                    <div class="footer-logo"> 
+                    	<div class="affiliations-cntr">
+                        	<div class="affiliations-txt">Affiliations</div>
+                            <div class="fotorama" data-width="117" data-ratio="117/28" data-max-width="100%" data-autoplay="3000" data-loop="true" data-swipe="true" data-navposition="bottom" data-direction="ltr" data-fit="contain" data-nav="none" data-click="false" data-stopautoplayontouch="false">
+                              <div class=""><a href="https://www.zomato.com" target="_blank"><img src="images/zomato.png"></a></div>
+                              <div class=""><a href="https://www.dineout.co.in" target="_blank"><img src="images/dine-out.png"></a></div>
+                            </div>
+                            <div class="clear"></div>
+                        </div> 
+                    	<div class="copyright-text">© 2017 Rain Rose Hotels & Restros Pvt. Ltd. <span class="site-buy">Site by <a href="http://www.intermind.in/" target="_blank"> Intermind</a>  </span></div>
+                    </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+     <div id="fullpage">
+      <div class="section banner1" style="background-image: url(images/banner6.jpg);">
+      <div class="blck-bg"></div>
+        <div class="inner-banner">
+            <div class="container">
+          <div class="dis-table">
+            <div class="dis-tablecell">
+                <div class="inner-bannertxt">
+                <h2 class="wow animated fadeInDown" data-wow-delay="0.2s" data-wow-offset="50">Experience... Mumbai's first and only Casino themed restro bar</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="section banner2" style="background-image: url(images/banner5.jpg);">
+      <div class="blck-bg"></div>
+        <div class="inner-banner">
+            <div class="container">
+          <div class="dis-table">
+            <div class="dis-tablecell">
+                <div class="inner-bannertxt">
+                <h2 class="wow animated" data-wow-delay="0.2s" data-wow-offset="50">Enjoy... Stunning decor, dressed to impress bar and swanky dance floor</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="section banner3" style="background-image: url(images/banner4.jpg);">
+      <div class="blck-bg"></div>
+        <div class="inner-banner">
+            <div class="container">
+          <div class="dis-table">
+            <div class="dis-tablecell">
+                <div class="inner-bannertxt">
+                <h2 class="wow animated" data-wow-delay="0.2s" data-wow-offset="50">Taste... Fine dining and authentic world cuisines</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="section banner4" style="background-image: url(images/banner3.jpg);">
+      <div class="blck-bg"></div>
+        <div class="inner-banner">
+            <div class="container">
+          <div class="dis-table">
+            <div class="dis-tablecell">
+                <div class="inner-bannertxt">
+                <h2 class="wow animated" data-wow-delay="0.2s" data-wow-offset="50">Explore... Exotic liquors, incredible cocktails and fun mocktails</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="section banner5" style="background-image: url(images/banner2.jpg);">
+      <div class="blck-bg"></div>
+        <div class="inner-banner">
+            <div class="container">
+          <div class="dis-table">
+            <div class="dis-tablecell">
+                <div class="inner-bannertxt">
+                <h2 class="wow animated" data-wow-delay="0.2s" data-wow-offset="50">Expect... eclectic music, live DJ and performing bands every day</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="section banner6" style="background-image: url(images/banner1.jpg);">
+      <div class="blck-bg"></div>
+        <div class="inner-banner">
+            <div class="container">
+          <div class="dis-table">
+            <div class="dis-tablecell">
+                <div class="inner-bannertxt">
+                <h2 class="wow animated" data-wow-delay="0.2s" data-wow-offset="50">Play... Real feel digital Casino games </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+	</div>
+    <div class="event-cntr">
+    	<div class="container">
+        	<div class="event-slider">
+            	<div class="fotorama" data-width="500" data-ratio="500/68" data-max-width="100%" data-autoplay="false" data-loop="true" data-swipe="true" data-navposition="bottom" data-direction="ltr" data-fit="contain" data-nav="none" data-click="false" data-stopautoplayontouch="false">
+                      <div class="event-details">
+                      <h2>Aamir Meer performing latest bolywood hits live!</h2>
+                      <p>On: Friday January 20 2018 @ 7:00 Pm Onwards</p>
+                      <a href="events.html"><img src="images/play.png"></a>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+	
+
+<script src="scripts/wow.min.js"></script>
+<script>
+$(function(){
+		
+	$(".affiliations-slider").slick({
+		dots: false,
+		infinite: true,
+		centerMode: false,
+		centerPadding: '0px',
+		arrows: false,
+		autoplay: true,
+		slidesToShow: 1,
+  		slidesToScroll: 1,
+		responsive: [
+					{
+						breakpoint: 767,
+						settings: {
+							slidesToShow: 1,
+						}
+					}
+					// You can unslick at a given breakpoint now by adding:
+					// settings: "unslick"
+					// instead of a settings object
+				]
+		
+	});	
+					
+})
+</script> 
+<script src="scripts/slick.js" type="text/javascript" charset="utf-8"></script> 
+<script src="scripts/common.js" type="text/javascript"></script>
+</body>
+</html>

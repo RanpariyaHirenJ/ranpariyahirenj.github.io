@@ -1,0 +1,618 @@
+@charset 'UTF-8';
+/* Slider */
+.slick-loading .slick-list
+{
+    background: #fff url('./ajax-loader.gif') center center no-repeat;
+}
+
+/* Icons */
+@font-face
+{
+    font-family: 'slick';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('./fonts/slick.eot');
+    src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
+}
+/* Arrows */
+.slick-prev,
+.slick-next
+{
+    font-size: 0;
+    line-height: 0;
+
+    position: absolute;
+    top: 50%;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+
+    cursor: pointer;
+
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus
+{
+    color: transparent;
+    outline: none;
+    background: transparent;
+}
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before
+{
+    opacity: 1;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before
+{
+    opacity: .25;
+}
+
+.slick-prev:before,
+.slick-next:before
+{
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+
+    opacity: .75;
+    color: white;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev
+{
+    left: -25px;
+}
+[dir='rtl'] .slick-prev
+{
+    right: -25px;
+    left: auto;
+}
+.slick-prev:before
+{
+    content: '←';
+}
+[dir='rtl'] .slick-prev:before
+{
+    content: '→';
+}
+
+.slick-next
+{
+    right: -25px;
+}
+[dir='rtl'] .slick-next
+{
+    right: auto;
+    left: -25px;
+}
+.slick-next:before
+{
+    content: '→';
+}
+[dir='rtl'] .slick-next:before
+{
+    content: '←';
+}
+
+/* Dots */
+.slick-dotted.slick-slider
+{
+    margin-bottom: 30px;
+}
+
+.slick-dots
+{
+    position: absolute;
+    bottom: -25px;
+
+    display: block;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+.slick-dots li
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+
+    cursor: pointer;
+}
+.slick-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+
+    cursor: pointer;
+
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus
+{
+    outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+{
+    opacity: 1;
+}
+.slick-dots li button:before
+{
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 20px;
+    height: 20px;
+
+    content: '•';
+    text-align: center;
+
+    opacity: .25;
+    color: black;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before
+{
+    opacity: .75;
+    color: black;
+}
+
+
+/* Slick Theme */
+
+
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+
+.mainSlider { display: inline-block; width: 500px; text-align: center; position: relative; }
+.mainSlider .slider{max-height: 600px;overflow: hidden;}
+.slider { position: relative }
+.slider .slick-arrow { background: none center center no-repeat; width: 32px; height: 32px; z-index: 9 }
+.slider .slick-prev { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/previous.png); left: 30px }
+.slider .slick-next { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/next.png); right: 30px }
+.slider .slick-arrow::before { display: none }
+.slider .slick-dots { /*text-align: center; position: static; margin-top: 40px;*/ bottom: -50px }
+.slider .slick-dots li { width: 14px; height: 14px; background: #cccccc; border-radius: 50%; margin: 0 3px; vertical-align: middle }
+.slider .slick-dots li.slick-active { width: 14px; height: 14px; background: #107fca }
+.slider .slick-dots li.slick-active button { width: 14px; height: 14px; }
+.slider .slick-dots li button { width: 13px; height: 13px; padding: 0 }
+.slider .slick-dots li button::before { content: '' }
+.slick-dotted.slick-slider { margin-bottom: 0;overflow: unset;max-height: 100%;}
+.slider-row { padding-top: 23vh }
+.slideContent .container { position: relative; height: inherit; }
+.banner-txt { display: inline-block; text-align: center; padding: 10px 0 }
+
+.banner-txt h1 { font: 300 35px/38px 'Poppins', sans-serif; color: #53607c; position: relative; display: inline-block;margin-bottom: 20px;}
+.banner-txt h1 abbr { font-size: 24px; font-weight: 500 }
+.banner-txt h1 span {display:block; font-weight: 600 }
+.home-page .banner-txt h1 span {display:contents;}
+
+.banner-txt h2 { font: 300 35px/38px 'Poppins', sans-serif; color: #53607c; position: relative; display: inline-block;margin-bottom: 20px;}
+.banner-txt h2 abbr { font-size: 24px; font-weight: 500 }
+.banner-txt h2 span {display:block; font-weight: 600 }
+.home-page .banner-txt h2 span {display:contents;}
+.mainSlider .readMore { padding-top: 30px; position: unset; bottom: 0px; width: 100%; z-index: 2 }
+/*Slider*/
+
+
+/* Banners */
+.aboutbg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/about-bg.png); }
+.b2b-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/b2b-bg.png) }
+.vvlbg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/voice-verified-lead-bg.png) }
+.sql-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/sales-qualified-leads-bg.png) }
+.cd-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/contact-discovery-bg.png) }
+.apc-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/data-append-cleaning-bg.png);}
+.as-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/appointment-setting-bg.png);}
+.mql-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/marketing-qualified-leads-bg.png);}
+.abm-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/account-based-marketing-bg.png);h}
+.em-bg{ background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/email-marketing-bg.png);}
+.ct-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/client-testimonials-bg.png);}
+.compliance-bg{ background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/compliance-bg.png);}
+.cs-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/content-syndications-bg.png);}
+.ln-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/lead-nurturing-bg.png);}
+.eventm-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/event-marketing-bg.png);}
+.sdr-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/sdr-service-bg.png) }
+
+.contact-database-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/contact-database-bg.png);}
+.cslg-bg {background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/content-syndication-lead-generation-bg.png);}
+.ace-bg {background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/data-cleansing-enrichment-bg.png);}
+.lgp-bg {background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/lead-generation-process-bg.png);}
+.wr-bg {background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/webinar-registrations-bg.png);}
+.css-bg {background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/content-syndication-bg.png);}
+.rss-bg {background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/research-support-services-bg.png);}
+.ass-bg {background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/appointment-setting-sales-bg.png);}
+.aps-bg {background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/appointment-settings-bg.png);}
+
+.vsynergize-forms-partnership-with-callpage-bg {background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/vsynergize-forms-partnership-with-callpage-banner.png);}
+.vsynergize-helps-in-the-market-through-partnership-with-zoho-crm-bg {background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/vsynergize-helps-in-the-market-through-partnership-with-zoho-crm-banner.png);}
+/* Banners */
+
+
+/*.home-page .header {background-image: linear-gradient( rgba(255, 255, 255, 0.9) 0%, transparent 100%);}*/
+
+.home-page .threeCols + .mountainsImgSep{margin-top: -120px;}
+.home-page .ContactformFree{} 
+.home-page .ContactformFree .developmentHeading {width:50%}
+.home-page .ContactformFree .DevelopmentPoints {width:40%}
+.home-page .ContactformFree h3 {font-size: 28px;text-align: left;}
+
+.typewrite {color:#f9b72f;font-size: 20px;line-height: 24px;font-weight: 500;}
+.typewrite > .wrap {border-right: 2px solid #000;}
+.topBg.banner-1 {
+	min-height:100vh;
+	background:url(../images/banner/home-banner1.jpg) right 0 no-repeat;
+	background-size:100% auto
+}
+.topBg.banner-2 {
+	min-height:100vh;
+	background:url(../images/banner/home-banner2.jpg) right 0 no-repeat;
+	background-size:100% auto
+}
+.topBg.banner-3 {
+	min-height:100vh;
+	background:url(../images/banner/home-banner3.jpg) right 0 no-repeat;
+	background-size:100% auto
+}
+
+.home-page .marketingBlock .marketingCntr.d-flex.spacing {padding: 0px 0 50px;}
+
+@media(min-width:1601px) {
+.topBg.banner-1 {
+	background-image:url(../images/banner/home-banner1.jpg)
+}
+.topBg.banner-2 {
+	background-image:url(../images/banner/home-banner2.jpg)
+}
+.topBg.banner-3 {
+	background-image:url(../images/banner/home-banner3.jpg)
+}
+}
+@media screen and (min-width:0) and (max-width:1199px) {
+.home-page .topBg.banner-1 {
+	min-height:60vh;
+	background-image:url(../images/banner/home-banner-small-devices1.jpg);
+	background-size:contain;
+    background-position: right 30%;
+}
+.home-page.notification-removed .topBg.banner-1 {background-position: right 0%;}
+
+.home-page .topBg.banner-2 {
+	min-height:60vh;
+	background-image:url(../images/banner/home-banner-small-devices2.jpg);
+	background-size:contain;
+    background-position: right 30%;
+}
+.home-page.notification-removed .topBg.banner-2 {background-position: right 0%;}
+
+.home-page .topBg.banner-3 {
+	min-height:60vh;
+	background-image:url(../images/banner/home-banner-small-devices3.jpg);
+	background-size:contain;
+	background-position: right 40%;
+}
+.home-page.notification-removed .topBg.banner-3 {background-position: right 8%;}
+
+.home-page.notification-removed .home.commonSpace {padding-top: 46px;}
+.home-page.notification-removed .topBg { margin-bottom: 0px;}
+.topBg {min-height: 60vh;margin-bottom: 50px;}
+
+
+.home-page .ContactformFree .developmentHeading {width:100%;padding-right: 0;}
+.home-page .ContactformFree .DevelopmentPoints {width:100%}
+.colorHeading .ContactformFree h3 {font-size: 26px;line-height: 32px !important;}
+.home-page .threeCols + .mountainsImgSep {margin-top: 0px;}
+
+.home-page .mainSlider .readMore {padding-top: 0px;}
+.typewrite {margin-bottom: 15px;}
+.home-page .ContactformFree h3 {font-size: 26px;line-height: 32px !important;}
+}
+
+.pt50{padding-top:50px ;}
+.pb0{padding-bottom:0px !important;}
+.pt0{padding-top:0px !important;}
+.p0{padding:0px !important;}
+.mobdisp{display:none !important;}
+.desdisp{display:block !important;}	
+/*Media Queries*/
+
+@media(min-width:1601px) {
+.aboutbg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/about-bg-big-device.png); min-height: 95vh }
+.b2b-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/b2b-bg.png); min-height: 94vh;}
+.vvlbg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/voice-verified-lead-bg.png); min-height: 88vh }
+.sql-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/sales-qualified-leads-bg.png); min-height: 88vh }
+.cd-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/contact-discovery-bg.png); min-height: 88vh }
+.apc-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/data-append-cleaning-bg.png); min-height: 88vh }
+.as-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/appointment-setting-bg.png); min-height: 88vh}
+.mql-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/marketing-qualified-leads-bg.png); min-height: 88vh}
+.abm-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/account-based-marketing-bg.png); min-height: 88vh;}
+.em-bg{ background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/email-marketing-bg.png); min-height: 88vh}
+.ct-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/client-testimonials-bg.png); min-height: 88vh}
+.compliance-bg{ background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/compliance-bg.png); min-height: 88vh;}
+.cs-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/content-syndications-bg.png); min-height: 88vh;}
+.ln-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/lead-nurturing-bg.png); min-height: 88vh;}
+.eventm-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/event-marketing-bg.png); min-height: 88vh;}
+.sdr-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/sdr-service-bg.png); min-height: 94vh;}
+
+.contact-database-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/contact-database-bg.png); min-height: 84vh;background-size: 55%;background-position: center;}
+.cslg-bg {background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/content-syndication-lead-generation-bg.png); min-height: 84vh;background-size: 55%;background-position: center;}
+.ace-bg {background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/data-cleansing-enrichment-bg.png); min-height: 84vh;background-size: 55%;background-position: center;}
+.lgp-bg {background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/lead-generation-process-bg.png); min-height: 84vh;background-size: 55%;background-position: center;}
+.wr-bg {background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/webinar-registrations-bg.png); min-height: 84vh;background-size: 55%;background-position: center;}
+.css-bg {background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/content-syndication-bg.png); min-height: 84vh;background-size: 55%;background-position: center;}
+.rss-bg {background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/research-support-services-bg.png); min-height: 84vh;background-size: 55%;background-position: center;}
+.ass-bg {background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/appointment-setting-sales-bg.png); min-height: 84vh;background-size: 55%;background-position: center;}
+.aps-bg {background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/appointment-settings-bg.png); min-height: 84vh;background-size: 55%;background-position: center;}
+
+.vsynergize-forms-partnership-with-callpage-bg {background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/vsynergize-forms-partnership-with-callpage-banner.png); min-height: 75vh;background-size: 40%;background-position: center;}
+.vsynergize-helps-in-the-market-through-partnership-with-zoho-crm-bg {background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/vsynergize-helps-in-the-market-through-partnership-with-zoho-crm-banner.png); min-height: 75vh;background-size: 40%;background-position: center;}
+
+
+
+
+.container { max-width: 1200px; }
+.contactbg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/contact-bg.png); min-height: 95vh }
+.contactbg .slider-row { padding-top: 30vh }
+.b2b-bg .slider-row { padding-top: 27vh; }
+}
+ @media screen and (min-width: 1200px) and (max-width:1600px) {
+.container { max-width: 1200px; }
+.case-studies-page .topBg { min-height: 60vh; background-position: center 100% ;background-size:no-repeat; background-size: 100% auto }
+.landing-page .careers .topBg .slider-row {padding: 8vh 0 10vh;}
+}
+@media screen and (min-width: 0) and (max-width:1199px) {
+/*overlay*/
+.overlay-box { width: 96%; min-width: 0 }
+/*overlay end*/
+
+
+.logo img { width: 50%; }
+.topBg.aboutbg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/about-bg-small-device.png); background-size: contain; min-height: 80vh; }
+.topBg.b2b-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/b2b-bg-small-devices.png); background-size: contain; min-height: 80vh;}
+.vvlbg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/voice-verified-lead-bg-small-devices.png); background-size: contain; min-height: 80vh; }
+.sql-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/sales-qualified-leads-bg-small-devices.png); background-size: contain; min-height: 80vh }
+.cd-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/contact-discovery-bg-small-devices.png); background-size: contain; min-height: 80vh }
+.apc-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/data-append-cleaning-bg-small-devices.png); background-size: contain; min-height: 80vh }
+.as-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/appointment-setting-bg-small-devices.png); background-size: contain; min-height: 80vh}
+.mql-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/marketing-qualified-leads-bg-small-devices.png); background-size: contain; min-height: 80vh}
+.abm-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/account-based-marketing-bg-small-devices.png); background-size: contain; min-height: 80vh}
+.em-bg{ background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/email-marketing-bg-small-devices.png); background-size: contain; min-height: 80vh}
+.ct-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/client-testimonials-bg-small-devices.png); background-size: contain; min-height: 80vh}
+.compliance-bg{ background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/compliance-bg-small-devices.png); background-size: contain; min-height: 80vh;}
+.cs-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/content-syndications-bg-small-devices.png); background-size: contain; min-height: 80vh;}
+.ln-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/lead-nurturing-bg-small-devices.png); background-size: contain; min-height: 80vh;}
+.eventm-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/event-marketing-bg-small-devices.png); background-size: contain; min-height: 80vh;}
+.sdr-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/sdr-service-bg-small-devices.png); background-size: contain; min-height: 80vh;}
+
+
+.contact-database-bg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/contact-database-bg.png); background-size: contain; min-height: 80vh;}
+.cslg-bg {background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/content-syndication-lead-generation-bg.png); background-size: contain; min-height: 80vh;}
+.ace-bg {background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/data-cleansing-enrichment-bg.png); background-size: contain; min-height: 80vh;}
+.lgp-bg {background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/lead-generation-process-bg.png); background-size: contain; min-height: 80vh;}
+.wr-bg {background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/webinar-registrations-bg.png); background-size: contain; min-height: 80vh;}
+.css-bg {background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/content-syndication-bg.png); background-size: contain; min-height: 80vh;}
+.rss-bg {background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/research-support-services-bg.png); background-size: contain; min-height: 80vh;}
+.ass-bg {background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/appointment-setting-sales-bg.png); background-size: contain; min-height: 80vh;}
+.aps-bg {background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/appointment-settings-bg.png); background-size: contain; min-height: 80vh;}
+
+.case-studies-page .topBg {min-height: 42vh;background-size: 90%;background-position: center 76%;}
+
+.vsynergize-forms-partnership-with-callpage-bg {background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/vsynergize-forms-partnership-with-callpage-banner.png); background-size: contain; min-height: 80vh;}
+.vsynergize-helps-in-the-market-through-partnership-with-zoho-crm-bg {background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/vsynergize-helps-in-the-market-through-partnership-with-zoho-crm-banner.png); background-size: contain; min-height: 80vh;}
+
+
+.content-syndications .OurDataIcon img {margin-bottom: 0px;}
+.careers.solution .main-slider .mainslider-cntr ul li {width: 100%;margin-bottom: 10px;width: 33.33%;margin-bottom: 10px;text-align: left;font-size: 12.5px;}
+.careers.solution .main-slider .mainslider-cntr ul li:last-child{padding-left:0px;}
+.careers.solution .main-slider .mainslider-cntr ul li strong {font-size: 22px;}
+.careers.solution .main-slider .mainslider-cntr h3 {margin-top: 20px;}
+.landing-page .careers.solution .topBg {background: none;}
+.landing-page .careers.solution .adotingTechnology {background: #f1f7fd;}
+
+
+
+.careers .mainSlider {width: 96%;}
+.banner-txt h1 span br{display:none;}
+.topBg.contactbg { background-image: url(https://vsynergizeoutsourcing.s3.ap-south-1.amazonaws.com/images/contact-bg-small-device.png); background-size: contain; min-height: 56vh; }
+.aboutbg .slider-row { padding-top: 20vh }
+.menulinks > ul > li  { margin-right: 35px; }
+.menulinks > ul > li > a { font-size: 15px; }
+.logo { width: 180px; }
+.mainSlider { width: 450px }
+.banner-txt h1 { font-size: 26px; line-height: 30px; }
+.banner-txt h2 { font-size: 26px; line-height: 30px; }
+.slider-row { padding-top: 32vh }
+.mrktingTxt p {padding-bottom: 0px;}
+h2 {font-size: 26px; line-height: 32px;}
+.developmentHeading { padding-right: 35px; }
+p { font-size: 16px;line-height: 24px; }
+.vvlbg .slider-row { padding-top: 25vh; }
+.adotingTechnology::before { top: -64px; width: 350px; height: 65px; background-size: 100% auto;width: 100%;}
+.adotingTechnology::after { width: 340px; background-size: 100% auto;width: 100%;}
+.abtOnlyTxt { width: 100% }
+.abtOnlyTxt p { font-size: 20px }
+.w-1050px, .w-900px { width: 100% }
+.ContactformFree { padding-top: 100px }
+.colorHeading h3 { font-size: 26px;line-height: 32px; }
+.powerVCntr .powerVtxt { padding-right: 15px; margin-right: 15px; }
+.powerVCntr .powerVtxt { width: 60%; margin-right: 60px; padding-right: 50px }
+.pointsAccordion { margin-bottom: 50px }
+.abtOnlyTxt { padding-top: 100px }
+.topBg.vvlbg + .aboutTxt .abtOnlyTxt { padding-top: 0 }
+.w-1100px { width: 100% }
+.contacUsblocks .twoFactorVoice .mapBox { margin-top: 57px; }
+.contacUsblocks .powerVCntr .powerVtxt { width: 100%; padding-right: 0; margin-right: 0; border-right: none }
+.contacUsblocks .powerVCntr { display: block }
+.mapBox, .contacUsblocks .twoFactorVoice .mapBox { margin-top: 25px; }
+.twoFactorVoicebx .twoFactorVoice { width: 100% }
+.topBg.contactbg .slider-row { padding-top: 15vh }
+.topBg.b2b-bg .slider-row { padding-top: 23vh; }
+.ourDataBlock { padding-top: 100px; padding-bottom: 100px }
+.menulinks > ul > li.hasSubmenu::after{top:11px;}
+}
+
+
+@media screen and (min-width: 0) and (max-width:980px) {/*For small tabs*/
+.mainSlider { width: 100% }
+.banner-txt h2{margin-top:50px;}
+}

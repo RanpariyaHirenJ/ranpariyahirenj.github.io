@@ -1,0 +1,782 @@
+﻿<!doctype html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <title>Welcome to NQR</title>
+    <link rel="stylesheet" type="text/css" href="styles/animate.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <script src="scripts/jquery-min.js" type="text/javascript"></script>
+    <script src="scripts/parallax.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+    <script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
+
+    <!--User choosen plugin-->
+    <link rel="stylesheet" type="text/css" href="http://harvesthq.github.io/chosen/chosen.css">
+    
+    <style>
+        #ui-id-1 {
+            max-height: 188px;
+            overflow: auto;
+            overflow-x: hidden;
+        }
+
+        #ui-id-2 {
+            max-height: 188px;
+            overflow: auto;
+            overflow-x: hidden;
+        }
+
+        #ui-id-3 {
+            max-height: 188px;
+            overflow: auto;
+            overflow-x: hidden;
+        }
+
+        #ui-id-4 {
+            max-height: 188px;
+            overflow: auto;
+            overflow-x: hidden;
+        }
+
+        #ui-id-5 {
+            max-height: 188px;
+            overflow: auto;
+            overflow-x: hidden;
+        }
+
+        #ui-id-6 {
+            max-height: 188px;
+            overflow: auto;
+            overflow-x: hidden;
+        }
+    </style>
+    <script>
+        $(function () {
+
+            var availableTags = [
+                "12 AM",
+                "1 PM",
+                "2 PM",
+                "3 PM",
+                "4 PM",
+                "5 PM",
+                "6 PM",
+                "7 PM",
+                "8 PM",
+                "9 PM",
+                "10 PM",
+                "11 PM",
+                "12 PM",
+                "1 AM",
+                "2 AM",
+                "3 AM",
+                "4 AM",
+                "5 AM",
+                "6 AM",
+                "7 AM",
+                "8 AM",
+                "9 AM",
+                "10 AM",
+                "11 AM"
+            ];
+            $("#start_time").autocomplete({
+                source: availableTags,
+                minLength: 0
+            }).focus(function () {
+                $(this).autocomplete("search", "");
+            });
+        });
+
+
+
+        $(function () {
+            var availableTags = [
+                "12 AM",
+                "1 PM",
+                "2 PM",
+                "3 PM",
+                "4 PM",
+                "5 PM",
+                "6 PM",
+                "7 PM",
+                "8 PM",
+                "9 PM",
+                "10 PM",
+                "11 PM",
+                "12 PM",
+                "1 AM",
+                "2 AM",
+                "3 AM",
+                "4 AM",
+                "5 AM",
+                "6 AM",
+                "7 AM",
+                "8 AM",
+                "9 AM",
+                "10 AM",
+                "11 AM"
+            ];
+            $("#end_time").autocomplete({
+                source: availableTags,
+                minLength: 0
+            }).focus(function () {
+                $(this).autocomplete("search", "");
+            });
+        });
+
+
+
+        $(function () {
+            var availableTags = [
+                "12 AM",
+                "1 PM",
+                "2 PM",
+                "3 PM",
+                "4 PM",
+                "5 PM",
+                "6 PM",
+                "7 PM",
+                "8 PM",
+                "9 PM",
+                "10 PM",
+                "11 PM",
+                "12 PM",
+                "1 AM",
+                "2 AM",
+                "3 AM",
+                "4 AM",
+                "5 AM",
+                "6 AM",
+                "7 AM",
+                "8 AM",
+                "9 AM",
+                "10 AM",
+                "11 AM"
+            ];
+            $("#start_time1").autocomplete({
+                source: availableTags,
+                minLength: 0
+            }).focus(function () {
+                $(this).autocomplete("search", "");
+            });
+        });
+
+
+
+
+        $(function () {
+            var availableTags = [
+                "12 AM",
+                "1 PM",
+                "2 PM",
+                "3 PM",
+                "4 PM",
+                "5 PM",
+                "6 PM",
+                "7 PM",
+                "8 PM",
+                "9 PM",
+                "10 PM",
+                "11 PM",
+                "12 PM",
+                "1 AM",
+                "2 AM",
+                "3 AM",
+                "4 AM",
+                "5 AM",
+                "6 AM",
+                "7 AM",
+                "8 AM",
+                "9 AM",
+                "10 AM",
+                "11 AM"
+            ];
+            $("#end_time1").autocomplete({
+                source: availableTags,
+                minLength: 0
+            }).focus(function () {
+                $(this).autocomplete("search", "");
+            });
+        });
+
+
+
+        $(function () {
+            var availableTags = [
+                "5 Minutes",
+                "10 Minutes",
+                "15 Minutes",
+                "20 Minutes",
+                "25 Minutes",
+                "30 Minutes",
+                "35 Minutes",
+                "40 Minutes",
+                "45 Minutes",
+                "50 Minutes",
+                "55 Minutes"
+            ];
+            $("#duration_time").autocomplete({
+                source: availableTags,
+                minLength: 0
+            }).focus(function () {
+                $(this).autocomplete("search", "");
+            });
+        });
+
+        $(function () {
+            $("#start_date").datepicker({
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "c-50:c",
+                dateFormat: "mm/dd/yy"
+
+            });
+			$("#start_date3").datepicker({
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "c-50:c",
+                dateFormat: "mm/dd/yy"
+
+            });
+            $("#end_date").datepicker({
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "c-50:c",
+                dateFormat: "mm/dd/yy"
+
+            });
+            $("#end_date1").datepicker({
+                changeMonth: true,
+                changeYear: true,
+                yearRange: "c-50:c",
+                dateFormat: "mm/dd/yy"
+
+            });			
+
+        });
+
+    </script>
+    <script>
+        function openevent(evt, cityName) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+    <style>
+        .expense-tabel ul li div:last-child {
+            border-right: 0px solid #dddddd;
+            width: 100%;
+            display: block;
+        }
+
+        .expense-tabel ul li:first-child {
+            box-shadow: none;
+        }
+
+        .expense-tabel {
+            box-shadow: 0px 3px 10px #d8d8d8;
+        }
+
+        @media screen and (min-width: 1600px) and (max-width:1920px) {
+            .expense-info {
+                width: 100%;
+                float: left;
+            }
+
+            .fff-bg {
+                background-color: #fff !important;
+                width: 60%;
+                margin: 0 auto;
+                float: left;
+            }
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div class="loader"></div>
+    <div class="wrapper">
+        <header>
+            <div class="container">
+                <div class="lft-heading"><a href=""> Manage Test </a> / Schedule a test </div>
+                <div class="top-header">
+                    <ul>
+                        <li>
+                            <div class="welcome-msg">Welcome Admin <img src="images/down-arrow.png"></div>
+                            <ul class="sub-menu">
+                                <li><a href='#'>My Profile</a></li>
+              <li><a href='#'>Change Authentication</a></li>
+              <li><a href='login.html'>Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <section class="header">
+    <div class="container">
+      <div class="navigation">
+        <div class="login-mblmenu">
+          <div class="mobile-nav-icon">
+            <button class="menu-icon mobil-icon-toggle"> <span>toggle menu</span> </button>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="nav-menu">
+          <div class="logocntr"><a href="login.html"><img src="images/logo.png" ></a></div>
+          <ul>
+            <li> <a href="#"><i><img src="images/dashboard.png" ></i><p> Home</p></a></li>
+            <li> <a href="javascript:void(0);">
+              <div class="outerdiv"><i class="middlediv"> <img src="images/manage-clients.png" ></i></div>
+              <p>Dashboard & Reports</p>
+              </a>
+              <ul class="sub-menu">
+             	 <li><a href='https://projects.invisionapp.com/share/5GDJW6WKB#/screens/254076547_Desktop_HD_01a' target="_blank">Divisional Dashboard</a></li>
+                <!--<li><a href='divisional-dashboard.html'>Divisional Dashboard</a></li>
+                <li><a href='user-dashboard.html' >User Dashboard</a></li>-->
+              </ul>
+            </li>
+            <li> <a href="javascript:void(0);">
+              <div class="outerdiv"><i class="middlediv"> <img src="images/manage-clients.png" ></i></div>
+              <p>Manage Users</p>
+              </a>
+              <ul class="sub-menu">
+                <li><a href='view-users.html'>View users</a></li>
+                <li><a href='add-users.html'>Add Users</a></li>
+                <li><a href='view-user-group.html'>View user groups</a></li>
+              </ul>
+            </li>
+            <li> <a href="javascript:void(0);">
+              <div class="outerdiv"><i class="middlediv"> <img src="images/manage-roles.png" ></i></div>
+              <p>Manage divisions and locations</p>
+              </a>
+              <ul class="sub-menu">
+                <li><a href='view-divisions.html'>View divisions</a></li>
+                <li><a href='view-locations.html'>View locations</a></li>
+              </ul>
+            </li>
+            <li> <a href="javascript:void(0);">
+              <div class="outerdiv"><i class="middlediv"> <img src="images/master-data-management.png" ></i></div>
+              <p>Master Data Management</p>
+              </a>
+              <ul class="sub-menu">
+                <li><a href='manage-levels-view.html'>Manage Levels</a></li>
+                <li><a href='manage-types-view.html'>Manage Types</a></li>
+                <li><a href='manage-question-sets-view.html'>Manage Question Sets</a></li>
+                <li><a href='manage-category-view.html'>Manage Category</a></li>
+              </ul>
+            </li>
+            <li> <a href="javascript:void(0);">
+              <div class="outerdiv"><i class="middlediv"> <img src="images/question-pool-maintenance.png" ></i></div>
+              <p>Question Pool Maintenance</p>
+              </a>
+              <ul class="sub-menu">
+                <li><a href='add-question.html'>Add Question </a></li>
+                <li><a href='view-questions.html'>Question List/ View Question</a></li>
+              </ul>
+            </li>
+            <li class="active"> <a href="javascript:void(0);" class="active">
+              <div class="outerdiv"><i class="middlediv"> <img src="images/add-question.png" ></i></div>
+              <p>Manage Test</p>
+              </a>
+              <ul class="sub-menu">
+                <li><a href='view-tests.html'> View Tests </a></li>
+                <li><a href='schedule-test.html' class="active">Schedule Test</a></li>
+              </ul>
+            </li>
+            <li> <a href="javascript:void(0);">
+              <div class="outerdiv"><i class="middlediv"> <img src="images/system-settings.png" ></i></div>
+              <p>System Settings</p>
+              </a>
+              <ul class="sub-menu">
+                <li><a href='javascript:void(0);'>Email Maintenance </a>
+                    <ul class="sub-sub-menu">
+                      <li><a href='manage-email-templates.html'>Manage email templates</a></li>
+                      <li><a href='edit-email-template.html'>Edit email template</a></li>
+                    </ul>
+                </li>
+                <li><a href='manage-security-questions.html'>Manage Security questions </a></li>
+              </ul>
+            </li>
+            <li> <a href="javascript:void(0);">
+              <div class="outerdiv"><i class="middlediv"> <img src="images/system-settings.png" ></i></div>
+              <p>Login Simulation</p>
+              </a>
+              <ul class="sub-menu">
+                <li><a href='simulate-information.html'>Simulate information </a></li>
+              </ul>
+            </li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </section>
+        <div class="profilecntr wrapper-container mb80">
+            <section class="expense-cntr parallax common-top ">
+                <div class="container">
+                    <div class="fff-bg p30">
+                        <div class="animated-form">
+                            <div class="grid-layout">
+                                <div class="form-row animate-label">
+                                    <div class="form-field">
+                                        <div class="grid-4">
+                                            <div class="input-group">
+                                                <label>Select user group</label>
+                                                <div class="input-type-select inputType">
+                                                    <select>
+                                                        <option value=""></option>
+                                                        <option>User group 1</option>
+                                                        <option>User group 2</option>
+                                                        <option>User group 3</option>
+                                                        <option>User group 4</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="grid-4">
+
+                                            <div class="input-group">
+                                                <label>Assign Question Set</label>
+                                                <div class="input-type-select inputType">
+                                                    <!--<select>
+                                                <option></option>
+                                                <option></option>
+                                            </select>-->
+                                                </div>
+                                                    <select data-placeholder="" class="chosen-select" multiple tabindex="4">
+                                                        <option value=""></option>
+                                                        <option value="Set 1">Set 1</option>
+                                                        <option value="Set 2">Set 2</option>
+                                                        <option value="Set 3">Set 3</option>
+                                                    </select>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row animate-label">
+                                    <div class="form-field">
+                                        <div class="grid-4">
+                                            <h2>Set Schedule</h2>
+                                            <div class="checkboxinfo">
+                                                <label>
+                                                    <input type="checkbox">
+                                                    Is Recurring
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="drawer">
+
+                            <div class="animated-form">
+                                <div class="grid-layout">
+                                    <div class="form-row animate-label">
+                                        <div class="form-field">
+                                            <div class="grid-12">
+                                                <h3 class="mt20">Appointment Time</h3>
+                                            </div>
+                                            <div class="grid-2">
+                                                <div class="input-group time">
+                                                    <label>Start Time</label>
+                                                    <input type="text" class="inputType" id="start_time1" \>
+                                                </div>
+                                            </div>
+                                            <div class="grid-2 pl">
+                                                <div class="input-group time">
+                                                    <label>End Time</label>
+                                                    <input type="text" class="inputType" id="end_time1" \>
+                                                </div>
+                                            </div>
+                                            <div class="grid-2 pl">
+                                                <div class="input-group time">
+                                                    <label>Duration Time</label>
+                                                    <input type="text" id="duration_time" class="inputType" \>
+                                                </div>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="expense-info mt30">
+                                <h3 class="mt40 mb20">Recurrence Pattern</h3>
+                                <div class="expense-tabel mt0">
+                                    <ul>
+                                        <li>
+                                            <div class="tag1 expense-titel recurrencePatternTab1" style="width:200px;">
+                                                <label style="max-width:100px;"><input type="radio" name="Pattern">Daily</label>
+                                            </div>
+                                            <div class="tag1">
+                                                <div class="grid-12 b0 recurrencePatternBody1">
+                                                    <label><input type="radio" name="Pattern1" id="Pattern1">Every</label>
+                                                    <input type="text" value="1" style="width:50px;">
+                                                    <label>days(s)</label>
+                                                </div>
+                                                <div class="grid-12 recurrencePatternBody1">
+                                                    <label>
+                                                        <input type="radio" name="Pattern1" id="Pattern2">
+                                                        Every Weekday
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="tag1 expense-titel recurrencePatternTab2">
+                                                <label>
+                                                    <input type="radio" name="Pattern">
+                                                    Weekly
+                                                </label>
+                                            </div>
+                                            <div class="tag1">
+                                                <div class="grid-12 b0 recurrencePatternBody2" style="display:none;">
+                                                    <label>
+                                                        <input type="radio" name="Pattern1" id="Pattern3">
+                                                        Recur every
+                                                    </label>
+                                                    <input type="text" value="1" style="width:50px;">
+                                                    <label>Week(s) On </label>
+                                                </div>
+                                                <div class="grid-12 recurrencePatternBody2" style="display:none;">
+                                                    <label><input type="checkbox" name="Pattern1" id="Pattern4">Sunday</label>
+                                                    <label><input type="checkbox" name="Pattern1" id="Pattern4">Monday</label>
+                                                    <label><input type="checkbox" name="Pattern1" id="Pattern4">Tuesday</label>
+                                                    <label><input type="checkbox" name="Pattern1" id="Pattern4">Wednesday</label>
+                                                    <label><input type="checkbox" name="Pattern1" id="Pattern4">Thursday</label>
+                                                    <label><input type="checkbox" name="Pattern1" id="Pattern4">Friday</label>
+                                                    <label><input type="checkbox" name="Pattern1" id="Pattern4">Saturday</label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="tag1 expense-titel recurrencePatternTab3">
+                                                <label>
+                                                    <input type="radio" name="Pattern">
+                                                    Monthly
+                                                </label>
+                                            </div>
+                                            <div class="tag1">
+                                                <div class="grid-12 b0 recurrencePatternBody3" style="display:none;">
+                                                    <label>
+                                                        <input type="radio" name="Pattern1" id="Pattern5">
+                                                        Day
+                                                    </label>
+                                                    <input type="text" value="9" style="width:50px;">
+                                                    <label>of every</label>
+                                                    <input type="text" value="1" style="width:50px;">
+                                                    <label>month(s)</label>
+                                                </div>
+                                                <div class="grid-12 recurrencePatternBody3" style="display:none;">
+                                                    <label>
+                                                        <input type="radio" name="Pattern1" id="Pattern6">
+                                                        The
+                                                    </label>
+                                                    <select>
+                                                        <option>Second</option>
+                                                    </select>
+                                                    <select>
+                                                        <option>Wednesday</option>
+                                                    </select>
+                                                    <label>of every</label>
+                                                    <input type="text" value="1" style="width:50px;">
+                                                    <label>month(s)</label>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="animated-form mt30">
+                                <div class="grid-layout">
+                                    <div class="form-row animate-label">
+                                        <div class="grid-12">
+                                            <h3 class="mt40">Range of Recurrence</h3>
+                                        </div>
+                                        <div class="form-field">
+                                            <div class="grid-4">
+                                                <div class="input-group date">
+                                                    <label>Start Date</label>
+                                                    <input type="text" id="start_date" class="inputType" \>
+                                                </div>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row animate-label">
+                                        <div class="form-field">
+                                            <div class="grid-12 mb30 p0">
+                                                <div class="range-recurrence">
+                                                    <div class="info-tab"><label style="max-width:100px;"><input type="radio" name="Pattern">no end date</label></div>
+                                                    <div class="info-tab"><label style="max-width:100px;"><input type="radio" name="Pattern">end after</label>
+                                                    <input type="text" value="10" style="width:50px;"><label>occurrences</label></div>
+                                                    <div class="info-tab"><label class="end-by" style="max-width:100px;"><input type="radio" name="Pattern">end by</label>
+                                                    <div class="grid-8">
+                                                <div class="input-group date">
+                                                    <label>End Date</label>
+                                                    <input type="text" id="end_date1" class="inputType" \>
+                                                </div>
+                                            </div>
+                                            		</div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                              <div class="grid-12">
+                                                <div class="grid-8 p0">
+                                                  <div class="submitformbtn">
+                                                    <input type="button" value="Ok" class="box-btn big-btn prim-btn" >
+                                                    <input type="button" value="Cancel" class="box-btn big-btn sub-btn">
+                                                    <input type="button" value="Remove Recurrence" class="box-btn big-btn sub-btn">
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="clear"></div>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+
+                        <div class="drawer2">
+                            <div class="animated-form mt30">
+                                <div class="grid-layout">
+                                    <div class="form-row animate-label">
+                                        <div class="form-field">
+                                            <div class="grid-8">
+                                                <div class="input-group date">
+                                                    <label>Start Date</label>
+                                                    <input type="text" id="start_date3" class="inputType" \>
+                                                </div>
+                                            </div>
+                                            <div class="grid-4">
+                                                <div class="input-group time">
+                                                    <label>Start Time</label>
+                                                    <input type="text" class="inputType" id="start_time" \>
+                                                </div>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row animate-label">
+                                        <div class="form-field">
+                                            <div class="grid-8">
+                                                <div class="input-group date">
+                                                    <label>End Date</label>
+                                                    <input type="text" id="end_date" class="inputType" \>
+                                                </div>
+                                            </div>
+                                            <div class="grid-4">
+                                                <div class="input-group time">
+                                                    <label>End Time</label>
+                                                    <input type="text" class="inputType" id="end_time" \>
+                                                </div>
+                                            </div>
+                                            <div class="clear"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+        <div class="fotter-wrapper-container">
+            <footer class="footer">
+                <div class="container">
+                    <div class="footernavigtn">
+                        <div class="copt-lft"> © 2017 CINQO. All Rights Reserved. <!--Site by <a href="http://kalptech.com/" target="_blank"> Kalptech Systems</a>--> </div>
+                        <div class="clear"></div>
+                    </div>
+
+                </div>
+            </footer>
+        </div>
+        <div class="overlay addemployee" id="cancel-role" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+            <div class="overlay-box">
+                <div class="content">
+                    <div class="overlay-header"> Are you sure you want to cancel </div>
+                    <div class="overlay-content">
+                        <div class="animated-form">
+                            <div class="grid-layout">
+                                <div class="form-row">
+                                    <div class="grid-12">
+                                        <div class="grid-6">
+                                            <div class="submitformbtn text-center spacingtopbot">
+                                                <input type="submit" value="Yes" class="box-btn" onClick="$('.closeBtn').click();">
+                                            </div>
+                                        </div>
+                                        <div class="grid-6">
+                                            <div class="submitformbtn text-center spacingtopbot">
+                                                <input type="submit" value="Submit" class="box-btn">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="scripts/wow.js"></script>
+    <script>
+
+        new WOW().init();
+
+        $('.parallax').parallax({
+
+            speed: 0.50
+
+        });
+
+    </script>
+    <script src="scripts/common.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="http://harvesthq.github.io/chosen/chosen.jquery.js"></script>
+</body>
+</html>
+
+<script>
+    $(function () {
+        $(".chosen-select").chosen();
+    })
+</script>

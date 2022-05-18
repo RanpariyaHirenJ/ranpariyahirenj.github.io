@@ -1,0 +1,125 @@
+ErrorDocument 403 https://vsynergizeoutsourcing.com/404.html
+ErrorDocument 404 https://vsynergizeoutsourcing.com/404.html
+ErrorDocument 500 https://vsynergizeoutsourcing.com/404.html
+
+Options +FollowSymLinks
+RewriteEngine On
+
+# hiren cached static assets for one month
+<filesMatch ".(css|jpg|jpeg|png|gif|js|ico)$">
+Header set Cache-Control "max-age=2628000, public"
+</filesMatch>
+
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^(www\.)?vsynergizeoutsourcing\.com$
+RewriteRule (.*) https://www.vsynergizeoutsourcing.com/$1 [R=301,L]
+
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^vsynergizeoutsourcing\.com$
+RewriteRule (.*) https://www.vsynergizeoutsourcing.com/$1 [R=301,L]
+
+
+RewriteRule  ^news.html https://vsynergizeoutsourcing.com/news/index.html [R=301,L]
+RewriteRule  ^vsynergize-helps-and-implement-the-best-crms-in-the-market-through-partnership-with-zoho-crm.html https://vsynergizeoutsourcing.com/news/vsynergize-helps-and-implement-the-best-crms-in-the-market-through-partnership-with-zoho-crm.html [R=301,L]
+RewriteRule  ^vsynergize-forms-partnership-with-callpage-to-help-businesses-increase-up-to-4x-website-leads-conversion.html https://vsynergizeoutsourcing.com/new/vsynergize-forms-partnership-with-callpage-to-help-businesses-increase-up-to-4x-website-leads-conversion.html [R=301,L]
+RewriteRule  ^careers.html https://vsynergize.freshteam.com/jobs [R=301,L]
+
+
+RewriteRule  ^case-studies.html https://vsynergizeoutsourcing.com/case-studies/index.html [R=301,L]
+RewriteRule  ^appointment-setting-sales.html https://vsynergizeoutsourcing.com/case-studies/appointment-setting-sales.html [R=301,L]
+RewriteRule  ^appointment-settings.html https://vsynergizeoutsourcing.com/case-studies/appointment-settings.html [R=301,L]
+RewriteRule  ^contact-database.html https://vsynergizeoutsourcing.com/case-studies/contact-database.html [R=301,L]
+RewriteRule  ^content-syndication-lead-generation.html https://vsynergizeoutsourcing.com/case-studies/content-syndication-lead-generation.html [R=301,L]
+RewriteRule  ^content-syndication.html https://vsynergizeoutsourcing.com/case-studies/content-syndication.html [R=301,L]
+RewriteRule  ^data-cleansing-enrichment.html https://vsynergizeoutsourcing.com/case-studies/data-cleansing-enrichment.html [R=301,L]
+RewriteRule  ^lead-generation-process.html https://vsynergizeoutsourcing.com/case-studies/lead-generation-process.html [R=301,L]
+RewriteRule  ^research-support-services.html https://vsynergizeoutsourcing.com/case-studies/research-support-services.html [R=301,L]
+RewriteRule  ^webinar-registrations.html https://vsynergizeoutsourcing.com/case-studies/webinar-registrations.html [R=301,L]
+
+
+RewriteRule  ^lifeline-service-providers.html https://vsynergizeoutsourcing.com [R=301,L]
+RewriteRule  ^g-suite.html https://vsynergizeoutsourcing.com [R=301,L]
+RewriteRule  ^data-entry.html https://vsynergizeoutsourcing.com [R=301,L]
+
+
+RewriteRule  ^contact-us/ https://www.vsynergizeoutsourcing.com/contact.html [R=301,L]
+RewriteRule  ^contact-us/careers-vsynergize/ https://www.vsynergizeoutsourcing.com/careers.html [R=301,L]
+RewriteRule  ^zoho.html https://vsynergizeoutsourcing.com [R=301,L]
+RewriteRule  ^csr/ https://vsynergizeoutsourcing.com [R=301,L]
+RewriteRule  ^b2b-lead-generation/ https://www.vsynergizeoutsourcing.com/lead-generation.html [R=301,L]
+RewriteRule  ^data-cleansing.html https://www.vsynergizeoutsourcing.com/data-append-cleaning.html [R=301,L]
+RewriteRule  ^b2c-solutions.html https://www.vsynergizeoutsourcing.com/lead-generation.html [R=301,L]
+RewriteRule  ^b2b-solutions.html https://www.vsynergizeoutsourcing.com/lead-generation.html [R=301,L]
+RewriteRule  ^telemarketing.html https://vsynergizeoutsourcing.com [R=301,L]
+RewriteRule  ^customer-support.html https://vsynergizeoutsourcing.com [R=301,L]
+RewriteRule  ^lifeline-service-providers.html https://vsynergizeoutsourcing.com [R=301,L]
+RewriteRule  ^g-suite.html https://vsynergizeoutsourcing.com [R=301,L]
+RewriteRule  ^data-entry.html https://vsynergizeoutsourcing.com [R=301,L]
+
+RewriteRule  ^blog/6-lead-generation-techniques/attachment/lead-generation-techniques/ https://www.vsynergizeoutsourcing.com/lead-generation.html [R=301,L]
+RewriteRule  ^cloud.html https://vsynergizeoutsourcing.com [R=301,L]
+RewriteRule  ^web-designing-development https://www.vsynergizeoutsourcing.com/demand-generation.html [R=301,L]
+RewriteRule  ^watch-and-download-full-movie-annabelle-creation-2017/ https://vsynergizeoutsourcing.com [R=301,L]
+RewriteRule  ^checklist-b2b-tele-marketing/b2b-tele-marketing/ https://www.vsynergizeoutsourcing.com/lead-generation.html [R=301,L]
+RewriteRule  ^utilities-energy-service-leads/iconsf-01/ https://www.vsynergizeoutsourcing.com/lead-generation.html [R=301,L]
+RewriteRule  ^importance-of-lead-generation/ https://www.vsynergizeoutsourcing.com/lead-generation.html [R=301,L]
+RewriteRule  ^csr.html https://vsynergizeoutsourcing.com [R=301,L]
+
+
+RewriteCond %{HTTP_REFERER} ^https://.*bottraffic4free\.club/ [NC,OR]
+RewriteCond %{HTTP_REFERER} ^https://.*www.gammatraffic\.com/ [NC,OR]
+RewriteCond %{HTTP_REFERER} ^https://.*www.baidu\.com/ [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http://.*commentag\.com/ [NC,OR]
+RewriteCond %{HTTP_REFERER} ^https://.*deryie\.com/ [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http://.*sxsnjj\.com/ [NC]
+RewriteRule ^(.*)$ – [F,L]
+
+RewriteRule thankyou.html thankyou.php [NC,L]
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access 1 month"
+
+  # Images
+  ExpiresByType images/jpg "access plus 1 year"
+  ExpiresByType images/jpeg "access plus 1 year"
+  ExpiresByType images/gif "access plus 1 year"
+  ExpiresByType images/png "access plus 1 year"
+  ExpiresByType images/webp "access plus 1 year"
+  ExpiresByType images/svg+xml "access plus 1 year"
+  ExpiresByType images/x-icon "access plus 1 year"
+
+  # Others
+  ExpiresByType application/pdf "access plus 1 month"
+  ExpiresByType application/x-shockwave-flash "access plus 1 month"
+
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE image/x-icon
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE application/rss+xml
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE application/xhtml+xml
+  AddOutputFilterByType DEFLATE application/x-font
+  AddOutputFilterByType DEFLATE application/x-font-truetype
+  AddOutputFilterByType DEFLATE application/x-font-ttf
+  AddOutputFilterByType DEFLATE application/x-font-otf
+  AddOutputFilterByType DEFLATE application/x-font-opentype
+  AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE font/otf
+  AddOutputFilterByType DEFLATE font/opentype
+
+# For Olders Browsers Which Can't Handle Compression
+  BrowserMatch ^Mozilla/4 gzip-only-text/html
+  BrowserMatch ^Mozilla/4\.0[678] no-gzip
+  BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+</IfModule>

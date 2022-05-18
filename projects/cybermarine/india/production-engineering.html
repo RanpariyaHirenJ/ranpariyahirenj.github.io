@@ -1,0 +1,353 @@
+﻿<!doctype html>
+
+<html lang="en-IN">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="utf-8">
+<meta name="description" content="Cybermarine is comprising of 3D Modellers and Draftsmen with hands on experience in "Production Engineering of Ships & Rigs" guided by experienced Naval Architects with an ability to support any building projects for both Marine and Offshore Industry">
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<title>Production Engineering of Ships & Rigs - Cybermarine India</title>
+<link rel="stylesheet" type="text/css" href="styles/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<script src="scripts/jquery-min.js" type="text/javascript"></script>
+<script src="scripts/jquery.bxslider.min.js"></script>
+<script src="scripts/js_class.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+  <div class="overlay" id="enquiryform" data-animation-in="fadeIn" data-animation-out="fadeOut">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-header">Enquiry Form</div>
+      <form class="checkForm" action="../send-enquiry-php/mail.php" method="post" onSubmit="return form_validate_jquery('.overlay-content')">
+        <div class="overlay-content">
+          <div class="form-layout">
+            <div class="form-row">
+              <div class="form-field mandatory">
+                <input type="text" name="name" placeholder="Full name *" validation="text" title="Full name">
+                <input type="hidden" name="subject" value="Production Engineering">
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-field mandatory">
+                <input type="email" name="email" placeholder="Email Address *" validation="email" title="Email address">
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-field mandatory">
+                <input type="text" name="phone" placeholder="Contact Number *" validation="number" title="Contact number">
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-field mandatory">
+                <textarea name="message" placeholder="Message *" validation="text" title="Message"></textarea>
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="form-row captcha-field">
+              <div class="form-field mandatory">
+                <div class="captcha_image"></div>
+                <input type="text" placeholder="Enter the text as shown in image*" maxlength="4" name="captcha_code" validation="text" title="Captcha">
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </div>
+        </div>
+        <div class="overlay-footer">
+          <input type="submit" value="Send Enquiry" name="action" class="send-enquiry">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+  <div class="header">
+    <div class="container">
+      <div class="menuband">
+        <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="logo"></a> </div>
+        <div class="flag-selection">
+          <dl class="custom-dropdown">
+            <dt><a><span>
+              <div class="flagbox flag-one"><img src="images/india.png"> <abbr class="india-flag-name">India</abbr></div>
+              </span></a></dt>
+            <dd>
+              <ul class="custom-subdrop">
+                <li><a class="default">
+                  <div class="flagbox flag-one"><img src="images/india.png"> <abbr>India</abbr></div>
+                  </a></li>
+                <li><a href="../united-states/index.html">
+                  <div class="flagbox flag-three"><img src="images/united-states.png"> <abbr>United states</abbr></div>
+                  </a></li>
+                <li><a href="../singapore/index.html">
+                  <div class="flagbox flag-five"><img src="images/singapore.png"> <abbr>Singapore</abbr></div>
+                  </a></li>
+                <li><a href="../uae-turkey-europe/index.html">
+                  <div class="flagbox flag-four"><img src="images/uae.png"> <abbr>Middle East</abbr></div>
+                  </a></li>
+                <!--<li><a href="http://cybermarine.net/">
+                  <div class="flagbox flag-two"><img src="images/global.png"> <abbr>Global</abbr></div>
+                  </a></li>-->
+              </ul>
+            </dd>
+          </dl>
+        </div>
+        <div class="home-search">
+          <div class="home-icon"> <a href="index.html"></a> </div>
+          <div class="connect-us"> <a href="contact.html"></a> </div>
+          <div class="search-box">
+            <input type="text" placeholder="keywords">
+            <input type="button" class="search-btn">
+            <div class="clear"></div>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="navigation">
+          <ul>
+            <li class="subdrop-down"> <a href="javascript:void(0)" class="linktext">About</a>
+               <div class="sub-menudrop">
+                <ul>
+                  <li><a href="about.html">Company</a></li>
+                  <li><a href="appraisals.html">Appraisals</a></li>
+                  <li><a href="iso.html">ISO</a></li>
+                  <li><a href="#">Testimonials</a></li>
+                  <li><a href="download-brochure.html">Download</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="subdrop-down"> <a class="linktext">Expertise</a>
+              <div class="sub-menudrop">
+                <ul>
+                  <li> <a href="expertise.html">Naval Architecture</a> </li>
+                  <li> <a href="structural-engineering.html">Structural Engineering</a> </li>
+                  <li> <a href="mechanical-piping-engineering.html">Mechanical & Piping Engineering</a> </li>
+                  <li> <a href="electrical-instrumentation-engineering.html">Electrical & Instrumentation Engineering</a> </li>
+                  <li> <a href="safety-engineering.html">Safety Engineering</a> </li>
+                </ul>
+              </div>
+            </li>
+            <li class="subdrop-down"> <a href="#" class="active">Verticals</a>
+              <div class="sub-menudrop">
+                <ul>
+                  <li> <a href="marine.html">Marine Design</a> </li>
+                  <li> <a href="marine-construction.html">Marine Construction</a> </li>
+                  <li> <a href="production-engineering.html">Production Engineering</a> </li>
+                </ul>
+              </div>
+            </li>
+            <li class="onlymobilelink"> <a href="contact.html">Contact</a> </li>
+            <!-- <li> <a href="culture.html">Culture</a> </li> -->
+            
+          </ul>
+          <div class="clear"></div>
+        </div>
+        <div class="nav-icon">
+          <button class="menu-icon mobil-icon-toggle"> <span>toggle menu</span> </button>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <div class="banner">
+    <ul class="">
+      <li> <img src="images/production-engineering.jpg"> </li>
+    </ul>
+    <div class="bx-captions staticheading">
+      <div class="captn-table">
+        <div class="captntablecell title-bottom">
+          <div class="container text-center">
+            <div class="innerheading">
+              <h1>Production Engineering</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="our-expertise-hm inner-boxes">
+    <div class="container singapore-marinebx">
+      <div class="expertise-sections marine-design">
+        <ul>
+          <li> <a href="production-engineering-projects.html">
+            <div class="expertise-icon"> <img src="images/production-engineering.png" alt="Neval Architecture"> </div>
+            <div class="expert-txt"> View Projects Gallery</div>
+            </a> </li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+      <div class="info-descmarin">
+        <p>Over the years being in the field of Ship Design business, Cybermarine understands the requirement of providing entire package of ship design services to its valued customers. We provide a comprehensive range of value added Detailed Engineering & Production Drawings preparation services for our customers to support their new-building, conversion, modification and refit projects. The group comprising of 3D Modellers and Draftsmen with hands on experience in “Production Engineering of Ships & Rigs” guided by experienced Naval Architects with an ability to support any building projects for both Marine and Offshore Industry. Our strength lies in our domain competence and expertise, supported by a skilled and experienced team of 3D Modellers and draftsmen, who are familiar with all Global engineering standards, proficient in cutting edge 3D tools and conversant with updated technologies. We leverage our domain expertise to deliver a unique value proposition to our customers.</p>
+        <p>A good number of globally reputed, shipbuilders, Rig/platform builders from different parts of world viz: middle-east, Singapore / APAC, Europe and USA, have already shown enormous interest to work with us with a long term vision. We have already worked with customers from Norway, Netherlands, Srilanka, Kenya, UAE & India.</p>
+      </div>
+    </div>
+  </div>
+  <div class="marin-diff-boxs">
+    <div class="container">
+      <div class="marine-img-top-div"><img src="images/marine-thumb.jpg" width="1199" height="202"></div>
+      <p class="small-txtheading">Complete Production Documentation Package</p>
+      <div class="twoboxes-marine threeboxcntr">
+        <div class="marin-leftbox comonboxtwo">
+          <div class="box-lefttxt">Hull / Structure</div>
+          <div class="boxtext-common boxtext-common1">
+            <div class="boxs-pointscomon">
+              <ul>
+                <li>Creation of unit division plan</li>
+                <li>Preparation of Hull Surface</li>
+                <li>Entire modeling of hull structure, accommodation, appendages including major foundations as per the unit division plan</li>
+                <li>Unit wise Production Drawing &amp; Assembly Drawings / sequences</li>
+                <li>Preparation of Shell / curve plate bending templates</li>
+                <li>Profile Sketches with dimensional drawings</li>
+                <li>Preparation of detailed bill of material of plates and stiffeners</li>
+                <li>Preparation of Nesting plan</li>
+                <li>Development of CNC cutting programs</li>
+                <li>Weight and COG</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="marin-leftbox comonboxtwo">
+          <div class="box-lefttxt">Miscellaneous Services</div>
+          <div class="boxtext-common boxtext-common1">
+            <div class="boxs-pointscomon">
+              <ul>
+                <li>Feasibility Study and Design support for Vessel lengthening &amp; Conversion</li>
+                <li>Assistance in Structural Analysis &amp; Design</li>
+                <li>Support in supervision</li>
+                <li>Project Planning – technical &amp; Financial</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="marin-rytbox comonboxtwo">
+          <div class="box-lefttxt">Machinery, Piping, Electrical & HVAC</div>
+          <div class="boxtext-common boxtext-common1">
+            <div class="boxs-pointscomon">
+              <ul>
+                <li>Creation of zone / compartment plan</li>
+                <li>Creation of machinery and equipment models &amp; component libraries</li>
+                <li>Entire outfit modeling including machineries, piping systems in all areas, electrical cable trays &amp; Conduits, Cable Ladders &amp; HVAC system including ducts</li>
+                <li>Generation of zone-wise / compartment-wise Production arrangement drawings including structure as reference and showing impression of all equipment / machineries, pipes, cable ladders, ducts etc</li>
+                <li>Preparation of pipe spool drawings (40NB &amp; Above)</li>
+                <li>Preparation of Steel outfitting shop drawings, door plan, window plan, staircase/ladder plan, handrail &amp; floor plating plan</li>
+                <li>Foundation modeling and seat drawings for equipment more than 50 kg weight</li>
+                <li>Preparation of complete BOM for fitting, spools, components and compartments, zone-wise, compartment-wise or system wise</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+<div class="send-enquiery-btn"><a class="box-btn" href="javascript:void(0);" onClick="overlayBox('enquiryform')">Send Enquiry</a> </div>
+<footer class="footer">
+  <div class="wave-animation"> </div>
+  <div class="container">
+    <div class="footerlinks">
+      <ol>
+        <li class="footer2">
+          <dl>
+            <dt class="openmbltab"> Expertise </dt>
+            <dd>
+              <ul>
+                <li> <a href="expertise.html">Naval Architecture</a> </li>
+                <li> <a href="structural-engineering.html">Structural Engineering</a> </li>
+                <li> <a href="mechanical-piping-engineering.html">Mechanical & Piping Engineering</a> </li>
+                <li> <a href="electrical-instrumentation-engineering.html">Electrical & Instrumentation Engineering</a> </li>
+                <li> <a href="safety-engineering.html">Safety Engineering</a> </li>
+              </ul>
+            </dd>
+          </dl>
+        </li>
+        <li class="footer1">
+          <dl class="noaccordionmbl">
+            <dt class="openmbltab"> Verticals </dt>
+            <dd>
+              <ul>
+                <li> <a href="marine.html">Marine Design</a> </li>
+                <li> <a href="marine-construction.html">Marine Construction</a> </li>
+                <li> <a href="production-engineering.html">Production Engineering</a> </li>
+              </ul>
+            </dd>
+          </dl>
+        </li>
+        <li class="footer3">
+          <dl>
+            <dt class="openmbltab contact"> <a href="contact.html">Contact Us</a> </dt>
+            <dd>
+              <ul>
+                  <li>Cybermarine Knowledge Systems Pvt Ltd.</li>
+                <li>501, Technocity IT Premises Co-op. Soc. Ltd, </li>
+                <li>Plot No. X-5/3, Mahape,</li>
+                <li>Maharashtra- 400710, India</li>
+                <li>Tel: +91-22-61462400 | Fax: +91-22-61462411</li>
+                <li> Email: <a href="mailto:info@cybermarine.net">info@cybermarine.net</a></li>
+                </ul>
+            </dd>
+          </dl>
+        </li>
+        <li class="footer4">
+          <dl>
+            <dd class="social-footr">
+              <div class="social-footer"><a target="_blank" href="https://www.facebook.com/Cybermarine-Knowledge-Systems-Pvt-Ltd-132113473554845/"><img src="images/fb.png"></a> <!--<a target="_blank" href="#"><img src="images/twitter.png"></a> --><a target="_blank" href="https://www.linkedin.com/company/cybermarine-knowledge-systems-pvt--ltd-"><img src="images/linkedin-icon.png"></a></div>
+            </dd>
+          </dl>
+        </li>
+      </ol>
+      <div class="clear"></div>
+    </div>
+    <p class="footer-copy">© <script>document.write(new Date().getFullYear());</script> Cybermarine. All Rights Reserved. <span class="develped-by">Site By <a href="https://www.interminddigital.com/" target="_blank">Intermind</a></span></p>
+  </div>
+</footer>
+</div>
+<script>
+
+	$(function(){
+
+		var slider1
+
+ slider1=$('.pageSlider').bxSlider({
+
+			pager:false,
+
+			controls:true,
+
+			mode:'horizontal',
+
+			auto:true,
+
+			pause:3000,
+
+			speed:1000,
+
+			autoHover:true
+
+		});
+
+		$('.bx-controls-direction a').click(function() {
+
+    setTimeout(function() {
+
+        slider1.startAuto();
+
+            },1000);
+
+    });
+
+		
+
+	})
+
+</script> 
+<script src="scripts/common.js" type="text/javascript"></script>
+</body>
+</html>

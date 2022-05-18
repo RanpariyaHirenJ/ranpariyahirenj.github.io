@@ -1,0 +1,462 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<title>Finlinea Healthwits | Contact Us</title>
+<link rel="stylesheet" type="text/css" href="styles/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="scripts/jquery-min.js" type="text/javascript"></script>
+<script src="scripts/parallax.js"></script>
+<script>
+$(document).ready(function() {
+	var func  = "get_capcha_image";
+	$.ajax({
+		method: "POST",
+		url: "./user_ajax_functions.php",
+		data: { "function": func }
+	})
+	.done(function(msg) {
+		if(msg){
+			$(".captcha_image").empty();
+			$(".captcha_image").append(msg);
+		}
+	});
+});
+
+if ($(window).width() < 1024) {
+	
+	$(window).load(function() {
+		setInterval(function() {
+		var wind_with = $( window ).width();
+		var ul_width = $(".cart-product ul").width();
+		var fix_div_center = (wind_with - ul_width)/2 ;
+			$(".position-fixed").css("left", fix_div_center);
+			//alert(fix_div_center)
+			
+			$(window).scroll(function() {
+				if ($(this).scrollTop() > 220) 
+				{
+					$(".cartproduct-cntr .cart-product ul").addClass('position-fixed');
+				} 
+				else 
+				{
+				   $(".cartproduct-cntr .cart-product ul").removeClass('position-fixed')
+				}
+			});
+		 }, 500);
+	});
+	
+	 
+}
+</script>
+<style>html, body {overflow-x:hidden}</style>
+</head>
+<body>
+<div class="loader">
+  <div class="pre-container">
+    <div class="sk-double-bounce">
+      <div class="sk-child sk-double-bounce1"></div>
+      <div class="sk-child sk-double-bounce2"></div>
+    </div>
+  </div>
+</div>
+<div class="wrapper">
+  <div class="header">
+    <div class="container">
+      <div class="navigation">
+        <div class="logo"> <a href="http://www.finlineahealthwits.com"><img src="images/logo.png" alt="Finlinea Healthwits"></a></div>
+        <div class="login-mblmenu">
+          <div class="mobile-nav-icon">
+            <button class="menu-icon mobil-icon-toggle"> <span>toggle menu</span> </button>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="nav-menu">
+          <div class="top-status-bar desdisp">
+            <div class="dvrit"> <a href="javascript:void(0)" onClick="location.href='shopping-cart.html'">Buy Now</a> <div class="tollfree" title="Timings: Mon-Fri 10 am to 6 pm">Toll Free - 1800-227-798</div></div>
+          </div>
+          <ul>
+            <li class="dropdown"> <a href="javascript:void(0)" class="dropbtn">About</a><a href="javascript:void(0)" class="plus-minus-icon mobdisp"><i class="fa fa-plus" aria-hidden="true"></i></a>
+              <div class="sub-menu" style="display: none;">
+                <ul class="dropdown-content">
+                  <li> <a href="about/company.html">Company</a> </li>
+                  <li> <a href="about/nutrigenomics.html">Nutrigenomics</a> </li>
+                  <li> <a href="about/research-development.html">Research & Development</a> </li>
+                </ul>
+              </div>
+            </li>
+            <li class="dropdown"> <a href="javascript:void(0)" class="dropbtn">Products</a><a href="javascript:void(0)" class="plus-minus-icon mobdisp"><i class="fa fa-plus" aria-hidden="true"></i></a>
+              <div class="sub-menu" style="display: none;">
+                <ul class="dropdown-content">
+                  <li> <a href="products/healthwits.html">Why Healthwits?</a> </li>
+                  <li> <a href="products/aloe-vera-juice.html">Aloe Vera Juice</a> </li>
+                  <li> <a href="products/karela-juice.html">Karela Juice</a> </li>
+                  <li> <a href="products/jamun-juice.html">Jamun Juice</a> </li>
+                </ul>
+              </div>
+            </li>
+            <li class="dropdown"> <a href="javascript:void(0)" class="dropbtn">Ingredients</a><a href="javascript:void(0)" class="plus-minus-icon mobdisp"><i class="fa fa-plus" aria-hidden="true"></i></a>
+              <div class="sub-menu" style="display: none;">
+                <ul class="dropdown-content">
+                  <li> <a href="ingredients/aloe-vera.html">Aloe Vera</a> </li>
+                  <li> <a href="ingredients/karela.html">Karela</a> </li>
+                  <li> <a href="ingredients/jamun.html">Jamun</a> </li>
+                </ul>
+              </div>
+            </li>
+            <li> <a href="plant-practices.html">Plant & Practices</a> </li>
+            <li class="dropdown"> <a href="javascript:void(0)" class="dropbtn">Resources</a> <a href="javascript:void(0)" class="plus-minus-icon mobdisp"><i class="fa fa-plus" aria-hidden="true"></i></a>
+              <div class="sub-menu" style="display:none;">
+                <ul class="dropdown-content">
+                  <li> <a href="resources/recipes.html">Recipes</a> </li>
+                  <li> <a href="resources/faq.html">FAQ</a> </li>
+                </ul>
+              </div>
+            </li>
+            <li> <a href="blog.html">Blog</a> </li>
+            <li class="dropdown active-li"> <a href="javascript:void(0)" class="dropbtn">Contact</a> <a href="javascript:void(0)" class="plus-minus-icon mobdisp"><i class="fa fa-plus" aria-hidden="true"></i></a>
+              <div class="sub-menu" style="display:none;">
+                <ul class="dropdown-content">
+                  <li> <a href="contact/careers.html">Careers</a> </li>
+                  <li> <a href="contact/contact.html">Contact</a> </li>
+                </ul>
+              </div>
+            </li>
+            <li>                  
+                  <div class="top-status-bar mobdisp">
+                    <div class="dvrit"> <a href="javascript:void(0)" onClick="location.href='shopping-cart.html'">Buy Now</a> <div class="tollfree" title="Timings: Mon-Fri 10 am to 6 pm">Toll Free - <div>18OO-227-798</div></div></div>
+                  </div>
+             </li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <section class="shopping-cart-banner parallax top-banner">
+    <div class="container"> <i><img src="images/shopping-cart.jpg" alt="Shopping Cart"></i>
+      <h1><span class="wow animated fadeInUp" data-wow-delay="0.5s" data-wow-offset="50">Shopping Cart</span></h1>
+      <div class="banner-circle">
+        <div class="top1"></div>
+        <div class="top2"></div>
+        <div class="top3"></div>
+        <div class="top4"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </section>
+  <section class="cartproduct-cntr">
+    <div class="container">
+    	<div class="cart-product">
+            <h3>Select Product</h3>
+        	<ul>
+            	<li>
+                	<div class="cartproduct-image"><i><img src="images/healthwits-aloe-vera-juice.png" alt="Aloe Vera Juice"></i></div>
+                    <div class="cartproduct-info aloevara">
+                    	<p>Aloe Vera Juice</p>
+                        <span>Add to Cart</span>
+                    </div>
+                </li>
+            	<li>
+                	<div class="cartproduct-image"><i><img src="images/healthwits-karela-juice.png" alt="Karela Juice"></i></div>
+                    <div class="cartproduct-info karela">
+                    	<p>Karela Juice</p>
+                        <span>Add to Cart</span>
+                    </div>
+                </li>
+            	<li>
+                	<div class="cartproduct-image"><i><img src="images/healthwits-jamun-juice.png" alt="Jamun Juice"></i></div>
+                    <div class="cartproduct-info jamun">
+                    	<p>Jamun Juice</p>
+                        <span>Add to Cart</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+  </section>
+  <div class="product-description-mob-cntr">
+    <div class="container">
+    	<ul>
+        	<!--<li>
+            	<div class="productimg"><img src="images/healthwits-aloe-vera-juice.png" alt="Aloe Vera Juice"></div>
+            	<div class="productdetails">
+                	<p>Aloe Vera Juice</p>
+                    <p>Qty <input type="text" value="1"></p>
+                    <p>Rs.275/-</p>
+                 </div>
+            	<div class="productremove"><a href="javascript:void(0)"><i class="delete-icon"></i><p>Remove</p></a></div>
+            </li>
+        	<li>
+            	<div class="productimg"><img src="images/healthwits-karela-juice.png" alt="Aloe Vera Juice"></div>
+            	<div class="productdetails">
+                	<p>Karela Juice</p>
+                    <p>Qty <input type="text" value="1"></p>
+                    <p>Rs.255/-</p>
+                 </div>
+            	<div class="productremove"><a href="javascript:void(0)"><i class="delete-icon"></i><p>Remove</p></a></div>
+            </li>
+        	<li>
+            	<div class="productimg"><img src="images/healthwits-jamun-juice.png" alt="Aloe Vera Juice"></div>
+            	<div class="productdetails">
+                	<p>Jamun Juice</p>
+                    <p>Qty <input type="text" value="1"></p>
+                    <p>Rs.255/-</p>
+                 </div>
+            	<div class="productremove"><a href="javascript:void(0)"><i class="delete-icon"></i><p>Remove</p></a></div>
+            </li>-->
+        </ul>
+    </div>  
+  </div>
+  <div class="product-description-healthwits-cntr parallax shopping-cart-cntr">
+    <div class="container">
+      <div class="product-description-healthwits-info">
+        <ul>
+          <li>
+            <div class="grid-4">Product Image</div>
+            <div class="grid-4">Product Name</div>
+            <div class="grid-4">Product Quantity</div>
+            <div class="grid-4">Unit Price</div>
+            <div class="grid-4">Action</div>
+          </li>
+        </ul>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <section class="contactus-cntr parallax personal-information" style="background-position: center 73px;">
+    <div class="container">
+      <h2>Personal Information</h2>
+      <h3>Kindly fill your details to complete the shopping process</h3>
+      <div class="grid-12 p0">
+        <div class="grid-6 p0">
+          <div class="grid-layout">
+            <form name="contact_form" id="contact_form1" method="post" action="inc/contact.php" onSubmit="return form_validate_jquery('#contact_form')">
+              <div class="form-row animate-label">
+                <div class="form-field">
+                  <div class="grid-12">
+                  <div class="grid-6">
+                    <div class="input-group">
+                      <label>*Name</label>
+                      <input type="text" class="inputType inputTypeblack">
+                    </div>
+                  </div>
+                    <div class="grid-6">
+                    <div class="input-group">
+                      <label>*Email Address</label>
+                      <input type="text" class="inputType inputTypeblack">
+                    </div>
+                  </div>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </div>                          
+              <div class="form-row animate-label">
+                <div class="form-field">
+                  <div class="grid-12">
+                    <div class="input-group">
+                      <label>*Address</label>
+                      <textarea validation="text"></textarea>
+                    </div>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </div>
+              <div class="form-row animate-label">
+                <div class="form-field">
+                  <div class="grid-12">
+                    <div class="grid-6">
+                      <div class="input-group">
+                        <label>Enter the text as shown in image *</label>
+                        <input type="text" name="captcha_code" maxlength="4" id="captcha_code" validation="text" title="Captcha">
+                        <input type="hidden" name="action" value="Submit">
+                      </div>
+                    </div>
+                    <div class="grid-6">
+                      <div class="input-group captcha">
+                        <label>&nbsp;</label>
+                        <div class="captcha_image"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="grid-6 p0">
+          <div class="grid-layout">
+            <form name="contact_form" id="contact_form" method="post" action="inc/contact.php" onSubmit="return form_validate_jquery('#contact_form')">
+              <div class="form-row animate-label">
+                <div class="form-field">
+                  <div class="grid-12">
+                  <div class="grid-6">
+                    <div class="input-group">
+                      <label>*Mobile No.</label>
+                      <input type="text" maxlength="10" class="inputType inputTypeblack">
+                    </div>
+                  </div>
+                    <div class="grid-6">
+                    <div class="input-group">
+                      <label>Phone No. *</label>
+                      <input type="text" maxlength="10" class="inputType inputTypeblack">
+                    </div>
+                  </div>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </div>
+              <div class="form-row animate-label">
+                <div class="form-field">
+                  <div class="grid-12">
+                    <div class="input-group">
+                      <label>Message</label>
+                      <textarea validation="text"></textarea>
+                    </div>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </div>
+              <div class="note"><label><input type="checkbox" validation="check" id="above18years"> I am above 18 years of age and I agree to pay by cash.</label></div>
+            </form>
+          </div>
+        </div>
+        <div class="grid-12 sub-btn">
+          <div class="submitformbtn text-center spacingtopbot mt30">
+            <input type="button" name="action" value="Submit" onClick="location.href = 'thank-you.html';" class="box-btn">
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </section>
+  <section class="our-commitment-cntr parallax">
+    <div class="container">
+      <div class="our-commitment-info">
+        <div class="grid-4">
+          <h2>Our Commitment, Our Certifications</h2>
+        </div>
+        <div class="grid-8">
+          <ul>
+              <li><i><img src="images/our-commitment1.png" alt="ISO 9001 : 2008 Certified"></i></li>
+              <li><i><img src="images/our-commitment2.png" alt="ISO 22000 : 2005"></i></li>
+              <li><i><img src="images/our-commitment3.png" alt="HACCP Certified"></i></li>
+              <li><i><img src="images/our-commitment4.png" alt="GMP"></i></li>
+              <li><i><img src="images/our-commitment5.png" alt="FSSAI"></i></li>
+          </ul>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="footernavigtn">
+        <div class="copt-ryt"> © 2017 Finlinea Healthwits. <a href="terms-and-conditions.html">Terms and Conditions</a> <a href="privacy-policy.html">Privacy Policy</a> <a href="sitemap.html">Sitemap</a> <span>Site by <a href="http://www.intermind.in/" target="_blank"> Intermind</a>  </span></div>
+        <div class="social-media">
+          <ul>
+            <li class="fb-cntr"><a href="#" class="fb"></a> </li>
+            <li class="twitter-cntr"><a href="#" class="twitter"></a> </li>
+          </ul>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<div class="overlay" id="Select-product" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-header"> Select Product </div>
+      <div class="overlay-content">
+        <div class="animated-form">
+          <div class="grid-layout">
+            <div class="form-row animate-label">
+              <div class="form-field">
+                <div class="grid-12 select-product">
+                <ul>
+                    <li>
+                      <div class="grid-4">
+                        <div class="input-group">
+                          <label>&nbsp;</label>
+                          <label><input name="aloevera_check" id="aloevera_check" type="checkbox"> Aloe Vera Juice</label>                  
+                        </div>
+                      </div>
+                      <div class="grid-2" id="aloevera_div" style="display:none">
+                        <div class="input-group">
+                          <label>QTY</label>
+                          <input type="text" name="aloevera_qty" id="aloevera_qty" maxlength="2" onKeyPress="return onlyNos(event,this);">                      
+                        </div>
+                      </div>
+                      </li>
+                      
+                      <li>
+                      <div class="grid-4">
+                        <div class="input-group">
+                          <label>&nbsp;</label>
+                          <label><input type="checkbox" name="karela_check" id="karela_check"> Karela Juice</label>
+                        </div>
+                      </div>
+                      <div class="grid-2" id="karela_div" style="display:none">
+                        <div class="input-group">
+                          <label>QTY</label>
+                          <input type="text" name="karela_qty" id="karela_qty" maxlength="2" onKeyPress="return onlyNos(event,this);">                      
+                        </div>
+                      </div>
+                      </li>
+                      
+                      <li>
+                      <div class="grid-4">
+                        <div class="input-group">
+                          <label>&nbsp;</label>
+                          <label><input type="checkbox" name="jamun_check" id="jamun_check"> Jamun Juice</label>
+                        </div>
+                      </div>
+                      <div class="grid-2" id="jamun_div" style="display:none">
+                        <div class="input-group">
+                          <label>QTY</label>
+                          <input type="text" name="jamun_qty" id="jamun_qty" maxlength="2" onKeyPress="return onlyNos(event,this);">                      
+                        </div>
+                      </div>
+                      </li>
+                  </ul>
+                  
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="grid-12">
+                <div class="submitformbtn text-center spacingtopbot">
+                  <!--<input type="submit" value="Done" class="box-btn"  onClick="$('.closeBtn').click();
+                                                    setTimeout(function() {
+                                                    overlayBox('buy-now');
+                                                    }, 1100);">-->
+                <input type="submit" value="Done" class="box-btn"  onClick="checkbox_form();">
+                </div>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="scripts/wow.js"></script> 
+<script>
+	 new WOW().init();
+	$('.parallax').parallax({
+		speed : 0.50
+	});	
+</script> 
+<script src="scripts/js_class.js"></script>
+<script src="scripts/common.js" type="text/javascript"></script>
+</body>
+</html>

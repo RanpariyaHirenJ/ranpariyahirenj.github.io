@@ -1,0 +1,756 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<title>Welcome to Customate</title>
+<link rel="stylesheet" type="text/css" href="styles/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/slick-theme.css">
+<link rel="stylesheet" type="text/css" href="styles/slick.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" type="text/javascript"></script>
+<script src="scripts/jquery-min.js" type="text/javascript"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<link rel="stylesheet" href="styles/jquery-ui.css">
+<script src="scripts/jquery-ui.js"></script>
+<link rel="stylesheet" href="styles/jquery-ui.css">
+<script src="scripts/jquery-ui.js"></script>
+<style>
+.map-cntr {position: absolute;right: 0;top: 0;height: 100%;width: 44%;}
+.g-recaptcha>div {margin:0 auto;}
+</style>
+</head>
+<body>
+<div class="check-device">
+    <div>
+        <i class="icon-devices"></i>
+        <p>Check your device orientation</p>
+    </div>
+</div>
+<!--Ask for Demo-->
+<div class="overlay" id="ask-demo" data-animation-in="fadeInDown" data-animation-out="fadeOut">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-body">
+        <div class="overlay-header"> Ask for Demo <span class="fillnotificatin">Please fill the details below:</span></div>
+        <div class="overlay-content animated-form">
+          <form name="enquiry_form" id="enquiry_form" method="post" action="inc/contact.php" onSubmit="return form_validate_jquery('#enquiry_form')">
+          <div class="grid-layout">
+            <div class="form-row animate-label">
+              <div class="form-field">
+                <div class="grid-6">
+                  <div class="input-group">
+                    <input type="text" class="inputType" name="member_name" validation="text" title="Name" placeholder="Name">
+                  </div>
+                </div>
+                <div class="grid-6">
+                  <div class="input-group">
+                    <input type="text" class="inputType" name="member_email" validation="email" title="Email Id" placeholder="Email Id">
+                  </div>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div>
+            <div class="form-row animate-label">
+              <div class="form-field">
+                <div class="grid-6">
+                  <div class="input-group">
+                    <input type="text" class="inputType" name="member_company" validation="text" title="Company" placeholder="Company">
+                  </div>
+                </div>
+                <div class="grid-6">
+                  <div class="input-group">
+                    <select name="member_company_type" validation="text" title="Company Type" placeholder="Company Type">
+                        <option value=''>Select Company Type</option>
+                        <option>Agriculture and Forestry</option>
+                        <option>Information Technology</option>
+                        <option>Construction and Real Estate</option>
+                        <option>Utilities</option>
+                        <option>Education</option>
+                        <option>Finance & Insurance</option>
+                        <option>Food & Hospitality</option>
+                        <option>Sports / Gaming</option>
+                        <option>Health</option>
+                        <option>Manufacturing / Industry</option>
+                        <option>Transportation</option>
+                        <option>Automotive</option>
+                        <option>Safety / Security & Legal</option>
+                        <option>Natural Resources and Mining</option>
+                        <option>Environmental and Conservation</option>
+                        <option>Oil and Gas</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div>
+            <div class="form-row animate-label">
+              <div class="form-field">
+                <div class="grid-12">
+                  <div class="input-group">
+                  <input type="text" class="inputType" name="member_subject" validation="text" title="Subject" placeholder="Subject">
+                  </div>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div>
+            <div class="form-row animate-label">
+              <div class="form-field">
+                <div class="grid-12">
+                  <div class="input-group">
+                    <textarea class="inputType" name="message" validation="text" title="Message" placeholder="Message"></textarea>
+                  </div>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div>
+            <div class="form-row animate-label">
+              <div class="form-field">
+                <div class="grid-12">
+                  <div class="g-recaptcha" data-sitekey="6Ld3ZF0UAAAAAC9L5qEe8tlL4Xfh2wHP66A_vBRW"></div>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="grid-12 text-center">
+                <input type="submit" name="action" value="Submit" >
+              </div>
+              <div class="clear"></div>
+            </div>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Ask for Demo-->
+<div class="loader"></div>
+<div class="wrapper">
+  <div class="header">
+    <div class="container">
+      <div class="navigation">
+        <div class="logo"> <a href="index.html"><img src="images/logo.png"></a></div>
+        <div class="login-mblmenu">
+          <div class="mobile-nav-icon">
+            <button class="menu-icon mobil-icon-toggle"> <span>toggle menu</span> </button>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="nav-menu">
+          <ul>
+            <li class="active"> <a href="index.html">Home</a></li>
+            <li> <a href="about.html">About</a> </li>
+            <li class="subdrop-down"> <a href="product.html">Products</a> 
+            	<div class="sub-menu">
+                  <ul class="dropdown-content">
+                    <li class=""><a href="accounting-software.html">Accounting Software</a></li>
+                    <li class=""><a href="human-resources-management.html">Human Resources Management</a></li>
+                    <li class=""><a href="inventory-management.html">Inventory Management</a></li>
+                    <li class=""><a href="procurement-management.html">Procurement Management</a></li>
+                    <li class=""><a href="sales-customer-management.html">Sales and Customer Management</a></li>
+                  </ul>
+              </div>
+            </li>
+            <li> <a href="pricing.html">Pricing</a> </li>
+            <li> <a href="blog/index.html">Blog</a> </li>
+            <li> <a href="contact.html">Contact</a> </li>
+          </ul>
+          <div class="login-signup"> 
+              <a href="https://www.customateapps.com/aoaweb/newui/login.html" target="_blank" class="login">Login</a>
+              <a href="https://www.customateapps.com/aoaweb/newui/login.html#toregister" target="_blank" class="Signup">Signup</a> 
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <section class="banner">
+    <div class="main-banner">
+      <div class="sliderContainer">
+        <div class="slider single-item">
+          <div class="slider-row slide-1">
+            <div class="container">
+              <div class="slider-Large-txt" data-animation="fadeInLeft" data-delay="1s">
+                <div class="s-Big-txt">Totally Custom: <br>Build new or customize existing
+                  <p>No need to change your working style that is established over years of successful practice</p>
+                  <div class="twocommonbtn"> <a href="javascript:void(0);" onClick="overlayBox('ask-demo');" class="btn btn-primary">Request a Demo</a> </div>
+                </div>
+              </div>
+              <div class="join-us-btn" data-animation="fadeInUp" data-delay="1s">
+                <div class="join-us-link"> <img src="images/banner-img1.png" class="layer-size1"> </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-row slide-3">
+            <div class="container">
+              <div class="slider-Large-txt" data-animation="fadeInLeft" data-delay="1s">
+                <div class="s-Big-txt">Super Fast: <br>Made in days, Not weeks or months
+                  <p>Quick development directly by business experts <br>Changes and revisions till users satisfied</p>
+                  <div class="twocommonbtn"> <a href="javascript:void(0);" onClick="overlayBox('ask-demo');" class="btn btn-primary">Request a Demo</a> </div>
+                </div>
+              </div>
+              <div class="join-us-btn" data-animation="fadeInUp" data-delay="1s">
+                <div class="join-us-link"> <img src="images/banner-img3.png" class="layer-size1"> </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-row slide-2">
+            <div class="container">
+              <div class="slider-Large-txt" data-animation="fadeInLeft" data-delay="1s">
+                <div class="s-Big-txt">Magically Affordable: <br>Free to build, Pay monthly to use<!--Free Development, Pay monthly for usage-->
+                  <p>Get custom SaaS at the price of ready-made SaaS <br>On the cloud - no licenses, no hardware, no infrastructure costs</p>
+                  <div class="twocommonbtn"> <a href="javascript:void(0);" onClick="overlayBox('ask-demo');" class="btn btn-primary">Request a Demo</a> </div>
+                </div>
+              </div>
+              <div class="join-us-btn" data-animation="fadeInUp" data-delay="1s">
+                <div class="join-us-link"> <img src="images/banner-img2.png" class="layer-size1"> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- end snippet --> 
+    
+    </div>
+  </section>
+  <div class="get-started-cntr">
+    <div class="container">
+      <div class="get-started-free-detail">
+        <div class="get-started-detail">
+          <div class="get-started-input-text">
+          	<form name="newsletter_form" id="newsletter_form" method="post" action="inc/contact.php" onSubmit="return formvalidatejquery('#newsletter_form')">
+            <input type="text" name="newsletter_email" validation="email" title="Email" placeholder="Enter Your Email Id">
+            <input type="submit" name="action" class="get-started-btn" value="GET STARTED">
+            </form>
+          </div>
+        </div>
+        <div class="try-free-cntr">
+          <div class="try-free-text">Try. It's free</div>
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="our-products-cntr">
+    <div class="container">
+      <div class="our-products-detail">
+        <h2 class="wow animated fadeInUp" data-wow-delay="0.2s" data-wow-offset="50">Our Products</h2>
+        <p class="wow animated fadeInDown" data-wow-delay="0.4s" data-wow-offset="50">Below are some of our products that can be completely customized to your needs OR we can build a totally custom cloud product for you in days – FREE of cost, pay only for monthly usage!</p>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="weconnectbox">
+    <div class="container">
+      <div class="grid-layout">
+        <div class="grid-4">
+          <div class="conectinfobox text-right">
+            <div class="pointboxtabl wow animated fadeInLeft" data-wow-delay="0.5s" data-wow-offset="50">
+              <div class="pointboxcell pointinfo">
+                <h3>Accounting Software</h3>
+                <p>Easy single form management of all your entries – quick and fast.</p>
+                <a href="accounting-software.html">+ Know More</a>
+              </div>
+              <div class="pointboxcell pointicon"> <img src="images/Payroll.png"> </div>
+              <div class="clear"></div>
+            </div>
+            <div class="pointboxtabl wow animated fadeInLeft" data-wow-delay="1.1s" data-wow-offset="50">
+              <div class="pointboxcell pointinfo">
+                <h3>Inventory Management</h3>
+                <p>Live, Realtime Inventory and rules based inventory for maximum Sales</p>
+                <a href="inventory-management.html">+ Know More</a>
+              </div>
+              <div class="pointboxcell pointicon"> <img src="images/Inventory.png"> </div>
+              <div class="clear"></div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-4 centerimg">
+          <div class="computer-circle wow animated zoomIn" data-wow-delay="0.2s" data-wow-offset="50"> <img src="images/ourproducts.png"> </div>
+          <div class="conectinfobox text-left">
+            <div class="pointboxtabl wow animated fadeInUp" data-wow-delay="0.8s" data-wow-offset="50">
+              <div class="pointboxcell pointicon"> <img src="images/hr-mgt.png"> </div>
+              <div class="pointboxcell pointinfo">
+                <h3>Human Resources Management</h3>
+                <p>Manage your human resources in a way that makes them happy</p>
+                <a href="human-resources-management.html">+ Know More</a>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-4">
+          <div class="conectinfobox text-left">
+            <div class="pointboxtabl wow animated fadeInRight" data-wow-delay="0.8s" data-wow-offset="50">
+              <div class="pointboxcell pointicon"> <img src="images/Sales-Mgt.png"> </div>
+              <div class="pointboxcell pointinfo">
+                <h3>Sales Management</h3>
+                <p>Double your topline by having your sales at your finger tip.</p>
+                <a href="sales-customer-management.html">+ Know More</a>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="pointboxtabl wow animated fadeInRight" data-wow-delay="1.4s" data-wow-offset="50">
+              <div class="pointboxcell pointicon"> <img src="images/Procurement.png"> </div>
+              <div class="pointboxcell pointinfo">
+                <h3>Procurement Management</h3>
+                <p>Budgets and plans based procurement with alerts to avoid delays and save money</p>
+                <a href="procurement-management.html">+ Know More</a>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <div class="Products-cntr">
+    <div class="container">
+      <div class="Products-txt">
+      <div class="Products-info">
+      <div class="customatetxt">
+      <h2>Technology</h2>
+        <p class="wow animated fadeInUp" data-wow-delay="0.2s" data-wow-offset="50">Customate is a revolutionary platform that allows business professionals to create totally custom and highly complex, end to end software automating businesses without involving IT at all, and, yet at least 10 times cheaper and faster!</p>
+        <p class="wow animated fadeInUp" data-wow-delay="0.2s" data-wow-offset="50">Our platform allows the making of software in a stress-free collaboration with the users making changes till they are satisfied.  In fact, it is forever flexible - it allows continuous changes in future to evolve with the changing business needs over time.</p>
+        </div>
+        <i style="display:none"><img src="images/about-customate.jpg" ></i>
+      </div>
+      </div>
+    </div>
+  </div> 
+  
+  <div class="insights-cntr">
+    <div class="container">
+      <h2 class="wow animated fadeInUp" data-wow-delay="0.2s" data-wow-offset="50">Customer Insights</h2>
+        <p class="wow animated fadeInDown" data-wow-delay="0.4s" data-wow-offset="50">Similar businesses do the same thing in very different and specific ways.  They gain a lot if the business is automated to encourage and enhance the strengths of these well-established practices.</p>
+      <div class="insights-video">
+        <div class="case-study">
+          <div class="case-study-li">
+            <div class="vdobx-ryt boxcolbv">
+              <div class="vdeobannrbx">
+                <div class="video-text">
+                  <h3>01 Bygging Inventory</h3>
+                  <p>The company has 2 manufacturing units where they make hydraulic jacks and a turnover of over 50 cr. They use a lot of different items, especially steel products like rods...</p>
+                  <div class="twocommonbtn"> <a href="pdf/bygging-inventory-case-study.pdf" target="_blank" class="btn btn-secondary">KNOW MORE</a> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case-study-li">
+            <div class="vdobx-ryt boxcolbv">
+              <div class="vdeobannrbx">
+                <div class="video-text">
+                  <h3>02 Vinayak Tubes Sales</h3>
+                  <p>Another customer of ours had some unique requirements. It’s a fairly large stockiest and trader of steel pipes and tubes.  Turnover of close to 100 cr.</p>
+                  <div class="twocommonbtn"> <a href="pdf/vinayak-tubes-sales-case-study.pdf" target="_blank" class="btn btn-secondary">KNOW MORE</a> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case-study-li">
+            <div class="vdobx-ryt boxcolbv">
+              <div class="vdeobannrbx">
+                <div class="video-text">
+                  <h3>03 NGO Automation</h3>
+                  <p>A firm consulting NGO’s approached us to create a product for the NGO’s automating their program-wise functioning as there was nothing like that in the market.</p>
+                  <div class="twocommonbtn"> <a href="pdf/ngo-automation-case-study.pdf" target="_blank" class="btn btn-secondary">KNOW MORE</a> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case-study-li">
+            <div class="vdobx-ryt boxcolbv">
+              <div class="vdeobannrbx">
+                <div class="video-text">
+                  <h3>04 Intermind</h3>
+                  <p>Our web designing company that’s an IT company wanted a Order management software to Keep track of the orders, delivery and payment milestones...</p>
+                  <div class="twocommonbtn"> <a href="pdf/intermind-case-study.pdf" target="_blank" class="btn btn-secondary">KNOW MORE</a> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="case-study-li">
+            <div class="vdobx-ryt boxcolbv">
+              <div class="vdeobannrbx">
+                <div class="video-text">
+                  <h3>05 Bluefeather</h3>
+                  <p>A small follow up system for a company that needs to have its lead generating people to constantly make cold calls and follow up with potential customers.</p>
+                  <div class="twocommonbtn"> <a href="pdf/bluefeather-case-study.pdf" target="_blank" class="btn btn-secondary">KNOW MORE</a> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="customers-cntr">
+  	<div class="container">
+    	<div class="customers-info">
+        	<ul>
+            	<li><img src="images/bygging.png"></li>
+            	<li><img src="images/intermind.png"></li>
+            	<li><img src="images/Harrier.png"></li>
+            	<li><img src="images/blue-feather.png"></li>
+            	<li><img src="images/mahalaxmi.png"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="features-cntr">
+    <div class="container">
+      <div class="features-info">
+        <h2 class="wow animated fadeInUp" data-wow-delay="0.2s" data-wow-offset="50">Why Businesses Love Us?</h2>
+        <p class="wow animated fadeInDown" data-wow-delay="0.4s" data-wow-offset="50">Other than costs and speed, we bring host of totally unique benefits to our customers, something you won’t find in any other cloud/SaaS or in-premise product</p>
+        <ul class="features-ul">
+          <li class="wow animated fadeInLeft" data-wow-delay="0.2s" data-wow-offset="50"> <i><img src="images/custom.jpg"></i>
+            <h3>User Driven</h3>
+            <p>Easy use-and-change implementation for complete user satisfaction</p>
+          </li>
+          <li class="wow animated fadeInUp" data-wow-delay="0.6s" data-wow-offset="50"> <i><img src="images/comprehensive.jpg"></i>
+            <h3>Comprehensive</h3>
+            <p>Let one system automate every part of your business seamlessly</p>
+          </li>
+          <li class="wow animated fadeInRight" data-wow-delay="0.4s" data-wow-offset="50"> <i><img src="images/fast.jpg"></i>
+            <h3>Forever Flexible</h3>
+            <p>Change software every time your processes or strategies or business itself change</p>
+          </li>
+          <li class="wow animated fadeInLeft" data-wow-delay="0.2s" data-wow-offset="50"> <i><img src="images/bang-buck.jpg"></i>
+            <h3>Learning & Evolving</h3>
+            <p>Add your business learning directly in to the system constantly improving it</p>
+          </li>
+          <li class="wow animated fadeInUp" data-wow-delay="0.6s" data-wow-offset="50"> <i><img src="images/flexible.jpg"></i>
+            <h3>Easy Integration</h3>
+            <p>Integrate with existing software easily wherever needed</p>
+          </li>
+          <li class="wow animated fadeInRight" data-wow-delay="0.4s" data-wow-offset="50"> <i><img src="images/learning-evolving.jpg"></i>
+            <h3>AI supported </h3>
+            <p>Let our AI engine guide your business with insights and predictions</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+</div>
+<div class="testimonials-cntr">
+  <div id="clients"></div>
+  <div class="testimonials-bg-colo">
+    <div class="container">
+    <div class="testimonials-txt-cntr">
+      <h2 class="wow animated fadeInDown" data-wow-delay="0.2s" data-wow-offset="50">Customer Speak</h2>
+      <ul class="testimonials">
+        <li>
+          <div class="clients-speak">We were having a lot of trouble maintaining our inventory in general and our steel in particular because our steel – rods, pipes, plates were getting cut into various sizes at various stages.  We wanted to track them in 3 units of measurement at the same time and with Customate's System we are able to do it! Talked to many vendors but no one was willing to do this – all exhorted us to get some custom software made – so, thank you Customate!</div>
+          <p>
+              <i><img src="images/client-speak.png" ></i>
+              <span class="">Dipak Modi, MD<span>Bygging Infra Pvt Ltd</span></span>
+          </p>
+        </li>
+        <li>
+          <div class="clients-speak">In our new warehouse we had to maintain the proper traceability of each of our products that come from various manufacurers and often are mixed while storing.  Pipes and tubes have many conventions while specifying them and we needed a way to do it.  Customate build a custom program in a very short time and we were on our way!</div>
+          <p>
+              <i><img src="images/client-speak.png" ></i>
+              <span class="">Arun Sarawgi, MD<span>Vinayak Pipes and Tubes Pvt Ltd</span></span>
+          </p>
+        </li>
+        <li>
+          <div class="clients-speak">We make custom clothing solutions for our clients all over the world, we realize how tough it is to do such custom work.  Yet, Customate built a very specific software for us in quick time which helped our Sales people follow up and track our leads and record all interactions thus keep us on top of finding new clients constantly.</div>
+          <p>
+          	  <i><img src="images/client-speak.png" ></i>
+              <span class="">Bluefeather Clothing <span>Solutions, Proprietor</span></span>
+           </p>
+        </li>
+      </ul> 
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<div class="footer-line">
+  <div class="container">
+    <ul class="desktop">
+      <li class="list-play"> watch video </li>
+      <li class="list-play revolutionary-technology-vid"> <a href="javascript:void(0);" onClick="overlayBox('revolutionary-technology')" class="video-link"> Revolutionary Technology </a></li>
+      <li class="list-play benefit-customers-vid"> <a href="javascript:void(0);" onClick="overlayBox('benefit-customers')" class="video-link">Benefit to Customers</a></li>
+      <li class="list-play our-story-vid"> <a href="javascript:void(0);" onClick="overlayBox('our-story')" class="video-link">Demo Video</a></li>
+    </ul>
+    <div class="ask-for-demo desktop"> <a href="javascript:void(0);" onClick="overlayBox('ask-demo');">Ask for Demo</a> </div>
+    <div class="watch-video-mob">watch video</div>
+    <ul class="mob ask-for-demo-mob">
+      <li class="list-play revolutionary-technology-vid"> <a href="javascript:void(0);" onClick="overlayBox('revolutionary-technology')" class="video-link"> What? </a></li>
+      <li class="list-play benefit-customers-vid"> <a href="javascript:void(0);" onClick="overlayBox('benefit-customers')" class="video-link"> Why? </a></li>
+      <li class="list-play our-story-vid"> <a href="javascript:void(0);" onClick="overlayBox('our-story')" class="video-link"> Demo? </a></li>
+    </ul>
+    <div class="ask-for-demo mob"> <a href="javascript:void(0);" onClick="overlayBox('ask-demo');">Ask for Demo</a> </div>
+  </div>
+</div>
+
+<div class="share-info">
+    <ul id="webSocialList">
+        <li id="webSocialcopylink"> <a class="twitter-share-button" target="_blank" href="javascript:void(0)" onClick="copyToClipboard('http://customate.biz')" data-size="large"> <i class="fa fa-link" title="Copy Link"></i> </a> </li>
+        <li id="webSocialwhatsapp"> 
+        <a class="twitter-share-button desdisp" target="_blank" href="https://web.whatsapp.com/send?text=http://customate.biz" data-action="share/whatsapp/share" data-size="large">
+         <i class="fa fa-whatsapp" title="Whatsapp"></i> </a>
+        <a class="twitter-share-button mobdisp" target="_blank" href="whatsapp://send?text=http://customate.biz" data-action="share/whatsapp/share" data-size="large">
+         <i class="fa fa-whatsapp" title="Whatsapp"></i> </a> </li>
+        <li id="webSocialTwitter"> <a class="twitter-share-button" target="_blank" href="https://twitter.com/intent/tweet?text=http://customate.biz" data-size="large"> <i class="fa fa-twitter" title="Twitter"></i> </a> </li>
+        <li id="webSocialfacebook"> <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://customate.biz"> <i class="fa fa-facebook" title="Facebook"></i> </a> </li>
+        <li id="webSocialLinkedin"> <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://customate.biz" target="_blank"> <i class="fa fa-linkedin" title="Linkedin"></i> </a> </li>
+        <li id="webSocialIcon"><i class="fa fa-share-alt"></i></li>
+    </ul>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-cntr">
+      <ul>
+        <li>
+          <dl class="active">
+            <dt>Contact</dt>
+            <dd style="display:block">
+              <p>54A Virwani Ind Est Goregaon E Mumbai 400063</p>
+              <p><a href="tell:+919820170609">+91 98201 70609</a></p>
+              <p><a href="mailto:info@customate.biz">info@customate.biz</a></p>
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt>Blogs</dt>
+            <dd>
+              <ul>
+                
+                <li> <a href="blog/software-fits-your-processes-like-glove-underbelly-saas.html"> Software that Fits your Processes like a Glove - The Underbelly of SaaS </a> </li>
+                <li> <a href="blog/ha-now-software-implementation-can-actually-enjoyable.html"> Ha! Now Software Implementation can actually be an Enjoyable Experience! </a> </li>
+              </ul>
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <div class="footer-social">
+            <div class="copyright-text">
+              <p>Follow us</p>
+              <div class="social-icons"> 
+                  <a href="https://twitter.com/customatebiz" target="_blank" class="twitter-icon"><img src="images/twitter-icon.png"></a> 
+                  <a href="https://www.linkedin.com/in/vjalan" target="_blank" class="twitter-icon"><img src="images/linkedin-icon.png"></a> 
+                  <a href="https://www.facebook.com/jalvivek" target="_blank" class="fb-icon"><img src="images/fb-icon.png"></a> 
+                  <a href="https://www.youtube.com/channel/UCNwno8xGj2B08oz7KeNLW1w/featured" target="_blank" class="twitter-icon"><img src="images/youtube-icon.png"></a>
+                <div class="clear"></div>
+              </div>
+              <div class="site-buy">Website by <a href="http://www.intermind.in/" target="_blank"> Intermind</a> </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </li>
+      </ul>
+      <div class="clear"></div>
+    </div>
+  </div>
+</footer>
+<div class="copt-ryt">All content © Customate.biz</div>
+</div>
+
+
+<div class="overlay" id="revolutionary-technology" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-header"> Revolutionary Technology </div>
+      <div class="overlay-content">
+        <div class="container">
+          <iframe width="800" height="450" src="https://www.youtube.com/embed/D_oYlN1mZrU?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="overlay" id="benefit-customers" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-header"> Benefit to Customers </div>
+      <div class="overlay-content">
+        <div class="container">
+          <iframe width="800" height="450" src="https://www.youtube.com/embed/yqSiJCCiy0w?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="overlay" id="our-story" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-header"> Demo Video </div>
+      <div class="overlay-content">
+        <div class="container">
+        	<iframe width="800" height="450" src="https://www.youtube.com/embed/6KYNriFBqrc?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="scripts/common.js" type="text/javascript"></script> 
+<script src="scripts/wow.min.js"></script> 
+<script>
+	new WOW().init();
+	</script> 
+<script src="scripts/slick-min.js"></script> 
+<script>
+
+$(window).load(function () {
+  $('.slider').on('init', function(e, slick) {
+        var $firstAnimatingElements = $('div.slider-row:first-child').find('[data-animation]');
+        doAnimations($firstAnimatingElements);    
+    });
+    $('.slider').on('beforeChange', function(e, slick, currentSlide, nextSlide) {
+              var $animatingElements = $('div.slider-row[data-slick-index="' + nextSlide + '"]').find('[data-animation]');
+              doAnimations($animatingElements);    
+    });
+	
+		width = $(window).width();
+		if (width < 640) {
+				$('.slider').slick({
+					autoplay: true,
+					speed:1000,
+					autoplaySpeed: 5000,
+					dots: true,
+					fade: false,
+					pauseOnHover:false
+				});
+			$(".slider-Large-txt").removeAttr("data-animation").removeAttr("data-delay");
+			$(".join-us-btn").removeAttr("data-animation").removeAttr("data-delay");
+		} else {
+			$('.slider').slick({
+				autoplay: true,
+				speed:1000,
+				autoplaySpeed: 5000,
+				dots: true,
+				fade: true,
+				pauseOnHover:false
+			});
+		}
+		
+    function doAnimations(elements) {
+        var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+        elements.each(function() {
+            var $this = $(this);
+            var $animationDelay = $this.data('delay');
+            var $animationType = 'animated ' + $this.data('animation');
+            $this.css({
+                'animation-delay': $animationDelay,
+                '-webkit-animation-delay': $animationDelay
+            });
+            $this.addClass($animationType).one(animationEndEvents, function() {
+                $this.removeClass($animationType);
+            });
+        });
+    }
+		
+		$('.SS-slider').slick({
+			infinite: false,
+			slidesToShow: 4,
+			slidesToScroll: 1,
+			dots: false,
+			responsive: [
+    {
+      breakpoint: 980,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 767,
+        settings: 'unslick'
+    }
+  ]
+			
+		});
+		
+		
+$('.case-study').slick({
+	autoplay: false,
+	speed:1000,
+	autoplaySpeed: 5000,
+	dots: true,
+	fade: false,
+	pauseOnHover:false,
+  	slidesToShow: 3,
+  	slidesToScroll: 1,
+	responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+		
+$('.testimonials').slick({
+	autoplay: true,
+	speed:1000,
+	autoplaySpeed: 5000,
+	dots: true,
+	fade: false,
+	pauseOnHover:false
+});
+	
+$('.our-products-slider').slick({
+	autoplay: true,
+	speed:1000,
+	autoplaySpeed: 5000,
+	dots: true,
+	fade: true,
+	pauseOnHover:false
+});
+
+})
+</script>
+
+<script>
+$(window).load(function () {
+  var liMaxHeight = -1;
+    var node;
+    $(".insights-video .case-study .case-study-li").each(function(index) {
+        if ($(this).outerHeight() > liMaxHeight) {
+            liMaxHeight = $(this).outerHeight();
+            node = index;
+        }
+    });
+
+    $('.insights-video .case-study .case-study-li').css('min-height', liMaxHeight + 1);
+})
+</script>
+</body>
+</html>

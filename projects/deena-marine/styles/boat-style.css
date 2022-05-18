@@ -1,0 +1,83 @@
+svg {
+  display:block;
+  margin: auto;
+}
+#sea01, #sea02{
+		-webkit-transform: translate(0px,0px);
+		        transform: translate(0px,0px);
+		-webkit-animation: seamove 7.5s linear infinite;
+		        animation: seamove 7.5s linear infinite;
+		}
+ 
+	@-webkit-keyframes seamove{
+		0% {-webkit-transform:translate(0px,0px);transform:translate(0px,0px)}
+		25% {-webkit-transform:translate(-150px,-15px);transform:translate(-150px,-15px)}
+		50% {-webkit-transform:translate(-300px, 0px);transform:translate(-300px, 0px)}
+		75% {-webkit-transform:translate(-450px,-8px);transform:translate(-450px,-8px)}
+		100%{-webkit-transform:translate(-600px,0px);transform:translate(-600px,0px)}
+		}
+ 
+	@keyframes seamove{
+		0% {-webkit-transform:translate(0px,0px);transform:translate(0px,0px)}
+		25% {-webkit-transform:translate(-150px,-15px);transform:translate(-150px,-15px)}
+		50% {-webkit-transform:translate(-300px, 0px);transform:translate(-300px, 0px)}
+		75% {-webkit-transform:translate(-450px,-8px);transform:translate(-450px,-8px)}
+		100%{-webkit-transform:translate(-600px,0px);transform:translate(-600px,0px)}
+		}
+
+	
+	#boat {
+		-webkit-transform-origin: 500px 500px;
+		        transform-origin: 500px 500px;
+		-webkit-animation: boatmove 4s infinite;
+		        animation: boatmove 4s infinite;
+		-webkit-animation-delay:0.25s;
+		        animation-delay:0.25s;
+		}
+	@-webkit-keyframes boatmove{
+		0% {-webkit-transform: rotate(1deg)translate(0px,0px);transform: rotate(1deg)translate(0px,0px)}
+		25% {-webkit-transform:rotate(-1deg) translate(0px,-25px);transform:rotate(-1deg) translate(0px,-25px)  }
+		50% {-webkit-transform:rotate(1deg) translate(0px, 0px);transform:rotate(1deg) translate(0px, 0px) }
+		75% {-webkit-transform:rotate(-1deg) translate(0px,-20px);transform:rotate(-1deg) translate(0px,-20px)}
+		100%{-webkit-transform:rotate(1deg) translate(0px,0px);transform:rotate(1deg) translate(0px,0px)}
+		}
+	@keyframes boatmove{
+		0% {-webkit-transform: rotate(1deg)translate(0px,0px);transform: rotate(1deg)translate(0px,0px)}
+		25% {-webkit-transform:rotate(-1deg) translate(0px,-25px);transform:rotate(-1deg) translate(0px,-25px)  }
+		50% {-webkit-transform:rotate(1deg) translate(0px, 0px);transform:rotate(1deg) translate(0px, 0px) }
+		75% {-webkit-transform:rotate(-1deg) translate(0px,-20px);transform:rotate(-1deg) translate(0px,-20px)}
+		100%{-webkit-transform:rotate(1deg) translate(0px,0px);transform:rotate(1deg) translate(0px,0px)}
+		}
+	#fume {
+		opacity: 0.0;
+		-webkit-animation: fume_appears 4s infinite;
+		        animation: fume_appears 4s infinite;
+		-webkit-animation-delay:0.4s;
+		        animation-delay:0.4s;
+		}
+	#fume02 {
+		opacity: 0.0;
+		-webkit-animation: fume_appears 4s infinite;
+		        animation: fume_appears 4s infinite;
+		-webkit-animation-delay:0.7s;
+		        animation-delay:0.7s;
+
+		}
+	@-webkit-keyframes fume_appears	{
+		0% { opacity:0.0; -webkit-transform: translate(0px,0px); transform: translate(0px,0px);}
+		25% { opacity:1.0;}
+		50% { opacity:0.0; -webkit-transform: translate(-50px,-25px); transform: translate(-50px,-25px); }
+		51% { -webkit-transform: translate(0px,0px); transform: translate(0px,0px); }
+		75% { opacity:1.0; }
+		99% { opacity:0.0; -webkit-transform: translate(-50px,-25px); transform: translate(-50px,-25px);}
+		
+		}
+	@keyframes fume_appears	{
+		0% { opacity:0.0; -webkit-transform: translate(0px,0px); transform: translate(0px,0px);}
+		25% { opacity:1.0;}
+		50% { opacity:0.0; -webkit-transform: translate(-50px,-25px); transform: translate(-50px,-25px); }
+		51% { -webkit-transform: translate(0px,0px); transform: translate(0px,0px); }
+		75% { opacity:1.0; }
+		99% { opacity:0.0; -webkit-transform: translate(-50px,-25px); transform: translate(-50px,-25px);}
+		
+		}

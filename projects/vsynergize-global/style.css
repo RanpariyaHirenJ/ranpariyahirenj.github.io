@@ -1,0 +1,492 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+@font-face { font-family: 'FontAwesome'; src: url('fonts/fontawesome-webfont.eot?v=4.0.1'); src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.0.1') format('embedded-opentype'), url('fonts/fontawesome-webfont.woff?v=4.0.1') format('woff'), url('fonts/fontawesome-webfont.ttf?v=4.0.1') format('truetype'), url('fonts/fontawesome-webfont.svg?v=4.0.1#fontawesomeregular') format('svg'); font-weight: normal; font-style: normal; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+  overflow-x:hidden;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+*{box-sizing: border-box;transition: all .5s ease;outline: none;}
+
+/* Embed Fonts */
+/*@import url('https://fonts.googleapis.com/css?family=Karla:400,700|Roboto:100,300,400|Rubik');*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+@font-face {
+    font-family: 'futura_hv_btheavy';
+    src: url('../fonts/futurah-webfont.woff2') format('woff2'),
+         url('../fonts/futurah-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/*
+font-family: 'Karla', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Rubik', sans-serif; */
+
+
+/* Global CSS */
+body{font-family: 'Roboto', sans-serif;font-weight: 300;}
+h1{font-family: 'futura_hv_btheavy';font-size:80px;}
+h2{font-family: 'futura_hv_btheavy';font-size:52px;font-weight:600;letter-spacing:-2px;margin-bottom: 40px}
+h3{font-family: 'futura_hv_btheavy';font-size:30px;margin: 30px 0 30px;line-height: 40px;}
+h4{font-family: 'futura_hv_btheavy';font-size:20px;margin: 20px 0 15px; }
+h5{font-family: 'futura_hv_btheavy';font-size:18px;margin: 20px 0 15px; }
+p{font-family: 'Roboto', sans-serif;font-weight: 300;color:#6f6f71;font-size: 18px;line-height: 30px;margin-bottom: 30px}
+a{text-decoration:none;cursor: pointer;}
+a.button.button_orange {
+    background: #ce6511;
+    color: #fff;
+}
+
+a.button {
+    padding: 14px 20px;
+    border-radius: 4px;
+    font-family: 'futura_hv_btheavy';
+    text-transform: uppercase;
+    margin: 5px 0;
+    display: inline-block;
+}
+a.button:hover {background: #f99d2f;transform: scale(1.05) !important;transition: transform .5s ease;}
+section{max-width: 1920px;margin:0 auto;}
+
+/* Global Classes */
+.container{max-width: 1280px;width: 100%;margin: 0 auto;padding: 15px}
+.col3{width:33.33%;float: left;padding:0 15px;}
+.fl{float:left;}
+.fr{float:right;}
+.f_w_r{font-weight: 400}
+.clear:after,.clear:before{content:'';display:table;clear:both;}
+.text_center{text-align:center;}
+ul.list_type_1{margin: 20px 0 20px;display: block}
+.list_type_1 li{position:relative;font-family: 'Roboto', sans-serif;font-size: 18px;font-weight:300;line-height:26px;padding: 7px 10px 7px 35px;color:#6f6f71;}
+.list_type_1 li strong{font-weight:bold;display:block;}
+.list_type_1 li a{color:#6f6f71;}
+.list_type_1 li:after{position:absolute;content:'';background-color:#8b8b8d;top:22px;display: block;height:2px;width:22px;left:0;}
+.padTB100{padding-top:100px;padding-bottom: 100px;display: block}
+.padTB150{padding-top:150px;padding-bottom: 150px;display: block}
+.padT50{padding-top:50px;}
+
+
+
+/* Page Specific */
+.banner_overlay:after{content:'';display:block;opacity: .8;position: absolute;top:0;left:0;height: 100%;width: 100%}
+header.banner_overlay{background-position: 0 0;background-repeat: no-repeat;background-size:cover;}
+header.blockchain_banner{background-image: url(../images/main-banners/blockchain-banner.jpg)}
+header.iot_banner{background-image: url(../images/main-banners/iot-banner.jpg)}
+header.data_science_banner{background-image: url(../images/main-banners/data-science-banner.jpg)}
+header.artificial_intelligence_banner{background-image: url(../images/main-banners/artificial-intelligence-banner.jpg)}
+header.cloud_banner{background-image: url(../images/main-banners/cloud-banner.jpg)}
+#header_top .container{padding: 0 15px;}
+.blue_color, .blue_color h2, .blue_color h5, .blue_color li a:hover, .blue_color li.active a{color:#3284b6 !important;}
+.red_color, .red_color h2,.red_color h5, .red_color li a:hover, .red_color li.active a{color:#db4b50 !important;}
+.orange_color, .orange_color h2,.orange_color h5, .orange_color li a:hover, .orange_color li.active a{color:#f47920 !important;}
+.purple_color, .purple_color h2,.purple_color h5, .purple_color li a:hover, .purple_color li.active a{color:#6e389a !important;}
+.sky_blue_color, .sky_blue_color h5, .sky_blue_color li a:hover, .sky_blue_color li.active a{color:#2cb5c0 !important;}
+
+.blue_color .list_type_1.whyvsynergizeglobal li:after, .banner_overlay_blue:after{background: #3284b6;}
+.red_color .list_type_1.whyvsynergizeglobal li:after, .banner_overlay_red:after{background:#db4b50;}
+.orange_color .list_type_1.whyvsynergizeglobal li:after, .banner_overlay_orange:after{background:#f47920;}
+.purple_color .list_type_1.whyvsynergizeglobal li:after, .banner_overlay_purple:after{background:#6e389a;}
+.sky_blue_color .list_type_1.whyvsynergizeglobal li:after, .banner_overlay_sky_blue:after{background:#2cb5c0;}
+.list_type_1.whyvsynergizeglobal li {padding-left:20px;}
+.list_type_1.whyvsynergizeglobal li::after {top: 8px;height: 0;width: 0;content: "\f105";font: normal normal normal 25px/1 FontAwesome;}
+
+
+.blue_color .list_type_1 li:after{color: #3284b6;}
+.red_color .list_type_1 li:after{color:#db4b50;}
+.orange_color .list_type_1 li:after{color:#f47920;}
+.purple_color .list_type_1 li:after{color:#6e389a;}
+.sky_blue_color .list_type_1 li:after{color:#2cb5c0;}
+
+.product_features.industries-why-bg {min-height: 100% !important;height:100% !important;background-size: cover;background-image:url(../images/industries-why-bg.jpg);}
+.product_features.industries-why-bg .section_info{padding:200px;width:100%;background: #00000060;}
+.product_features.industries-why-bg .section_info .dis-table { width: 50%;margin: 0 auto;padding-bottom: 20px;}
+.orange_color.industries-why-bg h2,
+.orange_color.industries-why-bg li{color:#fff !important;}
+
+#maintenance.blue_color .tab_nav li.active{color:#3284b6;}
+#maintenance.blue_color .tab_nav li.active:after{background:#3284b6;}
+#maintenance.red_color .tab_nav li.active{color:#cf5453;}
+#maintenance.red_color .tab_nav li.active:after{background:#cf5453;}
+#maintenance.orange_color .tab_nav li.active{color:#f47920;}
+#maintenance.orange_color .tab_nav li.active:after{background:#f47920;}
+#maintenance.purple_color .tab_nav li.active{color:#6e389a;}
+#maintenance.purple_color .tab_nav li.active:after{background:#6e389a;}
+#maintenance.sky_blue_color .tab_nav li.active{color:#2cb5c0;}
+#maintenance.sky_blue_color .tab_nav li.active:after{background:#2cb5c0;}
+
+
+.blue_color .numbering{background: rgba(50, 132, 182, .85);}
+.red_color .numbering{background: rgba(219, 75, 80, .85);}
+.orange_color .numbering{background: rgba(244, 121, 32, .85);}
+.purple_color .numbering{background: rgba(110, 56, 154,.85);}
+.sky_blue_color .numbering {background: rgba(44, 181, 192, 0.85);}
+
+/* Header */
+header{/*background:url(../images/banner.jpg) 0 0 no-repeat;background-size:cover;*/height:85vh;position: relative;background-attachment: fixed; }
+#header_top{padding:0 15px;z-index: 9999;position:fixed;top:0;left: 0;width:100%;transition: all .5 ease}
+#header_top.fixed{background:#000}
+#header_top.menu_fixed{background:#000}
+#main_nav {margin-right: 200px;}
+#main_nav li{float:left;display: block;position: relative;}
+#main_nav li a{font-family: 'futura_hv_btheavy';color:#fff;font-size:18px;display:block;padding: 26px 15px;}
+#main_nav li a:hover {color:#f99d2f;}
+#main_nav li.active>a {/*color:#f99d2f;*/text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.53);}
+#header_top.fixed #main_nav li.active>a{color: #f99d2f;}
+#main_nav li ul{display:none;position:absolute;top:70px;left:0;right: 0;/*background: rgba(0,0,0,0.85);*/background:#000 ;width:250px;/*border-radius:4px;*/box-shadow: 0px 0px 15px #000;}
+#main_nav li:hover ul{display: block;}
+#main_nav li ul:after{content:''; width: 0;height: 0; border-left: 10px solid transparent;border-right: 10px solid transparent;border-bottom: 10px solid rgba(0,0,0,0.85);position: absolute;top:-10px;left: 40px}
+#main_nav li li{float: none}
+#main_nav li li a{float: none;padding: 10px;font-size: 14px;}
+#header_banner h2 {text-align: center;font-size: 80px;color: #fff;max-width: 768px;width:100%;margin:0 auto;position: absolute;z-index:1;top:50%;left: 50%;transform: translate(-50%, -50%);}
+
+#header_banner a.view-learn-more-btn {text-align: center;font-size: 14px;color: #fff;margin:0 auto;padding: 15px 30px;border: 1px solid;margin-top: 50px;display: table;width: auto;letter-spacing: 0px;font-family: 'futura_hv_btheavy';text-transform:uppercase}
+#header_banner a.view-learn-more-btn:hover{background:#fff;color:#000 !important;border: 1px solid #fff;}
+
+
+#home_slider,
+#home_slider .slider-row{height: 100vh;position:relative;}
+.header_banner {position: absolute;z-index:1;top:50%;left: 50%;transform: translate(-50%, -50%);}
+.header_banner h2 {text-align: center;font-size: 70px;color: #fff;max-width: 850px;width:850px;margin:0 auto;opacity: 1 !important;transform: scale(1) !important;}
+.header_banner a.view-learn-more-btn {text-align: center;font-size: 14px;color: #fff;margin:0 auto;padding: 15px 30px;border: 1px solid;margin-top: 50px;display: table;width: auto;letter-spacing: 0px;font-family: 'futura_hv_btheavy';text-transform:uppercase}
+.header_banner a.view-learn-more-btn:hover{background:#fff;color:#000 !important;border: 1px solid #fff;}
+.slick-arrow{display:none !important;}
+
+a.view-learn-more-btn {text-align: center;font-size: 14px;margin:0 auto;padding: 15px 30px;color: #fff;border: 1px solid;margin-top:10px;display: inline-block;font-family: 'futura_hv_btheavy';text-transform:uppercase}
+a.view-learn-more-btn:hover{color:#fff !important;}
+a.view-learn-more-btn.blue_color:hover{background:#3284b6 !important;color:#fff;border: 1px solid #3284b6 !important;}
+a.view-learn-more-btn.red_color:hover{background:#db4b50 !important;color:#fff;border: 1px solid #db4b50 !important;}
+a.view-learn-more-btn.orange_color:hover{background:#f47920 !important;color:#fff;border: 1px solid #f47920 !important;}
+a.view-learn-more-btn.purple_color:hover{background:#6e389a !important;color:#fff;border: 1px solid #6e389a !important;}
+a.view-learn-more-btn.sky_blue_color:hover{background:#2cb5c0 !important;color:#fff;border: 1px solid #2cb5c0 !important;}
+
+
+.product_features{height:740px;background-color:#f6f6f6;}
+.product_features.less_height{height:600px;}
+.section_bg{width:55%;background-size:cover !important;height:100%;position: relative;}
+.section_bg.bg1{background:url(../images/blockchain-home-banner.jpg) center center no-repeat;}
+.section_bg.bg2{background:url(../images/iot-home-banner.jpg) center bottom no-repeat;}
+.section_bg.bg3{background:url(../images/data-science-analytics-home-banner.jpg) 0 0 no-repeat;}
+.section_bg.bg4{background:url(../images/artificial-intellligence-home-banner.jpg) center right no-repeat;}
+.section_bg.bg5{background:url(../images/application-development-support-services-home-banner.jpg) center right no-repeat;}
+
+
+.section_info{padding: 0px 70px 0px;width:45%;height:100%;}
+.numbering{width: 210px;display: block;height: 261px;position: absolute;line-height: 95px;top: 0;padding: 25px;font-family: 'futura_hv_btheavy';font-size:24px;color: #fff;}
+.numbering_leftside{-webkit-clip-path: polygon(0 0, 0% 100%, 66% 0);clip-path: polygon(0 0, 0 100%, 66% 0);left: 0;}
+.numbering_rightside{-webkit-clip-path: polygon(100% 0, 100% 100%, 24% 0);clip-path: polygon(100% 0, 100% 100%, 24% 0);background: rgba(50, 132, 182, .85);right: 0;text-align: right;}
+
+
+#cloud_logos{background:url(../images/cloud.jpg) 0 0 no-repeat;background-size: cover}
+#cloud_logos .container{max-width: 1024px;text-align: center;}
+#cloud_logos h2{color:#fff;}
+.cloud_logo_container{-webkit-clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 52%);
+clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 52%);width: 227px;height: 194px;background:#fff;display: inline-block;margin:40px 50px;position:relative;}
+.cloud_logo_container img{display: block;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);}
+
+#contact_form{background:#191919;padding:130px 0 130px;color:#fff;text-align: center;}
+#contact_form .container{max-width:1024px;}
+#contact_form h2:after{content:'';display: block;width: 100px;height: 2px;background: #df6300;margin: 30px auto 20px}
+#contact_form p{color:#fff;font-size: 24px;margin-bottom: 50px}
+#contact_form form input,#contact_form textarea{width: calc(50% - 30px);background:#2b2b2b;border:none;padding: 20px;display: block;float: left;margin:0 15px 30px;font-size: 16px;color:#fff;}
+#contact_form textarea{width: calc(100% - 30px);}
+#contact_form form{margin:0 -15px;}
+
+#sub_footer{padding-top:80px;padding-bottom: 50px}
+#sub_footer .col {float: left;margin-bottom: 20px;padding: 0 22px}
+#sub_footer .col:last-child{width: 23%;}
+#sub_footer ul li a{font-family: 'Roboto', sans-serif;color: #666666;font-size:14px;font-weight:300;line-height:30px;padding: 4px 0px;display:block;}
+
+#footer_end{background:#eaeaea;padding: 20px 0;}
+.copyrights, .copyrights a{font-size:16px;color:#666666;line-height: 24px}
+.copyrights a{margin:0 10px;}
+.copyrights strong a{color:#000;margin: 0}
+.social-icon{background-image:url(../images/social-icon.png);background-repeat: no-repeat;width:25px;height:25px;display:block;float:left;margin:0 5px;}
+.social-icon.tw{background-position:0 0;}
+.social-icon.ln{background-position:-37px 0;}
+.social-icon.fb{background-position:-75px 0;}
+.social-wrapper{padding:10px;}
+/* hamberger Animation */
+.hamburger{padding:15px;display:none;cursor:pointer;transition-property:opacity,filter;transition-duration:.15s;transition-timing-function:linear;font:inherit;color:inherit;text-transform:none;background-color:transparent;border:0;margin:0;overflow:visible}.hamburger.is-active:hover,.hamburger:hover{opacity:.7}.hamburger.is-active .hamburger-inner,.hamburger.is-active .hamburger-inner::after,.hamburger.is-active .hamburger-inner::before{background-color:#fff}.hamburger-box{width:40px;height:24px;display:inline-block;position:relative}.hamburger-inner{display:block;top:50%;margin-top:-2px}.hamburger-inner,.hamburger-inner::after,.hamburger-inner::before{width:40px;height:4px;background-color:#fff;border-radius:4px;position:absolute;transition-property:transform;transition-duration:.15s;transition-timing-function:ease}.hamburger-inner::after,.hamburger-inner::before{content:"";display:block}.hamburger-inner::before{top:-10px}.hamburger-inner::after{bottom:-10px}.hamburger--spin .hamburger-inner{transition-duration:.22s;transition-timing-function:cubic-bezier(.55,.055,.675,.19)}.hamburger--spin .hamburger-inner::before{transition:top .1s .25s ease-in,opacity .1s ease-in}.hamburger--spin .hamburger-inner::after{transition:bottom .1s .25s ease-in,transform .22s cubic-bezier(.55,.055,.675,.19)}.hamburger--spin.is-active .hamburger-inner{transform:rotate(225deg);transition-delay:.12s;transition-timing-function:cubic-bezier(.215,.61,.355,1)}.hamburger--spin.is-active .hamburger-inner::before{top:0;opacity:0;transition:top .1s ease-out,opacity .1s .12s ease-out}.hamburger--spin.is-active .hamburger-inner::after{bottom:0;transform:rotate(-90deg);transition:bottom .1s ease-out,transform .22s .12s cubic-bezier(.215,.61,.355,1)}.hamburger--spin-r .hamburger-inner{transition-duration:.22s;transition-timing-function:cubic-bezier(.55,.055,.675,.19)}.hamburger--spin-r .hamburger-inner::before{transition:top .1s .25s ease-in,opacity .1s ease-in}.hamburger--spin-r .hamburger-inner::after{transition:bottom .1s .25s ease-in,transform .22s cubic-bezier(.55,.055,.675,.19)}.hamburger--spin-r.is-active .hamburger-inner{transform:rotate(-225deg);transition-delay:.12s;transition-timing-function:cubic-bezier(.215,.61,.355,1)}.hamburger--spin-r.is-active .hamburger-inner::before{top:0;opacity:0;transition:top .1s ease-out,opacity .1s .12s ease-out}.hamburger--spin-r.is-active .hamburger-inner::after{bottom:0;transform:rotate(90deg);transition:bottom .1s ease-out,transform .22s .12s cubic-bezier(.215,.61,.355,1)}
+
+
+/* IOT Page */
+#info_wrap{padding:150px 0;}
+#info_wrap p{font-size: 24px;line-height: 35px}
+
+#info_wrap p strong{font-weight:bold;}
+.table-design li {font-weight: 300;padding: 0px 15px 15px 40px;color: #6f6f71;position: relative;font-size: 22px;line-height: 35px;}
+.table-design li strong {font-weight:bold;}
+.table-design li:before {content: '';width: 7px;height: 12px;position: absolute;top: 11px;left: 13px;z-index: 1;background: url(../images/bullet.png);background-size: 7px 12px;background-repeat: no-repeat;}
+.table-design li:after {content: '';width: 20px;height: 20px;position: absolute;top: 7px;left: 5px;background: #f99d2f;margin: 0;padding: 0;border-radius: 50%;}
+.table-design {/*border: 1px solid #eaeaea;margin-top: 50px;box-shadow: 5px 10px 23px #eaeaea;*/}
+.table-design h3 {/*padding: 20px;border-bottom: 1px solid #eaeaea;box-shadow: 0px 1px 3px #eaeaea;*/margin: 0;font-size: 35px;letter-spacing: -1px;padding-bottom:20px;padding-top:20px;}
+.table-design p{margin-bottom:15px;}
+.table-design li:nth-child(even) { /*background-color: #f8f8f8;*/}
+#info_wrap .grid-6 {width: 100%;float: left;}
+#info_wrap .grid-4 {width: 100%;float: left;margin-top:30px;}
+#info_wrap .grid-4 li{padding-left:0px;width: 100px;float:left;padding: 20px 0;text-align: center;margin-right:90px;}
+#info_wrap .grid-4 li i {width: 100px;height: 100px;display: inline-flex;border: 2px solid #3284b6;border-radius: 50px;padding: 10px;}
+#info_wrap .grid-4 li i img{width: 80px;}
+#info_wrap .grid-4 li p{margin: 34px 0;margin: 10px 0px 0px; font-size: 16px;line-height: 22px}
+#info_wrap .grid-4 li:before,
+#info_wrap .grid-4 li:after {display:none;}
+#info_wrap .grid-4 li:nth-child(even) { /*background-color: #f8f8f8;*/}
+#info_wrap .grid-4 h3 {padding: 20px 0;margin:0px;font-size:35px;letter-spacing: -1px;}
+#info_wrap .grid-4 li p{font-weight: 500;}
+#info_wrap .grid-4 li:last-child{margin-right:0px;}
+
+
+#featured_services{background: url(../images/iot-bg.jpg) center center no-repeat;background-size: cover;display: block;padding-top:80px;}
+#featured_services *,#maintenance *{color:#fff;}
+#featured_services h5 {margin: 6px 0 15px;}
+.feature_box_inner{position:relative;}
+.feature_box_inner:before {/*content: '';top: 50px;left: 0px;width: 8px;height: 8px;position: absolute;background: #fff;border-radius: 50px;*/}
+#featured_services .container{padding-bottom: 0}
+.feature_box_inner{padding: 40px 15px 20px;min-height: 283px;}
+.feature_box_inner:last-child{padding-bottom:300px;}
+.feature_box_wrap{background:url(../images/mobile-app.png) center bottom no-repeat;}
+/* Particles */
+/* ---- reset ---- */  canvas{ display: block; vertical-align: bottom; } /* ---- particles.js container ---- */ #particles-js{ position:absolute; width: 100%; height: 100%; background-color: #00222f; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; } /* ---- stats.js ---- */ .count-particles{ background: #000022; position: absolute; top: 48px; left: 0; width: 80px; color: #13E8E9; font-size: .8em; text-align: left; text-indent: 4px; line-height: 14px; padding-bottom: 2px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; } .js-count-particles{ font-size: 1.1em; } #stats, .count-particles{ -webkit-user-select: none; margin-top: 5px; margin-left: 5px; } #stats{ border-radius: 3px 3px 0 0; overflow: hidden; } .count-particles{ border-radius: 0 0 3px 3px; }
+
+#maintenance{background:url(../images/iot-bg-2.png) 0 0 no-repeat;background-size: cover;background-attachment:fixed;height:650px;min-height: 800px;position: relative}
+#maintenance .container{padding-top:0;position: relative;min-height: 800px;}
+#maintenance h3{padding-top: 100px}
+.tab_box_wrap:after{content:'';height: 100%;width: 2px;position: absolute;top:0;left:416px;background: #fff}
+.tab_box_wrap .tab_nav{width:33.33%;padding:30px 40px 80px 0;float:left;}
+.tab_nav li{padding:10px 0;font-family: 'futura_hv_btheavy';font-size: 20px;line-height:30px;position:relative;cursor: pointer}
+
+
+.feature-details .strip i.ic.ic-circle,
+.full-on-window .feature-details .strip .ic.ic-circle {width: 50px;height: 50px;color: #fff;border-radius: 50px;padding: 18px 16px;top: 50.3%;left: 66%;}
+#features-group {position: relative;}
+.full-on-window .feature-details {background: #000;}
+
+
+ h3.slider-header{transform: rotate(-90deg);
+    position: absolute;
+    top: 270px;
+    left: -100px;
+    color: #fff;
+    z-index: 999;min-height: 100px;width: 400px;
+}
+.slide-group.full-on-window h3.slider-header{
+    position: fixed;
+    top: 270px;
+    left: -100px;
+    color: #fff;
+    z-index: 999;min-height: 100px;width: 400px;
+}
+h3.slider-header br {display:none;}
+.full-on-window .feature-details .text-wrap p strong{font-weight:bold;}
+
+.tab_nav li:after{content:'';display: block;width: 16px;height: 16px;background:#fff;border-radius: 50%;position:absolute;top: 24px;right: -33px;z-index: 9}
+.tab_content_wrap{float: right;padding:50px 200px 50px 150px;width: calc(100% - 420px);position:relative;height:350px;}
+.tab_content {position: absolute;top: 10%;transform: translateY(-50%);width:600px;opacity: 0;transition: opacity 0.5s ease-in}
+.tab_content h4{display: none}
+
+.ico{background-image:url(../images/iot-sprite.png);background-repeat: no-repeat;height:115px;width:120px;}
+.ico.ico-retro{background-position:0 0;}
+.ico.ico-connect{background-position:0 -119px;}
+.ico.ico-data{background-position:0 -263px;}
+
+
+@-webkit-keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+.fadeOutUp {
+  -webkit-animation-name: fadeOutUp;
+  animation-name: fadeOutUp;
+}
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+#features-group.blue .feature-details .strip i.ic.ic-circle{background-color: #3284b6;}
+#features-group.red .feature-details .strip i.ic.ic-circle {background-color: #db4b50;}
+#features-group.orange .feature-details .strip i.ic.ic-circle {background-color: #f47920;}
+#features-group.purple .feature-details .strip i.ic.ic-circle {background-color: #6e389a;}
+#features-group.sky_blue .feature-details .strip i.ic.ic-circle {background-color: #2cb5c0;}
+.slide-group{transition: all .5s ease;}
+
+
+
+.landing-page-header-cntr{margin-top: 70px;padding:100px 0;} 
+.landing-page-header-cntr h1{font-size: 38px;padding-bottom: 50px;font-weight: inherit;letter-spacing: -1px;text-transform: uppercase;color:#fff;text-align: center;}
+.landing-page-header-cntr p{font-weight: 300;color: #fff;font-size: 18px;line-height: 32px;width:90%;margin:20px auto 0;} 
+.landing-page-cntr{position:relative;background:#f4f4f4;}
+.landing-page-cntr h2 {padding: 20px 0;font-family: 'futura_hv_btheavy';font-size: 22px;line-height: 30px;letter-spacing: 0px;text-align: center; background: url("../images/our-service-offerings.png");background-size: auto;position: absolute;z-index: 1;top: -61px;left: 50%;transform: translate(-50%, 0%);background-size: inherit;width: 425px;height: 63px;cursor:pointer;}
+.landing-page-cntr:before {content: '';width: 0;height: 0;border-right: 27px solid transparent;border-top: 27px solid transparent;border-left: 27px solid transparent;position: absolute;top: 0px;left: calc(50% - 13.5px);background: transparent;display:none;}
+.landing-page-cntr .container {padding: 120px 0 80px;width: 90%;max-width: 90%;}
+.landing-page-cntr .landing-page-list li {position: relative;overflow: hidden;}
+.landing-page-cntr .landing-page-list li:nth-child(3n) {margin-right: 0px;}
+.landing-page-cntr .landing-page-list li {width: 29%;float: left;text-align: left;border: 0px solid #eee;margin-right: 82px;margin-bottom: 82px;position: relative;}
+.landing-page-cntr .landing-page-list li {margin-right: 30px;margin-bottom: 55px;width: 31%;}
+.landing-page-cntr .landing-page-list ul {width: 100%;margin: 0 auto;}
+.landing-page-cntr .landing-page-list ul.active li .blog-wraper h3{color:#9e9e9e;}
+.landing-page-cntr .landing-page-list ul.active li.active .blog-wraper h3{color:#fff;}
+.landing-page-cntr .landing-page-list li a img {width: 100%;}
+.landing-page-cntr .landing-page-list li a {padding: 0px;border: 0px;display: inline-block;height: 100%;width: 100%;}
+.landing-page-cntr .landing-page-list h3 {color: #444;font-size: 18px; line-height:26px;font-weight: 700;margin-bottom: 10px;padding: 0px;margin:0px;margin-bottom: 10px;transition: all 0s ease-in;}
+.landing-page-cntr .landing-page-list p{font-size: 14px;color: #444444;line-height: 18px;margin: 10px auto 10px;font-weight: 100;display:none;overflow: hidden;transition: all 0s ease-in;}
+.landing-page-cntr .landing-page-list .cta{transition: all 0s ease-in;color: #6f6f71;}
+.landing-page-cntr .landing-page-list li:hover p {display: -webkit-box;transition: all 0s ease-in;}
+.landing-page-cntr .landing-page-list li:hover{cursor:pointer;}
+.landing-page-cntr .landing-page-list li{position:relative;overflow: hidden;}
+.landing-page-cntr .landing-page-list li .blog-wraper {transition: all 0s ease-in;height: 95px;position: absolute;bottom: 0px;width: 100%;background: #fff;}
+.blog_body{display:none;transition: all 0s ease;margin: 0 0px;}
+
+.landing-page-cntr .landing-page-list li .blog_body a:first-child{/*font-weight:bold;*/}
+/*.landing-page-cntr .landing-page-list li .blog_body a {padding: 5px 10px;padding-left: 10px;color: #fff;background: url(../images/bullet.png);background-position-x: 0%;background-position-y: 0%;background-repeat: repeat;background-size: auto;background-repeat: repeat;background-size: auto;background-size: 7px 12px;background-repeat: no-repeat;background-position: 0px 7px;padding-left: 15px;}*/
+.landing-page-cntr .landing-page-list li .blog_body a {padding: 10px 20px;color: #fff;border-top: 1px solid #fff2;}
+
+.landing-page-cntr .landing-page-list li:hover .blog-wraper {transition: all 0s ease-in;height: 100%;bottom: 0;background: #3284b6;padding: 35% 20px}
+.landing-page-cntr .landing-page-list li:hover h3,
+.landing-page-cntr .landing-page-list li:hover p,
+.landing-page-cntr .landing-page-list li:hover .cta{color:#fff;transition: all 0s ease-in;}
+.blog-wraper{padding: 20px;}
+.landing-page-cntr .landing-page-list li:hover .blog-wraper h3{color: #fff !important;}
+.sub-contener {}
+.sub-contener h2{font-family: 'futura_hv_btheavy';font-size: 52px;font-weight: 600;letter-spacing: -2px;margin-bottom: 10px;text-align:center}
+.sub-contener p{font-family: 'Roboto', sans-serif;font-weight: 300;color: #6f6f71;font-size: 18px;line-height: 30px;margin-bottom: 80px;text-align:center}
+.verticaly-center {text-align: left;color: #fff;max-width: 1280px; width: 100%;margin: 0 auto;position: absolute;z-index: 1;top: 50%;left: 50%; transform: translate(-50%, -75%);}
+
+/*Header*/
+.navmenu-icon {width: auto;height: 40px;padding-top: 6px;background: #f9931b;box-shadow: 0 10px 10px 0 rgba(0,0,0,0.15);border-radius: 4px;border: #f9931b solid 1px;color: #fff;position: fixed;float: right;z-index: 99999999;  top: 14px;right: 14px;cursor: pointer;}
+.navmenu-icon .hamburger.is-active:hover, .navmenu-icon .hamburger:hover {opacity: 1; }
+.navmenu-icon .hamburger { position: relative; top: 0px; right: 0px; margin: 0 auto; width: 28px; height: 26px; cursor: pointer; overflow: hidden; -webkit-backface-visibility: hidden; backface-visibility: hidden; z-index: 9999999;display: flex;float: left;margin-left: 15px;margin-right: 15px;}
+.navmenu-icon .hamburger.is-active .hamburger--outer:nth-child(1), 
+.navmenu-icon .hamburger.is-active .hamburger--outer:nth-child(2), 
+.navmenu-icon .hamburger.is-active .hamburger--outer:nth-child(3), 
+.navmenu-icon .hamburger.is-inactive:hover .navmenu-icon .hamburger--outer:nth-child(6), 
+.navmenu-icon .hamburger.is-inactive:hover .hamburger--outer:nth-child(7) { display: none }
+.navmenu-icon .hamburger.is-active .hamburger--outer:nth-child(6) { -webkit-transform: rotate(225deg) translateX(0) scaleX(1); transform: rotate(225deg) translateX(0) scaleX(1); top: 21px; left: 25px }
+.navmenu-icon .hamburger.is-active .hamburger--outer:nth-child(7) { -webkit-transform: rotate(-45deg) translateX(0) scaleX(1); transform: rotate(-45deg) translateX(0) scaleX(1); top: 21px; left: 5px }
+.navmenu-icon:hover .hamburger.is-inactive .hamburger--outer:nth-child(1) { -webkit-animation: hamburgerHover .33s ease-out .32s; animation: hamburgerHover .33s ease-out .32s }
+.navmenu-icon:hover .hamburger.is-inactive .hamburger--outer:nth-child(2) { -webkit-animation: hamburgerHover .33s ease-out .21s; animation: hamburgerHover .33s ease-out .21s; left: 0; width: 100%; -webkit-transition-duration: .1s; transition-duration: .1s; -webkit-transition-timing-function: ease; transition-timing-function: ease }
+.navmenu-icon:hover .hamburger.is-inactive .hamburger--outer:nth-child(3) { -webkit-animation: hamburgerHover .33s ease-out .1s; animation: hamburgerHover .33s ease-out .1s }
+.navmenu-icon .hamburger--outer { display: block; position: absolute; height: 3px; background: #fff; border-radius: 9px; opacity: 1; -webkit-transform: rotate(0); transform: rotate(0) }
+.navmenu-icon .hamburger--outer:nth-child(1), 
+.navmenu-icon .hamburger--outer:nth-child(4), 
+.navmenu-icon .hamburger--outer:nth-child(6) { top: 4px; left: 0; width: 100%; -webkit-transform-origin: left center; transform-origin: left center }
+.navmenu-icon .hamburger--outer:nth-child(2) { top: 12px; left: 6px; width: 22px; -webkit-transform-origin: left center; transform-origin: left center }
+.navmenu-icon .hamburger--outer:nth-child(3), 
+.navmenu-icon .hamburger--outer:nth-child(5), 
+.navmenu-icon .hamburger--outer:nth-child(7) { top: 20px; left: 0; width: 100%; -webkit-transform-origin: left center; transform-origin: left center }
+.navmenu-icon .hamburger--outer:nth-child(4) { top: -1px; left: 4px; -webkit-transform: rotate(45deg) translateX(0) scaleX(0); transform: rotate(45deg) translateX(0) scaleX(0) }
+.navmenu-icon .hamburger--outer:nth-child(5) { top: -1px; left: 22px; -webkit-transform: rotate(135deg) translateX(0) scaleX(0); transform: rotate(135deg) translateX(0) scaleX(0) }
+@-webkit-keyframes hamburgerHover {  0% {
+ -webkit-transform: translateX(0);
+ transform: translateX(0)
+}
+ 50% {
+ -webkit-transform: translateX(110%);
+ transform: translateX(110%)
+}
+ 50.001% {
+ -webkit-transform: translateX(0) translateY(11px);
+ transform: translateX(0) translateY(11px)
+}
+ 100% {
+ -webkit-transform:

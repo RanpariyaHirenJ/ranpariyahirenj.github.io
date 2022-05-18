@@ -1,0 +1,15 @@
+ErrorDocument 403 http://www.cybermarine.net/singapore/404.html
+ErrorDocument 404 http://www.cybermarine.net/singapore/404.html
+ErrorDocument 500 http://www.cybermarine.net/singapore/404.html
+
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^(www\.)?cybermarine\.net$
+RewriteRule (.*) https://www.cybermarine.net/$1 [R=301,L]
+
+RewriteCond %{HTTPS} on
+RewriteCond %{HTTP_HOST} ^cybermarine\.net$
+RewriteRule (.*) https://www.cybermarine.net/$1 [R=301,L]
+

@@ -1,0 +1,294 @@
+﻿<!doctype html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <title>Welcome to NQR</title>
+    <link rel="stylesheet" type="text/css" href="styles/animate.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/jquery-ui.css">
+    <script src="scripts/jquery-min.js" type="text/javascript"></script>
+    <script src="scripts/parallax.js"></script>
+
+<style>
+.form-cntr {
+    width: 575px;
+}
+</style>
+</head>
+
+<body>
+    <div class="loader"></div>
+    <div class="wrapper">
+        <header>
+            <div class="container">
+                <div class="lft-heading"><a href=""> Manage Test </a> / Perform Tests </div>
+                <div class="top-header">
+                    <ul>
+                        <li>
+                            <div class="welcome-msg">Welcome Admin <img src="images/down-arrow.png"></div>
+                            <ul class="sub-menu">
+                                <li><a href='#'>Profile</a></li>
+                                <li><a href='#'>Settings</a></li>
+                                <li><a href='login.html'>Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <section class="header">
+            <div class="container">
+                <div class="navigation">
+                    <div class="login-mblmenu">
+                        <div class="mobile-nav-icon">
+                            <button class="menu-icon mobil-icon-toggle"> <span>toggle menu</span> </button>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="nav-menu">
+                        <div class="logocntr"><a href="login.html"><img src="images/logo.png"></a></div>
+                        <ul>
+                            <li>
+                                <a href="https://projects.invisionapp.com/share/3WDLFZUT4#/254295838_User_Dashboard_01" target="_blank">
+                                    <i> <img src="images/dashboard.png"></i>
+                                    <p>Dashboard & Reports</p>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="javascript:void(0);" class="active">
+                                    <div class="outerdiv"><i class="middlediv"> <img src="images/master-data-management.png"></i></div>
+                                    <p>Manage Test</p>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li><a href='scheduled.html'>View Tests</a></li>
+                                    <li><a href='perform-test.html' class="active">Perform Tests</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    <div class="outerdiv"><i class="middlediv"> <img src="images/system-settings.png"></i></div>
+                                    <p>System Settings</p>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li><a href='system-setting.html'>Manage Security Questions</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </section>
+        <div class="profilecntr wrapper-container">
+            <section class="parallax common-top mb80">
+                <div class="container">
+                <div id="clockdiv">
+                  <p>Time Remaining </p>
+                  <div style="display:none;">
+                    <span class="days"></span>
+                    <div class="smalltext">Days</div>
+                  </div>
+                  <div>
+                    <span class="hours"></span>
+                    <div class="smalltext">Hours</div>
+                  </div>
+                  <div>
+                    <span class="minutes"></span>
+                    <div class="smalltext">Minutes</div>
+                  </div>
+                  <div>
+                    <span class="seconds"></span>
+                    <div class="smalltext">Seconds</div>
+                  </div>
+                </div>
+                    <div class="outer-div">
+                        <!--<div class="middle-div">-->
+                            <div class="last-div">
+                                
+                                <div class="form-cntr">
+                                    
+                                    <div class="animated-form">
+                                        <h1 class='test_header'>Perform Test - Test Name</h1>
+                                        <div class="grid-layout">
+                                           <div class="perform-test-note">
+                                           	<span>Note:</span>
+                                            <p>We are representing two sort of question on one screen however in genuine test, there will be one question at one time on screen.</p>
+                                           </div>
+                                            <div class="form-row animate-label radio-modules">
+                                                <div class="form-field">
+                                                    <div class="grid-12">
+                                                        <h2>1. Lorem Ipsum dolr sit amet lorem ipsum dolor sit?</h2>
+                                                        <div class="question-type-radio-button custom-checkbox">
+                                                            <input type="radio" class="yes_btn" id="test1" name="radio-button" onClick="overlayBox('perform_test_yes')">
+                                                            <label for="test1">Yes</label>
+                                                        </div>
+                                                        <div class="question-type-radio-button custom-checkbox">
+                                                            <input type="radio" class="no_btn" id="test2" name="radio-button" onClick="overlayBox('perform_test_no')">
+                                                            <label for="test2">No</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row animate-label radio-modules">
+                                                <div class="form-field">
+                                                    <div class="grid-12">
+                                                        <h2>4. Lorem Ipsum dolr sit amet lorem ipsum dolor sit?</h2>
+                                                        <div class="question-type-radio-button custom-checkbox">
+                                                            <input type="radio" id="test7" name="radio-button3" onClick="overlayBox('perform_test_yes')">
+                                                            <label for="test7">Option A</label>
+                                                        </div>
+                                                        <div class="question-type-radio-button custom-checkbox">
+                                                            <input type="radio" id="test8" name="radio-button3" onClick="overlayBox('perform_test_option_a')">
+                                                            <label for="test8">Option B</label>
+                                                        </div>
+                                                        <div class="question-type-radio-button custom-checkbox">
+                                                            <input type="radio" id="test9" name="radio-button3" onClick="overlayBox('perform_test_option_a')">
+                                                            <label for="test9">Option C</label>
+                                                        </div>
+                                                        <div class="question-type-radio-button custom-checkbox">
+                                                            <input type="radio" id="test10" name="radio-button3" onClick="overlayBox('perform_test_option_a')">
+                                                            <label for="test10">Option D</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                </div>
+                                            </div>
+                                            
+
+                                            <div class="form-row">
+                                                <div class="grid-12">
+                                                    <div class="grid-4 p0">
+                                                        <div class="submitformbtn">
+                                                            <input type="button" value="Next" class="box-btn big-btn sub-btn m0" >
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="clear"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+       							 <div class="clear"></div>
+                            </div>
+                        <!--</div>-->
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </section>
+        </div>
+        <div class="fotter-wrapper-container">
+            <footer class="footer">
+                <div class="container">
+                    <div class="footernavigtn">
+                        <div class="copt-lft"> © 2017 CINQO. All Rights Reserved. <!--Site by <a href="http://kalptech.com/" target="_blank"> Kalptech Systems</a>--> </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <div class="overlay" id="perform_test_yes" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+            <div class="overlay-box">
+                <div class="content">
+                    <div class="overlay-header">Congratulations!! Your answer is correct.</div>
+                    <div class="overlay-content">
+                        <div class="animated-form">
+                            <div class="grid-layout">
+                                <div class="form-row animate-label">
+                                    <div class="form-field">
+                                        <div class="grid-12">
+                                            <label><strong>Read More:</strong></label>
+                                            <div class="input-group">
+                                                                                                
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae maximus erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut ac fermentum purus, id dapibus ante. Sed tincidunt ipsum ac sem tempus, ut consectetur eros egestas. In commodo interdum nisi, in pharetra neque pretium ut. Nam auctor purus et ex posuere, auctor varius dolor placerat. Aliquam efficitur rhoncus enim eget fermentum. Sed consectetur a magna at egestas. Fusce id velit vel diam egestas ultricies quis eu libero. Ut tincidunt posuere ex, nec consectetur ex dignissim vitae. Proin vel est vel nisl congue vulputate. Nunc augue risus, volutpat vel nisi eu, congue gravida nisi. Integer pulvinar nibh id felis congue, vel ornare magna sagittis. Praesent tempus purus tortor, a ullamcorper erat sollicitudin quis. In nec blandit lacus.</p>
+                                            </div>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="overlay" id="perform_test_no" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+            <div class="overlay-box">
+                <div class="content">
+                    <div class="overlay-header">Oops!! Your answer is incorrect.<br><label>Correct answer is : Yes</label></div>
+                    <div class="overlay-content">
+                        <div class="animated-form">
+                            <div class="grid-layout">
+                                <div class="form-row animate-label">
+                                    <div class="form-field">
+                                        <div class="grid-12">
+                                            <label><strong>Read More:</strong></label>  
+                                            <div class="input-group">
+                                                 
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae maximus erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut ac fermentum purus, id dapibus ante. Sed tincidunt ipsum ac sem tempus, ut consectetur eros egestas. In commodo interdum nisi, in pharetra neque pretium ut. Nam auctor purus et ex posuere, auctor varius dolor placerat. Aliquam efficitur rhoncus enim eget fermentum. Sed consectetur a magna at egestas. Fusce id velit vel diam egestas ultricies quis eu libero. Ut tincidunt posuere ex, nec consectetur ex dignissim vitae. Proin vel est vel nisl congue vulputate. Nunc augue risus, volutpat vel nisi eu, congue gravida nisi. Integer pulvinar nibh id felis congue, vel ornare magna sagittis. Praesent tempus purus tortor, a ullamcorper erat sollicitudin quis. In nec blandit lacus.</p>
+                                            </div>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="overlay" id="perform_test_option_a" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+            <div class="overlay-box">
+                <div class="content">
+                    <div class="overlay-header">Oops!! Your answer is incorrect.<br><label>Correct answer is : Option A</label></div>
+                    <div class="overlay-content">
+                        <div class="animated-form">
+                            <div class="grid-layout">
+                                <div class="form-row animate-label">
+                                    <div class="form-field">
+                                        <div class="grid-12">
+                                            <label><strong>Read More:</strong></label>  
+                                            <div class="input-group">
+                                                 
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae maximus erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut ac fermentum purus, id dapibus ante. Sed tincidunt ipsum ac sem tempus, ut consectetur eros egestas. In commodo interdum nisi, in pharetra neque pretium ut. Nam auctor purus et ex posuere, auctor varius dolor placerat. Aliquam efficitur rhoncus enim eget fermentum. Sed consectetur a magna at egestas. Fusce id velit vel diam egestas ultricies quis eu libero. Ut tincidunt posuere ex, nec consectetur ex dignissim vitae. Proin vel est vel nisl congue vulputate. Nunc augue risus, volutpat vel nisi eu, congue gravida nisi. Integer pulvinar nibh id felis congue, vel ornare magna sagittis. Praesent tempus purus tortor, a ullamcorper erat sollicitudin quis. In nec blandit lacus.</p>
+                                            </div>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/wow.js"></script>
+    <script>
+
+new WOW().init();
+
+$('.parallax').parallax({
+
+speed : 0.50
+
+});
+
+    </script>
+    <script src="scripts/common.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://harvesthq.github.io/chosen/chosen.jquery.js"></script>
+</body>
+</html>
+
+<script>
+    $(function () {
+        $(".chosen-select").chosen();
+    })
+</script>

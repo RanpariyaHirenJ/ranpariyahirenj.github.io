@@ -1,0 +1,1032 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<title>Techflow</title>
+<link rel="stylesheet" type="text/css" href="styles/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<script src="scripts/jquery-min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="styles/flexslider.css" type="text/css" media="screen" />
+<script defer src="scripts/jquery.flexslider.js"></script>
+<script src="scripts/scrollbar.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<!--Start of Tawk.to Script-->
+	<script type="text/javascript">
+		var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+		(function(){
+			var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+			s1.async=true;
+			s1.src='https://embed.tawk.to/5a1bce62bb0c3f433d4cb6b9/default';
+			s1.charset='UTF-8';
+			s1.setAttribute('crossorigin','*');
+			s0.parentNode.insertBefore(s1,s0);
+		})();
+    </script>
+<!--End of Tawk.to Script-->
+<style>
+.g-recaptcha>div {margin:0 auto;}
+.slideInfo h2 {padding-right: 40px;}
+.overlay-box .content {position: relative;}
+.next-previous-arrow{margin-bottom:40px}
+.next-previous-arrow a.previous-arrow{font-size: 16px;position: absolute;top: 6%;left: 0px; background-image: url(images/prev.png);padding: 12px 10px 12px 30px;background-repeat: no-repeat;background-size: 24px;background-position: center left;color: #fff;}
+.next-previous-arrow a.next-arrow{font-size: 16px;position: absolute;top: 6%;right: 0px;background-image: url(images/next.png);padding: 12px 30px 12px 10px;background-repeat: no-repeat;background-size: 24px;background-position: center right;color: #fff;}
+.next-previous-arrow a.previous-arrow:hover,
+.next-previous-arrow a.next-arrow:hover {text-decoration:underline;}
+
+
+@media screen and (min-width: 0) and (max-width:1023px) {
+.next-previous-arrow {display: list-item;position: relative;top: -50px;}
+}
+</style>
+
+
+<script>
+$(document).ready(function(){
+var getUrlParameter = function getUrlParameter(sParam) {
+var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+};	
+var projects = getUrlParameter('commercial-projects');
+//alert(blog)
+$(window).load(function() {
+	if(projects != "" && projects != undefined){
+	setTimeout(function() {
+		overlayBox(projects)
+	}, 700);
+	}
+	 });
+});
+</script>
+
+<!-- Global site tag (gtag.js) - Google Ads: 761769038 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-761769038"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-761769038');
+</script>
+</head>
+
+<body style="background-color: #f9f9f9">
+<div class="wrapper">
+  <header class="header">
+    <div class="container">
+      <div class="navugation">
+        <div class="logo"> <a href="http://www.techflowengg.com"> <img src="images/logo.png" alt="Techflow Logo"> </a> </div>
+        <div class="mobile-nav-icon">
+          <button class="menu-icon mobil-icon-toggle"> <span>toggle menu</span> </button>
+        </div>
+        <div class="menubar">
+          <ul>
+            <li class="subdrop-down"> <a href="about.html">About</a>
+              <div class="dropdown animated fadeInDown">
+                <ul>
+                  <li> <a href="about.html"> Company </a> </li>
+                  <li> <a href="vision-mission.html"> Vision & Mission </a> </li>
+                  <li> <a href="management-team.html"> Management Team </a> </li>
+                  <li> <a href="#"> Board of Director </a> </li>
+                  <li> <a href="partner-associates.html" > Partner & Associates </a> </li>
+                  <li> <a href="clients.html"> Clients </a> </li>
+                </ul>
+              </div>
+            </li>
+            <li class="subdrop-down"> <a href="services.html">Services</a>
+              <div class="dropdown animated fadeInDown">
+                <ul>
+                  <li> <a href="structural-design-services.html"> Structural Design Services </a> </li>
+                  <li> <a href="connection-design-services.html"> Connection Design Services </a> </li>
+                  <li> <a href="detail-engineering-services.html"> Detail Engineering  Services </a> </li>
+                                <li> <a href="training.html">CCSSD Training</a> </li>
+                </ul>
+              </div>
+            </li>
+            <li> <a href="solutions.html">Solutions</a> </li>
+            <li> <a href="projects.html" class="active">Projects</a> </li>
+            <li> <a href="investors.html">Investors</a> </li>
+            <li> <a href="news/news.html">News</a> </li>
+            <li> <a href="blogs/blogs.html">Blogs</a> </li> </li>
+            <li class="subdrop-down"> <a href="contact.html">Contact</a>
+              <div class="dropdown animated fadeInDown">
+                <ul>
+                  <li> <a href="contact.html"> Locations </a> </li>
+                  <li> <a href="careers.html"> Careers </a> </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </header>
+  <section class="inner-banner projects-banner-cntr common-top">
+    <div class="distable">
+      <div class="distable-cell">
+        <div class="container">
+          <h1 class="wow animated fadeInUp" data-wow-delay="0.2s" data-wow-offset="50">Projects</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="common-top project-tab-cntr">
+    <div class="container">
+      <div class="project-filtertabs">
+        <div class="p-filtrTabs pt0" data-wow-delay="0.2s" data-wow-offset="50"> <a href="commercial-projects.html" class="active">Commercial Projects</a> <a href="public-sector.html">Public Sector</a> <a href="educational.html">Educational </a> <a href="industrial-offshore.html">Industrial &amp; offshore </a> <a href="material-handling.html">Material Handling </a><!--<a href="current-projects.html">Current Projects</a> --> </div>
+      </div>
+    </div>
+  </section>
+  <section class="projectslist">
+    <div class="container">
+      <div class="plistbox">
+        <ul class="slidergallery">
+          
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project21')"><img src="images/current-projects/madison-centre/current-projects.jpg" alt="Douglas Middelburg Optimisation"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project21')">
+              <h2>Madison Centre</h2>
+              </a>
+              <h3>Seattle, USA</h3>
+              <h4>Tonnage: 3870</h4>
+            </div>
+            <!--<div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>-->
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project1')"><img src="images/commercial-projects/capital/capital.jpg" alt="The Capital C-70"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a>
+            </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project1')">
+              <h2>The Capital C-70</h2>
+              </a>
+              <h3>Mumbai, India</h3>
+              <h4>Tonnage: 2500</h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project2')"><img src="images/commercial-projects/commercial/commercial.jpg" alt="Casanova Extention"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project2')">
+              <h2>Casanova Extention</h2>
+              </a>
+              <h3>Eugene, Oregon, USA </h3>
+              <h4>Tonnage: 1000</h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project3')"><img src="images/commercial-projects/centre-point/centre-point.jpg" alt="Centre point West Office Building & Parking Garage"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project3')">
+              <h2>Centre point West Office Building & Parking Garage</h2>
+              </a>
+              <h3>Anchorage, AK, USA </h3>
+              <h4>Tonnage: 1700 </h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project4')"><img src="images/commercial-projects/opus-interplex/opus-interplex.jpg" alt="Opus Interplex Business Park"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project4')">
+              <h2>Opus Interplex Business Park</h2>
+              </a>
+              <h3>Calgary, Alberta, Canada</h3>
+              <h4>Tonnage: 1370 </h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project5')"><img src="images/commercial-projects/avenue-building/avenue-building.jpg" alt="2020 Fifth Avenue Building"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project5')">
+              <h2>2020 Fifth Avenue Building</h2>
+              </a>
+              <h3>Seattle, USA </h3>
+              <h4>Tonnage: 1075</h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project6')"><img src="images/commercial-projects/ciri-fireweed-office/ciri-fireweed-office.jpg" alt="CLDC Fireweed Office"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project6')">
+              <h2>CLDC Fireweed Office</h2>
+              </a>
+              <h3>Anchorage, AK, USA </h3>
+              <h4>Tonnage: 650 </h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project7')"><img src="images/commercial-projects/gateway/gateway.jpg" alt="Gateway (Grand Villa) Casino"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project7')">
+              <h2>Gateway (Grand Villa) Casino</h2>
+              </a>
+              <h3>BC, Canada </h3>
+              <h4>Tonnage: 1000 </h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project8')"><img src="images/commercial-projects/starlight/starlight.jpg" alt="Star of Fortune Starlight Casino"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project8')">
+              <h2>Star of Fortune Starlight Casino</h2>
+              </a>
+              <h3>New Westminster, BC, Canada </h3>
+              <h4>Tonnage: 605 </h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project9')"><img src="images/commercial-projects/valley-square/valley-square.jpg" alt="Valley Square Shopping Centre"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project9')">
+              <h2>Valley Square Shopping Centre</h2>
+              </a>
+              <h3>Bucks Country, PA, USA</h3>
+              <h4>Tonnage: 480 </h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project10')"><img src="images/commercial-projects/sunshine-tower/sunshine-tower.jpg" alt="Sunshine Tower"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project10')">
+              <h2>Sunshine Tower</h2>
+              </a>
+              <h3>Mumbai, India</h3>
+              <h4>Tonnage: 2200 </h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project11')"><img src="images/commercial-projects/fusion/fusion.jpg" alt="Fusion polis Information & Commercial Technology Park"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project11')">
+              <h2>Fusion polis Information & Commercial Technology Park</h2>
+              </a>
+              <h3>Singapore </h3>
+              <h4>Tonnage: 2005 </h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project12')"><img src="images/commercial-projects/ppm-conard-hotel/ppm-conard-hotel.jpg" alt="PPM Conrad Hotel"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project12')">
+              <h2>PPM Conrad Hotel</h2>
+              </a>
+              <h3>Dubai, UAE </h3>
+              <h4>Tonnage: 5600 </h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project13')"><img src="images/commercial-projects/gms-commercial/gms-commercial.jpg" alt="GMS Grande Palladium Commercial Building"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project13')">
+              <h2>GMS Grande Palladium Commercial Building</h2>
+              </a>
+              <h3>Mumbai, India </h3>
+              <h4>Tonnage: 2200 </h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project14')"><img src="images/commercial-projects/jsw-headquarters/jsw-headquarters.jpg" alt="JSW Headquarters"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project14')">
+              <h2>JSW Headquarters</h2>
+              </a>
+              <h3>Mumbai, India</h3>
+              <h4>Tonnage: 900 </h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project15')"><img src="images/commercial-projects/ongc-office/ongc-office.jpg" alt="ONGC Office & Energy Centre"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project15')">
+              <h2>ONGC Office & Energy Centre</h2>
+              </a>
+              <h3>Delhi, India.</h3>
+              <h4>Tonnage: 1500</h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project16')"><img src="images/commercial-projects/burj-dubai/burj-dubai.jpg" alt="The Address Downtown Burj Dubai Phase-I & II">   
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project16')">
+              <h2>The Address Downtown Burj Dubai Phase-I & II</h2>
+              </a>
+              <h3>Dubai, UAE</h3>
+              <h4>Tonnage: 725 </h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          
+        <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project22')"><img src="images/commercial-projects/redstone-gateway/redstone-gateway.jpg" alt="Douglas Middelburg Optimisation"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project22')">
+              <h2>Building 100 Redstone Gateway</h2>
+              </a>
+              <h3>Huntsville, Alabama</h3>
+              <!--
+              <h4>Tonnage: 3870</h4>-->
+            </div>
+            <!--<div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>-->
+          </li>
+          
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project17')"><img src="images/commercial-projects/telus-canopy/telus-canopy.jpg" alt="Telus Garden Canopy"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project17')">
+              <h2>Telus Garden Canopy</h2>
+              </a>
+              <h3>Vancouver, BC, Canada</h3>
+              <h4>Tonnage: 210 </h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project18')"><img src="images/commercial-projects/sawmill/sawmill.jpg" alt="Aspen place at Sawmill (Phase-II)"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project18')">
+              <h2>Aspen place at Sawmill (Phase-II)</h2>
+              </a>
+              <h3>Flagstaff, Arizona, USA</h3>
+              <h4>Tonnage: 390 </h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project19')"><img src="images/commercial-projects/disney/disney.jpg" alt="Disney's Animal Kingdom Theme Park"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project19')">
+              <h2>Disney's Animal Kingdom Theme Park</h2>
+              </a>
+              <h3>Florida, USA</h3>
+              <h4>Tonnage: 1000</h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project20')"><img src="images/commercial-projects/glenn/glenn.jpg" alt="Glenn Square"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project20')">
+              <h2>Glenn Square</h2>
+              </a>
+              <h3>Anchorage, Alaska, USA</h3>
+              <h4>Tonnage: 360 </h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </section>
+<div class="send-enquiery-btn"><a class="box-btn" href="javascript:void(0);" onClick="overlayBox('enquiryform')">Send Enquiry</a> </div>
+<div class="overlay management-team" id="enquiryform" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-header">Enquiry Form</div>
+      <form name="enquiry_form" id="enquiry_form" method="post" action="inc/contact.php" onSubmit="return form_validate_jquery('#enquiry_form')">
+      <div class="overlay-content">
+        <div class="contactRow">
+          <div class="formCOL">
+            <input type="text" name="first_name" validation="text" title="First Name" placeholder="First Name*">
+            <input type="hidden" name="subject" value="Commercial Projects">
+          </div>
+          <div class="formCOL">
+            <input type="text" name="last_name" validation="text" title="Last Name" placeholder="Last Name*">
+          </div>
+          <div class="formCOL lastcolfrm">
+            <input type="text" name="email" validation="email" title="Email Address" placeholder="Email Address*">
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="contactRow">
+          <div class="formCOL">
+            <input type="text" name="contact_number" title="Contact" maxlength="13" onKeyPress="return onlyNos(event,this);" validation="number" placeholder="Contact*">
+          </div>
+          <div class="formCOL">
+            <div class="input-type-select">
+              <select name="country_name" title="Country" validation="text">
+                <option value=""> Country </option>
+                <option>Afghanistan</option>
+                <option>Aland Islands</option>
+                <option>Albania</option>
+                <option>Algeria</option>
+                <option>American Samoa</option>
+                <option>Andorra</option>
+                <option>Angola</option>
+                <option>Anguilla</option>
+                <option>Antarctica</option>
+                <option>Antigua And Barbuda</option>
+                <option>Argentina</option>
+                <option>Armenia</option>
+                <option>Aruba</option>
+                <option>Australia</option>
+                <option>Austria</option>
+                <option>Azerbaijan</option>
+                <option>Bahamas</option>
+                <option>Bahrain</option>
+                <option>Bangladesh</option>
+                <option>Barbados</option>
+                <option>Belarus</option>
+                <option>Belgium</option>
+                <option>Belize</option>
+                <option>Benin</option>
+                <option>Bermuda</option>
+                <option>Bhutan</option>
+                <option>Bolivia</option>
+                <option>Bosnia And Herzegovina</option>
+                <option>Botswana</option>
+                <option>Bouvet Island</option>
+                <option>Brazil</option>
+                <option>British Indian Ocean Territory</option>
+                <option>Brunei Darussalam</option>
+                <option>Bulgaria</option>
+                <option>Burkina Faso</option>
+                <option>Burundi</option>
+                <option>Cambodia</option>
+                <option>Cameroon</option>
+                <option>Canada</option>
+                <option>Cape Verde</option>
+                <option>Cayman Islands</option>
+                <option>Central African Republic</option>
+                <option>Chad</option>
+                <option>Chile</option>
+                <option>China</option>
+                <option>Christmas Island</option>
+                <option>Cocos (Keeling) Islands</option>
+                <option>Colombia</option>
+                <option>Comoros</option>
+                <option>Congo</option>
+                <option>Congo, Democratic Republic</option>
+                <option>Cook Islands</option>
+                <option>Costa Rica</option>
+                <option>Cote D'Ivoire</option>
+                <option>Croatia</option>
+                <option>Cuba</option>
+                <option>Cyprus</option>
+                <option>Czech Republic</option>
+                <option>Denmark</option>
+                <option>Djibouti</option>
+                <option>Dominica</option>
+                <option>Dominican Republic</option>
+                <option>Ecuador</option>
+                <option>Egypt</option>
+                <option>El Salvador</option>
+                <option>Equatorial Guinea</option>
+                <option>Eritrea</option>
+                <option>Estonia</option>
+                <option>Ethiopia</option>
+                <option>Falkland Islands (Malvinas)</option>
+                <option>Faroe Islands</option>
+                <option>Fiji</option>
+                <option>Finland</option>
+                <option>France</option>
+                <option>French Guiana</option>
+                <option>French Polynesia</option>
+                <option>French Southern Territories</option>
+                <option>Gabon</option>
+                <option>Gambia</option>
+                <option>Georgia</option>
+                <option>Germany</option>
+                <option>Ghana</option>
+                <option>Gibraltar</option>
+                <option>Greece</option>
+                <option>Greenland</option>
+                <option>Grenada</option>
+                <option>Guadeloupe</option>
+                <option>Guam</option>
+                <option>Guatemala</option>
+                <option>Guernsey</option>
+                <option>Guinea</option>
+                <option>Guinea-Bissau</option>
+                <option>Guyana</option>
+                <option>Haiti</option>
+                <option>Heard Island & Mcdonald Islands</option>
+                <option>Holy See</option> 
+                <option>Honduras</option>
+                <option>Hong Kong</option>
+                <option>Hungary</option>
+                <option>Iceland</option>
+                <option>India</option>
+                <option>Indonesia</option>
+                <option>Iran</option>
+                <option>Iraq</option>
+                <option>Ireland</option>
+                <option>Isle Of Man</option>
+                <option>Israel</option>
+                <option>Italy</option>
+                <option>Jamaica</option>
+                <option>Japan</option>
+                <option>Jersey</option>
+                <option>Jordan</option>
+                <option>Kazakhstan</option>
+                <option>Kenya</option>
+                <option>Kiribati</option>
+                <option>Korea</option>
+                <option>Kuwait</option>
+                <option>Kyrgyzstan</option>
+                <option>Lao People's Democratic Republic</option>
+                <option>Latvia</option>
+                <option>Lebanon</option>
+                <option>Lesotho</option>
+                <option>Liberia</option>
+                <option>Libyan Arab Jamahiriya</option>
+                <option>Liechtenstein</option>
+                <option>Lithuania</option>
+                <option>Luxembourg</option>
+                <option>Macao</option>
+                <option>Macedonia</option>
+                <option>Madagascar</option>
+                <option>Malawi</option>
+                <option>Malaysia</option>
+                <option>Maldives</option>
+                <option>Mali</option>
+                <option>Malta</option>
+                <option>Marshall Islands</option>
+                <option>Martinique</option>
+                <option>Mauritania</option>
+                <option>Mauritius</option>
+                <option>Mayotte</option>
+                <option>Mexico</option>
+                <option>Micronesia, Federated States Of</option>
+                <option>Moldova</option>
+                <option>Monaco</option>
+                <option>Mongolia</option>
+                <option>Montenegro</option>
+                <option>Montserrat</option>
+                <option>Morocco</option>
+                <option>Mozambique</option>
+                <option>Myanmar</option>
+                <option>Namibia</option>
+                <option>Nauru</option>
+                <option>Nepal</option>
+                <option>Netherlands</option>
+                <option>Netherlands Antilles</option>
+                <option>New Caledonia</option>
+                <option>New Zealand</option>
+                <option>Nicaragua</option>
+                <option>Niger</option>
+                <option>Nigeria</option>
+                <option>Niue</option>
+                <option>Norfolk Island</option>
+                <option>Northern Mariana Islands</option>
+                <option>Norway</option>
+                <option>Oman</option>
+                <option>Pakistan</option>
+                <option>Palau</option>
+                <option>Palestinian Territory, Occupied</option>
+                <option>Panama</option>
+                <option>Papua New Guinea</option>
+                <option>Paraguay</option>
+                <option>Peru</option>
+                <option>Philippines</option>
+                <option>Pitcairn</option>
+                <option>Poland</option>
+                <option>Portugal</option>
+                <option>Puerto Rico</option>
+                <option>Qatar</option>
+                <option>Reunion</option>
+                <option>Romania</option>
+                <option>Russian Federation</option>
+                <option>Rwanda</option>
+                <option>Saint Barthelemy</option>
+                <option>Saint Helena</option>
+                <option>Saint Kitts And Nevis
+                <option>Saint Lucia</option>
+                <option>Saint Martin</option>
+                <option>Saint Pierre And Miquelon</option>
+                <option>Saint Vincent And Grenadines</option>
+                <option>Samoa</option>
+                <option>San Marino</option>
+                <option>Sao Tome And Principe</option>
+                <option>Saudi Arabia</option>
+                <option>Senegal</option>
+                <option>Serbia</option>
+                <option>Seychelles</option>
+                <option>Sierra Leone</option>
+                <option>Singapore</option>
+                <option>Slovakia</option>
+                <option>Slovenia</option>
+                <option>Solomon Islands</option>
+                <option>Somalia</option>
+                <option>South Africa</option>
+                <option>South Georgia And Sandwich Isl.</option>
+                <option>Spain</option>
+                <option>Sri Lanka</option>
+                <option>Sudan</option>
+                <option>Suriname</option>
+                <option>Svalbard And Jan Mayen</option>
+                <option>Swaziland</option>
+                <option>Sweden</option>
+                <option>Switzerland</option>
+                <option>Syrian Arab Republic</option>
+                <option>Taiwan</option>
+                <option>Tajikistan</option>
+                <option>Tanzania</option>
+                <option>Thailand</option>
+                <option>Timor-Leste</option>
+                <option>Togo</option>
+                <option>Tokelau</option>
+                <option>Tonga</option>
+                <option>Trinidad And Tobago</option>
+                <option>Tunisia</option>
+                <option>Turkey</option>
+                <option>Turkmenistan</option>
+                <option>Turks And Caicos Islands</option>
+                <option>Tuvalu</option>
+                <option>Uganda</option>
+                <option>Ukraine</option>
+                <option>United Arab Emirates</option>
+                <option>United Kingdom</option>
+                <option>United States</option>
+                <option>United States Outlying Islands</option>
+                <option>Uruguay</option>
+                <option>Uzbekistan</option>
+                <option>Vanuatu</option>
+                <option>Venezuela</option>
+                <option>Viet Nam</option>
+                <option>Virgin Islands, British</option>
+                <option>Virgin Islands, U.S.</option>
+                <option>Wallis And Futuna</option>
+                <option>Western Sahara</option>
+                <option>Yemen</option>
+                <option>Zambia</option>
+                <option>Zimbabwe</option>
+              </select>
+            </div>
+          </div>
+          <div class="formCOL lastcolfrm">
+            <div class="input-type-select">
+              <select name="interested_in" title="Interested in" validation="text">
+                <option value=""> Interested in </option>
+                <option> Detail Engineering Services </option>
+                <option> Structural Design Services </option>
+                <option> Connection Design </option>
+                <option> Fabrication Management Solution </option>
+              </select>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="contactRow messageconrowLast">
+          <!--<div class="formCOL"> Message </div>-->
+          <div class="formCOLtextarea">
+            <textarea name="message" title="Message" placeholder="Message" validation="text"></textarea>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="contactRow">
+          	<div class="g-recaptcha" data-sitekey="6LfAdlsUAAAAAJjZeFJUaEgKcMqaqz-sZaZPVpXp"></div>
+        </div>
+        <div class="contactRow messageconrowLast">
+          <div class="box-btn text-center">
+            <input type="submit" name="action_enquiry" value="Submit">
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-cntr">
+        <div class="footer-left" data-wow-delay="0.2s" data-wow-offset="50">
+          <div class="distable">
+            <div class="distable-cell"> <img src="images/footer-logo.png" alt="Techflow Logo"> </div>
+            <div class="distable-cell copytxt">
+              <p><script>document.write(new Date().getFullYear());</script> © Techflow Engineers Pvt. Ltd. </p>
+              <!--<a href="#">Privacy Policy</a> - <a href="#">Terms </a> - <a href="#">Sitemap </a> -->
+              <span>Site by <a href="http://www.intermind.in/" target="_blank"> Intermind</a>  </span>
+              </div>
+          </div>
+        </div>
+        <div class="footer-right" data-wow-delay="0.2s" data-wow-offset="50">
+          <div class="social-icons"> 
+              <a href="https://www.facebook.com/techflowengg" target="_blank" class="fb-icon"><img src="images/fb-icon.png" alt="facebook"></a>
+                            <a href="https://www.linkedin.com/company/techflow-engineers" target="_blank" class="linked-in-icon"><img src="images/linked-in-icon.png" alt="twitter"></a>
+          <div class="clear"></div>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </footer>
+</div>
+<div id="overlay"></div>
+<script src="scripts/wow.min.js"></script> 
+<script>
+
+new WOW().init();
+
+</script> 
+<script>
+
+
+
+$(window).load(function() {
+
+      //alert("window load occurred!");
+	  //$('body').append('<div class="overlay-bg"></div>')
+	  
+	  var slider = '<div class="SliderwithOverlay overlay"id=project1 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class=content><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>The Capital C-70 | <span>Mumbai, India</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider1><ul class=slides><li><img src=images/commercial-projects/capital/capital_1.jpg><li><img src=images/commercial-projects/capital/capital_2.jpg><li><img src=images/commercial-projects/capital/capital_3.jpg></ul></div><div class=flexslider id=carousel1><ul class=slides><li><img src=images/commercial-projects/capital/capital_1.jpg><li><img src=images/commercial-projects/capital/capital_2.jpg><li><img src=images/commercial-projects/capital/capital_3.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>In modern times come modern needs and for one of the fastest growing economies in the world, a structure that is bold, innovative and peculiar is deeply desired. This requirement is fulfilled by a 21st century edifice that goes beyond a conventional construction in the name of \'The Capital\'. This magnificent commercial building with a seamless mix of offices, retail and hospitality makes a statement that it is part of a future that is strong, progressive and liberal.<p>Located in the heart of BKC, Mumbai\'s new financial nerve centre, The Capital is an iconic development that will be the pride of India\'s commercial capital and envy for the rest. This cutting-edge edifice showcases an everlasting and contemporary façade, while its interiors feature a rich palette of colors and textures.<p>The Executive Centre leverages the best features of \'The Capital\' to give clients state-of-the-art infrastructure and lifestyle facilities in Mumbai.<p>This is a composite multi-storey steel structure having a complex elliptical shape façade / glazing in the center, supported by steel framing. Structure is made-up of built-up steel & pipes, framed together by means of well-designed connections. Apart from main framing steel there is framing of light steel around all four sides to support glazing / façade which made it peerless structure of the region.<p>Detailing of steel for such a shaped building was more challenging for us & our team did this without any mix-up, though it took considerable number of communication efforts over critical portion of the structure.<p>Erection of this structure was a challenging task for Erector also but on time delivery & erection methodology proposed by our team made on time erection of steel possible without any interruption.<p>This project is ended up as a successful project done by Techflow.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project2 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class=content><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>Casanova Extention | <span>Eugene, Oregon, USA</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider2><ul class=slides><li><img src=images/commercial-projects/commercial/commercial1.jpg><li><img src=images/commercial-projects/commercial/commercial2.jpg><li><img src=images/commercial-projects/commercial/commercial3.jpg></ul></div><div class=flexslider id=carousel2><ul class=slides><li><img src=images/commercial-projects/commercial/commercial1.jpg><li><img src=images/commercial-projects/commercial/commercial2.jpg><li><img src=images/commercial-projects/commercial/commercial3.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>The Len Casanova Center Expansion is a new 130,000sf state-of-the-art facility, designed to center around the football programs operations. This architecturally unique project has some distinct features, facility is destined to exceed all expectations and set a new standard among athletic complexes. This building features high end locker, position, team and media rooms coupled with a lobby and reception area. There are many offices for football operations.<p>In order to achieve project goals with the highest level of efficiency and accuracy Techflow assigned this project to its best team for detailing of steel. This composite structure is comprises of different type of steel profiles with bolted & welded connection for columns, framing beams & bracings. Trusses are very well detailed to meet the fabricators expectations.<p>Different types of light steels are used for canopies, Handrails & roof member. Techflow team did excellently in all aspects of the project & develops a healthy relation with the customer.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project3 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class=content><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>Centre point West Office Building & Parking Garage | <span>Anchorage, AK, USA</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider3><ul class=slides><li><img src=images/commercial-projects/centre-point/centre-point1.jpg><li><img src=images/commercial-projects/centre-point/centre-point2.jpg><li><img src=images/commercial-projects/centre-point/centre-point3.jpg></ul></div><div class=flexslider id=carousel3><ul class=slides><li><img src=images/commercial-projects/centre-point/centre-point1.jpg><li><img src=images/commercial-projects/centre-point/centre-point2.jpg><li><img src=images/commercial-projects/centre-point/centre-point3.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>The new Center point West office tower offers approximately 200,000 sq ft of high quality corporate office environment. The building design blends innovative use of glass curtain wall with metallic panels to create a contemporary and unique building signature.<p>This multi-storey composite building has main structure made-up of moderate sized W shape steel columns & beams fastened together by means of erection bolts & welds. Typical connections used, made the erection faster. Railings at periphery are serving safety needs. Finally structure is covered by glazing supported by light steel, making it a pleasure to look.<p>This is one of the signature projects done by Techflow.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project4 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class=content><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>Opus Interplex Business Park | <span>Calgary, Alberta, Canada</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider4><ul class=slides><li><img src=images/commercial-projects/opus-interplex/opus-interplex1.jpg><li><img src=images/commercial-projects/opus-interplex/opus-interplex2.jpg></ul></div><div class=flexslider id=carousel4><ul class=slides><li><img src=images/commercial-projects/opus-interplex/opus-interplex1.jpg><li><img src=images/commercial-projects/opus-interplex/opus-interplex2.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>Opus 2 is an eight-storey low-rise tower in the interplex business park with excellent exposure to Barlow Trail & Memorial Drive with 3 access points, 5 minutes to downtown, 15 minutes to airport. Surrounded by Incredible skyline and mountain views.<p>Techflow was awarded detailing of this project. The front face of building is built of curved beams. Several types of connections are used in the structure. Main structure made-up of moderate sized W shape steel columns & beams fastened together by means of erection bolts & welds. HSS are used for bracings & for few columns. Heavy connections are used at column to beam-bracing junctions. Light steel framing around the structure is supporting glazing / façade which made it incomparable structure of the region.<p>Communication efforts over difficult portion of the structure made the work flow easier. The building went together very easily everything bolted up with little effort and all parts were included. Professional practice allowed the team to pursue the owner\'s aggressive schedule.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project5 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class=content><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>2020 Fifth Avenue Building | <span>Seattle, USA</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider5><ul class=slides><li><img src=images/commercial-projects/avenue-building/avenue-building1.jpg><li><img src=images/commercial-projects/avenue-building/avenue-building2.jpg></ul></div><div class=flexslider id=carousel5><ul class=slides><li><img src=images/commercial-projects/avenue-building/avenue-building1.jpg><li><img src=images/commercial-projects/avenue-building/avenue-building2.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>Equinix\'s Seattle data center (2020 Fifth Avenue Building) is located at 2020 Fifth Ave, Seattle, WA 98121. The building is steel concrete structure. The data center is 14 miles from Seattle Tacoma international airport. It is a secure 10-story, 126,000 square foot state of the art data center.<p>Techflow was awarded detailing of this project. This is a composite steel structure. Several types of connections are used in the structure. Main structure made-up of moderate sized W shape steel columns & beams fastened together by means of erection bolts & welds. Framing is made up of W profile members having shear plate and end plate connections. HSS are used for bracings & for some columns. Heavy connections are used at column to beam-bracing junctions. Each column is anchored in foundation with Anchor Bolts. Vertical bracings are used for providing resistance to lateral forces. Bracings are acquiring heavy gusset plate connection at both ends. Structure is covered with glazing which made it unique structure of the region.<p>The building went together very easily everything bolted up with little effort and all parts were included. Close coordination & professional practice allowed the team to pursue the owner\'s aggressive schedule.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project6 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class=content><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>CLDC Fireweed Office | <span>Anchorage, AK, USA</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider6><ul class=slides><li><img src=images/commercial-projects/ciri-fireweed-office/ciri-fireweed-office1.jpg><li><img src=images/commercial-projects/ciri-fireweed-office/ciri-fireweed-office2.jpg></ul></div><div class=flexslider id=carousel6><ul class=slides><li><img src=images/commercial-projects/ciri-fireweed-office/ciri-fireweed-office1.jpg><li><img src=images/commercial-projects/ciri-fireweed-office/ciri-fireweed-office2.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>Situated at the intersection of Fireweed Lane and New Seward Highway, the Fireweed Business Center\'s central location allows easy access for commuters from north and south Anchorage and nearby communities. The design of this midrise eight-story building provides panoramic views of six mountain ranges and Cook Inlet.<p>The Fireweed Business Center\'s clean lines, timeless architecture and glass facades are more than simple design features.<p>This midrise composite building has main structure made-up of moderate sized W shape steel columns & beams fastened together by means of erection bolts & welds. It has Expanded space with an unforgettable façade. Finally structure is covered by glazing.<p>Couples of small problems were quickly resolved with no hassles. The building went up without a delay, everything bolted up with little effort. The building is sturdy and attractive.<p>This is one more addition in the list of successful projects done by Techflow.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project7 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class=content><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>Gateway (Grand Villa) Casino | <span>BC, Canada</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider7><ul class=slides><li><img src=images/commercial-projects/gateway/gateway1.jpg><li><img src=images/commercial-projects/gateway/gateway2.jpg><li><img src=images/commercial-projects/gateway/gateway3.jpg><li><img src=images/commercial-projects/gateway/gateway4.jpg><li><img src=images/commercial-projects/gateway/gateway5.jpg><li><img src=images/commercial-projects/gateway/gateway6.jpg></ul></div><div class=flexslider id=carousel7><ul class=slides><li><img src=images/commercial-projects/gateway/gateway1.jpg><li><img src=images/commercial-projects/gateway/gateway2.jpg><li><img src=images/commercial-projects/gateway/gateway3.jpg><li><img src=images/commercial-projects/gateway/gateway4.jpg><li><img src=images/commercial-projects/gateway/gateway5.jpg><li><img src=images/commercial-projects/gateway/gateway6.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>The Grand Villa Casino is Burnaby\'s sophisticated new two-story entertainment complex. The project has a total floor area of 290,000 sq. ft., which includes 120,000 sq. ft. dedicated to the casino and 35,000 sq. ft. for a convention center and ballroom. The project features two levels of underground parking also.<p>This is a composite steel structure having a curved shaped façade / glazing on outer face of the structure, supported by steel framing. Building has main structure made-up of moderate sized W shape steel columns & beams, fastened together by means of erection bolts & welds. Techflow was awarded detailing of this project. The front face of building is built of curved beams. Several types of connections are used in the structure. HSS are used for bracings & for few columns. Link bridge made up of steel framing is connecting the structure with exiting building. Joists are used at roof. Glazing / façade is making it incomparable structure of the region.<p>Couples of small problems were quickly resolved with no hassles. The building completed without a delay, everything bolted up with little effort.<p>This project is ended up as a successful project done by Techflow.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project8 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class=content><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>Star of Fortune Starlight Casino | <span>New Westminster, BC, Canada</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider8><ul class=slides><li><img src=images/commercial-projects/starlight/starlight1.jpg><li><img src=images/commercial-projects/starlight/starlight2.jpg><li><img src=images/commercial-projects/starlight/starlight3.jpg></ul></div><div class=flexslider id=carousel8><ul class=slides><li><img src=images/commercial-projects/starlight/starlight1.jpg><li><img src=images/commercial-projects/starlight/starlight2.jpg><li><img src=images/commercial-projects/starlight/starlight3.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>This is a composite steel structure Located at New Westminster, BC, Canada. Structure is having glazing on outer face of the structure, supported by steel framing. Structure has slopped roofs & Inclined columns passing through the roof at the entrance, adding extra beauty to the structure. Main structure is made-up of moderate sized W shape steel columns & beams, fastened together by means of erection bolts & welds.<p>Techflow was awarded detailing of this project which involves several types of connections. HSS are also used for few columns. Vertical bracings are used for providing resistance to lateral forces. Couple of small problems was quickly resolved with no hassles. The building completed without a delay, everything is well detailed to meet the fabricator\'s expectations.<p>Techflow team did excellently in all aspects of the project & develops a healthy relation with the customer.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project9 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class=content><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>Valley Square Shopping Centre | <span>Bucks Country, PA, USA</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider9><ul class=slides><li><img src=images/commercial-projects/valley-square/valley-square1.jpg><li><img src=images/commercial-projects/valley-square/valley-square2.jpg></ul></div><div class=flexslider id=carousel9><ul class=slides><li><img src=images/commercial-projects/valley-square/valley-square1.jpg><li><img src=images/commercial-projects/valley-square/valley-square2.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>The Shops at Valley Square is a pedestrian-friendly Main Street experience with on-street parking, distinctive architecture and abundant landscaping. Located in Bucks County, Pa., just north of Philadelphia, The Shops at Valley Square is part of a 140-acre mixed-use development that includes office, retail and residential. The property includes over 100,000 sq. ft. of professional office space. Each building has a distinct footprint, massing, height, profile, shape and plan.<p>This project is an array of composite steel structure, made-up of moderate sized W shapes steel columns & beams, fastened together by means of erection bolts & welds. Techflow was awarded detailing of this project. Several types of connections are used in the structure. Framing is made up of W profile members having shear plate and end plate connections. HSS are also used for few columns. Each column is anchored in foundation with Anchor Bolts. Vertical bracings are used for providing resistance to lateral forces. Bracings are acquiring gusset plate connection at both ends. Steel construction for conical & round dome are done in a perfect manner. There are number of Joists used at roof. Typical connections used made the erection faster.<p>The building went together very easily everything bolted up with little effort and all parts were included. Close coordination & professional practice allowed the team to pursue the owner\'s aggressive schedule.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project10 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class=content><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>Sunshine Tower | <span>Mumbai, India</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider10><ul class=slides><li><img src=images/commercial-projects/sunshine-tower/sunshine-tower1.jpg><li><img src=images/commercial-projects/sunshine-tower/sunshine-tower2.jpg></ul></div><div class=flexslider id=carousel10><ul class=slides><li><img src=images/commercial-projects/sunshine-tower/sunshine-tower1.jpg><li><img src=images/commercial-projects/sunshine-tower/sunshine-tower2.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>A master piece always has a form, this time it\'s vertical. Multi-storey commercial building about 175 meters high, with podium floors for parking, Sunshine Tower is the ideal platform for businesses attempting to tap into the thriving Indian economy. Located in Mumbai, its sound infrastructure and dynamic facilities make the ideal mix for an ideal office. Sunshine Tower is a modern structure planned and executed using latest technology, featured in many prestigious publications as India\'s tallest commercial steel building.<p>It is one of the tallest composite buildings in India. The building is a 42 storey commercial structure with a height of 195 mtrs. Structural columns imported by Corus and Concrete used is about 15000 cu.mt. Being straight-walled building it provides more usable space when compared to arch buildings having expanded space with an unforgettable façade / glazing around.<p>This project was awarded to Techflow for steel detailing, heavy SHS are used for periphery columns & RHS for vertical bracings, throughout the structure. W shape beams are used for framings. Typical but well design connections used at all floors & elevations makes the floor look alike.<p>Heaving & complicated connections are used at column to beam & vertical bracings junctions. Our team modeled & detailed the same in a very effective way thereby satisfying fabricator & erector. Team maintained documents in such a way that at any point of time documents were ready for customer use. The building went together very easily and all parts were included in the pre-engineered structure.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project11 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class=content><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>Fusion polis Information & Commercial Technology Park | <span>Singapore</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider11><ul class=slides><li><img src=images/commercial-projects/fusion/fusion1.jpg><li><img src=images/commercial-projects/fusion/fusion2.jpg><li><img src=images/commercial-projects/fusion/fusion3.jpg><li><img src=images/commercial-projects/fusion/fusion4.jpg><li><img src=images/commercial-projects/fusion/fusion5.jpg></ul></div><div class=flexslider id=carousel11><ul class=slides><li><img src=images/commercial-projects/fusion/fusion1.jpg><li><img src=images/commercial-projects/fusion/fusion2.jpg><li><img src=images/commercial-projects/fusion/fusion3.jpg><li><img src=images/commercial-projects/fusion/fusion4.jpg><li><img src=images/commercial-projects/fusion/fusion5.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>The first of its kind & part of a 30-hectare mixed-use structure in Singapore, Fusion polis is a 22-24 storey commercial Information and communication Technology (ICT) building located within Central Xchange, a cluster for infocomms and media industries in Singapore\'s new futuristic city One-North. It houses various research organizations, high-tech companies, government agencies, retail outlets, and serviced apartments in one location.<p>These buildings consist of a steel structure framework, supported by 3 large tower cores. Conceptual design was done by world renowned architect Kisho Kurokawaand built by the one of the world\'s largest construction company, Shimizu Corporation. Steelwork, fabrication and erection with Yongnam Holdings Limited. For reducing time span of project, fabrication need to start before final fixing of design by architect and structural consultant.<p>Techflow was selected to provide comprehensive steel detailing solution that can meet with the client requirement and schedule. Construction proceeded smoothly due to close coordination of all the agencies. Besides the changes done by architect and consultant, moving with target fixed for submission of shop drawings was a really difficult task, which was achieved by our team.<p>This building comprises of shear wall at centre, mega cantilever trusses, super columns, peripheral trusses, stub columns and secondary beam. Shear wall is at centre of the building from which 12 cantilever trusses of 15 meters long were extended up to edge of building. These were placed at 4th, 11th, 17th and 22nd level. The height of each mega cantilever truss was one floor (4/6 meters height) level. These trusses were connected with 9 super columns embedded in core shear wall and supports stub column and peripheral trusses. Intermediate floors are supported by peripheral trusses running between stub columns and secondary beams.<p>The top chord is also provided with post tension cables for which anchor block were provided to lock the tendons. The steel floor framing connection to the concrete wall was established by using embedded steel plates with shear bar anchors. Locating super columns in RCC shear wall was a challenging part of this project. As these columns need to be located considering actual location of reinforcement. A slight change in location of super column revises all the drawings of mega and secondary trusses.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project12 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class=content><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>PPM Conrad Hotel | <span>Dubai, UAE</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider12><ul class=slides><li><img src=images/commercial-projects/ppm-conard-hotel/ppm-conard-hotel1.jpg><li><img src=images/commercial-projects/ppm-conard-hotel/ppm-conard-hotel2.jpg><li><img src=images/commercial-projects/ppm-conard-hotel/ppm-conard-hotel3.jpg></ul></div><div class=flexslider id=carousel12><ul class=slides><li><img src=images/commercial-projects/ppm-conard-hotel/ppm-conard-hotel1.jpg><li><img src=images/commercial-projects/ppm-conard-hotel/ppm-conard-hotel2.jpg><li><img src=images/commercial-projects/ppm-conard-hotel/ppm-conard-hotel3.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>The Conrad Hotel is a luxury brand of Hilton International located in the heart of Dubai\'s commercial, business and entertainment district at Shaikh Zayed Road. It comprises of a 51 storey tower linked to 13 level automated car park building, both linked by steel truss structure to form a floor for an elevated landscaped recreation area, with a total built-up area of just over 2,000,000 square feet. Podium up to level 6, roof, pool deck, landscape and car parking area is constructed in structural steel. The tower has a structural height of 255 m (837 ft).<br>Glass Balustrade, Sun Louvers, Soffit Cladding making it a master piece of all time.<p>Techflow was awarded for connection design and detailing of the project. Key responsibilities as part of design team was, structural design including design of structural elements for the podium and hotel levels & design of post tensioned transfer floors.<p>The face of building is built of curved beams throughout the elevation. Steel Trusses are providing big bays. Several type of connections are design & used in the tower. Main structure made-up of moderate sized W shape steel columns & beams fastened together by means of erection bolts & welds. Heavy & complicated connections are used at column to beam & vertical bracings junctions. It was very difficult task to manage bolted connections of more than 6 members at one joint throughout the structure. But Techflow team made it possible & developed complicated connections without any problem on TEKLA software.<p>Communication efforts over critical portion of the structure made the work flow easier. Couple of small problems was quickly resolved with no hassles. The building went together very easily everything bolted up with little effort and all parts were included.<p>Detailing, Fabrication and Erection with critical aesthetic features designed into the steel structure, communication and coordination were essential for successful execution of the project. Professional practice allowed the team to pursue the owner\'s aggressive schedule.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project13 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class=content><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>GMS Grande Palladium Commercial Building | <span>Mumbai, India</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider13><ul class=slides><li><img src=images/commercial-projects/gms-commercial/gms-commercial1.jpg><li><img src=images/commercial-projects/gms-commercial/gms-commercial2.jpg><li><img src=images/commercial-projects/gms-commercial/gms-commercial3.jpg><li><img src=images/commercial-projects/gms-commercial/gms-commercial4.jpg><li><img src=images/commercial-projects/gms-commercial/gms-commercial5.jpg></ul></div><div class=flexslider id=carousel13><ul class=slides><li><img src=images/commercial-projects/gms-commercial/gms-commercial1.jpg><li><img src=images/commercial-projects/gms-commercial/gms-commercial2.jpg><li><img src=images/commercial-projects/gms-commercial/gms-commercial3.jpg><li><img src=images/commercial-projects/gms-commercial/gms-commercial4.jpg><li><img src=images/commercial-projects/gms-commercial/gms-commercial5.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>An office building located in the heart of Mumbai, the business capital of India. The uniqueness of this project is that it operates on multiple levels, On one hand it uses technology and intelligent design to improve the working environment of its inhabitants, while working inclusively in an urban context. On the other hand, it is a critical commentary on some of the antiquated notions that have plagued contemporary commercial design. The building offers a constructivist aesthetic with bold geometry and sharp angles.<p>Techflow was appointed as a connection design and detailing consultant for this project. Connection designing for this project was a quiet tough task due to the unsymmetrical shape and huge cantilever supported area of building. The challenging factor of the building was designing and detailing of the skin truss because of its shape, size and geometry.<p>The complex structure and huge cantilever supported area made it difficult to erect the building floor wise, hence Techflow proposed to erect the core area at middle of building till terrace level. Accordingly the team planned the erection methodology and divided the building in to 7 sequences. Skin Truss geometry and layout was very difficult to execute from 2D drawings. Hence the team had decided to derive the basic skin truss locating coordinates from the REVIT model prepared by the architect.<p>The another major part in this project was the directors cabin above the terrace level which has almost a cantilever extending more than 20 meters, having a complex connection to design, detail and erect. Techflow had assigned their highly professional staff for designing and detailing. It took three months for the connection designing and six plan months for the detailing of entire project.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project14 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class=content><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>JSW Headquarters | <span>Mumbai, India</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider14><ul class=slides><li><img src=images/commercial-projects/jsw-headquarters/jsw-headquarters1.jpg><li><img src=images/commercial-projects/jsw-headquarters/jsw-headquarters2.jpg><li><img src=images/commercial-projects/jsw-headquarters/jsw-headquarters3.jpg><li><img src=images/commercial-projects/jsw-headquarters/jsw-headquarters4.jpg><li><img src=images/commercial-projects/jsw-headquarters/jsw-headquarters5.jpg><li><img src=images/commercial-projects/jsw-headquarters/jsw-headquarters6.jpg></ul></div><div class=flexslider id=carousel14><ul class=slides><li><img src=images/commercial-projects/jsw-headquarters/jsw-headquarters1.jpg><li><img src=images/commercial-projects/jsw-headquarters/jsw-headquarters2.jpg><li><img src=images/commercial-projects/jsw-headquarters/jsw-headquarters3.jpg><li><img src=images/commercial-projects/jsw-headquarters/jsw-headquarters4.jpg><li><img src=images/commercial-projects/jsw-headquarters/jsw-headquarters5.jpg><li><img src=images/commercial-projects/jsw-headquarters/jsw-headquarters6.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>Headquarters for JSW is one of the largest completely open office complexes in Mumbai. The building is designed to achieve a LEED Platinum rating, and incorporates not only the most advanced sustainable building technologies, but also the latest concepts in corporate office design and configuration.<p>With its large atrium inside and the entirety of the exterior glazed with a high-performance double skin, the building will receive maximum natural light while maintaining extremely efficient systems operations. 30\' x 100\' eye-shaped sky court that draws natural light deeply into the center of building is awesome.<p>This project consists of a 12 story steel structure housing a 350,000-sf (32,500-sm) office tower above a two story, 85,000-sf (7,900-sm) basement for parking.<p>The central atrium is 11 stories and connects the two wings of the building. The peripheral columns are inclined by 6° and atrium columns were exposed to weather with transparent glass cladding 100 mm dia. SS pins were used to connect atrium braces. It has two sets of scissor stair for emergency fire exit. This Iconic structure has long span steel members, unique elevation resembling a ship and has a complete Superstructure made of approximately 4000 tons of structural steel.<p>Our scope for this structure was connection design and detailing. Our team did both the task in a very handy manner.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project15 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class=content><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>ONGC Office & Energy Centre | <span>Delhi, India.</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider15><ul class=slides><li><img src=images/commercial-projects/ongc-office/ongc-office1.jpg><li><img src=images/commercial-projects/ongc-office/ongc-office2.jpg></ul></div><div class=flexslider id=carousel15><ul class=slides><li><img src=images/commercial-projects/ongc-office/ongc-office1.jpg><li><img src=images/commercial-projects/ongc-office/ongc-office2.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>The new ONGC corporate office is state-of-the-art construction with Green Building compliance and complete side walling done of curtain wall glazing. This is R&D center for non-conventional sources of Energy. The complex houses Corporate offices of ONGC group of companies. The building built on a plot area of 36,340 square meters in Delhi. It has ground plus 5 floors and two basement levels. The total area of the green building is 10, 63,085 Sqft consisting of two basements, ground floor and 5 floors.<p>Techflow was selected to provide comprehensive steel detailing solution that can meet with the client requirement and schedule.<p>This is a composite steel structure having a complex cylindrical shape façade / glazing on the periphery, supported by steel framing. Structure is made-up of different steel profiles, framed together by means of well-designed connections. Detailing of steel for such a shaped building was more challenging for us & our team did this without any mix-up. Construction proceeded smoothly due to close coordination.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project16 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class=content><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>The Address Downtown Burj Dubai Phase-I & II | <span>Dubai, UAE</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider16><ul class=slides><li><img src=images/commercial-projects/burj-dubai/burj-dubai1.jpg><li><img src=images/commercial-projects/burj-dubai/burj-dubai2.jpg><li><img src=images/commercial-projects/burj-dubai/burj-dubai3.jpg><li><img src=images/commercial-projects/burj-dubai/burj-dubai4.jpg><li><img src=images/commercial-projects/burj-dubai/burj-dubai5.jpg><li><img src=images/commercial-projects/burj-dubai/burj-dubai6.jpg><li><img src=images/commercial-projects/burj-dubai/burj-dubai7.jpg><li><img src=images/commercial-projects/burj-dubai/burj-dubai8.jpg></ul></div><div class=flexslider id=carousel16><ul class=slides><li><img src=images/commercial-projects/burj-dubai/burj-dubai1.jpg><li><img src=images/commercial-projects/burj-dubai/burj-dubai2.jpg><li><img src=images/commercial-projects/burj-dubai/burj-dubai3.jpg><li><img src=images/commercial-projects/burj-dubai/burj-dubai4.jpg><li><img src=images/commercial-projects/burj-dubai/burj-dubai5.jpg><li><img src=images/commercial-projects/burj-dubai/burj-dubai6.jpg><li><img src=images/commercial-projects/burj-dubai/burj-dubai7.jpg><li><img src=images/commercial-projects/burj-dubai/burj-dubai8.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>The Address Downtown Dubai formerly known as Burj Dubai Lake Hotel and Service Apartments is a super tall skyscraper set to rise 306 meters alongside the Dubai Mall. The mixed used tower contains a total of 63 floors. There were two phases of steelwork in our scope.<p>In phase 1 detailing of supporting structure for slab at 6th ¬ 11th level is done. The supporting structure was of columns, beams and trusses. Trusses were about 17.5 meters long with 1.8 meters depth and fabricated as a single assembly.<p>Phase 2 comprise of main entrance canopy at 6th level and roof crown starting from 170.85 meters above ground level and having a height of 104 meters. Two spires emerging from roof crown from both sides at 249 meters from ground level and with height of 57.89 meters.<p>Techflow has provided comprehensive connection design and steel detailing solutions. Connections were schematically design with loads provided on drawing by the design team.<p>Limited lifting capacity of cranes (app. 1.5 Tons) was an obstacle. To resolve this, design team had to break the structure into number of pieces.<p>It was very difficult task to manage bolted connections of more than 6 members at one joint throughout the structure. But Techflow team made it possible & developed such complicated connections without any conflict on TEKLA software. After designing the crown connections, spire connections with crown were designed. It was a slip critical connection.<p>Detailing, Fabrication and Erection with critical aesthetic features designed into the steel structure, communication and coordination were essential for successful execution of the project. Professional practice allowed the team to pursue the owner\'s aggressive schedule.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay" id="project22" data-animation-in="fadeInDown" data-animation-out="fadeOutUp"><div class="overlay-box"><div class="content"><div class="overlay-header"><div class="slideInfo"><h2>Building 100 Redstone Gateway | <span>Huntsville, Alabama</span></h2></div></div><div class="overlay-content"><div class="grid-12"><div class="grid-8 sliderimages"><div class="flexslider" id="slider22"><ul class="slides"><li><img src="images/commercial-projects/redstone-gateway/redstone-gateway1.jpg"><li><img src="images/commercial-projects/redstone-gateway/redstone-gateway2.jpg"><li><img src="images/commercial-projects/redstone-gateway/redstone-gateway3.jpg"><li><img src="images/commercial-projects/redstone-gateway/redstone-gateway4.jpg"><li><img src="images/commercial-projects/redstone-gateway/redstone-gateway5.jpg"><li><img src="images/commercial-projects/redstone-gateway/redstone-gateway6.jpg"></ul></div><div class="flexslider" id="carousel22"><ul class="slides"><li><img src="images/commercial-projects/redstone-gateway/redstone-gateway1.jpg"><li><img src="images/commercial-projects/redstone-gateway/redstone-gateway2.jpg"><li><img src="images/commercial-projects/redstone-gateway/redstone-gateway3.jpg"><li><img src="images/commercial-projects/redstone-gateway/redstone-gateway4.jpg"><li><img src="images/commercial-projects/redstone-gateway/redstone-gateway5.jpg"><li><img src="images/commercial-projects/redstone-gateway/redstone-gateway6.jpg"></ul></div></div><div class="grid-4 overlaycntr"><div class="overlayInfo"><div class="scrollbars"><p>Redstone gateway is a 470-acre multiuse office park development in Huntsville, Alabama, Techflow was awarded building 100 for steel detailing.</p><p>This composite structure is made up of approximately 850 tonnage of structural steel. Set in the concrete foundation, Anchor bolts are used to uphold the columns transferring loads in to the foundation.Structural bolts & welds are used to fastened together columns, beams & other loose steel items.</p><p>About 1850 Embeds and weld-on items used in the project made it obligatory to precisely model and detail the framings. Beams & stairs that are connected to precast wall panels were very well coordinated with the Client to achieve high level of accuracy during erection of steel.</p><p>Everything was accurately detailed using the SDS/2 software. Professional practice allowed the team to meet the fabricators expectations and at the same time to pursue the owners aggressive schedule as well. Techflow created around 1470 shop drawings & over 160 quality erection drawings for this project.</p></div></div></div></div><div class="clear"></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project17 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class=content><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>Telus Garden Canopy | <span>Vancouver, BC, Canada</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider17><ul class=slides><li><img src=images/commercial-projects/telus-canopy/telus-canopy1.jpg><li><img src=images/commercial-projects/telus-canopy/telus-canopy2.jpg><li><img src=images/commercial-projects/telus-canopy/telus-canopy3.jpg><li><img src=images/commercial-projects/telus-canopy/telus-canopy4.jpg><li><img src=images/commercial-projects/telus-canopy/telus-canopy5.jpg><li><img src=images/commercial-projects/telus-canopy/telus-canopy6.jpg></ul></div><div class=flexslider id=carousel17><ul class=slides><li><img src=images/commercial-projects/telus-canopy/telus-canopy1.jpg><li><img src=images/commercial-projects/telus-canopy/telus-canopy2.jpg><li><img src=images/commercial-projects/telus-canopy/telus-canopy3.jpg><li><img src=images/commercial-projects/telus-canopy/telus-canopy4.jpg><li><img src=images/commercial-projects/telus-canopy/telus-canopy5.jpg><li><img src=images/commercial-projects/telus-canopy/telus-canopy6.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>Telus Garden is mixed-use development project located in the heart of downtown Vancouver. The project includes a 22-storey office tower and a 46-storey, 450-unit residential tower. Telus Garden is incorporated many unique and challenging architectural features. One of the more striking features of the Telus Garden development is the 220-foot clear span canopy arch that extends its length over an entire city block.<p>The primary frame of the arch is comprised of an assembly of heavy steel plates that form a hollow, triangular tube, and shape the spine of the structure. Glulam ribs cantilever off the steel spine, and support the canopy\'s glass covering. Each of the 54 glulam ribs vary in length, providing visual interest for the arch, while the glass skin of the canopy enables weather-protected pedestrians the opportunity to view open sky above.<p>The Telus canopy presented a number of structural challenges due to the complexity of its geometry, as well as the varied materials being used in the structure. One of the primary challenges was the anchorage of the steel canopy spine into the supporting concrete base. This challenge was met by anchoring the canopy with large steel embeds plates, cast into the supporting concrete base, at each end. A second embed plate was then bolted onto each of the first to hold the buttresses of the canopy in place. A second challenge of the project was finding a method of connecting the two main materials being used in the canopy, steel and glulam. Using this uncommon combination of differing materials together presented unique challenges of integration. An intricate assembly of slotted steel knife plates, welded to the arch\'s spine, and then bolted to the individual pieces of glulam, provided a solution to the problem.<p>Due to the structure\'s complex shape and requirements, the design and execution teamwork was particularly key in this structural endeavor, requiring ongoing dynamic coordination within the project team. Close collaborative work with the architect, steel and glulam fabricators as well as the construction team were necessary, to come up with a detailed, constructible design.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project18 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class=content><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>Aspen place at Sawmill (Phase-II) | <span>Flagstaff, Arizona, USA</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider18><ul class=slides><li><img src=images/commercial-projects/sawmill/sawmill1.jpg><li><img src=images/commercial-projects/sawmill/sawmill2.jpg><li><img src=images/commercial-projects/sawmill/sawmill3.jpg><li><img src=images/commercial-projects/sawmill/sawmill4.jpg><li><img src=images/commercial-projects/sawmill/sawmill5.jpg><li><img src=images/commercial-projects/sawmill/sawmill6.jpg><li><img src=images/commercial-projects/sawmill/sawmill7.jpg></ul></div><div class=flexslider id=carousel18><ul class=slides><li><img src=images/commercial-projects/sawmill/sawmill1.jpg><li><img src=images/commercial-projects/sawmill/sawmill2.jpg><li><img src=images/commercial-projects/sawmill/sawmill3.jpg><li><img src=images/commercial-projects/sawmill/sawmill4.jpg><li><img src=images/commercial-projects/sawmill/sawmill5.jpg><li><img src=images/commercial-projects/sawmill/sawmill6.jpg><li><img src=images/commercial-projects/sawmill/sawmill7.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>Aspen Place at the Sawmill, named in honor of the Stone Forest Sawmill that once occupied the area, is a mixed-use project located southwest of Butler Avenue and Sawmill Road and east of Lone Tree Road. Phase two with 30,000 additional SF of retail space and 222 luxury apartments is built on 40 acres and contain 155,000 square feet of retail and restaurant units. A combined retail and residential project situated in the heart of Flagstaff, Arizona, Aspen Place at The Sawmill brings casual sophistication and urban lifestyle to a higher elevation.<p>Light steel profiles are used for column & framing members. Overhang beams are connected with concrete beams by means of embeds plates. Straight & slopped Canopies around the building faces are supported by the hangers & inclined members. Main Canopy is supported by Turnbuckle. Connections used are simple yet effective. Roof is supported by joists & rafters. Steep sloped roof is giving an extra ordinary exterior to the structure. Window openings made of steel profiles are adding beauty to the structure.<p>Techflow team completed this project with quality & within scheduled time. Everything detailed out at our end was perfect to installed, which bring satisfaction to customer and of course to us.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project19 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class=content><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>Disney\'s Animal Kingdom Theme Park | <span>Florida, USA</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider19><ul class=slides><li><img src=images/commercial-projects/disney/disney1.jpg><li><img src=images/commercial-projects/disney/disney2.jpg><li><img src=images/commercial-projects/disney/disney3.jpg><li><img src=images/commercial-projects/disney/disney4.jpg><li><img src=images/commercial-projects/disney/disney5.jpg><li><img src=images/commercial-projects/disney/disney6.jpg><li><img src=images/commercial-projects/disney/disney7.jpg><li><img src=images/commercial-projects/disney/disney8.jpg><li><img src=images/commercial-projects/disney/disney9.jpg></ul></div><div class=flexslider id=carousel19><ul class=slides><li><img src=images/commercial-projects/disney/disney1.jpg><li><img src=images/commercial-projects/disney/disney2.jpg><li><img src=images/commercial-projects/disney/disney3.jpg><li><img src=images/commercial-projects/disney/disney4.jpg><li><img src=images/commercial-projects/disney/disney5.jpg><li><img src=images/commercial-projects/disney/disney6.jpg><li><img src=images/commercial-projects/disney/disney7.jpg><li><img src=images/commercial-projects/disney/disney8.jpg><li><img src=images/commercial-projects/disney/disney9.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>Disney\'s Animal Kingdom is a zoological theme park at the Walt Disney World Resort in Bay Lake, Florida, near Orlando. Owned and operated by The Walt Disney Company through its Parks and Resorts division, it is the largest theme park in the world, covering 580 acres. The park is represented by the Tree of Life, a 145-foot-tall, 50-foot-wide artificial baob tree. Disney\'s Animal Kingdom is divided into seven themed areas. Discovery Island is the "central hub" connecting the other sections of the park. Roller coasters through the Forbidden Mountain are the point of attraction of this park.<p>Mountains in the park are made up of steel structure. Steel roller coaster is entering and exiting out of the same. A steep roller coaster track of steel members is connecting two mountains.</p>In making of mountains lots of steel framing work is involved having bolted & welded connections. Heavy steel profiles used for these mountains providing stability under moving loads. Big trestles with sophisticated connections are supporting roller coasters under vibrations. Detailing these steel was required intelligent work, Techflow team did utilize their past experience here & prepared very accurate model & drawings to facilitate error free fabrication & easy erection.<p>Lots of handrails were required to meet the safety standards & those were detailed to perfection by Techflow. Ladders & platforms in the form of model & drawings were made available per schedule. Excellent tracking of drawings IFA / IFF & documents kept the project under control. Critical situations were wisely handled with proper communication with client. Entire project completed with great amount of accuracy.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project20 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class=content><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>Glenn Square | <span>Anchorage, Alaska, USA</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider20><ul class=slides><li><img src=images/commercial-projects/glenn/glenn1.jpg><li><img src=images/commercial-projects/glenn/glenn2.jpg><li><img src=images/commercial-projects/glenn/glenn3.jpg><li><img src=images/commercial-projects/glenn/glenn4.jpg></ul></div><div class=flexslider id=carousel20><ul class=slides><li><img src=images/commercial-projects/glenn/glenn1.jpg><li><img src=images/commercial-projects/glenn/glenn2.jpg><li><img src=images/commercial-projects/glenn/glenn3.jpg><li><img src=images/commercial-projects/glenn/glenn4.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>Glenn Square is a 250,000 square foot power center located on a 25-acre parcel in the Mountain View neighborhood of Anchorage, Alaska, United States. The center consists of a collection of small shops and eateries and several large anchor stores. The center\'s name is derived from the Glenn Highway. The buildings signature feature is a 60\' clock tower. The rear portion of the mall abuts an 18\' grade difference and is supported by a 14" thick concrete wall.<p>Techflow was awarded this project for steel detailing. This is a composite steel structure. HSS columns are used for supporting the framing by means of bolted connections. Each HSS column is anchored in foundation with numbers of Anchor Bolts. Vertical bracings are used for providing resistance to lateral forces. These bracings are acquiring heavy gusset plate connection at both ends. Framing is made up of W profile members having shear plate and end plate connections.<p>Techflow team modeled & detailed the project in a very effective way thereby satisfied the fabricator & erector. Close coordination with client was determining factor.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay" id="project21" data-animation-in="fadeInDown" data-animation-out="fadeOutUp"><div class="overlay-box"><div class="content"><div class="overlay-header"><div class="slideInfo"><h2>Madison Centre | <span>Seattle, USA</span></h2></div></div><div class="overlay-content"><div class="grid-12"><div class="grid-8 sliderimages"><div class="flexslider" id="slider21"><ul class="slides"><li><img src="images/current-projects/madison-centre/current-projects1.jpg"><li><img src="images/current-projects/madison-centre/current-projects2.jpg"><li><img src="images/current-projects/madison-centre/current-projects3.jpg"></ul></div><div class="flexslider" id="carousel21"><ul class="slides"><li><img src="images/current-projects/madison-centre/current-projects1.jpg"><li><img src="images/current-projects/madison-centre/current-projects2.jpg"><li><img src="images/current-projects/madison-centre/current-projects3.jpg"></ul></div></div><div class="grid-4 overlaycntr"><div class="overlayInfo"><div class="scrollbars"><p>Madison Centre is a 37-story, 754,000 sqft class A office tower located in Seattle, USA.</p><p>This high-rise brings a new model of commercial design which offers tenants the resources commonly associated with a leading edge corporate campus.</p><p>The building entrance has glass rotunda, a grand volumetric business commons rising three stories that opens into two floors of shared amenities.</p><p>This building is 530 foot (160 m) tall and consist of a concrete core at the center with steel all around.</p><p>Techflow created around 7000 shop drawings & 350 erection drawings for this exclusive project.</p></div></div></div></div><div class="clear"></div></div></div></div></div>'
+
+	  
+
+	  
+
+	  setTimeout(function(){
+
+	  document.getElementById("overlay").innerHTML = slider;
+
+	   }, 500);
+
+});
+
+
+
+
+
+$(function(){
+
+	$('.slidergallery li a').click(function(e){	
+
+		e.preventDefault();
+
+		var slideno = $(this).attr('data-slide');
+
+		var overlayName=$(this).attr('data-ovelayname');
+
+		//overlayPass(slideno,overlayName)
+
+	});
+
+	$(document).on('click', '.closeBtn', function () {
+
+			/*$('.slider-for').slick("unslick");
+
+		  $('.slider-nav').slick("unslick");*/
+
+	});
+
+})	 
+
+new WOW().init();
+$(function(){
+	$(".scrollrow a").click(function() {
+    $(".scrollrow a").removeClass("active");
+    $(this).addClass("active");
+	});
+	
+	$(document).on('click', '.previous-arrow', function () {
+	  	var iddata = $(this).parents(".SliderwithOverlay").attr("id");
+		var suffix = iddata.match(/\d+/);
+		var varid = parseInt(suffix) - 1;
+
+		if(varid < 1){
+			$('.overlay').find('.overlay-box').removeClass('animated').removeClass(animationIn).addClass('animated ' + animationOut);
+			$('body .overlay-bg').fadeOut(1000, function() {
+				$(this).remove();
+				$('.overlay').css('visibility', 'hidden').css('display', 'none').find('.overlay-box').removeClass('animated').removeClass(animationIn).removeClass(animationOut);
+			});
+		}
+		else
+		{
+			$("#"+iddata).css('visibility', 'hidden').css('display', 'none');
+			//$("#"+iddata).find('.content').css("display","none");
+			overlayBox('project'+varid)
+		}
+	});
+	
+	$(document).on('click', '.next-arrow', function () {
+	  	var iddata = $(this).parents(".SliderwithOverlay").attr("id");
+		var suffix = iddata.match(/\d+/);
+		var varid = parseInt(suffix) + 1;
+
+		if(varid > 222){
+			$('.overlay').find('.overlay-box').removeClass('animated').removeClass(animationIn).addClass('animated ' + animationOut);
+			$('body .overlay-bg').fadeOut(1000, function() {
+				$(this).remove();
+				$('.overlay').css('visibility', 'hidden').css('display', 'none').find('.overlay-box').removeClass('animated').removeClass(animationIn).removeClass(animationOut);
+			});
+		}
+		else
+		{
+			$("#"+iddata).css('visibility', 'hidden').css('display', 'none');
+			//$("#"+iddata).find('.content').css("display","none");
+			overlayBox('project'+varid)
+		}
+	});
+	
+})
+
+
+</script> 
+<script src="scripts/js_class.js" type="text/javascript"></script>
+<script src="scripts/common.js" type="text/javascript"></script>
+</body>
+</html>

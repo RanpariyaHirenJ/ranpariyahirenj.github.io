@@ -1,0 +1,32 @@
+ErrorDocument 403 https://www.rajinterior.co.in/404.html
+ErrorDocument 404 https://www.rajinterior.co.in/404.html
+ErrorDocument 500 https://www.rajinterior.co.in/404.html
+
+Options -Indexes
+
+Options +FollowSymLinks
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ ./route.php?url=$1 [L,QSA]
+
+RewriteEngine On
+
+
+
+RewriteCond %{SERVER_PORT} 80 
+RewriteRule ^(.*)$ https://www.rajinterior.co.in/$1 [R,L]
+
+RewriteCond %{HTTP_HOST} ^rajinterior.co.in [NC]
+RewriteRule ^(.*)$ https://www.rajinterior.co.in/$1 [L,R=301]
+
+#RewriteCond %{HTTP_HOST} ^rajinterior\.co.in [NC]
+#RewriteRule (.*) https://www.rajinterior.co.in/$1 [L,R=301]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php73” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php73 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

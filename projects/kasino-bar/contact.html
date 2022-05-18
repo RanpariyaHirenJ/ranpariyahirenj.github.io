@@ -1,0 +1,366 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<title>Contact | kasino Bar</title>
+<link rel="stylesheet" type="text/css" href="styles/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link rel="stylesheet" type="text/css" href="styles/imagelightbox.css">
+<link rel="stylesheet" type="text/css" href="styles/fotorama.css">
+<script src="scripts/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="scripts/fotorama.js" type="text/javascript"></script>
+
+
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?libraries=places&region=uk&language=en&sensor=true"></script>
+<script type="text/javascript">
+ var directionsDisplay;
+    var directionsService = new google.maps.DirectionsService();
+    var marker;
+    $(function() {
+        /*$( "#txtAddressTo" ).keypress(function( event ) {
+         if ( event.which == 13 ) {
+          calcRoute()
+         }
+         });*/
+
+        var map;
+        var asymmetrique = new google.maps.LatLng(19.188207, 72.838202);
+        function initialize() {
+
+            var roadAtlasStyles = [
+  {
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#242f3e"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#746855"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#242f3e"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.locality",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#d59563"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#d59563"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#263c3f"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#6b9a76"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#38414e"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#212a37"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#9ca5b3"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#746855"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#1f2835"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#f3d19c"
+      }
+    ]
+  },
+  {
+    "featureType": "transit",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#2f3948"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.station",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#d59563"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#17263c"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#515c6d"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#17263c"
+      }
+    ]
+  }
+]
+            var mapOptions = {
+                zoom: 18,
+
+                //scrollwheel: false,
+                center: asymmetrique,
+                mapTypeControlOptions: {
+                    mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'usroadatlas']
+                }
+            };
+
+            map = new google.maps.Map(document.getElementById('contact-map'), mapOptions);
+            marker = new google.maps.Marker({
+                position: asymmetrique,
+                map: map,
+                title: '',
+                icon: 'images/m-pin.png'
+            });
+
+            var styledMapOptions = {};
+
+            //Content structure of info Window for the Markers
+            var contentString = $('<div class="marker-info-win" style"text-align:center">' +
+                '<div class="marker-inner-win"><span class="info-content">' +
+                '<h3 class="marker-heading" style="text-align:center; margin-top:0; display:block">Kasino Bar</h3>' +
+                '8th Floor, Synergy Court, <br> Kanchpada, Malad West, Mumbai.' +
+                '</span>' +
+                '</div></div>');
+
+            //Create an infoWindow
+            var infowindow = new google.maps.InfoWindow();
+
+            //set the content of infoWindow
+            infowindow.setContent(contentString[0]);
+
+            //add click event listener to marker which will open infoWindow 
+			         
+            google.maps.event.addListener(marker, 'click', function() {
+			infowindow.open(map, marker); // click on marker opens info window
+			});
+			
+            directionsDisplay = new google.maps.DirectionsRenderer({
+                'map': map
+            });
+            var usRoadMapType = new google.maps.StyledMapType(
+                roadAtlasStyles, styledMapOptions);
+
+            map.mapTypes.set('usroadatlas', usRoadMapType);
+            map.setMapTypeId('usroadatlas');
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+        var lat = 19.188147,
+            lng = 72.838142,
+            latlng = new google.maps.LatLng(lat, lng),
+            mapG = new google.maps.Map(document.getElementById('contact-map')),
+            marker = new google.maps.Marker({
+                position: latlng,
+                map: mapG
+
+            });
+        var input = document.getElementById('');
+        var autocomplete = new google.maps.places.Autocomplete(input, {
+            types: ["geocode"]
+        });
+        autocomplete.bindTo('bounds', mapG);
+        var infowindow = new google.maps.InfoWindow();
+        //*********************** Autocomplete *********************************
+
+
+
+        google.maps.event.addListener(autocomplete, 'place_changed', function() {
+            //infowindow.close();
+            calcRoute()
+
+            input.className = '';
+            var place = autocomplete.getPlace();
+            console.log(place);
+            if (!place.geometry) {
+                // Inform the user that the place was not found and return.
+                input.className = 'notfound';
+                return;
+            }
+
+            // If the place has a geometry, then present it on a map.
+
+        });
+
+
+
+
+    });
+	</script>
+</head>
+<body>
+<div class="wrapper">
+  <div class="banner other-banner">
+    <div class="header">
+      <div class="container">
+        <div class="topBand">
+          <ul>
+            <li class="mobile-navicon">
+              <div class="mobile-nav-icon">
+                <button class="menu-icon mobil-icon-toggle"> <span>toggle menu</span> </button>
+              </div>
+            </li>
+            <li class="no-margin-ryt"></li>
+            <li class="mobile-nav-cntr">
+              <div class="fixed-left-nav">
+                <div class="dis-table">
+                  <div class="dis-tablecell">
+                    <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="logo"></a> </div>
+                    <div class="menubar">
+                      <div class="leftNav-bar">
+                        <ul>
+                          <li> <a href="cuisine.html">Cuisine</a> </li>
+                          <li> <a href="bar.html">Bar</a></li>
+                          <li> <a href="music.html">Music</a></li>
+                          <li> <a href="packages.html">Packages</a> </li>
+                        <li> <a href="events.html">Events</a> </li>
+                          <li> <a href="">Guest Book</a> </li>
+                          <li> <a href="">Virtual Tour</a> </li>
+                          <li> <a href="contact.html" class="active">Contact</a> </li>
+                        </ul>
+                        <div class="clear"></div>
+                        <div class="social-medialeft">
+                      <ul>
+                        <li> <a href="" target="_blank" class="fb-small"><i></i></a> </li>
+                        <li> <a href="" target="_blank" class="instagram-small"><i></i></a> </li>
+                      </ul>
+                      <div class="clear"></div>
+                    </div>
+                      </div>
+                    <div class="footer-logo"> 
+                    	<div class="affiliations-cntr">
+                        	<div class="affiliations-txt">Affiliations</div>
+                            <div class="fotorama" data-width="117" data-ratio="117/28" data-max-width="100%" data-autoplay="3000" data-loop="true" data-swipe="true" data-navposition="bottom" data-direction="ltr" data-fit="contain" data-nav="none" data-click="false" data-stopautoplayontouch="false">
+                              <div class=""><a href="https://www.zomato.com" target="_blank"><img src="images/zomato.png"></a></div>
+                              <div class=""><a href="https://www.dineout.co.in" target="_blank"><img src="images/dine-out.png"></a></div>
+                            </div>
+                            <div class="clear"></div>
+                        </div> 
+                    	<div class="copyright-text">© 2017 Rain Rose Hotels & Restros Pvt. Ltd. <span class="site-buy">Site by <a href="http://www.intermind.in/" target="_blank"> Intermind</a>  </span></div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="map-cntr">
+      <div class="container">
+        <div class="map-cntr" id="contact-map"></div>
+      </div>
+      </li>
+    </div>
+    <div class="our-loaction-details">
+      <div class="container">
+        <div class="our-location-info">
+          <h2 class="wow animated fadeIn animated" data-wow-delay="0.3s" data-wow-offset="20">Kasino Bar</h2>
+          <p class="wow animated fadeIn animated" data-wow-delay="0.6s" data-wow-offset="20">8th Floor, Synergy Court, Kanchpada, Malad West, Mumbai</p>
+          <p><strong>Tell : </strong> +91 90679 79067</p>
+		  <p><strong>Email : </strong> info@kasinobars.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="scripts/common.js" type="text/javascript"></script>
+</body>
+</html>

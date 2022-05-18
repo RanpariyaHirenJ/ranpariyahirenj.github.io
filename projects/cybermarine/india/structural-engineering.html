@@ -1,0 +1,511 @@
+﻿<!doctype html>
+<html lang="en-IN">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<title>Cybermarine</title>
+<link rel="stylesheet" type="text/css" href="styles/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="styles/owl.theme.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link rel="stylesheet" type="text/css" href="styles/imagelightbox.css">
+<script src="scripts/jquery-min.js" type="text/javascript"></script>
+<script src="scripts/jquery.bxslider.min.js"></script>
+<script src="scripts/owl.carousel.min.js"></script>
+<script src="scripts/js_class.js"></script>
+<style>
+.fullTabs-expertise .innertabs-desc .expertise {
+    padding-bottom: 22px;
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<div class="overlay" id="enquiryform" data-animation-in="fadeIn" data-animation-out="fadeOut">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-header">Enquiry Form</div>
+      <form class="checkForm" action="../send-enquiry-php/mail.php" method="post" onSubmit="return form_validate_jquery('.overlay-content')">
+        <div class="overlay-content">
+          <div class="form-layout">
+            <div class="form-row">
+              <div class="form-field mandatory">
+                <input type="text" name="name" placeholder="Full name *" validation="text" title="Full name">
+                <input type="hidden" name="subject" value="Structural Engineering">
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-field mandatory">
+                <input type="email" name="email" placeholder="Email Address *" validation="email" title="Email address">
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-field mandatory">
+                <input type="text" name="phone" placeholder="Contact Number *" validation="number" title="Contact number">
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-field mandatory">
+                <textarea name="message" placeholder="Message *" validation="text" title="Message"></textarea>
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="form-row captcha-field">
+              <div class="form-field mandatory">
+                <div class="captcha_image"></div>
+                <input type="text" placeholder="Enter the text as shown in image*" maxlength="4" name="captcha_code" validation="text" title="Captcha">
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </div>
+        </div>
+        <div class="overlay-footer">
+          <input type="submit" value="Send Enquiry" name="action" class="send-enquiry">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+  <div class="header">
+    <div class="container">
+      <div class="menuband">
+        <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="logo"></a> </div>
+        <div class="flag-selection">
+          <dl class="custom-dropdown">
+            <dt><a><span>
+              <div class="flagbox flag-one"><img src="images/india.png"> <abbr class="india-flag-name">India</abbr></div>
+              </span></a></dt>
+            <dd>
+              <ul class="custom-subdrop">
+                <li><a class="default">
+                  <div class="flagbox flag-one"><img src="images/india.png"> <abbr>India</abbr></div>
+                  </a></li>
+                <li><a href="../united-states/index.html">
+                  <div class="flagbox flag-three"><img src="images/united-states.png"> <abbr>United states</abbr></div>
+                  </a></li>
+                  <li><a href="../singapore/index.html">
+                  <div class="flagbox flag-five"><img src="images/singapore.png"> <abbr>Singapore</abbr></div>
+                  </a></li>
+                  <li><a href="../uae-turkey-europe/index.html">
+                  <div class="flagbox flag-four"><img src="images/uae.png"> <abbr>Middle East</abbr></div>
+                  </a></li>
+                  <!--<li><a href="http://cybermarine.net/">
+                  <div class="flagbox flag-two"><img src="images/global.png"> <abbr>Global</abbr></div>
+                  </a></li>-->
+              </ul>
+            </dd>
+          </dl>
+        </div>
+        <div class="home-search">
+          <div class="home-icon"> <a href="index.html"></a> </div>
+          <div class="connect-us"> <a href="contact.html"></a> </div>
+          <div class="search-box">
+            <input type="text" placeholder="keywords">
+            <input type="button" class="search-btn">
+            <div class="clear"></div>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="navigation">
+          <ul>
+            <li class="subdrop-down"> <a href="javascript:void(0)" class="linktext">About</a>
+               <div class="sub-menudrop">
+                <ul>
+                  <li><a href="about.html">Company</a></li>
+                  <li><a href="appraisals.html">Appraisals</a></li>
+                  <li><a href="iso.html">ISO</a></li>
+                  <li><a href="#">Testimonials</a></li>
+                  <li><a href="download-brochure.html">Download</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="subdrop-down"> <a class="linktext active">Expertise</a>
+              <div class="sub-menudrop">
+                <ul>
+                  <li> <a href="expertise.html">Naval Architecture</a> </li>
+                  <li> <a href="structural-engineering.html">Structural Engineering</a> </li>
+                  <li> <a href="mechanical-piping-engineering.html">Mechanical & Piping Engineering</a> </li>
+                  <li> <a href="electrical-instrumentation-engineering.html">Electrical & Instrumentation Engineering</a> </li>
+                  <li> <a href="safety-engineering.html">Safety Engineering</a> </li>
+                </ul>
+              </div>
+            </li>
+            <li class="subdrop-down"> <a href="#">Verticals</a>
+              <div class="sub-menudrop">
+                <ul>
+                  <li> <a href="marine.html">Marine Design</a> </li>
+                  <li> <a href="marine-construction.html">Marine Construction</a> </li>
+                  <li> <a href="production-engineering.html">Production Engineering</a> </li>
+                </ul>
+              </div>
+            </li>
+            <li class="onlymobilelink"> <a href="contact.html">Contact</a> </li>
+            <!-- <li> <a href="culture.html">Culture</a> </li> -->
+          </ul>
+          <div class="clear"></div>
+        </div>
+        <div class="nav-icon">
+          <button class="menu-icon mobil-icon-toggle"> <span>toggle menu</span> </button>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <div class="seastyle-txt-banner innertabs-cntr expertisetabs">
+    <div class="container nopadding">
+      <div class="searbanner-txt">
+        <h1><span><a href="index.html"> Home</a>/</span>Expertise</h1>
+      </div>
+      <div class="downlinkscntr">
+        <div class="gotosection-box">
+          <ul>
+            <li> <a href="expertise.html">Naval<br>
+              Architecture</a> </li>
+            <li> <a href="structural-engineering.html" class="active"> Structural<br>
+              Engineering</a> </li>
+            <li> <a href="mechanical-piping-engineering.html">Mechanical & <br>
+              Piping Engineering </a> </li>
+            <li> <a href="electrical-instrumentation-engineering.html">Electrical & <br>
+              Instrumentation Engineering</a> </li>
+            <li> <a href="safety-engineering.html"> Safety<br>
+              Engineering </a> </li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="mobilefilter"> <a href="javascript:void(0)">Select Project</a> </div>
+    </div>
+    <div class="expertise-title"><h1>Structural Engineering</h1></div>
+    <div class="fullTabs-cntrs fullTabs-expertise">
+      <div class="container">
+        <div class="innertabs-desc">
+            <div class="select-tag findgoto-url">
+            <ul>
+              <li class="select-item"><a href="#structural-design" class="filter-select slide">Structural Design & Arrangement</a></li>
+              <li class="select-item"><a href="#rule-scantlings" class="filter-select slide">Rule Scantlings</a></li>
+              <li class="select-item"><a href="#finite-element-analysis" class="filter-select slide">Finite Element Analysis</a></li>
+              <li class="select-item"><a href="#buckling-ultimate" class="filter-select slide">Buckling and Ultimate Strength Analysis</a></li>
+            </ul>
+          </div>
+          <div class="expertise-box">
+            <!--<div class="expertise-img">
+              <div class="section-imgs"> <a href="images/overlay-image.jpg" rel="prettyPhoto[struc-engi]"><img src="images/naval-small.jpg"></a> </div>
+              <div class="section-imgs"> <a href="images/overlay-image.jpg" rel="prettyPhoto[struc-engi]"><img src="images/naval-small.jpg"></a> </div>
+            </div>-->
+            <section class="block expertise-photos">
+              <div class="container">
+                <div class="expertise-slider-cnt">
+                  <ul class="expertise-slider owl-carousel" id="owl-demo">
+                    <li class="item"><a href="images/expertise/structural/Picture1.jpg" data-imagelightbox="c">
+                       <img src="images/expertise/structural/Picture1.jpg" style="width: 235px;height:130px;"></a> </li>
+                    
+                    <li class="item"><a href="images/expertise/structural/Picture2.jpg" data-imagelightbox="c">
+                       <img src="images/expertise/structural/Picture2.jpg" style="width: 235px;height:130px;"></a> </li>
+                    
+                    <!--<li class="item"><a href="images/expertise/structural/Picture3.jpg" data-imagelightbox="c">
+                       <img src="images/expertise/structural/Picture3.jpg" style="width: 235px;height:130px;"></a> </li>-->
+                    
+                    <li class="item"><a href="images/expertise/structural/Picture4.jpg" data-imagelightbox="c">
+                       <img src="images/expertise/structural/Picture4.jpg" style="width: 235px;height:130px;"></a> </li>
+                    
+                    <li class="item"><a href="images/expertise/structural/Picture5.jpg" data-imagelightbox="c">
+                       <img src="images/expertise/structural/Picture5.jpg" style="width: 235px;height:130px;"></a> </li>
+                    
+                    <li class="item"><a href="images/expertise/structural/Picture6.jpg" data-imagelightbox="c">
+                       <img src="images/expertise/structural/Picture6.jpg" style="width: 235px;height:130px;"></a> </li>
+                    
+                    <li class="item"><a href="images/expertise/structural/Picture7.jpg" data-imagelightbox="c">
+                       <img src="images/expertise/structural/Picture7.jpg" style="width: 235px;height:130px;"></a> </li>
+                       
+                    <li class="item"><a href="images/expertise/structural/Picture8.jpg" data-imagelightbox="c">
+                       <img src="images/expertise/structural/Picture8.jpg" style="width: 235px;height:130px;"></a> </li>
+                       
+                    <li class="item"><a href="images/expertise/structural/Picture9.jpg" data-imagelightbox="c">
+                       <img src="images/expertise/structural/Picture9.jpg" style="width: 235px;height:130px;"></a> </li>
+                       
+                    <li class="item"><a href="images/expertise/structural/Picture10.jpg" data-imagelightbox="c">
+                       <img src="images/expertise/structural/Picture10.jpg" style="width: 235px;height:130px;"></a> </li>
+                       
+                    <li class="item"><a href="images/expertise/structural/Picture11.jpg" data-imagelightbox="c">
+                       <img src="images/expertise/structural/Picture11.jpg" style="width: 235px;height:130px;"></a> </li>
+                       
+                    <li class="item"><a href="images/expertise/structural/Picture12.jpg" data-imagelightbox="c">
+                       <img src="images/expertise/structural/Picture12.jpg" style="width: 235px;height:130px;"></a> </li>
+                      
+                    <li class="item"><a href="images/expertise/structural/Picture13.jpg" data-imagelightbox="c">
+                       <img src="images/expertise/structural/Picture13.jpg" style="width: 235px;height:130px;"></a> </li>
+                       
+                    <li class="item"><a href="images/expertise/structural/Picture14.jpg" data-imagelightbox="c">
+                       <img src="images/expertise/structural/Picture14.jpg" style="width: 235px;height:130px;"></a> </li>
+                    
+                  </ul>
+                  <div class="clear"></div>
+                  
+                </div>
+              </div>
+            </section>
+            <div class="expertise-text">
+            <ol>
+                <li class="visibility-hidden"></li>
+                <li>
+                    <ol>
+                        <li>
+                        <h2><strong  id="structural-design"></strong>Structural Design & Arrangement</h2>
+                        <p>We carry out structural design and arrangement of various members to achieve the required strength along with optimizing the weight. Various longitudinal and transverse bulkheads are arranged to create the required compartmentation in addition to being primary supports. Primary members – long girders and other web frames are arranged to meet the longitudinal and transverse strength requirements. </p>
+                        </li>
+                        
+                        <li>
+                        <h2><strong  id="rule-scantlings"></strong>Rule Scantlings</h2>
+                        <p>Scantlings based on classification society's rules are developed and analyzed for meeting various strength requirements.</p>
+                        </li>
+                        
+                        <li>
+                        <h2><strong  id="finite-element-analysis"></strong>Finite Element Analysis</h2>
+                        <p>Different type of finite element analysis are performed to check the structural stability and integrity of any structure namely: yield strength check, buckling and ultimate strength check, fatigue analysis, dynamic analysis, joint strength analysis and hydrostatic and soil collapse analysis etc. Every finite element analysis can be split into two main parts i.e.    pre - processing and post - processing.</p>
+                        <h2>Pre - Processing</h2> 
+                            <div class="expertise">
+                              <ol style="list-style-type:upper-alpha;">
+                                  <li>
+                                  <h3>Structural modeling:-</h3>
+                                  <p>In this aspect of pre - processing, extent of the structural modeling required for the analysis is decided. Structural model is generated as a combination of space frames (beam elements) and 2D finite elements. Surface modeling for deck, bottom, shell, bulkhead plating and girders is carried by 2D finite elements and stiffeners, truss structures are modeled as space frames (beam elements).</p>
+                                  <p>For any local analysis structure model can be generated from the global structural model if available and similarly for global analysis model can be generated by combining all local models available.</p>
+                                  </li>
+                                  
+                                  <li>
+                                  <h3>Proper idealization of structural behavior:- </h3>
+                                  <p>Proper idealization of structural behavior is the core expertise of the structural engineer and analysis becomes very accurate with proper idealization. Hence extreme care is taken to idealise the structure and reviewed.</p>
+                                  </li>
+                                  
+                                  <li>
+                                  <h3>Discretisation of the model (Meshing):- </h3>
+                                  <p>Discretisation is an important aspect of any finite element analysis. Quality of discretisation has a major impact on quality of results and the computational time of the analysis. Quadrilateral structured mesh is always preferred for any type of finite element analysis but in case of very complex geometry tetrahedral mesh can be used when aspect ratio and Jacobian are within acceptable limits. Mesh size also influence the computational time and quality. For global yield and buckling analysis mesh size equal to stiffener spacing is widely used and for local analysis mesh size of around 0.1m is used in offshore industry. For fatigue analysis "t x t meshing"  (i.e. size of the meshing for critical regions should be of thickness of adjacent plate) is used.</p>
+                                  </li>
+                                  
+                                  <li>
+                                  <h3>Boundary conditions:-</h3>
+                                  <p>Boundary conditions are used to prescribe values of basic solution variables; for example, displacements and rotations in stress/displacement analysis. Selecting the proper boundary condition has an important role in structural analysis. Effective modeling of support conditions requires a careful consideration of continuity of each translational and rotational component of displacement. For a static analysis, it is common to use a simpler assumption of supports (i.e. fixed, pinned, roller) without considering the soil/ foundation system stiffness. However for dynamic analysis, representing the soil/foundation stiffness is essential.</p>
+                                  </li>
+                                  
+                                  <li>
+                                  <h3>Loading:- </h3>
+                                  <p>Loads can be classified in  mainly two categories i.e. dead load and live loads.</p>
+                                  <p>Dead loads are the loads of constant magnitude and remain in one position, it may include the self weight of the structure, tank loading and other loads such as piping and machinery loads that are permanently attached to the structure.</p>
+                                  <p>Live loads are the variable loads that may change in position and magnitude. Live loads include those caused by construction operations, wind, waves, current, earthquakes, snow, blasts, walkway loading, temperature changes and transit inertial loads (cause additional accelerations on the structure due to motion of the vessel during transit condition).</p>
+                                  </li>
+                                </ol>
+                              </div>
+                                  
+                                  <h2>Post - processing </h2>
+                                  <p>After completing the pre - processing and performing the analysis, post - processing is carried out</p>
+                                <div class="expertise">
+                              <ol style="list-style-type:upper-alpha;">  
+                                  <li>
+                                  <h3>Graphical representation of induced stresses:- </h3>
+                                  <p>After completing the analysis different components of the induced stresses are graphically represented. For yield strength check bending, shear and von mises stress components in all three directions are presented for the analysis. For buckling strength analysis bending, shear, twisting and von mises stresses decomposed in membrane in all the directions are graphically represented and for fatigue analysis principal stresses are graphically represented.</p>
+                                  </li>
+                                  
+                                  <li>
+                                  <h3>Graphical representation of induced displacements:-</h3>
+                                  <p>Graphical representation of displacement of the structure is required for understanding the behavior of the structure.</p>
+                                  </li>
+                                  
+                                  <li>
+                                  <h3>Unity check calculations for space frames:- </h3>
+                                  <p>Unity check calculations are required for the space frames or beam elements. Code check calculations are required mainly for boom rest, flare boom, helideck etc and similar type of structures. Code check are performed using various unity check codes like, AISC ASD, AISC LRFD, API LRFD, API WSD, ISO standards, Danish standards and NORSOK standards etc. depending on the class of the vessel. </p>
+                                  </li>
+                                  
+                                  <li>
+                                  <h3>Unity check calculations for joint check analysis:- </h3>
+                                  <p>Along with the unity check for beams, unity check for tubular joints is also required. Unity check for tubular joints are done using various codes. Joint checks are performed for mainly truss type of structures like boom rest, flair boom and leg of jack up etc.</p>
+                                  </li>
+                                  
+                                  <li>
+                                  <h3>Calculation of reactions induced by applied loads:- </h3>
+                                  <p>Reactions induced by the applied external loads are to be calculated and presented for further analysis such as eye pad analysis, reactions from topside structure for analysis of stool structure etc. </p>
+                                  </li>
+                              </ol>
+                           </div>
+                        </li>
+                        
+                        <li>
+                        <h2><strong  id="buckling-ultimate"></strong>Buckling and Ultimate Strength Analysis</h2>
+                        Buckling and ultimate strength is another very important aspect of structural design as all the shell plates, girders etc are subjected to highly compressive stress. Their buckling and ultimate strength assessment becomes the most important factor for design. <br>
+                        Buckling and ultimate strength evaluation is performed for following structural steel components or assemblages:
+                            <div class="expertise">
+                              <ol style="list-style-type:upper-alpha;">
+                                  <li>Individual structural members (i.e. discrete beams and columns).</li>
+                                  <li>Plates, stiffened panels and corrugated panels.</li>
+                                  <li>Stiffened cylindrical shells and Tubular joints.</li>
+                              </ol>
+                           </div>
+                           <p>As buckling and ultimate strength of structural components are highly dependent on the amplitude and shape of the imperfections, these are implicitly considered in the strength assessment analysis.</p>
+                           <p>Buckling and ultimate strength analysis is performed for all the loading conditions considered in yield strength analysis. For buckling and ultimate strength check, membrane stresses are extracted from the finite element analysis results and the compressive stresses are screened. The critical panels of plating (deck, floors, stiffeners etc) are found by progressive screening for maximum membrane compressive stresses. The beam compressive stresses are also extracted from the finite element analysis results and the critical members are found out similarly as for plated panels.</p>
+                        </li>  
+                    </ol>
+                </li>
+             </ol>
+           </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+           <div class="send-enquiery-btn"><a class="box-btn" href="javascript:void(0);" onClick="overlayBox('enquiryform')">Send Enquiry</a> </div>
+  <footer class="footer">
+    <div class="wave-animation"> </div>
+    <div class="container">
+      <div class="footerlinks">
+        <ol>
+          <li class="footer2">
+            <dl>
+              <dt class="openmbltab"> Expertise </dt>
+              <dd>
+                <ul>
+                  <li> <a href="expertise.html">Naval Architecture</a> </li>
+                  <li> <a href="structural-engineering.html">Structural Engineering</a> </li>
+                  <li> <a href="mechanical-piping-engineering.html">Mechanical & Piping Engineering</a> </li>
+                  <li> <a href="electrical-instrumentation-engineering.html">Electrical & Instrumentation Engineering</a> </li>
+                  <li> <a href="safety-engineering.html">Safety Engineering</a> </li>
+                </ul>
+              </dd>
+            </dl>
+          </li>
+          <li class="footer1">
+            <dl class="noaccordionmbl">
+              <dt class="openmbltab"> Verticals </dt>
+              <dd>
+                <ul>
+                  <li> <a href="marine.html">Marine Design</a> </li>
+                  <li> <a href="marine-construction.html">Marine Construction</a> </li>
+                  <li> <a href="production-engineering.html">Production Engineering</a> </li>
+                </ul>
+              </dd>
+            </dl>
+          </li>
+          <li class="footer3">
+            <dl>
+              <dt class="openmbltab contact"> <a href="contact.html">Contact Us</a> </dt>
+              <dd>
+                <ul>
+                  <li>Cybermarine Knowledge Systems Pvt Ltd.</li>
+                <li>501, Technocity IT Premises Co-op. Soc. Ltd, </li>
+                <li>Plot No. X-5/3, Mahape,</li>
+                <li>Maharashtra- 400710, India</li>
+                <li>Tel: +91-22-61462400 | Fax: +91-22-61462411</li>
+                <li> Email: <a href="mailto:info@cybermarine.net">info@cybermarine.net</a></li>
+                </ul>
+              </dd>
+            </dl>
+          </li>
+          <li class="footer4">
+            <dl>
+              <dd class="social-footr">
+                <div class="social-footer"><a target="_blank" href="https://www.facebook.com/Cybermarine-Knowledge-Systems-Pvt-Ltd-132113473554845/"><img src="images/fb.png"></a> <!--<a target="_blank" href="#"><img src="images/twitter.png"></a> --><a target="_blank" href="https://www.linkedin.com/company/cybermarine-knowledge-systems-pvt--ltd-"><img src="images/linkedin-icon.png"></a></div>
+              </dd>
+            </dl>
+          </li>
+        </ol>
+        <div class="clear"></div>
+      </div>
+       <p class="footer-copy">© <script>document.write(new Date().getFullYear());</script> Cybermarine. All Rights Reserved. <span class="develped-by">Site By <a href="https://www.interminddigital.com/" target="_blank">Intermind</a></span></p>
+    </div>
+  </footer>
+</div>
+<script type="text/javascript">
+
+$(document).ready(function() {
+var owl = $("#owl-demo");
+owl.owlCarousel({
+itemsCustom : [
+[0, 1],
+[400, 2],
+[450, 2],
+[568, 3],
+[767, 3],
+[768, 4],
+[1000, 6]
+],
+navigation:true,
+});
+
+});
+
+</script> 
+<script src="scripts/imagelightbox.js"></script>
+<script>
+
+    $(function () {
+			var activityIndicatorOn = function () {
+                $('<div id="imagelightbox-loading"><div></div></div>').appendTo('body');
+            },
+            activityIndicatorOff = function () {
+                $('#imagelightbox-loading').remove();
+            },
+
+            overlayOn = function () {
+                $('<div id="imagelightbox-overlay"></div>').appendTo('body');
+            },
+            overlayOff = function () {
+                $('#imagelightbox-overlay').remove();
+            },
+
+            closeButtonOn = function (instance) {
+                $('<a href="#" id="imagelightbox-close"></a>').appendTo('body').on('click', function () {
+                    $(this).remove();
+                    instance.quitImageLightbox();
+                    return false;
+                });
+            },
+            closeButtonOff = function () {
+                $('#imagelightbox-close').remove();
+            },
+            captionOff = function () {
+                $('#imagelightbox-caption').remove();
+            },
+						arrowsOn = function( instance, selector ) {
+                var $arrows = $( '<button type="button" class="imagelightbox-arrow imagelightbox-arrow-left"></button>' +
+                                 '<button type="button" class="imagelightbox-arrow imagelightbox-arrow-right"></button>' );
+                $arrows.appendTo( 'body' );
+                $arrows.on( 'click touchend', function( e ) {
+                    e.preventDefault();
+                    var $this = $( this );
+
+                    if( $this.hasClass('imagelightbox-arrow-left')) {
+                        instance.loadPreviousImage();
+                    } else {
+                        instance.loadNextImage();
+                    }
+
+                    return false;
+                });
+            },
+						arrowsOff = function() {
+                $('.imagelightbox-arrow').remove();
+            };
+			//	WITH "CLOSE" BUTTON & ACTIVITY INDICATION
+
+        var selectorG = 'a[data-imagelightbox="c"]';
+        var instanceG = $( selectorG ).imageLightbox(
+            {
+                onStart:		function(){ arrowsOn( instanceG, selectorG );closeButtonOn(instanceG);overlayOn(); },
+                onEnd:			function(){ arrowsOff(); activityIndicatorOff(); closeButtonOff();overlayOff();},
+                onLoadStart: 	function(){ activityIndicatorOn(); },
+                onLoadEnd:	 	function(){ $( '.imagelightbox-arrow' ).css( 'display', 'block' ); activityIndicatorOff(); }
+            });
+       
+
+    });
+</script> 
+<script src="scripts/common.js" type="text/javascript"></script>
+</body>
+</html>

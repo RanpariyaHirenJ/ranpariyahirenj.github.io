@@ -1,0 +1,449 @@
+﻿<!doctype html>
+<html lang="en-IN">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<title>Cybermarine</title>
+<link rel="stylesheet" type="text/css" href="styles/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="styles/owl.theme.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link rel="stylesheet" type="text/css" href="styles/imagelightbox.css">
+<script src="scripts/jquery-min.js" type="text/javascript"></script>
+<script src="scripts/owl.carousel.min.js"></script>
+<script src="scripts/jquery.bxslider.min.js"></script>
+<script src="scripts/js_class.js"></script>
+</head>
+<body>
+<div class="wrapper">
+<div class="overlay" id="enquiryform" data-animation-in="fadeIn" data-animation-out="fadeOut">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-header">Enquiry Form</div>
+      <form class="checkForm" action="../send-enquiry-php/mail.php" method="post" onSubmit="return form_validate_jquery('.overlay-content')">
+        <div class="overlay-content">
+          <div class="form-layout">
+            <div class="form-row">
+              <div class="form-field mandatory">
+                <input type="text" name="name" placeholder="Full name *" validation="text" title="Full name">
+                <input type="hidden" name="subject" value="Naval Architecture">
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-field mandatory">
+                <input type="email" name="email" placeholder="Email Address *" validation="email" title="Email address">
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-field mandatory">
+                <input type="text" name="phone" placeholder="Contact Number *" validation="number" title="Contact number">
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-field mandatory">
+                <textarea name="message" placeholder="Message *" validation="text" title="Message"></textarea>
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="form-row captcha-field">
+              <div class="form-field mandatory">
+                <div class="captcha_image"></div>
+                <input type="text" placeholder="Enter the text as shown in image*" maxlength="4" name="captcha_code" validation="text" title="Captcha">
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </div>
+        </div>
+        <div class="overlay-footer">
+          <input type="submit" value="Send Enquiry" name="action" class="send-enquiry">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+  <div class="header">
+    <div class="container">
+      <div class="menuband">
+        <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="logo"></a> </div>
+        <div class="flag-selection">
+          <dl class="custom-dropdown">
+            <dt><a><span>
+              <div class="flagbox flag-one"><img src="images/india.png"> <abbr class="india-flag-name">India</abbr></div>
+              </span></a></dt>
+            <dd>
+              <ul class="custom-subdrop">
+                <li><a class="default">
+                  <div class="flagbox flag-one"><img src="images/india.png"> <abbr>India</abbr></div>
+                  </a></li>
+                <li><a href="../united-states/index.html">
+                  <div class="flagbox flag-three"><img src="images/united-states.png"> <abbr>United states</abbr></div>
+                  </a></li>
+                  <li><a href="../singapore/index.html">
+                  <div class="flagbox flag-five"><img src="images/singapore.png"> <abbr>Singapore</abbr></div>
+                  </a></li>
+                  <li><a href="../uae-turkey-europe/index.html">
+                  <div class="flagbox flag-four"><img src="images/uae.png"> <abbr>Middle East</abbr></div>
+                  </a></li>
+                  <!--<li><a href="http://cybermarine.net/">
+                  <div class="flagbox flag-two"><img src="images/global.png"> <abbr>Global</abbr></div>
+                  </a></li>-->
+              </ul>
+            </dd>
+          </dl>
+        </div>
+        <div class="home-search">
+          <div class="home-icon"> <a href="index.html"></a> </div>
+          <div class="connect-us"> <a href="contact.html"></a> </div>
+          <div class="search-box">
+            <input type="text" placeholder="keywords">
+            <input type="button" class="search-btn">
+            <div class="clear"></div>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="navigation">
+          <ul>
+            <li class="subdrop-down"> <a href="javascript:void(0)" class="linktext">About</a>
+               <div class="sub-menudrop">
+                <ul>
+                  <li><a href="about.html">Company</a></li>
+                  <li><a href="appraisals.html">Appraisals</a></li>
+                  <li><a href="iso.html">ISO</a></li>
+                  <li><a href="#">Testimonials</a></li>
+                  <li><a href="download-brochure.html">Download</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="subdrop-down"> <a class="linktext active">Expertise</a>
+              <div class="sub-menudrop">
+                <ul>
+                  <li> <a href="expertise.html">Naval Architecture</a> </li>
+                  <li> <a href="structural-engineering.html">Structural Engineering</a> </li>
+                  <li> <a href="mechanical-piping-engineering.html">Mechanical & Piping Engineering</a> </li>
+                  <li> <a href="electrical-instrumentation-engineering.html">Electrical & Instrumentation Engineering</a> </li>
+                  <li> <a href="safety-engineering.html">Safety Engineering</a> </li>
+                </ul>
+              </div>
+            </li>
+            <li class="subdrop-down"> <a href="#">Verticals</a>
+              <div class="sub-menudrop">
+                <ul>
+                  <li> <a href="marine.html">Marine Design</a> </li>
+                  <li> <a href="marine-construction.html">Marine Construction</a> </li>
+                  <li> <a href="production-engineering.html">Production Engineering</a> </li>
+                </ul>
+              </div>
+            </li>
+            <li class="onlymobilelink"> <a href="contact.html">Contact</a> </li>
+            <!-- <li> <a href="culture.html">Culture</a> </li> -->
+          </ul>
+          <div class="clear"></div>
+        </div>
+        <div class="nav-icon">
+          <button class="menu-icon mobil-icon-toggle"> <span>toggle menu</span> </button>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <div class="seastyle-txt-banner innertabs-cntr expertisetabs">
+    <div class="container nopadding">
+      <div class="searbanner-txt">
+        <h1><span><a href="index.html"> Home</a>/</span>Expertise</h1>
+      </div>
+      <div class="downlinkscntr">
+        <div class="gotosection-box">
+          <ul>
+            <li> <a href="expertise.html" class="active">Naval<br>Architecture</a> </li>
+            <li> <a href="structural-engineering.html"> Structural<br>Engineering</a> </li>
+            <li> <a href="mechanical-piping-engineering.html">Mechanical & <br>Piping Engineering </a> </li>
+            <li> <a href="electrical-instrumentation-engineering.html">Electrical & <br>Instrumentation Engineering</a> </li>
+            <li> <a href="safety-engineering.html"> Safety<br>Engineering </a> </li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="mobilefilter"> <a href="javascript:void(0)">Select Project</a> </div>
+    </div>
+    <div class="expertise-title"><h1>Naval Architecture</h1></div>
+    <div class="fullTabs-cntrs fullTabs-expertise">
+      <div class="container">
+        <div class="innertabs-desc">
+        <div class="select-tag findgoto-url">
+        <ul>
+          <li class="select-item"><a href="#concept-design" class="filter-select slide">Concept Design</a></li>
+          <li class="select-item"><a href="#principal-particulars" class="filter-select slide">Principal Particulars & Hull Form</a></li>
+          <li class="select-item"><a href="#weight-cog" class="filter-select slide">Weight & COG </a></li>
+          <li class="select-item"><a href="#intact-stability" class="filter-select slide">Intact Stability and Damage Stability</a></li>
+          <li class="select-item"><a href="#motion-control" class="filter-select slide">Motion Control</a></li>
+          <li class="select-item"><a href="#mooring-analysis" class="filter-select slide">Mooring Analysis</a></li>
+        </ul>
+      </div>
+          <div class="expertise-box">
+            <!--<div class="expertise-img">
+              <div class="section-imgs"> <a href="images/overlay-image.jpg" rel="prettyPhoto[naval-archi]"><img src="images/naval-small.jpg"></a> </div>
+              <div class="section-imgs"> <a href="images/overlay-image.jpg" rel="prettyPhoto[naval-archi]"><img src="images/naval-small.jpg"></a> </div>
+            </div>-->
+            
+            <section class="block expertise-photos">
+              <div class="container">
+                <div class="expertise-slider-cnt">
+                  <ul class="expertise-slider owl-carousel" id="owl-demo">
+                    <li class="item"><a href="images/expertise/naval-architecture/Picture1.jpg" data-imagelightbox="c">
+                       <img src="images/expertise/naval-architecture/Picture1.jpg"></a> </li>
+                    
+                    <li class="item"><a href="images/expertise/naval-architecture/Picture2.jpg" data-imagelightbox="c">
+                       <img src="images/expertise/naval-architecture/Picture2.jpg"></a> </li>
+                    
+                    <li class="item"><a href="images/expertise/naval-architecture/Picture3.jpg" data-imagelightbox="c">
+                       <img src="images/expertise/naval-architecture/Picture3.jpg"></a> </li>
+                    
+                    <li class="item"><a href="images/expertise/naval-architecture/Picture4.jpg" data-imagelightbox="c">
+                       <img src="images/expertise/naval-architecture/Picture4.jpg"></a> </li>
+                    
+                    <li class="item"><a href="images/expertise/naval-architecture/Picture5.jpg" data-imagelightbox="c">
+                       <img src="images/expertise/naval-architecture/Picture5.jpg"></a> </li>
+                    
+                    <li class="item"><a href="images/expertise/naval-architecture/Picture7.jpg" data-imagelightbox="c">
+                       <img src="images/expertise/naval-architecture/Picture7.jpg"></a> </li>
+                       
+                    <li class="item"><a href="images/expertise/naval-architecture/Picture9.jpg" data-imagelightbox="c">
+                       <img src="images/expertise/naval-architecture/Picture9.jpg"></a> </li>
+                    
+                    <li class="item"><a href="images/expertise/naval-architecture/Picture10.jpg" data-imagelightbox="c">
+                       <img src="images/expertise/naval-architecture/Picture10.jpg"></a> </li>
+                    
+                  </ul>
+                  <div class="clear"></div>
+                  
+                </div>
+              </div>
+            </section>
+            <div class="expertise-text">
+            <ol>
+                <li>
+                    <ol>
+                        <li>
+                        <h2><strong  id="concept-design"></strong>Concept Design</h2>
+                        <p>Concept Design is developed based on the Client's requirements of Type of Cargo, Cargo Deadweight & Ship's Speed. The vessel's Main Particulars are developed. Hullform Cb is determined. Resistance & Powering is worked out and Main Engines are sized. A General Arrangement is developed.</p>
+                        
+                        <h3>General Arrangement</h3>
+                        <p>The Vessel's General Arrangement is developed by allocating the spaces suitably and optimizing the cargo spaces and accommodation spaces. The arrangement takes care of all the Safety requirements as detailed in SOLAS i.e. Space for Safety Equipments and Escape accesses.</p>
+                        
+                        <h3>Tank Arrangement & Machinery Space Arrangement</h3>
+                        <p>Cargo tanks and consumable tanks are sized and arranged to meet the functional requirements and stability requirements.  Machinery spaces are sized to accommodate the various machinery as well as to control the COG. The compartmentation is carried out to comply the damage stability and load line requirements. </p>
+                        </li>
+                        
+                        <li>
+                        <h2><strong id="principal-particulars"></strong>Principal Particulars & Hull Form</h2>
+                        <p>Based on a study of data on similar vessels we determine the principal particulars and develop a suitable hull form. The hull form is refined based on CFD studies.  Hull form is designed to comply the required displacement and center of buoyancy. Hull form design will also comply intact stability and damage stability requirements as well as Load line requirements.</p>
+                        </li>
+                        
+                        <li>
+                        <h2><strong  id="weight-cog"></strong>Weight & COG </h2>
+                        <p>At the FEED/Concept Design stage weight and COG is estimated and allowances are made for the uncertainties in the weight and COG. As the project progresses, weight & COG monitoring is undertaken.</p>
+                        </li>
+                        
+                        <li>
+                        <h2><strong  id="intact-stability"></strong>Intact Stability and Damage Stability</h2>
+                        <p>Stability compliances are achieved by proper compartmentation and by refining the main particulars. Further tank/space arrangements and weight distribution is carried out to achieve the stability requirements.</p>
+                        </li>
+                        
+                        <li>
+                        <h2><strong  id="motion-control"></strong>Motion Control</h2>
+                        Based on sea-keeping characteristics evaluated in hydrodynamic analysis, design of the vessel is reviewed from motion control aspect. Following options are studied to improve the design of vessel using Hydrodynamic analysis
+                            <div class="expertise">
+                              <ol style="list-style-type:initial;">
+                                  <li>Operating draft variation </li>
+                                  <li>Breadth optimization for various operations such as crane, etc.</li>
+                                  <li>Active heel control (during crane operation) </li>
+                                  <li>Roll stabilizers (U tube, free surface tanks and flooding tanks, etc.) </li>
+                                  <li>Weight distribution to optimize the radius of gyration of vessel </li>
+                              </ol>
+                           </div>
+                        </li>
+                        
+                        <li>
+                        <h2><strong  id="mooring-analysis"></strong>Mooring Analysis</h2>
+                        <p>Static and quasi-static analysis are carried out for any type of mooring system. Dynamic analysis is carried out in the frequency domain for both wave frequency (WF) and low-frequency (LF) motion and tension responses.</p>
+                        <p>Hydrodynamic analysis based on its operating draft, weight distribution, radius of gyration (Roll, Pith and Heave) and wave heading is performed to generate Hydrodynamic and Hydrostatic parameters (Vessel mass, Added mass, Hydrostatic stiffness, Transfer functions for first order wave induced motion and wave drift coefficients) required for mooring analysis.</p>
+                        <h3>Appropriate Mooring Pattern </h3>
+                        <p>Based on mooring analysis appropriate mooring pattern is developed /recommended. </p>
+                        <h3>Mooring Line Specifications </h3>
+                        <p>Based on mooring line tensions (pretensions) comprising of static component (arising from wind, wave and current), wave frequency component (arising from first order wave loads) and low frequency component (arising due to second order wave loads and wind dynamic) which are calculated from mooring forces (including steady force, slow drift mooring force and wave frequency motion) along with environmental forces, mooring line size (based on required minimum breaking load) & length, Anchor size & location and loads on turret are calculated.</p>
+                        <h3>Vessel Excursion </h3>
+                        <p> Vessel excursion under the action of all external forces is calculated.</p>
+                        <h3>Mooring Winch Capacities </h3>
+                        <p> Mooring winch capacities are determined and a layout is developed based on mooring line tensions and excursion of the vessel.</p>
+                        </li>
+                    </ol>
+                </li>
+               
+            </ol>
+             
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+            <div class="send-enquiery-btn"><a class="box-btn" href="javascript:void(0);" onClick="overlayBox('enquiryform')">Send Enquiry</a> </div>
+  <footer class="footer">
+    <div class="wave-animation"> </div>
+    <div class="container">
+      <div class="footerlinks">
+        <ol>
+          <li class="footer2">
+            <dl>
+              <dt class="openmbltab"> Expertise </dt>
+              <dd>
+                <ul>
+                  <li> <a href="expertise.html">Naval Architecture</a> </li>
+                  <li> <a href="structural-engineering.html">Structural Engineering</a> </li>
+                  <li> <a href="mechanical-piping-engineering.html">Mechanical & Piping Engineering</a> </li>
+                  <li> <a href="electrical-instrumentation-engineering.html">Electrical & Instrumentation Engineering</a> </li>
+                  <li> <a href="safety-engineering.html">Safety Engineering</a> </li>
+                </ul>
+              </dd>
+            </dl>
+          </li>
+          <li class="footer1">
+            <dl class="noaccordionmbl">
+              <dt class="openmbltab"> Verticals </dt>
+              <dd>
+                <ul>
+                  <li> <a href="marine.html">Marine Design</a> </li>
+                  <li> <a href="marine-construction.html">Marine Construction</a> </li>
+                  <li> <a href="production-engineering.html">Production Engineering</a> </li>
+                </ul>
+              </dd>
+            </dl>
+          </li>
+          <li class="footer3">
+            <dl>
+              <dt class="openmbltab contact"> <a href="contact.html">Contact Us</a> </dt>
+              <dd>
+                <ul>
+                  <li>Cybermarine Knowledge Systems Pvt Ltd.</li>
+                <li>501, Technocity IT Premises Co-op. Soc. Ltd, </li>
+                <li>Plot No. X-5/3, Mahape,</li>
+                <li>Maharashtra- 400710, India</li>
+                <li>Tel: +91-22-61462400 | Fax: +91-22-61462411</li>
+                <li> Email: <a href="mailto:info@cybermarine.net">info@cybermarine.net</a></li>
+                </ul>
+              </dd>
+            </dl>
+          </li>
+          <li class="footer4">
+            <dl>
+              <dd class="social-footr">
+                <div class="social-footer"><a target="_blank" href="https://www.facebook.com/Cybermarine-Knowledge-Systems-Pvt-Ltd-132113473554845/"><img src="images/fb.png"></a> <!--<a target="_blank" href="#"><img src="images/twitter.png"></a> --><a target="_blank" href="https://www.linkedin.com/company/cybermarine-knowledge-systems-pvt--ltd-"><img src="images/linkedin-icon.png"></a></div>
+              </dd>
+            </dl>
+          </li>
+        </ol>
+        <div class="clear"></div>
+      </div>
+       <p class="footer-copy">© <script>document.write(new Date().getFullYear());</script> Cybermarine. All Rights Reserved. <span class="develped-by">Site By <a href="https://www.interminddigital.com/" target="_blank">Intermind</a></span></p>
+    </div>
+  </footer>
+</div>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+var owl = $("#owl-demo");
+owl.owlCarousel({
+itemsCustom : [
+[0, 1],
+[400, 2],
+[450, 2],
+[568, 3],
+[767, 3],
+[768, 4],
+[1000, 6]
+],
+navigation:true,
+});
+
+});
+
+</script> 
+<script src="scripts/imagelightbox.js"></script>
+<script>
+
+    $(function () {
+			var activityIndicatorOn = function () {
+                $('<div id="imagelightbox-loading"><div></div></div>').appendTo('body');
+            },
+            activityIndicatorOff = function () {
+                $('#imagelightbox-loading').remove();
+            },
+
+            overlayOn = function () {
+                $('<div id="imagelightbox-overlay"></div>').appendTo('body');
+            },
+            overlayOff = function () {
+                $('#imagelightbox-overlay').remove();
+            },
+
+            closeButtonOn = function (instance) {
+                $('<a href="#" id="imagelightbox-close"></a>').appendTo('body').on('click', function () {
+                    $(this).remove();
+                    instance.quitImageLightbox();
+                    return false;
+                });
+            },
+            closeButtonOff = function () {
+                $('#imagelightbox-close').remove();
+            },
+            captionOff = function () {
+                $('#imagelightbox-caption').remove();
+            },
+						arrowsOn = function( instance, selector ) {
+                var $arrows = $( '<button type="button" class="imagelightbox-arrow imagelightbox-arrow-left"></button>' +
+                                 '<button type="button" class="imagelightbox-arrow imagelightbox-arrow-right"></button>' );
+                $arrows.appendTo( 'body' );
+                $arrows.on( 'click touchend', function( e ) {
+                    e.preventDefault();
+                    var $this = $( this );
+
+                    if( $this.hasClass('imagelightbox-arrow-left')) {
+                        instance.loadPreviousImage();
+                    } else {
+                        instance.loadNextImage();
+                    }
+
+                    return false;
+                });
+            },
+						arrowsOff = function() {
+                $('.imagelightbox-arrow').remove();
+            };
+			//	WITH "CLOSE" BUTTON & ACTIVITY INDICATION
+
+        var selectorG = 'a[data-imagelightbox="c"]';
+        var instanceG = $( selectorG ).imageLightbox(
+            {
+                onStart:		function(){ arrowsOn( instanceG, selectorG );closeButtonOn(instanceG);overlayOn(); },
+                onEnd:			function(){ arrowsOff(); activityIndicatorOff(); closeButtonOff();overlayOff();},
+                onLoadStart: 	function(){ activityIndicatorOn(); },
+                onLoadEnd:	 	function(){ $( '.imagelightbox-arrow' ).css( 'display', 'block' ); activityIndicatorOff(); }
+            });
+       
+
+    });
+</script> 
+<script src="scripts/common.js" type="text/javascript"></script>
+</body>
+</html>

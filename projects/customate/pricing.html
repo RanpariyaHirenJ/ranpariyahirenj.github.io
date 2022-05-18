@@ -1,0 +1,424 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<title>Welcome to Customate</title>
+<link rel="stylesheet" type="text/css" href="styles/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link rel="stylesheet" type="text/css" href="styles/slick-theme.css">
+<link rel="stylesheet" type="text/css" href="styles/slick.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" type="text/javascript"></script>
+<script src="scripts/jquery-min.js" type="text/javascript"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<link rel="stylesheet" href="styles/jquery-ui.css">
+<script src="scripts/jquery-ui.js"></script>
+<script>
+$(window).load(function () {
+  var liMaxHeight = -1;
+    var node;
+    $(".pricing-package-cntr .container>ul>li").each(function(index) {
+        if ($(this).outerHeight() > liMaxHeight) {
+            liMaxHeight = $(this).outerHeight();
+            node = index;
+        }
+    });
+	
+    $('.pricing-package-cntr .container>ul>li').css('min-height', liMaxHeight + 1);
+	
+	
+	
+    $(".why-us-cntr .bullet").each(function(index) {
+        if ($(this).outerHeight() > liMaxHeight) {
+            liMaxHeight = $(this).outerHeight();
+            node = index;
+        }
+    });
+
+    $('.why-us-cntr .bullet').css('min-height', liMaxHeight + 1);
+})
+</script>
+<style>
+.g-recaptcha>div {margin:0 auto;}
+.product-titel-cntr{background-color: #78d7e1;}
+.product-titel-cntr h1{color:#fff}
+</style>
+</head>
+<body>
+<div class="check-device">
+    <div>
+        <i class="icon-devices"></i>
+        <p>Check your device orientation</p>
+    </div>
+</div>
+
+<!--Ask for Demo-->
+<div class="overlay" id="ask-demo" data-animation-in="fadeInDown" data-animation-out="fadeOut">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-body">
+        <div class="overlay-header"> Ask for Demo <span class="fillnotificatin">Please fill the details below:</span></div>
+        <div class="overlay-content animated-form">
+          <form name="enquiry_form" id="enquiry_form" method="post" action="inc/contact.php" onSubmit="return form_validate_jquery('#enquiry_form')">
+          <div class="grid-layout">
+            <div class="form-row animate-label">
+              <div class="form-field">
+                <div class="grid-6">
+                  <div class="input-group">
+                    <input type="text" class="inputType" name="member_name" validation="text" title="Name" placeholder="Name">
+                  </div>
+                </div>
+                <div class="grid-6">
+                  <div class="input-group">
+                    <input type="text" class="inputType" name="member_email" validation="email" title="Email Id" placeholder="Email Id">
+                  </div>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div>
+            <div class="form-row animate-label">
+              <div class="form-field">
+                <div class="grid-6">
+                  <div class="input-group">
+                    <input type="text" class="inputType" name="member_company" validation="text" title="Company" placeholder="Company">
+                  </div>
+                </div>
+                <div class="grid-6">
+                  <div class="input-group">
+                    <select name="member_company_type" validation="text" title="Company Type" placeholder="Company Type">
+                        <option value=''>Select Company Type</option>
+                        <option>Agriculture and Forestry</option>
+                        <option>Information Technology</option>
+                        <option>Construction and Real Estate</option>
+                        <option>Utilities</option>
+                        <option>Education</option>
+                        <option>Finance & Insurance</option>
+                        <option>Food & Hospitality</option>
+                        <option>Sports / Gaming</option>
+                        <option>Health</option>
+                        <option>Manufacturing / Industry</option>
+                        <option>Transportation</option>
+                        <option>Automotive</option>
+                        <option>Safety / Security & Legal</option>
+                        <option>Natural Resources and Mining</option>
+                        <option>Environmental and Conservation</option>
+                        <option>Oil and Gas</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div>
+            <div class="form-row animate-label">
+              <div class="form-field">
+                <div class="grid-12">
+                  <div class="input-group">
+                  <input type="text" class="inputType" name="member_subject" validation="text" title="Subject" placeholder="Subject">
+                  </div>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div>
+            <div class="form-row animate-label">
+              <div class="form-field">
+                <div class="grid-12">
+                  <div class="input-group">
+                    <textarea class="inputType" name="message" validation="text" title="Message" placeholder="Message"></textarea>
+                  </div>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div>
+            <div class="form-row animate-label">
+              <div class="form-field">
+                <div class="grid-12">
+                  <div class="g-recaptcha" data-sitekey="6Ld3ZF0UAAAAAC9L5qEe8tlL4Xfh2wHP66A_vBRW"></div>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="grid-12 text-center">
+                <input type="submit" name="action" value="Submit" >
+              </div>
+              <div class="clear"></div>
+            </div>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Ask for Demo-->
+
+<div class="loader"></div>
+<div class="wrapper">
+  <div class="header">
+    <div class="container">
+      <div class="navigation">
+        <div class="logo"> <a href="index.html"><img src="images/logo.png"></a></div>
+        <div class="login-mblmenu">
+          <div class="mobile-nav-icon">
+            <button class="menu-icon mobil-icon-toggle"> <span>toggle menu</span> </button>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="nav-menu">
+          <ul>
+            <li> <a href="index.html">Home</a></li>
+            <li> <a href="about.html">About</a> </li>
+            <li class="subdrop-down"> <a href="product.html">Products</a>
+              <div class="sub-menu">
+                <ul class="dropdown-content">
+                  <li class=""><a href="accounting-software.html">Accounting Software</a></li>
+                  <li class=""><a href="human-resources-management.html">Human Resources Management</a></li>
+                  <li class=""><a href="inventory-management.html">Inventory Management</a></li>
+                  <li class=""><a href="procurement-management.html">Procurement Management</a></li>
+                  <li class=""><a href="sales-customer-management.html">Sales and Customer Management</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="active"> <a href="pricing.html">Pricing</a> </li>
+            <li> <a href="blog/index.html">Blog</a> </li>
+            <li> <a href="contact.html">Contact</a> </li>
+          </ul>
+          <div class="login-signup"> 
+              <a href="https://www.customateapps.com/aoaweb/newui/login.html" target="_blank" class="login">Login</a>
+              <a href="https://www.customateapps.com/aoaweb/newui/login.html#toregister" target="_blank" class="Signup">Signup</a> 
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <div class="product-titel-cntr">
+    <div class="container">
+      <h1>Pricing</h1>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="pricing-package-cntr">
+    <div class="container">
+      <ul>
+        <li class="package-standard">
+          <div class="package-name">
+            <h2>Usage Charge</h2>
+            <p>Minimum of 5 users</p>
+          </div>
+          <div class="package-price">
+            <h3>Monthy@US $10 or  <span class="rupee-icon"></span>650 / <span>Per User</span> </h3>
+            <p>To be paid Annually</p>
+          </div>
+          <div class="package-details">
+            <p>For larger implementations we also offer commodity pricing based on actual usage:</p>
+            <ul>
+              <li>
+                <p><strong>Storage - </strong> $0.10 or <span class="rupee-icon-small"></span> 6 per GB per month of data ; </p>
+              </li>
+              <li>
+                <p><strong>Data outflow - </strong> $ 0.25 or <span class="rupee-icon-small"></span> 15 per GB of data ; </p>
+              </li>
+              <li>
+                <p><strong>Compute - </strong> $0.25 or <span class="rupee-icon-small"></span> 15 per hour of per GB of processor time; </p>
+              </li>
+              <li>
+                <p><strong>Minimum - </strong> $50 or <span class="rupee-icon-small"></span> 3000 per month</p>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="package-customization">
+          <div class="package-name">
+            <h2>Development Charge</h2>
+            <p>or Customization</p>
+          </div>
+          <div class="package-price">
+            <h3>Promotional - First $1000 Free</h3>
+          </div>
+          <div class="package-details">
+            <p>For Development or Modification our incredibly disruptive charges are:</p>
+            <ul>
+              <li>
+                <p>$1 <strong>for each field</strong></p>
+              </li>
+              <li>
+                <p>$2 <strong>for each button</strong></p>
+              </li>
+              <li>
+                <p>$3 <strong>for each validation/condition/business rule*</strong></p>
+              </li>
+              <li>
+                <p>$5 <strong>for every alert/notification</strong></p>
+              </li>
+              <li>
+                <p>$10 <strong>for every workflow</strong></p>
+              </li>
+              <li>
+                <p>$30 <strong>for every report/chart (other than those already available)</strong></p>
+              </li>
+              <li>
+                <p>$50 <strong>for every printable, formatted report</strong></p>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <div class="clear"></div>
+    </div>
+  </div>
+  
+  <div class="why-us-cntr">
+    <div class="container">
+    	<div class="bullet wow animated fadeInLeft" data-wow-delay="0.2s" data-wow-offset="50">
+         <h2 class="wow animated fadeInUp" data-wow-delay="0.2s" data-wow-offset="50">What You Get</h2>
+        	<ul>
+                <li>We have ready SaaS products for you.  We can customize them to your (or your teams') heart's content. </li>
+                <li>We can create a completely new product for you - totally custom made.</li>
+                <li>Plus, we give you a life time service of constantly improving and modifying your application in line with the changes you see in your business (or even to push your plans) – as making changes is very easy.</li>
+                <li>In future, we will open up our platform technology to the world for one and all to create and manage their own respective products. </li>
+            </ul>
+        </div>
+    	<div class="bullet wow animated fadeInRight" data-wow-delay="0.2s" data-wow-offset="50">
+         <h2 class="wow animated fadeInUp" data-wow-delay="0.2s" data-wow-offset="50">How You Get</h2>
+        	<ul>
+            	<li>We work in collaboration with the actual users in small instalments of work (agile development).  We follow a Use and Change policy where we allow users to use the product and keep modifying till they are satisfied – this modification is NOT charged separately. </li>
+                <li>Once accepted by users, we move on to the next instalment of development.</li>
+                <li>As a promotional activity, we are giving away development credits of up to $1000 – that means no charge for work done up to that amount!</li>
+                <li>We do not charge any advance as well, however, after every work instalment of up to $250 (or nearby), you will have to deposit the billed amount to be adjusted from actual Usage billing that will start after the first development instalment bill.</li>
+                <li>This will continue till your promotional credits are exhausted, after which further payments will be treated as charges and not deposits.</li>
+            </ul>
+        </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  
+  <div class="clear"></div>
+</div>
+<div class="footer-line">
+  <div class="container">
+    <ul class="desktop">
+      <li class="list-play"> watch video </li>
+      <li class="list-play revolutionary-technology-vid"> <a href="javascript:void(0);" onClick="overlayBox('revolutionary-technology')" class="video-link"> Revolutionary Technology </a></li>
+      <li class="list-play benefit-customers-vid"> <a href="javascript:void(0);" onClick="overlayBox('benefit-customers')" class="video-link">Benefit to Customers</a></li>
+      <li class="list-play our-story-vid"> <a href="javascript:void(0);" onClick="overlayBox('our-story')" class="video-link">Demo Video</a></li>
+    </ul>
+    <div class="ask-for-demo desktop"> <a href="javascript:void(0);" onClick="overlayBox('ask-demo');">Ask for Demo</a> </div>
+    <div class="watch-video-mob">watch video</div>
+    <ul class="mob ask-for-demo-mob">
+      <li class="list-play revolutionary-technology-vid"> <a href="javascript:void(0);" onClick="overlayBox('revolutionary-technology')" class="video-link"> What? </a></li>
+      <li class="list-play benefit-customers-vid"> <a href="javascript:void(0);" onClick="overlayBox('benefit-customers')" class="video-link"> Why? </a></li>
+      <li class="list-play our-story-vid"> <a href="javascript:void(0);" onClick="overlayBox('our-story')" class="video-link"> Demo? </a></li>
+    </ul>
+    <div class="ask-for-demo mob"> <a href="javascript:void(0);" onClick="overlayBox('ask-demo');">Ask for Demo</a> </div>
+  </div>
+</div>
+
+
+<div class="share-info">
+    <ul id="webSocialList">
+        <li id="webSocialcopylink"> <a class="twitter-share-button" target="_blank" href="javascript:void(0)" onClick="copyToClipboard('http://customate.biz/pricing.html')" data-size="large"> <i class="fa fa-link" title="Copy Link"></i> </a> </li>
+        <li id="webSocialwhatsapp"> 
+        <a class="twitter-share-button desdisp" target="_blank" href="https://web.whatsapp.com/send?text=http://customate.biz/pricing.html" data-action="share/whatsapp/share" data-size="large"> <i class="fa fa-whatsapp" title="Whatsapp"></i> </a>  
+        <a class="twitter-share-button mobdisp" target="_blank" href="whatsapp://send?text=http://customate.biz/pricing.html" data-action="share/whatsapp/share" data-size="large"> <i class="fa fa-whatsapp" title="Whatsapp"></i> </a> 
+        </li>
+        <li id="webSocialTwitter"> <a class="twitter-share-button" target="_blank" href="https://twitter.com/intent/tweet?text=http://customate.biz/pricing.html" data-size="large"> <i class="fa fa-twitter" title="Twitter"></i> </a> </li>
+        <li id="webSocialfacebook"> <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://customate.biz/pricing.html"> <i class="fa fa-facebook" title="Facebook"></i> </a> </li>
+        <li id="webSocialLinkedin"> <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://customate.biz/pricing.html" target="_blank"> <i class="fa fa-linkedin" title="Linkedin"></i> </a> </li>
+        <li id="webSocialIcon"><i class="fa fa-share-alt"></i></li>
+    </ul>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-cntr">
+      <ul>
+        <li>
+          <dl class="active">
+            <dt>Contact</dt>
+            <dd style="display:block">
+              <p>54A Virwani Ind Est Goregaon E Mumbai 400063</p>
+              <p><a href="tell:+919820170609">+91 98201 70609</a></p>
+              <p><a href="mailto:info@customate.biz">info@customate.biz</a></p>
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt>Blogs</dt>
+            <dd>
+              <ul>
+                <li> <a href="blog/software-fits-your-processes-like-glove-underbelly-saas.html"> Software that Fits your Processes like a Glove - The Underbelly of SaaS </a> </li>
+                <li> <a href="blog/ha-now-software-implementation-can-actually-enjoyable.html"> Ha! Now Software Implementation can actually be an Enjoyable Experience! </a> </li>
+              </ul>
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <div class="footer-social">
+            <div class="copyright-text">
+              <p>Follow us</p>
+              <div class="social-icons"> 
+                  <a href="https://twitter.com/customatebiz" target="_blank" class="twitter-icon"><img src="images/twitter-icon.png"></a> 
+                  <a href="https://www.linkedin.com/in/vjalan" target="_blank" class="twitter-icon"><img src="images/linkedin-icon.png"></a> 
+                  <a href="https://www.facebook.com/jalvivek" target="_blank" class="fb-icon"><img src="images/fb-icon.png"></a> 
+                  <a href="https://www.youtube.com/channel/UCNwno8xGj2B08oz7KeNLW1w/featured" target="_blank" class="twitter-icon"><img src="images/youtube-icon.png"></a>
+                <div class="clear"></div>
+              </div>
+              <div class="site-buy">Website by <a href="http://www.intermind.in/" target="_blank"> Intermind</a> </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </li>
+      </ul>
+      <div class="clear"></div>
+    </div>
+  </div>
+</footer>
+<div class="copt-ryt">All content © Customate.biz</div>
+</div>
+<div class="overlay" id="revolutionary-technology" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-header"> Revolutionary Technology </div>
+      <div class="overlay-content">
+        <div class="container">
+          <iframe width="800" height="450" src="https://www.youtube.com/embed/D_oYlN1mZrU?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="overlay" id="benefit-customers" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-header"> Benefit to Customers </div>
+      <div class="overlay-content">
+        <div class="container">
+          <iframe width="800" height="450" src="https://www.youtube.com/embed/yqSiJCCiy0w?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="overlay" id="our-story" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-header"> Demo Video </div>
+      <div class="overlay-content">
+        <div class="container">
+          <iframe width="800" height="450" src="https://www.youtube.com/embed/6KYNriFBqrc?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="scripts/common.js" type="text/javascript"></script> 
+<script src="scripts/wow.min.js"></script> 
+<script>
+	new WOW().init();
+</script> 
+</body>
+</html>

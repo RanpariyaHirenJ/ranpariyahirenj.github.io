@@ -1,0 +1,953 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<title>Techflow</title>
+<link rel="stylesheet" type="text/css" href="styles/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<script src="scripts/jquery-min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="styles/flexslider.css" type="text/css" media="screen" />
+<script defer src="scripts/jquery.flexslider.js"></script>
+<script src="scripts/scrollbar.js"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<style>
+
+.overlay-content .sliderimages {padding: 0px;width: 100%;position: relative;}
+.overlay-content .grid-12{width:450px;}
+.overlay-content .overlaycntr{display:none;}
+.SliderwithOverlay .overlay-box {width: 450px;}
+.slideInfo h2 span {display: block;font-size: 14px;}
+.slideInfo h2 {font-size: 20px;width: 450px;padding-right: 40px;}
+.overlay-box .overlay-header {padding: 2px 0px;}
+.g-recaptcha>div {margin:0 auto;}
+.overlay-box .content {position: relative;}
+.next-previous-arrow{margin-bottom:40px}
+.next-previous-arrow a.previous-arrow{font-size: 16px;position: absolute;top: 6%;left: 0px; background-image: url(images/prev.png);padding: 12px 10px 12px 30px;background-repeat: no-repeat;background-size: 24px;background-position: center left;color: #fff;}
+.next-previous-arrow a.next-arrow{font-size: 16px;position: absolute;top: 6%;right: 0px;background-image: url(images/next.png);padding: 12px 30px 12px 10px;background-repeat: no-repeat;background-size: 24px;background-position: center right;color: #fff;}
+.next-previous-arrow a.previous-arrow:hover,
+.next-previous-arrow a.next-arrow:hover {text-decoration:underline;}
+
+@media screen and (min-width: 1900px) and (max-width:2500px) {
+	
+.overlay-content .sliderimages {padding: 0px;width: 100%;position: relative;}
+.overlay-content .grid-12{width:570px;}
+.overlay-content .overlaycntr{display:none;}
+.SliderwithOverlay .overlay-box {width: 570px;}
+.slideInfo h2 span {display: block;}
+.slideInfo h2 {font-size: 26px;width: 570px;padding-right: 40px;}
+.g-recaptcha>div {margin:0 auto;}
+.overlay-box .content {position: relative;}
+.next-previous-arrow{margin-bottom:40px}
+.next-previous-arrow a.previous-arrow{font-size: 16px;position: absolute;top: 6%;left: 0px; background-image: url(images/prev.png);padding: 12px 10px 12px 30px;background-repeat: no-repeat;background-size: 24px;background-position: center left;color: #fff;}
+.next-previous-arrow a.next-arrow{font-size: 16px;position: absolute;top: 6%;right: 0px;background-image: url(images/next.png);padding: 12px 30px 12px 10px;background-repeat: no-repeat;background-size: 24px;background-position: center right;color: #fff;}
+.next-previous-arrow a.previous-arrow:hover,
+.next-previous-arrow a.next-arrow:hover {text-decoration:underline;}
+}
+</style>
+<!--Start of Tawk.to Script-->
+	<script type="text/javascript">
+		var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+		(function(){
+			var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+			s1.async=true;
+			s1.src='https://embed.tawk.to/5a1bce62bb0c3f433d4cb6b9/default';
+			s1.charset='UTF-8';
+			s1.setAttribute('crossorigin','*');
+			s0.parentNode.insertBefore(s1,s0);
+		})();
+    </script>
+<!--End of Tawk.to Script-->
+<script>
+$(document).ready(function(){
+var getUrlParameter = function getUrlParameter(sParam) {
+var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+};	
+var projects = getUrlParameter('industrial-offshore');
+//alert(blog)
+$(window).load(function() {
+	if(projects != "" && projects != undefined){
+	setTimeout(function() {
+		overlayBox(projects)
+	}, 700);
+	}
+	 });
+});
+</script>
+
+<!-- Global site tag (gtag.js) - Google Ads: 761769038 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-761769038"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-761769038');
+</script>
+</head>
+<body style="background-color: #f9f9f9">
+<div class="wrapper">
+  <header class="header">
+    <div class="container">
+      <div class="navugation">
+        <div class="logo"> <a href="http://www.techflowengg.com"> <img src="images/logo.png" alt="Techflow Logo"> </a> </div>
+        <div class="mobile-nav-icon">
+          <button class="menu-icon mobil-icon-toggle"> <span>toggle menu</span> </button>
+        </div>
+        <div class="menubar">
+          <ul>
+            <li class="subdrop-down"> <a href="about.html">About</a>
+              <div class="dropdown animated fadeInDown">
+                <ul>
+                  <li> <a href="about.html"> Company </a> </li>
+                  <li> <a href="vision-mission.html"> Vision & Mission </a> </li>
+                  <li> <a href="management-team.html"> Management Team </a> </li>
+                  <li> <a href="#"> Board of Director </a> </li>
+                  <li> <a href="partner-associates.html" > Partner & Associates </a> </li>
+                  <li> <a href="clients.html"> Clients </a> </li>
+                </ul>
+              </div>
+            </li>
+            <li class="subdrop-down"> <a href="services.html">Services</a>
+              <div class="dropdown animated fadeInDown">
+                <ul>
+                  <li> <a href="structural-design-services.html"> Structural Design Services </a> </li>
+                  <li> <a href="connection-design-services.html"> Connection Design Services </a> </li>
+                  <li> <a href="detail-engineering-services.html"> Detail Engineering  Services </a> </li>
+                                <li> <a href="training.html">CCSSD Training</a> </li>
+                </ul>
+              </div>
+            </li>
+            <li> <a href="solutions.html">Solutions</a> </li>
+            <li> <a href="projects.html" class="active">Projects</a> </li>
+            <li> <a href="investors.html">Investors</a> </li>
+            <li> <a href="news/news.html">News</a> </li>
+            <li> <a href="blogs/blogs.html">Blogs</a> </li> </li>
+            <li class="subdrop-down"> <a href="contact.html">Contact</a>
+              <div class="dropdown animated fadeInDown">
+                <ul>
+                  <li> <a href="contact.html"> Locations </a> </li>
+                  <li> <a href="careers.html"> Careers </a> </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </header>
+  <section class="inner-banner projects-banner-cntr common-top">
+    <div class="distable">
+      <div class="distable-cell">
+        <div class="container">
+          <h1 class="wow animated fadeInUp" data-wow-delay="0.2s" data-wow-offset="50">Projects</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="common-top project-tab-cntr">
+    <div class="container">
+      <div class="project-filtertabs">
+        <div class="p-filtrTabs pt0" data-wow-delay="0.2s" data-wow-offset="50"> <a href="commercial-projects.html">Commercial Projects</a> <a href="public-sector.html">Public Sector</a> <a href="educational.html">Educational </a> <a href="industrial-offshore.html" class="active">Industrial &amp; offshore </a> <a href="material-handling.html">Material Handling </a> </div>
+      </div>
+    </div>
+  </section>
+  <section class="projectslist">
+    <div class="container">
+      <div class="plistbox">
+        <ul class="slidergallery">
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project1')"><img src="images/industrial/panuke/panuke.jpg" alt="Deep Panuke Production Field Center (PFC)"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project1')">
+              <h2>Deep Panuke Production Field Center (PFC)</h2>
+              </a>
+              <h3>Nova Scotia, Canada</h3>
+              <h4>Tonnage: 4225</h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project2')"><img src="images/industrial/pipeack/pipeack.jpg" alt="Offshore piperack for Escravos Gas to Liquid project"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project2')">
+              <h2>Offshore piperack for Escravos Gas to Liquid project</h2>
+              </a>
+              <h3>Nigeria</h3>
+              <h4>Tonnage: 3475</h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project3')"><img src="images/industrial/derrick/derrick.jpg" alt="High efficiency Jack-up Derrick"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project3')">
+              <h2>High efficiency Jack-up Derrick</h2>
+              </a>
+              <h3>Denmark</h3>
+              <h4>Tonnage: 325 </h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project4')"><img src="images/industrial/fertilizer/fertilizer.jpg" alt="Reformer for Sorfert Fertilizer Complex"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project4')">
+              <h2>Reformer for Sorfert Fertilizer Complex</h2>
+              </a>
+              <h3>Oran, Algeria</h3>
+              <h4>Tonnage: 260 </h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project5')"><img src="images/industrial/heater/heater.jpg" alt="CCR Heater in MSQ Upgradation for IOCL"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project5')">
+              <h2>CCR Heater in MSQ Upgradation for IOCL</h2>
+              </a>
+              <h3>Gujarat, India</h3>
+              <h4>Tonnage: 750</h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project6')"><img src="images/industrial/barzan/barzan.jpg" alt="BARZAN Project - Qatar. (JGC)"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project6')">
+              <h2>BARZAN Project - Qatar. (JGC)</h2>
+              </a>
+              <h3>Qatar</h3>
+              <h4>Tonnage: 720 </h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project7')"><img src="images/industrial/reliance/reliance.jpg" alt="Area D & L of PTA II Plant at Hazira of Reliance"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project7')">
+              <h2>Area D & L of PTA II Plant at Hazira of Reliance</h2>
+              </a>
+              <h3>Hazira, Surat, Gujarat, India</h3>
+              <h4>Tonnage: 775 </h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project8')"><img src="images/industrial/ril/ril.jpg" alt="RIL-LDPE"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project8')">
+              <h2>RIL-LDPE</h2>
+              </a>
+              <h3>Jamnagar, Gujarat, India</h3>
+              <h4>Tonnage: 2500 </h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project9')"><img src="images/industrial/refinary/refinary.jpg" alt="Paradip Refinery-Misc Work"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project9')">
+              <h2>Paradip Refinery-Misc Work</h2>
+              </a>
+              <h3>Paradip, Orissa, India</h3>
+              <h4>Tonnage: 1000 </h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project10')"><img src="images/industrial/honda/honda.jpg" alt="Engine Plant for Honda of America"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project10')">
+              <h2>Engine Plant for Honda of America</h2>
+              </a>
+              <h3>Ohio, USA</h3>
+              <h4>Tonnage: 960 </h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project11')"><img src="images/industrial/paste/paste.jpg" alt="PPL Paste Plant"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project11')">
+              <h2>PPL Paste Plant</h2>
+              </a>
+              <h3>Montana, USA</h3>
+              <h4>Tonnage: 375 </h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project12')"><img src="images/industrial/grinding/grinding.jpg" alt="114 TPH Cement Grinding Plant"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project12')">
+              <h2>114 TPH Cement Grinding Plant</h2>
+              </a>
+              <h3>Abu Dhabi, UAE</h3>
+              <h4>Tonnage: 525 </h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project13')"><img src="images/industrial/turbine/turbine.jpg" alt="Turbine Building Ccpp22 for Power Plan"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project13')">
+              <h2>Turbine Building Ccpp22 for Power Plant</h2>
+              </a>
+              <h3>Dubai, UAE</h3>
+              <h4>Tonnage: 950 </h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project14')"><img src="images/industrial/complex/complex.jpg" alt="FCC Complex, Reliance Refinery (J-2)"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project14')">
+              <h2>FCC Complex, Reliance Refinery (J-2)</h2>
+              </a>
+              <h3>Jamnagar, Gujarat, India</h3>
+              <h4>Tonnage: 750 </h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project15')"><img src="images/industrial/line/line.jpg" alt="IEPC No. 5 Refinery Line"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project15')">
+              <h2>IEPC No. 5 Refinery Line</h2>
+              </a>
+              <h3>WA, USA</h3>
+              <h4>Tonnage: 320 </h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project16')"><img src="images/industrial/duct/duct.jpg" alt="Esp Duct Supporting System"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project16')">
+              <h2>Esp Duct Supporting System</h2>
+              </a>
+              <h3>Johor, Maleshia</h3>
+              <h4>Tonnage: 140 </h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project17')"><img src="images/industrial/canola/canola.jpg" alt="Pacific Coast Canola"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project17')">
+              <h2>Pacific Coast Canola</h2>
+              </a>
+              <h3>Warden, Washington, USA</h3>
+              <h4>Tonnage: 600 </h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project18')"><img src="images/industrial/bisha/bisha.jpg" alt="Bisha Gold Mine - Eritrea"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project18')">
+              <h2>Bisha Gold Mine - Eritrea</h2>
+              </a>
+              <h3>Asmara, Central, Eritrea</h3>
+              <h4>Tonnage: 963 </h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="wow fadeInUp animated" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="pn-image"> <a href="javascript:void(0);" onClick="overlayBox('project19')"><img src="images/industrial/horne/horne.jpg" alt="Horne Payne Operations Building"> 
+            	<div class="industry-hovrband">
+                <div class="distable">
+                  <div class="distable-cell"> View Gallery </div>
+                </div>
+              </div>
+              </a> </div>
+            <div class="pn-infosbx"> <a href="javascript:void(0);" onClick="overlayBox('project19')">
+              <h2>Horne Payne Operations Building</h2>
+              </a>
+              <h3>Burnaby, British Columbia, Canada</h3>
+              <h4>Tonnage: 558</h4>
+            </div>
+            <div class="pn-typedate">
+              <div class="date-icon"> 2014 </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </section>
+<div class="send-enquiery-btn"><a class="box-btn" href="javascript:void(0);" onClick="overlayBox('enquiryform')">Send Enquiry</a> </div>
+<div class="overlay management-team" id="enquiryform" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-header">Enquiry Form</div>
+      <form name="enquiry_form" id="enquiry_form" method="post" action="inc/contact.php" onSubmit="return form_validate_jquery('#enquiry_form')">
+      <div class="overlay-content">
+        <div class="contactRow">
+          <div class="formCOL">
+            <input type="text" name="first_name" validation="text" title="First Name" placeholder="First Name*">
+            <input type="hidden" name="subject" value="Industrial Offshore Projects">
+          </div>
+          <div class="formCOL">
+            <input type="text" name="last_name" validation="text" title="Last Name" placeholder="Last Name*">
+          </div>
+          <div class="formCOL lastcolfrm">
+            <input type="text" name="email" validation="email" title="Email Address" placeholder="Email Address*">
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="contactRow">
+          <div class="formCOL">
+            <input type="text" name="contact_number" title="Contact" maxlength="13" onKeyPress="return onlyNos(event,this);" validation="number" placeholder="Contact*">
+          </div>
+          <div class="formCOL">
+            <div class="input-type-select">
+              <select name="country_name" title="Country" validation="text">
+                <option value=""> Country </option>
+                <option>Afghanistan</option>
+                <option>Aland Islands</option>
+                <option>Albania</option>
+                <option>Algeria</option>
+                <option>American Samoa</option>
+                <option>Andorra</option>
+                <option>Angola</option>
+                <option>Anguilla</option>
+                <option>Antarctica</option>
+                <option>Antigua And Barbuda</option>
+                <option>Argentina</option>
+                <option>Armenia</option>
+                <option>Aruba</option>
+                <option>Australia</option>
+                <option>Austria</option>
+                <option>Azerbaijan</option>
+                <option>Bahamas</option>
+                <option>Bahrain</option>
+                <option>Bangladesh</option>
+                <option>Barbados</option>
+                <option>Belarus</option>
+                <option>Belgium</option>
+                <option>Belize</option>
+                <option>Benin</option>
+                <option>Bermuda</option>
+                <option>Bhutan</option>
+                <option>Bolivia</option>
+                <option>Bosnia And Herzegovina</option>
+                <option>Botswana</option>
+                <option>Bouvet Island</option>
+                <option>Brazil</option>
+                <option>British Indian Ocean Territory</option>
+                <option>Brunei Darussalam</option>
+                <option>Bulgaria</option>
+                <option>Burkina Faso</option>
+                <option>Burundi</option>
+                <option>Cambodia</option>
+                <option>Cameroon</option>
+                <option>Canada</option>
+                <option>Cape Verde</option>
+                <option>Cayman Islands</option>
+                <option>Central African Republic</option>
+                <option>Chad</option>
+                <option>Chile</option>
+                <option>China</option>
+                <option>Christmas Island</option>
+                <option>Cocos (Keeling) Islands</option>
+                <option>Colombia</option>
+                <option>Comoros</option>
+                <option>Congo</option>
+                <option>Congo, Democratic Republic</option>
+                <option>Cook Islands</option>
+                <option>Costa Rica</option>
+                <option>Cote D'Ivoire</option>
+                <option>Croatia</option>
+                <option>Cuba</option>
+                <option>Cyprus</option>
+                <option>Czech Republic</option>
+                <option>Denmark</option>
+                <option>Djibouti</option>
+                <option>Dominica</option>
+                <option>Dominican Republic</option>
+                <option>Ecuador</option>
+                <option>Egypt</option>
+                <option>El Salvador</option>
+                <option>Equatorial Guinea</option>
+                <option>Eritrea</option>
+                <option>Estonia</option>
+                <option>Ethiopia</option>
+                <option>Falkland Islands (Malvinas)</option>
+                <option>Faroe Islands</option>
+                <option>Fiji</option>
+                <option>Finland</option>
+                <option>France</option>
+                <option>French Guiana</option>
+                <option>French Polynesia</option>
+                <option>French Southern Territories</option>
+                <option>Gabon</option>
+                <option>Gambia</option>
+                <option>Georgia</option>
+                <option>Germany</option>
+                <option>Ghana</option>
+                <option>Gibraltar</option>
+                <option>Greece</option>
+                <option>Greenland</option>
+                <option>Grenada</option>
+                <option>Guadeloupe</option>
+                <option>Guam</option>
+                <option>Guatemala</option>
+                <option>Guernsey</option>
+                <option>Guinea</option>
+                <option>Guinea-Bissau</option>
+                <option>Guyana</option>
+                <option>Haiti</option>
+                <option>Heard Island & Mcdonald Islands</option>
+                <option>Holy See</option> 
+                <option>Honduras</option>
+                <option>Hong Kong</option>
+                <option>Hungary</option>
+                <option>Iceland</option>
+                <option>India</option>
+                <option>Indonesia</option>
+                <option>Iran</option>
+                <option>Iraq</option>
+                <option>Ireland</option>
+                <option>Isle Of Man</option>
+                <option>Israel</option>
+                <option>Italy</option>
+                <option>Jamaica</option>
+                <option>Japan</option>
+                <option>Jersey</option>
+                <option>Jordan</option>
+                <option>Kazakhstan</option>
+                <option>Kenya</option>
+                <option>Kiribati</option>
+                <option>Korea</option>
+                <option>Kuwait</option>
+                <option>Kyrgyzstan</option>
+                <option>Lao People's Democratic Republic</option>
+                <option>Latvia</option>
+                <option>Lebanon</option>
+                <option>Lesotho</option>
+                <option>Liberia</option>
+                <option>Libyan Arab Jamahiriya</option>
+                <option>Liechtenstein</option>
+                <option>Lithuania</option>
+                <option>Luxembourg</option>
+                <option>Macao</option>
+                <option>Macedonia</option>
+                <option>Madagascar</option>
+                <option>Malawi</option>
+                <option>Malaysia</option>
+                <option>Maldives</option>
+                <option>Mali</option>
+                <option>Malta</option>
+                <option>Marshall Islands</option>
+                <option>Martinique</option>
+                <option>Mauritania</option>
+                <option>Mauritius</option>
+                <option>Mayotte</option>
+                <option>Mexico</option>
+                <option>Micronesia, Federated States Of</option>
+                <option>Moldova</option>
+                <option>Monaco</option>
+                <option>Mongolia</option>
+                <option>Montenegro</option>
+                <option>Montserrat</option>
+                <option>Morocco</option>
+                <option>Mozambique</option>
+                <option>Myanmar</option>
+                <option>Namibia</option>
+                <option>Nauru</option>
+                <option>Nepal</option>
+                <option>Netherlands</option>
+                <option>Netherlands Antilles</option>
+                <option>New Caledonia</option>
+                <option>New Zealand</option>
+                <option>Nicaragua</option>
+                <option>Niger</option>
+                <option>Nigeria</option>
+                <option>Niue</option>
+                <option>Norfolk Island</option>
+                <option>Northern Mariana Islands</option>
+                <option>Norway</option>
+                <option>Oman</option>
+                <option>Pakistan</option>
+                <option>Palau</option>
+                <option>Palestinian Territory, Occupied</option>
+                <option>Panama</option>
+                <option>Papua New Guinea</option>
+                <option>Paraguay</option>
+                <option>Peru</option>
+                <option>Philippines</option>
+                <option>Pitcairn</option>
+                <option>Poland</option>
+                <option>Portugal</option>
+                <option>Puerto Rico</option>
+                <option>Qatar</option>
+                <option>Reunion</option>
+                <option>Romania</option>
+                <option>Russian Federation</option>
+                <option>Rwanda</option>
+                <option>Saint Barthelemy</option>
+                <option>Saint Helena</option>
+                <option>Saint Kitts And Nevis
+                <option>Saint Lucia</option>
+                <option>Saint Martin</option>
+                <option>Saint Pierre And Miquelon</option>
+                <option>Saint Vincent And Grenadines</option>
+                <option>Samoa</option>
+                <option>San Marino</option>
+                <option>Sao Tome And Principe</option>
+                <option>Saudi Arabia</option>
+                <option>Senegal</option>
+                <option>Serbia</option>
+                <option>Seychelles</option>
+                <option>Sierra Leone</option>
+                <option>Singapore</option>
+                <option>Slovakia</option>
+                <option>Slovenia</option>
+                <option>Solomon Islands</option>
+                <option>Somalia</option>
+                <option>South Africa</option>
+                <option>South Georgia And Sandwich Isl.</option>
+                <option>Spain</option>
+                <option>Sri Lanka</option>
+                <option>Sudan</option>
+                <option>Suriname</option>
+                <option>Svalbard And Jan Mayen</option>
+                <option>Swaziland</option>
+                <option>Sweden</option>
+                <option>Switzerland</option>
+                <option>Syrian Arab Republic</option>
+                <option>Taiwan</option>
+                <option>Tajikistan</option>
+                <option>Tanzania</option>
+                <option>Thailand</option>
+                <option>Timor-Leste</option>
+                <option>Togo</option>
+                <option>Tokelau</option>
+                <option>Tonga</option>
+                <option>Trinidad And Tobago</option>
+                <option>Tunisia</option>
+                <option>Turkey</option>
+                <option>Turkmenistan</option>
+                <option>Turks And Caicos Islands</option>
+                <option>Tuvalu</option>
+                <option>Uganda</option>
+                <option>Ukraine</option>
+                <option>United Arab Emirates</option>
+                <option>United Kingdom</option>
+                <option>United States</option>
+                <option>United States Outlying Islands</option>
+                <option>Uruguay</option>
+                <option>Uzbekistan</option>
+                <option>Vanuatu</option>
+                <option>Venezuela</option>
+                <option>Viet Nam</option>
+                <option>Virgin Islands, British</option>
+                <option>Virgin Islands, U.S.</option>
+                <option>Wallis And Futuna</option>
+                <option>Western Sahara</option>
+                <option>Yemen</option>
+                <option>Zambia</option>
+                <option>Zimbabwe</option>
+              </select>
+            </div>
+          </div>
+          <div class="formCOL lastcolfrm">
+            <div class="input-type-select">
+              <select name="interested_in" title="Interested in" validation="text">
+                <option value=""> Interested in </option>
+                <option> Detail Engineering Services </option>
+                <option> Structural Design Services </option>
+                <option> Connection Design </option>
+                <option> Fabrication Management Solution </option>
+              </select>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="contactRow messageconrowLast">
+          <!--<div class="formCOL"> Message </div>-->
+          <div class="formCOLtextarea">
+            <textarea name="message" title="Message" placeholder="Message" validation="text"></textarea>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="contactRow">
+          	<div class="g-recaptcha" data-sitekey="6LfAdlsUAAAAAJjZeFJUaEgKcMqaqz-sZaZPVpXp"></div>
+        </div>
+        <div class="contactRow messageconrowLast">
+          <div class="box-btn text-center">
+            <input type="submit" name="action_enquiry" value="Submit">
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-cntr">
+        <div class="footer-left" data-wow-delay="0.2s" data-wow-offset="50">
+          <div class="distable">
+            <div class="distable-cell"> <img src="images/footer-logo.png" alt="Techflow Logo"> </div>
+            <div class="distable-cell copytxt">
+              <p>2018 © Techflow Engineers Pvt. Ltd. </p>
+              <!--<a href="#">Privacy Policy</a> - <a href="#">Terms </a> - <a href="#">Sitemap </a> -->
+              <span>Site by <a href="http://www.intermind.in/" target="_blank"> Intermind</a>  </span>
+              </div>
+          </div>
+        </div>
+        <div class="footer-right" data-wow-delay="0.2s" data-wow-offset="50">
+          <div class="social-icons"> 
+              <a href="https://www.facebook.com/techflowengg" target="_blank" class="fb-icon"><img src="images/fb-icon.png" alt="facebook"></a>
+                            <a href="https://www.linkedin.com/company/techflow-engineers" target="_blank" class="linked-in-icon"><img src="images/linked-in-icon.png" alt="twitter"></a>
+          <div class="clear"></div>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </footer>
+</div>
+<div id="overlay"></div>
+<script src="scripts/wow.min.js"></script> 
+<script>
+new WOW().init();
+</script> 
+<script>
+
+$(window).load(function() {
+
+	  var slider = '<div class="SliderwithOverlay overlay"id=project1 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class="content"><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>Deep Panuke Production Field Center (PFC) | <span>Nova Scotia, Canada</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider1><ul class=slides><li><img src=images/industrial/panuke/panuke1.jpg><li><img src=images/industrial/panuke/panuke2.jpg><li><img src=images/industrial/panuke/panuke3.jpg></ul></div><div class=flexslider id=carousel1><ul class=slides><li><img src=images/industrial/panuke/panuke1.jpg><li><img src=images/industrial/panuke/panuke2.jpg><li><img src=images/industrial/panuke/panuke3.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>An exclusive architectural and close to nature splendor blend, has been depicted in one of a prestigious project of our client in Aarvali Resort, Goa project. This necklace shaped structure Resort consisting of steel is detailed by Techflow Engineers(I) Pvt Ltd.. Our scope included structural steel detailing of the roof of this piece of Art, With distinctive and tricky features like twisted members, each member having its own geometry with out absolutely no similarity with each other.<p>This structure was not only an intricate one but also needed a very tight schedule for delivery. Our team did a magnificent job of detailing on the steel of this project without any blunder and hassle for our client M/s. Shapoorji Pallonji.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project2 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class="content"><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>Offshore piperack for Escravos Gas to Liquid project | <span>Nigeria</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider2><ul class=slides><li><img src=images/industrial/pipeack/pipeack1.jpg><li><img src=images/industrial/pipeack/pipeack2.jpg><li><img src=images/industrial/pipeack/pipeack3.jpg></ul></div><div class=flexslider id=carousel2><ul class=slides><li><img src=images/industrial/pipeack/pipeack1.jpg><li><img src=images/industrial/pipeack/pipeack2.jpg><li><img src=images/industrial/pipeack/pipeack3.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>An exclusive architectural and close to nature splendor blend, has been depicted in one of a prestigious project of our client in Aarvali Resort, Goa project. This necklace shaped structure Resort consisting of steel is detailed by Techflow Engineers(I) Pvt Ltd.. Our scope included structural steel detailing of the roof of this piece of Art, With distinctive and tricky features like twisted members, each member having its own geometry with out absolutely no similarity with each other.<p>This structure was not only an intricate one but also needed a very tight schedule for delivery. Our team did a magnificent job of detailing on the steel of this project without any blunder and hassle for our client M/s. Shapoorji Pallonji.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project3 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class="content"><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>High efficiency Jack-up Derrick | <span>Denmark</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider3><ul class=slides><li><img src=images/industrial/derrick/derrick1.jpg><li><img src=images/industrial/derrick/derrick2.jpg><li><img src=images/industrial/derrick/derrick3.jpg></ul></div><div class=flexslider id=carousel3><ul class=slides><li><img src=images/industrial/derrick/derrick1.jpg><li><img src=images/industrial/derrick/derrick2.jpg><li><img src=images/industrial/derrick/derrick3.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>An exclusive architectural and close to nature splendor blend, has been depicted in one of a prestigious project of our client in Aarvali Resort, Goa project. This necklace shaped structure Resort consisting of steel is detailed by Techflow Engineers(I) Pvt Ltd.. Our scope included structural steel detailing of the roof of this piece of Art, With distinctive and tricky features like twisted members, each member having its own geometry with out absolutely no similarity with each other.<p>This structure was not only an intricate one but also needed a very tight schedule for delivery. Our team did a magnificent job of detailing on the steel of this project without any blunder and hassle for our client M/s. Shapoorji Pallonji.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project4 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class="content"><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>Reformer for Sorfert Fertilizer Complex | <span>Oran, Algeria</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider4><ul class=slides><li><img src=images/industrial/fertilizer/fertilizer1.jpg><li><img src=images/industrial/fertilizer/fertilizer2.jpg></ul></div><div class=flexslider id=carousel4><ul class=slides><li><img src=images/industrial/fertilizer/fertilizer1.jpg><li><img src=images/industrial/fertilizer/fertilizer2.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>An exclusive architectural and close to nature splendor blend, has been depicted in one of a prestigious project of our client in Aarvali Resort, Goa project. This necklace shaped structure Resort consisting of steel is detailed by Techflow Engineers(I) Pvt Ltd.. Our scope included structural steel detailing of the roof of this piece of Art, With distinctive and tricky features like twisted members, each member having its own geometry with out absolutely no similarity with each other.<p>This structure was not only an intricate one but also needed a very tight schedule for delivery. Our team did a magnificent job of detailing on the steel of this project without any blunder and hassle for our client M/s. Shapoorji Pallonji.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project5 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class="content"><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>CCR Heater in MSQ Upgradation for IOCL | <span>Gujarat, India</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider5><ul class=slides><li><img src=images/industrial/heater/heater1.jpg><li><img src=images/industrial/heater/heater2.jpg></ul></div><div class=flexslider id=carousel5><ul class=slides><li><img src=images/industrial/heater/heater1.jpg><li><img src=images/industrial/heater/heater2.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>An exclusive architectural and close to nature splendor blend, has been depicted in one of a prestigious project of our client in Aarvali Resort, Goa project. This necklace shaped structure Resort consisting of steel is detailed by Techflow Engineers(I) Pvt Ltd.. Our scope included structural steel detailing of the roof of this piece of Art, With distinctive and tricky features like twisted members, each member having its own geometry with out absolutely no similarity with each other.<p>This structure was not only an intricate one but also needed a very tight schedule for delivery. Our team did a magnificent job of detailing on the steel of this project without any blunder and hassle for our client M/s. Shapoorji Pallonji.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project6 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class="content"><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>BARZAN Project - Qatar. (JGC) | <span>Qatar</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider6><ul class=slides><li><img src=images/industrial/barzan/barzan1.jpg><li><img src=images/industrial/barzan/barzan2.jpg><li><img src=images/industrial/barzan/barzan3.jpg><li><img src=images/industrial/barzan/barzan4.jpg><li><img src=images/industrial/barzan/barzan5.jpg><li><img src=images/industrial/barzan/barzan6.jpg><li><img src=images/industrial/barzan/barzan7.jpg><li><img src=images/industrial/barzan/barzan8.jpg><li><img src=images/industrial/barzan/barzan9.jpg></ul></div><div class=flexslider id=carousel6><ul class=slides><li><img src=images/industrial/barzan/barzan1.jpg><li><img src=images/industrial/barzan/barzan2.jpg><li><img src=images/industrial/barzan/barzan3.jpg><li><img src=images/industrial/barzan/barzan4.jpg><li><img src=images/industrial/barzan/barzan5.jpg><li><img src=images/industrial/barzan/barzan6.jpg><li><img src=images/industrial/barzan/barzan7.jpg><li><img src=images/industrial/barzan/barzan8.jpg><li><img src=images/industrial/barzan/barzan9.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>An exclusive architectural and close to nature splendor blend, has been depicted in one of a prestigious project of our client in Aarvali Resort, Goa project. This necklace shaped structure Resort consisting of steel is detailed by Techflow Engineers(I) Pvt Ltd.. Our scope included structural steel detailing of the roof of this piece of Art, With distinctive and tricky features like twisted members, each member having its own geometry with out absolutely no similarity with each other.<p>This structure was not only an intricate one but also needed a very tight schedule for delivery. Our team did a magnificent job of detailing on the steel of this project without any blunder and hassle for our client M/s. Shapoorji Pallonji.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project7 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class="content"><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>Area D & L of PTA II Plant at Hazira of Reliance | <span>Hazira, Surat, Gujarat, India</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider7><ul class=slides><li><img src=images/industrial/reliance/reliance1.jpg><li><img src=images/industrial/reliance/reliance2.jpg></ul></div><div class=flexslider id=carousel7><ul class=slides><li><img src=images/industrial/reliance/reliance1.jpg><li><img src=images/industrial/reliance/reliance2.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>An exclusive architectural and close to nature splendor blend, has been depicted in one of a prestigious project of our client in Aarvali Resort, Goa project. This necklace shaped structure Resort consisting of steel is detailed by Techflow Engineers(I) Pvt Ltd.. Our scope included structural steel detailing of the roof of this piece of Art, With distinctive and tricky features like twisted members, each member having its own geometry with out absolutely no similarity with each other.<p>This structure was not only an intricate one but also needed a very tight schedule for delivery. Our team did a magnificent job of detailing on the steel of this project without any blunder and hassle for our client M/s. Shapoorji Pallonji.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project8 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class="content"><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>RIL-LDPE | <span>Jamnagar, Gujarat, India</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider8><ul class=slides><li><img src=images/industrial/ril/ril1.jpg><li><img src=images/industrial/ril/ril2.jpg></ul></div><div class=flexslider id=carousel8><ul class=slides><li><img src=images/industrial/ril/ril1.jpg><li><img src=images/industrial/ril/ril2.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>An exclusive architectural and close to nature splendor blend, has been depicted in one of a prestigious project of our client in Aarvali Resort, Goa project. This necklace shaped structure Resort consisting of steel is detailed by Techflow Engineers(I) Pvt Ltd.. Our scope included structural steel detailing of the roof of this piece of Art, With distinctive and tricky features like twisted members, each member having its own geometry with out absolutely no similarity with each other.<p>This structure was not only an intricate one but also needed a very tight schedule for delivery. Our team did a magnificent job of detailing on the steel of this project without any blunder and hassle for our client M/s. Shapoorji Pallonji.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project9 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class="content"><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>Paradip Refinery-Misc Work | <span>Paradip, Orissa, India</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider9><ul class=slides><li><img src=images/industrial/refinary/refinary1.jpg><li><img src=images/industrial/refinary/refinary2.jpg></ul></div><div class=flexslider id=carousel9><ul class=slides><li><img src=images/industrial/refinary/refinary1.jpg><li><img src=images/industrial/refinary/refinary2.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>An exclusive architectural and close to nature splendor blend, has been depicted in one of a prestigious project of our client in Aarvali Resort, Goa project. This necklace shaped structure Resort consisting of steel is detailed by Techflow Engineers(I) Pvt Ltd.. Our scope included structural steel detailing of the roof of this piece of Art, With distinctive and tricky features like twisted members, each member having its own geometry with out absolutely no similarity with each other.<p>This structure was not only an intricate one but also needed a very tight schedule for delivery. Our team did a magnificent job of detailing on the steel of this project without any blunder and hassle for our client M/s. Shapoorji Pallonji.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project10 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class="content"><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>Engine Plant for Honda of America | <span>Ohio, USA</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider10><ul class=slides><li><img src=images/industrial/honda/honda1.jpg><li><img src=images/industrial/honda/honda2.jpg><li><img src=images/industrial/honda/honda3.jpg><li><img src=images/industrial/honda/honda4.jpg><li><img src=images/industrial/honda/honda5.jpg><li><img src=images/industrial/honda/honda6.jpg></ul></div><div class=flexslider id=carousel10><ul class=slides><li><img src=images/industrial/honda/honda1.jpg><li><img src=images/industrial/honda/honda2.jpg><li><img src=images/industrial/honda/honda3.jpg><li><img src=images/industrial/honda/honda4.jpg><li><img src=images/industrial/honda/honda5.jpg><li><img src=images/industrial/honda/honda6.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>An exclusive architectural and close to nature splendor blend, has been depicted in one of a prestigious project of our client in Aarvali Resort, Goa project. This necklace shaped structure Resort consisting of steel is detailed by Techflow Engineers(I) Pvt Ltd.. Our scope included structural steel detailing of the roof of this piece of Art, With distinctive and tricky features like twisted members, each member having its own geometry with out absolutely no similarity with each other.<p>This structure was not only an intricate one but also needed a very tight schedule for delivery. Our team did a magnificent job of detailing on the steel of this project without any blunder and hassle for our client M/s. Shapoorji Pallonji.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project11 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class="content"><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>PPL Paste Plant | <span>Montana, USA</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider11><ul class=slides><li><img src=images/industrial/paste/paste1.jpg></ul></div><div class=flexslider id=carousel11><ul class=slides><li><img src=images/industrial/paste/paste1.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>An exclusive architectural and close to nature splendor blend, has been depicted in one of a prestigious project of our client in Aarvali Resort, Goa project. This necklace shaped structure Resort consisting of steel is detailed by Techflow Engineers(I) Pvt Ltd.. Our scope included structural steel detailing of the roof of this piece of Art, With distinctive and tricky features like twisted members, each member having its own geometry with out absolutely no similarity with each other.<p>This structure was not only an intricate one but also needed a very tight schedule for delivery. Our team did a magnificent job of detailing on the steel of this project without any blunder and hassle for our client M/s. Shapoorji Pallonji.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project12 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class="content"><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>114 TPH Cement Grinding Plant | <span>Abu Dhabi, UAE</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider12><ul class=slides><li><img src=images/industrial/grinding/grinding1.jpg><li><img src=images/industrial/grinding/grinding2.jpg></ul></div><div class=flexslider id=carousel12><ul class=slides><li><img src=images/industrial/grinding/grinding1.jpg><li><img src=images/industrial/grinding/grinding2.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>An exclusive architectural and close to nature splendor blend, has been depicted in one of a prestigious project of our client in Aarvali Resort, Goa project. This necklace shaped structure Resort consisting of steel is detailed by Techflow Engineers(I) Pvt Ltd.. Our scope included structural steel detailing of the roof of this piece of Art, With distinctive and tricky features like twisted members, each member having its own geometry with out absolutely no similarity with each other.<p>This structure was not only an intricate one but also needed a very tight schedule for delivery. Our team did a magnificent job of detailing on the steel of this project without any blunder and hassle for our client M/s. Shapoorji Pallonji.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project13 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class="content"><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>Turbine Building Ccpp22 for Power Plant | <span>Dubai, UAE</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider13><ul class=slides><li><img src=images/industrial/turbine/turbine1.jpg><li><img src=images/industrial/turbine/turbine2.jpg></ul></div><div class=flexslider id=carousel13><ul class=slides><li><img src=images/industrial/turbine/turbine1.jpg><li><img src=images/industrial/turbine/turbine2.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>An exclusive architectural and close to nature splendor blend, has been depicted in one of a prestigious project of our client in Aarvali Resort, Goa project. This necklace shaped structure Resort consisting of steel is detailed by Techflow Engineers(I) Pvt Ltd.. Our scope included structural steel detailing of the roof of this piece of Art, With distinctive and tricky features like twisted members, each member having its own geometry with out absolutely no similarity with each other.<p>This structure was not only an intricate one but also needed a very tight schedule for delivery. Our team did a magnificent job of detailing on the steel of this project without any blunder and hassle for our client M/s. Shapoorji Pallonji.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project14 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class="content"><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>FCC Complex, Reliance Refinery (J-2) | <span>Jamnagar, Gujarat, India</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider14><ul class=slides><li><img src=images/industrial/complex/complex1.jpg><li><img src=images/industrial/complex/complex2.jpg><li><img src=images/industrial/complex/complex3.jpg><li><img src=images/industrial/complex/complex4.jpg></ul></div><div class=flexslider id=carousel14><ul class=slides><li><img src=images/industrial/complex/complex1.jpg><li><img src=images/industrial/complex/complex2.jpg><li><img src=images/industrial/complex/complex3.jpg><li><img src=images/industrial/complex/complex4.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>An exclusive architectural and close to nature splendor blend, has been depicted in one of a prestigious project of our client in Aarvali Resort, Goa project. This necklace shaped structure Resort consisting of steel is detailed by Techflow Engineers(I) Pvt Ltd.. Our scope included structural steel detailing of the roof of this piece of Art, With distinctive and tricky features like twisted members, each member having its own geometry with out absolutely no similarity with each other.<p>This structure was not only an intricate one but also needed a very tight schedule for delivery. Our team did a magnificent job of detailing on the steel of this project without any blunder and hassle for our client M/s. Shapoorji Pallonji.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project15 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class="content"><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>IEPC No. 5 Refinery Line | <span>WA, USA</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider15><ul class=slides><li><img src=images/industrial/line/line1.jpg><li><img src=images/industrial/line/line2.jpg></ul></div><div class=flexslider id=carousel15><ul class=slides><li><img src=images/industrial/line/line1.jpg><li><img src=images/industrial/line/line2.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>An exclusive architectural and close to nature splendor blend, has been depicted in one of a prestigious project of our client in Aarvali Resort, Goa project. This necklace shaped structure Resort consisting of steel is detailed by Techflow Engineers(I) Pvt Ltd.. Our scope included structural steel detailing of the roof of this piece of Art, With distinctive and tricky features like twisted members, each member having its own geometry with out absolutely no similarity with each other.<p>This structure was not only an intricate one but also needed a very tight schedule for delivery. Our team did a magnificent job of detailing on the steel of this project without any blunder and hassle for our client M/s. Shapoorji Pallonji.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project16 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class="content"><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>Esp Duct Supporting System | <span>Johor, Maleshia</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider16><ul class=slides><li><img src=images/industrial/duct/duct1.jpg></ul></div><div class=flexslider id=carousel16><ul class=slides><li><img src=images/industrial/duct/duct1.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>An exclusive architectural and close to nature splendor blend, has been depicted in one of a prestigious project of our client in Aarvali Resort, Goa project. This necklace shaped structure Resort consisting of steel is detailed by Techflow Engineers(I) Pvt Ltd.. Our scope included structural steel detailing of the roof of this piece of Art, With distinctive and tricky features like twisted members, each member having its own geometry with out absolutely no similarity with each other.<p>This structure was not only an intricate one but also needed a very tight schedule for delivery. Our team did a magnificent job of detailing on the steel of this project without any blunder and hassle for our client M/s. Shapoorji Pallonji.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project17 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class="content"><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>Pacific Coast Canola | <span>Warden, Washington, USA</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider17><ul class=slides><li><img src=images/industrial/canola/canola1.jpg><li><img src=images/industrial/canola/canola2.jpg><li><img src=images/industrial/canola/canola3.jpg><li><img src=images/industrial/canola/canola4.jpg></ul></div><div class=flexslider id=carousel17><ul class=slides><li><img src=images/industrial/canola/canola1.jpg><li><img src=images/industrial/canola/canola2.jpg><li><img src=images/industrial/canola/canola3.jpg><li><img src=images/industrial/canola/canola4.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>An exclusive architectural and close to nature splendor blend, has been depicted in one of a prestigious project of our client in Aarvali Resort, Goa project. This necklace shaped structure Resort consisting of steel is detailed by Techflow Engineers(I) Pvt Ltd.. Our scope included structural steel detailing of the roof of this piece of Art, With distinctive and tricky features like twisted members, each member having its own geometry with out absolutely no similarity with each other.<p>This structure was not only an intricate one but also needed a very tight schedule for delivery. Our team did a magnificent job of detailing on the steel of this project without any blunder and hassle for our client M/s. Shapoorji Pallonji.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project18 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class="content"><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>Bisha Gold Mine - Eritrea | <span>Asmara, Central, Eritrea</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider18><ul class=slides><li><img src=images/industrial/bisha/bisha1.jpg><li><img src=images/industrial/bisha/bisha2.jpg></ul></div><div class=flexslider id=carousel18><ul class=slides><li><img src=images/industrial/bisha/bisha1.jpg><li><img src=images/industrial/bisha/bisha2.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>An exclusive architectural and close to nature splendor blend, has been depicted in one of a prestigious project of our client in Aarvali Resort, Goa project. This necklace shaped structure Resort consisting of steel is detailed by Techflow Engineers(I) Pvt Ltd.. Our scope included structural steel detailing of the roof of this piece of Art, With distinctive and tricky features like twisted members, each member having its own geometry with out absolutely no similarity with each other.<p>This structure was not only an intricate one but also needed a very tight schedule for delivery. Our team did a magnificent job of detailing on the steel of this project without any blunder and hassle for our client M/s. Shapoorji Pallonji.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project19 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class="content"><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>Horne Payne Operations Building | <span>Burnaby, British Columbia, Canada</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider19><ul class=slides><li><img src=images/industrial/horne/horne1.jpg><li><img src=images/industrial/horne/horne2.jpg><li><img src=images/industrial/horne/horne3.jpg><li><img src=images/industrial/horne/horne4.jpg></ul></div><div class=flexslider id=carousel19><ul class=slides><li><img src=images/industrial/horne/horne1.jpg><li><img src=images/industrial/horne/horne2.jpg><li><img src=images/industrial/horne/horne3.jpg><li><img src=images/industrial/horne/horne4.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>An exclusive architectural and close to nature splendor blend, has been depicted in one of a prestigious project of our client in Aarvali Resort, Goa project. This necklace shaped structure Resort consisting of steel is detailed by Techflow Engineers(I) Pvt Ltd.. Our scope included structural steel detailing of the roof of this piece of Art, With distinctive and tricky features like twisted members, each member having its own geometry with out absolutely no similarity with each other.<p>This structure was not only an intricate one but also needed a very tight schedule for delivery. Our team did a magnificent job of detailing on the steel of this project without any blunder and hassle for our client M/s. Shapoorji Pallonji.</div></div></div></div><div class=clear></div></div></div></div></div><div class="SliderwithOverlay overlay"id=project20 data-animation-in=fadeInDown data-animation-out=fadeOutUp><div class=overlay-box><div class="content"><div class="next-previous-arrow"><a href="javascript:void(0)" class="previous-arrow">Previous Project</a><a href="javascript:void(0)" class="next-arrow">Next Project</a></div><div class=overlay-header><div class=slideInfo><h2>Glenn Square | <span>Anchorage, Alaska, USA</span></h2></div></div><div class=overlay-content><div class=grid-12><div class="grid-8 sliderimages"><div class=flexslider id=slider20><ul class=slides><li><img src=images/industrial/project1.jpg><li><img src=images/industrial/project2.jpg><li><img src=images/industrial/project3.jpg><li><img src=images/industrial/project2.jpg><li><img src=images/industrial/project1.jpg><li><img src=images/industrial/project3.jpg></ul></div><div class=flexslider id=carousel20><ul class=slides><li><img src=images/industrial/project1.jpg><li><img src=images/industrial/project2.jpg><li><img src=images/industrial/project3.jpg><li><img src=images/industrial/project2.jpg><li><img src=images/industrial/project1.jpg><li><img src=images/industrial/project3.jpg></ul></div></div><div class="grid-4 overlaycntr"><div class=overlayInfo><div class=scrollbars><p>An exclusive architectural and close to nature splendor blend, has been depicted in one of a prestigious project of our client in Aarvali Resort, Goa project. This necklace shaped structure Resort consisting of steel is detailed by Techflow Engineers(I) Pvt Ltd.. Our scope included structural steel detailing of the roof of this piece of Art, With distinctive and tricky features like twisted members, each member having its own geometry with out absolutely no similarity with each other.<p>This structure was not only an intricate one but also needed a very tight schedule for delivery. Our team did a magnificent job of detailing on the steel of this project without any blunder and hassle for our client M/s. Shapoorji Pallonji.</div></div></div></div><div class=clear></div></div></div></div></div>'
+	  
+	  setTimeout(function(){
+	  document.getElementById("overlay").innerHTML = slider;
+	   }, 500);
+});
+$(function(){
+	$('.slidergallery li a').click(function(e){	
+		e.preventDefault();
+		var slideno = $(this).attr('data-slide');
+		var overlayName=$(this).attr('data-ovelayname');
+		overlayPass(slideno,overlayName)
+	});
+	$(document).on('click', '.closeBtn', function () {
+			/*$('.slider-for').slick("unslick");
+		  $('.slider-nav').slick("unslick");*/
+	});
+})	
+new WOW().init();
+$(function(){
+	$(".scrollrow a").click(function() {
+    $(".scrollrow a").removeClass("active");
+    $(this).addClass("active");
+	});
+	
+	$(document).on('click', '.previous-arrow', function () {
+	  	var iddata = $(this).parents(".SliderwithOverlay").attr("id");
+		var suffix = iddata.match(/\d+/);
+		var varid = parseInt(suffix) - 1;
+
+		if(varid < 1){
+			$('.overlay').find('.overlay-box').removeClass('animated').removeClass(animationIn).addClass('animated ' + animationOut);
+			$('body .overlay-bg').fadeOut(1000, function() {
+				$(this).remove();
+				$('.overlay').css('visibility', 'hidden').css('display', 'none').find('.overlay-box').removeClass('animated').removeClass(animationIn).removeClass(animationOut);
+			});
+		}
+		else
+		{
+			$("#"+iddata).css('visibility', 'hidden').css('display', 'none');
+			//$("#"+iddata).find('.content').css("display","none");
+			overlayBox('project'+varid)
+		}
+	});
+	
+	$(document).on('click', '.next-arrow', function () {
+	  	var iddata = $(this).parents(".SliderwithOverlay").attr("id");
+		var suffix = iddata.match(/\d+/);
+		var varid = parseInt(suffix) + 1;
+
+		if(varid > 19){
+			$('.overlay').find('.overlay-box').removeClass('animated').removeClass(animationIn).addClass('animated ' + animationOut);
+			$('body .overlay-bg').fadeOut(1000, function() {
+				$(this).remove();
+				$('.overlay').css('visibility', 'hidden').css('display', 'none').find('.overlay-box').removeClass('animated').removeClass(animationIn).removeClass(animationOut);
+			});
+		}
+		else
+		{
+			$("#"+iddata).css('visibility', 'hidden').css('display', 'none');
+			//$("#"+iddata).find('.content').css("display","none");
+			overlayBox('project'+varid)
+		}
+	});
+	
+}) 
+</script> 
+<script src="scripts/js_class.js" type="text/javascript"></script>
+<script src="scripts/common.js" type="text/javascript"></script>
+</body>
+</html>

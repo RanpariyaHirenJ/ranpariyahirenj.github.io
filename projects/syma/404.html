@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Welcome to SYMA</title>
+
+  <link rel='stylesheet' href='https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css'>
+  <link rel="stylesheet" href="styles/plugin-style.css" type="text/css">
+  <link rel="stylesheet" href="styles/style.css" type="text/css">
+</head>
+
+<body class="aboutpage isscrolledactive">
+  <div class="start-page"
+    style="background: #fff;width: 100vw;height: 100vh;z-index: 99999999;position: fixed;top: 0;left: 0;"></div>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="" title=""></a> </div>
+        <nav class="nav">
+          <div class="container menu-wraper">
+            <ul class="menuL">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About us</a></li>
+              <li class="has-sub-menu"><a href="services.html">Services</a>
+                <ul>
+                  <li><a href="safe-5-0.html">SAFe 5.0 Training</a></li>
+                  <li><a href="amazon-web-services.html">Amazon Web Services (AWS)</a></li>
+                  <li><a href="management-consulting.html">Management Consulting</a></li>
+                </ul>
+              </li>
+              <li><a href="blog.html">Blogs</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <ul class="menuR">
+              <li class="RequestDemo"> <a href="contact.html"><span class="services-button">Send Enquiry<i class="far fa-long-arrow-right"></i></span></a></li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+        </nav>
+        <div class="clear"></div>
+      </div>
+      <div class="toggle-btn"> <span></span> <span></span> <span></span> </div>
+    </header>
+    <main class=" page404 ">
+
+      <div class="mt_lg_50"></div>
+      <div class="container row pt_150 pb_100 page404">
+        <div class="col-lg-5 col-sm-12 p0">
+          <div class="banner-text AboutContent">
+            <h1>404</h1>
+            <h2>Page not found</h2>
+            <p class="mt_30">Ohh... You have requested <br>the page that is no longer there.</p>
+            <div class="btncntr">
+              <a href="index.html" class="isrev"><span class="services-button">Home <i class="far fa-long-arrow-right"></i></span></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7 col-sm-12 p0 mt_sm_50 fr text-center">
+          <img src="images/404-banner.jpg">
+        </div>
+      </div>
+
+      <div class="ContactArea">
+        <div class="background-overlay"></div>
+        <div class="container">
+          <div class="col-lg-6 col-sm-12">
+            <div class="AboutContent">
+              <span class="text text-w">Contact Us</span>
+              <h2 class="text-w">Get A Quote <br>Right Now</h2>
+              <button class="MuiButtonBase-root MuiButton-root MuiButton-text" tabindex="0" type="button" onclick="location.href='contact.html'">
+                <span class="MuiButton-label">GO <i class="far fa-long-arrow-right"></i></span>
+                <span class="MuiTouchRipple-root"></span>
+              </button>
+              <p class="copywrite mt_100"> &copy;
+                <script>document.write(new Date().getFullYear());</script> All Rights Reserved. Site by <a
+                  href="https://www.interminddigital.com/" target="_blank">Intermind</a></p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-12 mt_lg_60">
+            <div class="col-lg-6 col-sm-12">
+              <a class="w100" href="mailto:info@symaventures.com">
+                <div class="single__box mail">
+                  <div class="box__bg__icon__text"><i class="fa fa-envelope-o"></i></div>
+                  <div class="box__subtitle">Mail Us</div>
+                  <h3 class="box__title">info@symaventures.com</h3>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+              <a class="w100" href="tel:99887 76655">
+                <div class="single__box tell">
+                  <div class="box__bg__icon__text"><i class="fas fa-phone"></i></div>
+                  <div class="box__subtitle">Call Us</div>
+                  <h3 class="box__title">99887 76655</h3>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <div class="RequestDemocntr">
+    <a href="contact.html">Request Demo</a>
+  </div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src='https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js'></script>
+  <script src="scripts/plugins-min.js" type="text/javascript"></script>
+  <script src="scripts/common.js" type="text/javascript"></script>
+  <script src="scripts/sticky-kit.js"></script>
+  <script>
+
+    $('body').addClass('isscrolled');
+    if ($(window).width() > 1023) {
+      $(window).load(function () {
+        var liMaxHeight = -1;
+        var node;
+        $(".services-text h3").each(function (index) {
+          if ($(this).outerHeight() > liMaxHeight) {
+            liMaxHeight = $(this).outerHeight();
+            node = index;
+          }
+        });
+        $('.services-text h3').css('min-height', liMaxHeight);
+      })
+    }	
+
+    if ($(window).width() >= 1024) {
+      $(".latestblog").stick_in_parent()  
+    }
+
+  </script>
+</body>
+
+</html>

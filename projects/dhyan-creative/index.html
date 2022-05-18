@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en" id="homepage">
+<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="theme-color" content="#000000">
+
+
+		<link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+		<link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+
+		<link rel="manifest" href="manifest.json">
+
+		<title>Welcome To Dhyan Creative</title>
+		<style>
+			html, body {
+				background: #121313;
+			}
+		</style>
+
+
+		<link href="https://fonts.googleapis.com/css?family=Expletus+Sans:400,500,700|Montserrat:400,600,700" rel="stylesheet">
+
+		<!-- inject:css -->
+		
+		<link rel="stylesheet" href="assets/vendor.min.css">
+		
+		<link rel="stylesheet" href="assets/styles/main.css">
+		
+		<!-- endinject -->
+
+		<script>
+			// Picture element HTML5 shiv
+			document.createElement( 'picture' );
+		</script>
+		<script type="text/javascript" src="assets/vendor/greensock/TweenMax.min.js"></script>
+		<script type="text/javascript" src="assets/vendor/nprogress/nprogress.js"></script>
+	</head>
+	<body>
+		<div class="check-device">
+			<div>
+				<i class="icon-devices"></i>
+				<p>Check your device orientation</p>
+			</div>
+		</div>
+
+		<!-- Activate Javascript -->
+		<noscript>
+			<div class="js-activate">
+				<div>
+					<h2>Ups!</h2>
+					<p>You need to enable javascript</p>
+				</div>
+			</div>
+		</noscript>
+
+
+		<!-- Preload -->
+		<div class="preload">
+			<div class="stars-wrapper"></div>
+
+			<script>
+				navigator.sayswho = (function(){
+				    var ua = navigator.userAgent, tem,
+				    M = ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+				    if(/trident/i.test(M[1])){
+				        tem =  /\brv[ :]+(\d+)/g.exec(ua) || [];
+				        return 'IE ' + (tem[1] || '');
+				    }
+				    if(M[1] === 'Chrome'){
+				        tem = ua.match(/\b(OPR|Edge)\/(\d+)/);
+				        if(tem != null) return tem.slice(1).join(' ').replace('OPR', 'Opera');
+				    }
+				    M = M[2] ? [M[1], M[2]] : [navigator.appName, navigator.appVersion, '-?'];
+				    if((tem = ua.match(/version\/(\d+)/i)) != null) M.splice(1, 1, tem[1]);
+				    return M.join(' ');
+				})();
+
+				if ( navigator.sayswho.split(' ')[0].toLowerCase() === 'safari' ) {
+					document.querySelector('body').classList.add('safari');
+				}
+
+				if ( navigator.sayswho.split(' ')[0].toLowerCase() === 'firefox' ) {
+					document.querySelector('body').classList.add('firefox');
+				}
+
+				var starsWrapper = document.querySelector('.stars-wrapper');
+				starsWrapper.innerHTML += '<div class="stars-container"><div class="stars"></div><div class="stars2"></div><div class="stars3"></div></div>';
+			</script>
+
+			<!-- Logo animated in preload -->
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				 viewBox="0 0 88.7 108.1" style="enable-background:new 0 0 708.7 108.1;" xml:space="preserve" class="preload-logo">
+				<style type="text/css">
+					.st0{fill:#ffffff;}
+				</style>
+				
+			</svg>
+
+			<!-- Logo symbol isolated -->
+			<div class="fp-symbol">
+				<ul>
+					<li id="fp-imagine">Brand Consultancy</li>
+					<li id="fp-create">Brand Strategy</li>
+					<li id="fp-enjoy">Corporate Identity Design</li>
+				</ul>
+				<span class="fp-symbol-corner"></span><span class="fp-symbol-corner"></span>
+			</div>
+
+
+			<!-- Load Percentage -->
+			<span class="preload-percentage">0</span>
+
+
+			<div class="intro">
+				<div class="intro-text">
+					<span class="intro-text-words">D</span>
+					<span class="intro-text-words">H</span>
+					<span class="intro-text-words">Y</span>
+					<span class="intro-text-words">A</span>
+					<span class="intro-text-words">N</span>
+					<span class="intro-text-words"> </span>
+					<span class="intro-text-words">C</span>
+					<span class="intro-text-words">R</span>
+					<span class="intro-text-words">E</span>
+					<span class="intro-text-words">A</span>
+					<span class="intro-text-words">T</span>
+					<span class="intro-text-words">I</span>
+					<span class="intro-text-words">V</span>
+					<span class="intro-text-words">E</span>
+					<span class="intro-text-words"> </span>
+				</div>
+			</div>
+			<div class="wrap"></div>
+			<div class="loading">
+				<div class="loading-placeholder">
+					<img src="assets/images/loader.png" alt="">
+				</div>
+				<div class="loading-progress">
+					<img src="assets/images/loader.png" alt="">
+				</div>
+			</div>
+			<div class="sound-warning">
+				<p><span class="icon-audio"></span> Turn on the sound for a better experience</p>
+			</div>
+			<div class="instructions">
+				<div>
+					<div class="mouse"><span></span></div>
+					<p>scroll or drag to explore</p>
+				</div>
+			</div>
+		</div>
+
+		<script>
+
+			setTimeout(function(){
+				document.querySelector('.intro-text').classList.add('enter');
+			}, 1000);
+
+			var particles = document.querySelector('.wrap');
+			for (var i = 100 - 1; i >= 0; i--) {
+				particles.innerHTML += '<div class="c"></div>';
+			}
+		
+			var preload = document.querySelector('.preload');
+				preloadLogo = document.querySelector('.preload-logo'),
+				intro = document.querySelector('.intro'),
+				wrapParticles = document.querySelector('.wrap'),
+				starsContainer = document.querySelector('.stars-container'),
+				percentage = document.querySelector('.preload-percentage'),
+				loading = document.querySelector('.loading'),
+				soundWarning = document.querySelector('.sound-warning'),
+				progressImage = document.querySelector('.loading-progress'),
+				symbol = document.querySelector('.fp-symbol'),
+				leave = null,
+				loaded = null;
+
+
+			var progressInterval = setInterval(function(){
+				var progress = NProgress.status * 100;
+				if ( progress < 100 && NProgress.status != null ) {
+					percentage.innerHTML = Math.floor(progress);
+					progressImage.style.height = Math.floor(progress) + '%';
+				} else {
+					// If status return null set progress to 100%
+					percentage.innerHTML = '0';
+					progressImage.style.height = '100%';
+					loaded = 1;
+					clearInterval(progressInterval);
+				}
+			}, 200);
+
+
+			new TimelineMax().to( preloadLogo, 1, { y: 0, opacity: 1, ease:Power1.easeInOut } )
+			.to( starsContainer, 0.5, { opacity: 1, ease:Power1.easeInOut }, '-=1' )
+			.to( intro, 0.5, { opacity: 1, ease:Power1.easeInOut }, '-=1.5' )
+			.add( function() {
+				// IE - Edge workaround
+				var span = document.querySelectorAll('.intro span');
+				for (var i = 0; i < span.length; i++) {
+					new TimelineMax().to( span[i], 1, { color: 'rgba(255,255,255,0)', ease:Power1.easeInOut } );
+				}
+			}, '+=1' )
+			.to( soundWarning, 0.5, { opacity: 1, y: 0, ease:Power1.easeInOut }, '-=1.5' )
+			.to( document.querySelector('.intro'), 1, { color: 'rgba(255,255,255,0)', ease:Power1.easeInOut }, '+=0.5' )
+			.to( intro, 1, { opacity: 0, ease:Power1.easeInOut }, '+=0.5' )
+			.add( function() {
+				if ( (NProgress.status * 100) < 100 && NProgress.status != null ) {
+					new TimelineMax().to( preloadLogo, 0.5, { y: 0, opacity: 1, ease:Power1.easeInOut }, '-=1' )
+					.to( starsContainer, 2, { opacity: 1 } )
+					.to( percentage, 0.5, { opacity: 1, ease:Power1.easeInOut }, '-=2.5' )
+					.to( loading, 0.5, { opacity: 1, ease:Power1.easeInOut }, '-=2' )
+					.add( function() {
+						if ( leave == null && loaded == 1 ) {
+							leaveIntro();
+						}
+					});
+				}
+			} );
+
+			NProgress.start();
+
+			function leaveIntro() {
+				leave = 1;
+				var imagine = document.getElementById('fp-imagine');
+				var create = document.getElementById('fp-create');
+				var enjoy = document.getElementById('fp-enjoy');
+				var instructions = document.querySelector('.instructions');
+
+				if ( getCookie('intro') == 1 ) {
+					new TimelineMax()
+					.to( preloadLogo, 1, { y: (window.innerHeight / 2) - (preloadLogo.getBBox().height / 2), top: 0, ease:Expo.easeInOut } )
+					.to( symbol, 0.5, { opacity: 1, ease:Power1.easeInOut } )
+					.to( preloadLogo, 1, { opacity: 0, ease:Power1.easeInOut } )
+					.to( soundWarning, 1, { opacity: 0, y: 0, ease:Power1.easeInOut }, '-=1.5' )
+					.to( symbol, 0.25, { margin: 0, ease:Power1.easeInOut } )
+					.to( preload, 2, { opacity: 0, ease:Power1.easeInOut }, '+=0.5' )
+					.add( function() {
+						preload.parentNode.removeChild(preload);
+					}, '-=0.25' );
+				} else {
+					new TimelineMax()
+					.to( preloadLogo, 1, { y: (window.innerHeight / 2) - (preloadLogo.getBBox().height / 2), top: 0, ease:Expo.easeInOut } )
+					.to( symbol, 0.5, { opacity: 1, ease:Power1.easeInOut } )
+					.to( preloadLogo, 1, { opacity: 0, ease:Power1.easeInOut } )
+					.to( symbol, 0.25, { margin: 0, ease:Power1.easeInOut } )
+					.to( symbol, 0.25, { height: '40px', ease:Power1.easeInOut }, '+=0.5' )
+					.to( symbol, 0.5, { width: '400px', ease:Power1.easeInOut } )
+					.to( imagine, 0.5, { opacity: 1, ease:Power1.easeInOut } )
+					.to( imagine, 0.5, { opacity: 0, ease:Power1.easeInOut } )
+					.to( create, 0.5, { opacity: 1, ease:Power1.easeInOut } )
+					.to( create, 0.5, { opacity: 0, ease:Power1.easeInOut } )
+					.to( enjoy, 0.5, { opacity: 1, ease:Power1.easeInOut } )
+					.to( enjoy, 0.5, { opacity: 0, ease:Power1.easeInOut } )
+					.to( symbol, 0.5, { width: '18px', ease:Power1.easeInOut } )
+					.to( symbol, 0.25, { height: '25px', ease:Power1.easeInOut } )
+					.to( symbol, 1, { opacity: 0, ease:Power1.easeInOut } )
+					.to( soundWarning, 1, { opacity: 0, y: 0, ease:Power1.easeInOut }, '-=1.5' )
+					.to( instructions, 1, { opacity: 1, ease:Power1.easeInOut }, '-=0.2' )
+					.to( symbol, 0.25, { opacity: 0 } )
+					.to( instructions, 1, { opacity: 0, ease:Power1.easeInOut }, '+=2' )
+					.to( preload, 2, { opacity: 0, ease:Power1.easeInOut } )
+					.add( function() {
+						preload.parentNode.removeChild(preload);
+						setCookie('intro', 1, 15);
+					}, '-=0.25' );
+				}
+			}
+
+			window.addEventListener('load', function(event) {
+				NProgress.done();
+				new TimelineMax()
+				.to( progressImage, 0.5, { height: '100%', ease:Power1.easeInOut } )
+				.add( function() {
+					percentage.innerHTML = '100';
+				}, '-=0.5' )
+				.to( percentage, 1, { opacity: 0, ease:Power1.easeInOut } )
+				.to( loading, 1, { opacity: 0, ease:Power1.easeInOut }, '-=1' )
+				.add( function() {
+					if ( leave == null ) { leaveIntro(); }
+				} );
+			});
+
+		</script>
+		<!-- Preload ends -->
+
+
+		<!-- To check which stage is active -->
+		<div id="offset-control"></div>
+
+
+		<!--  -->
+		<div id="arrow-navigate">explore</div>
+
+
+		<!-- Main Menu -->
+		<div class="head-menu">
+			<div class="row">
+				<a href="index.html" class="logo">
+					<div class="">
+                         <img src="assets/images/logo.png" >
+					</div>
+				</a>
+				<button class="burguer-menu"></button>
+			</div>
+		</div>
+		<!-- Main Menu ends -->
+
+
+		<!-- Bottom Menu -->
+		<div class="bottom">
+			<div class="row">
+				<div class="scroll-to-explore">
+					<span></span><br>
+					scroll to explore
+				</div>
+				<button class="bottom__info-trigger"><span></span>Info</button>
+				<div class="bottom__nav">
+					<div class="bottom__nav__column" onclick="navAnchor(this, '.box.first', 'nav__first');">
+						<button class="active" onclick="navAnchor(this, '.box.first', 'nav__first');"></button>
+						<span id="nav__first" class="nav__current"><i></i></span>
+					</div>
+					<div class="bottom__nav__column" onclick="navAnchor(this, '.box.second', 'nav__second');">
+						<button onclick="navAnchor(this, '.box.second', 'nav__second');"></button>
+						<span id="nav__second"><i></i></span>
+					</div>
+					<div class="bottom__nav__column" onclick="navAnchor(this, '.box.third', 'nav__third');">
+						<button onclick="navAnchor(this, '.box.third', 'nav__third');"></button>
+						<span id="nav__third"><i></i></span>
+					</div>
+					<div class="bottom__nav__column" onclick="navAnchor(this, '.box.fourth', 'nav__fourth');">
+						<button onclick="navAnchor(this, '.box.fourth', 'nav__fourth');"></button>
+						<span id="nav__fourth"><i></i></span>
+					</div>
+				</div>
+				<div class="bottom__tools"><!-- Bottom right controls -->
+					<audio controls loop>
+						<source src="dhyan-creative-sound.mp3" type="audio/mpeg">
+					</audio>
+					<!--<div class="lang-menu">
+						<button>EN</button>
+						<ul>
+							<li><a href="#">PT</a></li>
+							<li><a href="#">FR</a></li>
+						</ul>
+					</div>-->
+					<button class="tools__sound"></button>
+					<button class="tools__share"></button>
+				</div>
+			</div>
+			<!-- info reveal -->
+			<div class="bottom__info">
+				<div class="bottom__info__container">
+					<div class="bottom__info-close"><span></span> Close</div>
+					<ul>
+						<li><a href="#" target="_blank">Blog</a></li>
+						<li><a href="#" class="newsletter-trigger">Newsletter</a></li>
+						<!-- <li><a href="">Privacy Policy</a></li> -->
+					</ul>
+					<div class="bottom__info-contact">
+                        <div class="contect-phone-home">8291112613 / 9769543555</div>
+						<!--<button class="icon-share"></button>--><a href="mailto:info@dhyancreative.com">info@dhyancreative.com</a>
+					</div>
+				</div>
+			</div>
+			<!-- info reveal ends -->
+		</div>
+		<!-- Bottom Menu ends -->
+
+
+
+		<!-- Newsletter -->
+		<div class="newsletter">
+			<div>
+				<h4>Newsletter Subscription</h4>
+				<form action="#" method="post" class="js-form-newsletter">
+					<div class="row">
+						<div class="col-xs-12 col-md-8">
+							<label for="">Email*</label>
+							<input type="text" name="assinar" placeholder="email@example.com">
+							<input type="hidden" name="newsletter" value="newsletter">
+						</div>
+						<div class="col-md-4">
+							<button class="newsletter__send js-btn-submit no-captcha">Send</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="newsletter__close"></div>
+		</div>
+		<!-- Newsletter ends -->
+
+		<!-- Share fullscreen -->
+		<div class="share-container">
+			<div class="share-container__list">
+				<button class="share-close">Close <span></span></button>
+				<div class="share-list__wrapper">
+					<h3>Share</h3>
+					<ul class="share-list__main">
+						<li>
+							<a href="#" target="_blank">
+								<i class="icon-facebook"></i>
+								Facebook
+							</a>
+						</li>
+						<li>
+							<a href="#" target="_blank">
+								<i class="icon-googleplus"></i>
+								Google Plus
+							</a>
+						</li>
+						<li>
+							<a href="#" target="_blank">
+								<i class="icon-twitter"></i>
+								Twitter
+							</a>
+						</li>
+						<li>
+							<a href="#" target="_blank">
+								<i class="icon-instagram"></i>
+								Instagram
+							</a>
+						</li>
+						<li>
+							<a href="#" target="_blank">
+								<i class="icon-youtube"></i>
+								Youtube
+							</a>
+						</li>
+						<li>
+							<a href="#" target="_blank">
+								<i class="icon-linkedin"></i>
+								Linkedin
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="wrapper">
+			<div class="scrollbox3">
+				<div class="container">
+
+					<!-- Sky scene img -->
+					<img src="assets/images/sky.jpg" alt="" data-speed="7" class="imgPaneSky">
+
+					<!-- Main scene img -->
+					<img src="assets/images/main-scene-min.png" alt="" class="imgPane" style="opacity:0;">
+
+
+					<!-- First Stage -->
+					<div class="box first">
+						<!-- Stage description -->
+						<div class="box__intro">
+							<div class="intro__desc">
+								<h2>Brand Consultancy ,Corporate Identity Design</h2>
+								<!-- <p>Augmented reality multiplayer</p> -->
+							</div>
+						</div>
+						<div data-speed="20" class="px-el" id="photographer">
+							<img src="assets/images/rapaz_stage1.png" alt="" data-size="45">
+						</div>
+						<div data-speed="5" class="px-el" id="dwarf">
+							<img src="assets/images/anao.png" alt="" data-size="44">
+						</div>
+						<div data-speed="30" class="px-el" id="airplane">
+							<img src="assets/images/aviao.png" alt="" id="plane" data-size="20">
+							<img src="assets/images/nuvem1.png" alt="" id="cloud-1" data-size="3.14">
+							<img src="assets/images/nuvem2.png" alt="" id="cloud-2" data-size="2.4">
+							<img src="assets/images/nuvem3.png" alt="" id="cloud-3" data-size="6.38">
+						</div>
+						<div data-speed="-10" class="px-el" id="flamingos">
+							<img src="assets/images/flamingos.png" alt="" data-size="24">
+						</div>
+						<button class="interaction" id="first-interaction" data-target="first">
+							<span></span>
+							<p>About Us</p>
+						</button>
+						<div data-speed="8" class="px-el" id="woman">
+							<img src="assets/images/rapariga_stage1.png" alt="" data-size="50">
+						</div>
+					</div>
+
+					<!-- Second Stage -->
+					<div class="box second">
+						<!-- Stage description -->
+						<div class="box__intro">
+							<div class="intro__desc">
+								<h2>Creative Production</h2>
+								<!-- <p>The blend both real and virtual worlds</p> -->
+							</div>
+						</div>
+						<div class="px-el" data-speed="-10" id="case-interaction">
+							<button class="interaction" id="seventh-interaction" data-target="seventh">
+								<span></span>
+								<p>Services</p>
+							</button>
+						</div>
+						<div data-speed="-10" class="px-el" id="couple">
+							<img src="assets/images/casal_stage2.png" alt="" data-size="55">
+						</div>
+						<div data-speed="-10" class="px-el" id="case">
+							<img src="assets/images/case.png" alt="" data-size="15">
+						</div>
+						<div data-speed="10" class="px-el" id="woman-with-dog">
+							<img src="assets/images/rapariga_cao_stage2.png" alt="" data-size="52">
+						</div>
+						<div id="persona" class="px-el" data-speed="0">
+							<img src="assets/images/persona.png" alt="" data-size="36">
+						</div>
+						<button class="interaction--feat" id="persona-interaction">
+							<span></span>
+							<p>Persona Interaction</p>
+						</button>
+						<button class="interaction" id="second-interaction" data-target="third">
+							<span></span>
+							<p>Our Clients</p>
+						</button>
+					</div>
+
+					<!-- Third Stage -->
+					<div class="box third">
+						<!-- Stage description -->
+						<div class="box__intro">
+							<div class="intro__desc">
+								<h2>The world! Your Playground.</h2>
+							</div>
+						</div>
+						<div id="explorer" class="px-el" data-speed="-10">
+							<img src="assets/images/turista_mapa_stage3.png" alt="" data-size="45">
+						</div>
+						<button class="interaction px-el" id="third-interaction" data-target="third" onclick="location.href = 'contact.html';">
+							<span></span>
+							<p>Contact Us</p>
+						</button>
+						<div data-speed="20" class="px-el" id="couple-running">
+							<img src="assets/images/casal_run_stage3.png" alt="" data-size="38">
+						</div>
+					</div>
+
+					<!-- Fourth Stage -->
+					<div class="box fourth">
+						<!-- Stage description -->
+						<div class="box__intro">
+							<div class="intro__desc">
+								<h2>Blend the real with the virtual</h2>
+							</div>
+						</div>
+						<button class="interaction" id="fourth-interaction" data-target="fourth">
+							<span></span>
+							<p>Discover</p>
+						</button>
+					</div>
+
+
+				</div><!-- .container -->
+			</div><!-- .scrollbox3 -->
+		</div><!-- .wrapper -->
+	
+
+
+
+		<div class="interaction-overlay" style="display: none; opacity: 0;">
+			<div class="overlay-content interaction__first">
+				<div class="interaction-desc">
+					<div class="interaction-desc__title">
+						<h3>About Us</h3>
+						<i class="icon-entertainment"></i>
+						<span></span>
+					</div>
+					<div class="interaction-desc__content">
+						<b>Dhyan Creative</b>
+						<p>Dhyan Creative  is a close team of creative professionals based in Mumbai, India. who come up with atypical ideas to help your brand create an identity in the world and . Our work ranges from brand consultancy, brand strategy, corporate identity design, to various print/digital mediums and creative production.</p>
+						<!-- <button>close to go back experience</button> -->
+					</div>
+				</div>
+			</div>
+
+			<div class="overlay-content interaction__seventh">
+				<div class="interaction-desc">
+					<div class="interaction-desc__title">
+						<h3>Services</h3>
+						<i class="icon-education"></i>
+						<span></span>
+					</div>
+					<div class="interaction-desc__content">
+                    <div class="service-cntr">
+                    	<ul>
+                        	<li>1) <a href="services.html">Creative Production</a></li>
+                        	<li>2) <a href="services.html">Web Development</a></li>
+                        	<li>3) <a href="services.html">3d Modelling</a></li>
+                        	<li>4) <a href="services.html">Brand Identity</a></li>
+                        </ul>
+                    </div>
+						<!-- <button>close to go back experience</button> -->
+					</div>
+				</div>
+			</div>
+            
+			<div class="overlay-content interaction__second">
+                <div class="interaction-desc">
+                        <div class="interaction-desc__title">
+                            <h3>Our Clients</h3>
+                            <i class="icon-location_based"></i>
+                            <span></span>
+                        </div>
+                        <div class="interaction-desc__content">
+                        <div class="service-cntr">
+                            <ul>
+                                <li>1) <a href="">Akshar group</a></li>
+                                <li>2) <a href="">Kapi corporation</a></li>
+                                <li>3) <a href="">Tvacha skin clinic</a></li>
+                                <li>4) <a href="">Maquillage</a></li>
+                                <li>5) <a href="">Shreeji</a></li>
+                            </ul>
+                        </div>
+                            <!-- <button>close to go back experience</button> -->
+                        </div>
+                    </div>
+			</div>
+
+			<div class="overlay-content interaction__third">
+				<div class="interaction-desc">
+					<div class="interaction-desc__title">
+						<h3>Our Clients</h3>
+						<i class="icon-location_based"></i>
+						<span></span>
+					</div>
+					<div class="interaction-desc__content">
+                    <div class="service-cntr">
+                    	<ul>
+                        	<li>1) <a href="">Akshar group</a></li>
+                        	<li>2) <a href="">Kapi corporation</a></li>
+                        	<li>3) <a href="">Tvacha skin clinic</a></li>
+                        	<li>4) <a href="">Maquillage</a></li>
+                            <li>5) <a href="">Shreeji</a></li>
+                        </ul>
+                    </div>
+						<!-- <button>close to go back experience</button> -->
+					</div>
+				</div>	
+			</div>
+            
+            
+            
+			<div class="overlay-content interaction__sixth">
+				<div data-speed="0" class="px-el" id="couch">
+					<img src="assets/images/senhor.png" alt="" data-size="59">
+				</div>
+				<div class="interaction-desc">
+					<div class="interaction-desc__title">
+						<h3>Augmented/Mixed Reality</h3>
+						<i class="icon-ar"></i>
+						<span></span>
+					</div>
+					<div class="interaction-desc__content">
+						<!-- <b>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, culpa.</b> -->
+						<p>Go on! Make every item, every building, every statue come to life by adding virtual items. Turn everyday objects, images, and places into new opportunities for engagement through striking augmented reality experiences. Build real Mixed-Reality experiences and deliver unique results enjoyable by players everywhere.</p>
+						<!-- <button>close to go back experience</button> -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- 360deg view -->
+		<!--<div id="museum" class="museum-container">
+			<span></span>
+		</div>-->
+
+
+		<!-- Inside Room -->
+		<div id="room" class="room-container">
+			<div class="room__characters">
+				<button class="interaction-leave" id="fifth-interaction">
+					<span></span>
+				</button>
+				<button class="interaction" id="sixth-interaction">
+					<span></span>
+					<p>Discover</p>
+				</button>
+				<div id="room__moon" class="room__moon layer" data-depth="0.10">
+					<img src="assets/images/lua.png" alt="" data-size="22">
+				</div>
+				<div id="room__stones" class="room__stones layer" data-depth="0.30">
+					<img src="assets/images/3pedras.png" alt="" data-size="11">
+				</div>
+				<div id="room__astronaut" class="room__astronaut layer" data-depth="0.50">
+					<img src="assets/images/astronauta.png" alt="" data-size="49">
+				</div>
+				<div id="room__metheor" class="room__metheor layer" data-depth="0.15">
+					<img src="assets/images/meteorito1.png" alt="" data-size="21">
+				</div>
+				<div id="room__metheor2" class="room__metheor2 layer" data-depth="0.20">
+					<img src="assets/images/meteorito2.png" alt="" data-size="21">
+				</div>
+				<div id="room__planet" class="room__planet layer" data-depth="0.10">
+					<img src="assets/images/planeta.png" alt="" data-size="68">
+				</div>
+				<div id="room__interface" class="room__interface layer" data-depth="0.40">
+					<img src="assets/images/interface.png" alt="" data-size="20">
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+		<script type="text/javascript" src="assets/vendor/greensock/Draggable.min.js"></script>
+		<script type="text/javascript" src="assets/vendor/greensock/ThrowPropsPlugin.min.js"></script>
+		<script type="text/javascript" src="assets/vendor/greensock/ScrollToPlugin.min.js"></script>
+		<script type="text/javascript" src="assets/vendor/greensock/DrawSVGPlugin.min.js"></script>
+		<script type="text/javascript" src="assets/vendor/greensock/CustomEase.min.js"></script>
+		<script type="text/javascript" src="assets/vendor/krpano/tour.js"></script>
+
+
+		<!-- inject:js -->
+		<script src="assets/vendor.min.js"></script>
+		<script src="assets/scripts/main.js"></script>
+		<!-- endinject -->
+	</body>
+</html>

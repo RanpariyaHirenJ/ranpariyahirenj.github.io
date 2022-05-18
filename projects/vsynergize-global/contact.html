@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Welcome to Vsynergize Global</title>
+<link href="images/favicon.png" rel="icon" type="image/png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="scripts/jquery-min.js"></script>
+<script src="https://maps.google.com/maps/api/js?libraries=places&region=uk&language=en&sensor=false&key=AIzaSyAJM4s5sRaTZcT2ghSJ4rzTqwz28eaPYnA"></script>
+<script>
+$(window).load(function () {
+  var liMaxHeight = -1;
+    var node;
+    $(".services-lead-generation-details-cntr-2 ul li").each(function(index) {
+        if ($(this).outerHeight() > liMaxHeight) {
+            liMaxHeight = $(this).outerHeight();
+            node = index;
+        }
+    });
+
+    $('.services-lead-generation-details-cntr-2 ul li').css('min-height', liMaxHeight + 1);
+    /*Maximum height li*/
+})
+</script>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $(".get-started a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+<style>
+.servicesbanner h1 {text-align: center;}
+.vsynergize-difference-cntr .grid-6 h2{font-size: 31px;}
+.g-recaptcha>div {margin:0 auto;}
+#header_top {background: #000;}
+@media screen and (min-width: 0) and (max-width:1024px) {
+.vsynergize-difference-cntr .grid-6 h2 {font-size: 22px;}
+}
+</style>
+
+</head>
+<body>
+<div class="wrapper">
+      <div id="header_top">
+    <div class="container clear">
+          <a href="index.html" class="logo_container fl">
+            <img src="images/logo.png" alt="Vsynergize Global Logo" title="Vsynergize Global Logo" />
+          </a>
+      <nav id="main_nav" class="fr">
+        <button class="hamburger hamburger--spin" type="button"> <span class="hamburger-box"> <span class="hamburger-inner"></span> </span> </button>
+        <div class="mobileNav">
+        <ul class="main_nav_ul">
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a>
+            <ul>
+              <li><a href="blockchain.html">Blockchain</a></li>
+              <li><a href="iot.html">IOT</a></li>
+              <li><a href="data-science-analytics.html">Data Science & Analytics</a></li>
+              <li><a href="artificial-intellligence.html">Artificial Intelligence</a></li>
+              <li><a href="application-development-support-services.html">Application Development & Support Services</a></li>
+                <li><a href="cloud.html">Cloud</a></li>
+            </ul>
+          </li>
+           <li><a href="industries.html">Industries</a>
+            <ul>
+              <li><a href="finance.html">Finance</a></li>
+              <li><a href="healthcare.html">Healthcare</a></li>
+              <li><a href="energy-utilities.html">Energy & Utilities</a></li>
+              <li><a href="logistics.html">Logistics</a></li>
+              <li><a href="retail-e-commerce.html">Retail & E-commerce</a></li>
+              <li><a href="education.html">Education</a></li>
+              <li><a href="manufacturing.html">Manufacturing</a></li>
+            </ul>
+          </li>
+          
+          <li><a href="#">Resources</a>
+            <ul>
+              <li><a href="javascript:void(0)">Coming Soon</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Careers</a>
+            <ul>
+              <li><a href="javascript:void(0)">Coming Soon</a></li>
+            </ul>
+          </li>
+          <li class="active"><a href="contact.html">Contact</a></li>
+        </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div class="contact-box">
+    <div class="container">
+      <div class="contentarea">
+        <div class="contact-cntr"> 
+          <h2 class="wow animated fadeInUp" data-wow-delay="0.2s" data-wow-offset="50">Contact Us</h2>
+          <div class="india-map">
+            <div class="usa-offices">
+              <h3>USA Offices</h3>
+              <div class="international-office">
+                <div class="india-cntr mumbai">
+                  <div class="india-add">
+                  <h2>Local Address</h2>
+                    <p class="addressPin">101 California Street, Suite 2710, San Francisco, CA 94111, USA</p>
+                  </div>
+                  <div class="india-add">
+                  <h2>Mailing Address</h2>
+                    <p class="addressPin"> 290 Turnpike Road, Ste 6, Westborough, MA 01581, USA </p>
+                </div>
+                </div>
+                <div class="clear"></div>
+                
+                <div class="india-cntr new-delhi">
+                    <p class="phone-icon"> +1-855-203-8196 (Toll Free) </p>
+                    <p class="fax-icon"> 1-508-256-6553 </p>
+                    <p class="email-icon"> <a href="mailto:info@vsynergize.com">info@vsynergize.com</a> </p>
+                </div>
+              </div>
+              <div class="mapBox">
+                <div id="gmap_canvas_usa_offices"></div>
+              </div>
+            </div>
+            <div class="india-office">
+              <div class="india-cntr bengaluru">
+              <h3>India Office</h3>
+                <div class="india-add">
+                  <p class="addressPin"> Ground floor-North side,
+                  IT- 6 Build at Flagship Infra Pvt. Ltd.
+                  IT & ITES Special Economic Zone, Survey .No.15, 4/6 
+                  Rajiv Gandhi Infotech Park – Phase-I <br>Hinjewadi, Pune – 411 057 </p>
+                  <p class="phone-icon"> +91-020-67959718/19/20 </p>
+                </div>
+              </div>
+              <div class="mapBox">
+                <div id="gmap_canvas_india_offices"></div>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  
+</div>
+    <section id="contact_form">
+      <div class="container clear">
+        <h2>Send Enquiry</h2>
+        <p>Please fill the details below</p>
+        <form>
+          <input type="text" placeholder="First Name" data-aos="fade-up-left" />
+          <input type="text" placeholder="Last Name"  data-aos="fade-up-right"/>
+          <input type="tel" placeholder="Phone"  data-aos="fade-up-left"/>
+          <input type="email" placeholder="Email"  data-aos="fade-up-right"/>
+          <textarea rows="7" data-aos="fade-up"></textarea>
+          <a href="#" class="button button_orange" data-aos="fade-up">Submit</a>
+        </form>
+      </div>
+    </section>
+    <footer>
+      
+      <section id="sub_footer" class="clear">
+        <div class="container clear">
+          <div class="col blue_color" data-aos="fade-up">
+            <h5>Blockchain</h5>
+            <ul>
+              <li><a href="smart-contract-development.html">Smart Contract Development</a></li>
+              <li><a href="private-blockchain.html">Private Blockchain</a></li>
+              <li><a href="ethereum-applications.html">Ethereum Applications</a></li>
+              <li><a href="poc-development.html">POC Development</a></li>
+              <li><a href="wallet-development.html">Wallet Development</a></li>
+              <li><a href="hyperledger-development.html">HyperLedger Development</a></li>
+            </ul>
+          </div>
+          <div class="col red_color" data-aos="fade-up">
+            <h5>IOT</h5>
+            <ul>
+              <li><a href="tracking-solutions.html">Tracking Solutions</a></li>
+              <li><a href="smart-devices.html">Smart Devices</a></li>
+              <li><a href="application-development.html">Application Development</a></li>
+              <li><a href="iiot.html">Industrial Internet of Things</a></li>
+            </ul>
+          </div>
+          <div class="col orange_color" data-aos="fade-up">
+            <h5>Data Science &amp; Analytics</h5>
+            <ul>
+              <li><a href="business-intelligence.html">Business Intelligence</a></li>
+              <li><a href="data-visualization.html">Data Visualization</a></li>
+              <li><a href="outsourced-data-analysis.html">Outsourced Data Analysis</a></li>
+              <li><a href="data-management.html">Data Management</a></li>
+              <li><a href="big-data-analytics.html">Big Data Analytics</a></li>
+              <li><a href="dashboarding.html">Dashboarding</a></li>
+            </ul>
+          </div>
+          <div class="col purple_color" data-aos="fade-up">
+            <h5>Artificial Intellligence</h5>
+            <ul>
+              <li><a href="machine-learning.html">Machine Learning</a></li>
+              <li><a href="natural-language-processing.html">Natural Language Processing</a></li>
+              <li><a href="data-management-visualization.html">Data Management &amp; Visualization</a></li>
+              <li><a href="chat-bots.html">Chat Bots</a></li>
+              <li><a href="technology-platforms.html">Technology Platforms</a></li>
+            </ul>
+          </div>
+          <div class="col sky_blue_color" data-aos="fade-up">
+            <h5>Application Development & Support Services</h5>
+            <ul>
+              <li><a href="web-application-development-services.html">Web Application Development Services</a></li>
+              <li><a href="mobile-app-development-services.html">Mobile App Development Services</a></li>
+              <li><a href="enterprise-class-app-solutions.html">Enterprise-Class App Solutions</a></li>
+              <li><a href="quality-assurance-testing-services.html">Quality Assurance & Testing Services</a></li>
+              <li><a href="ui-ux-design-services.html">UI/UX Design Services</a></li>
+            </ul>
+          </div>
+          </div>
+        </section>
+      
+      <div id="footer_end">
+        <div class="container clear">
+          <div class="copyrights fl">All content © Vsynergize 2019.    <a href="">Terms</a>  <a href="">Privacy </a><br>Site by <strong><a href="https://www.interminddigital.com/" target="_blank">Intermind</a></strong></div>
+          <div class="social-wrapper fr">
+            <a class="social-icon tw"></a>
+            <a class="social-icon ln"></a>
+            <a class="social-icon fb"></a>
+          </div>
+        </div>
+      </div>
+      
+    </footer>
+    <script src="js/map.js"></script> 
+    <script src="js/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/custom.js"></script>
+<script src="js/js_class.js"></script> 
+</body>
+</html>

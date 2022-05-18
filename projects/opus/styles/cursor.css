@@ -1,0 +1,23 @@
+html,
+body {cursor: none;}
+
+
+@media (hover: hover) and (pointer: fine) {
+  #cursor {
+    z-index: 999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    will-change: transform;
+  }
+
+  #cursor .cursor--inner {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+ 	border: 1px solid #fff;
+	background:#000;
+    transform: translate(-50%, -50%);
+  }
+}

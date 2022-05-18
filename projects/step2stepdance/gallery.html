@@ -1,0 +1,712 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="images/favicon.png" />
+    <title>Welcome to Our Gallery | Step 2 Step Dance</title>
+<link rel="stylesheet" type="text/css" href="styles/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<script src="scripts/jquery-min.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="styles/imagelightbox.css">
+<link rel="stylesheet" type="text/css" href="styles/owl.carousel.css">
+<script src="scripts/owl.carousel.min.js"></script>
+<link rel="stylesheet" type="text/css" href="styles/owl.theme.css">
+<style>
+.dance-type-cntr ul li:nth-child(1) a {color:#212121;}
+.dance-type-cntr ul li:nth-child(2) a {color:#699d2b;}
+.dance-type-cntr ul li:nth-child(3) a {color:#e32433;}
+.dance-type-cntr ul li:nth-child(4) a {color:#26a9e3;}
+.dance-type-cntr ul li:nth-child(5) a {color:#f9a240;}
+.dance-type-cntr ul li:nth-child(6) a {color:#902890;}
+.dance-type-cntr ul,
+.dance-type-video-cntr ul{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+}
+.dance-type-cntr ul li:last-child{margin-right:0px;}
+.dance-type-cntr ul li,
+.dance-type-video-cntr ul li {
+    width: 20%;
+    float: left;
+    text-align: center;
+    margin-right: 20px;
+}
+.dance-type-cntr ul li a,
+.dance-type-video-cntr ul li a {
+    color: #828080 !important;
+    padding: 10px;
+    border: 1px solid #828080;
+    border-radius: 50px;
+    width: 100%;
+    display: block;
+}
+.dance-type-cntr ul li a:hover, .dance-type-cntr ul li a.active, .dance-type-video-cntr ul li a:hover, .dance-type-video-cntr ul li a.active {
+    color: #fff !important;
+    border: 1px solid #699d2b;
+    background: #699d2b;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 0) and (max-width:767px) {
+.dance-cntr h1 {padding-bottom: 0px;}
+.gallery-image .grid-3 img {width: 50%;float: left;}
+.dance-content .dance-type-cntr ul li:nth-child(3n){margin-right: 0px;} 
+.dance-content .dance-type-cntr ul li{width: 31%;}
+.dance-content .dance-type-cntr ul li a{font-size: 12px;}
+.dance-type-cntr ul li,
+.dance-content .dance-type-cntr ul li:nth-child(2),
+.dance-content .dance-type-cntr ul li:nth-child(4) {margin-right: 10px;}
+
+}
+</style>
+<script>
+
+
+$(document).ready(function(){
+    $('.dance-cntr').find('li a').click(function ()
+    {
+        var flag = false;
+        var div_attr = $(this).attr('show-div');
+        $('.dance-cntr').find('li a').removeClass('active');
+        $(this).addClass('active');
+        $('.HideShowContent').children().each(function ()
+        {
+            if (div_attr == $(this).attr('show-div'))
+            {
+                $('.HideShowContent').children().hide();
+                $('.HideShowContent').children().find('i img').css("opacity","0");
+                $(this).show()
+                $(this).find('i img').animate({ opacity: 1 }, 400)
+                flag = true
+            }
+            if (flag == true)
+            {
+                return false;
+            }
+        }) 
+    })
+});
+$(document).ready(function(){
+	
+    $('.dance-type-cntr').find('li a').click(function ()
+    {
+		
+		if($(this).hasClass("all"))
+		{
+			$('.gallery-image').find('.grid-3').show();        
+	    }
+		else
+		{
+			var div_attr = $(this).attr('show-div');
+        $('.dance-gallery-type-cntr').find('li a').removeClass('active');
+        $(this).addClass('active');
+        $('.gallery-image').find('.grid-3').each(function ()
+        {
+            if (div_attr == $(this).attr('show-div'))
+            {
+                
+                $(this).show()
+            } 
+			else
+			{
+				$(this).hide()
+				}           
+        }) 
+			}
+        
+		
+		
+    })
+});
+
+$(document).ready(function(){
+	
+    $('.dance-type-video-cntr').find('li a').click(function ()
+    {
+		
+		if($(this).hasClass("all"))
+		{
+			$('.video-gallery').find('.grid-3').show();        
+	    }
+		else
+		{
+			var div_attr = $(this).attr('show-div');
+        $('.dance-type-video-cntr').find('li a').removeClass('active');
+        $(this).addClass('active');
+        $('.video-gallery').find('.grid-3').each(function ()
+        {
+            if (div_attr == $(this).attr('show-div'))
+            {
+                
+                $(this).show()
+            } 
+			else
+			{
+				$(this).hide()
+				}           
+        }) 
+			}
+        
+		
+		
+    })
+});
+</script>
+<style>
+.overlay-box .overlay-content {padding: 20px;}
+.overlay-box .overlay-header {font-size: 20px;line-height: 24px;}
+.overlay-box .closeBtn {line-height: 28px;}
+
+@media screen and (min-width:0) and (max-width:767px){
+.overlay-box .overlay-header {font-size: 16px;line-height: 20px;padding: 10px 40px 10px 15px;}
+.overlay-box .closeBtn {line-height: 21px;}
+}
+</style>
+</head>
+<body>
+
+<div class="overlay" id="video1" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class="overlay-box video-overlay">
+    <div class="content">
+      <div class="overlay-header"> 1000 years, contemporary</div>
+      <div class="overlay-content">
+        <div class="container">
+        	<iframe id="youtube_player1" width="800" height="450" src="https://www.youtube.com/embed/l_cYhtzncbQ?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&amp;showinfo=0" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="video2" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class="overlay-box video-overlay">
+    <div class="content">
+      <div class="overlay-header"> Isse khete Hai hip Hop, Step 2 step dance & fitness academy, rohitsoni choreography </div>
+      <div class="overlay-content">
+        <div class="container">
+            <iframe id="youtube_player2" width="800" height="450" src="https://www.youtube.com/embed/l4m-lg_th_A?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&amp;showinfo=0" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="video3" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class="overlay-box video-overlay">
+    <div class="content">
+      <div class="overlay-header"> Thousand years | contemporary StEp 2 StEp DancE AcadEmy vikarant dharade & rohitsoni choreography.  </div>
+      <div class="overlay-content">
+        <div class="container">
+            <iframe id="youtube_player3" width="800" height="450" src="https://www.youtube.com/embed/yrU6G7yX1Sk?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&amp;showinfo=0" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="overlay" id="video4" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class="overlay-box video-overlay">
+    <div class="content">
+      <div class="overlay-header"> Pinga, with #superdancer | Rohitsoni & Anushka shetty choreography | StEp 2 StEp dancE AcadEmy ... </div>
+      <div class="overlay-content">
+        <div class="container">
+            <iframe id="youtube_player4" width="800" height="450" src="https://www.youtube.com/embed/edCFDZec2o0?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&amp;showinfo=0" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="video5" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class="overlay-box video-overlay">
+    <div class="content">
+      <div class="overlay-header"> DancE rotaract DancE season 8, semi final powerful performance, StEp 2 StEp DancE AcadEmy Rohitsoni</div>
+      <div class="overlay-content">
+        <div class="container">
+            <iframe id="youtube_player5" width="800" height="450" src="https://www.youtube.com/embed/aL2ph1Lt9LA?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&amp;showinfo=0" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="video6" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class="overlay-box video-overlay">
+    <div class="content">
+      <div class="overlay-header"> champion / another killar video, step2step dance academy.. rohitsoni choreography. </div>
+      <div class="overlay-content">
+        <div class="container">
+            <iframe id="youtube_player6" width="800" height="450" src="https://www.youtube.com/embed/UitfkIcHCeA?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&amp;showinfo=0" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="video7" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class="overlay-box video-overlay">
+    <div class="content">
+      <div class="overlay-header"> Mercy, StEp 2 StEp DancE AcadEmy, Rohitsoni choreography DancErs Jyoti Manya </div>
+      <div class="overlay-content">
+        <div class="container">
+            <iframe id="youtube_player7" width="800" height="450" src="https://www.youtube.com/embed/Fjkb-6ybJGQ?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&amp;showinfo=0" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="video8" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class="overlay-box video-overlay">
+    <div class="content">
+      <div class="overlay-header"> Isse khete Hai hip Hop, Step 2 step dance & fitness academy, rohitsoni choreography </div>
+      <div class="overlay-content">
+        <div class="container">
+            <iframe id="youtube_player8" width="800" height="450" src="https://www.youtube.com/embed/l4m-lg_th_A?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&amp;showinfo=0" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="overlay" id="video9" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class="overlay-box video-overlay">
+    <div class="content">
+      <div class="overlay-header"> Lean On Step 2 Step Dance Fitness Academy, freestyle... ROHITSONI Choreography. </div>
+      <div class="overlay-content">
+        <div class="container">
+            <iframe id="youtube_player9" width="800" height="450" src="https://www.youtube.com/embed/5NS_zjoz1Ss?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&amp;showinfo=0" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="loader">
+  <div class="loaderimg"></div>
+</div>
+
+<div class="wrapper">
+  <div class="header">
+    <div class="container">
+      <div class="contentarea">
+        <div class="NavBar">
+          <div class="logo"> <a href="index.html"><img src="images/logo.png"></a> </div>
+          <div class="contact-no-cntr">Call Rohit<a href="tel:">+91 99206 93059</a></div>
+          <div class="mobile-nav-icon">
+            <button class="menu-icon mobil-icon-toggle"> <span>toggle menu</span> </button>
+          </div>
+          <div class="menubar">
+            <ul>
+              <li> <a href="index.html">Home</a></li>
+              <li> <a href="about.html">About</a></li>
+              <li> <a href="index.html" class="faculty-link">Faculty</a></li>
+              <li> <a href="contemporary.html">Dances</a></li>
+              <li> <a href="gallery.html" class="active">Gallery</a></li>
+             <li> <a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="common-top"></div>
+  <div class="dance-cntr">
+    <h1>Gallery</h1>
+    <div class="dance-content HideShowContent">
+     <div class="dance-tab" show-div="tab1" style="display:block;">
+        <div class="container">
+          <div class="dance-type-cntr">
+            <ul>
+              <li><a href="javascript:void(0)" class="all active " show-div="dance-type-1">All</a></li>
+              <li><a href="javascript:void(0)" class="contemporary" show-div="dance-type-2">Contemporary</a></li>
+              <li><a href="javascript:void(0)" class="hip-hop" show-div="dance-type-3">Hip Hop</a></li>
+              <li><a href="javascript:void(0)" class="bollywood" show-div="dance-type-4">Bollywood</a></li>
+              <li><a href="javascript:void(0)" class="freestyle" show-div="dance-type-5">Freestyle</a></li>
+              <li><a href="javascript:void(0)" class="aerobics" show-div="dance-type-6">Aerobics</a></li>
+              <li><a href="javascript:void(0)" class="video-gallery" show-div="dance-type-7">Video Gallery</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="gallery-image" id="dance-gallery">
+          <div class="grid-12">
+            <div class="grid-3 contemporary all" show-div="dance-type-2">
+              <div class="item wow animated fadeIn" data-wow-delay="0.2s" data-wow-offset="50"> <a href="images/gallery/contemporary-big-img1.jpg" data-imagelightbox="c"> <img src="images/gallery/contemporary-img1.jpg" class="desktop-view">
+                <div class="industry-hovrband">
+                  <div class="distable">
+                    <div class="distable-cell"><img src="images/zoom.png" class="zoom"></div>
+                  </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="grid-3 contemporary all" show-div="dance-type-2">
+              <div class="item wow animated fadeIn" data-wow-delay="0.2s" data-wow-offset="50"> <a href="images/gallery/contemporary-big-img2.jpg" data-imagelightbox="c"> <img src="images/gallery/contemporary-img2.jpg" class="desktop-view">
+                <div class="industry-hovrband">
+                  <div class="distable">
+                    <div class="distable-cell"><img src="images/zoom.png" class="zoom"></div>
+                  </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="grid-3 contemporary all" show-div="dance-type-2">
+              <div class="item wow animated fadeIn" data-wow-delay="0.2s" data-wow-offset="50"> <a href="images/gallery/contemporary-big-img3.jpg" data-imagelightbox="c"> <img src="images/gallery/contemporary-img3.jpg" class="desktop-view">
+                <div class="industry-hovrband">
+                  <div class="distable">
+                    <div class="distable-cell"><img src="images/zoom.png" class="zoom"></div>
+                  </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="grid-3 contemporary all" show-div="dance-type-2">
+              <div class="item wow animated fadeIn" data-wow-delay="0.2s" data-wow-offset="50"> <a href="images/gallery/contemporary-big-img4.jpg" data-imagelightbox="c"> <img src="images/gallery/contemporary-img4.jpg" class="desktop-view">
+                <div class="industry-hovrband">
+                  <div class="distable">
+                    <div class="distable-cell"><img src="images/zoom.png" class="zoom"></div>
+                  </div>
+                </div>
+                </a> </div>
+            </div>
+            
+            <div class="grid-3 hip-hop all" show-div="dance-type-3">
+              <div class="item wow animated fadeIn" data-wow-delay="0.2s" data-wow-offset="50"> <a href="images/gallery/hiphop-big-img1.jpg" data-imagelightbox="c"> <img src="images/gallery/hiphop-img1.jpg" class="desktop-view">
+                <div class="industry-hovrband">
+                  <div class="distable">
+                    <div class="distable-cell"><img src="images/zoom.png" class="zoom"></div>
+                  </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="grid-3 hip-hop all" show-div="dance-type-3">
+              <div class="item wow animated fadeIn" data-wow-delay="0.2s" data-wow-offset="50"> <a href="images/gallery/hiphop-big-img2.jpg" data-imagelightbox="c"> <img src="images/gallery/hiphop-img2.jpg" class="desktop-view">
+                <div class="industry-hovrband">
+                  <div class="distable">
+                    <div class="distable-cell"><img src="images/zoom.png" class="zoom"></div>
+                  </div>
+                </div>
+                </a> </div>
+            </div>
+            
+            <div class="grid-3 bollywood all" show-div="dance-type-4">
+              <div class="item wow animated fadeIn" data-wow-delay="0.2s" data-wow-offset="50"> <a href="images/gallery/bollywood-big-img1.jpg" data-imagelightbox="c"> <img src="images/gallery/bollywood-img1.jpg" class="desktop-view">
+                <div class="industry-hovrband">
+                  <div class="distable">
+                    <div class="distable-cell"><img src="images/zoom.png" class="zoom"></div>
+                  </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="grid-3 bollywood all" show-div="dance-type-4">
+              <div class="item wow animated fadeIn" data-wow-delay="0.2s" data-wow-offset="50"> <a href="images/gallery/bollywood-big-img2.jpg" data-imagelightbox="c"> <img src="images/gallery/bollywood-img2.jpg" class="desktop-view">
+                <div class="industry-hovrband">
+                  <div class="distable">
+                    <div class="distable-cell"><img src="images/zoom.png" class="zoom"></div>
+                  </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="grid-3 bollywood all" show-div="dance-type-4">
+              <div class="item wow animated fadeIn" data-wow-delay="0.2s" data-wow-offset="50"> <a href="images/gallery/bollywood-big-img3.jpg" data-imagelightbox="c"> <img src="images/gallery/bollywood-img3.jpg" class="desktop-view">
+                <div class="industry-hovrband">
+                  <div class="distable">
+                    <div class="distable-cell"><img src="images/zoom.png" class="zoom"></div>
+                  </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="grid-3 bollywood all" show-div="dance-type-4">
+              <div class="item wow animated fadeIn" data-wow-delay="0.2s" data-wow-offset="50"> <a href="images/gallery/bollywood-big-img4.jpg" data-imagelightbox="c"> <img src="images/gallery/bollywood-img4.jpg" class="desktop-view">
+                <div class="industry-hovrband">
+                  <div class="distable">
+                    <div class="distable-cell"><img src="images/zoom.png" class="zoom"></div>
+                  </div>
+                </div>
+                </a> </div>
+            </div>
+            
+            <div class="grid-3 freestyle all" show-div="dance-type-5">
+              <div class="item wow animated fadeIn" data-wow-delay="0.2s" data-wow-offset="50"> <a href="images/gallery/freestyle-big-img1.jpg" data-imagelightbox="c"> <img src="images/gallery/freestyle-img1.jpg" class="desktop-view">
+                <div class="industry-hovrband">
+                  <div class="distable">
+                    <div class="distable-cell"><img src="images/zoom.png" class="zoom"></div>
+                  </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="grid-3 freestyle all" show-div="dance-type-5">
+              <div class="item wow animated fadeIn" data-wow-delay="0.2s" data-wow-offset="50"> <a href="images/gallery/freestyle-big-img2.jpg" data-imagelightbox="c"> <img src="images/gallery/freestyle-img2.jpg" class="desktop-view">
+                <div class="industry-hovrband">
+                  <div class="distable">
+                    <div class="distable-cell"><img src="images/zoom.png" class="zoom"></div>
+                  </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="grid-3 freestyle all" show-div="dance-type-5">
+              <div class="item wow animated fadeIn" data-wow-delay="0.2s" data-wow-offset="50"> <a href="images/gallery/freestyle-big-img3.jpg" data-imagelightbox="c"> <img src="images/gallery/freestyle-img3.jpg" class="desktop-view">
+                <div class="industry-hovrband">
+                  <div class="distable">
+                    <div class="distable-cell"><img src="images/zoom.png" class="zoom"></div>
+                  </div>
+                </div>
+                </a> </div>
+            </div>
+            
+            <div class="grid-3 Aerobics all" show-div="dance-type-6">
+              <div class="item wow animated fadeIn" data-wow-delay="0.2s" data-wow-offset="50"> <a href="images/gallery/hiphop-big-img1.jpg" data-imagelightbox="c"> <img src="images/gallery/hiphop-img1.jpg" class="desktop-view">
+                <div class="industry-hovrband">
+                  <div class="distable">
+                    <div class="distable-cell"><img src="images/zoom.png" class="zoom"></div>
+                  </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="grid-3 Aerobics all" show-div="dance-type-6">
+              <div class="item wow animated fadeIn" data-wow-delay="0.2s" data-wow-offset="50"> <a href="images/gallery/hiphop-big-img2.jpg" data-imagelightbox="c"> <img src="images/gallery/hiphop-img2.jpg" class="desktop-view">
+                <div class="industry-hovrband">
+                  <div class="distable">
+                    <div class="distable-cell"><img src="images/zoom.png" class="zoom"></div>
+                  </div>
+                </div>
+                </a> </div>
+            </div>
+            
+            <div class="grid-3 video-gallery all" show-div="dance-type-7">
+              <div class="item wow animated fadeIn" data-wow-delay="0.2s" data-wow-offset="50"> <a href="javascript:void(0);" onClick="overlayBox('video1')"> <img src="images/video-image-1.jpg" class="desktop-view">
+                <div class="industry-hovrband">
+                  <div class="distable">
+                    <div class="distable-cell"><img src="images/play-video.png" class="zoom"></div>
+                  </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="grid-3 video-gallery all" show-div="dance-type-7">
+              <div class="item wow animated fadeIn" data-wow-delay="0.2s" data-wow-offset="50"> <a href="javascript:void(0);" onClick="overlayBox('video2')"> <img src="images/video-image-2.jpg" class="desktop-view">
+                <div class="industry-hovrband">
+                  <div class="distable">
+                    <div class="distable-cell"><img src="images/play-video.png" class="zoom"></div>
+                  </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="grid-3 video-gallery all" show-div="dance-type-7">
+              <div class="item wow animated fadeIn" data-wow-delay="0.2s" data-wow-offset="50"> <a href="javascript:void(0);" onClick="overlayBox('video3')"> <img src="images/video-image-3.jpg" class="desktop-view">
+                <div class="industry-hovrband">
+                  <div class="distable">
+                    <div class="distable-cell"><img src="images/play-video.png" class="zoom"></div>
+                  </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="grid-3 video-gallery all" show-div="dance-type-7">
+              <div class="item wow animated fadeIn" data-wow-delay="0.2s" data-wow-offset="50"> <a href="javascript:void(0);" onClick="overlayBox('video4')"> <img src="images/video-image-4.jpg" class="desktop-view">
+                <div class="industry-hovrband">
+                  <div class="distable">
+                    <div class="distable-cell"><img src="images/play-video.png" class="zoom"></div>
+                  </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="grid-3 video-gallery all" show-div="dance-type-7">
+              <div class="item wow animated fadeIn" data-wow-delay="0.2s" data-wow-offset="50"> <a href="javascript:void(0);" onClick="overlayBox('video5')"> <img src="images/video-image-5.jpg" class="desktop-view">
+                <div class="industry-hovrband">
+                  <div class="distable">
+                    <div class="distable-cell"><img src="images/play-video.png" class="zoom"></div>
+                  </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="grid-3 video-gallery all" show-div="dance-type-7">
+              <div class="item wow animated fadeIn" data-wow-delay="0.2s" data-wow-offset="50"> <a href="javascript:void(0);" onClick="overlayBox('video6')"> <img src="images/video-image-6.jpg" class="desktop-view">
+                <div class="industry-hovrband">
+                  <div class="distable">
+                    <div class="distable-cell"><img src="images/play-video.png" class="zoom"></div>
+                  </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="grid-3 video-gallery all" show-div="dance-type-7">
+              <div class="item wow animated fadeIn" data-wow-delay="0.2s" data-wow-offset="50"> <a href="javascript:void(0);" onClick="overlayBox('video7')"> <img src="images/video-image-7.jpg" class="desktop-view">
+                <div class="industry-hovrband">
+                  <div class="distable">
+                    <div class="distable-cell"><img src="images/play-video.png" class="zoom"></div>
+                  </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="grid-3 video-gallery all" show-div="dance-type-7">
+              <div class="item wow animated fadeIn" data-wow-delay="0.2s" data-wow-offset="50"> <a href="javascript:void(0);" onClick="overlayBox('video8')"> <img src="images/video-image-8.jpg" class="desktop-view">
+                <div class="industry-hovrband">
+                  <div class="distable">
+                    <div class="distable-cell"><img src="images/play-video.png" class="zoom"></div>
+                  </div>
+                </div>
+                </a> </div>
+            </div>
+            <div class="grid-3 video-gallery all" show-div="dance-type-7">
+              <div class="item wow animated fadeIn" data-wow-delay="0.2s" data-wow-offset="50"> <a href="javascript:void(0);" onClick="overlayBox('video9')"> <img src="images/video-image-9.jpg" class="desktop-view">
+                <div class="industry-hovrband">
+                  <div class="distable">
+                    <div class="distable-cell"><img src="images/play-video.png" class="zoom"></div>
+                  </div>
+                </div>
+                </a> </div>
+            </div>
+            
+            
+            
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-cntr">
+      <ul>
+        <li>
+          <dl class="active">
+            <dt>About</dt>
+            <dd style="display:block">
+              <p>STEP 2 STEP dance academy the name it's self symbolise that we teach our students step by step all the dance moves.</p>
+              <p>We not only teach them how to dance but also how to put expression on each moves and  how to dance confidentially.</p>
+            </dd>
+          </dl>
+        </li>
+        <li>
+        <dl class="active">
+            <dt>Day's</dt>
+            <dd style="display:block">
+                <div class="textwidget">
+                    <ul class="split-list no-border no-bullet hvr-push-to-right">
+                        <li>Tuesday, Thursday, Saturday. </li>
+                        <li><span>Timing</span>5:00 PM to 6:15 PM</li>
+                        <li><span>&nbsp;</span>6:20 PM to 7:35 PM</li>
+                        <li><span>&nbsp;</span>7:35 PM to 8:50 PM</li>
+                    </ul>
+                </div>
+            </dd>
+        </dl>
+    </li>
+        <li>
+          <div class="footer-social">
+            <div class="copyright-text">
+              <p>Copyright All Rights Reserved © 2018</p>
+              
+              <div class="site-buy">Site by <a href="http://www.intermind.in/" target="_blank"> Intermind</a> </div>
+              </p>
+                <div class="social-icons">
+                    <a class="fb-icon" href="https://www.facebook.com/Step-2-Step-Dance-And-Fitness-Academy-423761128014214/" target="_new"><img src="images/fb-icon.png" /></a> 
+                    <a class="youtube-icon" href="https://www.youtube.com/channel/UCsSbgxVUntpSRiuxTxtlwiQ" target="_new"><img src="images/youtube-icon.png" /></a> 
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </li>
+      </ul>
+      <div class="clear"></div>
+    </div>
+  </div>
+</footer>
+  <div class="send-enquiry"><a href="contact.html">Send Enquiry</a></div>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+var owl = $("#dance-gallery");
+owl.owlCarousel({
+itemsCustom : [
+[0, 1],
+[400, 2],
+[450, 2],
+[568, 3],
+[767, 3],
+[768, 4],
+[1000, 6]
+],
+navigation:true,
+});
+
+});
+
+</script> 
+<script src="scripts/imagelightbox.js"></script> 
+<script>
+
+    $(function () {
+			var activityIndicatorOn = function () {
+                $('<div id="imagelightbox-loading"><div></div></div>').appendTo('body');
+            },
+            activityIndicatorOff = function () {
+                $('#imagelightbox-loading').remove();
+            },
+
+            overlayOn = function () {
+                $('<div id="imagelightbox-overlay"></div>').appendTo('body');
+            },
+            overlayOff = function () {
+                $('#imagelightbox-overlay').remove();
+            },
+
+            closeButtonOn = function (instance) {
+                $('<a href="#" id="imagelightbox-close"></a>').appendTo('body').on('click', function () {
+                    $(this).remove();
+                    instance.quitImageLightbox();
+                    return false;
+                });
+            },
+            closeButtonOff = function () {
+                $('#imagelightbox-close').remove();
+            },
+            captionOff = function () {
+                $('#imagelightbox-caption').remove();
+            },
+						arrowsOn = function( instance, selector ) {
+                var $arrows = $( '<button type="button" class="imagelightbox-arrow imagelightbox-arrow-left"></button>' +
+                                 '<button type="button" class="imagelightbox-arrow imagelightbox-arrow-right"></button>' );
+                $arrows.appendTo( 'body' );
+                $arrows.on( 'click touchend', function( e ) {
+                    e.preventDefault();
+                    var $this = $( this );
+
+                    if( $this.hasClass('imagelightbox-arrow-left')) {
+                        instance.loadPreviousImage();
+                    } else {
+                        instance.loadNextImage();
+                    }
+
+                    return false;
+                });
+            },
+						arrowsOff = function() {
+                $('.imagelightbox-arrow').remove();
+            };
+			//	WITH "CLOSE" BUTTON & ACTIVITY INDICATION
+
+        var selectorG = 'a[data-imagelightbox="c"]';
+        var instanceG = $( selectorG ).imageLightbox(
+            {
+                onStart:		function(){ arrowsOn( instanceG, selectorG );closeButtonOn(instanceG);overlayOn(); },
+                onEnd:			function(){ arrowsOff(); activityIndicatorOff(); closeButtonOff();overlayOff();},
+                onLoadStart: 	function(){ activityIndicatorOn(); },
+                onLoadEnd:	 	function(){ $( '.imagelightbox-arrow' ).css( 'display', 'block' ); activityIndicatorOff(); }
+            });
+       
+
+    });
+</script> 
+<script>
+	 new WOW().init();
+</script> 
+<script src="scripts/common.js" type="text/javascript"></script>
+</body>
+</html>

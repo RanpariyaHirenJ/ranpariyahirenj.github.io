@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>DCF vs Madfingers | Lindsay Dmello</title>
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<link rel="stylesheet" type="text/css" href="styles/slick.css">
+<link rel="stylesheet" type="text/css" href="styles/slick-theme.css">
+<link rel="stylesheet" href="styles/style.css" />
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" media="only screen and (min-width: 1024px) and (max-width:1920px)"  >
+</head>
+<body style="height:auto;">
+<div class="wrapper">
+  <header style="height:100%;">
+    <div id="header_top">
+      <div class="container clear">
+        <nav id="main_nav" class="fl">
+        <button class="hamburger hamburger--spin" type="button"> <span class="hamburger-box"> <span class="hamburger-inner"></span> </span> <div class="menu-title">Menu</div></button>
+          <div class="mobileNav">
+            <ul class="main_nav_ul">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="event.html">Events</a></li>
+              <li><a href="photo-gallery.html">Gallery</a></li>
+              <li><a href="music-gallery.html">Music</a></li>
+              <!--<li><a href="#">Careers</a></li>-->
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="logo fr"><a href="index.html"><img src="images/logo.png"></a></div>
+  </header>
+    <div id="gallery-page-cntr" style="height:100%;background: #1c1f21;background-attachment: fixed;" >
+      <div class="container clear">
+      	<h1>Music Gallery</h1>
+        <div class="gallery-btn clear">
+            <a href="music-gallery.html">Back To Music</a>
+        </div>
+        <h2 class="clear">DCF vs Madfingers</h2>
+      	  				
+            <div class="row clear">
+                <div id="product_slider" class="clear">
+                  <div class="product_slider-main">
+                    <div id="video-placeholder"></div>
+                  </div>
+                  <div class="product_slider-thmb">
+                    <div class="slide" data-video-id="1lGfRQHlsOQ"><img src="images/music-gallery/dcf-vs-madfingers/110bpm.jpg" alt="" class="img-responsive"> <p>110BPM</p></div>
+                    <div class="slide" data-video-id="ytj255jkYfk"><img src="images/music-gallery/dcf-vs-madfingers/120bpm.jpg" alt="" class="img-responsive"> <p>120BPM</p></div>
+                    <div class="slide" data-video-id="ywNt7QUHkJU"><img src="images/music-gallery/dcf-vs-madfingers/175bpm.jpg" alt="" class="img-responsive"> <p>175BPM</p></div>
+                    <div class="slide" data-video-id="JAmDrw3rpog"><img src="images/music-gallery/dcf-vs-madfingers/140bpm.jpg" alt="" class="img-responsive"> <p>140BPM</p></div>
+                    <div class="slide" data-video-id="dlA0Z38KL78"><img src="images/music-gallery/dcf-vs-madfingers/shapes.jpg" alt="" class="img-responsive"> <p>SHAPES</p></div>
+                    <div class="slide" data-video-id="Fq5dAT-Grik"><img src="images/music-gallery/dcf-vs-madfingers/funk.jpg" alt="" class="img-responsive"> <p>FUNK</p></div>
+                    <div class="slide" data-video-id="tFnzmzo9ZPE"><img src="images/music-gallery/dcf-vs-madfingers/80bpm.jpg" alt="" class="img-responsive"> <p>80BPM</p></div>
+                    <div class="slide" data-video-id="JKrXuTqxRJs"><img src="images/music-gallery/dcf-vs-madfingers/85bpm.jpg" alt="" class="img-responsive"> <p>85BPM</p></div>
+                  </div>               
+                </div>
+            </div>
+            
+      </div>
+  	</div>
+</div>
+
+<footer>
+	<div class="container clear">
+		<div class="col_6 fl">
+			<p>Copyright © 2019 - All Rights Reseved - Lindsay Dmello <br>
+				Site by <a href="https://www.interminddigital.com/" target="_blank">Intermind</a></p>
+		</div>
+		<div class="col_6 fr">
+        	<p>Sponsors</p>
+			<ul id="logos_container">
+				<li><a href="#"><img src="images/zildjian-logo.png" alt="" title=""></a></li>
+				<li><a href="#"><img src="images/dw-logo.png" alt="" title=""></a></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<script src="scripts/jquery-min.js" type="text/javascript"></script> 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+<script src="scripts/custom.js" type="text/javascript"></script>
+<script src="scripts/slick.js" type="text/javascript"></script> 
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+if ( $('.product_slider-main').length ) {
+        var $slider = $('.product_slider-main')
+            .on('init', function(slick) {
+                $('.product_slider-main').fadeIn(1000);
+            })
+            .slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                dots: false,
+                autoplay: false,
+                lazyLoad: 'ondemand',
+                autoplaySpeed: 3000,
+    			fade : true,
+                asNavFor: '.product_slider-thmb'
+            });
+
+    var $slider2 = $('.product_slider-thmb')
+            .on('init', function(slick) {
+                $('.product_slider-thmb').fadeIn(1000);
+            })
+            .slick({
+                slidesToShow: 12,
+                slidesToScroll: 1,
+                lazyLoad: 'ondemand',
+                asNavFor: '.product_slider-main',
+                centerMode: false,
+                focusOnSelect: true,
+            });
+}
+var player,
+    time_update_interval = 0;
+
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('video-placeholder', {
+       // width: 600,
+        //height: 400,
+        videoId: '1lGfRQHlsOQ',
+    });
+}
+$('.slide').on('click', function () {
+    var url = $(this).attr('data-video-id');
+    player.cueVideoById(url);
+});
+/*$(document).ready(function() {
+  $('.product_slider-thmb .slide.slick-slide').on('click', function(ev) {
+    $(".product_slider-main iframe")[0].src += "&autoplay=1";
+    ev.preventDefault();
+  });
+});*/
+
+</script>
+</body>
+</html>

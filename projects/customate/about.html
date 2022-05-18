@@ -1,0 +1,469 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<title>Welcome to Customate</title>
+<link rel="stylesheet" type="text/css" href="styles/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link rel="stylesheet" type="text/css" href="styles/slick-theme.css">
+<link rel="stylesheet" type="text/css" href="styles/slick.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" type="text/javascript"></script>
+<script src="scripts/jquery-min.js" type="text/javascript"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<link rel="stylesheet" href="styles/jquery-ui.css">
+<script src="scripts/jquery-ui.js"></script>
+<style>.g-recaptcha>div {margin:0 auto;}</style>
+</head>
+<body>
+<div class="check-device">
+    <div>
+        <i class="icon-devices"></i>
+        <p>Check your device orientation</p>
+    </div>
+</div>
+
+<!--Ask for Demo-->
+<div class="overlay" id="ask-demo" data-animation-in="fadeInDown" data-animation-out="fadeOut">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-body">
+        <div class="overlay-header"> Ask for Demo <span class="fillnotificatin">Please fill the details below:</span></div>
+        <div class="overlay-content animated-form">
+          <form name="enquiry_form" id="enquiry_form" method="post" action="inc/contact.php" onSubmit="return form_validate_jquery('#enquiry_form')">
+          <div class="grid-layout">
+            <div class="form-row animate-label">
+              <div class="form-field">
+                <div class="grid-6">
+                  <div class="input-group">
+                    <input type="text" class="inputType" name="member_name" validation="text" title="Name" placeholder="Name">
+                  </div>
+                </div>
+                <div class="grid-6">
+                  <div class="input-group">
+                    <input type="text" class="inputType" name="member_email" validation="email" title="Email Id" placeholder="Email Id">
+                  </div>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div>
+            <div class="form-row animate-label">
+              <div class="form-field">
+                <div class="grid-6">
+                  <div class="input-group">
+                    <input type="text" class="inputType" name="member_company" validation="text" title="Company" placeholder="Company">
+                  </div>
+                </div>
+                <div class="grid-6">
+                  <div class="input-group">
+                    <select name="member_company_type" validation="text" title="Company Type" placeholder="Company Type">
+                        <option value=''>Select Company Type</option>
+                        <option>Agriculture and Forestry</option>
+                        <option>Information Technology</option>
+                        <option>Construction and Real Estate</option>
+                        <option>Utilities</option>
+                        <option>Education</option>
+                        <option>Finance & Insurance</option>
+                        <option>Food & Hospitality</option>
+                        <option>Sports / Gaming</option>
+                        <option>Health</option>
+                        <option>Manufacturing / Industry</option>
+                        <option>Transportation</option>
+                        <option>Automotive</option>
+                        <option>Safety / Security & Legal</option>
+                        <option>Natural Resources and Mining</option>
+                        <option>Environmental and Conservation</option>
+                        <option>Oil and Gas</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div>
+            <div class="form-row animate-label">
+              <div class="form-field">
+                <div class="grid-12">
+                  <div class="input-group">
+                  <input type="text" class="inputType" name="member_subject" validation="text" title="Subject" placeholder="Subject">
+                  </div>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div>
+            <div class="form-row animate-label">
+              <div class="form-field">
+                <div class="grid-12">
+                  <div class="input-group">
+                    <textarea class="inputType" name="message" validation="text" title="Message" placeholder="Message"></textarea>
+                  </div>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div>
+            <div class="form-row animate-label">
+              <div class="form-field">
+                <div class="grid-12">
+                  <div class="g-recaptcha" data-sitekey="6Ld3ZF0UAAAAAC9L5qEe8tlL4Xfh2wHP66A_vBRW"></div>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="grid-12 text-center">
+                <input type="submit" name="action" value="Submit" >
+              </div>
+              <div class="clear"></div>
+            </div>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Ask for Demo-->
+<div class="loader"></div>
+
+<div class="wrapper">
+  <div class="header">
+    <div class="container">
+      <div class="navigation">
+        <div class="logo"> <a href="index.html"><img src="images/logo.png"></a></div>
+        <div class="login-mblmenu">
+          <div class="mobile-nav-icon">
+            <button class="menu-icon mobil-icon-toggle"> <span>toggle menu</span> </button>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="nav-menu">
+          <ul>
+            <li> <a href="index.html">Home</a></li>
+            <li class="active"> <a href="about.html">About</a> </li>
+            <li class="subdrop-down"> <a href="product.html">Products</a> <div class="sub-menu">
+                  <ul class="dropdown-content">
+                    <li class=""><a href="accounting-software.html">Accounting Software</a></li>
+                    <li class=""><a href="human-resources-management.html">Human Resources Management</a></li>
+                    <li class=""><a href="inventory-management.html">Inventory Management</a></li>
+                    <li class=""><a href="procurement-management.html">Procurement Management</a></li>
+                    <li class=""><a href="sales-customer-management.html">Sales and Customer Management</a></li>
+                  </ul>
+              </div>
+            </li>
+            <li> <a href="pricing.html">Pricing</a> </li>
+            <li> <a href="blog/index.html">Blog</a> </li>
+            <li> <a href="contact.html">Contact</a> </li>
+          </ul>
+          <div class="login-signup"> 
+              <a href="https://www.customateapps.com/aoaweb/newui/login.html" target="_blank" class="login">Login</a>
+              <a href="https://www.customateapps.com/aoaweb/newui/login.html#toregister" target="_blank" class="Signup">Signup</a> 
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <div class="about-banner">
+    <div class="container">
+      <div class="banner-images"> <i><img src="images/about-banner.png"></i> </div>
+      <div class="grid-6 banner-txt">
+        <div class="dis-table">
+          <div class="dis-tablecell">
+            <h2 class="wow animated fadeInUp" data-wow-delay="0.2s" data-wow-offset="50">For technology to boost them, businesses must take technology in their own hand </h2>
+            <p class="wow animated fadeInDown" data-wow-delay="0.4s" data-wow-offset="50">Real benefits of technology can come only if the businesses become their own masters in designing, implementing and controlling it</p>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="vision-cntr">
+    <div class="container">
+      <div class="video-info">
+        <p class="wow animated fadeInDown" data-wow-delay="0.4s" data-wow-offset="50">We have a dream that every organization is entirely process based and the processes automated in a totally custom manner; and that such automations are constantly improving and evolving with help from artificial intelligence and data analytics (with data from human and non-human sources).</p>
+        <p class="wow animated fadeInDown" data-wow-delay="0.4s" data-wow-offset="50">To make our dream come true we created a cloud-based platform that lets process people easily and very cost effectively automate entire businesses in an evolving manner and then connect with other such automated businesses for maximum benefits, all without involving IT.</p>
+      </div>
+      <div class="vision-video-text">
+        <ul>
+          <li class="revolutionary-technology-vid1"> <a href="javascript:void(0);" onClick="overlayBox('revolutionary-technology1')" class="video-link"> <i> <img src="images/about1.jpg">
+            <div class="playbtnvdo"> <img src="images/play-video.png"> </div>
+            </i> </a>
+            <p class="wow animated fadeInDown" data-wow-delay="0.4s" data-wow-offset="50">With our platform, ONE system can cover most of the business processes, big or small, connect with other automations in the ecosystem, guide and predict using artificial intelligence and changes or improves with changing business requirements or environment. See video to know more.</p>
+          </li>
+          <li class="benefit-customers-vid1"> <a href="javascript:void(0);" onClick="overlayBox('benefit-customers1')" class="video-link"> <i> <img src="images/about2.jpg">
+            <div class="playbtnvdo"> <img src="images/play-video.png"> </div>
+            </i> </a>
+            <p class="wow animated fadeInDown" data-wow-delay="0.4s" data-wow-offset="50">In today's cut throat competition every business needs to be efficient and automated. It needs to make use of all its data to guide it towards a secure and successful future. See why automating using Customate platform is becoming increasingly important and hear from businesses how it benefits them.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="clear"></div>
+      <div class="download-btn"> 
+      <a href="pdf/whitepapers-syndicate.pdf" target="_blank">White Paper</a> 
+      <a href="pdf/Customate-Deck.pdf" target="_blank">Info Deck</a>
+      </div>
+    </div>
+  </div>
+  <div class="our-story-cntr">
+    <div class="container">
+      <div class="our-story-img mobdisp"> <img src="images/our-story.png"> </div>
+      <div class="our-story-txt">
+        <div class="dis-table">
+          <div class="dis-tablecell">
+            <h2 class="wow animated fadeInUp" data-wow-delay="0.2s" data-wow-offset="50">Our Story</h2>
+            <p class="wow animated fadeInDown" data-wow-delay="0.4s" data-wow-offset="50">Our story starts with our Founder, Vivek trying to automate the shopfloor of his heavy industry.  Having very specific needs of an intelligent and highly automated software where humans are basically used to make decisions and are automatically provided the right data to support the decision making, Vivek was surprised to find that for businesses limited by resources and time, it's very tough to get such bespoke and complex rules based software.  That's when he started pondering over a tool for business people to automate businesses on their own. Rest, as they say, is now history!</p>
+            <div class="our-story-vid1">
+            <a href="javascript:void(0);" onClick="overlayBox('our-story1')" class="wow animated fadeIn" data-wow-delay="0.2s" data-wow-offset="50">CEO Speak</a>
+            </div> 
+            </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <div class="our-story-img desdisp"> <img src="images/our-story.png"> </div>
+      <div class="team-cloud desdisp"><img src="images/cloud.png"></div>
+    </div>
+  </div>
+  <div class="team-cntr">
+    <div class="container">
+      <div class="team-member">
+        <h2 class="wow animated fadeInUp" data-wow-delay="0.2s" data-wow-offset="50">Crazy as it may sound, it is now possible!</h2>
+        <p class="wow animated fadeInDown" data-wow-delay="0.4s" data-wow-offset="50">Yes, it may sound like a crazy idea to let non-programmers build software, but our team is making it happen.  Our hard work and persistence is now finally paying off when we can pull off the magic of providing our customers custom products in days and not weeks. After more than 2 years, we can taste the fruits of our labour and we couldn't be more excited to grow bigger and better.</p>
+        <div class="team-member-slider">
+          <div class="tooltip wow animated fadeIn" data-wow-delay="0.4s" data-wow-offset="50"> 
+              <a href="javascript:void(0)"> 
+              	<i> <img src="images/vivek-jalan.jpg">
+                	<p>Vivek Jalan <span>Founder/CEO</span></p>
+              	</i> 
+              </a>
+              <span class="tooltiptext">Vivek graduated from Indian Institute of Technology (IIT), Madras and later pursued his MBA at UT, Austin. He worked in Silicon Valley for some time before moving back to Mumbai to re-join his family business. However, nowadays he is totally devoted to Customate Systems believing that his product can not only change the way businesses acquire and use software but it can also have a big impact on the productivity of companies big time on its own.</span> 
+          </div>
+          <div class="tooltip wow animated fadeIn" data-wow-delay="0.4s" data-wow-offset="50"> 
+              <a href="javascript:void(0)"> 
+                  <i> <img src="images/omkar-adgaonkar.jpg">
+                    <p>Omkar Adgaonkar <span>Senior Programmer</span></p>
+                  </i> 
+              </a> 
+              <span class="tooltiptext">Omkar graduated in Computer Science from Mumbai University and since then has worked with big companies concentrating on process automation software programming and customization. It has got awards for using new technologies and has single-handedly developed, deployed and maintained systems for clients previously.</span>
+          </div>
+        </div>
+        
+        <!--<ul class="team-member-slider">
+          <li  class="tooltip wow animated fadeInLeft" data-wow-delay="0.4s" data-wow-offset="50"> <a href="javascript:void(0)"  onClick="overlayBox('vivek-jalan')"> <i> <img src="images/vivek-jalan.jpg">
+            <p class="wow animated fadeInDown" data-wow-delay="0.4s" data-wow-offset="50">Vivek Jalan <span>Founder/CEO</span></p>
+            </i> </a> <span class="tooltiptext">The driving force behind Customate, Vivek was inspired by his personal struggle trying to automate his company's processes to envision a product that will give the business folks the capability to create their own software managing all the business processes in their companies.</span> </li>
+          <li class="tooltip wow animated fadeInRight" data-wow-delay="0.4s" data-wow-offset="50"> <a href="javascript:void(0)"  onClick="overlayBox('omkar-adgaonkar')"> <i> <img src="images/omkar-adgaonkar.jpg">
+            <p class="wow animated fadeInDown" data-wow-delay="0.4s" data-wow-offset="50">Omkar Adgaonkar <span>Senior Programmer</span></p>
+            </i> </a> <span class="tooltiptext">The driving force behind Customate, Vivek was inspired by his personal struggle trying to automate his company's processes to envision a product that will give the business folks the capability to create their own software managing all the business processes in their companies.</span> </li>
+        </ul>--> 
+      </div>
+      <div class="team-img"><img src="images/team.jpg"></div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<div class="footer-line">
+  <div class="container">
+    <ul class="desktop">
+      <li class="list-play"> watch video </li>
+      <li class="list-play revolutionary-technology-vid"> <a href="javascript:void(0);" onClick="overlayBox('revolutionary-technology')" class="video-link"> Revolutionary Technology </a></li>
+      <li class="list-play benefit-customers-vid"> <a href="javascript:void(0);" onClick="overlayBox('benefit-customers')" class="video-link">Benefit to Customers</a></li>
+      <li class="list-play our-story-vid"> <a href="javascript:void(0);" onClick="overlayBox('our-story')" class="video-link">Demo Video</a></li>
+    </ul>
+    <div class="ask-for-demo desktop"> <a href="javascript:void(0);" onClick="overlayBox('ask-demo');">Ask for Demo</a> </div>
+    <div class="watch-video-mob">watch video</div>
+    <ul class="mob ask-for-demo-mob">
+      <li class="list-play revolutionary-technology-vid"> <a href="javascript:void(0);" onClick="overlayBox('revolutionary-technology')" class="video-link"> What? </a></li>
+      <li class="list-play benefit-customers-vid"> <a href="javascript:void(0);" onClick="overlayBox('benefit-customers')" class="video-link"> Why? </a></li>
+      <li class="list-play our-story-vid"> <a href="javascript:void(0);" onClick="overlayBox('our-story')" class="video-link"> Demo? </a></li>
+    </ul>
+    <div class="ask-for-demo mob"> <a href="javascript:void(0);" onClick="overlayBox('ask-demo');">Ask for Demo</a> </div>
+  </div>
+</div>
+
+
+<div class="share-info">
+    <ul id="webSocialList">
+        <li id="webSocialcopylink"> <a class="twitter-share-button" target="_blank" href="javascript:void(0)" onClick="copyToClipboard('http://customate.biz/about.html')" data-size="large"> <i class="fa fa-link" title="Copy Link"></i> </a> </li>
+        <li id="webSocialwhatsapp"> 
+        <a class="twitter-share-button desdisp" target="_blank" href="https://web.whatsapp.com/send?text=http://customate.biz/about.html" data-action="share/whatsapp/share" data-size="large"> <i class="fa fa-whatsapp" title="Whatsapp"></i> </a> 
+        <a class="twitter-share-button mobdisp" target="_blank" href="whatsapp://send?text=http://customate.biz/about.html" data-action="share/whatsapp/share" data-size="large"> <i class="fa fa-whatsapp" title="Whatsapp"></i> </a> 
+        </li>
+        <li id="webSocialTwitter"> <a class="twitter-share-button" target="_blank" href="https://twitter.com/intent/tweet?text=http://customate.biz/about.html" data-size="large"> <i class="fa fa-twitter" title="Twitter"></i> </a> </li>
+        <li id="webSocialfacebook"> <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://customate.biz/about.html"> <i class="fa fa-facebook" title="Facebook"></i> </a> </li>
+        <li id="webSocialLinkedin"> <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://customate.biz/about.html" target="_blank"> <i class="fa fa-linkedin" title="Linkedin"></i> </a> </li>
+        <li id="webSocialIcon"><i class="fa fa-share-alt"></i></li>
+    </ul>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-cntr">
+      <ul>
+        <li>
+          <dl class="active">
+            <dt>Contact</dt>
+            <dd style="display:block">
+              <p>54A Virwani Ind Est Goregaon E Mumbai 400063</p>
+              <p><a href="tell:+919820170609">+91 98201 70609</a></p>
+              <p><a href="mailto:info@customate.biz">info@customate.biz</a></p>
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt>Blogs</dt>
+            <dd>
+              <ul>
+                
+                <li> <a href="blog/software-fits-your-processes-like-glove-underbelly-saas.html"> Software that Fits your Processes like a Glove - The Underbelly of SaaS </a> </li>
+                <li> <a href="blog/ha-now-software-implementation-can-actually-enjoyable.html"> Ha! Now Software Implementation can actually be an Enjoyable Experience! </a> </li>
+              </ul>
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <div class="footer-social">
+            <div class="copyright-text">
+              <p>Follow us</p>
+              <div class="social-icons"> 
+                  <a href="https://twitter.com/customatebiz" target="_blank" class="twitter-icon"><img src="images/twitter-icon.png"></a> 
+                  <a href="https://www.linkedin.com/in/vjalan" target="_blank" class="twitter-icon"><img src="images/linkedin-icon.png"></a> 
+                  <a href="https://www.facebook.com/jalvivek" target="_blank" class="fb-icon"><img src="images/fb-icon.png"></a> 
+                  <a href="https://www.youtube.com/channel/UCNwno8xGj2B08oz7KeNLW1w/featured" target="_blank" class="twitter-icon"><img src="images/youtube-icon.png"></a>
+                <div class="clear"></div>
+              </div>
+              <div class="site-buy">Website by <a href="http://www.intermind.in/" target="_blank"> Intermind</a> </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </li>
+      </ul>
+      <div class="clear"></div>
+    </div>
+  </div>
+</footer>
+<div class="copt-ryt">All content © Customate.biz</div>
+</div>
+<div class="overlay" id="revolutionary-technology" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-header"> Revolutionary Technology </div>
+      <div class="overlay-content">
+        <div class="container">
+          <iframe width="800" height="450" src="https://www.youtube.com/embed/D_oYlN1mZrU?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="overlay" id="benefit-customers" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-header"> Benefit to Customers </div>
+      <div class="overlay-content">
+        <div class="container">
+          <iframe width="800" height="450" src="https://www.youtube.com/embed/yqSiJCCiy0w?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="overlay" id="our-story" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-header"> Demo Video </div>
+      <div class="overlay-content">
+        <div class="container">
+          <iframe width="800" height="450" src="https://www.youtube.com/embed/6KYNriFBqrc?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="overlay" id="revolutionary-technology1" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-header"> Revolutionary Technology </div>
+      <div class="overlay-content">
+        <div class="container">
+          <iframe width="800" height="450" src="https://www.youtube.com/embed/D_oYlN1mZrU?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="overlay" id="benefit-customers1" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-header"> Benefit to Customers </div>
+      <div class="overlay-content">
+        <div class="container">
+          <iframe width="800" height="450" src="https://www.youtube.com/embed/yqSiJCCiy0w?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="overlay" id="our-story1" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-header"> Demo Video </div>
+      <div class="overlay-content">
+        <div class="container">
+          <iframe width="800" height="450" src="https://www.youtube.com/embed/6KYNriFBqrc?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="scripts/common.js" type="text/javascript"></script> 
+<script src="scripts/wow.min.js"></script> 
+<script>
+	new WOW().init();
+</script> 
+<script src="scripts/slick-min.js"></script> 
+<script>
+$(".team-member-slider").slick({
+        dots: true,
+        infinite: true,
+		autoplay: true,
+		speed:1000,
+		autoplaySpeed: 4000,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+		 responsive: [
+			{
+			  breakpoint: 1024,
+			  settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				infinite: true,
+				dots: true
+			  }
+			},
+			{
+			  breakpoint: 600,
+			  settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			  }
+			},
+			{
+			  breakpoint: 480,
+			  settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			  }
+			}
+			// You can unslick at a given breakpoint now by adding:
+			// settings: "unslick"
+			// instead of a settings object
+		  ]
+      });
+</script>
+</body>
+</html>

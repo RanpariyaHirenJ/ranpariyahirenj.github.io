@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Welcome to Vsynergize Global</title>
+<link href="images/favicon.png" rel="icon" type="image/png" />
+<link rel="stylesheet" href="css/style.css" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="js/jquery-min.js"></script>
+<script>
+$(document).ready(function(){
+  var liMaxHeight = -1;
+    var node;
+    $("header").each(function(index) {
+        if ($(this).outerHeight() > liMaxHeight) {
+            liMaxHeight = $(this).outerHeight();
+            node = index;
+        }
+    });
+	$('#header_banner a.view-learn-more-btn').click(function(){
+		$('body,html').animate({scrollTop:liMaxHeight},800)
+	})
+	
+  $('.send-enquiry').append('<a href="contact.html">Send Enquiry</a>');
+});
+</script>
+<style>
+.landing-page-cntr .landing-page-list li .blog-wraper h3{color: #000;}
+.landing-page-cntr .landing-page-list li:hover .blog-wraper{background: #3284b6;}
+.blue_color .list_type_1 li:after, .banner_overlay_blue:after {background: #000000;}
+.verticaly-center {transform: translate(-50%, -50%);}
+.landing-page-header-cntr h1{padding-bottom: 20px;}
+.send-enquiry a.all-btn-send{display:none !important}
+@media screen and (max-width: 1024px) {
+.verticaly-center {transform: translate(0%, 0%);}
+.landing-page-header-cntr h1 {font-size: 28px;padding-bottom:0}
+.landing-page-header-cntr p{width:100%;}
+}
+</style>
+</head>
+
+<body>
+<header class="cloud_banner banner_overlay_blue banner_overlay" style="background-image: url(images/main-banners/about-banner.jpg);">
+  <div id="header_top">
+    <div class="container clear"> <a href="index.html" class="logo_container fl"> <img src="images/logo.png" alt="Vsynergize Global Logo" title="Vsynergize Global Logo" /> </a>
+      <nav id="main_nav" class="fr">
+        <button class="hamburger hamburger--spin" type="button"> <span class="hamburger-box"> <span class="hamburger-inner"></span> </span> </button>
+        <div class="mobileNav">
+          <ul class="main_nav_ul">
+            <li class="active"><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a>
+              <ul>
+                <li><a href="blockchain.html">Blockchain</a></li>
+                <li><a href="iot.html">IOT</a></li>
+                <li><a href="data-science-analytics.html">Data Science & Analytics</a></li>
+                <li><a href="artificial-intellligence.html">Artificial Intelligence</a></li>
+                <li><a href="application-development-support-services.html">Application Development & Support Services</a></li>
+                <li><a href="cloud.html">Cloud</a></li>
+              </ul>
+            </li>
+            <li><a href="industries.html">Industries</a>
+              <ul>
+                <li><a href="finance.html">Finance</a></li>
+                <li><a href="healthcare.html">Healthcare</a></li>
+                <li><a href="energy-utilities.html">Energy & Utilities</a></li>
+                <li><a href="logistics.html">Logistics</a></li>
+                <li><a href="retail-e-commerce.html">Retail & E-commerce</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="manufacturing.html">Manufacturing</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Resources</a>
+              <ul>
+                <li><a href="javascript:void(0)">Coming Soon</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Careers</a>
+              <ul>
+                <li><a href="javascript:void(0)">Coming Soon</a></li>
+              </ul>
+            </li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div id="header_banner">
+    <div class="container">
+      <h2 data-aos="zoom-in" data-aos-offset="0">About</h2>
+    </div>
+  </div>
+</header>
+
+  <section id="info_wrap" class="padTB100" data-aos="fade-up" style="background-color: #f6f6f6;">
+    <div class="container">
+      <h3>Transformational technologies meets visionaries at Vsynergize Global, creating infinite possibilities that can provide your organization with not just a cutting edge, but a whole new USP.</h3>
+      <p data-aos="fade-up">At Vysnergize Global we have the right mix of experienced campaigners and emerging tech specialists that ensure your vision is translated into actionable reality.</p>
+      <p data-aos="fade-up">Backed by <strong>14 years of industry experience</strong>, the Vsynergize Group employs close to <strong>400 people in India & US</strong>.</p>
+    </div>
+  </section>
+<!--<div class="landing-page-header-cntr clear" style="height: 40vh;position: relative;">
+  <div class="container">
+    <div class="verticaly-center">
+      <h1 class="wow animated fadeIn" data-wow-delay="0.2s" data-wow-offset="50">Company Overview</h1>
+      <p>Transformational technologies meets visionaries at Vsynergize Global, creating infinite possibilities that can provide your organization with not just a cutting edge, but a whole new USP. At Vysnergize Global we have the right mix of experienced campaigners and emerging tech specialists that ensure your vision is translated into actionable reality. Backed by 14 years of industry experience, the Vsynergize Group employs  close to 400 people in India & US.</p>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>-->
+<section id="team_details" class="padTB100">
+  <div class="container clear">
+    <h2 data-aos="fade-down">Leadership Team</h2>
+    <div class="team_details_container" data-aos="fade-up-left" onClick="overlayBox('raj-agrawal')"><span><img src="images/raj-agrawal.jpg" alt="" title="" /></span>
+      <p>Raj Agarwaal</p>
+    </div>
+    <div class="team_details_container" data-aos="fade-up-center" onClick="overlayBox('trish-agrawal')"><span><img src="images/trish-agrawal.jpg" alt="" title="" /></span>
+      <p>Trish Agarwaal</p>
+    </div>
+    <div class="team_details_container" data-aos="fade-up-right" onClick="overlayBox('ashok-bhat')"><span><img src="images/ashok-bhat.jpg" alt="" title="" /></span>
+      <p>Ashok Bhat</p>
+    </div>
+  </div>
+</section>
+<section class="product_features clear blue_color" style="height: 850px">
+  <div class="section_bg bg1 fl" style="background: url(images/gdpr-compliance-banner.jpg) center center no-repeat;"></div>
+  <div class="section_info fr" data-aos="fade-right">
+    <div class="dis-table">
+      <div class="dis-tablecell">
+        <h2>GDPR Compliance</h2>
+        <p>Vsynergize Global is fully GDPR compliant. In fact, our GDPR expertise can be used to audit your customer facing applications in the EU to be compliant. Whether you are a data controller or a data processor (we have had experiences working as both), we can help set processes and create software that can automate GDPR compliance to quite an extent. Ability for your end consumers to import/export their personal data, view data collected and analyzed over a period of time and delete their data, including their complete account, is built into our applications by default. Consent to store a user's information & the various nuances involved with third party data storage is handled both legally and technically at our end.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="product_features clear red_color" style="height:650px">
+  <div class="section_bg bg2 fr" style="background: url(images/engagement-model-banner.jpg) center center no-repeat;"></div>
+  <div class="section_info fl" data-aos="fade-left">
+    <div class="dis-table">
+      <div class="dis-tablecell">
+        <h2>Engagement Model</h2>
+        <p>Vsynergize Global has experimented with various delivery models to provide you with the most cost effective solution at the shortest possible time. We have our own flavor of Agile using a DevOps methodology that prevents long drawn lock ins and technology obsolescence. Faster deployment leads to faster go to market for your organization. Our development environment is backed by the latest tools and IDEs, cutting edge collaboration platforms and project management applications that aims at zero defect outputs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!--<section id="contact_form">
+  <div class="container clear">
+    <h2>Want to Learn More?</h2>
+    <p>Start now by filling the form or call +91 020 67959718 to contact our experts</p>
+    <form name="contact_form" id="contact_form" class="contact-form__body" method="post" action="inc/contact.php" onSubmit="return form_validate_jquery('#contact_form')">
+      <input name="first_name" type="text" validation="text" placeholder="First Name" title="First Name" data-aos="fade-up-left" />
+      <input name="last_name" type="text" validation="text" placeholder="Last Name" title="Last Name" data-aos="fade-up-right"/>
+      <input name="phone_no" type="text" pattern="[0-9]+" minlength="10" maxlength="10" validation="number" title="number" onKeyPress="return onlyNos(event,this);" placeholder="Phone"  data-aos="fade-up-left"/>
+      <input name="email_id" type="email" validation="text" placeholder="Email"  title="Email" data-aos="fade-up-right"/>
+      <textarea name="message" validation="text" placeholder="Message"  title="Message" rows="7" cols="" data-aos="fade-up"></textarea>
+       <input type="submit" name="action" value="Send" class="button button_orange" data-aos="fade-up">
+    </form>
+  </div>
+</section>-->
+<footer style="background: #fff;">
+  <section id="sub_footer" class="clear">
+    <div class="container clear">
+      <div class="col blue_color" data-aos="fade-up">
+        <h5>Blockchain</h5>
+        <ul>
+          <li><a href="smart-contract-development.html">Smart Contract Development</a></li>
+          <li><a href="private-blockchain.html">Private Blockchain</a></li>
+          <li><a href="ethereum-applications.html">Ethereum Applications</a></li>
+          <li><a href="poc-development.html">POC Development</a></li>
+          <li><a href="wallet-development.html">Wallet Development</a></li>
+          <li><a href="hyperledger-development.html">HyperLedger Development</a></li>
+        </ul>
+      </div>
+      <div class="col red_color" data-aos="fade-up">
+        <h5>IOT</h5>
+        <ul>
+          <li><a href="tracking-solutions.html">Tracking Solutions</a></li>
+          <li><a href="smart-devices.html">Smart Devices</a></li>
+          <li><a href="application-development.html">Application Development</a></li>
+          <li><a href="iiot.html">Industrial Internet of Things</a></li>
+        </ul>
+      </div>
+      <div class="col orange_color" data-aos="fade-up">
+        <h5>Data Science &amp; Analytics</h5>
+        <ul>
+          <li><a href="business-intelligence.html">Business Intelligence</a></li>
+          <li><a href="data-visualization.html">Data Visualization</a></li>
+          <li><a href="outsourced-data-analysis.html">Outsourced Data Analysis</a></li>
+          <li><a href="data-management.html">Data Management</a></li>
+          <li><a href="big-data-analytics.html">Big Data Analytics</a></li>
+          <li><a href="dashboarding.html">Dashboarding</a></li>
+        </ul>
+      </div>
+      <div class="col purple_color" data-aos="fade-up">
+        <h5>Artificial Intellligence</h5>
+        <ul>
+          <li><a href="machine-learning.html">Machine Learning</a></li>
+          <li><a href="natural-language-processing.html">Natural Language Processing</a></li>
+          <li><a href="data-management-visualization.html">Data Management &amp; Visualization</a></li>
+          <li><a href="chat-bots.html">Chat Bots</a></li>
+          <li><a href="technology-platforms.html">Technology Platforms</a></li>
+        </ul>
+      </div>
+      <div class="col sky_blue_color" data-aos="fade-up">
+        <h5>Application Development & Support Services</h5>
+        <ul>
+          <li><a href="web-application-development-services.html">Web Application Development Services</a></li>
+          <li><a href="mobile-app-development-services.html">Mobile App Development Services</a></li>
+          <li><a href="enterprise-class-app-solutions.html">Enterprise-Class App Solutions</a></li>
+          <li><a href="quality-assurance-testing-services.html">Quality Assurance & Testing Services</a></li>
+          <li><a href="ui-ux-design-services.html">UI/UX Design Services</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <div id="footer_end">
+    <div class="container clear">
+      <div class="copyrights fl">All content © Vsynergize 2019. <a href="">Terms</a> <a href="">Privacy </a><br>
+        Site by <strong><a href="https://www.interminddigital.com/" target="_blank">Intermind</a></strong></div>
+      <div class="social-wrapper fr"> <a class="social-icon tw"></a> <a class="social-icon ln"></a> <a class="social-icon fb"></a> </div>
+    </div>
+  </div>
+</footer>
+
+
+<section class="enquiry_pop" id="raj-agrawal" style="display: none">
+  <div class="form_container"><i class="close_btn">x</i>
+    <div class="pop-header">
+      <h3><span><img src="images/raj-agrawal.jpg" alt="" title="" /></span> Raj Agarwaal</h3>
+    </div>
+    <div class="pop-content">
+      <p>An MBA from Boston, Raj's sharp business acumen and his honest efforts have propelled VSynergize to its present glory. From an idea and a zest to do something in life, it is Raj's cognition, dedication, experience and energy that has enabled VSynergize to achieve radical growth in every aspect of business.</p>
+      <p>The core challenge for most small to medium size companies is increasing costs, lack of innovation as well as hiring and training. It was the realization of this problem that motivated Raj to help companies improve processes fostering growth. He quotes saying: "I consider myself a change agent. Change Agents define, research, plan, build support, and partner with others to create change. The organizational changes that I help to facilitate result in increases in efficiency while simultaneously decreasing costs."</p>
+      <p>Raj has worked at the US-India Business Council (Washington D.C.), where he promoted International trade between the US and India. His vast experience is also spread across the Real Estate and Hospitality industry in India, in addition to which he has extensive experience in the Finance and Investment banking industry. A multi-faceted visionary, Raj has achieved many a milestones that speaks volumes about his qualities as a leader.</p>
+    </div>
+  </div>
+  <div class="close_box"></div>
+</section>
+<section class="enquiry_pop" id="trish-agrawal" style="display: none">
+  <div class="form_container"><i class="close_btn">x</i>
+    <div class="pop-header">
+      <h3><span><img src="images/trish-agrawal.jpg" alt="" title="" /></span>Trish Agarwaal</h3>
+    </div>
+    <div class="pop-content">
+      <p>Trish is the incredibly lively and creative light of VSynergize. She is the solution seeker for every problem faced by the VSynergizers! Extremely dedicated and a prodigy in the field of IT, Trish has surpassed the boundaries of excellence by post graduating in business administration from Boston! An optimistic and bold leader, she is also a founding director and the Chief Marketing Officer of VSynergize Pvt Ltd. It is her passion and life's mission to help companies by improving processes that can translate into a HUGE saving of at least 50% of business costs! She is down to earth and a huge asset for the growth of VSynergize. A courageous woman with a heart of gold, Trish is a ray of light for all employees at VSynergize.</p>
+      <p>Trish is a dynamic professional and has worked with some of the biggest names in the US telecom sector. Be it Conversent Communications or MCI World Communications, her sharp business acumen stems from all the rich work expertise she has gained. She has also worked for a US based IT firm- Sai Information Systems, where she helped the organization grow leaps and bounds.</p>
+    </div>
+  </div>
+  <div class="close_box"></div>
+</section>
+<section class="enquiry_pop" id="ashok-bhat" style="display: none">
+  <div class="form_container"><i class="close_btn">x</i>
+    <div class="pop-header">
+      <h3><span><img src="images/ashok-bhat.jpg" alt="" title="" /></span>Ashok Bhat</h3>
+    </div>
+    <div class="pop-content">
+      <p>Ashok has 27+ yrs of industry experience and significant part of this has been spent mainly working with product companies on their Engineering Requirements. He has a great Track Record in Successfully Delivering Enterprise grade Software products for ISV's across industry verticals & geographies. He has been involved in providing strong Delivery Leadership in managing engagements for large & medium sized product engineering companies where he has extensively used  Agile & Iterative Delivery Models. He also possesses strong Software Engineering & Process background which has resulted in delivering Zero defect work products as part of various client engagements.</p>
+      <p>Ashok has been instrumental in driving Continual Improvements programs within the delivery engagements for identified problem area using quality tools and frameworks like Lean Six Sigma, ITIL, CMMi, etc.</p>
+    </div>
+  </div>
+  <div class="close_box"></div>
+</section>
+
+
+<script src="js/jquery.min.js"></script> 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+<script src="js/custom.js"></script> 
+<script src="js/js_class.js"></script> 
+</body>
+</html>
