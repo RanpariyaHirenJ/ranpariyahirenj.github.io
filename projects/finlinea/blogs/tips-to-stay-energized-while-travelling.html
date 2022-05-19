@@ -1,0 +1,521 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WJWHPD8');</script>
+<!-- End Google Tag Manager -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="../images/favicon.png" />
+<title>Finlinea Healthwits | Blogs | Tips to stay energized while travelling</title>
+<meta name="description" content="Travelling not only refreshes your mind, but your soul as well. Due to the meteoric rate of growing and running behind things, being caught up in the rat race and losing ourselves in the hustle bustle of the world, a break is something that each one of us looks forward to!">
+
+<!--Facebook OG Meta Tags   -->
+<meta property="og:site_name" content="Finlinea Healthwits Blog" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Tips to stay energized while travelling." />
+<meta property="og:description" content=" Travelling not only refreshes your mind, but your soul as well. Due to the meteoric rate of growing and running behind things, being caught up in the rat race and losing ourselves in the hustle bustle of the world, a break is something that each one of us looks forward to! " />
+<meta property="og:image" content="http://www.finlineahealthwits.com/images/family-energized-while-travelling.jpg" />
+<meta property="og:image:url" content="http://www.finlineahealthwits.com/images/family-energized-while-travelling.jpg" />
+<meta property="og:url" content="http://www.finlineahealthwits.com/blogs/tips-to-stay-energized-while-travelling.html" />
+<!--End Facebook OG Meta Tags   -->
+
+
+<link rel="stylesheet" type="text/css" href="../styles/animate.css">
+<link rel="stylesheet" type="text/css" href="../styles/style.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="../scripts/jquery-min.js" type="text/javascript"></script>
+<script src="../scripts/parallax.js"></script>
+<link href="../styles/fotorama.css" rel="stylesheet">
+<script src="../scripts/fotorama.js"></script>
+
+<link rel="stylesheet" href="../styles/jquery-ui.css">
+<script src="../scripts/jquery-ui.js"></script>
+
+<link rel="stylesheet" type="text/css" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" type="text/javascript"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script>
+$(document).ready(function(){
+	var list=$('#webSocialList');
+	
+	var copylink=$('#webSocialcopylink');
+	var copylinkI=copylink.children('i');
+	
+	var whatsapp=$('#webSocialwhatsapp');
+	var whatsappI=whatsapp.children('i');
+	
+	var twitter=$('#webSocialTwitter');
+	var twitterI=twitter.children('i');
+	
+	var facebook=$('#webSocialfacebook');
+	var facebookI=facebook.children('i');
+	
+	var linkedin=$('#webSocialLinkedin');
+	var linkedinI=linkedin.children('i');
+	
+	var icon=$('#webSocialIcon');
+	
+	
+	var active=1;
+	var copylinktmp=1;
+	var whatsapptmp=1;
+	var twittertmp=1;
+	var facebooktmp=1;
+	var linkedintmp=1;
+	var tl=new TimelineMax();
+	
+	tl.fromTo([copylink,copylink],1,{display:"none",width:0},{display:"block",width:"30px"});
+	if($(window).width() > 1024){
+		tl.fromTo([whatsapp,whatsapp],1,{display:"none",width:0},{display:"none",width:"30px"},"-=1");
+	}
+	if($(window).width() < 1024){
+		tl.fromTo([whatsapp,whatsapp],1,{display:"none",width:0},{display:"block",width:"30px"},"-=1");
+	}
+	
+	tl.fromTo([twitter,twitter],1,{display:"none",width:0},{display:"block",width:"30px"},"-=1");
+	tl.fromTo([facebook,facebook],1,{display:"none",width:0},{display:"block",width:"30px"},"-=1");
+	tl.fromTo([linkedin,linkedin],1,{display:"none",width:0},{display:"block",width:"30px"},"-=1");
+	tl.fromTo([icon,icon],1,{color:"#74b6e8"},{color:"#3a7eb1"},"-=1");
+	tl.pause();
+	
+	var copylinkl=new TimelineMax();
+	copylinkl.fromTo([copylink,copylink],1,{width:"30px"},{width:"180px"});
+	copylinkl.pause();
+	
+	var whatsappl=new TimelineMax();
+	whatsappl.fromTo([whatsapp,whatsapp],1,{width:"30px"},{width:"180px"});
+	whatsappl.pause();
+	
+	var twitterl=new TimelineMax();
+	twitterl.fromTo([twitter,twitter],1,{width:"30px"},{width:"180px"});
+	twitterl.pause();
+	
+	var facebookl=new TimelineMax();
+	facebookl.fromTo([facebook,facebook],1,{width:"30px"},{width:"180px"});
+	facebookl.pause();
+	
+	var linkedinl=new TimelineMax();
+	linkedinl.fromTo([linkedin,linkedin],1,{width:"30px"},{width:"180px"});
+	
+	linkedinl.pause();icon.on('click',function(){
+		if(active==1){tl.play();active=0;}
+		else{twitterl.reverse();facebookl.reverse();linkedinl.reverse();tl.timeScale(2).reverse();active=1;twittertmp=1;facebooktmp=1;linkedintmp=1;}
+		});
+		
+	copylinkl.pause();copylink.on('click',function(){
+		if(active==1){tl.play();active=0;}
+		else{twitterl.reverse();facebookl.reverse();linkedinl.reverse();tl.timeScale(2).reverse();active=1;twittertmp=1;facebooktmp=1;linkedintmp=1;}
+	});
+	
+	facebookl.pause();facebook.on('click',function(){
+		if(active==1){tl.play();active=0;}
+		else{twitterl.reverse();facebookl.reverse();linkedinl.reverse();tl.timeScale(2).reverse();active=1;twittertmp=1;facebooktmp=1;linkedintmp=1;}
+	});
+		
+	twitterl.pause();twitter.on('click',function(){
+		if(active==1){tl.play();active=0;}
+		else{twitterl.reverse();facebookl.reverse();linkedinl.reverse();tl.timeScale(2).reverse();active=1;twittertmp=1;facebooktmp=1;linkedintmp=1;}
+	});
+		
+	linkedinl.pause();linkedin.on('click',function(){
+		if(active==1){tl.play();active=0;}
+		else{twitterl.reverse();facebookl.reverse();linkedinl.reverse();tl.timeScale(2).reverse();active=1;twittertmp=1;facebooktmp=1;linkedintmp=1;}
+	});
+		
+	whatsappl.pause();whatsapp.on('click',function(){
+		if(active==1){tl.play();active=0;}
+		else{twitterl.reverse();facebookl.reverse();linkedinl.reverse();tl.timeScale(2).reverse();active=1;twittertmp=1;facebooktmp=1;linkedintmp=1;}
+	});
+	
+	
+	copylinkI.on('click',function(){
+		if(copylinktmp==1){copylink.play();copylinktmp=0;}
+		else{copylinkl.timeScale(2).reverse();copylinktmp=1;}
+		});
+	
+	whatsappI.on('click',function(){
+		if(whatsapptmp==1){whatsappl.play();whatsapptmp=0;}
+		else{whatsappl.timeScale(2).reverse();whatsapptmp=1;}
+		});
+		
+	twitterI.on('click',function(){
+		if(twittertmp==1){twitterl.play();twittertmp=0;}
+		else{twitterl.timeScale(2).reverse();twittertmp=1;}
+		});
+		
+	facebookI.on('click',function(){
+		if(facebooktmp==1){facebookl.play();facebooktmp=0;}
+		else{facebookl.timeScale(2).reverse();facebooktmp=1;}});
+	
+	linkedinI.on('click',function(){
+		if(linkedintmp==1){linkedinl.play();linkedintmp=0;}
+		else{linkedinl.timeScale(2).reverse();linkedintmp=1;}
+		});
+		
+		/*$(document).on('click', '.share-info ul li#webSocialcopylink, li#webSocialwhatsapp, li#webSocialTwitter, li#webSocialfacebook, li#webSocialLinkedin', function () {
+		  	$(".share-info ul li#webSocialcopylink, li#webSocialwhatsapp, li#webSocialTwitter, li#webSocialfacebook, li#webSocialLinkedin").css("display", "none");
+			$(".share-info ul li#webSocialcopylink, li#webSocialwhatsapp, li#webSocialTwitter, li#webSocialfacebook, li#webSocialLinkedin").css("width", "0px");
+			$(".share-info ul li#webSocialIcon").css("color", "rgb(116, 182, 232)");
+	 	});*/
+});
+</script>
+<script>
+$(document).ready(function() {
+	var func  = "get_capcha_images";
+	$.ajax({
+		method: "POST",
+		url: "../user_ajax_functions.php",
+		data: { "function": func }
+	})
+	.done(function(msg) {
+		if(msg){
+			$(".Captchabox-lgn").empty();
+			$(".Captchabox-lgn").append(msg);
+		}
+	});
+});
+
+
+/*if ($(window).width() > 1024){
+var popup_opentime = 1;
+ $(window).scroll(function () {
+	 //alert($(this).scrollTop())
+	if ($(this).scrollTop() > 500) {
+		if(popup_opentime == 1){
+			overlayBox('offers-overlay');
+			popup_opentime = popup_opentime + 1;
+		}
+	}
+  });
+}
+if ($(window).width() < 1024){
+	$(document).ready(function(){
+		overlayBox('offers-overlay')
+ 	});
+}*/
+$(document).ready(function(){
+overlayBox('offers-overlay')
+ });
+</script>
+<style>
+html, body {overflow-x:hidden}
+.answers-come.parallax {padding: 50px 0 0px;}
+.aspects-cntr.parallax.aloeverajuice-clr.blog-cntr {padding-top: 40px;padding-bottom: 80px;}
+.answers-come p {width: 96%;}
+.aspects-cntr.parallax.aloeverajuice-clr.blog-cntr p{width: 96%;text-align:center; font-weight:700;}
+.overlay-box .overlay-header {padding: 0;}
+.overlay-box .overlay-content{padding:10px;}
+.aspects-cntr.parallax.aloeverajuice-clr.blog-cntr h2{padding-top:0px;}
+.aspects-cntr.parallax.aloeverajuice-clr.blog-cntr .blog-note {
+    width: 100%;
+    text-align: left;
+    font-weight: 400;
+    margin-top: 20px;
+}
+.aspects-cntr.parallax.aloeverajuice-clr.blog-cntr p.blog-p{font-weight: 400;text-align: left;width: 100%;padding-bottom:15px;}
+@media screen and (max-width: 767px) and (min-width: 0){
+.answers-come h2 {
+    font-size: 28px;
+    line-height: 32px;
+    padding-bottom: 30px;width: 100%;
+}
+}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJWHPD8"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<div class="overlay" id="offers-overlay" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-header"> </div>
+      <div class="overlay-content">
+        <div> <a href="../shopping-cart.html"><img src="../images/offer.jpg"></a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="loader">
+  <div class="pre-container">
+    <div class="sk-double-bounce">
+      <div class="sk-child sk-double-bounce1"></div>
+      <div class="sk-child sk-double-bounce2"></div>
+    </div>
+  </div>
+</div>
+<div class="wrapper">
+  <div class="header">
+    <div class="container">
+      <div class="navigation">
+        <div class="logo"> <a href="http://www.finlineahealthwits.com"><img src="../images/logo.png" alt="Finlinea Healthwits"></a></div>
+        <div class="login-mblmenu">
+          <div class="mobile-nav-icon">
+            <button class="menu-icon mobil-icon-toggle"> <span>toggle menu</span> </button>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="nav-menu">
+          <div class="top-status-bar desdisp">
+            <div class="dvrit"> <a href="../shopping-cart.html">Buy Now</a> <div class="tollfree" title="Timings: Mon-Fri 10 am to 6 pm">Toll Free - 1800-227-798</div></div>
+          </div>
+          <ul>
+            <li class="dropdown"> <a href="javascript:void(0)" class="dropbtn">About</a><a href="javascript:void(0)" class="plus-minus-icon mobdisp"><i class="fa fa-plus" aria-hidden="true"></i></a>
+              <div class="sub-menu" style="display: none;">
+                <ul class="dropdown-content">
+                  <li> <a href="../about/company.html">Company</a> </li>
+                  <li> <a href="../about/nutrigenomics.html">Nutrigenomics</a> </li>
+                  <li> <a href="../about/research-development.html">Research & Development</a> </li>
+                </ul>
+              </div>
+            </li>
+            <li class="dropdown"> <a href="javascript:void(0)" class="dropbtn">Products</a><a href="javascript:void(0)" class="plus-minus-icon mobdisp"><i class="fa fa-plus" aria-hidden="true"></i></a>
+              <div class="sub-menu" style="display: none;">
+                <ul class="dropdown-content">
+                  <li> <a href="../products/healthwits.html">Why Healthwits?</a> </li>
+                  <li> <a href="../products/aloe-vera-juice.html">Aloe Vera Juice</a> </li>
+                  <li> <a href="../products/karela-juice.html">Karela Juice</a> </li>
+                  <li> <a href="../products/jamun-juice.html">Jamun Juice</a> </li>
+                </ul>
+              </div>
+            </li>
+            <li class="dropdown"> <a href="javascript:void(0)" class="dropbtn">Ingredients</a><a href="javascript:void(0)" class="plus-minus-icon mobdisp"><i class="fa fa-plus" aria-hidden="true"></i></a>
+              <div class="sub-menu" style="display: none;">
+                <ul class="dropdown-content">
+                  <li> <a href="../ingredients/aloe-vera.html">Aloe Vera</a> </li>
+                  <li> <a href="../ingredients/karela.html">Karela</a> </li>
+                  <li> <a href="../ingredients/jamun.html">Jamun</a> </li>
+                </ul>
+              </div>
+            </li>
+            <li> <a href="../plant-practices.html">Plant & Practices</a> </li>
+            <li class="dropdown"> <a href="javascript:void(0)" class="dropbtn">Resources</a> <a href="javascript:void(0)" class="plus-minus-icon mobdisp"><i class="fa fa-plus" aria-hidden="true"></i></a>
+              <div class="sub-menu" style="display:none;">
+                <ul class="dropdown-content">
+                  <li> <a href="../resources/recipes.html">Recipes</a> </li>
+                  <li> <a href="../resources/faq.html">FAQ</a> </li>
+                </ul>
+              </div>
+            </li>
+            <li> <a href="index.html" class="active">Blogs</a> </li>
+            <li class="dropdown"> <a href="javascript:void(0)" class="dropbtn">Contact</a> <a href="javascript:void(0)" class="plus-minus-icon mobdisp"><i class="fa fa-plus" aria-hidden="true"></i></a>
+              <div class="sub-menu" style="display:none;">
+                <ul class="dropdown-content">
+                  <li> <a href="../contact/careers.html">Careers</a> </li>
+                  <li> <a href="../contact/contact.html">Contact</a> </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <div class="top-status-bar mobdisp">
+                <div class="dvrit"> <a href="../shopping-cart.html">Buy Now</a> <div class="tollfree" title="Timings: Mon-Fri 10 am to 6 pm">Toll Free - <div>18OO-227-798</div></div></div>
+              </div>
+            </li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <div class="about-banner parallax top-banner">
+    <div class="container"> <i><img src="../images/tips-to-stay-energized-while-travelling-banner.jpg" alt="Tips to stay energized while travelling"></i>
+      <h1><span class="wow animated fadeInUp" data-wow-delay="0.5s" data-wow-offset="50">Tips to stay energized<br>while travelling</span></h1>
+      <div class="banner-circle">
+        <div class="top1"></div>
+        <div class="top2"></div>
+        <div class="top3"></div>
+        <div class="top4"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <section class="answers-come parallax pb">
+    <div class="container">
+    <div class="share-info">
+              <ul id="webSocialList">
+              	<li id="webSocialcopylink"> <a class="twitter-share-button" target="_blank" href="javascript:void(0)" data-size="large"> <i class="fa fa-link" title="Copy Link"></i> </a> </li>
+                <li id="webSocialwhatsapp"> <a class="twitter-share-button" target="_blank" href="javascript:void(0)" data-action="share/whatsapp/share" data-size="large"> <i class="fa fa-whatsapp" title="Whatsapp"></i> </a> </li>
+                <li id="webSocialTwitter"> <a class="twitter-share-button" target="_blank" href="javascript:void(0)" data-size="large"> <i class="fa fa-twitter" title="Twitter"></i> </a> </li>
+                <li id="webSocialfacebook"> <a class="fb-xfbml-parse-ignore" target="_blank" href="javascript:void(0)"> <i class="fa fa-facebook" title="Facebook"></i> </a> </li>
+                <li id="webSocialLinkedin"> <a href="javascript:void(0)" target="_blank"> <i class="fa fa-linkedin" title="Linkedin"></i> </a> </li>
+                <li id="webSocialIcon"><i class="fa fa-share-alt"></i></li>
+              </ul>
+            </div>
+            <ul class="blog-bullet-wellness">
+                <li>"To travel is to live!"</li>
+            </ul>
+      <p class="wow animated fadeInUp p0" data-wow-delay="0.4s" data-wow-offset="50">Travelling not only refreshes your mind, but your soul as well. Due to the meteoric rate of growing and running behind things, being caught up in the rat race and losing ourselves in the hustle bustle of the world, a break is something that each one of us looks forward to! Travelling is that break. Travelling is that key. Travelling is that path. No matter how busy the schedule is, there is always time to take a short break and go on a vacation. Now, to enjoy the most of it and live it fully, one needs to remain energized and enthusiastic throughout.</p>
+      <div class="clear"></div>
+    </div>
+  </section>
+  <section class="aspects-cntr parallax aloeverajuice-clr blog-cntr">
+    <div class="container">
+    <h2 class="wow animated fadeInUp" data-wow-delay="0.4s" data-wow-offset="50">Here are a few tips that will ensure that the zest never leaves your body and soul</h2>
+      <div class="aspects-info">
+        <ul>
+          <li class="wow animated fadeInUp" data-wow-delay="0.4s" data-wow-offset="50"><h2>Pack Smartly</h2>
+          Before you go for your trip, take some time to figure out where you are staying and what facilities are available. Pack smartly. Try to bring as less as you can. You don't want to carry around a bunch of stuff that wasn't essential for the trip. So, instead of packing everything you see, take some time to figure out the essentials.</li>
+            
+            <li class="wow animated fadeInUp" data-wow-delay="0.4s" data-wow-offset="50"><h2>Eat Smart</h2>
+            It is very common for people to let go of their diet during a trip. It's perfectly okay to have a cheat day once in a while, but eating a lot of unhealthy snacks during vacation will only take your energy level down. Fast food meals are convenient and will satisfy you for some time, but healthy, well-balanced snacks like nuts, dried fruits, whole grain biscuits etc. will keep you energized for longer periods of time. Get some healthy juice. Today, you can even order healthy juices online at your convenience.</li>
+            
+            <li class="wow animated fadeInUp" data-wow-delay="0.4s" data-wow-offset="50"><h2>Workout</h2>
+            You don't have to worry about workout if you are going for some trekking trip. However, if you are looking forward to your time in some resort, you better take out some time for a workout. Instead of having one 30-minutes long and rigorous workout session, try to move more while performing your daily activities. Take stairs instead of the lift. Walk instead of taking a cab. If you are travelling by car, take regular breaks and move around a bit. This will help you stay energized during travelling.</li>
+            
+            <li class="wow animated fadeInUp" data-wow-delay="0.4s" data-wow-offset="50"><h2>Stay hydrated</h2>
+            Even though it makes you want to visit the washroom every 30 minutes, it is important to stay hydrated during the trip. Water helps in the transportation of nutrients throughout the body. It also maintains the temperature of the body. Monitor the water intake during your trip. Drink 8-12 glasses of water every day.</li>
+            
+            <li class="wow animated fadeInUp" data-wow-delay="0.4s" data-wow-offset="50"><h2>Comfort</h2>
+            People take trips to get a break from their day-to-day activities and just relax. And if you are on a business trip, there is already a lot of stress. So, make sure that you choose the most comfortable transportation and the most comfortable outfit. Even if the outfit makes you look like a hotshot celebrity, it's not worth it if you are not comfortable wearing it.</li>
+            
+            <li class="wow animated fadeInUp" data-wow-delay="0.4s" data-wow-offset="50"><h2>Sleep</h2>
+            Proper rest is the most effective way to keep yourself energized while travelling. All of the efforts would go in vain if the proper amount of sleep and naps are not taken. The power naps should not exceed 20-30 minutes. This much time is enough to help you in charging the battery! Sleep is a must.</li>
+            
+            <li class="wow animated fadeInUp" data-wow-delay="0.4s" data-wow-offset="50"><h2>Alone time</h2>
+            During every trip, always take out a little time just for yourself. Just grab your favourite book or your iPod or take a walk alone. Explore the place. This will refresh your mind and will help you tackle whatever stands next.</li>
+            
+            <li class="wow animated fadeInUp" data-wow-delay="0.4s" data-wow-offset="50"><h2>Breakfast</h2>
+            The importance of breakfast cannot be overstated. It is the most important meal of the day. Eat some fresh fruits and whole grains that will satisfy the nutritional needs of your body. Don't go for anything unhealthy during breakfast. Have some healthy drinks. During travel, you can try some oatmeal packets or some healthy fresh juices. This will help you stay fresh and energized for the whole day.</li>
+            
+        </ul>
+        <div class="clear"></div>
+        <p class="blog-note wow animated fadeInUp animated p0 animated">Apart from these, it is important to stay committed. Unhealthy habits will only cause a disturbance. Remember, the trip is meant to be a time of respite during which you can recharge your mind and body.</p>
+      </div>
+      <div class="clear"></div>
+        <div class="disclaimer-note mt30">
+        	<span>Disclaimer:</span>
+            <p>The purpose of this blog is to promote broad consumer understanding and knowledge of various health and wellness topics. It is not intended to be a substitute for professional medical advice, diagnosis or treatment. Always seek the advice of your physician or other qualified health care provider with any questions you may have regarding a medical condition or treatment and before undertaking a new health care regimen, and never disregard professional medical advice or delay in seeking it because of something you have read on this website.</p>
+        </div>
+      <!--<div class="grid-12 sub-btn">
+          <div class="submitformbtn text-center spacingtopbot mt30">
+          <a href="index.html" class="wow animated fadeInUp" data-wow-delay="0.4s" data-wow-offset="50">Back to Blogs</a>
+          </div>
+        </div>-->
+      <div class="clear"></div>
+    </div>
+  </section>
+  
+  <section class="next-prev-btn parallax">
+    <div class="container">
+        <a href="tips-to-stay-fit-without-excercising.html" class="prev-btn fl"><div class="prev-icon">Previous Blog </div></a>
+            <a href="index.html" class="back-blog-btn">Back to Blog</a>
+        <a href="tips-avoiding-weight-gain-this-festive-season.html" class="next-btn fr"><div class="next-icon">Next Blog </div></a>
+    </div>
+  </section>
+  
+  <section class="pulp-cntr parallax our-product">
+      <div class="latest-updates">
+          <div class="dash">&nbsp;</div>
+            <h2>Our Products</h2>
+         <div class="dash">&nbsp;</div>
+       </div>
+    <div class="container">
+      <div class="fotorama" data-width="1920" data-ratio="1920/1000" data-max-width="100%" data-autoplay="5000" data-loop="true" data-swipe="true" data-navposition="bottom" data-direction="ltr" data-fit="contain" data-click="false" >
+        <div class="grid-12">
+          <div class="grid-8"><i><img src="../images/products-aloeverajuice.jpg" alt="Products Aloeverajuice"></i></div>
+          <div class="grid-4">
+            <div class="not-just-pulp-cntr">
+              <div class="not-just-pulp-info">
+                <h3>Aloe Vera Juice</h3>
+                <p>Thanks to our stressful lifestyle, polluted environment and the junk food that we consume, there is a need to cleanse our system of the toxins from time to time. Left alone, these toxins in various body tissues will pose serious health challenges.</p>
+                	<div class="product-bottobtn">
+                        <a href="../products/aloe-vera-juice.html" class="readmore wow animated fadeInUp" data-wow-delay="0.5s" data-wow-offset="50">Read More</a>
+                        <a href="../shopping-cart.html" id="buy_aloe_vera_juice" class="buy-now wow animated fadeInUp" data-wow-delay="0.5s" data-wow-offset="50">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-12">
+          <div class="grid-8"><i><img src="../images/products-karelajuice.jpg" alt="Products Karelajuice"></i></div>
+          <div class="grid-4">
+            <div class="not-just-pulp-cntr">
+              <div class="not-just-pulp-info">
+                <h3>Karela Juice</h3>
+                <p>Unbalanced blood sugar level is a condition that currently affects more than 62 million Indians, which is more than 7.1% of the adult population. Consumption of Karela (Bitter Gourd) is traditionally known to be a way to combat this condition in an all-natural manner.</p>
+                	<div class="product-bottobtn">
+                        <a href="../products/karela-juice.html" class="readmore wow animated fadeInUp" data-wow-delay="0.5s" data-wow-offset="50">Read More</a>
+                        <a href="../shopping-cart.html" id="buy_karela_juice" class="buy-now wow animated fadeInUp" data-wow-delay="0.5s" data-wow-offset="50">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-12">
+          <div class="grid-8"><i><img src="../images/products-jamunjuice.jpg" alt="Products Jamunjuice"></i></div>
+          <div class="grid-4">
+            <div class="not-just-pulp-cntr">
+              <div class="not-just-pulp-info">
+                <h3>Jamun Juice</h3>
+                <p>Our lifestyles and dietary patterns contribute to the accumulation of toxic metabolites in our bodies. When the production of toxic metabolites overwhelms our organs of detoxification, these are stored in our connective tissues – which are undesirable and avoidable.</p>
+                	<div class="product-bottobtn">
+                        <a href="../products/jamun-juice.html" class="readmore wow animated fadeInUp" data-wow-delay="0.5s" data-wow-offset="50">Read More</a>
+                        <a href="../shopping-cart.html" id="buy_jamun_juice" class="buy-now wow animated fadeInUp" data-wow-delay="0.5s" data-wow-offset="50">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </section>
+  
+  <section class="our-commitment-cntr parallax">
+    <div class="container">
+      <div class="our-commitment-info">
+        <div class="grid-4">
+          <h2>Our Commitment, Our Certifications</h2>
+        </div>
+        <div class="grid-8">
+          <ul>
+              <li><i><img src="../images/our-commitment1.png" alt="ISO 9001 : 2008 Certified"></i></li>
+              <li><i><img src="../images/our-commitment2.png" alt="ISO 22000 : 2005"></i></li>
+              <li><i><img src="../images/our-commitment3.png" alt="HACCP Certified"></i></li>
+              <li><i><img src="../images/our-commitment4.png" alt="GMP"></i></li>
+              <li><i><img src="../images/our-commitment5.png" alt="FSSAI"></i></li>
+          </ul>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="footernavigtn">
+        <div class="copt-ryt"> © 2017 Finlinea Healthwits. <a href="../terms-and-conditions.html">Terms and Conditions</a> <a href="../privacy-policy.html">Privacy Policy</a> <a href="../sitemap.html">Sitemap</a> <span>Site by <a href="http://www.intermind.in/" target="_blank"> Intermind</a>  </span></div>
+        <div class="social-media">
+          <ul>
+            <li class="fb-cntr"><a href="https://www.facebook.com/FinlineaHealthwits" target="_blank" class="fb"></a> </li>
+            <li class="twitter-cntr"><a href="#" class="twitter"></a> </li>
+          </ul>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="../scripts/wow.js"></script> 
+<script>
+	 new WOW().init();
+	$('.parallax').parallax({
+		speed : 0.50
+	});	
+</script>
+<script src="../scripts/js_class.js"></script> 
+<script src="../scripts/common.js" type="text/javascript"></script>
+</body>
+</html>
