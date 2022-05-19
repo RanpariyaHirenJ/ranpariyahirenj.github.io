@@ -1,0 +1,13 @@
+#Options +FollowSymLinks
+RewriteEngine on
+
+#RewriteCond %{HTTP_HOST} ^hospitaltech.co.in [NC]
+#RewriteRule ^(.*)$ http://www.hospitaltech.co.in/$1 [L,R=301]
+
+RewriteRule index.html index.php [NC,L]
+
+RewriteRule blog/(.*)-description.html$ blog-description.php?slug_name=$1 [NC,L]
+RewriteRule blog/(.*).html$ blog-listing.php?category_slug=$1 [NC,L]
+
+RewriteRule blog.html blog.php [NC,L]
+

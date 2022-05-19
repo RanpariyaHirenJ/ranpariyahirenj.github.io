@@ -1,0 +1,269 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<title>Welcome To DesignCorp Training</title>
+<link rel="stylesheet" type="text/css" href="styles/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<script src="scripts/jquery-min.js" type="text/javascript"></script>
+<script src="scripts/parallax.js"></script>
+<script src="scripts/js_class.js"></script>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $(".mainlinks ul li a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+<script>
+function fixedFooter()
+{
+  $('body').css('min-height', $(window).height());
+	$(".banner-box ul li").css('min-height', $(window).height());
+}
+
+
+if ($(window).width() > 1400) {
+	function fixedFooter()
+	{
+		$(".banner-box ul li").css('min-height', $(window).height() - 200);
+	}
+}
+</script>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div class="container">
+      <div class="navigation">
+        <div class="logo"> <a href="index.html"><img src="images/logo.png"></a> </div>
+        <div class="navbar">
+          <div class="mainlinks">
+            <ul>   
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="programs.html">Programs</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+          <div class="mobile-nav-icon">
+            <button class="menu-icon mobil-icon-toggle"> <span>toggle menu</span> </button>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <div class="banner-box common-top">
+    <ul>
+      <li class="slide1"> <img src="images/home-banner.jpg" class="dn">
+      <div class="industry-hovrband"></div>
+        <div class="captioncntr">
+          <div class="distable">
+            <div class="distablcell">
+              <div class="container">
+                <div class="banner-band wow animated fadeInUp" data-wow-delay="1s">
+                    <!--<div>
+                        <h1>Upcoming Events/</h1>
+                        <p>Millionaire Mind Intensive, Mumbai</p>
+                        <div class="sub_links"><span class="fa fa-calendar"></span>Friday, 6th Oct 2017 - Sunday, 8th Oct 2017 </div>
+                        <div class="sub_links"><span class="fa fa-clock-o"></span>08:00 AM to 10:00 PM IST </div>
+  						<div class="sub_links"><span class="fa fa-map-marker"></span><span>Hotel Sahara Star,Vile Parle, Vile Parle East, Mumbai, Maharashtra, India</span></div>
+                    </div>-->
+                    
+                    <div class="bookcntr">
+                    <img src="images/design-career-book.jpg" >
+                        <div class="book-info">
+                            <p>Design your Career</p>
+                       		<a href="http://amzn.in/b8MQp5a" target="_blank" class="amazon-link"><img src="images/amazoncart.png" ></a>
+                            <div class="pm-button"><a href="https://www.payumoney.com/paybypayumoney/#/369753"><img src="images/payu-icon.png" class="payu-icon" /></a></div>
+                        </div> 
+                    </div>
+                    
+                    <div class="bookcntr">
+                    <img src="images/design-life-book.jpg" >
+                        <div class="book-info">
+                            <p>Design your Life</p>
+                       		<a href="http://amzn.in/3Noo42w" target="_blank" class="amazon-link"><img src="images/amazoncart.png" ></a>
+                            <div class="pm-button"><a href="https://www.payumoney.com/paybypayumoney/#/361057"><img src="images/payu-icon.png" class="payu-icon" /></a></div>
+                        </div> 
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="weconnectbox">
+    <div class="container">
+      <h2 class="wow animated fadeInDown" data-wow-delay="0s" data-wow-offset="100">We are DesignCorp Training</h2>
+      <p>We are pioneer in bringing exemplar shift in thinking pattern of people, to improve personal and organizational productivity. We impart training to corporate employees, students & other professionals. DesignCorp Trainings has below four power packed coaching programs.</p>
+      <div class="about-btn"><a href="about.html">+ Know More</a></div>
+      <div class="grid-layout">
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <div class="blogandvdo-box wow animated fadeInUp" data-wow-delay="0.5s" data-wow-offset="50">
+    <div class="vdoandblog-cntr">
+      <div class="blogbx-left boxcolbv">
+        <div class="bloghome">
+          <div class="bloghmcell">
+            <div class="blogimghm"> <img src="images/life-transformation.jpg"> </div>
+            <div class="bloghmslider">
+              <h2>Life Transformation/</h2>
+              <p>This program is focused to impart, all required skills power packed in shortest span with highest of energy and passion... <a href="programs.html">+ Know More</a></p>
+            </div>
+          </div>
+          <div class="bloghmcell">
+            <div class="blogimghm"> <img src="images/young-stars.jpg"> </div>
+            <div class="bloghmslider">
+              <h2>Competitive Young Stars/</h2>
+              <p>This is a custom-made 10 hrs course. This course is about knowing the fun way of learning. It is designed in such a way... <a href="competitive-young-stars.html">+ Know More</a></p>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="blogbx-left boxcolbv">
+        <div class="bloghome">
+          <div class="bloghmcell">
+            <div class="blogimghm"> <img src="images/productvity-improvement.jpg"> </div>
+            <div class="bloghmslider">
+              <h2>Productivity Improvement/</h2>
+              <p>With this program, your overall productivity would move to next level. We share secrets of being and keeping your team highly... <a href="productivity-improvement.html">+ Know More</a></p>
+            </div>
+          </div>
+          <div class="bloghmcell">
+            <div class="blogimghm"> <img src="images/design-career.jpg"> </div>
+            <div class="bloghmslider">
+              <h2>Design Your Career/</h2>
+              <p>Yogesh had been highly successful in making a career in corporate life He has worked in various multinational companies... <a href="design-your-career.html">+ Know More</a></p>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div id="contact"></div>
+  <div class="migratingbox wow animated fadeInUp" data-wow-delay="0.5s" data-wow-offset="50">
+    <div class="container">
+      <div class="mgratingrow">
+        <div class="migratingcol migratingleft">
+          <div class="migratingimg"> <img src="images/get-free-consultation.png"> </div>
+        </div>
+        <div class="migratingcol migratingryt">
+          <h2>Get free consultation<span class="migrating-text">Our expertise help you to address your queries</span> </h2>
+          <div class="grid-layout">
+          	<form name="requestquoteform" id="requestquoteform" method="post" action="contact.php" onSubmit="return form_validate_jquery('#requestquoteform')">
+            <div class="form-row animate-label">
+              <div class="form-field">
+                <div class="grid-6">
+                  <div class="input-group">
+                    <label>First Name</label>
+                    <input type="text" name="first_name" autocomplete="off" title="First Name" validation="text" class="inputType">
+                  </div>
+                </div>
+                <div class="grid-6">
+                  <div class="input-group">
+                    <label>Last Name</label>
+                    <input type="text" name="last_name" title="Last Name" autocomplete="off" validation="text" class="inputType">
+                  </div>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div>
+            <div class="form-row animate-label">
+              <div class="form-field">
+                <div class="grid-6">
+                  <div class="input-group">
+                    <label>Email Id</label>
+                    <input type="text" name="email" title="Email" autocomplete="off" validation="email" class="inputType">
+                  </div>
+                </div>
+                <div class="grid-6">
+                  <div class="input-group">
+                    <label>Mobile Number</label>
+                    <input type="text" name="contact_no" autocomplete="off" onKeyPress="return onlyNos(event,this);" title="Mobile Number" validation="number" class="inputType">
+                  </div>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="grid-12">
+                <div class="submit-migrate">
+                  <input type="submit" name="submit" value="Submit">
+                  <a href="javascript:history.back()" class="back">Back</a>
+                </div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            </form>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+<footer class="footer" id="page-footer" data-wow-delay="0.8s" data-wow-offset="50">
+    <div class="copyright-band">
+      <div class="container">
+        <div class="copy-left">
+          <p>2017 © Copyright DesignCorp Training <a href="privacy-policy.html">Privacy Policy</a> | <a href="terms-and-conditions.html">Terms and Conditions</a></p>
+          <ul>
+            <li>Site by <a href="http://www.intermind.in/" target="_blank"> Intermind</a></li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+        <div class="copy-ryt">
+          <ul>
+            <li><a href="#" target="blank"><img src="images/fb.png"></a></li>
+            <li><a href="#" target="blank"><img src="images/twitter.png"></a></li>
+            <li><a href="#" target="blank"><img src="images/g-plus.png"></a></li>
+            <li><a href="#" target="blank"><img src="images/youtube.png"></a></li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </footer>
+</div>
+<script>
+
+new WOW().init();
+
+</script>
+<script src="scripts/common.js" type="text/javascript"></script>
+</body>
+</html>

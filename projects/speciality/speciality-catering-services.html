@@ -1,0 +1,1253 @@
+﻿<!doctype html>
+
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="utf-8">
+<title>Speciality Restaurants LTD.</title>
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<link rel="stylesheet" type="text/css" href="styles/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/slick.css">
+<link rel="stylesheet" type="text/css" href="styles/slick-theme.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link rel="stylesheet" href="styles/jquery-ui.css">
+<script src="scripts/jquery-min.js" type="text/javascript"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script src="scripts/jquery-ui.js"></script>
+<style>
+body {
+	overflow-x:hidden
+}
+.top-circle-slider {
+	padding:10px 0;
+}
+ @media screen and (min-width: 0) and (max-width: 1024px) {
+ header.header + .top-circle-slider {
+display: flex;
+}
+ .top-circle-slider {
+padding: 5px 0;
+border-top: 1px solid #eee;
+}
+ .mobile-nav-icon {
+margin-top: 26px;
+}
+}
+</style>
+<script>
+
+$(document).ready(function(){
+
+  // Add smooth scrolling to all links
+
+  $("a").on('click', function(event) {
+
+
+
+    // Make sure this.hash has a value before overriding default behavior
+
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+
+      event.preventDefault();
+
+
+
+      // Store hash
+
+      var hash = this.hash;
+
+
+
+      // Using jQuery's animate() method to add smooth page scroll
+
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+
+      $('html, body').animate({
+
+        scrollTop: $(hash).offset().top
+
+      }, 800, function(){
+
+   
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+
+        window.location.hash = hash;
+
+      });
+
+    } // End if
+
+  });
+
+  
+
+  $("#locateid").on('click', function(event) {
+
+  		var value = $("#location").val();
+
+		if(value == 'mumbai.html'){
+
+			overlayBox('mumbai');
+
+		}
+
+		else if(value == 'pune.html'){
+
+			overlayBox('pune');
+
+		}
+
+		else if(value == 'chennai.html'){
+
+			overlayBox('chennai');
+
+		}
+
+		else if(value == 'bangalore.html'){
+
+			overlayBox('bangalore');
+
+		}
+
+		else if(value == 'kolkata.html'){
+
+			overlayBox('kolkata');
+
+		}
+
+		else if(value == 'delhi.html'){
+
+			overlayBox('delhi');
+
+		}
+
+		else if(value == 'hyderabad.html'){
+
+			overlayBox('hyderabad');
+
+		}
+
+  });
+
+
+
+  
+
+  
+
+$(function() {
+
+  $( ".date" ).datepicker({
+
+	changeMonth: true,
+
+	changeYear: true,
+
+	yearRange: "c-50:c",	 
+
+	dateFormat: "dd/mm/yy"
+
+	
+
+  });
+
+});
+
+});
+
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143009552-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-143009552-1');
+</script>
+</head>
+
+<body>
+<div class="overlay" id="mumbai" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class='overlay-box'>
+    <div class='content'>
+      <div class='overlay-header'> Mumbai </div>
+      <div class='overlay-content'>
+        <div class="tel-icon-cntr">
+          <p class="email-icon"><a href="mailto:prasanna@speciality.co.in">prasanna@speciality.co.in</a></p>
+          <p class="email-icon"><a href="mailto:sunil@speciality.co.in">sunil@speciality.co.in</a></p>
+          <p>9324677668, 7506651005</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="overlay" id="pune" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class='overlay-box'>
+    <div class='content'>
+      <div class='overlay-header'> Pune </div>
+      <div class='overlay-content'>
+        <div class="tel-icon-cntr">
+          <p class="email-icon"><a href="mailto:anurag@speciality.co.in">anurag@speciality.co.in</a></p>
+          <p class="email-icon"><a href="mailto:sunil.chandelkar@speciality.co.in">sunil.chandelkar@speciality.co.in</a></p>
+          <p>932552331, 9326213049, 9370579604</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="overlay" id="chennai" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class='overlay-box'>
+    <div class='content'>
+      <div class='overlay-header'> Chennai </div>
+      <div class='overlay-content'>
+        <div class="tel-icon-cntr">
+          <p class="email-icon"><a href="mailto:sujit@speciality.co.in">sujit@speciality.co.in</a></p>
+          <p>8939660783, 8939427952</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="overlay" id="bangalore" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class='overlay-box'>
+    <div class='content'>
+      <div class='overlay-header'> Bangalore </div>
+      <div class='overlay-content'>
+        <div class="tel-icon-cntr">
+          <!--<p class="email-icon"><a href="mailto:kunal@speciality.co.in">kunal@speciality.co.in</a></p>
+          <p class="email-icon"><a href="mailto:santanu.k@speciality.co.in">santanu.k@speciality.co.in</a></p>-->
+          <p class="email-icon"><a href="mailto:vishal@speciality.co.in">vishal@speciality.co.in</a></p>
+          <p>9342206181, 9538324433, 9538326633</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="overlay" id="kolkata" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class='overlay-box'>
+    <div class='content'>
+      <div class='overlay-header'> Kolkata </div>
+      <div class='overlay-content'>
+        <div class="tel-icon-cntr">
+          <!--<p class="email-icon"><a href="mailto:outdoor@speciality.co.in">outdoor@speciality.co.in</a></p>-->
+          <p class="email-icon"><a href="mailto:debashish@speciality.co.in">debashish@speciality.co.in</a></p>
+          
+          <p class="email-icon"><a href="mailto:sanhita@spciality.co.in">sanhita@spciality.co.in</a> | 9324942119</p>
+          <p class="email-icon"><a href="mailto:kunal@speciality.co.in">kunal@speciality.co.in</a> | 9742206181</p>
+          
+          <p>9339726331, 9331762102 </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="overlay" id="delhi" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class='overlay-box'>
+    <div class='content'>
+      <div class='overlay-header'> Delhi </div>
+      <div class='overlay-content'>
+        <div class="tel-icon-cntr">
+          <p class="email-icon"><a href="mailto:kajal@speciality.co.in">kajal@speciality.co.in</a></p>
+          <p>9310224470, 9310468699</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="overlay" id="hyderabad" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class='overlay-box'>
+    <div class='content'>
+      <div class='overlay-header'> Hyderabad </div>
+      <div class='overlay-content'>
+        <div class="tel-icon-cntr">
+          <p class="email-icon"><a href="mailto:subrata.c@speciality.co.in">subrata.c@speciality.co.in</a></p>
+          <p>9347684302, 9347684303</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrapper">
+  <header class="header">
+    <div class="container">
+      <div class="navigation">
+        <div class="logo"> <a href="index.html"><img src="images/logo.png" alt=""></a></div>
+        <div class="login-mblmenu">
+          <div class="mobile-nav-icon">
+            <button class="menu-icon mobil-icon-toggle"> <span>toggle menu</span> </button>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="menubar">
+          <ul>
+            <li> <a href="index.html">Home</a></li>
+            <li> <a href="deliveries.html">Online Delivery</a></li>
+            <li class="hasDropDown"> <a href="javascript:void(0)">About</a>
+              <div class="submenu">
+                <ul class="dropdown-content">
+                  <li class=""><a href="about.html">Our Mission & Vision</a></li>
+                  <li class=""><a href="our-story.html">Our Story</a></li>
+                  <li class=""><a href="our-values.html">Our Values</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="hasDropDown active"> <a href="javascript:void(0)">Brands</a>
+              <div class="submenu">
+                <ul class="dropdown-content">
+                  <li class=""><a href="mainland-china.html">Mainland China</a></li>
+                  <li class=""><a href="oh!-calcutta.html">Oh! Calcutta</a></li>
+                  <li class=""><a href="asia-kitchen-mainland-china.html">Asia Kitchen by Mainland China</a></li>
+                  <li class=""><a href="sigree.html">Sigree</a></li>
+                  <li class=""><a href="sigree-global-grill.html">Sigree Global Grill</a></li>
+                  <li class=""><a href="spicery.html">Spicery by Sigree</a></li>
+                  <li class=""><a href="jungle-safari.html">Jungle Safari</a></li>
+                  <li class=""><a href="udp.html">Urban Deccan Pub</a></li>
+                  <li class=""><a href="hoppipola.html">Hoppipola</a></li>
+<li class=""><a href="hay.html">Hay</a></li>
+
+<li class=""><a href="episode.html">Episode One</a></li>
+
+                  <li class=""><a href="gong-modern-asian.html">Gong Modern Asian</a></li>
+                  <li class=""><a href="sweet-bengal.html">Sweet Bengal</a></li>
+                  <li class=""><a href="cafe-mezzuna.html">Café Mezzuna</a></li>
+                  <li class=""><a href="flame-grill.html">Flame & Grill</a></li>
+                  <li class=""><a href="haka.html">Haka</a></li>
+                  <li class=""><a href="machaan.html">Machaan</a></li>
+                  <li class=""><a href="dariole.html">Dariole</a></li>
+                  <li class=""><a href="zoodles.html">Zoodles</a></li>
+
+
+                  <li class="active"><a href="speciality-catering-services.html">Speciality Catering Services</a></li>
+                </ul>
+              </div>
+            </li>
+            
+            <!--<li> <a href="javascript:void(0)">News</a></li>-->
+            
+            <li class="hasDropDown"> <a href="javascript:void(0)">Corporate</a>
+              <div class="submenu">
+                <ul class="dropdown-content">
+                  <li class=""><a href="guest-book.html">Guest Book/Testimonials</a></li>
+                  <li class=""><a href="awards.html">Awards</a></li>
+                  <li class=""><a href="press.html">Press (year wise)</a></li>
+                  <li class=""><a href="corporate-governance.html">Corporate Governance</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="hasDropDown"> <a href="javascript:void(0)">For Investors</a>
+              <div class="submenu">
+                <ul class="dropdown-content M">
+                  <li class=""><a href="investor-contacts.html">Investor Contacts</a></li>
+                  <li class=""><a href="shareholding-pattern.html">Shareholding Pattern</a></li>
+                  <li class=""><a href="annual-general-meeting.html">Annual General Meeting</a></li>
+                  <li class=""><a href="annual-report.html">Annual Report</a></li>
+                  <li class=""><a href="financial-results.html">Financial Results</a></li>
+                  <li class=""><a href="conference-call-transcripts.html">Conference Call Transcripts</a></li>
+                  <li class=""><a href="unclaimed-dividend.html">Unclaimed Dividend</a></li>
+                  <li class=""><a href="presentation.html">Presentation</a></li>
+                  <li class=""><a href="postal-ballot.html">Postal Ballot</a></li>
+                  <li class=""><a href="policies.html">Policies</a></li>
+                  <li class=""><a href="press-releases.html">Press Releases</a></li>
+                  <li class=""><a href="corporate-governance-report.html">Corporate Governance Report</a></li>
+                  <li class=""><a href="reconciliation-share-capital-audit-report.html">Reconciliation of Share Capital Audit Report</a></li>
+                  <li class=""><a href="statement-investor-complaints.html">Statement of Investor Complaints</a></li>
+                  <li class=""><a href="filing-with-the-stock-exchanges.html">Filing With The Stock Exchanges</a></li>
+                  <li class=""><a href="notice-board-meeting.html">Notice of Board Meeting</a></li>
+                  <li class=""><a href="newspaper-notice-board-meeting.html">Newspaper AD - Notice of Board Meeting</a></li>
+                  <li class=""><a href="outcome-board-meeting.html">Outcome of the Board Meeting</a></li>
+                  <li class=""><a href="composition-board-committees.html">Composition of the Board & Committees</a></li>
+                  <li class=""><a href="compliance-under-regulation.html">Compliance under Regulation 46</a></li>
+                  <li class=""><a href="newspaper-advt-financial-results.html">Newspaper Advt. - Financial Results</a></li>
+                  <li class=""><a href="details-familiarization-programme-imparted-independent-directors.html">Details of Familiarization Programme imparted to Independent Directors</a></li>
+                </ul>
+              </div>
+            </li>
+            <li> <a href="gift-voucher.html">Speciality Gift Vouchers</a></li>
+            <li> <a href="blog.html">Food Blog</a></li>
+            <li class="hasDropDown"> <a href="javascript:void(0)">Contact Us</a>
+              <div class="submenu">
+                <ul class="dropdown-content">
+                  <li class=""><a href="contact.html">Corporate Office</a></li>
+                  <li class=""><a href="franchise-enquiry.html">Franchise Enquiry</a></li>
+                  <li class=""><a href="vendor-registration.html">Vendor Registration</a></li>
+                  <li><a href="customer-feedback.html">Customer Feedback</a></li>
+                  <li class=""><a href="careers.html">Careers</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="search-btn"> <a href="javascript:void(0)"><i></i></a>
+              <div class="search-container">
+                <input type="text" placeholder="Search">
+              </div>
+            </li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </header>
+  <section class="top-circle-slider">
+    <div class="container">
+      <div class="restaurants-logo"><img src="images/speciality-outdoor-catering-logo.png">
+        <p>Speciality Catering Services</p>
+      </div>
+      <div class="login-mblmenu">
+        <div class="mobile-nav-icon">
+          <button class="menu-icon mobil-icon-toggle1"> <span>toggle menu</span> </button>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="restaurants-menu">
+        <ul>
+          <li class="active"> <a href="#about-resturent">About Speciality Catering Services</a></li>
+          <li> <a href="#menu">Menu</a></li>
+          <li> <a href="#chef">Chef</a></li>
+          <li> <a href="#testimonials">Testimonials</a></li>
+          <li> <a href="#awards">Awards</a></li>
+          <li> <a href="#online-reservation">Online Reservation</a></li>
+          <li> <a href="#location-div">Location</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="main-slider commonSpace addSpacing">
+    <div class="mainslider-cntr">
+      <div class="home-banner-slider our-clients-banner">
+        <div class="slider-row banner-1" style="background-image: url(images/brand-banner/Speciality_ODC_Banner.jpg);">
+          <div class="slideContent">
+            <div class="container">
+              <div class="dis-table">
+                <div class="dis-tablecell">
+                  <div class="banner-txt">
+                     <!--<h2 data-animation="fadeInDown" data-delay="1s">Speciality Restaurants</h2>-->
+                    <h3 data-animation="fadeInUp" data-delay="1s">Speciality <span>Catering Services</span></h3>
+                    <div class="more-details"><span class="more-details-tab2">We are invited to the best parties in town!</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="mainland-china-cntr">
+    <div id="about-resturent" class="com-flot"></div>
+    <div class="container">
+      <div class="mainland-china-inner-cntr">
+        <div class="mainland-china-img"> <img src="images/mainland-china-img.jpg"> <img src="images/speciality-outdoor-catering-brand-logo.jpg" class="mainland-china-menu-logo"> </div>
+        <div class="mainland-china-writeup">
+          <h2>About</h2>
+          <h1>Speciality Catering Services</h1>
+          <p>Mr. Gupta' daughter' marriage, Mrs. Singh's 25th anniversary, Mr. Naidu's son's 18th birthday, the celebration of football match won by a corporate group, Mr. Lee and Mr. Wang celebrating 15 years of great business partnership……..all were successful events because the Speciality Catering Services ensured the best dishes for the guests, allowing the host to relax and take the credit for the evening!</p>
+          <p>A venture by Speciality Restaurants Ltd., 15+ celebrated chains, 125+ restaurants and some of India's best fine dining brands allow us to bring culinary treats like no one else can.</p>
+          <p>You can choose from a wide range of cuisines like the delectable oriental fare from Mainland China, Haka, from the very Indian cuisines of Sigree, the bong specialities from Oh Calcutta, the Mediterranean fare from Café Mezunna, and melt in your mouth desserts from Sweet Bengal !</p>
+          <p><strong>Why choose Speciality Catering Services all the time?</strong><br>
+            Do you question the collision protection in Mercedes cars?<br>
+            Do you question the cut and carat of a De Beers diamond?<br>
+            Will you ever see the British Royal Guards miss a beat?<br>
+            Can you ever question the dedication and precision of honey bees when they build their honeycombs?</p>
+          <p>Similarly you can put your faith in us that every occasion of yours will have guests drooling over the spread, complimenting the hospitality.</p>
+          <p>We serve creatively and passionately with dedication, honesty, whole mindedness.</p>
+          <p>Your guests are our gods.</p>
+          <div id="location-div"></div>
+          <div class="cities-outlets">
+            <div class="cities-details"> <span class="number">7</span> <span class="cities">Cities</span> </div>
+            <div class="outlets-details"> <span class="number">7</span> <span class="outlets">Outlets</span> </div>
+          </div>
+          <div class="nearest-loaction-cntr">
+            <div class="nearest-loaction-select">
+              <select id="location">
+                <option>Find Your Nearest Loaction</option>
+                <option value="mumbai.html">Mumbai</option>
+                <option value="pune.html">Pune</option>
+                <option value="chennai.html">Chennai</option>
+                <option value="bangalore.html">Bangalore </option>
+                <option value="kolkata.html">Kolkata </option>
+                <option value="delhi.html">Delhi </option>
+                <option value="hyderabad.html">Hyderabad </option>
+              </select>
+            </div>
+            <div class="nearest-loaction-btn">
+              <input type="submit" value="LOCATE" id="locateid">
+            </div>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </section>
+  <section class="mainland-china-populer-dishes-cntr">
+    <div id="menu" class="com-flot"></div>
+    <div class="container">
+      <div class="mainlandchina-populerdishes-cntr">
+        <h3>Speciality Catering Services</h3>
+        <h2>Delightful <span>Dishes</span></h2>
+        
+       <!--<div class="download-full-menu">
+
+            	<a href="pdf/menu/Speciality-Catering -Services-Menu.pdf" target="_blank">Download Full Menu</a>
+
+            </div>-->
+        
+        <div class="clear"></div>
+        <div class="populer-dishes-slider">
+          <div class="">
+            <div class="populer-dishes-cntr"> <img src="images/outdoor-catering-001.png">
+              <p>Asparagus Tempura Rolls </p>
+            </div>
+          </div>
+          <div class="">
+            <div class="populer-dishes-cntr"> <img src="images/outdoor-catering-002.png">
+              <p>Japanese Wheat Noodles </p>
+            </div>
+          </div>
+          <div class="">
+            <div class="populer-dishes-cntr"> <img src="images/outdoor-catering-003.png">
+              <p>Paneer Tikka</p>
+            </div>
+          </div>
+          <div class="">
+            <div class="populer-dishes-cntr"> <img src="images/outdoor-catering-004.png">
+              <p>stone grilled chicken roasted potato salad, sauteed vegetables, citrus jus </p>
+            </div>
+          </div>
+          <div class="">
+            <div class="populer-dishes-cntr"> <img src="images/outdoor-catering-005.png">
+              <p>Mochar Ghanto</p>
+            </div>
+          </div>
+          <div class="">
+            <div class="populer-dishes-cntr"> <img src="images/outdoor-catering-006.png">
+              <p>Grilled Moroccan lamb chops, black olives, cous cous </p>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </section>
+  <section class="main-chef-cntr">
+    <div id="chef" class="com-flot"></div>
+    <div class="container">
+      <div class="main-chef-header">
+        <h3>Speciality Catering Services</h3>
+        <h2>Kitchen <span>Experts</span></h2>
+      </div>
+      <div class="clear"></div>
+      <div class="main-chef-slider wow animated fadeInUp" data-wow-delay="0.10s" data-wow-offset="50">
+        <div class="main-chef-slider-li"> <img src="images/chef-dubey.jpg">
+          <div class="main-chef-details">
+            <h2>Chef Dubey</h2>
+            <p>Chief of Cuisine</p>
+          </div>
+        </div>
+        <div class="main-chef-slider-li"> <img src="images/chef-ram.jpg">
+          <div class="main-chef-details">
+            <h2>Chef Ram</h2>
+            <p>Corporate Chef</p>
+          </div>
+        </div>
+        <div class="main-chef-slider-li"> <img src="images/chef-subir.jpg">
+          <div class="main-chef-details">
+            <h2>Chef Subir</h2>
+            <p>Brand Chef – Oh! Calcutta</p>
+          </div>
+        </div>
+        <div class="main-chef-slider-li"> <img src="images/chef-kinshuk.jpg">
+          <div class="main-chef-details">
+            <h2>Chef Kinshuk</h2>
+            <p>Brand Chef – Mezzuna</p>
+          </div>
+        </div>
+        <!--<div class="main-chef-slider-li"> <img src="images/chef-jolly.jpg">
+          <div class="main-chef-details">
+            <h2>Chef Indraneel</h2>
+            <p>Executive Chef – Kolkata</p>
+          </div>
+        </div>-->
+        
+        <div class="main-chef-slider-li"> <img src="images/chef-harman.jpg">
+          <div class="main-chef-details">
+            <h2>Chef Harman</h2>
+            <p>Brand Chef – Sigree & Sigree Global Grill</p>
+          </div>
+        </div>
+        
+        <!--<div class="main-chef-slider-li"> <img src="images/chef-pandey.jpg">
+          <div class="main-chef-details">
+            <h2>Chef Pandey</h2>
+            <p></p>
+          </div>
+        </div>-->
+        
+      </div>
+      <div class="clear"></div>
+    </div>
+  </section>
+  <section class="awards-cntr">
+    <div id="awards" class="com-flot"></div>
+    <div class="container">
+      <div class="awards-content-slider-cntr">
+        <div class="awards-header">
+          <h3>Speciality Catering Services</h3>
+          <h2>Awards</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras orci massa, tristique ut molestie a, fermentum vel ligula. Duis tincidunt erat eget arcu accumsan, hendrerit aliquam ante mattis. Proin eleifend nisl</p>
+        </div>
+        <div class="awards-slider-cntr">
+          <div class="">
+            <div class="awards-images"> <img src="images/awards1.png">
+              <p>Awards Name</p>
+            </div>
+          </div>
+          <div class="">
+            <div class="awards-images"> <img src="images/awards2.png">
+              <p>Awards Name</p>
+            </div>
+          </div>
+          <div class="">
+            <div class="awards-images"> <img src="images/awards3.png">
+              <p>Awards Name</p>
+            </div>
+          </div>
+          <div class="">
+            <div class="awards-images"> <img src="images/awards1.png">
+              <p>Awards Name</p>
+            </div>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </section>
+  <section class="our-clients-cntr">
+    <div id="testimonials" class="com-flot"></div>
+    <div class="container">
+      <h2 class="wow animated fadeInUp" data-wow-delay="0.2s" data-wow-offset="80">Our Guests'</h2>
+      <h3 class="wow animated fadeInDown" data-wow-delay="0.4s" data-wow-offset="80">Review</h3>
+      <div class="our-clientsrs-slider wow animated fadeInUp" data-wow-delay="0.5s" data-wow-offset="50">
+        <div class="our-clients-slider wow animated fadeInDown" data-wow-delay="0.8s" data-wow-offset="80">
+          <div class="our-clients-desc wow animated fadeInUp" data-wow-delay="1.2s" data-wow-offset="80">
+            <div class="our-clients-txt">
+              <div class="our-clients-txtslider">
+                <div class="txt-row-testiminail">
+                  <div class="dis-table">
+                    <div class="dis-tablecell">
+                      <div class="ourclientsPersoninfo">
+                        <h3>MD, City Corporation Ltd.<span>Aniruddha Deshpande</span></h3>
+                        <p>We've always had really wonderful experiences when working with Speciality Catering Services for hospitality and each time they have outdone themselves. My son's wedding was made so special by their wonderful service and outstanding multi-speciality cuisines. The presentation was flawless and quality impeccable. </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="txt-row-testiminail">
+                  <div class="dis-table">
+                    <div class="dis-tablecell">
+                      <div class="ourclientsPersoninfo">
+                        <h3>MD, Cello Group of Companies<span>Pradip Rathod</span></h3>
+                        <p>I want to thank the entire team of Speciality for the excellent catering at our Dealer's Conference 2014 – everything went beautifully. Our attendees unanimously enjoyed the meals and were awed by the high quality of service and hospitality. Extremely professional management and team work. I want to especially thank the servers at the catered event who were friendly and professional. I am so pleased I chose Speciality Catering services and would definitely consider them again the next time around!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="txt-row-testiminail">
+                  <div class="dis-table">
+                    <div class="dis-tablecell">
+                      <div class="ourclientsPersoninfo">
+                        <h3>IMG Hospitality Director <span>Deborah Jennings</span></h3>
+                        <p>Want to extend my sincere gratitude and thanks to the entire team for the excellent service to IPL Hospitality delivered by Speciality Group for all matches in Kolkata. Dynamic and varied menus, quality food, excellent presentation and professional delivery from the group which ensured the highest standard of guest experience for the IPL guests. I very much look forward to working together again.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="txt-row-testiminail">
+                  <div class="dis-table">
+                    <div class="dis-tablecell">
+                      <div class="ourclientsPersoninfo">
+                        <h3>Former Chairman (SBI)<span>Arundhati Bhattacharya</span></h3>
+                        <p>We would like to thank the entire team of Speciality Restaurants Ltd. for making our events so opulent. The type of cuisines selected were just extraordinary and I sincerely appreciate the effort put forth by each and every member. We look forward to associating more and make the events successful, as a result.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="txt-row-testiminail">
+                  <div class="dis-table">
+                    <div class="dis-tablecell">
+                      <div class="ourclientsPersoninfo">
+                        <h3>Vice Chairman and MD, Asian Heart Institute<span>Dr. Ramakant Pande</span></h3>
+                        <p>We have had a great experience with Speciality Catering Services. Top points to the well managed operations team and the varied range of delectable cuisines. Thank you for the special service provided and making our event a success.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="reservation-cntr" style="display:block">
+    <div id="online-reservation" class="com-flot"></div>
+    <div class="container">
+      <h2>Event Booking</h2>
+      
+      <div class="billing-details-form grid-layout wow animated fadeInUp" data-wow-delay="1.2s" data-wow-offset="80" style="margin-bottom:50px;">
+            <form name="customer_event_form" id="customer_event_form" method="post" action="inc/contact.php" onSubmit="return form_validate_jquery('#customer_event_form')">
+              <div class="form-row animate-label">
+                <div class="form-field">
+                  <div class="grid-4">
+                    <div class="input-group">
+                      <label>Name</label>
+                      <input type="text" name="member_name" title="Full Name" validation="text" class="inputType">
+                      <div class="error-msg"></div>
+                    </div>
+                  </div>
+                  
+                  <div class="grid-4">
+                    <div class="input-group">
+                      <label>Mobile Number</label>
+                      <input type="text" name="member_phone" title="Phone" validation="text" class="inputType">
+                      <div class="error-msg"></div>
+                    </div>
+                  </div>
+                  
+                  <div class="grid-4">
+                    <div class="input-group">
+                      <label>Email Address</label>
+                      <input type="text" name="member_email" title="Email Address" validation="email" class="inputType">
+                      <div class="error-msg"></div>
+                    </div>
+                  </div>
+                  
+                  <div class="clear"></div>
+                </div>
+              </div>
+              
+              <div class="form-row animate-label">
+                <div class="form-field">
+                  <div class="grid-4">
+                    <div class="input-group">
+                      <label>City</label>
+                      <input type="text" name="member_city" title="City" validation="text" class="inputType">
+                      <div class="error-msg"></div>
+                    </div>
+                  </div>
+                  <div class="grid-4">
+                    <div class="input-group">
+                      <label >Event Type</label>
+                      <select name="member_event" class="inputType">
+                        <option selected>Select</option>
+                        <option value="Corporate Party">Corporate Party</option>
+                        <option value="Wedding Party">Wedding Party</option>
+                        <option value="Private Party">Private Party</option>
+                      </select>
+                      
+                      <div class="error-msg"></div>
+                    </div>
+                  </div>
+                  <div class="grid-4">
+                    <div class="input-group">
+                       <label>No. of Guests</label>
+                      <select name="member_guest" class="inputType">
+                        <option selected>Select</option>
+                        <option value="125-300">125-300</option>
+                        <option value="325-500">325-500</option>
+                        <option value="500 and above">500 and above</option>
+                      </select>
+                      <div class="error-msg"></div>
+                    </div>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </div>
+              
+              
+              <div class="form-row animate-label">
+                <div class="form-field">
+              <div class="grid-4">&nbsp;</div>
+                  <div class="grid-4">
+                    <div class="g-recaptcha" data-sitekey="6Lctz5IUAAAAAFh8hosPzif2G9nuGizFmKfUfr7i"></div>
+                  </div>
+                  <div class="grid-4">
+                  <div class="grid-12 text-center submit-btn">
+                  <input type="submit" name="customer_event" value="Submit">
+               
+              </div>
+                </div>
+              </div>
+             
+                
+            </form>
+            <div class="clear"></div>
+          </div>
+      <div class="clear"></div>
+    </div>
+  </section>
+  <footer class="footer">
+    <section class="footerinks">
+      <div class="container">
+        <div class="footerbox">
+          <div class="footerCols">
+            <div class="footerlogo"> <img src="images/footer-logo.png" width="96"> </div>
+          </div>
+          <div class="footerCols">
+            <dl>
+              <dt>
+                <h2>About Us</h2>
+              </dt>
+              <dd>
+                <ul>
+                  <li><a href="about.html">Our Mission & Vision</a></li>
+                  <li><a href="our-story.html">Our Story</a></li>
+                  <li><a href="our-values.html">Our Values</a></li>
+                </ul>
+              </dd>
+            </dl>
+          </div>
+          <div class="footerCols">
+            <dl>
+              <dt>
+                <h2>Corporate</h2>
+              </dt>
+              <dd>
+                <ul>
+                  <li><a href="guest-book.html">Guest Book/Testimonials</a></li>
+                  <li><a href="awards.html">Awards</a></li>
+                  <li><a href="press.html">Press (Year Wise)</a></li>
+                  <li><a href="corporate-governance.html">Corporate Governance</a></li>
+                </ul>
+              </dd>
+            </dl>
+          </div>
+          <div class="footerCols">
+            <dl>
+              <dt>
+                <h2>Contact Us</h2>
+              </dt>
+              <dd>
+                <ul>
+                  <li><a href="contact.html">Corporate Office</a></li>
+                  <li><a href="franchise-enquiry.html">Franchise Enquiry</a></li>
+                  <li><a href="vendor-registration.html">Vendor Registration</a></li>
+                  <li><a href="customer-feedback.html">Customer Feedback</a></li>
+                  <li><a href="careers.html">Careers</a></li>
+                </ul>
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footerCopy">
+      <div class="container">
+        <div class="copyRytbox">
+          <div class="copyTxt">Copyright <script>document.write(new Date().getFullYear());</script>. All Rights Reserved.</div>
+          <div class="socialBox">
+            <div class="socailicons"> <a href="#" target="_blank"><img src="images/fb.png"></a> <a href="#" target="_blank"><img src="images/twitter.png"></a> <a href="#" target="_blank"><img src="images/insta.png"></a> </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+</div>
+<script src="scripts/js_class.js" type="text/javascript"></script> 
+<script src="scripts/common.js" type="text/javascript"></script> 
+<script src="scripts/jquery.fancybox.min.js" type="text/javascript"></script> 
+<script src="scripts/parallax.min.js" type="text/javascript"></script> 
+<script src="scripts/wow.min.js"></script> 
+<script>
+
+    new WOW().init();
+
+</script> 
+<script src="scripts/slick-min.js"></script> 
+<script>
+
+$(window).load(function() {
+
+					
+
+	$('.slider').on('init', function(e, slick) {
+
+        var $firstAnimatingElements = $('div.slider-row:first-child').find('[data-animation]');
+
+        doAnimations($firstAnimatingElements);    
+
+    });
+
+    $('.slider').on('beforeChange', function(e, slick, currentSlide, nextSlide) {
+
+	  var $animatingElements = $('div.slider-row[data-slick-index="' + nextSlide + '"]').find('[data-animation]');
+
+	  doAnimations($animatingElements);    
+
+    });
+
+    $('.home-banner-slider').slick({
+
+       autoplay: false,
+
+		arrows:false,
+
+		speed: 2000,
+
+        autoplaySpeed: 5000,
+
+       	dots: true,
+
+       	fade: true,
+
+		pauseOnHover:false
+
+    });
+
+    function doAnimations(elements) {
+
+        var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+
+        elements.each(function() {
+
+            var $this = $(this);
+
+            var $animationDelay = $this.data('delay');
+
+            var $animationType = 'animated ' + $this.data('animation');
+
+            $this.css({
+
+                'animation-delay': $animationDelay,
+
+                '-webkit-animation-delay': $animationDelay
+
+            });
+
+            $this.addClass($animationType).one(animationEndEvents, function() {
+
+                $this.removeClass($animationType);
+
+            });
+
+        });
+
+    };
+
+	
+
+$('.top-slider').slick({
+
+	autoplay: true,
+
+	arrows: true,
+
+	infinite: true,
+
+	speed: 500,
+
+	autoplaySpeed: 3000,
+
+	variableWidth: true,
+
+	slidesToShow: 11,
+
+	slidesToScroll: 1,
+
+	dots: false,
+
+	pauseOnHover: true,
+
+	responsive: [
+
+		{
+
+			breakpoint: 980,
+
+			settings: {
+
+				slidesToShow: 3,
+
+				slidesToScroll: 1,
+
+			}
+
+		},
+
+		{
+
+			breakpoint: 600,
+
+			settings: {
+
+				slidesToShow: 1,
+
+				slidesToScroll: 1
+
+			}
+
+		},
+
+		{
+
+			breakpoint: 480,
+
+			settings: {
+
+				slidesToShow: 1,
+
+				slidesToScroll: 1
+
+			}
+
+		}
+
+	]
+
+});
+
+
+
+	$('.populer-dishes-slider').slick({
+
+		autoplay: false,
+
+		arrows: false,
+
+		infinite: true,
+
+		speed: 500,
+
+		autoplaySpeed: 3000,
+
+		variableWidth: true,
+
+		slidesToShow: 4,
+
+		slidesToScroll: 1,
+
+		dots: true,
+
+		pauseOnHover: true,
+
+		responsive: [
+
+			{
+
+				breakpoint: 980,
+
+				settings: {
+
+					slidesToShow: 3,
+
+					slidesToScroll: 1,
+
+				}
+
+			},
+
+			{
+
+				breakpoint: 600,
+
+				settings: {
+
+					slidesToShow: 1,
+
+					slidesToScroll: 1
+
+				}
+
+			},
+
+			{
+
+				breakpoint: 480,
+
+				settings: {
+
+					slidesToShow: 1,
+
+					slidesToScroll: 1
+
+				}
+
+			}
+
+		]
+
+	});
+
+	
+
+	$('.main-chef-slider').slick({
+
+		autoplay: true,
+
+		arrows: false,
+
+		infinite: true,
+
+		speed: 500,
+
+		autoplaySpeed: 3000,
+
+		variableWidth: true,
+
+		slidesToShow: 3,
+
+		slidesToScroll: 3,
+
+		dots: true,
+
+		pauseOnHover: true,
+
+		responsive: [
+
+			{
+
+				breakpoint: 980,
+
+				settings: {
+
+					slidesToShow: 3,
+
+					slidesToScroll: 1,
+
+				}
+
+			},
+
+			{
+
+				breakpoint: 600,
+
+				settings: {
+
+					slidesToShow: 1,
+
+					slidesToScroll: 1
+
+				}
+
+			},
+
+			{
+
+				breakpoint: 480,
+
+				settings: {
+
+					slidesToShow: 1,
+
+					slidesToScroll: 1
+
+				}
+
+			}
+
+		]
+
+	});
+
+	
+
+	$('.awards-slider-cntr').slick({
+
+		autoplay: false,
+
+		arrows: false,
+
+		infinite: true,
+
+		speed: 500,
+
+		autoplaySpeed: 3000,
+
+		variableWidth: true,
+
+		slidesToShow: 3,
+
+		slidesToScroll: 1,
+
+		dots: true,
+
+		pauseOnHover: true,
+
+		responsive: [
+
+			{
+
+				breakpoint: 980,
+
+				settings: {
+
+					slidesToShow: 3,
+
+					slidesToScroll: 1,
+
+				}
+
+			},
+
+			{
+
+				breakpoint: 600,
+
+				settings: {
+
+					slidesToShow: 1,
+
+					slidesToScroll: 1
+
+				}
+
+			},
+
+			{
+
+				breakpoint: 480,
+
+				settings: {
+
+					slidesToShow: 1,
+
+					slidesToScroll: 1
+
+				}
+
+			}
+
+		]
+
+	});
+
+})
+
+
+
+
+
+	
+
+			$(function(){
+$('.our-clients-txtslider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		infinite: true,
+		arrows: false,
+		dots: true,
+		fade: true,
+	});
+})
+
+    </script>
+</body>
+</html>

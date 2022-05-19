@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>CINQO INDIA: Request Cinqo Money</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css">
+
+<!-- SmartAdmin Styles : Caution! DO NOT change the order -->
+<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production-plugins.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-skins.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/demo.min.css">
+
+<!-- FAVICONS -->
+<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+<link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<style>
+.dt-toolbar {
+	display:none;
+}
+</style>
+<script>
+$(document).ready(function() {
+	
+    $('.animate-label .input-group').click(function () {
+        if ($(this).find('select').size() > 0) {
+        } else {
+            $(this).find('input').focus();
+            $(this).find('label').addClass('active');
+
+        }
+        if ($(this).find('.custom-select-options,.custom-selct-bg').size() > 0) {
+            $(this).find('.custom-select-options,.custom-selct-bg').fadeIn();
+        }
+
+    });
+    $('.animate-label .input-group input,.animate-label .input-group textarea').blur(function () {
+        if (this.value.length > 0) {
+            return false;
+        }
+        else {
+            $(this).prev('label').removeClass('active');
+        }
+    });
+
+    $('.input-group').on('focus', 'input, select, textarea', function () {
+        $(this).prev('label').addClass('active');
+    });
+
+    $('.input-group textarea, .input-group input,.input-group select').each(function () {
+        if (this.value.length > 0) {
+            var div = $(this).prev('label').addClass('active');
+        }
+    });
+    $('.input-group').click(function () {
+        $(this).find('input').focus();
+        $(this).find('label').addClass('active');
+    });
+    /*Animate label form*/
+	
+})
+
+</script>
+</head>
+<body class="">
+<aside id="left-panel">
+  <nav>
+    <ul>
+      <li><a href="#" title="Dashboard"><i class=""><img src="images/dashboard.png"></i> <span class="menu-item-parent">Dashboard</span></a></li>
+      <li><a href="#"><i class=""><img src="images/users.png"></i> <span class="menu-item-parent">My Employees</span></a>
+        <ul>
+          <li><a href="manage-employee.html">Manage Employee</a></li>
+          <li><a href="allocate-cinqo-credit.html">Allocate Cinqo Credit</a></li>
+        </ul>
+      </li>
+      <li class="active"><a href="#"><i class="fa  fa-lg fa-fw fa-inr"></i> <span class="menu-item-parent">CINQO Transactions</span></a>
+        <ul>
+          <li class="active"><a href="request-cinqo-money.html">Request Cinqo Money</a></li>
+          <li><a href="view-transactions.html">View Transaction</a></li>
+          <li><a href="empl-transaction.html">Employee Transaction</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><i class="fa  fa-lg fa-fw fa-list-alt"></i> <span class="menu-item-parent">Complaint</span></a>
+        <ul>
+          <li><a href="dispute-initiated-transactions.html">Dispute Initiated Via View Transactions</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><i class="fa  fa-lg fa-fw fa-envelope"></i> <span class="menu-item-parent">support@cinqo.in</span></a></li>
+    </ul>
+  </nav>
+</aside>
+<div id="main" role="main">
+  <div id="ribbon">
+    <ol class="breadcrumb">
+      <li>CINQO Transactions | <span> Request Cinqo Money </span></li>
+      <div class="top-header">
+        <ul>
+          <li>
+            <div class="welcome-msg">Welcome User | <a href="logoin.html">Logout</a></div>
+          </li>
+          <li><a href="index.html"><img src="images/logo.png"></a></li>
+        </ul>
+      </div>
+    </ol>
+  </div>
+  <div id="content">
+    <div class="jarviswidget" id="wid-id-6" data-widget-editbutton="false" data-widget-custombutton="false">
+      <div>
+        <div class="widget-body no-padding animate-label">
+          <form action="" method="post" name="add_account" id="add_account" class="smart-form" enctype="multipart/form-data" autocomplete="off" novalidate="novalidate">
+            <fieldset>
+              <input type="hidden" name="transaction_id" id="transaction_id" value="1150">
+              <div class="row">
+                <section class="col col-4">
+                <div class="input-group">
+                  <label class="label">Amount <span class="danger">*</span></label>
+                    <input type="text" name="amount" id="amount">
+                    </div>
+                </section>
+                <section class="col col-4">
+                <div class="input-group">
+                  <label class="label">Period <span class="danger">*</span></label>
+                  <div class="select">
+                    <select name="tenure" id="tenure" astyle="width:200px;height: 32px;">
+                      <option value="monthly" id="tenure1">Monthly</option>
+                      <option value="quarterly" id="tenure2">Quarterly</option>
+                      <option value="half_yearly" id="tenure3">Half Yearly </option>
+                      <option value="yearly" id="tenure4">Yearly </option>
+                    </select>
+                    <i></i> </div>
+                    </div>
+                </section>
+                <section class="col col-4">
+                <div class="input-group">
+                  <label class="label">Mode of Payment <span class="danger">*</span></label>
+                  <div class="select">
+                    <select name="mode_of_payment" id="mode_of_payment" class="check_payment">
+                      <option value="cheques" id="cheques">Cheques</option>
+                      <option value="neft" id="neft">NEFT</option>
+                      <option value="rtgs" id="rtgs">RTGS</option>
+                      <option value="imps" id="imps">IMPS </option>
+                      <option value="upi" id="upi">UPI </option>
+                    </select>
+                    <i></i> </div>
+                    </div>
+                </section>
+              </div>
+            </fieldset>
+            <fieldset>
+              <div class="row">
+                <section class="col col-4 date">
+                  <div class="input-group">
+                  <label class="label">Payment Period start date</label>
+                    <input type="text" name="start_date" id="start_date" placeholder="Expected start date" value="2017-06-14" class="form-control datepicker" data-dateformat="yy-mm-dd">
+                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span> </div>
+                </section>
+                <section class="col col-4 date">
+                  <div class="input-group">
+                  <label class="label">Payment Period end date</label>
+                    <input type="text" name="end_date" readonly="" id="end_date" placeholder="Expected end date" value="2017-07-16" class="form-control" data-dateformat="yy-mm-dd">
+                    <span class="input-group-addon"><i class="fa fa-calendar"></i></span> </div>
+                </section>
+              </div>
+            </fieldset>
+            <fieldset>
+              <section>
+                <div id="display_pay_mode animate-label">
+                  <div id="CHEQUIE">
+                    <div class="row">
+                      <section class="col col-4">
+                      <div class="input-group">
+                        <label class="label">Bank Name <span class="danger">*</span></label>
+                          <input type="text" name="che_bank_name" id="che_bank_name">
+                        </div>
+                      </section>
+                      <section class="col col-4">
+                      <div class="input-group">
+                        <label class="label">Branch <span class="danger">*</span></label>
+                          <input type="text" name="che_branch" id="che_branch">
+                        </div>
+                      </section>
+                      <section class="col col-4">
+                      <div class="input-group">
+                        <label class="label">Cheque No. <span class="danger">*</span></label>
+                          <input type="text" name="che_cheque_no" id="che_cheque_no">
+                        </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col col-4">
+                        <div class="input-group">
+                       	  <label class="label">Date <span class="danger">*</span></label>
+                          <input type="text" name="che_date" id="che_date" placeholder="&nbsp;&nbsp;Date" class="form-control datepicker" data-dateformat="yy-mm-dd">
+                          <span class="input-group-addon"><i class="fa fa-calendar"></i></span> 
+                          </div>
+                      </section>
+                      <section class="col col-4">
+                        <div class="input-group">
+                        <label class="label">Remark <span class="danger">*</span></label>
+                          <input type="text" name="che_remark" id="che_remark">
+                        </div>
+                      </section>
+                      <section class="col col-4">
+                        <div class="input-group">
+                        <label class="label">Upload Chq Photo </label>
+                        <div class="input input-file" id="cheq_photo_div"> <span class="button">
+                          <input type="file"  name="cheq_photo" >
+                          Browse</span>
+                          <input type="text" readonly="" id="" placeholder="">
+                        </div>
+                        </div>
+                        </section>
+                    </div>
+                  </div>
+                  <div id="NEFT" style="display: none">
+                    <div class="row">
+                      <section class="col col-4">
+                      <div class="input-group">
+                        <label class="label">Bank Name <span class="danger">*</span></label>
+                          <input type="text" name="neft_bank_name" id="neft_bank_name">
+                        </div>
+                      </section>
+                      <section class="col col-4">
+                      <div class="input-group">
+                        <label class="label">NEFT Refrence No. <span class="danger">*</span></label>
+                          <input type="text" name="neft_ref_no" id="neft_ref_no">
+                        </div>
+                      </section>
+                      <section class="col col-4">
+                        <div class="input-group">
+                        <label class="label">Date <span class="danger">*</span></label>
+                          <input type="text" name="neft_date" id="neft_date" placeholder="&nbsp;&nbsp;date" class="form-control datepicker" data-dateformat="yy-mm-dd">
+                          <span class="input-group-addon"><i class="fa fa-calendar"></i></span> </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col col-4">
+                      <div class="input-group">
+                        <label class="label">Remark <span class="danger">*</span></label>
+                          <input type="text" name="neft_remark" id="neft_remark">
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                  <div id="RTGS" style="display: none">
+                    <div class="row">
+                      <section class="col col-4">
+                      <div class="input-group">
+                        <label class="label">Bank Name <span class="danger">*</span></label>
+                          <input type="text" name="rtgs_bank_name" id="rtgs_bank_name">
+                        </div>
+                      </section>
+                      <section class="col col-4">
+                      <div class="input-group">
+                        <label class="label">UTR No. <span class="danger">*</span></label>
+                          <input type="text" name="rtgs_utr_no" id="rtgs_utr_no">
+                        </div>
+                      </section>
+                      <section class="col col-4">
+                        <div class="input-group">
+                        <label class="label">Date <span class="danger">*</span></label>
+                          <input type="text" name="rtgs_date" id="rtgs_date" placeholder="&nbsp;&nbsp;date" class="form-control datepicker" data-dateformat="yy-mm-dd">
+                          <span class="input-group-addon"><i class="fa fa-calendar"></i></span> </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col col-4">
+                        <div class="input-group">
+                        <label class="label">Remark <span class="danger">*</span></label>
+                          <input type="text" name="rtgs_remark" id="rtgs_remark">
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                  <div id="IMPS" style="display: none">
+                    <div class="row">
+                      <section class="col col-4">
+                        <div class="input-group">
+                        <label class="label">Bank Name <span class="danger">*</span></label>
+                          <input type="text" name="imps_bank_name" id="imps_bank_name">
+                        </label>
+                        </section>
+                      <section class="col col-4">
+                        <div class="input-group">
+                        <label class="label">IMPS No. <span class="danger">*</span></label>
+                          <input type="text" name="imps_no" id="imps_no">
+                        </div>
+                      </section>
+                      <section class="col col-4">
+                        <div class="input-group">
+                        <label class="label">Date <span class="danger">*</span></label>
+                          <input type="text" name="imps_date" id="imps_date" placeholder="&nbsp;&nbsp;date" class="form-control datepicker" data-dateformat="yy-mm-dd">
+                          <span class="input-group-addon"><i class="fa fa-calendar"></i></span> </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col col-4">
+                        <div class="input-group">
+                        <label class="label">Remark <span class="danger">*</span></label>
+                          <input type="text" name="imps_remark" id="imps_remark">
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                  <div id="UPI" style="display: none">
+                    <div class="row">
+                      <section class="col col-4">
+                        <div class="input-group">
+                        <label class="label">Bank Name <span class="danger">*</span></label>
+                          <input type="text" name="upi_bank_name" id="upi_bank_name">
+                        </div>
+                      </section>
+                      <section class="col col-4">
+                        <div class="input-group">
+                        <label class="label">UPI Reference No. <span class="danger">*</span></label>
+                          <input type="text" name="upi_ref_no" id="upi_ref_no">
+                        </div>
+                      </section>
+                      <section class="col col-4">
+                        <div class="input-group">
+                        <label class="label">Date <span class="danger">*</span></label>
+                          <input type="text" name="upi_date" id="upi_date" placeholder="&nbsp;&nbsp;date" class="form-control datepicker" data-dateformat="yy-mm-dd">
+                          <span class="input-group-addon"><i class="fa fa-calendar"></i></span> </div>
+                      </section>
+                    </div>
+                    <div class="row">
+                      <section class="col col-4">
+                        <div class="input-group">
+                        <label class="label">Remark <span class="danger">*</span></label>
+                          <input type="text" name="upi_remark" id="upi_remark">
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </fieldset>
+            <div class="" style="text-align:center;">
+              <button type="submit" name="submit" id="submit" class="btn btn-primary big-sub-btn" style="margin:0px;"> Submit </button>
+            </div>
+            <div class="message"> <i class="fa fa-check fa-lg"></i>
+              <p> Your comment was successfully added! </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-footer">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6"> <span class="txt-color-white">CINQO © 2016</span> </div>
+  </div>
+</div>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+		<script src="js/app.config.js"></script>
+		<script src="js/bootstrap/bootstrap.min.js"></script>
+		<script src="js/app.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function() {pageSetUp();})
+		</script>
+
+</body>
+</html>

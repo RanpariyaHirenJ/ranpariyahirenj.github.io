@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="UTF-8">
+    <title>Welcome to Kasino Bar</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src='scripts/jquery.min.js'></script>
+
+    <script>
+        $(document).ready(function () {
+            var win_hight = $(window).height();
+            var spinner_hight = $(".spinner").height();
+            var main_height = (win_hight - spinner_hight) / 6;
+            $(".spinner").css("margin-top", main_height)
+
+            //alert(spinner_hight)
+            overlayBox('offer')
+
+            $('.winner-btn').click(function () {
+                $("#bgvid").css("display", "block");
+                $(".main-container").css("display", "none");
+                $(".spin-btn").css("display", "none");
+            });
+
+            function getTimeRemaining(endtime) {
+                var t = Date.parse(endtime) - Date.parse(new Date());
+                var seconds = Math.floor((t / 1000) % 15);
+                // var minutes = Math.floor((t / 1000 / 60) % 1);
+                return {
+                    'total': t,
+                    // 'minutes': minutes,
+                    'seconds': seconds
+                };
+            }
+            var i = 0;
+
+            function initializeClock(id, endtime) {
+                var clock = document.getElementById(id);
+                // var minutesSpan = clock.querySelector('.minutes');
+                var secondsSpan = clock.querySelector('.seconds');
+
+                function updateClock() {
+                    var t = getTimeRemaining(endtime);
+
+                    // minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+                    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+                    //if (t.total <= 0) {
+                    //    clearInterval(timeinterval);
+                    //}
+
+                    if (i != 0) {
+                        if (/*t.minutes <= 0 &&*/ t.seconds <= 0) {
+                            // Hide Overlay
+                            //$('.overlay').find('.overlay-box').removeClass('animated').removeClass(animationIn).addClass('animated ' + animationOut);
+                            //$('body .overlay-bg').fadeOut(1000, function () {
+                            //    $('.overlay-box').find('.overlay-content').hide();
+                            //    $('.overlay').css('visibility', 'hidden').find('.overlay-box').removeClass('animated').removeClass(animationIn).removeClass(animationOut);
+                            //});
+
+                            $('.overlay').find('#offer .overlay-box').removeClass('animated').removeClass(animationIn).removeClass(animationOut);
+                            $('#offer .overlay-box').fadeOut("1500");
+                            //$('body .overlay-bg,.overlay-box,.overlay').fadeOut("3500");
+                            $('body .overlay-bg,.overlay').fadeOut("3500");
+
+                            // Clear interval
+                            clearInterval(timeinterval);
+                        }
+                    }
+                    i++;
+                }
+                updateClock();
+                var timeinterval = setInterval(updateClock, 1000);
+            }
+
+            var deadline = new Date(Date.parse(new Date()) + 1 * 60 * 60 * 60 * 1000);
+            initializeClock('clockdiv', deadline);
+        });
+
+    </script>
+    <style>
+        video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            background-size: cover;
+            -webkit-transition: 1s opacity;
+            transition: 1s opacity;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="overlay" id="offer" data-animation-in="fadeIn" data-animation-out="fadeOut">
+        <div class="overlay-box">
+            <div class="content">
+                <div class="overlay-content">
+                    <div class="lft-logo"><img src="images/logo.png"></div>
+                    <div class="rft-logo"><img src="images/logo.png"></div>
+                    <div class="roulette-cntr"><img src="images/roulette-logo.png"></div>
+                    <div class="covercharge-cntr"><img src="images/covercharge.png"></div>
+                    <div class="client-name">
+                        <ul>
+                            <li>
+                                <div class="client-number">32</div>
+                                MR. KALPESH SINGH (TABLE NO 21)
+                            </li>
+                            <li>
+                                <div class="client-number">41</div>
+                                MR. SUNIL KOHLI (TABLE NO 8)
+                            </li>
+                            <li>
+                                <div class="client-number">52</div>
+                                MR. HIREN RANPARIYA (TABLE NO 5)
+                            </li>
+                            <li>
+                                <div class="client-number">18</div>
+                                MR. VIGHNESH SINGH (TABLE NO 12)
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="countdown-cntr">
+                        <div class="countdown">COUNTDOWN</div>
+                        <div class="countdown-time">
+                            <div id="clockdiv">
+                                <div class="clockcntr"><!--<span class="minutes"></span> :--> <span class="seconds"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="overlay" id="winner" data-animation-in="fadeIn" data-animation-out="fadeOut">
+        <div class="overlay-box">
+            <div class="content">
+                <div class="overlay-content">
+                    <div class="lft-logo"><img src="images/logo.png"></div>
+                    <div class="rft-logo"><img src="images/logo.png"></div>
+                    <div class="roulette-cntr"><img src="images/roulette-logo.png"></div>
+                    <div class="covercharge-cntr"><img src="images/covercharge.png"></div>
+                    <div class="client-name">
+                        <ul>
+                            <li class="active">
+                                <div class="client-number">32</div>
+                                MR. KALPESH SINGH (TABLE NO 21)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <video id="bgvid" playsinline autoplay muted loop>
+        <source src="video/17101672.ogg" type="video/ogg">
+        <source src="video/17101672.mp4" type="video/mp4">
+    </video>
+
+    <div class="main-container">
+        <div class="lft-logo"><img src="images/logo.png"></div>
+        <div class="rft-logo"><img src="images/logo.png"></div>
+        <div class="spinner">
+            <div class="ball"><span></span></div>
+            <div class="platebg"></div>
+            <div class="platetop"></div>
+            <div id="toppart" class="topnodebox">
+                <div class="silvernode"></div>
+                <div class="topnode silverbg"></div>
+                <span class="top silverbg"></span> <span class="right silverbg"></span> <span class="down silverbg"></span> <span class="left silverbg"></span>
+            </div>
+            <div id="rcircle" class="pieContainer">
+                <div class="pieBackground"></div>
+            </div>
+        </div>
+    </div>
+    <input id="numwin" type="text" value="32" style="visibility:hidden;">
+    <div class="spin-btn">
+        <div id="btnSpin" class="button">Spin</div>
+    </div>
+    <script src='scripts/jquery.keyframes.min_.js'></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/common.js" type="text/javascript"></script>
+</body>
+</html>

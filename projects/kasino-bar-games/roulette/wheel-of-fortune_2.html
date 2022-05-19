@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="UTF-8">
+    <title>Welcome to Kasino Bar</title>
+    <link href="styles/reset.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/light-effect.css">
+    <script src='scripts/jquery.min1.js'></script>
+ 
+<script>
+	$(document).ready(function () {
+		overlayBox('winner')
+	});
+</script>
+    <style>
+        video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            background-size: cover;
+            -webkit-transition: 1s opacity;
+            transition: 1s opacity;
+        }
+    </style>
+       
+    <style>
+    	body { background: url(images/wheel-of-fortune.jpg) no-repeat;}
+		.client-name ul li .client-info {text-align: center;}
+		.client-number {margin-right: 0px;width: auto;}
+		.client-name ul li {width: 100%;margin-bottom: 30px;}
+		#winner .client-name ul li {width: 100%;}
+		.winnercntr {background: url(images/winner-wheel.png) no-repeat center;width: 404px;height: 122px;text-align: center;margin: 100px auto 0;}
+
+    </style>
+</head>
+<body>
+
+    <div class="overlay" id="winner">
+        <div class="overlay-box">
+            <div class="content">
+                <div class="overlay-content">
+                    <div class="lft-logo"><img src="images/logo.png"></div>
+                    <div class="rft-logo"><img src="images/logo.png"></div>
+                    <div class="roulette-cntr animated"><img src="images/wheel-of-fortune-logo.png"></div>
+                    <div class="covercharge-cntr animated"><img src="images/winner-bounty.png"></div>
+
+                    <div class="client-name">
+                        <ul>
+                            <li>
+                                <div class="client-info">
+                                    <div class="client-number">#10%</div>
+                                     OFF ON IMFL
+                                </div>
+                            </li>
+                            <li>
+                                <div class="client-info">
+                                    <div class="client-number">#15%</div>
+                                    OFF ON ANY LARGE PIZZA
+                                </div>
+                            </li>
+                            <li>
+                                <div class="client-info">
+                                    <div class="client-number">#5%</div>
+                                    OFF ON MOCKTAILS
+                                </div>
+                            </li>
+                            <li>
+                                <div class="client-info">
+                                    <div class="client-number">#10%</div>
+                                    OFF ON ANY ORDER OF 2 OR MORE SIZZLERS
+                                </div>
+                            </li>
+                            <li>
+                                <div class="client-info">
+                                    <div class="client-number">#15%</div>
+                                    OFF ON ITALIAN DESSERT
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="winnercntr">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="cracker_canvas"></canvas>
+
+    <script src='scripts/crackers.js'></script>
+    <script src="scripts/common.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>CINQO INDIA: Upload Employee</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css">
+
+<!-- SmartAdmin Styles : Caution! DO NOT change the order -->
+<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production-plugins.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-skins.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/demo.min.css">
+
+<!-- FAVICONS -->
+<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+<link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<style>
+.dt-toolbar {
+	display:none;
+}
+</style>
+<script>
+$(document).ready(function() {
+	
+    $('.animate-label .input-group').click(function () {
+        if ($(this).find('select').size() > 0) {
+        } else {
+            $(this).find('input').focus();
+            $(this).find('label').addClass('active');
+
+        }
+        if ($(this).find('.custom-select-options,.custom-selct-bg').size() > 0) {
+            $(this).find('.custom-select-options,.custom-selct-bg').fadeIn();
+        }
+
+    });
+    $('.animate-label .input-group input,.animate-label .input-group textarea').blur(function () {
+        if (this.value.length > 0) {
+            return false;
+        }
+        else {
+            $(this).prev('label').removeClass('active');
+        }
+    });
+
+    $('.input-group').on('focus', 'input, select, textarea', function () {
+        $(this).prev('label').addClass('active');
+    });
+
+    $('.input-group textarea, .input-group input,.input-group select').each(function () {
+        if (this.value.length > 0) {
+            var div = $(this).prev('label').addClass('active');
+        }
+    });
+    $('.input-group').click(function () {
+        $(this).find('input').focus();
+        $(this).find('label').addClass('active');
+    });
+    /*Animate label form*/
+	
+})
+
+</script>
+</head>
+<body class="">
+<aside id="left-panel">
+  <nav>
+    <ul>
+      <li><a href="#" title="Dashboard"><i class=""><img src="images/dashboard.png"></i> <span class="menu-item-parent">Dashboard</span></a></li>
+      <li><a href="#"><i class=""><img src="images/users.png"></i> <span class="menu-item-parent">My Employees</span></a>
+        <ul>
+          <li><a href="manage-employee.html">Manage Employee</a></li>
+          <li><a href="allocate-cinqo-credit.html">Allocate Cinqo Credit</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><i class="fa  fa-lg fa-fw fa-inr"></i> <span class="menu-item-parent">CINQO Transactions</span></a>
+        <ul>
+          <li><a href="request-cinqo-money.html">Request Cinqo Money</a></li>
+          <li><a href="view-transactions.html">View Transaction</a></li>
+          <li><a href="empl-transaction.html">Employee Transaction</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><i class="fa  fa-lg fa-fw fa-list-alt"></i> <span class="menu-item-parent">Complaint</span></a>
+        <ul>
+          <li><a href="dispute-initiated-transactions.html">Dispute Initiated Via View Transactions</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><i class="fa  fa-lg fa-fw fa-envelope"></i> <span class="menu-item-parent">support@cinqo.in</span></a></li>
+    </ul>
+  </nav>
+</aside>
+<div id="main" role="main">
+  <div id="ribbon">
+    <ol class="breadcrumb">
+      <li> <a href="manage-employee.html"> Employee</a> | <span> Add Employee </span></li>
+      <div class="top-header">
+        <ul>
+          <li>
+            <div class="welcome-msg">Welcome User | <a href="logoin.html">Logout</a></div>
+          </li>
+          <li><a href="index.html"><img src="images/logo.png"></a></li>
+        </ul>
+      </div>
+    </ol>
+  </div>
+  <div id="content">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="top-btn">
+          <ul>
+            <li><a href="upload-employee.html" class="btn btn-primary" style="margin-left:10px;color:#FFF !important;">Download Demo Excel</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="jarviswidget" id="wid-id-6" data-widget-editbutton="false" data-widget-custombutton="false">
+      <div>
+        <div class="widget-body no-padding animate-label">
+          <form id="employee_form" name="employee_form" method="post" enctype="multipart/form-data" action="" class="smart-form" novalidate="novalidate">
+            <fieldset>
+              <div class="row">
+                <section class="col col-4" style="margin:0px;">
+                  <div class="input-group">
+                    <label class="label">Include Excel File </label>
+                    <div class="input input-file" id="cheq_photo_div"> <span class="button">
+                      <input type="file"  name="cheq_photo" >
+                      Browse</span>
+                      <input type="text" placeholder="">
+                    </div>
+                  </div>
+                </section>
+                <button type="submit" class="btn btn-primary sub-btn"> Submit </button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-footer">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6"> <span class="txt-color-white">CINQO © 2016</span> </div>
+  </div>
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script> 
+        <script src="js/app.config.js"></script> 
+        <script src="js/bootstrap/bootstrap.min.js"></script> 
+        <script src="js/app.min.js"></script> 
+        <script type="text/javascript">
+        $(document).ready(function() {pageSetUp();})
+        </script>
+</body>
+</html>

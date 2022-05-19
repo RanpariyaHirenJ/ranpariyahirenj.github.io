@@ -1,0 +1,284 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<title>Welcome to Cinqo</title>
+<link rel="stylesheet" type="text/css" href="styles/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> 
+<script src="scripts/jquery-min.js" type="text/javascript"></script>
+<script src="scripts/parallax.js"></script>
+<script language="javascript" src="scripts/js_class.js"></script>
+<script language="javascript" src="scripts/jquery-ui.js"></script>
+
+
+<script>
+$(document).ready(function(){
+$( "#cdate" ).change(function() {
+	if($(this).val() == "custdate"){
+		overlayBox('customedate');
+	}
+});
+	
+$(function() {
+  $( ".from" ).datepicker({
+	changeMonth: true,
+	changeYear: true,
+	yearRange: "c-50:c",	 
+	dateFormat: "dd/mm/yy"
+	
+  });
+    $( ".to" ).datepicker({
+	changeMonth: true,
+	changeYear: true,
+	yearRange: "c-50:c",	 
+	dateFormat: "dd/mm/yy"
+	
+  });
+  
+});	
+
+  $(document).on('click', '.closeBtn', function () {
+		location.reload();
+  });
+  $(document).on('click', '.submitformbtn .box-btn', function () {
+		location.reload();
+  });
+});
+</script>
+</head>
+<body>
+<div class="loader"></div>
+<div class="wrapper">
+  <header>
+    <div class="container">
+      <div class="lft-heading">Expense</div>
+      <div class="top-header">
+        <ul>
+          <li>
+            <div class="welcome-msg">Welcome Kalpesh Singh | <a href="logoin.html">Logout</a></div>
+          </li>
+          <li><a href="index.html"><img src="images/logo.png" ></a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <section class="header">
+    <div class="container">
+      <div class="navigation">
+        <div class="login-mblmenu">
+          <div class="mobile-nav-icon">
+            <button class="menu-icon mobil-icon-toggle"> <span>toggle menu</span> </button>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="nav-menu">
+          <ul>
+            <li> <a href="index.html"><i> <img src="images/dashboard.png" ></i> Dashboard</a> </li>
+            <li> <a href="expense.html" class="active"><i> <img src="images/expense.png" ></i>Expense</a> </li>
+            <li> <a href="report.html"><i> <img src="images/report.png" ></i>Report</a> </li>
+            <li> <a href="profile.html"><i> <img src="images/users.png" ></i>Profile</a> </li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </section>
+  <div class="wrapper-container">
+    <section class="expense-cntr parallax">
+      <div class="container">
+        <div class="expense-info">
+          <div class="expense-btn">
+            <ul>
+              <li>
+                  <select onChange="custDate()" id="cdate">
+                  	<option>All</option>
+                    <option>Last month</option>
+                    <option>Last Year</option>
+                    <option value="custdate">Custome Date</option>
+                  </select></li>
+              <li><a href="javascript:void(0)" class="pending">Pending</a></li>
+              <li><a href="javascript:void(0)" class="verification">Verification</a></li>
+              <li><a href="javascript:void(0)" class="approved">Approved</a></li>
+              <li><a href="javascript:void(0)" class="disbursement">Disbursement</a></li>
+              <li><a href="javascript:void(0)" class="settled">Settled</a></li>
+            </ul>
+          </div>
+          <div class="action-bar">
+            <div class="action-select">
+              <input type="submit" value="+ Add Expense" onClick="location.href = 'add-expense.html';">
+            </div>
+          </div>
+          <div class="clear"></div>
+          <div class="expense-tabel">
+            <ul>
+              <li>
+                <div class="tag1 expense-titel">Trans. ID</div>
+                <div class="tag2 expense-titel">Date</div>
+                <div class="tag3 expense-titel">Employee Name</div>
+                <div class="tag3 expense-titel">Merchant Name</div>
+                <div class="tag4 expense-titel">Amount</div>
+                <div class="tag5 expense-titel">Type</div>
+                <div class="tag6 expense-titel">Category</div>
+                <div class="tag8 expense-titel">Stage</div>
+                <div class="tag9 expense-titel">Edit</div>
+              </li>
+              <li>
+                <div class="tag1">004</div>
+                <div class="tag2">12-May-17</div>
+                <div class="tag3">Kalpesh Singh</div>
+                <div class="tag3">Uber</div>
+                <div class="tag4">126</div>
+                <div class="tag5">Cinqo</div>
+                <div class="tag6">Travel</div>
+                <div class="tag7 pending">Pending</div>
+                <div class="tag8"><a href="#" >Edit</a></div>
+              </li>
+              <li>
+                <div class="tag1">005</div>
+                <div class="tag2">12-May-17</div>
+                <div class="tag3">Sejal Desai</div>
+                <div class="tag3">Shivsagar Udipi</div>
+                <div class="tag4">164</div>
+                <div class="tag5">Cinqo</div>
+                <div class="tag6">Food</div>
+                <div class="tag7 pending">Pending</div>
+                <div class="tag8"><a href="#" >Edit</a></div>
+              </li>
+              <li>
+                <div class="tag1">006</div>
+                <div class="tag2">13-May-17</div>
+                <div class="tag3">Jubin Thomas</div>
+                <div class="tag3">Travel Summary</div>
+                <div class="tag4">220</div>
+                <div class="tag5">Other</div>
+                <div class="tag6">Mileage</div>
+                <div class="tag7 pending">Pending</div>
+                <div class="tag8"><a href="#" >Edit</a></div>
+              </li>
+              <li>
+                <div class="tag1">007</div>
+                <div class="tag2">13-May-17</div>
+                <div class="tag3">Jubin Thomas</div>
+                <div class="tag3">Travel Summary</div>
+                <div class="tag4">130</div>
+                <div class="tag5">Other</div>
+                <div class="tag6">Mileage</div>
+                <div class="tag7 verification">Verification</div>
+                <div class="tag8"><a href="#" >Edit</a></div>
+              </li>
+              <li>
+                <div class="tag1">001</div>
+                <div class="tag2">10-May-17</div>
+                <div class="tag3">Ankush Gupta</div>
+                <div class="tag3">Treebo Hotels</div>
+                <div class="tag4">2300</div>
+                <div class="tag5">Cinqo</div>
+                <div class="tag6">Hotel</div>
+                <div class="tag7 approved">Approved</div>
+                <div class="tag8"><a href="#" >Edit</a></div>
+              </li>
+              <li>
+                <div class="tag1">002</div>
+                <div class="tag2">08-May-17</div>
+                <div class="tag3">Sejal Desai</div>
+                <div class="tag3">Metro</div>
+                <div class="tag4">30</div>
+                <div class="tag5">Other</div>
+                <div class="tag6">Travel</div>
+                <div class="tag7 approved">Approved</div>
+                <div class="tag8"><a href="#" >Edit</a></div>
+              </li>
+              <li>
+                <div class="tag1">003</div>
+                <div class="tag2">08-May-17</div>
+                <div class="tag3">Ankush Gupta</div>
+                <div class="tag3">Ola</div>
+                <div class="tag4">176</div>
+                <div class="tag5">Cinqo</div>
+                <div class="tag6">Travel</div>
+                <div class="tag7 settled">Settled</div>
+                <div class="tag8"><a href="#" >Edit</a></div>
+              </li>
+              <li>
+                <div class="tag1">&nbsp;</div>
+                <div class="tag2">&nbsp;</div>
+                <div class="tag3">&nbsp;</div>
+                <div class="tag4">&nbsp;</div>
+                <div class="tag5">&nbsp;</div>
+                <div class="tag6">&nbsp;</div>
+                <div class="tag7">&nbsp;</div>
+                <div class="tag8">&nbsp;</div>
+                <div class="tag9">&nbsp;</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="clear"></div>
+        <div class="pagination"><a href="#" class="prevbtn"><</a>  Page 1 of 2  <a href="#" class="nextbtn">></a></div>
+      </div>
+    </section>
+  </div>
+  <div class="fotter-wrapper-container">
+    <footer class="footer">
+      <div class="container">
+        <div class="footernavigtn">
+          <div class="copt-lft"> © 2017 CINQO. All Rights Reserved. <!--Site by <a href="http://kalptech.com/" target="_blank"> Kalptech Systems</a>--> </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+
+
+
+<div class="overlay customedate" id="customedate" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-header"> Custome Date </div>
+      <div class="overlay-content">
+        <div class="animated-form">
+          <div class="grid-layout">
+            <div class="form-row animate-label">
+              <div class="form-field">
+                  <div class="grid-6">
+                  <div class="input-group">
+                    <input type="text" class="date inputType inputTypeblack from" placeholder="From Date">
+                  </div>
+                </div>
+                   <div class="grid-6">
+                  <div class="input-group">
+                    <input type="text" class="date inputType inputTypeblack to" placeholder="To Date">
+                  </div>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="grid-12">
+                <div class="submitformbtn text-center spacingtopbot">
+                  <input type="submit" value="Submit" class="box-btn" onClick="$('.closeBtn').click();">
+                </div>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+<script src="scripts/wow.js"></script> 
+<script>
+	 new WOW().init();
+	$('.parallax').parallax({
+		speed : 0.50
+	});	
+</script> 
+<script src="scripts/common.js" type="text/javascript"></script>
+</body>
+</html>

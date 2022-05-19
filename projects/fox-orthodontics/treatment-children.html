@@ -1,0 +1,603 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta charset="utf-8">
+
+<link rel="icon" type="image/png" href="images/favicon.png" />
+
+<title>Treatment for Children | Fox Orthodontics </title>
+
+<link rel="stylesheet" type="text/css" href="styles/animate.css">
+
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+
+<script src="scripts/jquery-min.js" type="text/javascript"></script>
+<script src="scripts/js_class.js"></script>
+
+</head>
+
+<body>
+<!--<div class="loader"></div>-->
+
+<div class="wrapper">
+<div class="overlay enquiryform" id="enquiryform" data-animation-in="fadeIn" data-animation-out="fadeOut">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-header">Referral Form</div>
+      <form class="checkForm" name="referfriend" method="post" enctype="multipart/form-data" action="inc/mail.php" onSubmit="return form_validate_jquery('.overlay-content')">
+        <div class="overlay-content">
+          <div class="form-layout">
+          	<div class="form-row">
+              <div class="form-field mandatory">
+                <input type="text" name="to" placeholder="Patients Name *" validation="text" title="Patients Name">
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="form-row w50">
+              <div class="form-field mandatory">
+                <input type="text" name="email_to" placeholder="Patients Email *" validation="email" title="Patients Email">
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+          	<div class="form-row w50 m0">
+              <div class="form-field mandatory">
+                <input type="text" name="patients_contact_no" placeholder="Patients Contact No *" onKeyPress="return onlyNos(event,this);" validation="text" title="Patients Contact No">
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-field mandatory">
+                <input type="text" name="from" placeholder="Referred By *" validation="text" title="Referred By">
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="form-row w50">
+              <div class="form-field mandatory">
+                <input type="text" name="from_email" placeholder="Referrer's Email *" validation="email" title="Referrer's Email">
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+          	<div class="form-row w50 m0">
+              <div class="form-field mandatory">
+                <input type="text" name="referrers_contact_no" placeholder="Referrer's Contact No *" onKeyPress="return onlyNos(event,this);" validation="text" title="Referrer's Contact No">
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-field mandatory">
+                <textarea name="note" placeholder="Clinical Notes *" validation="text" title="Clinical Notes"></textarea>
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-field mandatory">
+            <div class="file-upload">
+                <span>Upload your Attachment</span>
+                <input type="file" name="Attachment">
+              </div>
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            
+                <div class="clear"></div>
+            <div class="form-row form-rowcol" style="padding-bottom: 20px;">
+                <input type="text" name="captcha_code" title="Captcha" maxlength="4" validation="text" placeholder="Enter the text as shown in image">
+                <div class="captcha_image" style="margin-top:-7px"></div>
+                <div class="clear"></div>
+              </div>
+          </div>
+        </div>
+        <div class="overlay-footer">
+          <input type="submit" value="Send" name="action" class="send">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+  <header class="header">
+
+    <div class="navigation">
+
+      <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="Fox Orthodontics Logo"></a> </div>
+
+      <div class="mobile-nav-icon">
+
+        <button class="menu-icon mobil-icon-toggle"> <span>toggle menu</span> </button>
+
+      </div>
+
+      <div class="main-links">
+
+        <ul>
+
+          <li class="dropdwon-menu"> <a href="javascript:void(0);" >About</a>
+
+            <div class="submenu-dropdwn submenu1">
+
+              <ul>
+
+                <li><a href="about.html">OVERVIEW</a></li>
+
+                <li><a href="robert-fox.html">DR. ROBERT FOX</a></li>
+
+                <li><a href="rajiv-ahuja.html">DR. RAJIV AHUJA</a></li>
+
+                <!--<li><a href="our-staff.html">Our Staff</a></li>-->
+
+              </ul>
+
+              <div class="clear"></div>
+
+            </div>
+
+          </li>
+
+          <li class="dropdwon-menu"> <a href="javascript:void(0);">For Patients</a>
+
+            <div class="submenu-dropdwn submenu2">
+
+              <ul>                <li><a href="for-patients.html">Visiting Hours</a></li>
+
+                <li><a href="for-patients.html#our-approach">Our Approach</a></li>                <li><a href="for-patients.html#orthodontic-emergencies">Orthodontic emergencies and FAQ's</a></li>
+                
+                 <li><a href="for-patients.html#self-care">Selfcare Tips and Retainers</a></li><li><a href="for-patients.html#insurance-schemes">Payment and Finance</a></li>
+</ul>
+
+              <div class="clear"></div>
+
+            </div>
+
+          </li>
+
+          <li class="dropdwon-menu active"> <a href="javascript:void(0);" class="header-active">Treatments</a>
+
+            <div class="submenu-dropdwn">
+
+              <ul>
+
+                <li><a href="treatment-children.html">For Children</a></li>
+
+                <li><a href="treatment-teens.html">For Teens</a></li>
+
+                <li><a href="treatment-adults.html">For Adults</a></li>
+
+                <li><a href="treatments.html">All Treatments</a></li>
+
+              </ul>
+
+              <div class="clear"></div>
+
+            </div>
+
+          </li>
+
+          <li class="dropdwon-menu"> <a href="javascript:void(0);">Invisalign</a> 
+
+          	<div class="submenu-dropdwn submenu4">
+
+              <ul>
+
+                <li><a href="invisalign.html">Overview</a></li>
+
+                <li><a href="invisalign.html#advantages">Advantages</a></li>
+
+                <li><a href="invisalign.html#treatment-steps">Treatment Steps</a></li>
+
+                <li><a href="invisalign.html#concerns">Concerns</a></li>
+
+                <li><a href="invisalign.html#cost-treatment">Cost of treatment</a></li>
+
+              </ul>
+
+              <div class="clear"></div>
+
+            </div>
+
+          </li>
+
+          <li style="display:none"> <a href="#">Online Referrals</a> </li>
+
+          <li style="display:none"> <a href="#">Blog</a> </li>
+
+          <li> <a href="smile-gallery.html">Smile Gallery</a> </li>
+
+          <li> <a href="blog.html">Blog</a> </li>
+          <li> <a href="make-an-appointment.html">Contact</a> </li>
+          <li> <a href="javascript:void(0);" onClick="overlayBox('enquiryform')" style="border:none">Online Referrals</a> </li>
+          <li class="makeanapp-link"><a href="make-an-appointment.html">MAKE AN APPOINTMENT</a></li>
+
+        </ul>
+
+        <div class="clear"></div>
+
+      </div>
+
+      <div class="clear"></div>
+
+    </div>
+
+  </header>
+
+  <section class="breadcrums-links common-top">
+
+    <div class="container">
+
+      <div class="breadcrumslinks">
+
+        <ul>
+
+          <li><a href="index.html">Home/</a> </li>
+
+        </ul>
+
+        <div class="clear"></div>
+
+      </div>
+
+      <div class="heading-abt no-submenus">
+
+        <h1>Treatment for Children</h1>
+
+      </div>
+
+    </div>
+
+  </section>
+
+ <div class="appointment-banner">
+
+    <div class="banner-appt"> <img src="images/treatment-child-banner.jpg" alt="Treatment for Children"> </div>
+
+  </div>
+
+  <div class="children-desctxt">
+
+    <div class="container">
+
+      <div class="grid-6">
+
+        <div class="txtof-child">
+
+          <p> There is no set age for children to begin an orthodontic treatment, however, it is recommended a visit to your orthodontist around the age of 7. At this stage of their life, the child has a mix of baby teeth and adult teeth that makes it easier for your orthodontist to diagnose and correct any tooth or jaw problems sooner and without surgery. </p>
+
+          <p> Seeking orthodontic treatment for your child may help prevent more serious problems from developing and reduce the complexity or cost of treatments later in life. </p>
+
+        </div>
+
+      </div>
+
+      <div class="grid-6">
+
+        <p class="list-ofheadng">Common concerns to look out for are:</p>
+
+        <div class="listof-chldtrt">
+
+          <ul>
+
+            <li>Finger or thumb sucking</li>
+
+            <li>Space between the upper and lower rows of teeth noticeable when your child smiles or bites together</li>
+
+            <li>Crossbites</li>
+
+            <li>Excessive crowding</li>
+
+            <li>Large overbite and a recessive lower jaw</li>
+
+            <li>Congenitally missing teeth</li>
+
+            <li>Delayed tooth eruption</li>
+
+            <li>Obstructive sleep apnoea</li>
+
+            <li>Protrusive front teeth at risk of trauma</li>
+            
+            <li>Excessive mouth breathing and snoring</li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="clear"></div>
+
+    </div>
+
+  </div>
+  
+  <section class="newcategoryhm treatments-child">
+    <div class="container">
+    <h4>Treatment for Children</h4>
+      <div class="catboxnew">
+        <ul>
+        <!--<li>
+            <div class="catg-infobx"> <a href="fast-braces.html">
+              <div class="newimgcat"> <img src="images/braces.jpg" alt="Braces"> </div>
+              <div class="cat-linkcntr">
+                <h2>Fast Braces </h2>
+              </div>
+              </a> </div>
+          </li>-->
+          <li>
+            <div class="catg-infobx"> <a href="metal-braces.html">
+              <div class="newimgcat"> <img src="images/metal-braces.jpg" alt="Braces"> </div>
+              <div class="cat-linkcntr">
+                <h2> Metal Braces </h2>
+              </div>
+              </a> </div>
+          </li>
+          <li>
+            <div class="catg-infobx"> <a href="expander.html">
+              <div class="newimgcat"> <img src="images/expander.jpg" alt="Expander"> </div>
+              <div class="cat-linkcntr">
+                <h2> Expander </h2>
+              </div>
+              </a> </div>
+          </li>
+          
+          <li>
+            <div class="catg-infobx"> <a href="functional-appliances.html">
+              <div class="newimgcat"> <img src="images/functional-appliances.jpg" alt="Functional appliances"> </div>
+              <div class="cat-linkcntr">
+                <h2> Functional appliances </h2>
+              </div>
+              </a> </div>
+          </li>
+          
+          <li>
+            <div class="catg-infobx"> <a href="non-extraction-treatment.html">
+              <div class="newimgcat"> <img src="images/non-extraction-treatment.jpg" alt="Non-extraction treatment"> </div>
+              <div class="cat-linkcntr">
+                <h2> Non-extraction treatment </h2>
+              </div>
+              </a> </div>
+          </li>
+          
+          <li>
+            <div class="catg-infobx"> <a href="retainers.html">
+              <div class="newimgcat"> <img src="images/retainers.jpg" alt="Retainers"> </div>
+              <div class="cat-linkcntr">
+                <h2> Retainers </h2>
+              </div>
+              </a> </div>
+          </li>
+          
+        </ul>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </section>
+
+  <!--<section class="treatment-catgry">
+
+    <div class="trtment-cat">
+
+      <div class="tile1">
+
+        <div class="tile-img child-t1">
+
+          <div class="childt1img"><a href="fast-braces.html"> <img src="images/child-t1.jpg">
+
+            <div class="bottombandtxt"> Braces (ice, orthos) </div> </a>
+
+          </div>
+
+        </div>
+
+        <div class="tile-img child-t2">
+
+          <div class="childt1img childt2img"><a href="expander.html"> <img src="images/child-t2.jpg">
+
+            <div class="bottombandtxt"> Expander  </div></a>
+
+          </div>
+
+          <div class="childt1img"> <a href="unctional-appliances.html"> <img src="images/child-t3.jpg">
+
+            <div class="bottombandtxt"> Functional Appliances  </div></a>
+
+          </div>
+
+        </div>
+
+        <div class="clear"></div>
+
+      </div>
+
+      <div class="tile2">
+
+        <div class="tile-img child-t3">
+
+          <div class="childt1img"> <a href="non-extraction-treatment.html"> <img src="images/child-t4.jpg">
+
+            <div class="bottombandtxt bottombandtxtline"> Non Extraction Treatments  </div></a>
+
+          </div>
+
+        </div>
+
+        <div class="tile-img child-t4">
+
+          <div class="childt1img"> <a href="retainers.html"> <img src="images/child-t5.jpg">
+
+            <div class="bottombandtxt"> Retainers  </div></a>
+
+          </div>
+
+        </div>
+
+        <div class="clear"></div>
+
+      </div>
+
+      <div class="clear"></div>
+
+    </div>
+
+  </section>-->
+
+  <section class="childrenbenifits">
+
+    <div class="container text-left">
+
+      <h2>What are the benefits of early intervention?</h2>
+
+      <p>Early intervention usually aims to intercept any developing problems by normalizing the growth environment to allow for improved future growth.</p>
+
+        <p>This can reduce the need or simplify any future orthodontic treatment. The benefits for early intervention include harmonious development of jaws, reducing or eliminating the need for extractions, eliminating abnormal tooth wear and reducing the risk of trauma to the front teeth. </p>
+
+    </div>
+
+  </section>
+
+  <footer class="footer">
+
+    <div class="footerup">
+
+      <div class="container">
+
+        <ul>
+
+          <li>
+
+            <h2>Locate Us</h2>
+
+            <div class="footer-info">
+
+              <div class="address1">
+
+                <p><strong>Baulkham Hills</strong><br>
+
+                  493 Windsor Road, <br>
+
+                  Baulkham Hills,<br> NSW -2153</p>
+
+                <div class="viewon-map"> <a href="https://www.google.com/maps/place/33%C2%B044'42.0%22S+150%C2%B058'56.2%22E/@-33.7449885,150.9800903,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-33.744993!4d150.982279!12b1?rapsrc=apiv3" target="_blank">View on  Map</a> </div>
+
+              </div>
+
+              <!--<div class="address1 address2">
+
+                <p><strong>Hornsby</strong><br>
+
+                  Suite 207 (Level 2), <br>
+
+                  22-28 Edgeworth David,<br>
+
+                  Avenue Hornsby NSW - 2077</p>
+
+                <div class="viewon-map"> <a href="https://www.google.com/maps/place/33%C2%B042'22.6%22S+151%C2%B006'11.6%22E/@-33.7062845,151.1010303,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-33.706289!4d151.103219!12b1?rapsrc=apiv3" target="_blank">View on  Map</a> </div>
+
+              </div>-->
+
+              <div class="clear"></div>
+
+            </div>
+
+          </li>
+
+          <li>
+
+            <h2>Newsletter Sign Up</h2>
+
+            <div class="footer-newslettr footer-info">
+
+              <form method="post" action="inc/mail.php" class="news_letter" onSubmit="return form_validate_jquery('.news_letter')">
+              <div class="name-field">
+                <input type="text" name="name" validation="text" title="Name" placeholder="Enter your Name">
+              </div>
+              <input type="text" name="email" validation="email" title="Email" placeholder="Enter your email ID">
+              <input type="submit" name="action" value="SUBMIT">
+              <div class="clear"></div>
+              </form>
+
+            </div>
+
+          </li>
+
+          <li>
+            <h2 class="minus-iconmbl"> Contact Us </h2>
+            <div class="footer-info openstate-footer">
+              <p class="email-icon"><a href="mailto:reception@foxorthodontics.com.au">reception@foxorthodontics.com.au</a></p>
+              <p class="contact-icon"> <strong>Baulkham Hills</strong> : (02) 9686 1200</p>
+              <!--<p class="contact-icon"> <strong>Hornsby</strong> : (02) 9476 3266</p>-->
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="clear"></div>
+
+        <div class="open-detailscntr">
+
+          <p><span>Monday to Friday: 8:00am - 5:00pm</span>  <span>Saturday &amp; Sunday: Closed</span></p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="copy-rytband"> <div class="destopcopy"> © 2017 Fox Orthodontics. All rights reserved.&nbsp;&nbsp; Site by<a href="http://kalptech.com/" target="_blank"> Kalptech Systems</a></div>  <br>
+
+      <a href="https://www.facebook.com/FoxOrthodontics-653330224821044" target="_blank"><img src="images/fb-icon.png" alt="Facebook"></a> 
+      <a href="https://twitter.com/FoxOrthodontics" target="_blank"><img src="images/twitter-icon.png" alt="Twitter"></a> 
+      <a href="https://www.youtube.com/channel/UCQQi2H6b0m8vjtI9spUtU5w" target="_blank"><img src="images/youtube-icon.png" alt="Youtube"></a> 
+      <a href="https://plus.google.com/108030469435898120565" target="_blank"><img src="images/google-icon.png" alt="google plus"></a> </div>
+
+  </footer>
+
+</div>
+
+<div class="online-referal">
+	<a href="javascript:void(0);" onClick="overlayBox('enquiryform')"><img src="images/online-referral-icon.png" alt="Refer a friend"></a>
+</div>
+
+<script src="scripts/wow.js" type="text/javascript"></script> 
+
+<script>
+
+  new WOW().init();
+  var parameter = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+  var decodedparameter = decodeURIComponent(parameter)
+  var param = decodedparameter.split('=');
+  if(param[0] == "enquiry")
+  {
+	alert(param[1]);
+  }
+
+</script> 
+
+<script src="scripts/common.js" type="text/javascript"></script>
+
+
+
+<script>
+/*Google Analytics CODE */
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80575913-1', 'auto');
+  ga('send', 'pageview');
+  
+</script>
+</body>
+</html>

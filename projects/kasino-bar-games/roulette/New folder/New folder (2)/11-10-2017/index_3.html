@@ -1,0 +1,787 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="UTF-8">
+    <title>Welcome to Kasino Bar</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/light-effect.css">
+    <script src='scripts/jquery.min1.js'></script>
+
+    <script>
+
+        $(document).ready(function () {
+
+            //alert(spinner_hight)
+            //overlayBox('offer')
+
+            //launchFullscreen(document.documentElement)
+
+            $('#btnSpin, .roulette-cntr, .covercharge-cntr, .countdown-cntr, .client-name').hide()
+
+            setTimeout(function () {
+                $('#offer').addClass('fadeIn');
+
+                $('#offer .overlay-box, .overlay#offer:eq(0)').fadeIn(2000).css({ opacity: 0.0, visibility: "visible" }, 2000).animate({ opacity: 1.0 }, 2000);
+
+                var deadline = new Date(Date.parse(new Date()) + 1 * 60 * 60 * 60 * 1000);
+                initializeClock('clockdiv', deadline);
+
+                setTimeout(function () {
+                    $('.roulette-cntr, .covercharge-cntr, .countdown-cntr, .client-name').show()
+                    $('.roulette-cntr').addClass('fadeInUp');
+                    $('.covercharge-cntr').addClass('fadeInUp');
+                    $('.countdown-cntr').addClass('animated1').addClass('slideInUp');
+                    //$('.client-name').addClass('animated3').addClass('fadeIn');
+                }, 1000)
+            }, 3500)
+
+            var win_hight = $(window).height();
+            var spinner_hight = $(".spinner").height();
+            var main_height = (win_hight - spinner_hight) / 6;
+            $(".spinner").css("margin-top", main_height)
+
+            $('.winner-btn').click(function () {
+                $("#bgvid").css("display", "block");
+                $(".main-container").css("display", "none");
+                $(".spin-btn").css("display", "none");
+            });
+
+            //$('#winner').css({ opacity: 0.0, visibility: "hidden" }, 2000);
+            //$('.overlay').css('visibility', 'hidden');
+
+            //$('#offer').css('visibility', 'hidden');
+            //$('#winner').css('visibility', 'hidden');
+        });
+
+        /***Custom functions***/
+        function getTimeRemaining(endtime) {
+            var t = Date.parse(endtime) - Date.parse(new Date());
+            var seconds = Math.floor((t / 1000) % 10);
+            // var minutes = Math.floor((t / 1000 / 60) % 1);
+            return {
+                'total': t,
+                // 'minutes': minutes,
+                'seconds': seconds
+            };
+        }
+        var i = 0;
+
+        function initializeClock(id, endtime) {
+
+            var clock = document.getElementById(id);
+            // var minutesSpan = clock.querySelector('.minutes');
+            var secondsSpan = clock.querySelector('.seconds');
+
+            function updateClock() {
+                var t = getTimeRemaining(endtime);
+
+                // minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+                secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+                if (i != 0) {
+                    if (/*t.minutes <= 0 &&*/ t.seconds <= 0) {
+                        debugger
+                        // Hide Overlay
+                        $('.roulette-cntr').removeClass('fadeInUp').removeClass('animated').addClass('fadeOutUp').addClass('animated1');
+                        $('.covercharge-cntr').removeClass('fadeInUp').removeClass('animated').addClass('fadeOutUp').addClass('animated1');
+                        $('.countdown-cntr').removeClass('animated2').removeClass('slideInUp').addClass('animated1').addClass('fadeOutDown');
+                        //$('.client-name').removeClass('animated3').removeClass('fadeIn').addClass('animated1').addClass('fadeOut');
+
+                        setTimeout(function myfunction() {
+                            $('#offer').removeClass('animated3').removeClass('fadeIn').addClass('fadeOut').addClass('animated3');
+                        }, 250)
+
+                        setTimeout(function myfunction() {
+                            $('.spinner').addClass('animated').addClass('bounceIn');
+
+                            setTimeout(function () {
+                                $('#btnSpin').trigger('click');
+                            }, 2000)
+
+                        }, 150)
+
+                        clearInterval(timeinterval);
+                    }
+                }
+                i++;
+            }
+            updateClock();
+            var timeinterval = setInterval(updateClock, 1000);
+        }
+
+        function launchFullscreen(element) {
+
+            if (element.requestFullscreen) {
+                element.requestFullscreen();
+            } else if (element.mozRequestFullScreen) {
+                element.mozRequestFullScreen();
+            } else if (element.webkitRequestFullscreen) {
+                element.webkitRequestFullscreen();
+            } else if (element.msRequestFullscreen) {
+                element.msRequestFullscreen();
+            }
+        }
+
+        function exitFullscreen() {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            }
+        }
+
+        function dumpFullscreen() {
+            console.log("document.fullscreenElement is: ", document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement);
+            console.log("document.fullscreenEnabled is: ", document.fullscreenEnabled || document.mozFullScreenEnabled || document.webkitFullscreenEnabled || document.msFullscreenEnabled);
+        }
+
+        // Events
+        document.addEventListener("fullscreenchange", function (e) {
+            console.log("fullscreenchange event! ", e);
+        });
+        document.addEventListener("mozfullscreenchange", function (e) {
+            console.log("mozfullscreenchange event! ", e);
+        });
+        document.addEventListener("webkitfullscreenchange", function (e) {
+            console.log("webkitfullscreenchange event! ", e);
+        });
+        document.addEventListener("msfullscreenchange", function (e) {
+            console.log("msfullscreenchange event! ", e);
+        });
+
+    </script>
+
+    <style>
+        video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            background-size: cover;
+            -webkit-transition: 1s opacity;
+            transition: 1s opacity;
+        }
+        body { background: url(images/wheel-of-fortune.jpg) no-repeat;}
+        .client-name ul li .client-info {text-align: center;}
+        .client-number {margin-right: 0px;width: auto;}
+        .client-name ul li {width: 100%;margin-bottom: 30px;}
+        #winner .client-name ul li {width: 100%;}
+        .winnercntr {background: url(images/winner-wheel.png) no-repeat center;width: 404px;height: 122px;text-align: center;margin: 100px auto 0;}
+
+    </style>
+
+
+    <script type="text/javascript">
+        //setTimeout(function() {
+        //    // Helpers
+        //    alert('wof')
+
+            shuffle = function (o) {
+                for (var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x)
+                    ;
+                return o;
+            };
+
+            String.prototype.hashCode = function () {
+                // See http://www.cse.yorku.ca/~oz/hash.html
+                var hash = 5381;
+                for (i = 0; i < this.length; i++) {
+                    char = this.charCodeAt(i);
+                    hash = ((hash << 5) + hash) + char;
+                    hash = hash & hash; // Convert to 32bit integer
+                }
+                return hash;
+            }
+
+            Number.prototype.mod = function (n) {
+                return ((this % n) + n) % n;
+            }
+
+            venues = {
+                "116208": "MISS",
+                "66271": "MISS",
+                "5518": "MISS",
+                "392360": "MISS",
+                "2210952": "Five Guys",
+                "207306": "Corner Bakery Courthouse",
+                "41457": "Corner Bakery",
+                "101161": "Corner",
+            };
+
+
+            $(function () {
+
+                var venueContainer = $('#venues ul');
+                $.each(venues, function (key, item) {
+
+                    venueContainer.append(
+                        $(document.createElement("li"))
+                        .append(
+                            $(document.createElement("input")).attr({
+                                id: 'venue-' + key,
+                                name: item,
+                                value: item,
+                                type: 'checkbox',
+                                checked: true
+                            })
+                            .change(function () {
+                                var cbox = $(this)[0];
+                                var segments = wheel.segments;
+                                var i = segments.indexOf(cbox.value);
+
+                                if (cbox.checked && i == -1) {
+                                    segments.push(cbox.value);
+
+                                } else if (!cbox.checked && i != -1) {
+                                    segments.splice(i, 1);
+                                }
+
+                                segments.sort();
+                                wheel.update();
+                            })
+                        )
+                        .append(
+                            $(document.createElement('label')).attr({
+                                'for': 'venue-' + key
+                            })
+                            .text(item)
+                        )
+                    )
+                });
+
+                $('#venues ul>li').sort("input", { attr: "value" });
+            });
+            var k = 0;
+            var wheel = {
+
+                timerHandle: 0,
+                timerDelay: 33,
+
+                angleCurrent: 0,
+                angleDelta: 0,
+
+                size: 380,
+
+                canvasContext: null,
+
+                //colors: ['#ffff00', '#ffc700', '#ff9100', '#ff6301', '#ff0000', '#c6037e', '#713697', '#444ea1'],
+                colors: ['#34a2d5', '#fb8b01', '#de3b36', '#f4f4f4', '#34a2d5', '#fb8b01', '#de3b36', '#f4f4f4'],
+
+                //segments : [ 'Andrew', 'Bob', 'Fred', 'John', 'China', 'Steve', 'Jim', 'Sally', 'Andrew', 'Bob', 'Fred', 'John', 'China', 'Steve', 'Jim'],
+                segments: [],
+
+                seg_colors: [], // Cache of segments to colors
+
+                maxSpeed: Math.PI / 16,
+
+                upTime: 1000, // How long to spin up for (in ms)
+                downTime: 17000, // How long to slow down for (in ms)
+
+                spinStart: 0,
+
+                frames: 0,
+
+                centerX: 400,
+                centerY: 410,
+
+                spin: function () {
+
+                    // Start the wheel only if it's not already spinning
+                    if (wheel.timerHandle == 0) {
+                        wheel.spinStart = new Date().getTime();
+                        wheel.maxSpeed = Math.PI / (16 + Math.random()); // Randomly vary how hard the spin is
+                        wheel.frames = 0;
+                        //wheel.sound.play();
+
+                        wheel.timerHandle = setInterval(wheel.onTimerTick, wheel.timerDelay);
+                    }
+                },
+
+                onTimerTick: function () {
+
+                    wheel.frames++;
+
+                    wheel.draw();
+
+                    var duration = (new Date().getTime() - wheel.spinStart);
+                    var progress = 0;
+                    var finished = false;
+
+                    if (duration < wheel.upTime) {
+                        progress = duration / wheel.upTime;
+                        wheel.angleDelta = wheel.maxSpeed
+                                * Math.sin(progress * Math.PI / 2);
+                    } else {
+                        progress = duration / wheel.downTime;
+                        wheel.angleDelta = wheel.maxSpeed
+                                * Math.sin(progress * Math.PI / 2 + Math.PI / 2);
+                        if (progress >= 1)
+                            finished = true;
+                    }
+
+                    wheel.angleCurrent += wheel.angleDelta;
+                    while (wheel.angleCurrent >= Math.PI * 2)
+                        // Keep the angle in a reasonable range
+                        wheel.angleCurrent -= Math.PI * 2;
+
+                    if (finished) {
+                        clearInterval(wheel.timerHandle);
+                        wheel.timerHandle = 0;
+                        wheel.angleDelta = 0;
+
+                        $("#counter").html((wheel.frames / duration * 1000) + " FPS");
+                    }
+
+                    /*
+                    // Display RPM
+                    var rpm = (wheel.angleDelta * (1000 / wheel.timerDelay) * 60) / (Math.PI * 2);
+                    $("#counter").html( Math.round(rpm) + " RPM" );
+                     */
+                },
+
+                init: function (optionList) {
+                    try {
+                        wheel.initWheel();
+                        wheel.initAudio();
+                        wheel.initCanvas();
+                        wheel.draw();
+
+                        $.extend(wheel, optionList);
+
+                    } catch (exceptionData) {
+                        alert('Wheel is not loaded ' + exceptionData);
+                    }
+                },
+
+                initAudio: function () {
+                    var sound = document.createElement('audio');
+                    sound.setAttribute('src', 'wheel.mp3');
+                    wheel.sound = sound;
+                },
+
+                initCanvas: function () {
+
+                    var canvas = $('#wheel #canvas').get(0);
+
+                    if ($.browser.msie) {
+                        canvas = document.createElement('canvas');
+                        $(canvas).attr('width', 1000).attr('height', 600).attr('id', 'canvas').appendTo('.wheel');
+                        canvas = G_vmlCanvasManager.initElement(canvas);
+                    }
+
+                    canvas.addEventListener("click", wheel.spin, false);
+                    wheel.canvasContext = canvas.getContext("2d");
+                },
+
+                initWheel: function () {
+                    shuffle(wheel.colors);
+                },
+
+                // Called when segments have changed
+                update: function () {
+                    
+                    // Ensure we start mid way on a item
+                    //var r = Math.floor(Math.random() * wheel.segments.length);
+                    var r = 0;
+                    wheel.angleCurrent = ((r + 0.5) / wheel.segments.length) * Math.PI * 2;
+
+                    var segments = wheel.segments;
+                    var len = segments.length;
+                    var colors = wheel.colors;
+                    var colorLen = colors.length;
+
+                    // Generate a color cache (so we have consistant coloring)
+                    var seg_color = new Array();
+                    for (var i = 0; i < len; i++)
+                        seg_color.push(colors[segments[i].hashCode().mod(colorLen)]);
+
+                    wheel.seg_color = seg_color;
+
+                    wheel.draw();
+                },
+
+                draw: function () {
+
+                    wheel.clear();
+                    wheel.drawWheel();
+                    wheel.drawNeedle();
+                },
+
+                clear: function () {
+                    var ctx = wheel.canvasContext;
+                    ctx.clearRect(0, 0, 1000, 800);
+                },
+
+                drawNeedle: function () {
+
+                    var ctx = wheel.canvasContext;
+                    //var centerX = wheel.centerX;
+                    //                var centerY = wheel.centerY;
+                    var centerX = 15;
+                    var centerY = 20;
+                    var size = wheel.size;
+
+                    ctx.lineWidth = 1;
+                    ctx.strokeStyle = '#c61e1e';
+                    ctx.fileStyle = '#ffffff';
+
+                    ctx.beginPath();
+
+                    ctx.moveTo(centerX + size - 20, centerY);
+                    ctx.lineTo(centerX + size + 20, centerY - 0);
+                    ctx.lineTo(centerX + size + 0, centerY + 30);
+                    ctx.closePath();
+
+                    ctx.stroke();
+                    ctx.fill();
+
+                    // Which segment is being pointed to?
+                    var i = wheel.segments.length - Math.floor((wheel.angleCurrent / (Math.PI * 2)) * wheel.segments.length) - 1;
+
+                    // Now draw the winning name
+                    // ctx.textAlign = "left";
+                    //                ctx.textBaseline = "middle";
+                    //                ctx.fillStyle = '#000000';
+                    //                ctx.font = "2em Arial";
+                    //ctx.fillText(wheel.segments[i], centerX + size + 25, centerY);
+                },
+
+                drawSegment: function (key, lastAngle, angle) {
+
+                    var ctx = wheel.canvasContext;
+                    var centerX = wheel.centerX;
+                    var centerY = wheel.centerY;
+                    var size = wheel.size;
+
+                    var segments = wheel.segments
+                    var len = wheel.segments.length;
+                    var colors = wheel.seg_color;
+
+                    var value = segments[key];
+
+                    ctx.save();
+                    ctx.beginPath();
+
+                    // Start in the centre
+                    ctx.moveTo(centerX, centerY);
+                    ctx.arc(centerX, centerY, size, lastAngle, angle, false); // Draw a arc around the edge
+                    ctx.lineTo(centerX, centerY); // Now draw a line back to the centre
+
+                    // Clip anything that follows to this area
+                    //ctx.clip(); // It would be best to clip, but we can double performance without it
+                    ctx.closePath();
+
+                    ctx.fillStyle = colors[key];
+                    ctx.fill();
+                    ctx.stroke();
+
+                    // Now draw the text
+                    ctx.save(); // The save ensures this works on Android devices
+                    ctx.translate(centerX, centerY);
+                    ctx.rotate((lastAngle + angle) / 2);
+
+                    // Fill Text here
+                    ctx.fillStyle = '#000000';
+
+                    //make_base()
+                    //make_base2()
+                    //make_base3()
+                    //make_base4()
+
+                    //Images
+                    if (k == 1) {
+                        //ctx.fillText(value.substr(0, 20), size / 2 + 20, 0);
+                        ctx.fillStyle = colors[key];
+                        ctx.fillText(ctx.drawImage(base_image, 160, -55), size / 20 + 20, 0);
+
+                    }
+
+                    if (k == 3) {
+                        //ctx.fillText(value.substr(0, 20), size / 2 + 20, 0);
+                        ctx.fillText(ctx.drawImage(base_image2, 160, -55), size / 0 + 20, 0);
+                    }
+
+                    if (k == 5) {
+                        //ctx.fillText(value.substr(0, 20), size / 2 + 20, 0);
+                        ctx.fillText(ctx.drawImage(base_image3, 160, -55), size / 0 + 20, 0);
+                    }
+
+                    if (k == 7) {
+                        //ctx.fillText(value.substr(0, 20), size / 2 + 20, 0);
+                        ctx.fillText(ctx.drawImage(base_image4, 160, -55), size / 0 + 20, 0);
+                    }
+
+                    // Miss
+                    if (k == 0) {
+                        ctx.fillText(value.substr(0, 20), size / 2 + 20, 0);
+                    }
+
+                    if (k == 2) {
+                        ctx.fillText(value.substr(0, 20), size / 2 + 20, 0);
+                    }
+
+                    if (k == 4) {
+                        ctx.fillText(value.substr(0, 20), size / 2 + 20, 0);
+                    }
+
+                    if (k == 6) {
+                        ctx.fillText(value.substr(0, 20), size / 2 + 20, 0);
+                    }
+
+                    ctx.restore();
+
+                    ctx.restore();
+                    k++;
+
+                    if (k == 8) {
+                        k = 0;
+                    }
+
+                },
+
+                drawWheel: function () {
+
+                    var ctx = wheel.canvasContext;
+
+                    var angleCurrent = wheel.angleCurrent;
+                    var lastAngle = angleCurrent;
+
+                    var segments = wheel.segments;
+                    var len = wheel.segments.length;
+                    var colors = wheel.colors;
+                    var colorsLen = wheel.colors.length;
+
+                    var centerX = wheel.centerX;
+                    var centerY = wheel.centerY;
+                    var size = wheel.size;
+
+                    var PI2 = Math.PI * 2;
+
+                    ctx.lineWidth = 1;
+                    ctx.strokeStyle = '#000000';
+                    ctx.textBaseline = "middle";
+                    ctx.textAlign = "center";
+                    ctx.font = " 2.5em Arial";
+
+                    for (var i = 1; i <= len; i++) {
+                        var angle = PI2 * (i / len) + angleCurrent;
+                        wheel.drawSegment(i - 1, lastAngle, angle);
+                        lastAngle = angle;
+                    }
+                    // Draw a center circle
+                    ctx.beginPath();
+                    ctx.arc(centerX, centerY, 20, 0, PI2, false);
+                    ctx.closePath();
+
+                    ctx.fillStyle = '#c61e1e';
+                    //ctx.fillStyle = '#b81e1c';
+                    ctx.strokeStyle = '#c61e1e';
+                    ctx.fill();
+                    ctx.stroke();
+
+                    // Draw outer circle
+                    ctx.beginPath();
+                    ctx.arc(centerX, centerY, size, 0, PI2, false);
+                    ctx.closePath();
+
+                    ctx.lineWidth = 10;
+                    ctx.strokeStyle = '#000000';
+                    ctx.stroke();
+                },
+            }
+
+
+            window.onload = function () {
+                wheel.init();
+
+                var segments = new Array();
+
+                $.each($('#venues input:checked'), function (key, cbox) {
+                    segments.push(cbox.value);
+                });
+
+                wheel.segments = segments;
+                wheel.update();
+
+                // Hide the address bar (for mobile devices)!
+                setTimeout(function () {
+                    window.scrollTo(0, 1);
+                }, 0);
+            }
+
+            make_base();
+
+            function make_base() {
+                base_image = new Image();
+                base_image.src = 'http://server/kasino-bar-games/html/roulette/images/1.png';
+            }
+
+            make_base2();
+
+            function make_base2() {
+                base_image2 = new Image();
+                base_image2.src = 'http://server/kasino-bar-games/html/roulette/images/3.png';
+            }
+
+            make_base3();
+
+            function make_base3() {
+                base_image3 = new Image();
+                base_image3.src = 'http://server/kasino-bar-games/html/roulette/images/4.png';
+            }
+
+            make_base4();
+
+            function make_base4() {
+                base_image4 = new Image();
+                base_image4.src = 'http://server/kasino-bar-games/html/roulette/images/2.png';
+            }
+        //}, 4000)
+
+    </script>
+
+</head>
+<body>
+    <div id="loader-wrapper">
+        <div id="loader">
+            <div>
+                <div class="preloader-cntr infinite animated pulse"> </div>
+            </div>
+        </div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+
+    <div class="overlay animated3" id="offer">
+        <div class="overlay-box">
+            <div class="content">
+                <div class="overlay-content">
+                    <div class="lft-logo"><img src="images/logo.png"></div>
+                    <div class="rft-logo"><img src="images/logo.png"></div>
+                    <div class="roulette-cntr animated"><img src="images/roulette-logo.png"></div>
+                    <div class="covercharge-cntr animated"><img src="images/covercharge.png"></div>
+
+                    <div class="client-name">
+                        <ul>
+                            <li>
+                                <div class="client-info">
+                                    <div class="client-number">#10%</div>
+                                    OFF ON IMFL
+                                </div>
+                            </li>
+                            <li>
+                                <div class="client-info">
+                                    <div class="client-number">#15%</div>
+                                    OFF ON ANY LARGE PIZZA
+                                </div>
+                            </li>
+                            <li>
+                                <div class="client-info">
+                                    <div class="client-number">#5%</div>
+                                    OFF ON MOCKTAILS
+                                </div>
+                            </li>
+                            <li>
+                                <div class="client-info">
+                                    <div class="client-number">#10%</div>
+                                    OFF ON ANY ORDER OF 2 OR MORE SIZZLERS
+                                </div>
+                            </li>
+                            <li>
+                                <div class="client-info">
+                                    <div class="client-number">#15%</div>
+                                    OFF ON ITALIAN DESSERT
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="countdown-cntr animated1">
+                        <div class="countdown">COUNTDOWN</div>
+                        <div class="countdown-time">
+                            <div id="clockdiv">
+                                <div class="clockcntr"><!--<span class="minutes"></span> :--> <span class="seconds"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="winner">
+        <div class="overlay-box">
+            <div class="content">
+                <div class="overlay-content">
+                    <div class="lft-logo"><img src="images/logo.png"></div>
+                    <div class="rft-logo"><img src="images/logo.png"></div>
+                    <div class="roulette-cntr"><img src="images/roulette-logo.png"></div>
+                    <div class="covercharge-cntr"><img src="images/covercharge.png"></div>
+
+                    <div class="client-name">
+                        <ul>
+                            <li>
+                                <div class="client-info">
+                                    <div class="client-number">#10%</div>
+                                    OFF ON IMFL
+                                </div>
+                            </li>
+                            <li>
+                                <div class="client-info">
+                                    <div class="client-number">#15%</div>
+                                    OFF ON ANY LARGE PIZZA
+                                </div>
+                            </li>
+                            <li>
+                                <div class="client-info">
+                                    <div class="client-number">#5%</div>
+                                    OFF ON MOCKTAILS
+                                </div>
+                            </li>
+                            <li>
+                                <div class="client-info">
+                                    <div class="client-number">#10%</div>
+                                    OFF ON ANY ORDER OF 2 OR MORE SIZZLERS
+                                </div>
+                            </li>
+                            <li>
+                                <div class="client-info">
+                                    <div class="client-number">#15%</div>
+                                    OFF ON ITALIAN DESSERT
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <video id="bgvid" playsinline autoplay muted loop>
+        <source src="video/17101672.ogg" type="video/ogg">
+        <source src="video/17101672.mp4" type="video/mp4">
+    </video>
+
+    <div class="main-container">
+        <div class="lft-logo"><img src="images/logo.png"></div>
+        <div class="rft-logo"><img src="images/logo.png"></div>
+        <div class="animated">
+            <div id="venues" style="float:left; visibility:hidden;"><ul><li></li></ul></div>
+            <div id="wheel">
+                <canvas id="canvas" width="800" height="810" style="margin-top:80px;"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/common.js" type="text/javascript"></script>
+
+</body>
+</html>

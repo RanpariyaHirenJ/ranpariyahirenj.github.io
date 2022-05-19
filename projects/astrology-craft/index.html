@@ -1,0 +1,119 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="utf-8">
+<!-- <link rel="icon" type="image/png" href="images/favicon.png" /> -->
+<title>Welcome To Astrology Craft</title>
+<meta name="description" content="">
+<meta name="Keywords" content="">
+
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700|PT+Sans:400,700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div class="wrapper">
+<header>
+  <div class="container">
+    <img src="images/logo.png" alt="Astrology Craft Logo" title="Astrology Craft Logo">
+  </div>
+</header>
+<!--
+<div class="loader">
+  <div class="dots-loading-container">
+          <div class="dot dot-a"></div>
+          <div class="dot dot-b"></div>
+          <div class="dot dot-c"></div>
+      </div>
+</div>
+-->
+
+<section class="main">
+  <div class="container">
+      <div class="ctrl-wrap">
+        <h1 data-aos="fade-down">Read Your Daily Horoscope</h1>
+        <h2 data-aos="fade-up">Get free horoscope insights directly on your New Tab</h2>
+
+        <ul>
+          <li data-aos="fade-right" data-aos-offset="50" data-aos-delay="50" data-aos-duration="300"><img src="images/aries.png" alt="Aries Logo" title="Aries Logo"></li>
+          <li data-aos="fade-right" data-aos-offset="50" data-aos-delay="50" data-aos-duration="600"><img src="images/taurus.png" alt="Taurus Logo" title="Taurus Logo"></li>
+          <li data-aos="fade-right" data-aos-offset="50" data-aos-delay="50" data-aos-duration="900"><img src="images/gemini.png" alt="Gemini Logo" title="Gemini Logo"></li>
+          <li data-aos="fade-right" data-aos-offset="50" data-aos-delay="50" data-aos-duration="1200"><img src="images/cancer.png" alt="Cancer Logo" title="Cancer Logo"></li>
+          <li data-aos="fade-right" data-aos-offset="50" data-aos-delay="50" data-aos-duration="1500"><img src="images/leo.png" alt="Leo Logo" title="Leo Logo"></li>
+          <li data-aos="fade-right" data-aos-offset="50" data-aos-delay="50" data-aos-duration="1800"><img src="images/virgo.png" alt="Virgo Logo" title="Virgo Logo"></li>
+          <li data-aos="fade-left" data-aos-offset="50" data-aos-delay="50" data-aos-duration="1800"><img src="images/libra.png" alt="Libra Logo" title="Libra Logo"></li>
+          <li data-aos="fade-left" data-aos-offset="50" data-aos-delay="50" data-aos-duration="1500"><img src="images/scorpio.png" alt="Scorpio Logo" title="Scorpio Logo"></li>
+          <li data-aos="fade-left" data-aos-offset="50" data-aos-delay="50" data-aos-duration="1200"><img src="images/sagittarius.png" alt="Sagittarius Logo" title="Sagittarius Logo"></li>
+          <li data-aos="fade-left" data-aos-offset="50" data-aos-delay="50" data-aos-duration="900"><img src="images/capricorn.png" alt="Capricorn Logo" title="Capricorn Logo"></li>
+          <li data-aos="fade-left" data-aos-offset="50" data-aos-delay="50" data-aos-duration="600"><img src="images/aquarius.png" alt="Aquarius Logo" title="Aquarius Logo"></li>
+          <li data-aos="fade-left" data-aos-offset="50" data-aos-delay="50" data-aos-duration="300"><img src="images/pisces.png" alt="Pisces Logo" title="Pisces Logo"></li>
+        </ul>
+
+        <div class="how-to-install-cntr">
+          <span>How to Install &nbsp &nbsp |</span>
+          <p>Step 1: Click <a href="javascript:void(0)" class="on_click">'Continue' </a></p>
+          <p>Step 2: Add Extension</p>
+          <p>Step 3: Get daily horoscope readings</p>
+        </div>
+      </div>
+    <div class="clear"></div>
+  </div>
+</section>
+<footer>
+  <p>Privacy Policy | EULA | Endorsement Disclaimer and DMCA Policy | Contact Us | Uninstall</p>
+</footer>
+
+
+<section id="on_click" style="display: none">
+  <div class="form_container"><i class="close_btn">x</i>
+      <p>Thank you for downloading.</p>
+    </div>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<script>
+  AOS.init();
+
+$(function() {
+    $('body').append('<div class="scrollTop"><a href="javascript:void(0)"></a></div>');
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 10) {
+            $('.scrollTop').fadeIn();
+        } else {
+            $('.scrollTop').fadeOut();
+        }
+    });
+    $(document).on('click', '.scrollTop a', function() {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 800);
+    });
+});
+
+$(function(){
+  $('.on_click').click(function(){
+    $('html,body').addClass('scroll_hidden');
+    $('#on_click').fadeIn();
+    $('.close_btn').click(function(){
+      $('html,body').removeClass('scroll_hidden');
+      $('#on_click').fadeOut();
+    })
+  })
+});
+</script>
+<!--
+<script>
+  $(window).load(function () {
+    setTimeout(function(){ 
+      $(".loader").css("display", "none")
+      //alert("Hello"); 
+    }, 2000); 
+  })
+</script> 
+-->
+
+</body>
+</html>

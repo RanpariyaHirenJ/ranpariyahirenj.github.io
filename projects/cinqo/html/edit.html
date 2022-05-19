@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>CINQO INDIA: Edit Employee</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css">
+
+<!-- SmartAdmin Styles : Caution! DO NOT change the order -->
+<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production-plugins.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-skins.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/demo.min.css">
+
+<!-- FAVICONS -->
+<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+<link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<style>
+.dt-toolbar {
+	display:none;
+}
+</style>
+<script>
+$(document).ready(function() {
+	
+    $('.animate-label .input-group').click(function () {
+        if ($(this).find('select').size() > 0) {
+        } else {
+            $(this).find('input').focus();
+            $(this).find('label').addClass('active');
+
+        }
+        if ($(this).find('.custom-select-options,.custom-selct-bg').size() > 0) {
+            $(this).find('.custom-select-options,.custom-selct-bg').fadeIn();
+        }
+
+    });
+    $('.animate-label .input-group input,.animate-label .input-group textarea').blur(function () {
+        if (this.value.length > 0) {
+            return false;
+        }
+        else {
+            $(this).prev('label').removeClass('active');
+        }
+    });
+
+    $('.input-group').on('focus', 'input, select, textarea', function () {
+        $(this).prev('label').addClass('active');
+    });
+
+    $('.input-group textarea, .input-group input,.input-group select').each(function () {
+        if (this.value.length > 0) {
+            var div = $(this).prev('label').addClass('active');
+        }
+    });
+    $('.input-group').click(function () {
+        $(this).find('input').focus();
+        $(this).find('label').addClass('active');
+    });
+    /*Animate label form*/
+	
+})
+
+</script>
+<style>
+.dt-toolbar {
+	display:none;
+}
+.smart-form .checkbox, .smart-form .radio {
+	padding: 10px 0px 10px 30px;
+}
+.smart-form .checkbox i {
+	top: 13px;
+}
+</style>
+</head>
+<body class="">
+<aside id="left-panel">
+  <nav>
+    <ul>
+      <li><a href="#" title="Dashboard"><i class=""><img src="images/dashboard.png"></i> <span class="menu-item-parent">Dashboard</span></a></li>
+      <li class="active"><a href="#"><i class=""><img src="images/users.png"></i> <span class="menu-item-parent">My Employees</span></a>
+        <ul>
+          <li class="active"><a href="manage-employee.html">Manage Employee</a></li>
+          <li><a href="allocate-cinqo-credit.html">Allocate Cinqo Credit</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><i class="fa  fa-lg fa-fw fa-inr"></i> <span class="menu-item-parent">CINQO Transactions</span></a>
+        <ul>
+          <li><a href="request-cinqo-money.html">Request Cinqo Money</a></li>
+          <li><a href="view-transactions.html">View Transaction</a></li>
+          <li><a href="empl-transaction.html">Employee Transaction</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><i class="fa  fa-lg fa-fw fa-list-alt"></i> <span class="menu-item-parent">Complaint</span></a>
+        <ul>
+          <li><a href="dispute-initiated-transactions.html">Dispute Initiated Via View Transactions</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><i class="fa  fa-lg fa-fw fa-envelope"></i> <span class="menu-item-parent">support@cinqo.in</span></a></li>
+    </ul>
+  </nav>
+</aside>
+<div id="main" role="main">
+  <div id="ribbon">
+    <ol class="breadcrumb">
+      <li>My Employees | <span> Edit Employee </span></li>
+      <div class="top-header">
+        <ul>
+          <li>
+            <div class="welcome-msg">Welcome User | <a href="logoin.html">Logout</a></div>
+          </li>
+          <li><a href="index.html"><img src="images/logo.png"></a></li>
+        </ul>
+      </div>
+    </ol>
+  </div>
+  <div id="content">
+    <div class="jarviswidget" id="wid-id-6" data-widget-editbutton="false" data-widget-custombutton="false">
+      <div>
+        <div class="widget-body no-padding animate-label">
+          <form action="#" method="post" name="add_employee" id="add_employee" class="smart-form" enctype="multipart/form-data" novalidate="novalidate">
+            <header>Employee Info</header>
+            <fieldset>
+              <div class="row">
+                <section class="col col-4">
+                  <div class="input-group">
+                    <label class="label active">Employee Full Name <span class="danger">*</span></label>
+                    <div class="input"> <i class="icon-append fa fa-user"></i>
+                      <input type="text" name="emp_full_name" id="emp_full_name" value="Stella Vaz">
+                    </div>
+                  </div>
+                </section>
+                <section class="col col-4">
+                  <div class="input-group">
+                    <label class="label active">Employee Id <span class="danger">*</span></label>
+                    <div class="input"> <i class="icon-append fa fa-user"></i>
+                      <input type="text" name="emp_id" id="emp_id" value="cinqo005">
+                    </div>
+                  </div>
+                </section>
+                <section class="col col-4">
+                  <div class="input-group">
+                    <label class="label active">Corporate Email Id <span class="danger">*</span></label>
+                    <div class="input"> <i class="icon-append fa fa-envelope-o"></i>
+                      <input type="text" name="corp_email_id" id="corp_email_id" value="stella.v@cinqo.in">
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="row">
+                <section class="col col-4">
+                  <div class="input-group">
+                    <label class="label active">Mobile No: <span class="danger">*</span></label>
+                    <div class="input"> <i class="icon-append fa fa-phone"></i>
+                      <input type="text" name="mobile_no" id="mobile_no" value="8080776126">
+                    </div>
+                  </div>
+                </section>
+                <section class="col col-4">
+                  <div class="input-group">
+                    <label class="label">Employee Photo Id </label>
+                    <div class="input input-file" id="emp_img_div"> <span class="button">
+                      <input type="file">
+                      Browse</span>
+                      <input type="text">
+                    </div>
+                  </div>
+                </section>
+                <section class="col col-4">
+                  <label class="label"></label>
+                  <div class="input input-file"> </div>
+                </section>
+              </div>
+            </fieldset>
+            <header>Address Proof</header>
+            <fieldset>
+              <section>
+                <div class="row">
+                  <div class="col col-4">
+                    <label class="checkbox">
+                      <input type="checkbox" name="drive_license" id="drive_license" vlaue="1">
+                      <i></i>Driving License</label>
+                    <label></label>
+                    <label class="checkbox">
+                      <input type="checkbox" name="aadhar_card" id="aadhar_card" vlaue="1">
+                      <i></i>Aadhar Card</label>
+                  </div>
+                  <div class="col col-4">
+                    <div class="input input-file" id="drive_photo_div"> <span class="button">
+                      <input type="file" >
+                      Browse</span>
+                      <input type="text" readonly="" id="drive_photo_id_place" placeholder="Upload Driving License Photo Id" value="">
+                    </div>
+                    <label></label>
+                    <div class="input input-file" id="aadhar_photo_div"> <span class="button">
+                      <input type="file" >
+                      Browse</span>
+                      <input type="text" readonly="" id="aadhar_photo_id_place" placeholder="Upload Aadhar card Photo Id" value="">
+                    </div>
+                    </div>
+                </div>
+                <label></label>
+                <div class="row">
+                  <div class="col col-4">
+                    <label class="checkbox">
+                      <input type="checkbox" name="voter_id" id="voter_id" vlaue="1">
+                      <i></i>Voter Id</label>
+                    <label></label>
+                    <label class="checkbox">
+                      <input type="checkbox" name="passport" id="passport" vlaue="1">
+                      <i></i>Passport</label>
+                  </div>
+                  <div class="col col-4">
+                    <div class="input input-file" id="voter_photo_div"> <span class="button">
+                      <input type="file" >
+                      Browse</span>
+                      <input type="text" readonly="" id="voter_photo_id_place" placeholder="Upload Voter Photo Id" value="">
+                    </div>
+                    <label></label>
+                    <div class="input input-file" id="passport_photo_div"> <span class="button">
+                      <input type="file" >
+                      Browse</span>
+                      <input type="text" readonly="" id="passport_photo_id_place" placeholder="Upload Passport Photo Id" value="">
+                    </div>
+                    </div>
+                </div>
+                <label></label>
+                <div class="row">
+                  <div class="col col-4">
+                    <label class="checkbox">
+                      <input type="checkbox" name="company_id" id="company_id" vlaue="1">
+                      <i></i>Company Id</label>
+                    <label></label>
+                    <label class="checkbox">
+                      <input type="checkbox" name="bank_statement" id="bank_statement" vlaue="1">
+                      <i></i>Bank Statement</label>
+                  </div>
+                  <div class="col col-4">
+                    <div class="input input-file" id="com_photo_div"> <span class="button">
+                      <input type="file" >
+                      Browse</span>
+                      <input type="text" readonly="" id="com_photo_id_place" placeholder="Upload Company Photo Id" value="">
+                    </div>
+                    <label></label>
+                    <div class="input input-file" id="bank_photo_div"> <span class="button">
+                      <input type="file" >
+                      Browse</span>
+                      <input type="text" readonly="" id="bank_photo_id_place" placeholder="Upload Bnak Statement Photo Id" value="">
+                    </div>
+                    </div>
+                </div>
+                <label></label>
+                <div class="row">
+                  <div class="col col-4">
+                    <label class="checkbox">
+                      <input type="checkbox" name="telephone_bill" id="telephone_bill" vlaue="1">
+                      <i></i>Telephone Bill</label>
+                  </div>
+                  <div class="col col-4">
+                    <div class="input input-file" id="telephone_photo_div"> 
+                    <span class="button"><input type="file">Browse</span>
+                      <input type="text" readonly="" id="telephone_photo_id_place" placeholder="Upload Telephone Bill Photo Id">
+                    </div>
+                    </div>
+                </div>
+                <label></label>
+                <div class="row">
+                  <div class="col col-4">
+                    <label class="checkbox">
+                      <input type="checkbox" name="pancard" id="pancard" vlaue="1">
+                      <i></i>Pancard</label>
+                  </div>
+                  <div class="col col-4">
+                    <div class="input input-file" id="pancard_photo_div"> <span class="button">
+                      <input type="file" >
+                      Browse</span>
+                      <input type="text" readonly="" id="pancard_photo_id_place" placeholder="Upload Pancard Photo Id">
+                    </div>
+                    </div>
+                  <div class="col col-4">
+                    <div class="input input-file"> </div>
+                  </div>
+                </div>
+              </section>
+            </fieldset>
+            <header>Address</header>
+            <fieldset>
+              <div class="row">
+                <section class="col col-4">
+                  <div class="input-group">
+                    <label class="label active">Address</label>
+                    <div class="textarea">
+                      <textarea rows="3" readonly="" name="address" id="address">Eddie house, 1st floor, room no. 11, pedder road </textarea>
+                    </div>
+                  </div>
+                </section>
+                <section class="col col-4">
+                  <div class="input-group">
+                    <label class="label active">Landmark <span class="danger">*</span></label>
+                    <div class="input"> <i class="icon-append fa fa-home"></i>
+                      <input type="text" name="landmark" id="landmark" value="Mahalaxmi Mandir">
+                    </div>
+                  </div>
+                </section>
+                <section class="col col-4">
+                  <div class="input-group">
+                    <label class="label active">City <span class="danger">*</span></label>
+                    <div class="input"> <i class="icon-append fa fa-building"></i>
+                      <input type="text" name="city" id="city" value="Mumbai">
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="row">
+                <section class="col col-4">
+                  <div class="input-group">
+                    <label class="label active">Pincode <span class="danger">*</span></label>
+                    <div class="input">
+                      <input type="text" name="pincode" id="pincode" value="400026">
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </fieldset>
+            <header>Bank Details</header>
+            <fieldset>
+              <div class="row">
+                <section class="col col-4">
+                  <div class="input-group">
+                    <label class="label active">Account No.</label>
+                    <input type="text" name="account_no" id="account_no" value="002810110002220">
+                  </div>
+                </section>
+                <section class="col col-4">
+                  <div class="input-group">
+                    <label class="label active">Re Enter Account No.</label>
+                    <input type="text" name="re_account_no" id="re_account_no" value="002810110002220">
+                  </div>
+                </section>
+                <section class="col col-4">
+                  <div class="input-group">
+                    <label class="label active">Bank Name </label>
+                    <div class="input"> <i class="icon-append fa fa-ban"></i>
+                      <input type="text" name="bank_name" id="bank_name" value="bank of india">
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <div class="row">
+                <section class="col col-4">
+                  <div class="input-group">
+                    <label class="label active">Branch </label>
+                    <div class="input"> <i class="icon-append fa fa-building"></i>
+                      <input type="text" name="branch" id="branch" value="Mahalaxmi">
+                    </div>
+                  </div>
+                </section>
+                <section class="col col-4">
+                  <div class="input-group">
+                    <label class="label active">IFSC Code </label>
+                    <input type="text" name="ifsc_code" id="ifsc_code" value="bkid0000028" style="text-transform:uppercase">
+                  </div>
+                </section>
+                <section class="col col-4">
+                  <div class="input-group">
+                    <label class="label active">Pan Card No.<span class="danger">*</span></label>
+                    <input type="text" name="pan_card_no" id="pan_card_no" value="AHJPV1759P" style="text-transform:uppercase">
+                  </div>
+                </section>
+              </div>
+            </fieldset>
+            <header>Group</header>
+            <fieldset>
+              <div class="row">
+                <section class="col col-4">
+                  <div class="input-group">
+                    <label class="label active">Group </label>
+                    <div class="select"> <i class="icon-append fa fa-building"></i>
+                      <select name="group" id="group">
+                        <option value="" data-val="0">Select group</option>
+                        <option value="Top Mgt&amp;&amp;16" data-val="16">Top Mgt</option>
+                        <option selected="selected" value="Sales Team&amp;&amp;19" data-val="19">Sales Team</option>
+                        <option value="Test&amp;&amp;105" data-val="105">Test</option>
+                      </select>
+                    </div>
+                  </div>
+                </section>
+                <section class="col col-2" style="margin-top:25px;">
+                  <label class="label" id="members">0 Members</label>
+                </section>
+              </div>
+            </fieldset>
+            <div class="" style="text-align:center;">
+              <button type="submit" name="submit" id="submit" class="btn btn-primary big-sub-btn" style="margin:0px;"> Submit </button>
+            </div>
+            <div class="message"> <i class="fa fa-check fa-lg"></i>
+              <p> Your comment was successfully added! </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="page-footer">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6"> <span class="txt-color-white">CINQO © 2016</span> </div>
+  </div>
+</div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script> 
+<script src="js/app.config.js"></script> 
+<script src="js/bootstrap/bootstrap.min.js"></script> 
+<script src="js/app.min.js"></script> 
+<script type="text/javascript">
+        $(document).ready(function() {pageSetUp();})
+        </script>
+</body>
+</html>

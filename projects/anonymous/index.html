@@ -1,0 +1,1182 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<title>Welcome to Anonymous</title>
+<link rel="stylesheet" type="text/css" href="styles/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/slick.css">
+<link rel="stylesheet" type="text/css" href="styles/slick-theme.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<script src="scripts/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="scripts/jquery.bxslider.min.js"></script>
+<!--<script type="text/javascript" src="https://maps.google.com/maps/api/js?libraries=places&region=uk&language=en&sensor=false&key=AIzaSyBTc_pMM93Djqu0U6YPJ0OkfjJuoktDQjQ"></script>-->
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?libraries=places&region=uk&language=en&sensor=false&key=AIzaSyAJM4s5sRaTZcT2ghSJ4rzTqwz28eaPYnA"></script>
+<style>
+.map-cntr {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 44%;
+}
+</style>
+<script type="text/javascript">
+ var directionsDisplay;
+    var directionsService = new google.maps.DirectionsService();
+    var marker;
+    $(function() {
+        /*$( "#txtAddressTo" ).keypress(function( event ) {
+         if ( event.which == 13 ) {
+          calcRoute()
+         }
+         });*/
+
+        var map;
+        var asymmetrique = new google.maps.LatLng(22.4922948, 88.359889);
+        function initialize() {
+
+            var roadAtlasStyles = [
+    {
+        "featureType": "all",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "all",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            },
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#000000"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    }
+]
+            var mapOptions = {
+                zoom: 15,
+
+                //scrollwheel: false,
+                center: asymmetrique,
+                mapTypeControlOptions: {
+                    mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'usroadatlas']
+                }
+            };
+
+            map = new google.maps.Map(document.getElementById('contact-map'), mapOptions);
+            marker = new google.maps.Marker({
+                position: asymmetrique,
+                map: map,
+                title: 'Asymmetrique',
+                icon: 'images/m-pin.png'
+            });
+
+            var styledMapOptions = {};
+
+            //Content structure of info Window for the Markers
+            var contentString = $('<div class="marker-info-win" style"text-align:center">' +
+                '<div class="marker-inner-win"><span class="info-content" style="font:14px helveticaneuelight;">' +
+                '<h3 class="marker-heading" style="text-align:center; margin-top:0; color:#2d4555; display:block">Anonymous</h3>' +
+                'SD7, Uday Shankar Sarani, Kolkata-700095.' +
+                '</span>' +
+                '</div></div>');
+
+            //Create an infoWindow
+            var infowindow = new google.maps.InfoWindow();
+
+            //set the content of infoWindow
+            infowindow.setContent(contentString[0]);
+
+            //add click event listener to marker which will open infoWindow          
+            google.maps.event.addListener(marker, 'click', function() {
+                infowindow.open(map, marker); // click on marker opens info window
+            });
+            directionsDisplay = new google.maps.DirectionsRenderer({
+                'map': map
+            });
+            var usRoadMapType = new google.maps.StyledMapType(
+                roadAtlasStyles, styledMapOptions);
+
+            map.mapTypes.set('usroadatlas', usRoadMapType);
+            map.setMapTypeId('usroadatlas');
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+        var lat = 22.4922948,
+            lng = 88.359889,
+            latlng = new google.maps.LatLng(lat, lng),
+            mapG = new google.maps.Map(document.getElementById('contact-map')),
+            marker = new google.maps.Marker({
+                position: latlng,
+                map: mapG
+
+            });
+        var input = document.getElementById('');
+        var autocomplete = new google.maps.places.Autocomplete(input, {
+            types: ["geocode"]
+        });
+        autocomplete.bindTo('bounds', mapG);
+        var infowindow = new google.maps.InfoWindow();
+        //*********************** Autocomplete *********************************
+
+
+
+        google.maps.event.addListener(autocomplete, 'place_changed', function() {
+            //infowindow.close();
+            calcRoute()
+
+            input.className = '';
+            var place = autocomplete.getPlace();
+            console.log(place);
+            if (!place.geometry) {
+                // Inform the user that the place was not found and return.
+                input.className = 'notfound';
+                return;
+            }
+
+            // If the place has a geometry, then present it on a map.
+
+        });
+
+
+
+
+    });
+	</script>
+    
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-117104958-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-117104958-1');
+</script>-->
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $(".leftNav-bar > ul > li > a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+ fbq('init', '217923898547075'); 
+fbq('track', 'PageView');
+</script>
+<noscript>
+ <img height="1" width="1" 
+src="https://www.facebook.com/tr?id=217923898547075&ev=PageView
+&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+</head>
+<body>
+<div class="loader"></div>
+<div class="wrapper">
+  <div class="banner">
+    <div class="header">
+      <div class="container">
+        <div class="topBand">
+          <ul>
+          	<li class="mobile-navicon">
+            	<div class="mobile-nav-icon">
+              <button class="menu-icon mobil-icon-toggle"> <span>toggle menu</span> </button>
+            </div>
+            </li>
+            <li> <a href="contact-us.html">Contact us</a> </li>
+            <li class="no-margin-ryt">
+              <div class="searchbox">
+                <div class="input-holder">
+                  <input class="search-input" placeholder="Type to search" type="text">
+                  <button class="search-icon"><img src="images/search-icon.png"></button>
+                </div>
+              </div>
+            </li>
+            <li class="mobile-nav-cntr">
+              <div class="fixed-left-nav">
+                <div class="dis-table">
+                  <div class="dis-tablecell">
+                    <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="logo"></a> </div>
+                    <div class="menubar">
+                    <div class="leftNav-bar">
+                      <ul>
+                        <li> <a href="index.html">Home</a> </li>
+                        <li class="subdrop-down"> <a href="index.html#about-us">About us</a>
+                          <!--<div class="subdropdown">
+                            <ul>
+                              <li> <a href="about-us.html">Company</a> </li>
+                              <li> <a href="#">How we do?</a> </li>
+                            </ul>
+                          </div>-->
+                        </li>
+                        <li class="subdrop-down"> <a href="index.html#what-we-do">What We do</a>
+                          <div class="subdropdown">
+                            <ul>
+                              <li> <a href="branding.html">Branding</a> </li>
+                              <li> <a href="website.html">Website</a> </li>
+                              <li> <a href="social-media.html">Social Media</a> </li>
+                              <li> <a href="#">Mobile</a> </li>
+                              <li> <a href="films.html">Films</a> </li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li> <a href="index.html#game-stormers">Game Stormers</a> </li>
+                        <li> <a href="index.html#clients">Clients</a> </li>
+                        <li> <a href="contact-us.html">Contact Us</a> </li>
+                      </ul>
+                      <div class="clear"></div>
+                    </div>
+                    <div class="social-medialeft">
+                      <ul>
+                        <li> <a href="https://www.facebook.com/anonymousdigital" target="_blank" class="fb-small"><i></i></a> </li>
+                        <li> <a href="https://twitter.com/anonymoussmm" target="_blank" class="twitter-small"><i></i></a> </li>
+                        <li> <a href="https://in.linkedin.com/company/anonymousdigital" target="_blank" class="linkedin-small"><i></i></a> </li>
+                      </ul>
+                      <div class="clear"></div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            
+          </ul>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="banner-box">
+      <div class="full-slider">
+        <div class="custom-pre-control"><a href="javascript:void(0);" id="slider-prev"> </a> </div>
+        <ul class="bxslider">
+          <li>
+            <div class="container">
+              <div class="slider-Large-txt slide-overlay blue-overlay">
+                <div class="s-Big-txt"> Raise <span>the Brand </span>
+                  <div class="slider-smalltxt">with Anonymous</abbr></div>
+                </div>
+              </div>
+              <div class="join-us-btn slide-overlay2 blue-overlay">
+                <div class="join-us-link"> <img src="images/home-banner1.jpg" class="layer-size1"> </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="container">
+              <div class="slider-Large-txt slide-overlay blue-overlay">
+                <div class="s-Big-txt"> Brilliant <span>Brandings </span>
+                  <div class="slider-smalltxt">@<b>Anonymous</b></abbr></div>
+                </div>
+              </div>
+              <div class="join-us-btn slide-overlay2 blue-overlay">
+                <div class="join-us-link"> <img src="images/home-banner2.jpg" class="layer-size1"> </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="container">
+              <div class="slider-Large-txt slide-overlay blue-overlay">
+                <div class="s-Big-txt"> Challenge <span> </span>
+                  <div class="slider-smalltxt">the market with <b>Anonymous</b></abbr></div>
+                </div>
+              </div>
+              <div class="join-us-btn slide-overlay2 blue-overlay">
+                <div class="join-us-link"> <img src="images/home-banner3.jpg" class="layer-size1"> </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="container">
+              <div class="slider-Large-txt slide-overlay blue-overlay">
+                <div class="s-Big-txt"> Great <span>Brands </span>
+                  <div class="slider-smalltxt">are not born great <abbr>they grow great <b>Anonymous</b></abbr></div>
+                </div>
+              </div>
+              <div class="join-us-btn slide-overlay2 blue-overlay">
+                <div class="join-us-link"> <img src="images/home-banner4.jpg" class="layer-size1"> </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="custom-next-control"><a href="javascript:void(0);" id="slider-next"> </a> </div>
+      </div>
+    </div>
+  </div>
+  <div class="abt-person-info">
+    <div class="container">
+      <div class="abt-personbox">
+        <div class="dis-table">
+          <div class="dis-tablecell">
+              <ul class="testimonial-slider">
+                <li>
+                    <div class="abtpersonDesc">
+                        <div class="abtPImg"> <img src="images/testimonial/bijoy-chandrabalan.png"> </div>
+                        <div class="abtpText">
+                            <h2>Bijoy Chandrabalan <span>( COO, Experion Technologies )</span></h2>
+                            <p>"The most important aspect to consider during a website project is the creation of a clean and appealing design – attractive and easy to read pages with intuitive navigation. And that is what we found Anonymous does best."</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="abtpersonDesc">
+                        <div class="abtPImg"> <img src="images/testimonial/mir-afsar-ali.png"> </div>
+                        <div class="abtpText">
+                            <h2>Mir Afsar Ali <span>( Radio Jockey, Radio Mirchi )</span></h2>
+                            <p>"When MIR needed an Alter Ego, it was Anonymous who helped him get used to his new identity ~ Sokalman! The film added a new chapter to Brand MIR and I am so happy to have met Anonymous."</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="abtpersonDesc">
+                        <div class="abtPImg"> <img src="images/testimonial/xavier-places-cano.png"> </div>
+                        <div class="abtpText">
+                            <h2>Xavier Places Cano <span>( Marketing Director, Openbravo )</span></h2>
+                            <p>"Team Anonymous has made a significant change in our go to market strategy. In a very short duration, they have been able to add tremendous value to our brand and help us reach new geographies."</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="abtpersonDesc">
+                        <div class="abtPImg"> <img src="images/testimonial/mahendra-soni.png"> </div>
+                        <div class="abtpText">
+                            <h2>Mahendra Soni <span>( Director & Co-Founder, SVF )</span></h2>
+                            <p>"Team Anonymous in a very short time has done some great work for us at SVF. I am personally very happy to see that you as a team are very focused and dedicated to deliver great work in time. I am sure you guys have a long way to go. Let's deliver some awesome stuff in future to our viewers."</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="abtpersonDesc">
+                        <div class="abtPImg"> <img src="images/testimonial/piyali-banerjee.png"> </div>
+                        <div class="abtpText">
+                            <h2>Piyali Banerjee <span>( Director, Hanglaatherium )</span></h2>
+                            <p>"In our endeavor to become one of Kolkata's most loved restaurants, Anonymous played an extremely crucial role of guiding and deciding on our communication. The awesome team of Anonymous became a part of our extended family. Our engagement with Anonymous is regarded as one of the most satisfying decision for us."</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </li>
+              </ul>  
+          </div>
+          <div class="dis-tablecell">
+            <div class="abt-blcklogo wow animated flipInX" data-wow-delay="0.4s" data-wow-offset="50"> <img src="images/black-logo.png"> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="" id="about-us"></div>
+  <div class="about-section">
+    <div class="container">
+      <div class="abutinfo-box">
+        <div class="dis-table">
+          <div class="dis-tablecell">
+            <div class="section-heading">
+              <div class="headingNum wow animated fadeInDown" data-wow-delay="0.2s" data-wow-offset="50"> <img src="images/02.png"> </div>
+              <div class="sectionTitle wow animated fadeInUp" data-wow-delay="0.3s" data-wow-offset="50">
+                <h2>About Us</h2>
+                <p>The world see through on our eyes</p>
+              </div>
+            </div>
+          </div>
+          <div class="dis-tablecell wow animated fadeInRight" data-wow-delay="0.2s" data-wow-offset="50">
+            <div class="aboutTextcntr">
+              <p>ANONYMOUS has been taking the market by storm since May 2015, offering dynamic, innovative, successful digital and analog design service for all types of products and services. We transform your business leveraging experience, providing seamless customer experience with cutting edge designed technology adding new customer base and opening new revenue channels for you.</p>
+              <p>We are an agile group of expert designers, marketers, and developers with a shared commitment to communication and collaboration.</p>
+              <p>We are your best choice in brand building and marketing, having the creative power to transform human thinking patterns, and behavior, opted by those who most value brands.
+We are the creative force that connects your thinking to digital branding. Like your favourite comedian, we excel in a witty approach; like your midnight snack; we add a fulfilling brand value; like your soul mate we provide loyal support and uphold the dignity of your brand.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="how-wedo-section" style="box-shadow: none;">
+    <div class="container">
+      <div class="how-weDo-circle">
+        <h2 class="wow animated fadeInDown" data-wow-delay="0.2s" data-wow-offset="50">How we do</h2>
+        <p class="wow animated fadeInUp" data-wow-delay="0.2s" data-wow-offset="50">We provide website design & development, corporate branding & collateral, advertising campaigns, brochures, catalogs, electronic marketing for visual branding, & social media needs. </p>
+        <p class="wow animated fadeInUp" data-wow-delay="0.2s" data-wow-offset="50">We synergize our efforts with yours. Our experts join forces with your people to form a cohesive team, empowering you to respond more quickly and intuitively to changing market dynamics, through periodical evaluations and nurturing the brand across all channels and markets. We focus on creativity and we are passionate about design which deliver results.</p>
+        <div class="howdo-circles">
+          <ul>
+            <li class="wow animated fadeInDown" data-wow-delay="0.4s" data-wow-offset="50">
+              <div class="howdo-round">
+                <div class="dis-table">
+                  <div class="dis-tablecell"> <i class="concepts-icon"></i> </div>
+                </div>
+              </div>
+              <div class="howdo-text"> Concept </div>
+            </li>
+            <li class="wow animated fadeInUp" data-wow-delay="0.7s" data-wow-offset="50">
+              <div class="howdo-round">
+                <div class="dis-table">
+                  <div class="dis-tablecell"> <i class="execution-icon"></i> </div>
+                </div>
+              </div>
+              <div class="howdo-text"> Execution </div>
+            </li>
+            <li class="wow animated fadeInDown" data-wow-delay="1s" data-wow-offset="50">
+              <div class="howdo-round">
+                <div class="dis-table">
+                  <div class="dis-tablecell"> <i class="testing-icon"></i> </div>
+                </div>
+              </div>
+              <div class="howdo-text"> Testing </div>
+            </li>
+            <li class="wow animated fadeInUp" data-wow-delay="1.3s" data-wow-offset="50">
+              <div class="howdo-round">
+                <div class="dis-table">
+                  <div class="dis-tablecell"> <i class="delivery-icon"></i> </div>
+                </div>
+              </div>
+              <div class="howdo-text"> Delivery </div>
+            </li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="technology-partners-section">
+    <div class="container">
+    <div class=" how-weDo-circle">
+        <h2 class="wow animated fadeInDown" data-wow-delay="0.2s" data-wow-offset="50">Our Technology Partners</h2>
+        <img src="images/intermind-logo.png"  class="wow animated fadeInLeft" data-wow-delay="0.2s" data-wow-offset="50">
+        <p class="wow animated fadeInRight" data-wow-delay="0.2s" data-wow-offset="50">Intermind has been in the forefront of digital technologies, working on diverse & complex applications ranging from smart homes (with Anchor Panasonic) to core banking applications (with DTS Nelito). We have teams in VR, IoT, AI, Mobile & Web Apps<a href="https://www.intermind.in" target="_blank">Visit Website +</a></p>
+      </div>
+      </div>
+          <div class="clear"></div>
+  </div>
+  <div class="" id="what-we-do"></div>
+  <div class="whatwe-do-section">
+    <div class="whatwedo-bg">
+      <div class="container">
+        <div class="what-wedobox">
+          <div class="dis-table">
+            <div class="dis-tablecell">
+              <div class="whatwedo-num wow animated fadeInDown" data-wow-delay="0.2s" data-wow-offset="50"> <img src="images/03.png"> </div>
+              <div class="whatwe-do-heading wow animated fadeInUp" data-wow-delay="0.3s" data-wow-offset="50">
+                <h2>What we Do</h2>
+              </div>
+              <div class="whatwe-dotext wow animated fadeInLeft" data-wow-delay="0.4s" data-wow-offset="50">
+                <p>As a team of strategists, designers, developers, and marketers, we excel at applying the right plan and technology to achieve our clients' business objectives . . . but we also love that we get to create cool applications and great-looking work in the process! Modern age Brand building in an age of crisis, to create an emotional connect with the people, ensuring that marketers and consumers connect with the maximum impact.</p>
+                <!--<a href="services.html">Know More</a>--> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="what-wedo-images">
+    <div class="container">
+      <div class="whatwe-docols">
+        <ul>
+          <li class="wow animated fadeInLeft" data-wow-delay="0.2s" data-wow-offset="50">
+            <a href="branding.html">
+                <div class="whatwedo-img"> <img src="images/branding.jpg"> </div>
+                <div class="wwd-col-txt"> Branding </div>
+            </a>
+          </li>
+          <!--<a href="website.html">
+          <li class="wow animated fadeInDown" data-wow-delay="0.3s" data-wow-offset="50">
+            <div class="whatwedo-img"> <img src="images/image-2.jpg"> </div>
+            <div class="wwd-col-txt"> Website </div>
+          </li>
+          </a>-->
+          <li class="wow animated fadeInDown" data-wow-delay="0.4s" data-wow-offset="50">
+          <a href="social-media.html">
+                <div class="whatwedo-img"> <img src="images/social-media.jpg"> </div>
+                <div class="wwd-col-txt"> Social Media </div>
+            </a>
+          </li>	
+          <!--<li class="wow animated fadeInLeft" data-wow-delay="0.5s" data-wow-offset="50">
+            <div class="whatwedo-img"> <img src="images/image-4.jpg"> </div>
+            <div class="wwd-col-txt"> Mobile </div>
+          </li>-->
+          <li class="wow animated fadeInRight" data-wow-delay="0.6s" data-wow-offset="50">
+            <a href="films.html">
+                <div class="whatwedo-img"> <img src="images/films.jpg"> </div>
+                <div class="wwd-col-txt"> Films </div>
+            </a>
+          </li>
+          <!--<li class="mob-disnon"></li>-->
+          <!--<li class="wow animated fadeInRight" data-wow-delay="0.7s" data-wow-offset="50">
+            <div class="whatwedo-img"> <img src="images/know-more.png">
+              <div class="whatwedo-more">
+                <div class="dis-table">
+                  <div class="dis-tablecell"> <a href="services.html" class="wwd-k-more">Know More</a> </div>
+                </div>
+              </div>
+            </div>
+          </li>-->
+        </ul>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <div class="" id="game-stormers"></div>
+  <div class="game-stromers">
+    <div class="container">
+      <div class="stomer-cntr">
+        <div class="stomerinfo">
+          <div class="dis-table">
+            <div class="dis-tablecell">
+
+              <div class="stom-num wow animated fadeInDown" data-wow-delay="0.2s" data-wow-offset="50"> <img src="images/04.png"> </div>
+              <div class="strom-title wow animated fadeInUp" data-wow-delay="0.3s" data-wow-offset="50">
+                <h2> Game<span>Stormers</span> </h2>
+              </div>
+            </div>
+            <div class="dis-tablecell stomerinfotxt wow animated fadeInRight" data-wow-delay="0.4s" data-wow-offset="50">
+              <p>We are an agile group of expert designers, marketers, and developers with a shared commitment to communication, collaboration, and doing good work. We are your best choice in brand building and marketing, having the creative power to transform human thinking patterns, and behavior, opted by those who most value brands.</p>
+            </div>
+          </div>
+        </div>
+        <div class="stromers-slider wow animated fadeInUp" data-wow-delay="0.5s" data-wow-offset="50">
+          <div class="testimonial-cntr">
+            <div class="strome-pic">
+              <div class="testimonial-img-slider">
+                <div class="testimonial-img">
+                  <div class="testimonial-image">
+                    <div class="strome-name">Gaurav <span>G</span></div>
+                    <div class="formobile-cntr"><img src="images/owner/gourav-ghosh.png"></div>
+                  </div>
+                  <div class="testimonial-image">
+                    <div class="strome-name">Maharaj <span>D</span></div>
+                    <div class="formobile-cntr"><img src="images/owner/maharaj-suvajit-dutt.png"></div>
+                  </div>
+                  <div class="testimonial-image">
+                    <div class="strome-name">Anindya <span>S</span></div>
+                    <div class="formobile-cntr"><img src="images/owner/anindya-sain.png"></div>
+                  </div>
+                  <div class="testimonial-image">
+                    <div class="strome-name">Sunando <span>B</span></div>
+                    <div class="formobile-cntr"><img src="images/owner/sunando-banerjee.png"></div>
+                  </div>
+                  <div class="testimonial-image">
+                    <div class="strome-name">Suvadeep <span>S</span></div>
+                    <div class="formobile-cntr"><img src="images/owner/Suvadeep-Sarkar.png"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="strome-desc">
+              <div class="testimonial-txt">
+                <div class="testimonail-txtslider">
+                  <div class="txt-row-testiminail">
+                    <div class="dis-table">
+                      <div class="dis-tablecell">
+                        <div class="stromPersoninfo">
+                          <h3>Gourav Ghosh</h3>
+                            <p>"It's not who I am underneath, but what I do that defines me." Being the Creative Head of Anonymous, Gourav is a believer in the magic of creation and the joy of visualizing and shaping the next unique creative communication for his client.</p>
+                            <a href="javascript:void(0);" onClick="overlayBox('gourav-ghosh')">Know More +</a>
+                          <h4>About Gourav</h4>
+                          <div class="strom-graph"> <img src="images/gourav-ghosh.png"> </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="txt-row-testiminail">
+                    <div class="dis-table">
+                      <div class="dis-tablecell">
+                        <div class="stromPersoninfo">
+                          <h3>Maharaj Suvajit Dutt</h3>
+                          <p>Maharaj Suvajit Dutt is a maverick who loves to create stories by playing with colours and images. A Commercial Art specialist who excels at painting, sketching, graphic designing.</p>
+                            <a href="javascript:void(0);" onClick="overlayBox('maharaj-suvajit-dutt')">Know More +</a>
+                          <h4>About Maharaj</h4>
+                          <div class="strom-graph"> <img src="images/maharaj-suvajit-dutt.png"> </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="txt-row-testiminail">
+                    <div class="dis-table">
+                      <div class="dis-tablecell">
+                        <div class="stromPersoninfo">
+                          <h3>Anindya Sain</h3>
+                          <p>Anindya Sain is a brilliant scholar in Economics and a University topper, who has handled government projects extensively working with the Reserve Bank of India, and has many years of experience in evolving financial solutions and crunching numbers for predicting business growth.</p>
+                            <a href="javascript:void(0);" onClick="overlayBox('anindya-sain')">Know More +</a>
+                          <h4>About Anindya</h4>
+                          <div class="strom-graph"> <img src="images/anindya-sain.png"> </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="txt-row-testiminail">
+                    <div class="dis-table">
+                      <div class="dis-tablecell">
+                        <div class="stromPersoninfo">
+                          <h3>Sunando Banerjee</h3>
+                          <p>"My interest in life comes from setting myself huge, apparently unachievable challenges and trying to rise above them ... from the perspective of wanting to live life to the full, I felt that I had to attempt it.</p>
+                            <a href="javascript:void(0);" onClick="overlayBox('sunando-banerjee')">Know More +</a>
+                          <h4>About Sunando</h4>
+                          <div class="strom-graph"> <img src="images/sunando-banerjee.png"> </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="txt-row-testiminail">
+                    <div class="dis-table">
+                      <div class="dis-tablecell">
+                        <div class="stromPersoninfo">
+                          <h3>Suvadeep Sarkar</h3>
+                          <p>Over 20 years of experience in Solution Design, Digital Marketing, Account Management & Cross Country Project Management.</p>
+                            <a href="javascript:void(0);" onClick="overlayBox('suvadeep-sarkar')">Know More +</a>
+                          <h4>About Sunando</h4>
+                          <div class="strom-graph"> <img src="images/sunando-banerjee.png"> </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="workwith-us-section">
+    <div class="container">
+      <div class="wana-workbox">
+        <div class="art-bgimg"> 
+          <h2 class="wow animated fadeInDown" data-wow-delay="0.2s" data-wow-offset="50">Be a part <span>of our Family!</span></h2>
+          <p class="wow animated fadeInUp" data-wow-delay="0.3s" data-wow-offset="50">Drop in your mail-id and we will sneak into your house!</p>
+          <div class="grid-layout form-layout wow animated fadeInLeft" data-wow-delay="0.4s" data-wow-offset="50">
+            <div class="form-row">
+              <div class="grid-6">
+                <div class="form-field">
+                  <div class="input-group form-material marginspacetop">
+                    <input class="form-control" placeholder="Email ID" type="text">
+                  </div>
+                </div>
+              </div>
+              <div class="grid-2">
+                <div class="button-box">
+                  <button class="buttonStyle">subscribe us</button>
+                </div>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="" id="clients"></div>
+  <div class="ourclients-section">
+    <div class="container">
+      <div class="client-cntr">
+        <div class="section-heading">
+          <div class="headingNum wow animated fadeInDown" data-wow-delay="0.2s" data-wow-offset="50"> <img src="images/05.png"> </div>
+          <div class="sectionTitle wow animated fadeInUp" data-wow-delay="0.2s" data-wow-offset="50">
+            <h2>Our clients</h2>
+            <p>Those who believed, trusted and won the war</p>
+          </div>
+        </div>
+        <div class="client-slider wow animated fadeInDown" data-wow-delay="0.2s" data-wow-offset="50">
+          <div class="clients-imgslider">
+            <div class=""> <img src="images/our-clients/svf.png"> </div>
+            <div class=""> <img src="images/our-clients/openbravo.jpg"> </div>
+            <div class=""> <img src="images/our-clients/zee.jpg"> </div>
+            <div class=""> <img src="images/our-clients/times-group.jpg"> </div>
+            <div class=""> <img src="images/our-clients/mirchi-logo.jpg"> </div>
+            <div class=""> <img src="images/our-clients/zaikebaaz.jpg"> </div>
+            <div class=""> <img src="images/our-clients/wizsprint.jpg"> </div>
+            <div class=""> <img src="images/our-clients/uds.jpg"> </div>
+            <div class=""> <img src="images/our-clients/tst.jpg"> </div>
+            <div class=""> <img src="images/our-clients/tfs.jpg"> </div>
+            <div class=""> <img src="images/our-clients/silicon-systems.jpg"> </div>
+            <div class=""> <img src="images/our-clients/sgcc.jpg"> </div>
+            <div class=""> <img src="images/our-clients/piu-travels.jpg"> </div>
+            <div class=""> <img src="images/our-clients/loknath-medicare.jpg"> </div>
+            <div class=""> <img src="images/our-clients/pink-city.jpg"> </div>
+            <div class=""> <img src="images/our-clients/jus-jumpin.jpg"> </div>
+            <div class=""> <img src="images/our-clients/funtime-entertainment.jpg"> </div>
+            <div class=""> <img src="images/our-clients/foodka-final.jpg"> </div>
+            <div class=""> <img src="images/our-clients/hanglaatherium.jpg"> </div>
+            <div class=""> <img src="images/our-clients/gp-energy.jpg"> </div>
+            <div class=""> <img src="images/our-clients/paintaholics.jpg"> </div>
+            <div class=""> <img src="images/our-clients/film-q.jpg"> </div>
+            <div class=""> <img src="images/our-clients/experion.jpg"> </div>
+            <div class=""> <img src="images/our-clients/ecountry.jpg"> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="loveto-share-section">
+  	<div class="container">
+    	<div class="love-sharebox">
+      	<div class="dis-table">
+        	<div class="dis-tablecell loveTitle wow animated fadeInLeft" data-wow-delay="0.2s" data-wow-offset="50">
+          	<div class="loveheading">
+            	<h2>love to share<span>our facts</span></h2>
+              <p>Some Interesting facts</p>
+            </div>
+          </div>
+          <div class="dis-tablecell">
+          	<div class="love-circles">
+            	<ul id="counter">
+              	<li class="wow animated fadeInDown" data-wow-delay="0.4s" data-wow-offset="50">
+                	<div class="love-round">
+                  	<div class="dis-table">
+                    	<div class="dis-tablecell">
+                      	<i class="rocket-icon"></i>
+                        <div class="round-text">
+                        	<span class="counter-value" data-count="87">87</span>
+                          Projects Done
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="wow animated fadeInUp" data-wow-delay="0.7s" data-wow-offset="50">
+                	<div class="love-round">
+                  	<div class="dis-table">
+                    	<div class="dis-tablecell">
+                      	<i class="person-icon"></i>
+                        <div class="round-text">
+                        	<span class="counter-value" data-count="23">23</span>
+                          Team Members
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="wow animated fadeInDown" data-wow-delay="1s" data-wow-offset="50">
+                	<div class="love-round">
+                  	<div class="dis-table">
+                    	<div class="dis-tablecell">
+                      	<i class="coffee-icon"></i>
+                        <div class="round-text">
+                        	<span class="counter-value" data-count="100">Infinite</span>
+                          Cups of coffee
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="clear"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="getin-touch">
+  	<div class="container">
+    	<div class="contact-touch">
+      	<div>
+      	<div class="section-heading">
+          <div class="headingNum wow animated fadeInDown" data-wow-delay="0.2s" data-wow-offset="50"> <img src="images/06.png"> </div>
+          <div class="sectionTitle wow animated fadeInUp" data-wow-delay="0.3s" data-wow-offset="50">
+            <h2>get in touch</h2>
+            <p>To skyrocket past the traffic.</p>
+          </div>
+        </div>
+        <div class="address-dtl wow animated fadeInLeft" data-wow-delay="0.4s" data-wow-offset="50">
+                <h4>India</h4>
+              	<p>SD7, Uday Shankar Sarani, Kolkata-700095.</p><br>
+             	<h4>Indonesia</h4>
+              	<p>Jalan Kalibata Raya No. 1, rt.9/rw.4, rawajati, pancoran,<br>
+                kota jakarta selatan, daerah khusus ibukota jakarta -12750</p>
+          <p><a href="mailto:service@anonymousdigital.com">service@anonymousdigital.com</a></p>
+          <p> +91 9051654008</p>
+        </div>
+        <div class="touchsocial wow animated fadeInDown" data-wow-delay="0.5s" data-wow-offset="50">
+        	<h3>We Are Also In</h3>
+          <ul class="wow animated fadeInUp" data-wow-delay="0.6s" data-wow-offset="50">
+          	<li><a href="https://www.facebook.com/anonymousdigital/" target="_blank"><img src="images/fb-icon.png"></a></li>
+            <li><a href="https://twitter.com/anonymoussmm" target="_blank"><img src="images/twitter-icon.png"></a></li>
+            <li><a href="https://in.linkedin.com/company/anonymousdigital" target="_blank"><img src="images/linkedin-icon.png"></a></li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+        </div>
+        <div class="map-cntr wow animated fadeInRight" data-wow-delay="0.2s" data-wow-offset="50" id="contact-map"></div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+    	<div class="footer-cntr wow animated fadeIn" data-wow-delay="0.2s" data-wow-offset="50">
+      	<div class="footerlink">
+        	<ul>
+          	<li> <a href="index.html">Home</a> </li>
+            <li>
+            	<a href="#what-we-do">What We do</a>
+            </li>
+            <li>
+            	<a href="#game-stormers">Game Stormers</a>
+            </li>
+            <li>
+            	<a href="#clients">Clients</a>
+            </li>
+            <li>
+            	<a href="contact-us.html">contact</a>
+            </li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+        <div class="footerlogo">
+        	<a href="index.html"><img src="images/logo.png"></a>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+
+<style>
+.overlay{position:fixed !important;}
+@media screen and (min-width: 0) and (max-width:767px) {
+.overlay{position:absolute !important
+}	
+</style>
+<div class="overlay" id="gourav-ghosh">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-content">
+      <div class="overlay-header"> Gourav Ghosh </div>
+      <div class="overlay-text">
+      <p>He has been the spin doctor of ideating, creating, visualizing, synchronizing between different creative points, positioning of campaigns, overseeing and helping in the execution of projects. Always a dreamer who believed that life is ever changing experience, one helluva roller coaster ride, he has never believed in taking any place for granted. This has helped to always give the brands that he promotes a dynamic step up over the rest of the competition in the market. His vast experience in the field of visual communication over the last few years has made him one of the best man to promote any brand that wants to push the envelope, and become a trendsetter. Growing up in the confines of the police Quarters in Kidderpore Kolkata, has built in him an unique trait of being responsible for every action that affects him and his surroundings. This has translated Gourav now into a player who feels responsible for every brand that he nurtures like a baby in a mother's embrace. To him Life is a lot like cinema,--a world of make believe subtly transgressing at all odds moments with the stark realities.  A kid at heart who might run the "Hot Wheels' Batmobile in between the various scattered files on the office desk, he is sharply concerned about maneuvering the clients brand through the rough terrain of the market landscape, constantly trying to bridge the gap between brands and consumers. For him he needs to have life pulsating through every vein of his campaign creatives to shape a life changing experience for the consumer. Just like Sachin Tendulkar, he is a player of long innings and therefore provides creative support for his clients brands till they reach the pinnacle. A master at finding the equilibrium between the ever changing 'chaos' and 'order' he keeps every brand alive in the minds of his targeted consumers. A dreamer, who has a vast and wide range of hobbies and interest areas, from learning about the Space or Universe, digging into Marvel or DC comics, a keen observer of human behaviour, he has been one of the first to set the trend of creating visual communications for theatre performances. He is always looking forward to his next big project to ideate upon. 
+</p>      
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="overlay" id="maharaj-suvajit-dutt">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-content">
+      <div class="overlay-header"> Maharaj Suvajit Dutt </div>
+      <div class="overlay-text">
+      <p>A photographer par excellence who never misses an interesting frame, even if that's capturing an unique moment of his gorgeous bride at their wedding alter! His passion for finding the perfect image has made him a wizard at designing posters, signage, marketing collaterals, artwork for film promotion,    F &B retail chains and hospitals. His long stint in the advertisement industry has made him the perfect storyboard illustrator of all types of brands and products. A dreamer at heart, for whom the camera is an extension of his self, considers Anonymous to be the next most easily recognizable brand of India. An avid traveler, Suvajit, collates his wide travel experiences to all brand and product promotion by giving a global appeal to them. For him the client is a co-passenger, travelling on the same coach, in the same direction, towards the same desired destination. For him, it's never an one-man journey, it's always a team travel to find the perfect spot in the vastly competitive market, for his much valued clients.</p>      
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="overlay" id="anindya-sain">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-content">
+      <div class="overlay-header"> Anindya Sain </div>
+      <div class="overlay-text">
+      <p>Anindya designs the agency's holistic customer experience program that helps in delivering superior business growth. A natural sportsman and a second division player, who has brought his cricketing techniques to devise winning business strategies for both new and established brands. His passion for the stage has made him seek the limelight for any product that the company showcases. His sharp wit and his dramatic approach has made each of the brands a showstopper amongst their compatriots. He is also the thought leader who keeps the Anonymous vision alive. He is great at reaching target points, believes in bonding and growing with the client and loves to create a long term association between the client and Anonymous. A non-believer in boundaries his free thinking and independence of thought has given each of the brands superior market space. For him the world is the audience and Anonymous is the right stage/ platform.</p>      
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="overlay" id="sunando-banerjee">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-content">
+      <div class="overlay-header"> Hanglaatherium <span>Awarded 2017 branding of the year</span></div>
+      <div class="overlay-text">
+      <p>"—Richard Branson
+As the Chief Advisor to Anonymous, Sunando's life and work mantra can be best described by the quote above. Having more than 20 years of experience in Software Consultancy spent mostly on Retail Evolution and OmniChannel, and working with multinationals across the globe, managing teams spanning different territories from USA, Europe, Middle East to South East Asia, Sunando brings to the table his vast and diverse experience in Business Consultancy, BPR, Marketing, Digital Marketing. Having a degree in 'Advanced Program in Marketing Management' from  IIMC, Certificate Course in Marketing in Digital World-- University of Illinois at Urbana-Champaign and being associated as a Member Harvard Square Leaders Excellence, he has led clients beyond traditional marketing into newer arenas of long term brand building through unique creative channels which reach out to virgin territories.
+Sunando has always been a leader who motivates and inspires his team to be creative with passion, to embrace different views and choices, and has helped produce some of the most influential, effective and innovative marketing strategies and business buzz for the clients.</p>
+	<p>Also a founder members of a restaurant chain based in Kolkata, India, his years of experience in handling of client's multifarious demands and evolving newer recipes of success, he has inspired the team members of Anonymous to cook up a storm in the world of digital marketing. As an Advisor to the Anonymous team, he believes firmly that boardroom differences are camaraderie building exercises. Like a gardener he aims to nurture Anonymous as the new budding rose tree, weed out competition and make each brand that the company handles, blossom as the most admired flower in the market.
+</p>      
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="suvadeep-sarkar">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-content">
+      <div class="overlay-header"> Suvadeep Sarkar</div>
+      <div class="overlay-text">
+      <p>Over 20 years of experience in Solution Design, Digital Marketing, Account Management & Cross Country Project Management. Worked in various geographies (South Africa, United Kingdom, Malaysia, Japan, UAE, USA, France) across different business verticals like Banking, Media & Utilities, Travel & Tourism, Hotels, Apparel, Software Products. Worked as project & account manager for over 400 web based projects. Domain expert with sound understanding of internet technologies, UI & UX behaviours & Digital Marketing.</p>      
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="scripts/wow.min.js"></script> 
+<script>
+new WOW().init();
+</script> 
+<script>
+      $(window).load(function(){
+				slider=$('.bxslider').bxSlider({
+				auto: true,
+				preloadImages: 'all',
+				mode: 'horizontal',
+				captions: false,
+				controls: false,
+				pager:true,
+				pause:7000,
+				speed:1000,
+				touchEnabled:false,
+				onSliderLoad: function () {
+						$('.bxslider>li .slide-overlay').eq(1).addClass('active-slide');
+						$(".slide-overlay.active-slide").addClass("wow animated fadeInLeft");
+						$('.bxslider>li .slide-overlay2').eq(1).addClass('active-slide');
+						$(".slide-overlay2.active-slide").addClass("wow animated fadeInRight");
+				},
+				onSlideAfter: function (currentSlideNumber, totalSlideQty, currentSlideHtmlObject) {
+						console.log(currentSlideHtmlObject);
+						$('.active-slide').removeClass('active-slide');
+						$('.bxslider>li .slide-overlay').eq(currentSlideHtmlObject + 1).addClass('active-slide');
+						$(".slide-overlay.active-slide").addClass("animated fadeInLeft");
+						$('.bxslider>li .slide-overlay2').eq(currentSlideHtmlObject + 1).addClass('active-slide');
+						$(".slide-overlay2.active-slide").addClass("animated fadeInRight");
+				
+				},
+				onSlideBefore: function () {
+						$(".slide-overlay.active-slide").removeClass("animated fadeInLeft");
+						$(".slide-overlay.blue-overlay.active-slide").removeAttr('style');
+						$(".slide-overlay2.active-slide").removeClass("animated fadeInRight");
+						$(".slide-overlay2.blue-overlay.active-slide").removeAttr('style');
+				
+				}
+		});
+		$('#slider-next').click(function(){
+			slider.goToNextSlide();
+			return false;
+		});
+		
+		$('#slider-prev').click(function(){
+			slider.goToPrevSlide();
+			return false;
+		});
+			})
+			
+			$(function(){
+				$(".testimonial-img").slick({
+					dots: true,
+					infinite: true,
+					centerMode: true,
+					centerPadding: '0px',
+					arrows: false,
+					slidesToShow: 3,
+					asNavFor: '.testimonail-txtslider',
+					
+				});
+				$('.testimonail-txtslider').slick({
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					arrows: false,
+					fade: true,
+					asNavFor: '.testimonial-img',
+				});
+				
+				$(".clients-imgslider").slick({
+					dots: false,
+					infinite: false,
+					centerMode: false,
+					centerPadding: '0px',
+					arrows: true,
+					slidesToShow: 4,
+					slidesToScroll: 1,
+					responsive: [
+						{
+							breakpoint: 1023,
+							settings: {
+								slidesToShow: 3,
+								slidesToScroll: 1,
+							}
+						},
+						{
+							breakpoint: 600,
+							settings: {
+								slidesToShow: 2,
+								slidesToScroll: 1
+							}
+						},
+						{
+							breakpoint: 480,
+							settings: {
+								slidesToShow: 1,
+								slidesToScroll: 1
+							}
+						}
+					]
+				});
+				
+				
+			})
+
+
+$(function(){
+	
+	$(".testimonial-slider").slick({
+		dots: true,
+		infinite: true,
+		centerMode: false,
+		centerPadding: '0px',
+		arrows: false,
+		autoplay: true,
+		slidesToShow: 1,
+  		slidesToScroll: 1,
+		responsive: [
+					{
+						breakpoint: 767,
+						settings: {
+							slidesToShow: 1,
+						}
+					}
+					// You can unslick at a given breakpoint now by adding:
+					// settings: "unslick"
+					// instead of a settings object
+				]
+		
+	});					
+})
+    </script> 
+<script src="scripts/slick.js" type="text/javascript" charset="utf-8"></script> 
+<script src="scripts/common.js" type="text/javascript"></script>
+</body>
+</html>

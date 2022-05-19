@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Untitled Document</title>
+    <script src='scripts/jquery.min.js'></script>
+</head>
+<body>
+<audio id="myAudio">
+  <source src="music/plywood.ogg" type="audio/ogg">
+  <source src="music/plywood.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<p>Click the buttons to play or pause the audio.</p>
+
+<button onclick="playAudio()" type="button">Play Audio</button>
+<button onclick="pauseAudio()" type="button">Pause Audio</button> 
+
+<script>
+$(document).ready(function () {
+	//alert("hellow")
+	
+	setTimeout(function(){
+		$("#myAudio").trigger("click")
+		playAudio()
+	}, 2000)
+});
+
+
+
+
+var x = document.getElementById("myAudio"); 
+
+function playAudio() { 
+    x.play(); 
+} 
+
+function pauseAudio() { 
+    x.pause(); 
+} 
+</script>
+
+</body>
+</html>

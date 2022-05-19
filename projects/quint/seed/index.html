@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Enter the Quintverse</title>
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="styles/style.css">
+
+</head>
+<body>
+<body>	
+
+	<div class="navigation-wrap start-header start-style loginnavbarbrand">
+		<div class="container">
+			<div class="row">
+				<a class="navbarbrand" href="index.html"><img src="images/logo-small.png" alt=""></a>
+			</div>
+		</div>
+	</div>
+
+	<div class="main-cntr login-banner position-relative">
+		<div class="section full-height">
+			<div class="container">
+				<div class="row full-height">
+					<div class="col-lg-5 col-12 full-height login-form-cntr order2" data-aos="fade-left">
+						<div class="absolute-center">
+							<h2>To Participate in Seed phase of Presale, <a href="javascript:void(0);">Secret Key</a></h2>	
+								<div id="countdown">
+									<div class="counter"><span b="--"></span><b>Days</b></div>
+									<div class="counter"><span b="--"></span><b>Hrs</b></div>
+									<div class="counter"><span b="--"></span><b>Min</b></div>
+									<div class="counter"><span b="--"></span><b>Sec</b></div>
+								</div>
+								<script>
+									let d = new Date('2022-03-24T12:00:00') - new Date();
+									const l = Array.from(document.querySelectorAll('span')).reverse();
+									const s = [1000,60,60,24];
+
+									const vset = (e,t,c) => {
+										const m = c ? t % c : t;
+										e.setAttribute('b', m < 10 ? '0' + m : m);
+										e.classList.remove('ping');
+										setTimeout(() => e.classList.add('ping'), 10);
+										return m;
+									};
+									const calc = (t,i=0,b=0) => {
+										if (!s[i]) return;
+										t = opti(t,s[i]);
+										if (vset(l[i],t,s[i+1])==s[i+1]-1 || b) calc(t,i+1,b);
+									}
+
+									const count = (b=0) => (d -= 1000) && calc(d,0,b);
+									const opti = (v,n) => (v - (v % n)) / n;
+
+									setTimeout(() => !count(1) && setInterval(count, 1000), d % 1000);
+								</script>
+							<div class="row login-form-details">
+								<div class="col-lg-8 col-12 m-auto">
+									<h3>Let's Get Started</h3>
+									<form action="javascript:void(0);" method="post" name="authentication" id="authentication" class="authentication">
+										<div class="row">
+											<div class="col-12 mt-3">
+												<input type="text" name="username" id="username" minlength="3" maxlenth="15" pattern="[a-zA-Z0-9]+" required placeholder="Enter Secret Key">
+											</div>
+											<div class="col-12 mt-5 submitbtn">
+												<input type="submit" id="sub" onclick="Verify();" value="Enter the Quintverse">
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+							<p class="copyright">All rights reserved © QUINT</p>
+						</div>
+					</div>
+					<div class="col-lg-7 col-12 full-height login-banner-text order1" data-aos="fade-right">
+						<div class="absolute-center">
+							<h1>The individual investor should <br>act consistently as an investor <br>and not as a speculator.</h1>
+							<div class="testimonials-details">
+								<span class="client-name">Ben Graham</span>
+								<span class="client-position">Investor</span>
+							</div>
+							<div class="testimonials-svg">
+								<svg xmlns="http://www.w3.org/2000/svg" width="293.227" height="253.321" viewBox="0 0 293.227 253.321">
+									<g id="Quote" transform="translate(0 -34.84)">
+									  <g id="Group_26" data-name="Group 26" transform="translate(0 34.84)">
+										<g id="Group_25" data-name="Group 25">
+										  <path id="Path_48" data-name="Path 48" d="M.062,218.359a69.988,69.988,0,1,0,47.195-65.986C62.965,62.283,133.218,4.185,68.094,52-4.12,105.023-.015,216.226.066,218.264.066,218.3.062,218.324.062,218.359Z" transform="translate(0 -34.84)" fill="rgba(255,255,255,0.1)"/>
+										  <path id="Path_49" data-name="Path 49" d="M268.2,218.359a69.988,69.988,0,1,0,47.194-65.986C331.1,62.283,401.351,4.185,336.226,52c-72.213,53.022-68.109,164.225-68.027,166.264C268.2,218.3,268.2,218.324,268.2,218.359Z" transform="translate(-114.571 -34.84)" fill="rgba(255,255,255,0.1)"/>
+										</g>
+									  </g>
+									</g>
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script  src="script/script.js"></script>
+
+
+<script>
+	
+	function Show(id) {
+		if (document.getElementById(id).style.display == 'none') {
+			document.getElementById(id).style.display = 'block';
+		}
+		else {
+			document.getElementById(id).style.display = 'none';
+		}
+	};
+
+	//Submit Button
+	function Verify() {
+		var userRef = "luxuryparadise";
+
+		var user = document.getElementById("username").value;
+		if (user == userRef ) {
+			//alert("Welcome To Qmeta")
+			window.location = "welcome.html";
+		} else {
+			alert("It's seem you make a mistake...")
+		}
+	};
+</script>
+</body>
+</html>

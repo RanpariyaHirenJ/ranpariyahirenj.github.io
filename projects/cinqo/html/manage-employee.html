@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title>CINQO INDIA: View Employee</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css">
+
+<!-- SmartAdmin Styles : Caution! DO NOT change the order -->
+<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production-plugins.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-skins.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/demo.min.css">
+
+<!-- FAVICONS -->
+<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+<link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+<style>
+.dt-toolbar {
+	display:none;
+}
+</style>
+</head>
+<body class="">
+<aside id="left-panel">
+  <nav>
+    <ul>
+      <li><a href="#" title="Dashboard"><i class=""><img src="images/dashboard.png"></i> <span class="menu-item-parent">Dashboard</span></a></li>
+      <li class="active"><a href="#"><i class=""><img src="images/users.png"></i> <span class="menu-item-parent">My Employees</span></a>
+        <ul>
+          <li class="active"><a href="manage-employee.html">Manage Employee</a></li>
+          <li><a href="allocate-cinqo-credit.html">Allocate Cinqo Credit</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><i class="fa  fa-lg fa-fw fa-inr"></i> <span class="menu-item-parent">CINQO Transactions</span></a>
+        <ul>
+          <li><a href="request-cinqo-money.html">Request Cinqo Money</a></li>
+          <li><a href="view-transactions.html">View Transaction</a></li>
+          <li><a href="empl-transaction.html">Employee Transaction</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><i class="fa  fa-lg fa-fw fa-list-alt"></i> <span class="menu-item-parent">Complaint</span></a>
+        <ul>
+          <li><a href="dispute-initiated-transactions.html">Dispute Initiated Via View Transactions</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><i class="fa  fa-lg fa-fw fa-envelope"></i> <span class="menu-item-parent">support@cinqo.in</span></a></li>
+    </ul>
+  </nav>
+</aside>
+<div id="main" role="main">
+  <div id="ribbon">
+    <ol class="breadcrumb">
+      <li>My Employees | <span>  Manage Employee </span></li>
+      <div class="top-header">
+        <ul>
+          <li>
+            <div class="welcome-msg">Welcome User | <a href="logoin.html">Logout</a></div>
+            </li>
+          <li><a href="index.html"><img src="images/logo.png"></a></li>
+        </ul>
+      </div>
+    </ol>
+  </div>
+  <div id="content">
+    <section id="widget-grid" class="">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="top-btn">
+            <ul>
+              <li><a href="add-employee.html" class="btn" style="margin-left:10px;">Add Employee</a></li>
+              <li><a href="manage-group.html" class="btn btn-primary" style="margin-left:10px;">Group</a></li>
+            </ul>
+          </div>
+          </div>
+        <article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <div class="jarviswidget jarviswidget-color-blueDark" id="wid-id-1" data-widget-editbutton="false">
+            <div>
+              <div class="jarviswidget-editbox"> </div>
+              <div class="widget-body no-padding">
+                <table id="datatable_fixed_column" class="table table-striped table-bordered" width="100%">
+                  <thead>
+                    <tr>
+                      <th class="hasinput" style="width:6%"> <input type="text" class="form-control" placeholder="No" />
+                      </th>
+                      <th class="hasinput" style="width:20%"> <input class="form-control" placeholder="Employee Name" type="text">
+                      </th>
+                      <th class="hasinput" style="width:14%"> <input type="text" class="form-control" placeholder="Employee Id" />
+                      </th>
+                      <th class="hasinput" style="width:14%"> <input type="text" class="form-control" placeholder="Email" />
+                      </th>
+                      <th class="hasinput" style="width:10%"> <input type="text" class="form-control" placeholder="Phone No">
+                      </th>
+                      <th class="hasinput" style="width:13%"> <input type="text" class="form-control" placeholder="Group" />
+                      </th>
+                      <th class="hasinput" style="width:12%"> <input type="text" class="form-control" placeholder="Balance" />
+                      </th>
+                      <th class="hasinput" style="width:23%">&nbsp; </th>
+                    </tr>
+                    <tr>
+                      <th>No</th>
+                      <th>Employee Name</th>
+                      <th>Employee Id</th>
+                      <th>Email</th>
+                      <th>Phone No</th>
+                      <th>Group</th>
+                      <th>Balance</th>
+                      <th style="background:none;cursor: default;">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Stella Vaz</td>
+                      <td>cinqo005</td>
+                      <td>stella.v@cinqo.in</td>
+                      <td>8080776126</td>
+                      <td>Sales Team</td>
+                      <td>1015.13 C</td>
+                      <td><span class="change_status" sts="deactive" name="Stella Vaz" id="44"> <img src="http://zohard.com/cinqo/employer//template/img/green.png" class="icon_size" > </span> <a href="view.html" class="glyphicon glyphicon-eye-open" title="View"></a>&nbsp; <a href="edit.html" class="fa fa-check-square-o" title="Edit"></a>&nbsp; <a href="#" onclick="return ConfirmDelete();" class="glyphicon glyphicon-trash" title="Delete"></a></td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>SMEET MODI</td>
+                      <td>cinqo002</td>
+                      <td>smeet@cinqo.in</td>
+                      <td>9820812884</td>
+                      <td>Top Mgt</td>
+                      <td>117736.00 C</td>
+                      <td><span class="change_status" sts="deactive" name="Stella Vaz" id="44"> <img src="http://zohard.com/cinqo/employer//template/img/green.png" class="icon_size" > </span> <a href="view.html" class="glyphicon glyphicon-eye-open" title="View"></a>&nbsp; <a href="edit.html" class="fa fa-check-square-o" title="Edit"></a>&nbsp; <a href="#" onclick="return ConfirmDelete();" class="glyphicon glyphicon-trash" title="Delete"></a></td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Manali Bhatia</td>
+                      <td>cinqo010</td>
+                      <td>manali.b@cinqo.in</td>
+                      <td>9833033658</td>
+                      <td></td>
+                      <td>0.79 C</td>
+                      <td><span class="change_status" sts="deactive" name="Stella Vaz" id="44"> <img src="http://zohard.com/cinqo/employer//template/img/green.png" class="icon_size" > </span> <a href="view.html" class="glyphicon glyphicon-eye-open" title="View"></a>&nbsp; <a href="edit.html" class="fa fa-check-square-o" title="Edit"></a>&nbsp; <a href="#" onclick="return ConfirmDelete();" class="glyphicon glyphicon-trash" title="Delete"></a></td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Akshata Shinde</td>
+                      <td>cinqo004</td>
+                      <td>akshata.shinde@vervali.com</td>
+                      <td>8097671907</td>
+                      <td></td>
+                      <td>1218.00 C</td>
+                      <td><span class="change_status" sts="deactive" name="Stella Vaz" id="44"> <img src="http://zohard.com/cinqo/employer//template/img/green.png" class="icon_size" > </span> <a href="view.html" class="glyphicon glyphicon-eye-open" title="View"></a>&nbsp; <a href="edit.html" class="fa fa-check-square-o" title="Edit"></a>&nbsp; <a href="#" onclick="return ConfirmDelete();" class="glyphicon glyphicon-trash" title="Delete"></a></td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>Jubin Thomas</td>
+                      <td>cinqo006</td>
+                      <td>jubin@moboxlabs.com</td>
+                      <td>9819339170</td>
+                      <td></td>
+                      <td>0.00 C</td>
+                      <td><span class="change_status" sts="deactive" name="Stella Vaz" id="44"> <img src="http://zohard.com/cinqo/employer//template/img/green.png" class="icon_size" > </span> <a href="view.html" class="glyphicon glyphicon-eye-open" title="View"></a>&nbsp; <a href="edit.html" class="fa fa-check-square-o" title="Edit"></a>&nbsp; <a href="#" onclick="return ConfirmDelete();" class="glyphicon glyphicon-trash" title="Delete"></a></td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>Ankush Gupta</td>
+                      <td>cinqo001</td>
+                      <td>ankush@cinqo.in</td>
+                      <td>9820091347</td>
+                      <td>Top Mgt</td>
+                      <td>220.13 C</td>
+                      <td><span class="change_status" sts="deactive" name="Stella Vaz" id="44"> <img src="http://zohard.com/cinqo/employer//template/img/green.png" class="icon_size" > </span> <a href="view.html" class="glyphicon glyphicon-eye-open" title="View"></a>&nbsp; <a href="edit.html" class="fa fa-check-square-o" title="Edit"></a>&nbsp; <a href="#" onclick="return ConfirmDelete();" class="glyphicon glyphicon-trash" title="Delete"></a></td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td>Ranjit Kumar</td>
+                      <td>cinqo013</td>
+                      <td>ranjit@budh.in</td>
+                      <td>9833192798</td>
+                      <td></td>
+                      <td>0.00 C</td>
+                      <td><span class="change_status" sts="deactive" name="Stella Vaz" id="44"> <img src="http://zohard.com/cinqo/employer//template/img/green.png" class="icon_size" > </span> <a href="view.html" class="glyphicon glyphicon-eye-open" title="View"></a>&nbsp; <a href="edit.html" class="fa fa-check-square-o" title="Edit"></a>&nbsp; <a href="#" onclick="return ConfirmDelete();" class="glyphicon glyphicon-trash" title="Delete"></a></td>
+                    </tr>
+                    <tr>
+                      <td>8</td>
+                      <td>Joseline Rodrigues</td>
+                      <td>cinqo014</td>
+                      <td>joseline.r@cinqo.in</td>
+                      <td>8655376750</td>
+                      <td></td>
+                      <td>56.60 C</td>
+                      <td><span class="change_status" sts="deactive" name="Stella Vaz" id="44"> <img src="http://zohard.com/cinqo/employer//template/img/green.png" class="icon_size" > </span> <a href="view.html" class="glyphicon glyphicon-eye-open" title="View"></a>&nbsp; <a href="edit.html" class="fa fa-check-square-o" title="Edit"></a>&nbsp; <a href="#" onclick="return ConfirmDelete();" class="glyphicon glyphicon-trash" title="Delete"></a></td>
+                    </tr>
+                    <tr>
+                      <td>9</td>
+                      <td>Rahul Choudhary</td>
+                      <td>cinqo23</td>
+                      <td>choudharyrahul1189@gmail.com</td>
+                      <td>9967261547</td>
+                      <td></td>
+                      <td>504.00 C</td>
+                      <td><span class="change_status" sts="deactive" name="Stella Vaz" id="44"> <img src="http://zohard.com/cinqo/employer//template/img/green.png" class="icon_size" > </span> <a href="view.html" class="glyphicon glyphicon-eye-open" title="View"></a>&nbsp; <a href="edit.html" class="fa fa-check-square-o" title="Edit"></a>&nbsp; <a href="#" onclick="return ConfirmDelete();" class="glyphicon glyphicon-trash" title="Delete"></a></td>
+                    </tr>
+                    <tr>
+                      <td>10</td>
+                      <td>Sagar Parit</td>
+                      <td>cinqo017</td>
+                      <td>sagar.p@moboxtech.com</td>
+                      <td>9960499180</td>
+                      <td></td>
+                      <td>0 C</td>
+                      <td><span class="change_status" sts="deactive" name="Stella Vaz" id="44"> <img src="http://zohard.com/cinqo/employer//template/img/green.png" class="icon_size" > </span> <a href="view.html" class="glyphicon glyphicon-eye-open" title="View"></a>&nbsp; <a href="edit.html" class="fa fa-check-square-o" title="Edit"></a>&nbsp; <a href="#" onclick="return ConfirmDelete();" class="glyphicon glyphicon-trash" title="Delete"></a></td>
+                    </tr>
+                    <tr>
+                      <td>11</td>
+                      <td>Sitaram Shenoy</td>
+                      <td>cinqo015</td>
+                      <td>sitaram.s@cinqo.in</td>
+                      <td>9870755804</td>
+                      <td></td>
+                      <td>0 C</td>
+                      <td><span class="change_status" sts="deactive" name="Stella Vaz" id="44"> <img src="http://zohard.com/cinqo/employer//template/img/green.png" class="icon_size" > </span> <a href="view.html" class="glyphicon glyphicon-eye-open" title="View"></a>&nbsp; <a href="edit.html" class="fa fa-check-square-o" title="Edit"></a>&nbsp; <a href="#" onclick="return ConfirmDelete();" class="glyphicon glyphicon-trash" title="Delete"></a></td>
+                    </tr>
+                    <tr>
+                      <td>12</td>
+                      <td>Gaurav Agarwal</td>
+                      <td>cinqo16</td>
+                      <td>g.s.agarwal9@gmail.com</td>
+                      <td>9820133937</td>
+                      <td>Test</td>
+                      <td>190.00 C</td>
+                      <td><span class="change_status" sts="deactive" name="Stella Vaz" id="44"> <img src="http://zohard.com/cinqo/employer//template/img/green.png" class="icon_size" > </span> <a href="view.html" class="glyphicon glyphicon-eye-open" title="View"></a>&nbsp; <a href="edit.html" class="fa fa-check-square-o" title="Edit"></a>&nbsp; <a href="#" onclick="return ConfirmDelete();" class="glyphicon glyphicon-trash" title="Delete"></a></td>
+                    </tr>
+                    <tr>
+                      <td>13</td>
+                      <td>Varsha Krishnani</td>
+                      <td>cinqo015</td>
+                      <td>businesswithvarsha@gmail.com</td>
+                      <td>9819949023</td>
+                      <td></td>
+                      <td>0 C</td>
+                      <td><span class="change_status" sts="deactive" name="Stella Vaz" id="44"> <img src="http://zohard.com/cinqo/employer//template/img/green.png" class="icon_size" > </span> <a href="view.html" class="glyphicon glyphicon-eye-open" title="View"></a>&nbsp; <a href="edit.html" class="fa fa-check-square-o" title="Edit"></a>&nbsp; <a href="#" onclick="return ConfirmDelete();" class="glyphicon glyphicon-trash" title="Delete"></a></td>
+                    </tr>
+                    <tr>
+                      <td>14</td>
+                      <td>Ankush Gupta</td>
+                      <td>cinqo001</td>
+                      <td>ankush@moboxlabs.com</td>
+                      <td>8169246886</td>
+                      <td>Test</td>
+                      <td>0 C</td>
+                      <td><span class="change_status" sts="deactive" name="Stella Vaz" id="44"> <img src="http://zohard.com/cinqo/employer//template/img/green.png" class="icon_size" > </span> <a href="view.html" class="glyphicon glyphicon-eye-open" title="View"></a>&nbsp; <a href="edit.html" class="fa fa-check-square-o" title="Edit"></a>&nbsp; <a href="#" onclick="return ConfirmDelete();" class="glyphicon glyphicon-trash" title="Delete"></a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </div>
+</div>
+<div class="page-footer">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6"> <span class="txt-color-white">CINQO © 2016</span> </div>
+  </div>
+</div>
+<script data-pace-options='{ "restartOnRequestAfter": true }' src="js/plugin/pace/pace.min.js"></script> 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+<script src="js/app.config.js"></script> 
+<script src="js/bootstrap/bootstrap.min.js"></script> 
+<script src="js/app.min.js"></script> 
+
+<!-- PAGE RELATED PLUGIN(S) --> 
+<script src="js/plugin/datatables/jquery.dataTables.min.js"></script> 
+<script src="js/plugin/datatables/dataTables.colVis.min.js"></script> 
+<script src="js/plugin/datatables/dataTables.tableTools.min.js"></script> 
+<script src="js/plugin/datatables/dataTables.bootstrap.min.js"></script> 
+<script src="js/plugin/datatable-responsive/datatables.responsive.min.js"></script> 
+<script type="text/javascript">
+		$(document).ready(function() {
+		    var otable = $('#datatable_fixed_column').DataTable({});
+		    $("#datatable_fixed_column thead th input[type=text]").on( 'keyup change', function () {
+		        otable
+		            .column( $(this).parent().index()+':visible' )
+		            .search( this.value )
+		            .draw();
+		    } );
+		})
+		</script>
+</body>
+</html>

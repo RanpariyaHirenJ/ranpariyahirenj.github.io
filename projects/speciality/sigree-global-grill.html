@@ -1,0 +1,1177 @@
+﻿<!doctype html>
+
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="utf-8">
+<title>Speciality Restaurants LTD.</title>
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<link rel="stylesheet" type="text/css" href="styles/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/slick.css">
+<link rel="stylesheet" type="text/css" href="styles/slick-theme.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link rel="stylesheet" href="styles/jquery-ui.css">
+<script src="scripts/jquery-min.js" type="text/javascript"></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script src="scripts/jquery-ui.js"></script>
+<style>
+body {
+	overflow-x:hidden
+}
+.top-circle-slider {
+	padding:10px 0;
+}
+ @media screen and (min-width: 0) and (max-width: 1024px) {
+ header.header + .top-circle-slider {
+display: flex;
+}
+ .top-circle-slider {
+padding: 5px 0;
+border-top: 1px solid #eee;
+}
+ .mobile-nav-icon {
+margin-top: 26px;
+}
+}
+</style>
+<script>
+
+$(document).ready(function(){
+
+  // Add smooth scrolling to all links
+
+  $("a").on('click', function(event) {
+
+
+
+    // Make sure this.hash has a value before overriding default behavior
+
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+
+      event.preventDefault();
+
+
+
+      // Store hash
+
+      var hash = this.hash;
+
+
+
+      // Using jQuery's animate() method to add smooth page scroll
+
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+
+      $('html, body').animate({
+
+        scrollTop: $(hash).offset().top
+
+      }, 800, function(){
+
+   
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+
+        window.location.hash = hash;
+
+      });
+
+    } // End if
+
+  });
+
+  
+
+  $("#locateid").on('click', function(event) {
+
+  		var value = $("#location").val();
+
+		if(value == 'mumbai.html'){
+
+			overlayBox('mumbai');
+
+		}
+
+		else if(value == 'chennai.html'){
+
+			overlayBox('chennai');
+
+		}
+
+		else if(value == 'bangalore.html'){
+
+			overlayBox('bangalore');
+
+		}
+
+		else if(value == 'kolkata.html'){
+
+			overlayBox('kolkata');
+
+		}
+
+  });
+
+
+
+  
+
+  
+
+$(function() {
+
+  $( ".date" ).datepicker({
+
+	changeMonth: true,
+
+	changeYear: true,
+
+	yearRange: "c-50:c",	 
+
+	dateFormat: "dd/mm/yy"
+
+	
+
+  });
+
+});
+
+});
+
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-143009552-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-143009552-1');
+</script>
+</head>
+
+<body>
+<div class="overlay" id="mumbai" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class='overlay-box'>
+    <div class='content'>
+      <div class='overlay-header'> Mumbai </div>
+      <div class='overlay-content'>
+        <div class="corporate-Office-cntr">
+          <p>8th Floor, Palm Spring, Link Road, Kanchpadha, Malad (W), Mumbai - 400 064.</p>
+        </div>
+        <div class="tel-icon-cntr">
+          <p>022 - 28818844 / +91 9320478309</p>
+        </div>
+        <hr>
+        <div class="corporate-Office-cntr">
+          <p>Ventura , Ist Floor, Central Avenue Road, Hiranandani Business Park, Next to D-Mart, Powai, Mumbai 400076.</p>
+        </div>
+        <div class="tel-icon-cntr">
+          <p>022 - 25708967</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="overlay" id="chennai" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class='overlay-box'>
+    <div class='content'>
+      <div class='overlay-header'> Chennai </div>
+      <div class='overlay-content'>
+        <div class="corporate-Office-cntr">
+          <p>The Spring Hotel, 4th Flr, New No.11, Kodambakkam High Road, Nungambakkam, Chennai 600034</p>
+        </div>
+        <div class="tel-icon-cntr">
+          <p>044 - 42664222 / 28238340</p>
+        </div>
+        <hr>
+        <!--<div class="corporate-Office-cntr">
+          <p>1st Floor, 5/360, Rajiv Gandhi Salai, Okkiyum, Thoraipakkam, Old Mahabalipuram Road, Chennai 600097.</p>
+        </div>
+        <div class="tel-icon-cntr">
+          <p>044 - 43859983 / 43857633</p>
+        </div>-->
+      </div>
+    </div>
+  </div>
+</div>
+<div class="overlay" id="bangalore" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class='overlay-box'>
+    <div class='content'>
+      <div class='overlay-header'> Bangalore </div>
+      <div class='overlay-content'>
+        <div class="corporate-Office-cntr">
+          <p>2nd & 3rd Floor, 5AC -430, 5th A Cross Service Road, Kammanahalli Bangalore, Karnataka - 560043.</p>
+        </div>
+        <div class="tel-icon-cntr">
+          <p>080 - 25451318</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="overlay" id="kolkata" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class='overlay-box'>
+    <div class='content'>
+      <div class='overlay-header'> Kolkata </div>
+      <div class='overlay-content'>
+        <div class="corporate-Office-cntr">
+          <p>1st Floor, Silver Arcade, 5 J.B.S. Halden Avenue, T-1, T-2, (EM Bypass), Kolkata – 700105.</p>
+        </div>
+        <div class="tel-icon-cntr">
+          <p>033 - 22517031</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrapper">
+  <header class="header">
+    <div class="container">
+      <div class="navigation">
+        <div class="logo"> <a href="index.html"><img src="images/logo.png" alt=""></a></div>
+        <div class="login-mblmenu">
+          <div class="mobile-nav-icon">
+            <button class="menu-icon mobil-icon-toggle"> <span>toggle menu</span> </button>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="menubar">
+          <ul>
+            <li> <a href="index.html">Home</a></li>
+            <li> <a href="deliveries.html">Online Delivery</a></li>
+            <li class="hasDropDown"> <a href="javascript:void(0)">About</a>
+              <div class="submenu">
+                <ul class="dropdown-content">
+                  <li class=""><a href="about.html">Our Mission & Vision</a></li>
+                  <li class=""><a href="our-story.html">Our Story</a></li>
+                  <li class=""><a href="our-values.html">Our Values</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="hasDropDown active"> <a href="javascript:void(0)">Brands</a>
+              <div class="submenu">
+                <ul class="dropdown-content">
+                  <li class=""><a href="mainland-china.html">Mainland China</a></li>
+                  <li class=""><a href="oh!-calcutta.html">Oh! Calcutta</a></li>
+                  <li class=""><a href="asia-kitchen-mainland-china.html">Asia Kitchen by Mainland China</a></li>
+                  <li class=""><a href="sigree.html">Sigree</a></li>
+                  <li class="active"><a href="sigree-global-grill.html">Sigree Global Grill</a></li>
+                  <li class=""><a href="spicery.html">Spicery by Sigree</a></li>
+                  <li class=""><a href="jungle-safari.html">Jungle Safari</a></li>
+                  <li class=""><a href="udp.html">Urban Deccan Pub</a></li>
+                  <li class=""><a href="hoppipola.html">Hoppipola</a></li>
+<li class=""><a href="hay.html">Hay</a></li>
+
+<li class=""><a href="episode.html">Episode One</a></li>
+
+                  <li class=""><a href="gong-modern-asian.html">Gong Modern Asian</a></li>
+                  <li class=""><a href="sweet-bengal.html">Sweet Bengal</a></li>
+                  <li class=""><a href="cafe-mezzuna.html">Café Mezzuna</a></li>
+                  <li class=""><a href="flame-grill.html">Flame & Grill</a></li>
+                  <li class=""><a href="haka.html">Haka</a></li>
+                  <li class=""><a href="machaan.html">Machaan</a></li>
+                  <li class=""><a href="dariole.html">Dariole</a></li>
+                  <li class=""><a href="zoodles.html">Zoodles</a></li>
+
+
+                  <li class=""><a href="speciality-catering-services.html">Speciality Catering Services</a></li>
+                </ul>
+              </div>
+            </li>
+            
+            <!--<li> <a href="javascript:void(0)">News</a></li>-->
+            
+            <li class="hasDropDown"> <a href="javascript:void(0)">Corporate</a>
+              <div class="submenu">
+                <ul class="dropdown-content">
+                  <li class=""><a href="guest-book.html">Guest Book/Testimonials</a></li>
+                  <li class=""><a href="awards.html">Awards</a></li>
+                  <li class=""><a href="press.html">Press (year wise)</a></li>
+                  <li class=""><a href="corporate-governance.html">Corporate Governance</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="hasDropDown"> <a href="javascript:void(0)">For Investors</a>
+              <div class="submenu">
+                <ul class="dropdown-content M">
+                  <li class=""><a href="investor-contacts.html">Investor Contacts</a></li>
+                  <li class=""><a href="shareholding-pattern.html">Shareholding Pattern</a></li>
+                  <li class=""><a href="annual-general-meeting.html">Annual General Meeting</a></li>
+                  <li class=""><a href="annual-report.html">Annual Report</a></li>
+                  <li class=""><a href="financial-results.html">Financial Results</a></li>
+                  <li class=""><a href="conference-call-transcripts.html">Conference Call Transcripts</a></li>
+                  <li class=""><a href="unclaimed-dividend.html">Unclaimed Dividend</a></li>
+                  <li class=""><a href="presentation.html">Presentation</a></li>
+                  <li class=""><a href="postal-ballot.html">Postal Ballot</a></li>
+                  <li class=""><a href="policies.html">Policies</a></li>
+                  <li class=""><a href="press-releases.html">Press Releases</a></li>
+                  <li class=""><a href="corporate-governance-report.html">Corporate Governance Report</a></li>
+                  <li class=""><a href="reconciliation-share-capital-audit-report.html">Reconciliation of Share Capital Audit Report</a></li>
+                  <li class=""><a href="statement-investor-complaints.html">Statement of Investor Complaints</a></li>
+                  <li class=""><a href="filing-with-the-stock-exchanges.html">Filing With The Stock Exchanges</a></li>
+                  <li class=""><a href="notice-board-meeting.html">Notice of Board Meeting</a></li>
+                  <li class=""><a href="newspaper-notice-board-meeting.html">Newspaper AD - Notice of Board Meeting</a></li>
+                  <li class=""><a href="outcome-board-meeting.html">Outcome of the Board Meeting</a></li>
+                  <li class=""><a href="composition-board-committees.html">Composition of the Board & Committees</a></li>
+                  <li class=""><a href="compliance-under-regulation.html">Compliance under Regulation 46</a></li>
+                  <li class=""><a href="newspaper-advt-financial-results.html">Newspaper Advt. - Financial Results</a></li>
+                  <li class=""><a href="details-familiarization-programme-imparted-independent-directors.html">Details of Familiarization Programme imparted to Independent Directors</a></li>
+                </ul>
+              </div>
+            </li>
+            <li> <a href="gift-voucher.html">Speciality Gift Vouchers</a></li>
+            <li> <a href="blog.html">Food Blog</a></li>
+            <li class="hasDropDown"> <a href="javascript:void(0)">Contact Us</a>
+              <div class="submenu">
+                <ul class="dropdown-content">
+                  <li class=""><a href="contact.html">Corporate Office</a></li>
+                  <li class=""><a href="franchise-enquiry.html">Franchise Enquiry</a></li>
+                  <li class=""><a href="vendor-registration.html">Vendor Registration</a></li>
+                  <li><a href="customer-feedback.html">Customer Feedback</a></li>
+                  <li class=""><a href="careers.html">Careers</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="search-btn"> <a href="javascript:void(0)"><i></i></a>
+              <div class="search-container">
+                <input type="text" placeholder="Search">
+              </div>
+            </li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </header>
+  <section class="top-circle-slider">
+    <div class="container">
+      <div class="restaurants-logo"><img src="images/sigree-global-grill.png">
+        <p>Sigree Global Grill</p>
+      </div>
+      <div class="login-mblmenu">
+        <div class="mobile-nav-icon">
+          <button class="menu-icon mobil-icon-toggle1"> <span>toggle menu</span> </button>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="restaurants-menu">
+        <ul>
+          <li class="active"> <a href="#about-resturent">About Sigree Global Grill</a></li>
+          <li> <a href="#menu">Menu</a></li>
+          <li> <a href="#chef">Chef</a></li>
+          <li> <a href="#testimonials">Testimonials</a></li>
+          <li> <a href="#awards">Awards</a></li>
+          <li> <a href="#online-reservation">Online Reservation</a></li>
+          <li> <a href="#location-div">Location</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="main-slider commonSpace addSpacing">
+    <div class="mainslider-cntr">
+      <div class="home-banner-slider our-clients-banner">
+        <div class="slider-row banner-1" style="background-image: url(images/brand-banner/Sigree_Global_Grill_Banner.jpg);">
+          <div class="slideContent">
+            <div class="container">
+              <div class="dis-table">
+                <div class="dis-tablecell">
+                  <div class="banner-txt">
+                     <!--<h2 data-animation="fadeInDown" data-delay="1s">Speciality Restaurants</h2>-->
+                    <h3 data-animation="fadeInUp" data-delay="1s">Sigree<span>Global Grill</span></h3>
+                    <div class="more-details"><span class="more-details-tab2">Grills of the world on your platter</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="mainland-china-cntr">
+    <div id="about-resturent" class="com-flot"></div>
+    <div class="container">
+      <div class="mainland-china-inner-cntr">
+        <div class="mainland-china-img"> <img src="images/sigree-global-grill-interiors-img.jpg"> <img src="images/sigree-global-grill-brand-logo.jpg" class="mainland-china-menu-logo"> </div>
+        <div class="mainland-china-writeup">
+          <h2>About</h2>
+          <h1>Sigree Global Grill</h1>
+          <p>Sigree Global Grill brings to you a varied array of multi-cuisines inspired from the Mediterranean, European, Mexican and Indian regions. The extensive and comfortable seating arrangement, the seamless flow of aroma from one table to another will entice you to sit down for a warm lunch. The variety of grills and kebabs on the offer are enough to tempt the strictest of weight watchers to indulge in a pure orgy of flavours. The buffets have become popular motivations to take the family out for that long lazy Sunday lunch over good food and seasoned wine.</p>
+          <p>If your teenage child throws food tantrums, you are safe to hand over the menu with a variety of Malaysian, Mexican, Japanese and American delicacies which would surely confuse and calm all demands and jarred nerves!</p>
+          <p>We are happy to say that our efforts have been received with much love and in spite of being barely a few years old, Global Grill has won the Times Good Food Awards for Best Multi-Cuisine Buffet in Mumbai. A unit of Speciality Restaurants Limited, Sigree Global Grill has spread its branches in the cities of Kolkata, Chennai and Bangalore.</p>
+          <div id="location-div"></div>
+          <div class="cities-outlets">
+            <div class="cities-details"> <span class="number">1</span> <span class="cities">Cities</span> </div>
+            <div class="outlets-details"> <span class="number">2</span> <span class="outlets">Outlets</span> </div>
+          </div>
+          <div class="nearest-loaction-cntr">
+            <div class="nearest-loaction-select">
+              <select id="location">
+                <option>Find Your Nearest Loaction</option>
+                <option value="mumbai.html">Mumbai</option>
+                <!--<option value="chennai.html">Chennai</option>-->
+                <!--<option value="bangalore.html">Bangalore</option>-->
+                <!--<option value="kolkata.html">Kolkata</option>-->
+              </select>
+            </div>
+            <div class="nearest-loaction-btn">
+              <input type="submit" value="LOCATE" id="locateid">
+            </div>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </section>
+  <section class="mainland-china-populer-dishes-cntr">
+    <div id="menu" class="com-flot"></div>
+    <div class="container">
+      <div class="mainlandchina-populerdishes-cntr">
+        <h3>Sigree Global Grill</h3>
+        <h2>Delightful <span>Dishes</span></h2>
+        <!--<div class="download-full-menu"> <a href="pdf/menu/Mainland_China_Menu.pdf" target="_blank">Download Full Menu</a> </div>-->
+        <div class="clear"></div>
+        <div class="populer-dishes-slider">
+          <div class="">
+            <div class="populer-dishes-cntr"> <img src="images/brand-dishs/Sigree_Global_Grill/Aloo_Paratha.jpg">
+              <p>Aloo Paratha</p>
+            </div>
+          </div>
+          <div class="">
+            <div class="populer-dishes-cntr"> <img src="images/brand-dishs/Sigree_Global_Grill/Apple_Jalebi_With_Rabri.jpg">
+              <p>Apple Jalebi With Rabri</p>
+            </div>
+          </div>
+          <div class="">
+            <div class="populer-dishes-cntr"> <img src="images/brand-dishs/Sigree_Global_Grill/Bhatti_Murgh.jpg">
+              <p>Bhatti Murgh</p>
+            </div>
+          </div>
+          <div class="">
+            <div class="populer-dishes-cntr"> <img src="images/brand-dishs/Sigree_Global_Grill/Chowk_Ki_Tikki.jpg">
+              <p>Chowk Ki Tikki</p>
+            </div>
+          </div>
+          <div class="">
+            <div class="populer-dishes-cntr"> <img src="images/brand-dishs/Sigree_Global_Grill/Grilled_Prawns.jpg">
+              <p>Grilled Prawns</p>
+            </div>
+          </div>
+          <div class="">
+            <div class="populer-dishes-cntr"> <img src="images/brand-dishs/Sigree_Global_Grill/Kadhai_Paneer.jpg">
+              <p>Kadhai Paneer</p>
+            </div>
+          </div>
+          <div class="">
+            <div class="populer-dishes-cntr"> <img src="images/brand-dishs/Sigree_Global_Grill/Kosha_Mangsho.jpg">
+              <p>Kosha Mangsho</p>
+            </div>
+          </div>
+          <div class="">
+            <div class="populer-dishes-cntr"> <img src="images/brand-dishs/Sigree_Global_Grill/Mutton_Biryani.jpg">
+              <p>Mutton Biryani</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </section>
+  <section class="main-chef-cntr">
+    <div id="chef" class="com-flot"></div>
+    <div class="container">
+      <div class="main-chef-header">
+        <h3>Sigree Global Grill</h3>
+        <h2>Kitchen <span>Experts</span></h2>
+      </div>
+      <div class="clear"></div>
+      <div class="main-chef-slider wow animated fadeInUp" data-wow-delay="0.10s" data-wow-offset="50">
+        <div class="main-chef-slider-li"> <img src="images/chef-dubey.jpg">
+          <div class="main-chef-details">
+            <h2>Chef Rajesh Dubey</h2>
+            <p>Chief of Cuisine</p>
+          </div>
+        </div>
+        <div class="main-chef-slider-li"> <img src="images/chef-harman.jpg">
+          <div class="main-chef-details">
+            <h2>Chef Harman</h2>
+            <p>Brand Chef</p>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </section>
+  <section class="awards-cntr">
+    <div id="awards" class="com-flot"></div>
+    <div class="container">
+      <div class="awards-content-slider-cntr">
+        <div class="awards-header">
+          <h3>Sigree Global Grill</h3>
+          <h2>Awards</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras orci massa, tristique ut molestie a, fermentum vel ligula. Duis tincidunt erat eget arcu accumsan, hendrerit aliquam ante mattis. Proin eleifend nisl</p>
+        </div>
+        <div class="awards-slider-cntr">
+          <div class="">
+            <div class="awards-images"> <img src="images/awards1.png">
+              <p>Awards Name</p>
+            </div>
+          </div>
+          <div class="">
+            <div class="awards-images"> <img src="images/awards2.png">
+              <p>Awards Name</p>
+            </div>
+          </div>
+          <div class="">
+            <div class="awards-images"> <img src="images/awards3.png">
+              <p>Awards Name</p>
+            </div>
+          </div>
+          <div class="">
+            <div class="awards-images"> <img src="images/awards1.png">
+              <p>Awards Name</p>
+            </div>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </section>
+  <section class="our-clients-cntr">
+    <div id="testimonials" class="com-flot"></div>
+    <div class="container">
+      <h2 class="wow animated fadeInUp" data-wow-delay="0.2s" data-wow-offset="80">Our Guests'</h2>
+      <h3 class="wow animated fadeInDown" data-wow-delay="0.4s" data-wow-offset="80">Review</h3>
+      <div class="our-clientsrs-slider wow animated fadeInUp" data-wow-delay="0.5s" data-wow-offset="50">
+        <div class="our-clients-slider wow animated fadeInDown" data-wow-delay="0.8s" data-wow-offset="80">
+          <div class="our-clients-desc wow animated fadeInUp" data-wow-delay="1.2s" data-wow-offset="80">
+            <div class="our-clients-txt">
+              <div class="our-clients-txtslider">
+                <div class="txt-row-testiminail">
+                  <div class="dis-table">
+                    <div class="dis-tablecell">
+                      <div class="ourclientsPersoninfo">
+                        <h3>SGG, Nungambakkam, Chennai<span>Akhil Mehta</span></h3>
+                        <p>A fad for all food lovers. Sigree Global Grill is the perfect place for a stomach full of experience and an unforgettable buffet. The grilled prawns, seekh kebab and mutton kebabs were just mind blowing! From the succulent mutton curry, chicken, biryani, to a decadent array of desserts, we were just so happy to try it all. The staff was very generous and polite and there was retro music keeping the ambience alive. 
+                          
+                          Definitely Recommended.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="txt-row-testiminail">
+                  <div class="dis-table">
+                    <div class="dis-tablecell">
+                      <div class="ourclientsPersoninfo">
+                        <h3>SGG, Kolkata<span>Sumitabh Rai</span></h3>
+                        <p>Sigree Global Grill is an all time favourite of mine. The grills are sizzling and beautiful in taste and the food – piping delicious. I have had some gala time in many of my visits to Global Grill, be it with my friends or family or even colleagues. <strong>Hats off Anjan Da!</strong></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="txt-row-testiminail">
+                  <div class="dis-table">
+                    <div class="dis-tablecell">
+                      <div class="ourclientsPersoninfo">
+                        <h3>SGG, Kolkata<span>Taran Ahuja</span></h3>
+                        <p>My family members are regulars here, we live in Dubai and visit here annually. This was our 3rd visit here. We were served by Anil and Arijit. <br>
+                          The restaurant offers an amazing variety of vegetarian and non vegetarian dishes, served right at your table. It's great for a big group, giving everyone the choice of their taste. Really nice service, with the manager Surojit also checking in multiple times to make sure everything is to our liking. They made the guest feel important. <br>
+                          Decently elaborate spread for the main course and dessert as well. <br>
+                          The most amazing thing I find is the poster on the bathroom door, where they offer reading glasses, shawl, etc. <br>
+                          A good experience overall! </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="txt-row-testiminail">
+                  <div class="dis-table">
+                    <div class="dis-tablecell">
+                      <div class="ourclientsPersoninfo">
+                        <h3>SGG, Bangalore<span>Ranjith M. Thomas</span></h3>
+                        <p>Nothing would stop you to say that this is the best barbeque buffet, noot only in Kalyan Nagar but also in Bengaluru – one of the flagship brands of Speciality Restaurants. I am fairly regular at their Powai branch in Mumbai. And even in Bangalore, it was a great experience. This shows how consistent they are with their offerings. I visited them during their Bengali Food Festival and it was a refreshing change to their original menu and palette. Wow!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="txt-row-testiminail">
+                  <div class="dis-table">
+                    <div class="dis-tablecell">
+                      <div class="ourclientsPersoninfo">
+                        <h3>SGG, Malad, Mumbai<span>Mayur Arora</span></h3>
+                        <p>If you love eating like there is no tomorrow, then this is a place for you. One of the finest of all the BBQ's in town, I feel! The food is always fresh and well cooked. The Tandoori items on the menu are never burnt and tastes authentic. <br>
+                          My advice to all hoggers would be to not hog on to the starters all at once and keep a balance between grills, mains and desserts because you  would want to try out a little of everything!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="txt-row-testiminail">
+                  <div class="dis-table">
+                    <div class="dis-tablecell">
+                      <div class="ourclientsPersoninfo">
+                        <h3>SGG, Powai, Mumbai<span>Kiara</span></h3>
+                        <p>This is just the kind of place where you wish to come for a hearty dinner post work. <br>
+                          With numerous options to eat, there is no way you'll be able to avoid trying at least a little from everything. Their serve too is very prompt and worth every penny you spend.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="reservation-cntr">
+    <div id="online-reservation" class="com-flot"></div>
+    <div class="container">
+      <h2>Reservation</h2>
+      <h3>Sigree Global Grill</h3>
+      <div class="book-table-cntr"> <img src="images/sigree-global-grill.png">
+        <div class="form-row animate-label">
+          <div class="form-field">
+            <div class="grid-6">
+              <div class="input-group">
+                <label>Name</label>
+                <input type="text" title="Name" validation="text" class="inputType">
+                <div class="error-msg"></div>
+              </div>
+            </div>
+            <div class="grid-3">
+              <div class="input-group bglabel">
+                <label>Hours</label>
+                <div class="input-type-select inputType">
+                  <select title="Hours">
+                    <option>Select Time</option>
+                    <option>12:30 PM</option>
+                    <option>01:00 PM</option>
+                    <option>01:30 PM</option>
+                    <option>02:00 PM</option>
+                    <option>02:30 PM</option>
+                    <option>03:00 PM</option>
+                    <option>03:30 PM</option>
+                    <option>07:00 PM</option>
+                    <option>07:30 PM</option>
+                    <option>08:00 PM</option>
+                    <option>08:30 PM</option>
+                    <option>09:00 PM</option>
+                    <option>09:30 PM</option>
+                    <option>10:00 PM</option>
+                    <option>10:30 PM</option>
+                    <option>11:00 PM</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="grid-3">
+              <div class="input-group bglabel">
+                <label>Number of People</label>
+                <input type="text"  title="Number of People" validation="text" class="inputType" >
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <div class="form-row animate-label">
+          <div class="form-field">
+            <div class="grid-6">
+              <div class="input-group">
+                <label>Pick a date</label>
+                <input type="text" title="Pick a date" validation="text" class="inputType date-icon date">
+                <div class="error-msg"></div>
+              </div>
+            </div>
+            <div class="grid-6">
+              <div class="input-group">
+                <label>Phone Number</label>
+                <input type="text" title="Phone Number" validation="text" class="inputType mob-icon">
+                <div class="error-msg"></div>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <div class="form-row animate-label">
+          <div class="form-field">
+            <div class="grid-6">
+              <div class="input-group bglabel">
+                <label>Suggestion / Feedback</label>
+                <input type="text"  title="Suggestion / Feedback" validation="text" class="inputType">
+              </div>
+            </div>
+            <div class="grid-6 text-right submit-btn">
+              <input type="submit" value="BOOK A TABLE">
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </section>
+  <footer class="footer">
+    <section class="footerinks">
+      <div class="container">
+        <div class="footerbox">
+          <div class="footerCols">
+            <div class="footerlogo"> <img src="images/footer-logo.png" width="96"> </div>
+          </div>
+          <div class="footerCols">
+            <dl>
+              <dt>
+                <h2>About Us</h2>
+              </dt>
+              <dd>
+                <ul>
+                  <li><a href="about.html">Our Mission & Vision</a></li>
+                  <li><a href="our-story.html">Our Story</a></li>
+                  <li><a href="our-values.html">Our Values</a></li>
+                </ul>
+              </dd>
+            </dl>
+          </div>
+          <div class="footerCols">
+            <dl>
+              <dt>
+                <h2>Corporate</h2>
+              </dt>
+              <dd>
+                <ul>
+                  <li><a href="guest-book.html">Guest Book/Testimonials</a></li>
+                  <li><a href="awards.html">Awards</a></li>
+                  <li><a href="press.html">Press (Year Wise)</a></li>
+                  <li><a href="corporate-governance.html">Corporate Governance</a></li>
+                </ul>
+              </dd>
+            </dl>
+          </div>
+          <div class="footerCols">
+            <dl>
+              <dt>
+                <h2>Contact Us</h2>
+              </dt>
+              <dd>
+                <ul>
+                  <li><a href="contact.html">Corporate Office</a></li>
+                  <li><a href="franchise-enquiry.html">Franchise Enquiry</a></li>
+                  <li><a href="vendor-registration.html">Vendor Registration</a></li>
+                  <li><a href="customer-feedback.html">Customer Feedback</a></li>
+                  <li><a href="careers.html">Careers</a></li>
+                </ul>
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footerCopy">
+      <div class="container">
+        <div class="copyRytbox">
+          <div class="copyTxt">Copyright <script>document.write(new Date().getFullYear());</script>. All Rights Reserved.</div>
+          <div class="socialBox">
+            <div class="socailicons"> <a href="#" target="_blank"><img src="images/fb.png"></a> <a href="#" target="_blank"><img src="images/twitter.png"></a> <a href="#" target="_blank"><img src="images/insta.png"></a> </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+</div>
+<script src="scripts/js_class.js" type="text/javascript"></script> 
+<script src="scripts/common.js" type="text/javascript"></script> 
+<script src="scripts/jquery.fancybox.min.js" type="text/javascript"></script> 
+<script src="scripts/parallax.min.js" type="text/javascript"></script> 
+<script src="scripts/wow.min.js"></script> 
+<script>
+
+    new WOW().init();
+
+</script> 
+<script src="scripts/slick-min.js"></script> 
+<script>
+
+$(window).load(function() {
+
+					
+
+	$('.slider').on('init', function(e, slick) {
+
+        var $firstAnimatingElements = $('div.slider-row:first-child').find('[data-animation]');
+
+        doAnimations($firstAnimatingElements);    
+
+    });
+
+    $('.slider').on('beforeChange', function(e, slick, currentSlide, nextSlide) {
+
+	  var $animatingElements = $('div.slider-row[data-slick-index="' + nextSlide + '"]').find('[data-animation]');
+
+	  doAnimations($animatingElements);    
+
+    });
+
+    $('.home-banner-slider').slick({
+
+       autoplay: false,
+
+		arrows:false,
+
+		speed: 2000,
+
+        autoplaySpeed: 5000,
+
+       	dots: true,
+
+       	fade: true,
+
+		pauseOnHover:false
+
+    });
+
+    function doAnimations(elements) {
+
+        var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+
+        elements.each(function() {
+
+            var $this = $(this);
+
+            var $animationDelay = $this.data('delay');
+
+            var $animationType = 'animated ' + $this.data('animation');
+
+            $this.css({
+
+                'animation-delay': $animationDelay,
+
+                '-webkit-animation-delay': $animationDelay
+
+            });
+
+            $this.addClass($animationType).one(animationEndEvents, function() {
+
+                $this.removeClass($animationType);
+
+            });
+
+        });
+
+    };
+
+	
+
+$('.top-slider').slick({
+
+	autoplay: true,
+
+	arrows: true,
+
+	infinite: true,
+
+	speed: 500,
+
+	autoplaySpeed: 3000,
+
+	variableWidth: true,
+
+	slidesToShow: 11,
+
+	slidesToScroll: 1,
+
+	dots: false,
+
+	pauseOnHover: true,
+
+	responsive: [
+
+		{
+
+			breakpoint: 980,
+
+			settings: {
+
+				slidesToShow: 3,
+
+				slidesToScroll: 1,
+
+			}
+
+		},
+
+		{
+
+			breakpoint: 600,
+
+			settings: {
+
+				slidesToShow: 1,
+
+				slidesToScroll: 1
+
+			}
+
+		},
+
+		{
+
+			breakpoint: 480,
+
+			settings: {
+
+				slidesToShow: 1,
+
+				slidesToScroll: 1
+
+			}
+
+		}
+
+	]
+
+});
+
+
+
+	$('.populer-dishes-slider').slick({
+
+		autoplay: false,
+
+		arrows: false,
+
+		infinite: true,
+
+		speed: 500,
+
+		autoplaySpeed: 3000,
+
+		variableWidth: true,
+
+		slidesToShow: 4,
+
+		slidesToScroll: 1,
+
+		dots: true,
+
+		pauseOnHover: true,
+
+		responsive: [
+
+			{
+
+				breakpoint: 980,
+
+				settings: {
+
+					slidesToShow: 3,
+
+					slidesToScroll: 1,
+
+				}
+
+			},
+
+			{
+
+				breakpoint: 600,
+
+				settings: {
+
+					slidesToShow: 1,
+
+					slidesToScroll: 1
+
+				}
+
+			},
+
+			{
+
+				breakpoint: 480,
+
+				settings: {
+
+					slidesToShow: 1,
+
+					slidesToScroll: 1
+
+				}
+
+			}
+
+		]
+
+	});
+
+	
+
+	/*$('.main-chef-slider').slick({
+
+		autoplay: true,
+
+		arrows: false,
+
+		infinite: true,
+
+		speed: 500,
+
+		autoplaySpeed: 3000,
+
+		variableWidth: true,
+
+		slidesToShow: 3,
+
+		slidesToScroll: 3,
+
+		dots: true,
+
+		pauseOnHover: true,
+
+		responsive: [
+
+			{
+
+				breakpoint: 980,
+
+				settings: {
+
+					slidesToShow: 3,
+
+					slidesToScroll: 1,
+
+				}
+
+			},
+
+			{
+
+				breakpoint: 600,
+
+				settings: {
+
+					slidesToShow: 1,
+
+					slidesToScroll: 1
+
+				}
+
+			},
+
+			{
+
+				breakpoint: 480,
+
+				settings: {
+
+					slidesToShow: 1,
+
+					slidesToScroll: 1
+
+				}
+
+			}
+
+		]
+
+	});*/
+
+	
+
+	$('.awards-slider-cntr').slick({
+
+		autoplay: false,
+
+		arrows: false,
+
+		infinite: true,
+
+		speed: 500,
+
+		autoplaySpeed: 3000,
+
+		variableWidth: true,
+
+		slidesToShow: 3,
+
+		slidesToScroll: 1,
+
+		dots: true,
+
+		pauseOnHover: true,
+
+		responsive: [
+
+			{
+
+				breakpoint: 980,
+
+				settings: {
+
+					slidesToShow: 3,
+
+					slidesToScroll: 1,
+
+				}
+
+			},
+
+			{
+
+				breakpoint: 600,
+
+				settings: {
+
+					slidesToShow: 1,
+
+					slidesToScroll: 1
+
+				}
+
+			},
+
+			{
+
+				breakpoint: 480,
+
+				settings: {
+
+					slidesToShow: 1,
+
+					slidesToScroll: 1
+
+				}
+
+			}
+
+		]
+
+	});
+
+})
+
+
+
+
+
+	
+
+			$(function(){
+$('.our-clients-txtslider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		infinite: true,
+		arrows: false,
+		dots: true,
+		fade: true,
+	});
+})
+
+    </script>
+</body>
+</html>

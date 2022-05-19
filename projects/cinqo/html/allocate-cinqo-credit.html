@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+    <title> CINQO INDIA: Allocate Credit </title>
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css">
+
+<!-- SmartAdmin Styles : Caution! DO NOT change the order -->
+<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production-plugins.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-skins.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/demo.min.css">
+
+<!-- FAVICONS -->
+<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+<link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<style>
+.dt-toolbar {
+	display:none;
+}
+.animate-label .smart-form fieldset {
+    padding: 0px 14px 0px;
+}
+</style>
+<script>
+$(document).ready(function() {
+	
+    $('.animate-label .input-group').click(function () {
+        if ($(this).find('select').size() > 0) {
+        } else {
+            $(this).find('input').focus();
+            $(this).find('label').addClass('active');
+
+        }
+        if ($(this).find('.custom-select-options,.custom-selct-bg').size() > 0) {
+            $(this).find('.custom-select-options,.custom-selct-bg').fadeIn();
+        }
+
+    });
+    $('.animate-label .input-group input,.animate-label .input-group textarea').blur(function () {
+        if (this.value.length > 0) {
+            return false;
+        }
+        else {
+            $(this).prev('label').removeClass('active');
+        }
+    });
+
+    $('.input-group').on('focus', 'input, select, textarea', function () {
+        $(this).prev('label').addClass('active');
+    });
+
+    $('.input-group textarea, .input-group input,.input-group select').each(function () {
+        if (this.value.length > 0) {
+            var div = $(this).prev('label').addClass('active');
+        }
+    });
+    $('.input-group').click(function () {
+        $(this).find('input').focus();
+        $(this).find('label').addClass('active');
+    });
+    /*Animate label form*/
+	
+})
+
+</script>
+</head>
+<body class="">
+<aside id="left-panel">
+  <nav>
+    <ul>
+      <li><a href="#" title="Dashboard"><i class=""><img src="images/dashboard.png"></i> <span class="menu-item-parent">Dashboard</span></a></li>
+      <li class="active"><a href="#"><i class=""><img src="images/users.png"></i> <span class="menu-item-parent">My Employees</span></a>
+        <ul>
+          <li><a href="manage-employee.html">Manage Employee</a></li>
+          <li class="active"><a href="allocate-cinqo-credit.html">Allocate Cinqo Credit</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><i class="fa  fa-lg fa-fw fa-inr"></i> <span class="menu-item-parent">CINQO Transactions</span></a>
+        <ul>
+          <li><a href="request-cinqo-money.html">Request Cinqo Money</a></li>
+          <li><a href="view-transactions.html">View Transaction</a></li>
+          <li><a href="empl-transaction.html">Employee Transaction</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><i class="fa  fa-lg fa-fw fa-list-alt"></i> <span class="menu-item-parent">Complaint</span></a>
+        <ul>
+          <li><a href="dispute-initiated-transactions.html">Dispute Initiated Via View Transactions</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><i class="fa  fa-lg fa-fw fa-envelope"></i> <span class="menu-item-parent">support@cinqo.in</span></a></li>
+    </ul>
+  </nav>
+</aside>
+<div id="main" role="main">
+  <div id="ribbon">
+    <ol class="breadcrumb">
+      <li>My Employees | <span>  Allocate Cinqo Credit </span></li>
+      <div class="top-header">
+        <ul>
+          <li>
+            <div class="welcome-msg">Welcome User | <a href="logoin.html">Logout</a></div>
+            </li>
+          <li><a href="index.html"><img src="images/logo.png"></a></li>
+        </ul>
+      </div>
+    </ol>
+  </div>
+  <div id="content">
+        <div class="jarviswidget" id="wid-id-6" data-widget-editbutton="false" data-widget-custombutton="false">
+          <div> 
+            <div class="widget-body no-padding animate-label">
+              <form action="" method="post" name="add_credit" id="add_credit" class="smart-form" enctype="multipart/form-data" autocomplete="off" novalidate="novalidate">
+                <header>Tenure <span class="danger">*</span></header>
+                <fieldset>
+                  <div class="row">
+                    <section class="col col-2">
+                      <label class="radio">
+                        <input type="radio" name="tenure" checked="checked" id="tenure1" value="monthly">
+                        <i></i>Monthly
+                        <input type="hidden" name="date_check" id="date_check" value="">
+                      </label>
+                    </section>
+                    <section class="col col-2">
+                      <label class="radio">
+                        <input type="radio" name="tenure" id="tenure2" value="quarterly">
+                        <i></i>Quarterly </label>
+                    </section>
+                    <section class="col col-2">
+                      <label class="radio">
+                        <input type="radio" name="tenure" id="tenure3" value="half_yearly">
+                        <i></i>Half Yearly </label>
+                    </section>
+                    <section class="col col-2">
+                      <label class="radio">
+                        <input type="radio" name="tenure" id="tenure4" value="yearly">
+                        <i></i>Yearly </label>
+                    </section>
+                    
+                  </div>
+                  <div class="row">
+                    <section class="col col-3 date">
+                      <div class="input-group">
+                  <label class="label active">Payment Period start date</label>
+                        <input type="text" name="start_date" id="start_date" placeholder="Expected start date" value="2017-06-14" class="form-control datepicker" data-dateformat="yy-mm-dd">
+                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span> </div>
+                    </section>
+                    <section class="col col-3 date">
+                      <div class="input-group">
+                  		<label class="label active">Payment Period end date</label>
+                        <input type="text" name="end_date" readonly="" id="end_date" placeholder="Expected end date"  value="2017-07-16" class="form-control" data-dateformat="yy-mm-dd">
+                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span> </div>
+                    </section>
+                  </div>
+                </fieldset>
+                <header>Allocate To <span class="danger">*</span></header>
+                <fieldset>
+                  <section>
+                    <div class="row">
+                      <section class="col col-2" style="margin-top:0px;">
+                        <label class="radio">
+                          <input type="radio" name="allocate_fund" checked="checked" id="allocate_fund1" value="employee">
+                          <i></i>Employee </label>
+                      </section>
+                      <section class="col col-2" style="margin-top:0px;">
+                        <label class="radio">
+                          <input type="radio" name="allocate_fund" id="allocate_fund2" value="group">
+                          <i></i>Group </label>
+                      </section>
+                    </div>
+                    <div class="row" id="employee_section" style="margin-top:15px;">
+                      <section class="col col-4" style="margin:0px;">
+                  <div class="input-group">
+                        <label class="label">Select Employee <span class="danger">*</span></label>
+                        <div class="select"> <i class="icon-append fa fa-building"></i>
+                          <select name="employee" id="employee" required="">
+                            <option value=""></option>
+                            <option value="SMEET MODI&amp;&amp;51">cinqo002&nbsp;&nbsp;&nbsp;&nbsp;SMEET MODI&nbsp;&nbsp;&nbsp;&nbsp;&lt; 9820812884 &gt;</option>
+                            <option value="Manali Bhatia&amp;&amp;54">cinqo010&nbsp;&nbsp;&nbsp;&nbsp;Manali Bhatia&nbsp;&nbsp;&nbsp;&nbsp;&lt; 9833033658 &gt;</option>
+                            <option value="Akshata Shinde&amp;&amp;55">cinqo004&nbsp;&nbsp;&nbsp;&nbsp;Akshata Shinde&nbsp;&nbsp;&nbsp;&nbsp;&lt; 8097671907 &gt;</option>
+                            <option value="Jubin Thomas&amp;&amp;61">cinqo006&nbsp;&nbsp;&nbsp;&nbsp;Jubin Thomas&nbsp;&nbsp;&nbsp;&nbsp;&lt; 9819339170 &gt;</option>
+                            <option value="Ankush Gupta&amp;&amp;64">cinqo001&nbsp;&nbsp;&nbsp;&nbsp;Ankush Gupta&nbsp;&nbsp;&nbsp;&nbsp;&lt; 9820091347 &gt;</option>
+                            <option value="Ranjit Kumar&amp;&amp;133">cinqo013&nbsp;&nbsp;&nbsp;&nbsp;Ranjit Kumar&nbsp;&nbsp;&nbsp;&nbsp;&lt; 9833192798 &gt;</option>
+                            <option value="Joseline Rodrigues&amp;&amp;134">cinqo014&nbsp;&nbsp;&nbsp;&nbsp;Joseline Rodrigues&nbsp;&nbsp;&nbsp;&nbsp;&lt; 8655376750 &gt;</option>
+                            <option value="Rahul Choudhary&amp;&amp;136">cinqo23&nbsp;&nbsp;&nbsp;&nbsp;Rahul Choudhary&nbsp;&nbsp;&nbsp;&nbsp;&lt; 9967261547 &gt;</option>
+                            <option value="Sagar Parit&amp;&amp;138">cinqo017&nbsp;&nbsp;&nbsp;&nbsp;Sagar Parit&nbsp;&nbsp;&nbsp;&nbsp;&lt; 9960499180 &gt;</option>
+                            <option value="Sitaram Shenoy&amp;&amp;185">cinqo015&nbsp;&nbsp;&nbsp;&nbsp;Sitaram Shenoy&nbsp;&nbsp;&nbsp;&nbsp;&lt; 9870755804 &gt;</option>
+                            <option value="Gaurav Agarwal&amp;&amp;510">cinqo16&nbsp;&nbsp;&nbsp;&nbsp;Gaurav Agarwal&nbsp;&nbsp;&nbsp;&nbsp;&lt; 9820133937 &gt;</option>
+                            <option value="Varsha Krishnani&amp;&amp;780">cinqo015&nbsp;&nbsp;&nbsp;&nbsp;Varsha Krishnani&nbsp;&nbsp;&nbsp;&nbsp;&lt; 9819949023 &gt;</option>
+                            <option value="Ankush Gupta&amp;&amp;804">001&nbsp;&nbsp;&nbsp;&nbsp;Ankush Gupta&nbsp;&nbsp;&nbsp;&nbsp;&lt; 8169246886 &gt;</option>
+                            <option value="Bhavesh Patel&amp;&amp;905">JESAL001&nbsp;&nbsp;&nbsp;&nbsp;Bhavesh Patel&nbsp;&nbsp;&nbsp;&nbsp;&lt; 9702942432 &gt;</option>
+                          </select>
+                          <i></i> </div>
+                          </div>
+                      </section>
+                    </div>
+                    <div class="row" id="group_section" style="display:none">
+                      <section class="col col-4">
+                        <label class="label">Group <span class="danger">*</span></label>
+                        <label class="select"> <i class="icon-append fa fa-building"></i>
+                          <select name="group" id="group" required="">
+                            <option value="" data-val="0">Select Group</option>
+                            <option value="Top Mgt&amp;&amp;16" group_id="16" data-val="16">Top Mgt</option>
+                            <option value="Sales Team&amp;&amp;19" group_id="19" data-val="19">Sales Team</option>
+                            <option value="Test&amp;&amp;105" group_id="105" data-val="105">Test</option>
+                          </select>
+                          <i></i> </label>
+                      </section>
+                    </div>
+                  </section>
+                </fieldset>
+                <header>Specify Amount <span class="danger">*</span><div class="small">(Only allocate multiples of 50)</div></header>
+                <fieldset>
+                  <div class="row">
+                    <section class="col col-2">
+                      <label class="input">
+                        <input type="number" name="assign_amount" value="" id="assign_amount">
+                      </label>
+                    </section>
+                    <section class="col col-2 multiples_amt"> X <span id="emp_count">0</span> = <span id="tot_amt"> 0.00</span> </section>
+                  </div>
+                  <div class="row">
+                    <section class="col col-3">
+                      <label><b> Current Balance</b>:</label>
+                      <span style="font-weight: bold;font-size: 18px;"> 6760 C</span>
+                      <input type="hidden" name="current_balance" id="current_balance" value="6760.00">
+                    </section>
+                    <section class="col col-3">
+                      <label> <b>Remaining Balance</b>:</label>
+                      <span id="remaining_balance" style="font-weight: bold;font-size: 18px;"> 0 C</span> </section>
+                    <section class="col col-3"> <span id="balance_error" style="color:red"></span> </section>
+                  </div>
+                </fieldset>
+                <div class="" style="text-align:center;">
+                  <button type="submit" name="submit" id="submit" class="btn btn-primary big-sub-btn"> Allocate Funds </button>
+                </div>
+                <div class="message"> <i class="fa fa-check fa-lg"></i>
+                  <p> Your comment was successfully added! </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+<div class="page-footer">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6"> <span class="txt-color-white">CINQO © 2016</span> </div>
+  </div>
+</div>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+		<script src="js/app.config.js"></script>
+		<script src="js/bootstrap/bootstrap.min.js"></script>
+		<script src="js/app.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function() {pageSetUp();})
+		</script>
+
+</body>
+</html>

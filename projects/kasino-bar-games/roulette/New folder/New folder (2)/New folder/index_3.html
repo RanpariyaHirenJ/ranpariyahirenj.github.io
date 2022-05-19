@@ -1,0 +1,352 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="UTF-8">
+    <title>Welcome to Kasino Bar</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <!--<link rel="stylesheet" href="styles/loader.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="styles/animate.css">-->
+    <script src='scripts/jquery.min.js'></script>
+    <script>
+        // Find the right method, call on correct element
+        function launchFullscreen(element) {
+            if (element.requestFullscreen) {
+                element.requestFullscreen();
+            } else if (element.mozRequestFullScreen) {
+                element.mozRequestFullScreen();
+            } else if (element.webkitRequestFullscreen) {
+                element.webkitRequestFullscreen();
+            } else if (element.msRequestFullscreen) {
+                element.msRequestFullscreen();
+            }
+        }
+
+        function exitFullscreen() {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+            } else if (document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            }
+        }
+
+        function dumpFullscreen() {
+            console.log("document.fullscreenElement is: ", document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement);
+            console.log("document.fullscreenEnabled is: ", document.fullscreenEnabled || document.mozFullScreenEnabled || document.webkitFullscreenEnabled || document.msFullscreenEnabled);
+        }
+
+        // Events
+        document.addEventListener("fullscreenchange", function (e) {
+            console.log("fullscreenchange event! ", e);
+        });
+        document.addEventListener("mozfullscreenchange", function (e) {
+            console.log("mozfullscreenchange event! ", e);
+        });
+        document.addEventListener("webkitfullscreenchange", function (e) {
+            console.log("webkitfullscreenchange event! ", e);
+        });
+        document.addEventListener("msfullscreenchange", function (e) {
+            console.log("msfullscreenchange event! ", e);
+        });
+
+        // Add different events for fullscreen
+    </script>
+
+    <!--<input type="button" onclick="launchFullscreen(document.documentElement)" class="Fullscreen" value="Launch Fullscreen" />-->
+
+    <script>
+        $(document).ready(function () {
+
+            //launchFullscreen(document.documentElement);
+
+            //setTimeout(function () {
+            //    $('.Fullscreen').trigger('click')
+            //}, 5000);
+
+            //setTimeout(function () {
+            //    var deadline = new Date(Date.parse(new Date()) + 1 * 60 * 60 * 60 * 1000);
+            //    initializeClock('clockdiv', deadline);
+            //}, 4600)
+
+            //setTimeout(function () {
+            //    $('.roulette-cntr').addClass('fadeInUp');
+            //    $('.covercharge-cntr').addClass('fadeInUp');
+            //    $('.countdown-cntr').addClass('animated1').addClass('slideInUp');
+            //    $('.client-name').addClass('animated3').addClass('fadeIn');
+            //}, 4400)
+                        
+            $('.spinner, #btnSpin, .roulette-cntr, .covercharge-cntr, .countdown-cntr, .client-name').hide()
+
+            setTimeout(function () {                
+                $('.spinner').fadeIn('slow');
+                $('.spinner').addClass('fadeIn');
+                
+                setTimeout(function() {
+                    //overlayBox('offer')
+
+                    $('#offer .overlay-box, .overlay#offer:eq(0)').fadeIn(2000).css({ opacity: 0.0, visibility: "visible" }, 2000).animate({ opacity: 1.0 }, 2000);
+
+                    var deadline = new Date(Date.parse(new Date()) + 1 * 60 * 60 * 60 * 1000);
+                    initializeClock('clockdiv', deadline);
+
+                    setTimeout(function () {
+                        $('.roulette-cntr, .covercharge-cntr, .countdown-cntr, .client-name').show()
+                        $('.roulette-cntr').addClass('fadeInUp');
+                        $('.covercharge-cntr').addClass('fadeInUp');
+                        $('.countdown-cntr').addClass('animated1').addClass('slideInUp');
+                        $('.client-name').addClass('animated3').addClass('fadeIn');
+                    }, 1000)
+
+                },2500)
+
+            },4500)            
+                        
+            var win_hight = $(window).height();
+            var spinner_hight = $(".spinner").height();
+            var main_height = (win_hight - spinner_hight) / 6;
+            $(".spinner").css("margin-top", main_height)
+
+            //alert(spinner_hight)
+            //overlayBox('offer')
+
+            $('.winner-btn').click(function () {
+                $("#bgvid").css("display", "block");
+                $(".main-container").css("display", "none");
+                $(".spin-btn").css("display", "none");
+            });
+
+            function getTimeRemaining(endtime) {
+                var t = Date.parse(endtime) - Date.parse(new Date());
+                var seconds = Math.floor((t / 1000) % 10);
+                // var minutes = Math.floor((t / 1000 / 60) % 1);
+                return {
+                    'total': t,
+                    // 'minutes': minutes,
+                    'seconds': seconds
+                };
+            }
+            var i = 0;
+
+            function initializeClock(id, endtime) {
+                var clock = document.getElementById(id);
+                // var minutesSpan = clock.querySelector('.minutes');
+                var secondsSpan = clock.querySelector('.seconds');
+
+                function updateClock() {
+                    var t = getTimeRemaining(endtime);
+
+                    // minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+                    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+                    //if (t.total <= 0) {
+                    //    clearInterval(timeinterval);
+                    //}
+
+                    if (i != 0) {
+                        if (/*t.minutes <= 0 &&*/ t.seconds <= 0) {
+                            // Hide Overlay
+                            //$('.overlay').find('.overlay-box').removeClass('animated').removeClass(animationIn).addClass('animated ' + animationOut);
+                            //$('body .overlay-bg').fadeOut(1000, function () {
+                            //    $('.overlay-box').find('.overlay-content').hide();
+                            //    $('.overlay').css('visibility', 'hidden').find('.overlay-box').removeClass('animated').removeClass(animationIn).removeClass(animationOut);
+                            //});
+
+                            //$('.overlay').find('#offer .overlay-box').removeClass('animated').removeClass(animationIn).removeClass(animationOut);
+                            //$('#offer .overlay-box').fadeOut("1500");
+                            ////$('body .overlay-bg,.overlay-box,.overlay').fadeOut("3500");
+                            //$('body .overlay-bg,.overlay').fadeOut(5000);
+
+                            $('.roulette-cntr').removeClass('fadeInUp').removeClass('animated').addClass('fadeOutUp').addClass('animated1');
+                            $('.covercharge-cntr').removeClass('fadeInUp').removeClass('animated').addClass('fadeOutUp').addClass('animated1');
+                            $('.countdown-cntr').removeClass('animated2').removeClass('slideInUp').addClass('animated1').addClass('fadeOutDown');
+                            //$('.client-name').removeClass('zoomIn').addClass('zoomOut');
+
+                            $('.client-name').removeClass('animated3').removeClass('fadeIn').addClass('animated1').addClass('fadeOut');
+
+                            setTimeout(function myfunction() {
+                                $('body .overlay-bg, .overlay').fadeOut(250);
+                                //$('.spinner').addClass('animated').addClass('bounceIn');
+                            }, 850)
+
+                            setTimeout(function myfunction() {
+                                $('.spinner').addClass('animated').addClass('bounceIn');
+                            }, 950)
+
+                            $('#btnSpin').fadeIn('slow');
+
+                            // Clear interval
+                            clearInterval(timeinterval);
+                        }
+                    }
+                    i++;
+                }
+                updateClock();
+                var timeinterval = setInterval(updateClock, 1000);
+            }
+
+            //var deadline = new Date(Date.parse(new Date()) + 1 * 60 * 60 * 60 * 1000);
+            //initializeClock('clockdiv', deadline);
+        });
+
+    </script>
+    
+    <style>
+        video {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            background-size: cover;
+            -webkit-transition: 1s opacity;
+            transition: 1s opacity;
+        }
+    </style>
+</head>
+<body>
+    <div id="loader-wrapper">
+        <div id="loader">
+            <div>
+                <div class="preloader-cntr infinite animated pulse"> </div>
+            </div>
+        </div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+
+    <div class="overlay" id="offer" data-animation-in="fadeIn" data-animation-out="fadeOut">
+        <div class="overlay-box">
+            <div class="content">
+                <div class="overlay-content">
+                    <div class="lft-logo"><img src="images/logo.png"></div>
+                    <div class="rft-logo"><img src="images/logo.png"></div>
+                    <div class="roulette-cntr animated"><img src="images/roulette-logo.png"></div>
+                    <div class="covercharge-cntr animated"><img src="images/covercharge.png"></div>
+                    <div class="client-name animated3">
+                        <ul>
+                            <li>
+                                <div class="client-info">
+                                    <div class="client-number">32</div>
+                                    MR. KALPESH SINGH (TABLE NO 21)
+                                </div>
+                            </li>
+                            <li>
+                                <div class="client-info">
+                                    <div class="client-number">5</div>
+                                    MR. SUNIL KOHLI (TABLE NO 8)
+                                </div>
+                            </li>
+                            <li>
+                                <div class="client-info">
+                                    <div class="client-number">36</div>
+                                    MR. HIREN RANPARIYA (TABLE NO 5)
+                                </div>
+                            </li>
+                            <li>
+                                <div class="client-info">
+                                    <div class="client-number">18</div>
+                                    MR. VIGHNESH SINGH (TABLE NO 12)
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="countdown-cntr animated1">
+                        <div class="countdown">COUNTDOWN</div>
+                        <div class="countdown-time">
+                            <div id="clockdiv">
+                                <div class="clockcntr"><!--<span class="minutes"></span> :--> <span class="seconds"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="winner">
+        <div class="overlay-box">
+            <div class="content">
+                <div class="overlay-content">
+                    <div class="lft-logo"><img src="images/logo.png"></div>
+                    <div class="rft-logo"><img src="images/logo.png"></div>
+                    <div class="roulette-cntr"><img src="images/roulette-logo.png"></div>
+                    <div class="covercharge-cntr"><img src="images/covercharge.png"></div>
+                    <div class="client-name">
+                        <ul>
+                            <!--<li class="no-winner">
+                                <div class="client-info">
+                                    No Winner Found
+                                </div>
+                            </li>-->
+                            <li>
+                                <div class="client-info">
+                                    <div class="client-number">32</div>
+                                    MR. KALPESH SINGH (TABLE NO 21)
+                                </div>
+                            </li>
+                            <li class="active">
+                                <div class="client-info">
+                                    <div class="client-number">5</div>
+                                    MR. SUNIL KOHLI (TABLE NO 8)
+                                </div>
+                            </li>
+                            <li>
+                                <div class="client-info">
+                                    <div class="client-number">36</div>
+                                    MR. HIREN RANPARIYA (TABLE NO 5)
+                                </div>
+                            </li>
+                            <li>
+                                <div class="client-info">
+                                    <div class="client-number">18</div>
+                                    MR. VIGHNESH SINGH (TABLE NO 12)
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <video id="bgvid" playsinline autoplay muted loop>
+        <source src="video/17101672.ogg" type="video/ogg">
+        <source src="video/17101672.mp4" type="video/mp4">
+    </video>
+
+    <div class="main-container">
+        <div class="lft-logo"><img src="images/logo.png"></div>
+        <div class="rft-logo"><img src="images/logo.png"></div>
+        <div class="spinner animated">
+            <div class="ball"><span></span></div>
+            <div class="platebg"></div>
+            <div class="platetop"></div>
+            <div id="toppart" class="topnodebox">
+                <div class="silvernode"></div>
+                <div class="topnode silverbg"></div>
+                <span class="top silverbg"></span> <span class="right silverbg"></span> <span class="down silverbg"></span> <span class="left silverbg"></span>
+            </div>
+            <div id="rcircle" class="pieContainer">
+                <div class="pieBackground"></div>
+            </div>
+        </div>
+    </div>
+    
+    <input id="numwin" type="text" value="5" style="visibility:hidden;">
+    
+    <div class="spin-btn">
+        <!--<div id="btnSpin" class="button">SPIN</div>-->
+        <input type="button" id="btnSpin" class="button" value="SPIN" />
+    </div>
+    <script src='scripts/jquery.keyframes.min_.js'></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/common.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Welcome to Quint</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link href="images/favicon.png" rel="icon" type="image/png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body style="background-color: #03055a;">
+	<section class="bg-hero" style="background-color: #03055a;">
+		<div class="container">
+			<div class="col-lg-4 no-gutters">
+				<div class="logocntr mb-4" style="display: flex;align-items: center;">
+					<a href="https://quint.io/"><img src="images/logo.png" alt="LOGO"></a>
+					<a href="https://quint.io/" class="btn btn-primary ml-5">Home</a>
+				</div>
+				<div class="contact-wrap w-100 p-md-4 p-4">
+					<img class="border-radius15 mb-3" src="images/02.png" alt="">
+					<div id="form-message-warning" class="mb-4"></div>
+					<div id="form-message-success" class="mb-4">
+						Your message was sent, thank you!
+					</div>
+					<form method="POST" id="sheetdb-form" name="contactForm" action="https://sheetdb.io/api/v1/scxfj2u7ypt10">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<input type="text" class="form-control" name="data[Name]" placeholder="Name">
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<input type="email" class="form-control" name="data[Email]" placeholder="Email">
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="row">
+									<div class="col-md-6 pr-3">
+										<div class="form-group">
+											<input type="number" class="form-control" name="data[Mobile]" placeholder="Mobile (Optional)">
+										</div>
+									</div>									
+									<div class="col-md-6 pl-3">
+										<div class="form-group">
+											<input type="text" class="form-control" name="data[Telegram ID]" placeholder="Telegram ID (Optional)">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<input type="submit" value="Claim Free Raffle Entry" class="btn btn-primary w100">
+									<div class="submitting"></div>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="flex-w pt-4 all-center socialmedia col-12">
+					<a class="socialmediaicon mr-2" href="https://twitter.com/projectquint" target="_blank" title="Twitter">
+						<i class="fab fa-twitter"></i>
+					</a>
+					<a class="socialmediaicon mr-2" href="https://www.instagram.com/project.quint/" target="_blank">
+						<i class="fab fa-instagram"></i>
+					</a>
+					<a class="socialmediaicon mr-2" href="https://medium.com/@projectquint" target="_blank">
+						<i class="fab fa-medium"></i>
+					</a>
+					<a class="socialmediaicon mr-2" href="https://www.reddit.com/user/projectquint" target="_blank">
+						<i class="fab fa-reddit"></i>
+					</a>
+					<a class="socialmediaicon mr-2" href="https://discordapp.com/users/projectquint#9488" target="_blank">
+						<i class="fab fa-discord"></i>
+					</a>
+					<a class="socialmediaicon mr-2" href="http://t.me/projectquint" target="_blank">
+						<i class="fab fa-telegram"></i>
+					</a>
+				</div>
+			</div>
+		</div>		
+		<div class="dark-overlay"></div>
+		<div class="banner"></div>
+		<img src="images/banner.jpg" class="mobbanner">
+	</section>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+
+	<script>
+		var form = document.getElementById('sheetdb-form');
+		form.addEventListener("submit", e => {
+		  e.preventDefault();
+		  fetch(form.action, {
+			  method : "POST",
+			  body: new FormData(document.getElementById("sheetdb-form")),
+		  }).then((html) => {
+			alert('Thanks for participating');
+			location.reload();
+		  });
+		});
+	  </script>
+</body>
+
+</html>

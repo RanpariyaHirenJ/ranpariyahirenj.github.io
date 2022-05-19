@@ -1,0 +1,725 @@
+<!doctype html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<title>Welcome to Fox Orthodontics | Fox Orthodontics</title>
+<link rel="stylesheet" type="text/css" href="styles/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/home-slider.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<script src="scripts/jquery-min.js" type="text/javascript"></script>
+<script src="scripts/jquery.themepunch.revolution.min.js"></script>
+<script src="scripts/jquery.bxslider.min.js"></script>
+<script src="scripts/js_class.js"></script>
+</head>
+
+<body>
+<!--<div class="loader"></div>-->
+<div class="wrapper">
+      <div class="overlay videobox" id="brushing-and-flossing" data-animation-in="fadeIn" data-animation-out="fadeOut">
+      <div class="overlay-box video-overlay">
+        <div class="content">
+        <div class="overlay-header">Brushing and Flossing</div>
+          <div class="overlay-content">
+            <iframe id="youtube_player" class="iframevideo" width="560" height="400" src="https://www.youtube.com/embed/RCgykPIhquI?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="overlay videobox" id="what-to-eat" data-animation-in="fadeIn" data-animation-out="fadeOut">
+      <div class="overlay-box video-overlay">
+        <div class="content">
+        <div class="overlay-header">What to Eat</div>
+          <div class="overlay-content">
+            <iframe id="youtube_player1" class="iframevideo" width="560" height="400" src="https://www.youtube.com/embed/HjmN_An0iZg?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="overlay videobox" id="retainers" data-animation-in="fadeIn" data-animation-out="fadeOut">
+      <div class="overlay-box video-overlay">
+        <div class="content">
+        <div class="overlay-header">Retainers</div>
+          <div class="overlay-content">
+            <iframe id="youtube_player2" class="iframevideo" width="560" height="400" src="https://www.youtube.com/embed/wtwStnWoSrM?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  <div class="overlay enquiryform" id="enquiryform" data-animation-in="fadeIn" data-animation-out="fadeOut">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-header">Referral Form</div>
+      <form class="checkForm" name="referfriend" method="post" enctype="multipart/form-data" action="inc/mail.php" onSubmit="return form_validate_jquery('.overlay-content')">
+        <div class="overlay-content">
+          <div class="form-layout">
+          	<div class="form-row">
+              <div class="form-field mandatory">
+                <input type="text" name="to" placeholder="Patients Name *" validation="text" title="Patients Name">
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="form-row w50">
+              <div class="form-field mandatory">
+                <input type="text" name="email_to" placeholder="Patients Email *" validation="email" title="Patients Email">
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+          	<div class="form-row w50 m0">
+              <div class="form-field mandatory">
+                <input type="text" name="patients_contact_no" placeholder="Patients Contact No *" onKeyPress="return onlyNos(event,this);" validation="text" title="Patients Contact No">
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-field mandatory">
+                <input type="text" name="from" placeholder="Referred By *" validation="text" title="Referred By">
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="form-row w50">
+              <div class="form-field mandatory">
+                <input type="text" name="from_email" placeholder="Referrer's Email *" validation="email" title="Referrer's Email">
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+          	<div class="form-row w50 m0">
+              <div class="form-field mandatory">
+                <input type="text" name="referrers_contact_no" placeholder="Referrer's Contact No *" onKeyPress="return onlyNos(event,this);" validation="text" title="Referrer's Contact No">
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-field mandatory">
+                <textarea name="note" placeholder="Clinical Notes *" validation="text" title="Clinical Notes"></textarea>
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-field mandatory">
+            <div class="file-upload">
+                <span>Upload your Attachment</span>
+                <input type="file" name="Attachment">
+              </div>
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            
+                <div class="clear"></div>
+            <div class="form-row form-rowcol" style="padding-bottom: 20px;">
+                <input type="text" name="captcha_code" title="Captcha" maxlength="4" validation="text" placeholder="Enter the text as shown in image">
+                <div class="captcha_image" style="margin-top:-7px"></div>
+                <div class="clear"></div>
+              </div>
+          </div>
+        </div>
+        <div class="overlay-footer">
+          <input type="submit" value="Send" name="action" class="send">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+  <header class="header header-home">
+    <div class="navigation">
+      <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="Fox Orthodontics Logo"></a> </div>
+      <div class="mobile-nav-icon">
+        <button class="menu-icon mobil-icon-toggle"> <span>toggle menu</span> </button>
+      </div>
+      <div class="main-links header-links">
+        <ul>
+          <li class="dropdwon-menu"> <a href="javascript:void(0);" >About</a>
+            <div class="submenu-dropdwn submenu1">
+              <ul>
+                <li><a href="about.html">OVERVIEW</a></li>
+                <li><a href="robert-fox.html">DR. ROBERT FOX</a></li>
+                <li><a href="rajiv-ahuja.html">DR. RAJIV AHUJA</a></li>
+                <!--<li><a href="our-staff.html">Our Staff</a></li>-->
+              </ul>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="dropdwon-menu"> <a href="javascript:void(0);">For Patients</a>
+            <div class="submenu-dropdwn submenu2">
+              <ul>                <li><a href="for-patients.html">Visiting Hours</a></li>
+
+                <li><a href="for-patients.html#our-approach">Our Approach</a></li>                <li><a href="for-patients.html#orthodontic-emergencies">Orthodontic emergencies and FAQ's</a></li>
+                
+                 <li><a href="for-patients.html#self-care">Selfcare Tips and Retainers</a></li><li><a href="for-patients.html#insurance-schemes">Payment and Finance</a></li>
+</ul>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="dropdwon-menu"> <a href="javascript:void(0);">Treatments</a>
+            <div class="submenu-dropdwn">
+              <ul>
+                <li><a href="treatment-children.html">For Children</a></li>
+                <li><a href="treatment-teens.html">For Teens</a></li>
+                <li><a href="treatment-adults.html">For Adults</a></li>
+                <li><a href="treatments.html">All Treatments</a></li>
+              </ul>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li class="dropdwon-menu"> <a href="javascript:void(0);">Invisalign</a>
+            <div class="submenu-dropdwn submenu4">
+              <ul>
+                <li><a href="invisalign.html">Overview</a></li>
+                <li><a href="invisalign.html#advantages">Advantages</a></li>
+                <li><a href="invisalign.html#treatment-steps">Treatment Steps</a></li>
+                <li><a href="invisalign.html#concerns">Concerns</a></li>
+                <li><a href="invisalign.html#cost-treatment">Cost of treatment</a></li>
+              </ul>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li style="display:none"> <a href="#">Online Referrals</a> </li>
+          <li style="display:none"> <a href="#">Blog</a> </li>
+          <li> <a href="smile-gallery.html">Smile Gallery</a> </li>
+
+          <li> <a href="blog.html">Blog</a> </li>
+          <li> <a href="make-an-appointment.html">Contact</a> </li>
+          <li> <a href="javascript:void(0);" onClick="overlayBox('enquiryform')" style="border:none">Online Referrals</a> </li>
+          <li class="makeanapp-link"><a href="make-an-appointment.html">MAKE AN APPOINTMENT</a></li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </header>
+  <section class="home-banner">
+    <div class="fullscreen-container">
+      <div class="fullscreenbanner">
+        <ul>
+          <li data-transition="fade" data-slotamount="5" data-masterspeed="1000"> <img src="images/slider1-bg.jpg" alt="Creating beautiful smiles for over 30 years" class="sliderimg1">
+            <div class="caption sfb caption1" data-x="635" data-y="450" data-speed="500" data-start="800" data-easing="easeInOutSine">
+              <h2><a href="#">Creating beautiful smiles for<br>
+                over 30 years </a></h2>
+              
+              <!--<div class="explorenow-btn"> <a href="#"> OUR TREATMENTS </a> </div>--> 
+              
+            </div>
+          </li>
+          <li data-transition="fade" data-slotamount="5" data-masterspeed="1000"> <img src="images/slider2-bg.jpg" alt="Leading orthodontists caring for all ages" class="sliderimg2">
+            <div class="caption sfb caption2" data-x="670" data-y="465" data-speed="500" data-start="800" data-easing="easeInOutSine">
+              <h2 class="text-shadow"><a href="#">Leading orthodontists caring <br>
+                for all ages</a></h2>
+              
+              <!--<div class="explorenow-btn"> <a href="#"> OUR TREATMENTS </a> </div>--> 
+              
+            </div>
+          </li>
+          <li data-transition="fade" data-slotamount="5" data-masterspeed="1000"> <img src="images/slider3-bg.jpg" alt=" Invisalign – invisible braces with visible results" class="sliderimg3">
+            <div class="caption sfb caption3" data-x="620" data-y="450" data-speed="500" data-start="800" data-easing="easeInOutSine">
+              <h2><a href="#"> Invisible braces with<br>
+                visible results </a></h2>
+              
+              <!--<div class="explorenow-btn"> <a href="#"> OUR TREATMENTS </a> </div>--> 
+              
+            </div>
+          </li>
+          <li data-transition="fade" data-slotamount="5" data-masterspeed="1000"> <img src="images/slider4-bg.jpg" alt="Personalised orthodontic treatments that will leave you smiling" class="sliderimg4">
+            <div class="caption sfb caption3" data-x="570" data-y="450" data-speed="500" data-start="800" data-easing="easeInOutSine">
+              <h2><a href="#">Personalised orthodontic treatments <br>
+                that will leave you smiling </a></h2>
+              
+              <!--<div class="explorenow-btn"> <a href="#"> OUR TREATMENTS </a> </div>--> 
+              
+            </div>
+          </li>
+          <li data-transition="fade" data-slotamount="5" data-masterspeed="1000"> <img src="images/slider5-bg.jpg" alt="Creating lasting friendships and smiles" class="sliderimg5">
+            <div class="caption sfb caption3" data-x="650" data-y="460" data-speed="500" data-start="800" data-easing="easeInOutSine">
+              <h2><a href="#">Creating lasting friendships<br>
+                and smiles<br>
+                </a></h2>
+              
+              <!--<div class="explorenow-btn"> <a href="#"> OUR TREATMENTS </a> </div>--> 
+              
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="newhm-welcmbox">
+    <div class="container">
+      <div class="welcometxtcntr">
+        <h1>Welcome to Fox Orthodontics </h1>
+        <div class="img-hmwelcom"> <img src="images/home-estabish.png" alt="Established - 30 years"> </div>
+        <div class="welcomtxtinfo">
+          <p>Fox Orthodontics is a family run practice that was established over 30 years ago. We are conveniently located in <strong>Baulkham Hills .</strong> </p>
+          <div class="bluenowmore"> <a href="about.html">+ ABOUT US</a> </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </section>
+  <section class="newcategoryhm">
+    <div class="container">
+      <div class="catboxnew">
+        <ul>
+          <li>
+            <div class="catg-infobx"> <a href="treatment-children.html">
+              <div class="newimgcat"> <img src="images/children-teen.jpg" alt="Treatments for Children"> </div>
+              <div class="cat-linkcntr">
+                <h2> <span>TREATMENT FOR</span> CHILDREN </h2>
+              </div>
+              </a> </div>
+          </li>
+          <li>
+            <div class="catg-infobx"> <a href="treatment-teens.html">
+              <div class="newimgcat"> <img src="images/adult-young.jpg" alt="Treatments for Teen"> </div>
+              <div class="cat-linkcntr">
+                <h2> <span>TREATMENT FOR</span> TEENS </h2>
+              </div>
+              </a> </div>
+          </li>
+          <li>
+            <div class="catg-infobx"> <a href="treatment-adults.html">
+              <div class="newimgcat"> <img src="images/adult-grand.jpg" alt="Treatments for Adults"> </div>
+              <div class="cat-linkcntr">
+                <h2> <span>TREATMENT FOR</span> ADULTS </h2>
+              </div>
+              </a> </div>
+          </li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </section>
+  <section class="treatment-slider">
+    <div class="slider-box">
+      <div class="leftbox-img new-leftbox-img"> <img src="images/left-img-1.jpg" alt="Our Treatments">
+        <div class="current-arrow"> <img src="images/current-arrow.png" alt="Our Treatments"> </div>
+      </div>
+      <div class="dentistbox-info">
+        <div class="sub-heading">OUR TREATMENTS</div>
+        <ul class="slidertreatment">
+          <li>
+            <div class="container">
+              <div class="treatment-infotxt">
+                <div class="infotxtmain">
+                  <div class="infotxtmain-box">
+                    <h2>01. Invisalign</h2>
+                    <p>The Invisalign System is a comfortable, predictable and virtually invisible treatment to effectively straighten your teeth while still letting you do the things you love.</p>
+                    <div class="learn-more"> <a href="invisalign.html">Learn More</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li>
+            <div class="container">
+              <div class="treatment-infotxt">
+                <div class="infotxtmain">
+                  <div class="infotxtmain-box">
+                    <h2>02. Insignia</h2>
+                    <p>Insignia is advanced software that your orthodontist uses to develop a treatment plan that is tailored to each individual patient providing fast, accurate and predicable results.</p>
+                    <div class="learn-more"> <a href="insignia.html">Learn More</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <!--<li>
+            <div class="container">
+              <div class="treatment-infotxt">
+                <div class="infotxtmain">
+                  <div class="infotxtmain-box">
+                    <h2>03. Inspire (Ice)</h2>
+                    <p>Inspire (Ice) braces are virtually invisible; they are the most discreet braces available in today's market. These aesthetic braces are colour matched to your particular tooth colour so they don't stand out.</p>
+                    <div class="learn-more"> <a href="clear-ceramic-braces.html">Learn More</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </li>-->
+          <li>
+            <div class="container">
+              <div class="treatment-infotxt">
+                <div class="infotxtmain">
+                  <div class="infotxtmain-box">
+                    <h2>03. Incognito (Lingual)</h2>
+                    <p>Incognito braces are contoured to hug the lingual (tongue-side) surfaces of your teeth. These braces are customised with intelligent wires and brackets that are engineered to deliver effective results.</p>
+                    <div class="learn-more"> <a href="incognito.html">Learn More</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <!--<li>
+            <div class="container">
+              <div class="treatment-infotxt">
+                <div class="infotxtmain">
+                  <div class="infotxtmain-box">
+                    <h2>05.Fast	Braces </h2>
+                    <p>Cosmetic braces are white or transparent in appearance making them as discreet as possible. They are light and comfortable to wear.</p>
+                    <div class="learn-more"> <a href="fast-braces.html">Learn More</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </li>-->
+          <li>
+            <div class="container">
+              <div class="treatment-infotxt">
+                <div class="infotxtmain">
+                  <div class="infotxtmain-box">
+                    <h2>04.	Ceramic (Clear) Braces </h2>
+                    <p>Ceramic (Clear) braces are virtually invisible. These aesthetic braces are colour matched to your particular tooth colour so they don't stand out making them as discreet as possible.</p>	
+                    <div class="learn-more"> <a href="clear-ceramic-braces.html">Learn More</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li>
+            <div class="container">
+              <div class="treatment-infotxt">
+                <div class="infotxtmain">
+                  <div class="infotxtmain-box">
+                    <h2>05. Functional appliances</h2>
+                    <p>There are two functional appliances available when your upper or lower jaw does not align properly; these are removable functional appliances or the fixed functional appliances.</p>
+                    <div class="learn-more"> <a href="functional-appliances.html">Learn More</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li>
+            <div class="container">
+              <div class="treatment-infotxt">
+                <div class="infotxtmain">
+                  <div class="infotxtmain-box">
+                    <h2>06.	Non-extraction</h2>
+                    <p>With modern orthodontic techniques, it is often possible to treat moderate crowding or protrusion without removing any teeth. At Fox Orthodontics we have been pioneers in non-extraction treatment and strongly believe in having a harmonious face and a beautiful smile.</p>
+                    <div class="learn-more"> <a href="non-extraction-treatment.html">Learn More</a> </div>
+                  </div>
+                </div>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </section>
+  <section class="hm-selfcare">
+    <div class="container">
+      <div class="selfcare-heading">
+        <h2>Self Care Tips</h2>
+      </div>
+      <div class="selfcareboxcntr">
+        <ul>
+          <li>
+            <div class="selfcarevvdobx">
+              <div class="sefvdo-img" onClick="overlayBox('brushing-and-flossing')"> <img src="images/brushing.jpg" alt="Brushing and Flossing">
+                <div class="video-layerhm"></div>
+              </div>
+              <div class="vdo-txtcntr" >
+                <h3> <a href="javascript:void(0);" onClick="overlayBox('brushing-and-flossing')">01. Brushing and Flossing <span>+ Play Video</span></a> </h3>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="selfcarevvdobx">
+              <div class="sefvdo-img" onClick="overlayBox('what-to-eat')"> <img src="images/eat.jpg" alt="What to Eat">
+                <div class="video-layerhm"></div>
+              </div>
+              <div class="vdo-txtcntr">
+                <h3> <a href="javascript:void(0);" onClick="overlayBox('what-to-eat')">02. What to Eat <span>+ Play Video</span></a> </h3>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="selfcarevvdobx">
+              <div class="sefvdo-img" onClick="overlayBox('retainers')"> <img src="images/retainer.jpg" alt="Retainers">
+                <div class="video-layerhm"></div>
+              </div>
+              <div class="vdo-txtcntr">
+                <h3> <a href="javascript:void(0);" onClick="overlayBox('retainers')">03. Retainers <span>+ Play Video</span></a> </h3>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </section>
+  <section class="people-sayshm new-peoplesays">
+    <div class="container">
+      <div class="tiles-says">
+        <div class="tileblue-info">
+          <div class="tileboxcntr">
+            <div class="tiletxt">
+              <h2>Patient <br>
+                reviews</h2>
+              <div class="say-pplslider">
+                <ul>
+                  <li>
+                    <p>My daughter has been a patient at Fox Orthodontics for the last 9 months and I just wish I had found this Practice a lot sooner!  All the staff are friendly and courteous and make you feel most welcome.</p>
+                    <p>Everyone is extremely professional and go out of their way to make their patients feel comfortable and as stress free as possible.</p>
+                    <p>I highly recommend Fox Orthodontics  to anyone looking for an outstanding dental practice. <span>- P. Trevor</span></p>
+                  </li>
+                  <li>
+                    <p>I have been a patient of Fox Orthodontics for the past 12 months. From my very first consultation appointment I have felt very much so supported by all staff within the practice. The reception girls go over and beyond to ensure all my appointments are booked within a time frame that suits my very busy working lifestyle, the surgery nurses are always very pleasant and ensure my time in the chair is cheerful to take my mind away from my anxiousness. </p>
+                    <p>I would recommend anyone who is planning on getting braces to attend Fox Orthodontics. <span>- S Barnstable </span></p>
+                  </li>
+                  <li>
+                    <p>I would just like to say thank you for the care that you have given to my daughter. Initially, she was not looking forward to this experience and we were not looking forward to the cost. </p>
+                    <p>We have been pleasantly surprised on both counts. I am extremely thankful that we were directed to Fox Orthodontics.<span>- Mary W</span></p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </section>
+  <div class="affiliations-cntr">
+    <div class="container"> 
+      
+      <!--<h2>Affiliations:</h2>-->
+      
+      <div class="affilogoscntr">
+       <img src="images/logo-affiliations1.jpg" alt="Australian Society of Orthodontists"> 
+       <img src="images/logo-affiliations12.jpg" alt="The Royal College of Surgeons of Edinburgh"> 
+       <img src="images/logo-affiliations13.jpg" alt="Royal College of Surgeons"> 
+       <img src="images/logo-affiliations4.jpg" alt="The Royal Australasian College of Dental Surgeons"> 
+       <img src="images/logo-affiliations15.jpg" alt="Australasian Orthodontic Board"> 
+       <img src="images/logo-affiliations6.jpg" alt="American Association of Orthodontists"> 
+       <img src="images/logo-affiliations5.jpg" alt="Australian Dental Association Inc."> 
+       <img src="images/logo-affiliations2.jpg" alt="European Orthodontic Society"> 
+       <img src="images/logo-affiliations3.jpg" alt="World Federation of Orthodontists"> 
+       <img src="images/logo-affiliations7.jpg" alt="Invisalign"> 
+       <img src="images/logo-affiliations8.jpg" alt="Inspire Ice Braces"> 
+       <img src="images/logo-affiliations9.jpg" alt="SomnoMed"> 
+       <img src="images/logo-affiliations10.jpg" alt="Insignia"> 
+       <img src="images/logo-affiliations11.jpg" alt="Incognito"> 
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footerup">
+      <div class="container">
+        <ul>
+          <li>
+            <h2>Locate Us</h2>
+            <div class="footer-info">
+              <div class="address1">
+                <p><strong>Baulkham Hills</strong><br>
+                  493 Windsor Road, <br>
+                  Baulkham Hills,<br>
+                  NSW -2153</p>
+                <div class="viewon-map"> <a href="https://www.google.com/maps/place/33%C2%B044'42.0%22S+150%C2%B058'56.2%22E/@-33.7449885,150.9800903,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-33.744993!4d150.982279!12b1?rapsrc=apiv3" target="_blank">View on  Map</a> </div>
+              </div>
+              <!--<div class="address1 address2">
+                <p><strong>Hornsby</strong><br>
+                  Suite 207 (Level 2), <br>
+                  22-28 Edgeworth David,<br>
+                  Avenue Hornsby NSW - 2077</p>
+                <div class="viewon-map"> <a href="https://www.google.com/maps/place/33%C2%B042'22.6%22S+151%C2%B006'11.6%22E/@-33.7062845,151.1010303,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d-33.706289!4d151.103219!12b1?rapsrc=apiv3" target="_blank">View on  Map</a> </div>
+              </div>-->
+              <div class="clear"></div>
+            </div>
+          </li>
+          <li>
+            <h2>Newsletter Sign Up</h2>
+            <div class="footer-newslettr footer-info">
+              <form method="post" action="inc/mail.php" class="news_letter" onSubmit="return form_validate_jquery('.news_letter')">
+              <div class="name-field">
+                <input type="text" name="name" validation="text" title="Name" placeholder="Enter your Name">
+              </div>
+              <input type="text" name="email" validation="email" title="Email" placeholder="Enter your email ID">
+              <input type="submit" name="action" value="SUBMIT">
+              <div class="clear"></div>
+              </form>
+            </div>
+          </li>
+          <li>
+            <h2 class="minus-iconmbl"> Contact Us </h2>
+            <div class="footer-info openstate-footer">
+              <p class="email-icon"><a href="mailto:reception@foxorthodontics.com.au">reception@foxorthodontics.com.au</a></p>
+              <p class="contact-icon"> <strong>Baulkham Hills</strong> : (02) 9686 1200</p>
+              <!--<p class="contact-icon"> <strong>Hornsby</strong> : (02) 9476 3266</p>-->
+            </div>
+          </li>
+        </ul>
+        <div class="clear"></div>
+        <div class="open-detailscntr">
+          <p><span>Monday to Friday: 8:00am - 5:00pm</span> <span>Saturday &amp; Sunday: Closed</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="copy-rytband"> <div class="destopcopy"> © 2017 Fox Orthodontics. All rights reserved.&nbsp;&nbsp; Site by<a href="http://kalptech.com/" target="_blank"> Kalptech Systems</a></div> <br>
+      <a href="https://www.facebook.com/FoxOrthodontics-653330224821044" target="_blank"><img src="images/fb-icon.png" alt="Facebook"></a> 
+      <a href="https://twitter.com/FoxOrthodontics" target="_blank"><img src="images/twitter-icon.png" alt="Twitter"></a> 
+      <a href="https://www.youtube.com/channel/UCQQi2H6b0m8vjtI9spUtU5w" target="_blank"><img src="images/youtube-icon.png" alt="Youtube"></a> 
+      <a href="https://plus.google.com/108030469435898120565" target="_blank"><img src="images/google-icon.png" alt="google plus"></a> 
+      </div>
+  </footer>
+</div>
+<div class="online-referal"> 
+<a href="javascript:void(0);" onClick="overlayBox('enquiryform')"><img src="images/online-referral-icon.png" alt="Refer a friend"></a> </div>
+
+<script src="scripts/wow.js" type="text/javascript"></script> 
+<script>
+
+  new WOW().init();
+
+</script> 
+<script type="text/javascript">
+
+
+
+		if (jQuery().revolution){
+
+		if (jQuery.fn.cssOriginal !== undefined) {
+
+			jQuery.fn.css = jQuery.fn.cssOriginal;
+
+		}
+
+		jQuery('.fullscreenbanner').revolution({
+
+			delay:5000,
+
+									startwidth:1920,
+
+									startheight:600,
+
+									navigationType:"both",					//bullet, thumb, none, both		(No Thumbs In FullWidth Version !)
+
+									navigationArrows:"verticalcentered",		//nexttobullets, verticalcentered, none
+
+									navigationType:"bullet", // pager bullet
+
+			navigationStyle:'round',
+
+
+
+									touchenabled:"on",						// Enable Swipe Function : on/off
+
+
+
+									navOffsetHorizontal:0,
+
+									navOffsetVertical:20,
+
+
+
+									stopAtSlide:-1,
+
+									stopAfterLoops:-1,
+
+
+
+									shadow:0,								//0 = no Shadow, 1,2,3 = 3 Different Art of Shadows  (No Shadow in Fullwidth Version !)
+
+									fullWidth:"on",							// Turns On or Off the Fullwidth Image Centering in FullWidth Modus
+
+									fullScreen:"on",
+
+									
+
+
+
+		});
+
+	}
+
+	</script> 
+<script src="scripts/common.js" type="text/javascript"></script> 
+<script type="text/javascript">
+var parameter = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+var decodedparameter = decodeURIComponent(parameter)
+var param = decodedparameter.split('=');
+if(param[0] == "enquiry")
+{
+	alert(param[1]);
+}
+var slider;
+
+		$(function(){
+			$('.say-pplslider > ul').bxSlider({
+				auto:true,
+				mode:'horizontal',
+				pager:true,
+				controls:false,
+				pause:40000,
+				speed:1000
+			});
+
+			
+
+ slider=$('.slidertreatment').bxSlider({
+				auto:true,
+				mode:'horizontal',
+				pager:false,pause:7000,
+				speed:1000,
+					/*onSliderLoad:function(){
+						$('.slidertreatment > li').eq(0).addClass('active-slide');
+						var _slideh=$('.slidertreatment > li.active-slide').find('.leftbox-img').height();
+						$('.infotxtmain').css('height',_slideh)
+					},
+					onSlideAfter:function(){
+						var _slideh1=$('.slidertreatment > li.active-slide').find('.leftbox-img').height();
+						$('.infotxtmain').css('height',_slideh1)
+					},
+					onSlideBefore:function(currentSlideHtmlObject) {
+						$('.slidertreatment > li').removeClass('active-slide');
+						currentSlideHtmlObject.addClass('active-slide');
+					},
+					onSlideNext:function(){
+					},
+					onSlidePrev:function(){
+					},*/
+			})
+	$('.bx-controls-direction a').click(function() {
+    setTimeout(function() {
+        slider.startAuto();
+            },1000);
+    });
+		})
+		$(window).resize(function () {
+			//slider.destroySlider();
+			//$('.slidertreatment').hide()
+			setTimeout(function() {
+			//	$('.slidertreatment').show()
+        slider.reloadSlider();
+            },1000);
+		})
+	</script>
+<script>
+/*Google Analytics CODE */
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-80575913-1', 'auto');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>

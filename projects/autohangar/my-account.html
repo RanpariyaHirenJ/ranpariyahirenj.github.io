@@ -1,0 +1,549 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<title>Welcome To AutoHangar</title>
+<link rel="stylesheet" type="text/css" href="styles/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<script src="scripts/jquery-min.js" type="text/javascript"></script>
+<script src="scripts/parallax.js"></script>
+
+  
+<link rel="stylesheet" href="styles/powerange.css" />
+<script type="text/javascript">
+$(document).ready(function(){
+	$('[id^=test]').change(function(){
+         $('.loader').fadeIn();
+			 setTimeout(function(){
+				fixedFooter()
+			  	$('.loader').fadeOut();
+		 }, 1000);
+       });
+	   
+	   $(".filter-info a").click(function(){
+			$(".fliter-cntr").css("display","block");
+			$(".float-filter-info").css("display","block");
+			$('body').append('<div class="overlay-bg"></div>');
+		});
+		
+		$(".float-filter-info").click(function(){
+			$(".fliter-cntr").css("display","none");
+			$(".float-filter-info").css("display","none");
+			 $('body .overlay-bg').fadeOut(1000, function () {
+			  $(this).remove();
+			  $('.overlay').css('visibility', 'hidden').css('display', 'none').find('.overlay-box').removeClass('animated').removeClass(animationIn).removeClass(animationOut);
+			});
+		});
+});
+</script>
+
+</head>
+<body>
+<div class="loader"></div>
+<div class="wrapper bg1">
+  <section class="header">
+	<div class="fxh"></div>
+    <div class="container">
+      <div class="autohanger-infocntr">
+        <div class="autohanger-contact-details">
+          <ul>
+            <li><a href="#"> (022) 6612 3820 </a></li>
+            <li><a href="mailto:info@autohangarindia.com"> info@autohangarindia.com </a></li>
+          </ul>
+        </div>
+        <div class="autohanger-avout-details">
+          <ul>
+            <li><a href="login.html">Login / Register</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <div class="navigation">
+        <div class="logo"> <a href="index.html"><img src="images/logo.jpg"></a></div>
+        <div class="login-mblmenu">
+          <div class="mobile-nav-icon">
+            <button class="menu-icon mobil-icon-toggle"> <span>toggle menu</span> </button>
+          </div>
+         	<div class="diskdn wishlist-cntr"> <a href="#" class="wishlist">58</a> </div>
+          <div class="clear"></div>
+        </div>
+        <div class="nav-menu">
+          <ul>
+            <li> <a href="index.html#buy-a-car">Buy a car</a> </li>
+            <li> <a href="sell-your-car.html">Sell your car</a> </li>
+            <li> <a href="#">Finance</a> </li>
+            <li> <a href="#">Why Autohangar?</a> </li>
+            <li> <a href="#" class="wishlist">58</a> </li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </section>
+  <section class="breadcrumbs parallax common-top">
+    <div class="container">
+      <div class="breadcrumbs-cntr">
+        <h1>Cars </h1>
+        <ul class="breadcrumbs-info">
+          <li><a href="index.html" class=""> Home </a> /</li>
+        </ul>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </section>
+  <section class="filter-car parallax">
+    <div class="container">
+      <div class="grid-12">
+        <div class="filterallcar">
+            <ul>
+              <li class="wow animated fadeIn" data-wow-delay="0.3s" data-wow-offset="20">
+                <div class="carinfocntr"> <i>
+                  <div class="like active"><a href="javascript:void(0)">like</a></div>
+                  <img src="images/car1.jpg" >
+                  <div class="moreinfo-car"><a href="car-details.html" >More</a></div>
+                  </i>
+                  <div class="cardetail">
+                    <h3>Mercedes Benz C Class
+                      <div class="car-price">Rs. 700,0000</div>
+                    </h3>
+                    <p>Back Up Camera, AWD, Heated front seats, Leather-Trimmed Interior, Power Steering ...</p>
+                    <div class="add-to-compare id1"><label class=""> <input type="checkbox" class=""> Add to Compare</label></div>
+                    <div class="car-date-speed">
+                      <ul>
+                        <li>2007</li>
+                        <li>28,000 KMs Driven</li>
+                      </ul>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              </li>
+              <li class="wow animated fadeIn" data-wow-delay="0.3s" data-wow-offset="20">
+                <div class="carinfocntr"> <i>
+                  <div class="like"><a href="javascript:void(0)">like</a></div>
+                  <img src="images/car2.jpg" >
+                  <div class="moreinfo-car"><a href="car-details.html" >More</a></div>
+                  </i>
+                  <div class="cardetail">
+                    <h3>Mercedes Benz C Class
+                      <div class="car-price">Rs. 700,0000</div>
+                    </h3>
+                    <p>Back Up Camera, AWD, Heated front seats, Leather-Trimmed Interior, Power Steering ...</p>
+                    <div class="add-to-compare id2"><label class=""> <input type="checkbox" class=""> Add to Compare</label></div>
+                    <div class="car-date-speed">
+                      <ul>
+                        <li>2007</li>
+                        <li>28,000 KMs Driven</li>
+                      </ul>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              </li>
+              <li class="wow animated fadeIn" data-wow-delay="0.3s" data-wow-offset="20">
+                <div class="carinfocntr"> <i>
+                  <div class="like"><a href="javascript:void(0)">like</a></div>
+                  <img src="images/car3.jpg" >
+                  <div class="moreinfo-car"><a href="car-details.html" >More</a></div>
+                  </i>
+                  <div class="cardetail">
+                    <h3>Mercedes Benz C Class
+                      <div class="car-price">Rs. 700,0000</div>
+                    </h3>
+                    <p>Back Up Camera, AWD, Heated front seats, Leather-Trimmed Interior, Power Steering ...</p>
+                    <div class="add-to-compare id3"><label class=""> <input type="checkbox" class=""> Add to Compare</label></div>
+                    <div class="car-date-speed">
+                      <ul>
+                        <li>2007</li>
+                        <li>28,000 KMs Driven</li>
+                      </ul>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              </li>
+              <li class="wow animated fadeIn" data-wow-delay="0.3s" data-wow-offset="20">
+                <div class="carinfocntr"> <i>
+                  <div class="like"><a href="javascript:void(0)">like</a></div>
+                  <img src="images/car4.jpg" >
+                  <div class="moreinfo-car"><a href="car-details.html" >More</a></div>
+                  </i>
+                  <div class="cardetail">
+                    <h3>Mercedes Benz C Class
+                      <div class="car-price">Rs. 700,0000</div>
+                    </h3>
+                    <p>Back Up Camera, AWD, Heated front seats, Leather-Trimmed Interior, Power Steering ...</p>
+                    <div class="add-to-compare id4"><label class=""> <input type="checkbox" class=""> Add to Compare</label></div>
+                    <div class="car-date-speed">
+                      <ul>
+                        <li>2007</li>
+                        <li>28,000 KMs Driven</li>
+                      </ul>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              </li>
+              <li class="wow animated fadeIn" data-wow-delay="0.3s" data-wow-offset="20">
+                <div class="carinfocntr"> <i>
+                  <div class="like"><a href="javascript:void(0)">like</a></div>
+                  <img src="images/car5.jpg" >
+                  <div class="moreinfo-car"><a href="car-details.html" >More</a></div>
+                  </i>
+                  <div class="cardetail">
+                    <h3>Mercedes Benz C Class
+                      <div class="car-price">Rs. 700,0000</div>
+                    </h3>
+                    <p>Back Up Camera, AWD, Heated front seats, Leather-Trimmed Interior, Power Steering ...</p>
+                    <div class="add-to-compare id5"><label class=""> <input type="checkbox" class=""> Add to Compare</label></div>
+                    <div class="car-date-speed">
+                      <ul>
+                        <li>2007</li>
+                        <li>28,000 KMs Driven</li>
+                      </ul>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              </li>
+              <li class="wow animated fadeIn" data-wow-delay="0.3s" data-wow-offset="20">
+                <div class="carinfocntr"> <i>
+                  <div class="like"><a href="javascript:void(0)">like</a></div>
+                  <img src="images/car6.jpg" >
+                  <div class="moreinfo-car"><a href="car-details.html" >More</a></div>
+                  </i>
+                  <div class="cardetail">
+                    <h3>Mercedes Benz C Class
+                      <div class="car-price">Rs. 700,0000</div>
+                    </h3>
+                    <p>Back Up Camera, AWD, Heated front seats, Leather-Trimmed Interior, Power Steering ...</p>
+                    <div class="add-to-compare id6"><label class=""> <input type="checkbox" class=""> Add to Compare</label></div>
+                    <div class="car-date-speed">
+                      <ul>
+                        <li>2007</li>
+                        <li>28,000 KMs Driven</li>
+                      </ul>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </section>
+  <section class="compare-popup parallax">
+    <div class="container">
+    <div class="compare-car-info" style="display:none;">
+    	<ul>
+        	<li id="1" style="display:none;visibility:hidden;">
+            	<div class="grid-4"><i> <img src="images/car1.jpg"> </i></div>
+            	<div class="grid-8">Mercedes Benz C Class</div>
+                <a href="" class="closecompare"> X </a>
+            </li>
+            <li id="2" style="display:none;visibility:hidden;">
+            	<div class="grid-4"><i> <img src="images/car2.jpg"> </i></div>
+            	<div class="grid-8">Mercedes Benz C Class</div>
+                <a href="" class="closecompare"> X </a>
+            </li>
+            <li id="3" style="display:none;visibility:hidden;">
+            	<div class="grid-4"><i> <img src="images/car3.jpg"> </i></div>
+            	<div class="grid-8">Mercedes Benz C Class</div>
+                <a href="" class="closecompare"> X </a>
+            </li>
+            <li id="4" style="display:none;visibility:hidden;">
+            	<div class="grid-4"><i> <img src="images/car4.jpg"> </i></div>
+            	<div class="grid-8">Mercedes Benz C Class</div>
+                <a href="" class="closecompare"> X </a>
+            </li>
+            <li id="5" style="display:none;visibility:hidden;">
+            	<div class="grid-4"><i> <img src="images/car5.jpg"> </i></div>
+            	<div class="grid-8">Mercedes Benz C Class</div>
+                <a href="" class="closecompare"> X </a>
+            </li>
+            <li id="6" style="display:none;visibility:hidden;">
+            	<div class="grid-4"><i> <img src="images/car6.jpg"> </i></div>
+            	<div class="grid-8">Mercedes Benz C Class</div>
+                <a href="" class="closecompare"> X </a>
+            </li>
+        </ul>
+    </div>
+    	<div class="compare-info" style="display:none;"><a href="compare-car.html">COMPARE (<span class="count">3</span>)</a></div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="footernavigtn">
+        <h3>About</h3>
+        <div class="footer1">
+          <p>Today the Auto Hangar Group has amassed a fan following and achieved an undisputed 'Numero Uno' status with world-class brands under its flagship company. It is identified with niche and luxury car brands such as Lamborghini and Mercedes-Benz besides the automobile technology major Honda Automobiles and luxury gourmet brands like La Pavoni, Gaggia & Buggatti.</p>
+        </div>
+        <div class="footer2">
+          <div class="brand-name">Auto Hangar (I) Pvt. Ltd.</div>
+          <div class="address">Rajan House, Mezzanine Floor, Appa Saheb Marathe Marg, Prabhadevi. Mumbai : 400 025. </div>
+          <div class="tel-contact-details">T: (022) 6612 3820.</div>
+          <div class="email-contact-details"> E: info@autohangarindia.com</div>
+        </div>
+        <div class="footer3">
+          <div class="social-media">
+            <ul>
+              <li><a href="" target="_blank" class="fb"></a> </li>
+              <li><a href="" target="_blank" class="twitter"></a> </li>
+            </ul>
+          </div>
+          <div class="copy-ride">© 2017 Autohangar.  All Rights Reserved <a href=""> Privacy </a> <a href=""> Disclaimer </a> </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+  <script src="scripts/powerange.min.js"></script>
+  <script type="text/javascript">
+
+    // Decimal.
+    var dec = document.querySelector('.js-decimal');
+    var initDec = new Powerange(dec, { decimal: true, callback: displayDecimalValue, max: 100000, start: 20000 });
+
+    function displayDecimalValue() {
+      document.getElementById('js-display-decimal').innerHTML = dec.value;
+    }
+  </script>
+<script type="text/javascript">
+    $(document).ready(function(){
+		$('.add-to-compare input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+               $(".compare-info").css("display", "block")
+            }
+        });
+		var val = 0;
+		
+        $('.add-to-compare.id1 input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+               $(".compare-car-info ul li#1").css("visibility", "visible")
+			   val = val+1;
+			   if(val <= 3){
+				 $(".count").html(val);
+				}
+            }
+            else if($(this).prop("checked") == false){
+               $(".compare-car-info ul li#1").css("visibility", "hidden")
+			   val = val-1;
+			   if(val <= 3){
+				 $(".count").html(val);
+				}
+            }
+        });
+		
+		$('.add-to-compare.id2 input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+               $(".compare-car-info ul li#2").css("visibility", "visible")
+			   val = val+1;
+			   if(val <= 3){
+				 $(".count").html(val);
+				}
+            }
+            else if($(this).prop("checked") == false){
+               $(".compare-car-info ul li#2").css("visibility", "hidden")
+			   val = val-1;
+			   if(val <= 3){
+				 $(".count").html(val);
+				}
+           }
+        });
+		
+		$('.add-to-compare.id3 input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+               $(".compare-car-info ul li#3").css("visibility", "visible")
+			   val = val+1;
+			   if(val <= 3){
+				 $(".count").html(val);
+				}
+           }
+            else if($(this).prop("checked") == false){
+               $(".compare-car-info ul li#3").css("visibility", "hidden")
+			   val = val-1;
+			   if(val <= 3){
+				 $(".count").html(val);
+				}
+            }
+        });
+		
+		$('.add-to-compare.id4 input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+               $(".compare-car-info ul li#4").css("visibility", "visible")
+			   val = val+1;
+			   if(val <= 3){
+				 $(".count").html(val);
+				}
+            }
+            else if($(this).prop("checked") == false){
+               $(".compare-car-info ul li#4").css("visibility", "hidden")
+			   val = val-1;
+			   if(val <= 3){
+				 $(".count").html(val);
+				}
+            }
+        });
+		
+		$('.add-to-compare.id5 input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+               $(".compare-car-info ul li#5").css("visibility", "visible")
+			   val = val+1;
+			   if(val <= 3){
+				 $(".count").html(val);
+				}
+            }
+            else if($(this).prop("checked") == false){
+               $(".compare-car-info ul li#5").css("visibility", "hidden")
+			   val = val-1;
+			   if(val <= 3){
+				 $(".count").html(val);
+				}
+            }
+        });
+		
+		$('.add-to-compare.id6 input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+               $(".compare-car-info ul li#6").css("visibility", "visible")
+			   val = val+1;
+			   if(val <= 3){
+				 $(".count").html(val);
+				}
+           }
+            else if($(this).prop("checked") == false){
+               $(".compare-car-info ul li#6").css("visibility", "hidden")
+			   val = val-1;
+			   if(val <= 3){
+				 $(".count").html(val);
+				}
+            }
+        });
+		
+		
+		 $(".compare-info a").mouseover(function(){
+			 //alert(val)
+			 setInterval(function(){ 
+				if ($(".compare-car-info ul li#1").css('visibility') == 'visible') {
+					$(".compare-car-info ul li#1").css("display", "block")
+				}
+				else if ($(".compare-car-info ul li#1").css('visibility') == 'hidden'){
+					$(".compare-car-info ul li#1").css("display", "none")
+				}
+				
+				if ($(".compare-car-info ul li#2").css('visibility') == 'visible') {
+					$(".compare-car-info ul li#2").css("display", "block")
+				}
+				else if ($(".compare-car-info ul li#2").css('visibility') == 'hidden'){
+					$(".compare-car-info ul li#2").css("display", "none")
+				}
+				
+				if ($(".compare-car-info ul li#3").css('visibility') == 'visible') {
+					$(".compare-car-info ul li#3").css("display", "block")
+				}
+				else if ($(".compare-car-info ul li#3").css('visibility') == 'hidden'){
+					$(".compare-car-info ul li#3").css("display", "none")
+				}
+				
+				if ($(".compare-car-info ul li#4").css('visibility') == 'visible') {
+					$(".compare-car-info ul li#4").css("display", "block")
+				}
+				else if ($(".compare-car-info ul li#4").css('visibility') == 'hidden'){
+					$(".compare-car-info ul li#4").css("display", "none")
+				}
+				
+				if ($(".compare-car-info ul li#5").css('visibility') == 'visible') {
+					$(".compare-car-info ul li#5").css("display", "block")
+				}
+				else if ($(".compare-car-info ul li#5").css('visibility') == 'hidden'){
+					$(".compare-car-info ul li#5").css("display", "none")
+				}
+				
+				if ($(".compare-car-info ul li#6").css('visibility') == 'visible') {
+					$(".compare-car-info ul li#6").css("display", "block")
+				}
+				else if ($(".compare-car-info ul li#6").css('visibility') == 'hidden'){
+					$(".compare-car-info ul li#6").css("display", "none")
+				}
+				
+			}, 300);
+			$(".compare-car-info").css("display", "block")
+		});
+		
+		$(".compare-info a").mouseout(function(){
+			$(".compare-car-info").css("display", "none")
+		});
+		
+		 $(".compare-car-info").mouseover(function(){
+			 //alert(val)
+			 setInterval(function(){ 
+				if ($(".compare-car-info ul li#1").css('visibility') == 'visible') {
+					$(".compare-car-info ul li#1").css("display", "block")
+				}
+				else if ($(".compare-car-info ul li#1").css('visibility') == 'hidden'){
+					$(".compare-car-info ul li#1").css("display", "none")
+				}
+				
+				if ($(".compare-car-info ul li#2").css('visibility') == 'visible') {
+					$(".compare-car-info ul li#2").css("display", "block")
+				}
+				else if ($(".compare-car-info ul li#2").css('visibility') == 'hidden'){
+					$(".compare-car-info ul li#2").css("display", "none")
+				}
+				
+				if ($(".compare-car-info ul li#3").css('visibility') == 'visible') {
+					$(".compare-car-info ul li#3").css("display", "block")
+				}
+				else if ($(".compare-car-info ul li#3").css('visibility') == 'hidden'){
+					$(".compare-car-info ul li#3").css("display", "none")
+				}
+				
+				if ($(".compare-car-info ul li#4").css('visibility') == 'visible') {
+					$(".compare-car-info ul li#4").css("display", "block")
+				}
+				else if ($(".compare-car-info ul li#4").css('visibility') == 'hidden'){
+					$(".compare-car-info ul li#4").css("display", "none")
+				}
+				
+				if ($(".compare-car-info ul li#5").css('visibility') == 'visible') {
+					$(".compare-car-info ul li#5").css("display", "block")
+				}
+				else if ($(".compare-car-info ul li#5").css('visibility') == 'hidden'){
+					$(".compare-car-info ul li#5").css("display", "none")
+				}
+				
+				if ($(".compare-car-info ul li#6").css('visibility') == 'visible') {
+					$(".compare-car-info ul li#6").css("display", "block")
+				}
+				else if ($(".compare-car-info ul li#6").css('visibility') == 'hidden'){
+					$(".compare-car-info ul li#6").css("display", "none")
+				}
+				
+			}, 300);
+			$(".compare-car-info").css("display", "block")
+		});
+		
+		$(".compare-car-info").mouseout(function(){
+			$(".compare-car-info").css("display", "none")
+		});
+		
+    });
+</script>
+<script src="scripts/wow.js"></script> 
+<script>
+	 new WOW().init();
+	$('.parallax').parallax({
+		speed : 0.50
+	});	
+</script> 
+<script src="scripts/common.js" type="text/javascript"></script>
+</body>
+</html>
