@@ -1,0 +1,466 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<title>Careers | Linkway Honda</title>
+<link rel="stylesheet" type="text/css" href="styles/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<script src="scripts/jquery-min.js" type="text/javascript"></script>
+<script src="scripts/js_class.js" type="text/javascript"></script>
+<script src="scripts/jquery.bxslider.min.js"></script>
+<script src="scripts/js_class.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+	var func_category  = "get_job_category";
+	$.ajax({
+		method: "POST",
+		url: "ajax_functions.php",
+		data: { "function": func_category }
+	})
+	.done(function( msg ) {
+		if(msg)
+		{
+			$("#job_category").empty();
+			$("#job_category").append(msg);
+		}
+	});
+});
+
+$(function(){
+	
+	$('.cre_service').click(function(){
+		var func  = "get_job_category";
+		$.post("ajax_functions.php",
+		{
+			"function": func,
+			"sval": "CRE-SERVICES"
+		},
+		function(data,status){
+			if(data)
+			{
+				$("#job_category").empty();
+				$("#job_category").append(data);
+			}
+		})
+		})
+	
+
+	$('.cre_sales').click(function(){
+		var func  = "get_job_category";
+		$.post("ajax_functions.php",
+		{
+			"function": func,
+			"sval": "CRE-SALES"
+		},
+		function(data,status){
+			if(data)
+			{
+				$("#job_category").empty();
+				$("#job_category").append(data);
+			}
+		})
+		})
+
+
+	$('.tele_marketing').click(function(){
+		var func  = "get_job_category";
+		$.post("ajax_functions.php",
+		{
+			"function": func,
+			"sval": "Tele Marketing Executive"
+		},
+		function(data,status){
+			if(data)
+			{
+				$("#job_category").empty();
+				$("#job_category").append(data);
+			}
+		})
+		})
+		});
+
+</script>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div class="short-header">
+      <div class="container">
+        <div class="short-toplinks">
+          <div class="abt-contct-link">
+            <ul>
+              <li> <a href="about.html">About</a> </li>
+              <li> <a href="events.html">Events </a> </li>
+              <li> <a href="careers.html" class="active">Careers</a> </li>
+              <li> <a href="contact.html">Contact </a> </li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+          <div class="healp-lineno"> 24hrs Service Helpline : 9223547000 </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div class="page-header">
+      <div class="container">
+        <div class="main-menulinks">
+          <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="Linkway Honda logo"></a> </div>
+          <div class="nav-icon">
+            <button class="menu-icon mobil-icon-toggle"> <span>toggle menu</span> </button>
+          </div>
+          <div class="navigation">
+            <ul>
+              <li class="dropdown-menu"> <a class="removelink-mbl" href="car-models.html">Select a Model <span>Buy a New Car</span> </a>
+                <div class="submenu-dropdown animated fadeInDown">
+                  <ul>
+                    <li><a href="honda-brio.html">Brio</a></li>
+                    <li><a href="honda-amaze.html">New Amaze</a></li>
+                    <li><a href="honda-all-new-jazz.html">All New Jazz</a></li>
+                    <li><a href="honda-city.html">City</a></li>
+                    <!--<li><a href="honda-mobilio.html">Mobilio</a></li>-->
+                    <li><a href="honda-br-v.html">BR-V</a></li>
+                    <li><a href="honda-cr-v.html">CR-V</a></li>
+                  </ul>
+                </div>
+                <div class="destopnavigation">
+                  <div class="container">
+                    <div class="main-imge-menu">
+                      <ul>
+                        <li> <a href="honda-brio.html">
+                          <div class="car-image-menu"><img src="images/brio.png" alt="Honda Brio"></div>
+                          Brio</a> </li>
+                        <li> <a href="honda-amaze.html">
+                          <div class="car-image-menu"><img src="images/amaze.png" alt="Honda Amaze"></div>
+                          New Amaze </a> </li>
+                        <li> <a href="honda-all-new-jazz.html">
+                          <div class="car-image-menu"><img src="images/all-new-amaze.png" alt="Honda All New Jazz"></div>
+                          All New Jazz</a> </li>
+                        <li> <a href="honda-city.html">
+                          <div class="car-image-menu"><img src="images/city.png" alt="Honda City"></div>
+                          City </a> </li>
+                        <!--<li> <a href="honda-mobilio.html">
+                          <div class="car-image-menu"><img src="images/mobilo.png" alt="Honda Mobilio"></div>
+                          Mobilio </a> </li>-->
+                        <li> <a href="honda-br-v.html">
+                          <div class="car-image-menu"><img src="images/brv.png" alt="Honda BR-V"></div>
+                          BR-V</a> </li>
+                        <li> <a href="honda-cr-v.html">
+                          <div class="car-image-menu"><img src="images/cr-v.png" alt="Honda CR-V"></div>
+                          CR-V</a> </li>
+                        <li> <a href="honda-wr-v.html">
+                          <div class="car-image-menu"><img src="images/wr-v.png" alt="Honda WR-V"></div>
+                          WR-V</a> </li>
+                      </ul>
+                      <div class="clear"></div>
+                    </div>
+                    <div class="hm-featr-readmore"> <a href="car-models.html">VIEW ALL +</a> </div>
+                  </div>
+                </div>
+              </li>
+              <li> <a href="auto-terrance.html">Auto Terrace <span>Exchange a Car</span> </a> </li>
+              <li> <a href="after-sale.html">After Sales <span>Service a Car</span> </a> </li>
+              <li class="desktoplast"> <a href="corporate-sale.html">Corporate Sales <span>Attractive Schemes</span> </a> </li>
+              <li class="mobileonly-link"><a href="about.html">About</a></li>
+              <li class="mobileonly-link"><a href="events.html">Events </a></li>
+              <li class="mobileonly-link"><a href="careers.html">Careers</a></li>
+              <li class="mobileonly-link"><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="career-heading">
+    <div class="container">
+      <h2>Careers</h2>
+    </div>
+  </section>
+  <div class="career-topbanner">
+  	<div class="container">
+    	<div class="careerbanner-new">
+      	<ul>
+        	<li>
+          	<img src="images/career-banner1.jpg" alt="Careers Banner">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <section class="career-infoall">
+    <div class="container">
+    <h3>Employing the best skilled people in the industry is vital to the success and
+sustainability of our company. </h3>
+      <p>At Linkway Honda, We value their dedication and commitment and embrace the importance of ensuring the right skills, capabilities and improved capacity is sustainable in the long-term by helping our employees excel in achieving their desired potential.</p>
+      <p>Our workplace reflects our dynamic and challenging environment and offers outstanding opportunities aiming at attracting results driven individuals who are suitably qualified and who have the necessary career prospects.</p>
+     
+		<section class="job-opening">
+ <h2>Current Openings </h2>
+    <div class="container">
+      <div class="job-designation">
+        <ul>
+          <li class="job-description">
+            <h3>CRE- SERVICES</h3>
+            <div class="branch-mangr">Job Description:</div>
+            <div class="ticker-points">
+            <ul>
+              <li> To make calls on given database on daily basis. </li>
+              <li> To make sure appointed cars turn-up on scheduled date. </li>
+              <li> To maintain customer satisfaction throughout services. </li>
+              <li> To gather customer information and update in database. </li>
+              <li> Fresher with good communication skills & ability to learn can also apply </li>
+            </ul>
+          </div>
+          <div class="clear"></div>
+            <div class="view-details"> <a href="careers.html#send-resumes" class="cre_service"> APPLY NOW +</a></div>
+          </li>
+          <li class="job-description">
+            <h3>CRE-SALES </h3>
+            <div class="branch-mangr">Job Description:</div>
+           <div class="ticker-points">
+            <ul>
+              <li> Maintains professional appearance </li>
+              <li> Enters all the customers details from the customer profile in the E-Dealer </li>
+              <li> Enters all the activities from the customer contact card to the E-Dealer </li>
+              <li> Takes Feedback from customers about their purchase experience </li>
+              <li> Registers complaints and resolves the same. </li>
+              <li> Fresher with good communication skills & ability to learn can also apply. </li>
+            </ul>
+          </div>
+          <div class="clear"></div>
+            <div class="view-details"> <a href="careers.html#send-resumes" class="cre_sales"> APPLY NOW +</a></div>
+          </li>
+          <li class="job-description">
+            <h3>Tele Marketing Executive </h3>
+            <div class="branch-mangr">Job Description:</div>
+            <div class="ticker-points">
+            <ul>
+              <li> Making 120 150 calls per day </li>
+              <li> Generating 7 10 hot leads per day. </li>
+              <li> Data includes past data as well as calling on fresh data from web portals with whom Linkway Honda have tie-ups. </li>
+              <li> Understanding the features, pricing of all the cars and also any discount schemes that would be currently going on. (Training will be given) </li>
+              <li> Fresher with good communication skills & ability to learn can also apply. </li>
+            </ul>
+          </div>
+          <div class="clear"></div>
+            <div class="view-details"> <a href="careers.html#send-resumes" class="tele_marketing"> APPLY NOW +</a></div>
+          </li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </section>     
+     
+      <div class="career-guidance">
+      	<div class="guidance-car-img">
+        	<div><img src="images/new-block-career.jpg" alt="We believe in people working along with us"></div>
+          <div class="gray-guidance">
+          	<div class="garybox-tble">
+            	<div class="garybox-tblecell">
+              	We believe in people working along with us, together we work towards one common goal i.e.100% customer satisfaction. We aim to create a working environment which <span>guides, train people, enabling them to reach their full potential.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+ <section class="send-resumes" id="send-resumes">
+    <div class="container">
+      <h2>Send in your resumes - </h2>
+      <p class="careertxt-color">If you think you have the zest and dedication within you, which can add to the customer satisfaction index at Linkway Honda</p>
+      <div class="career-form">
+        <form method="post" action="saveinfo.php" enctype="multipart/form-data" onSubmit="return form_validate_jquery('.career-form')">
+        <div class="form-layout">
+          <div class="form-row">
+            <div class="grid-4">
+              <div class="form-field">
+                <input type="text" name="full_name" validation="text" title="Name" placeholder="Full Name">
+              </div>
+            </div>
+            <div class="grid-4 centerformpad">
+              <div class="form-field">
+                <input type="text" name="email" validation="email" title="Email" placeholder="Email">
+              </div>
+            </div>
+            <div class="grid-4">
+              <div class="form-field noborder-radius">
+                <div class="grid-4">
+                  <input type="text" name="experiance" maxlength="2" onKeyPress="return onlyNos(event,this);" validation="number" title="Exp." placeholder="Exp.">
+                </div>
+                <div class="grid-8">
+                  <div class="input-type-select">
+                    <select name="job_category" id="job_category" validation="text">
+                      <option value="">Job Category</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="form-row">
+            <div class="grid-4">
+              <div class="form-field">
+                <input type="text" name="curr_emp" validation="text" title="Current Employer" placeholder="Current Employer">
+              </div>
+            </div>
+            <div class="grid-4 centerformpad">
+              <div class="form-field">
+                <input type="text" name="salary" validation="number" maxlength="10" onKeyPress="return onlyNos(event,this);" title="Annual Salary" placeholder="Annual Salary">
+              </div>
+            </div>
+            <div class="grid-4">
+              <div class="form-field">
+                <div class="upload-resumefile">
+                  <input type="file" title="Resume" validation="file" name="resume_file" class="uploadBtn">
+                  <span id="attach_resume">Attach Resume</span> </div>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="form-row text-center">
+            <div class="form-field">
+              <input type="submit" name="careers" value="SUBMIT >">
+            </div>
+          </div>
+        </div>
+        </form>
+        <div class="career-bottom">
+        	<img src="images/career-bottom.png" alt="carrer banner">
+        </div>
+      </div>
+     </div>
+    </section>
+    </div>
+  </section>
+  <div class="other-logocntr">
+    <div class="container">
+      <div class="other-logohm">
+        <div class="display-otherlogo">
+          <div class="hmotherlogo-cell">
+            <ul>
+              <li class="honda-care-icon"> <a target="_blank" href="pdfs/honda-extended-warranty.pdf"><img src="images/honda-care.png" alt="Honda Care"></a> </li>
+              <li class="honda-assure-icon"> <a target="_blank" href="pdfs/honda-assure.pdf"><img src="images/honda-assure.png" alt="Honda Assure"></a> </li>
+              <li> <a target="_blank" href="pdfs/honda-road-assistance.pdf"><img src="images/road-side-assisatance.png" alt="Road Side Assisatance"></a> </li>
+              <li class="last-threeicon"> <a  href="auto-terrance.html"> <img src="images/auto-terannce.png" alt="Honda Auto Terannce"></a> </li>
+              <li class="last-threeicon"><a target="_blank" href="pdfs/honda-periodic-maintainance.pdf"><img src="images/periodic-maintenance.png" alt="Honda Periodic Maintainance"></a></li>
+              <li class="last-threeicon"><img src="images/one2one.png" alt="Honda one2one"></li>
+              <li> <a target="_blank" href="http://www.hondabuddyloyalty.com"><img src="images/improbe-mileagenew.png" alt="Honda Improbe Mileagenew"></a> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <ul>
+          <li>
+            <dl>
+              <dt class="openmbltab"> Andheri (E) Showroom & Service </dt>
+              <dd style="display:block">
+                <p> Tel. : (91-22) 6612 3000 </p>
+                <p>Fax : (91-22) 6612 3299</p>
+              </dd>
+            </dl>
+            <!--<dl>
+              <dt class="openmbltab"> Goregaon (W) Showroom & Service </dt>
+              <dd style="display:block">
+                <p> Tel. : (91-22) 6612 3700 </p>
+                <p> Fax : (91-22) 6612 3737 </p>
+              </dd>
+            </dl>-->
+            <dl>
+              <dt class="openmbltab"> Kanjurmarg Workshop </dt>
+              <dd style="display:block">
+                <p> Tel. : (91-22) 6612 3300 </p>
+                <p> Fax : (91-22) 6612 3344 </p>
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <dl class="nomarginmbl">
+              <dt>Models</dt>
+              <dd>
+                <ul>
+                  <li> <a href="honda-brio.html">- Honda Brio</a> </li>
+                  <li> <a href="honda-amaze.html">- Honda Amaze</a> </li>
+                  <li> <a href="honda-all-new-jazz.html">- Honda All New Jazz</a> </li>
+                  <li> <a href="honda-city.html">- Honda City</a> </li>
+                  <!--<li> <a href="honda-mobilio.html">- Honda Mobilio</a> </li>-->
+                  <li> <a href="honda-br-v.html">- Honda BRV</a> </li>
+                  <li> <a href="honda-cr-v.html">- Honda CRV</a> </li>
+                  <li> <a href="honda-wr-v.html">- Honda WRV</a> </li>
+
+                </ul>
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>Customer Guidance</dt>
+              <dd>
+                <ul>
+                  <li> <a href="emi-calculator.html">- EMI Calculator</a> </li>
+                  <li> <a href="car-models.html#book-test-drive">- Book a Test Drive</a>  </li>
+                  <li> <a href="after-sale.html#request-service">- Service Request</a> </li>
+                  <li> <a class="showroomtym-anchor">- Showroom Timings (9AM - 8PM)</a> </li>
+                  <li> <a href="contact.html">- Contact</a> </li>
+                </ul>
+              </dd>
+            </dl>
+            <div class="social-box"> <a href="#"><img src="images/you-tube-icon.png" alt="YouTub Icon"></a> <a href="#"><img src="images/twitter-icon.png" alt="Twitter Icon"></a> <a href="#"><img src="images/fb-icon.png" alt="Facebook Icon"></a> </div>
+            <div class="copyright-box"> ©2017  Linkway Honda Pvt. Ltd. <span class="privacy-policy"><a href="#"> Privacy</a> | <a href="#">Sitemap</a></span>
+              <div class="siteby">Site by <a href="http://kalptech.com/" target="_blank">Kalptech Systems</a></div>
+              <div class="footer-autohanger"> <a href="http://www.autohangar.com/" target="_blank"><img src="images/auto-hanger.png" alt="Auto Hangar"></a> </div>
+            </div>
+          </li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </footer>
+</div>
+<script>
+	var parameter = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+	var decodedparameter = decodeURIComponent(parameter)
+	var param = decodedparameter.split('=');
+	if(param[0] == "success")
+	{
+		alert( param[1] );
+	}
+	$(function(){
+
+		var slider;
+
+		slider=$('.careernew-slider').bxSlider({
+
+			mode: 'horizontal',auto: true,pager:false,autoControls: false,controls:true,pause:5000,speed:1000,
+
+		});
+
+		$('.bx-controls-direction a').click(function() {
+
+    setTimeout(function() {
+
+        slider.startAuto();
+
+            },1000);
+
+    });
+
+	})
+
+</script> 
+<script src="scripts/common.js" type="text/javascript"></script>
+</body>
+</html>

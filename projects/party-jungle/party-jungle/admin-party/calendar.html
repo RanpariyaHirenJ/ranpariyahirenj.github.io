@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Welcome</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
+<script src="js/common.js" type="text/javascript"></script>
+<script src="js/js_class.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<script type="text/javascript">
+function pop_up_box()
+{
+	overlayBox('data-entry')
+}
+ 
+ 
+    </script>
+ 
+</head>
+<body>
+<div class="wraper">
+  <h1 class="pageName">Calendar</h1>
+		<table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td align="center">
+            
+              <div class="srchEngn1"> 
+              <strong>
+              <!--<label>Head Cashier</label>-->
+               <select class="left-select-M">
+               
+              	    <option>month</option>
+                    <option>Jan</option>
+                    <option>Feb</option>
+                    <option>Mar</option>
+                    <option>Apr</option>
+                    <option>May</option>
+                    <option>Jun</option>
+                    <option>Jul</option>
+                    <option>Aug</option>
+                    <option>Sep</option>
+                    <option>Oct</option>
+                    <option>Nov</option>
+                    <option>Dec</option>
+                    </select>
+                    <select class="left-select-M">
+              	    <option>Year</option>
+                    <option>2015</option>
+                    <option>2016</option>
+                    <option>2017</option>
+                    <option>2018</option>
+                    <option>2019</option>
+                    <option>2020</option>
+                    <option>2021</option>
+                    <option>2022</option>
+                    <option>2023</option>
+                    <option>2024</option>
+                    <option>2025</option>
+                    </select>
+                    <select class="left-select-M">
+              	    <option>Status</option>
+                    <option>yes</option>
+                    <option>no</option>
+                    </select>
+                    <select class="left-select-M">
+              	    <option>Status</option>
+                    <option>Payment done</option>
+                    <option>Payment not done</option>
+                    </select>
+               </strong>
+                
+              </div>
+             
+            <br>
+            <form method="post" name="delete_form" onSubmit="return confirm_delete()">
+              <div class="tblCntr" style="padding-top:0; background:none;text-transform:capitalize;">
+                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                  <!--<tr bgcolor="#F5F5F5" >
+                  
+                  	<th width="100%"><select class="left-select-M">
+              	    <option>month</option>
+                    <option>Jan</option>
+                    <option>Feb</option>
+                    <option>Mar</option>
+                    <option>Apr</option>
+                    <option>May</option>
+                    <option>Jun</option>
+                    <option>Jul</option>
+                    <option>Aug</option>
+                    <option>Sep</option>
+                    <option>Oct</option>
+                    <option>Nov</option>
+                    <option>Dec</option>
+                    </select>
+                    <select class="left-select-M">
+              	    <option>Year</option>
+                    <option>2015</option>
+                    <option>2016</option>
+                    <option>2017</option>
+                    <option>2018</option>
+                    <option>2019</option>
+                    <option>2020</option>
+                    <option>2021</option>
+                    <option>2022</option>
+                    <option>2023</option>
+                    <option>2024</option>
+                    <option>2025</option>
+                    </select>
+                    <select class="left-select-M">
+              	    <option>Status</option>
+                    <option>yes</option>
+                    <option>no</option>
+                    </select>
+                    <select class="left-select-M">
+              	    <option>Status</option>
+                    <option>Payment done</option>
+                    <option>Payment not done</option>
+                    </select></th>
+                  </tr>-->
+                  <tr bgcolor="#F5F5F5" >
+                  	<th width="4%">Sun</th>
+                  	<th>Mon</th>
+                  	<th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thus</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                  </tr>
+                  <tr>
+                  	<td align="center" style="text-align:left">1</td>
+                  	<td width="5%" height="2%" align="center" style="text-align:left">2</td>
+                  	<td width="5%" align="center" style="text-align:left">3</td>
+                    <td width="5%" align="center" style="text-align:left">4</td>
+                    <td width="5%" align="center" style="text-align:left">5</td>
+                    <td width="5%" align="center" style="text-align:left">6</td>
+                    <td width="5%" align="center" style="text-align:left">7</td>
+                  </tr>     
+                  <tr>
+                  	<td align="center" style="text-align:left">8</td>
+                  	<td width="5%" align="center" style="text-align:left">9</td>
+                  	<td width="5%" align="center" style="text-align:left">10</td>
+                    <td width="5%" align="center" style="text-align:left">11</td>
+                    <td width="5%" align="center" style="text-align:left">12</td>
+                    <td width="5%" align="center" style="text-align:left">13</td>
+                    <td width="5%" align="center" style="text-align:left">14</td>
+                  </tr>
+                  <tr>
+                  	<td align="center" style="text-align:left">15</td>
+                  	<td width="5%" align="center" style="text-align:left">16</td>
+                  	<td width="5%" align="center" style="text-align:left">17</td>
+                    <td width="5%" align="center" style="text-align:left">18</td>
+                    <td width="5%" align="center" style="text-align:left">19</td>
+                    <td width="5%" align="center" style="text-align:left">20</td>
+                    <td width="5%" align="center" style="text-align:left">21</td>
+                  </tr>  
+                  <tr>
+                  	<td align="center" style="text-align:left">22</td>
+                  	<td width="5%" align="center" style="text-align:left">23</td>
+                  	<td width="5%" align="center" style="text-align:left">24</td>
+                    <td width="5%" align="center" style="text-align:left">25</td>
+                    <td width="5%" align="center" style="text-align:left">26</td>
+                    <td width="5%" align="center" style="text-align:left">27</td>
+                    <td width="5%" align="center" style="text-align:left">28</td>
+                  </tr>   
+                  <tr>
+                  	<td text-align:leftstyle="text-align:left">29</td>
+                  	<td width="5%" align="center" style="text-align:left">30</td>
+                  	<td width="5%" align="center" style="text-align:left">31</td>
+                    <td width="5%" align="center" style="vertical-align:middle"></td>
+                    <td width="5%" align="center" style="vertical-align:middle"></td>
+                    <td width="5%" align="center" style="vertical-align:middle"></td>
+                    <td width="5%" align="center" style="vertical-align:middle"></td>
+                  </tr>   
+                  <tr>
+                  	<th class="td1" >Created</th>
+                  	<th class="td2" >Sup Ordered</th>
+                  	<th class="td3" >Sup Recived</th>
+                    <th class="td4" >Order Designed</th>
+                    <th class="td5" >Ready</th>
+                    <th class="td6" >Pay Pending</th>
+                    <th class="td7" >Complated</th>
+                  </tr>
+                </table>
+              </div>
+              <br class="clear">
+              
+              <p class="sbtBtn">
+                <input name="action" type="button" value="Add Item" onClick="pop_up_box()">
+                &nbsp;
+                <input name="action" type="submit" value="Delete" >
+          
+            </form>          </td>
+          </tr>
+      </table>
+ </div>  
+ <?php
+ if(isset($_REQUEST["action"]))		
+	{	
+		if($_REQUEST["action"] == "Modify" || $_REQUEST["action"] == "add")
+		{
+		?>
+        	<script type="text/javascript">
+				overlayBox('data-entry')
+			</script>        
+        <?php	
+		}
+	} 
+  include("footer.php"); 
+  ?>
+</body>
+</html>

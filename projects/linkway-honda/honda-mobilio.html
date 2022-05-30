@@ -1,0 +1,1230 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<title>Honda Mobilio | Linkway Honda</title>
+<link rel="stylesheet" type="text/css" href="styles/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<script src="scripts/jquery-min.js" type="text/javascript"></script>
+<script src="scripts/jquery-ui.min.js"></script>
+<script src="scripts/jquery.bxslider.min.js"></script>
+<script src="scripts/js_class.js" type="text/javascript"></script>
+<script type="text/javascript" src="timepicker/jquery.timepicker.js"></script>
+<link rel="stylesheet" type="text/css" href="timepicker/jquery.timepicker.css" />
+<script>
+    $(function() {
+		$('.time').timepicker({ 'timeFormat': 'h:i A' });
+    });
+</script>
+<script type="text/javascript">
+$(document).ready(function () {
+	var car_name = $('input[type="hidden"]').val();
+	var func  = "get_car_model";
+	$.ajax({
+		method: "POST",
+		url: "ajax_functions.php",
+		data: { car_model: car_name , "function": func }
+	})
+	.done(function( msg ) {
+		if(msg)
+		{
+			$("#car_model").empty();
+			$("#car_model").append(msg);
+		}
+	});
+	$("#send_enquiry").click(function(event) {
+		event.preventDefault();
+		$('#enquiryform').submit();
+	});
+});
+</script>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div class="short-header">
+      <div class="container">
+        <div class="short-toplinks">
+          <div class="abt-contct-link">
+            <ul>
+              <li> <a href="about.html">About</a> </li>
+              <li> <a href="events.html">Events </a> </li>
+              <li> <a href="careers.html">Careers</a> </li>
+              <li> <a href="contact.html">Contact </a> </li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+          <div class="healp-lineno"> 24hrs Service Helpline : 9223547000 </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div class="page-header">
+      <div class="container">
+        <div class="main-menulinks">
+          <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="Linkway Honda logo"></a> </div>
+          <div class="nav-icon">
+            <button class="menu-icon mobil-icon-toggle"> <span>toggle menu</span> </button>
+          </div>
+          <div class="navigation">
+            <ul>
+              <li class="dropdown-menu"> <a href="car-models.html" class="active removelink-mbl">Select a Model <span>Buy a New Car</span> </a>
+                <div class="submenu-dropdown animated fadeInDown">
+                  <ul>
+                    <li><a href="honda-brio.html">Brio</a></li>
+                    <li><a href="honda-amaze.html">New Amaze</a></li>
+                    <li><a href="honda-all-new-jazz.html">All New Jazz</a></li>
+                    <li><a href="honda-city.html">City</a></li>
+                    <!--<li><a href="honda-mobilio.html">Mobilio</a></li>-->
+                    <li><a href="honda-br-v.html">BR-V</a></li>
+                    <li><a href="honda-cr-v.html">CR-V</a></li>
+                  </ul>
+                </div>
+                <div class="destopnavigation">
+                  <div class="container">
+                    <div class="main-imge-menu">
+                      <ul>
+                        <li> <a href="honda-brio.html">
+                          <div class="car-image-menu"><img src="images/brio.png" alt="Honda Brio"></div>
+                          Brio</a> </li>
+                        <li> <a href="honda-amaze.html">
+                          <div class="car-image-menu"><img src="images/amaze.png" alt="Honda Amaze"></div>
+                          New Amaze </a> </li>
+                        <li> <a href="honda-all-new-jazz.html">
+                          <div class="car-image-menu"><img src="images/all-new-amaze.png" alt="Honda All New Jazz"></div>
+                          All New Jazz</a> </li>
+                        <li> <a href="honda-city.html">
+                          <div class="car-image-menu"><img src="images/city.png" alt="Honda City"></div>
+                          City </a> </li>
+                        <!--<li> <a href="honda-mobilio.html">
+                          <div class="car-image-menu"><img src="images/mobilo.png" alt="Honda Mobilio"></div>
+                          Mobilio </a> </li>-->
+                        <li> <a href="honda-br-v.html">
+                          <div class="car-image-menu"><img src="images/brv.png" alt="Honda BR-V"></div>
+                          BR-V</a> </li>
+                        <li> <a href="honda-cr-v.html">
+                          <div class="car-image-menu"><img src="images/cr-v.png" alt="Honda CR-V"></div>
+                          CR-V</a> </li>
+                        <li> <a href="honda-wr-v.html">
+                          <div class="car-image-menu"><img src="images/wr-v.png" alt="Honda WR-V"></div>
+                          WR-V</a> </li>
+                      </ul>
+                      <div class="clear"></div>
+                    </div>
+                    <div class="hm-featr-readmore"> <a href="car-models.html">VIEW ALL +</a> </div>
+                  </div>
+                </div>
+              </li>
+              <li> <a href="auto-terrance.html">Auto Terrace <span>Exchange a Car</span> </a> </li>
+              <li> <a href="after-sale.html">After Sales <span>Service a Car</span> </a> </li>
+              <li class="desktoplast"> <a href="corporate-sale.html">Corporate Sales <span>Attractive Schemes</span> </a> </li>
+              <li class="mobileonly-link"><a href="about.html">About</a></li>
+              <li class="mobileonly-link"><a href="events.html">Events </a></li>
+              <li class="mobileonly-link"><a href="careers.html">Careers</a></li>
+              <li class="mobileonly-link"><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="model-bannerinfo">
+    <div class="container">
+      <div class="model-infoslider">
+        <ul class="model-cars">
+          <li><img src="images/honda-mobilio/model-banner-1.jpg" alt="Honda Mobilio Banner Image 1"></li>
+          <li><img src="images/honda-mobilio/model-banner-2.jpg" alt="Honda Mobilio Banner Image 2"></li>
+          <li><img src="images/honda-mobilio/model-banner-3.jpg" alt="Honda Mobilio Banner Image 3"></li>
+          <li><img src="images/honda-mobilio/model-banner-4.jpg" alt="Honda Mobilio Banner Image 4"></li>
+          <li><iframe width="730" src="https://www.youtube.com/embed/DyGHqA8bVfg" frameborder="0" allowfullscreen></iframe></li>
+        </ul>
+        <div id="thumbnails-pager" class="thumbnails-pager"> 
+        <a data-slide-index="0" href=""><img src="images/honda-mobilio/thumnail-1.jpg" alt="Honda Mobilio Banner Image Thumnail 1"></a> 
+        <a data-slide-index="1" href=""><img src="images/honda-mobilio/thumnail-2.jpg" alt="Honda Mobilio Banner Image Thumnail 2"></a> 
+        <a data-slide-index="2" href=""><img src="images/honda-mobilio/thumnail-3.jpg" alt="Honda Mobilio Banner Image Thumnail 3"></a> 
+        <a data-slide-index="3" href=""><img src="images/honda-mobilio/thumnail-4.jpg" alt="Honda Mobilio Banner Image Thumnail 4"></a> 
+        <a data-slide-index="4" href=""><img src="images/honda-mobilio/thumb-video.jpg" alt="Honda Mobilio Banner Image Thumnail 5"></a>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="model-infoprice">
+        <div class="model-logo"> <img src="images/mobilio-logo.jpg" alt="Honda Mobilio Logo"> </div>
+        <div class="model-price"> Rs. 7,10,955/-* <span>Onwards</span> </div>
+        <div class="car-inforshow">
+          <ul>
+            <li> <a href="pdfs/mobilio-accessory-brochure.pdf" class="dwonload-brocher" target="_blank">Download Brochure</a> </li>
+            <li> <a href="javascript:void(0)" class="view360 curdef">360 View :</a> 
+                    <a href="javascript:void(0)" class="exteriors-view" onClick="overlayBox('exteriors')"> Exterior </a>
+                    <a href="javascript:void(0)" class="interior-view" onClick="overlayBox('interior')"> Interior</a> 
+            </li>
+            <li> <a href="#book-test-drive" class="slide shedule-drive">Schedule Test Drive</a> </li>
+            <li> <a href="emi-calculator.html" class="emi-calc">EMI Calculator</a> </li>
+          </ul>
+          <form id="enquiryform" name="enquiryform" method="post" action="contact.html#send-enquiery">
+          <input type="hidden" name="car_model" value="Honda Mobilio">
+        	<div class="exchanglink"> <a href="contact.html#send-enquiery" id="send_enquiry">SEND ENQUIRY > </a> </div>
+          </form>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <section class="safety-features">
+    <div class="container">
+      <div class="safetyfeaturebox">
+        <div class="model-colors">
+          <ul class="modlecolor-slider">
+            <li> <img src="images/honda-mobilio/car-color/Crystal_Black_Pearl.jpg" alt="Honda Mobilio Car Color Crystal Black Pearl"> </li>
+            <li> <img src="images/honda-mobilio/car-color/tafeta-white.jpg" alt="Honda Mobilio Car Color Tafeta White"> </li>
+            <li> <img src="images/honda-mobilio/car-color/brilliant-gold-metallic.jpg" alt="Honda Mobilio Car Color Brilliant Gold Metallic"> </li>
+            <li> <img src="images/honda-mobilio/car-color/carnelian-red-pearl.jpg" alt="Honda Mobilio Car Color Carnelian Red Pearl"> </li>
+            <li> <img src="images/honda-mobilio/car-color/majestic-blue-mattic.jpg" alt="Honda Mobilio Car Color Majestic Blue Mattic"> </li>
+            <li> <img src="images/honda-mobilio/car-color/alabaster-silver-metallic.jpg" alt="Honda Mobilio Car Color Alabaster Silver Metallic"> </li>
+            <li> <img src="images/honda-mobilio/car-color/urban-titanium-metallic.jpg" alt="Honda Mobilio Car Color Urban Titanium Metallic"> </li>
+          </ul>
+          <div class="availabelcolor"> <span>Available Colors:</span>
+            <div class="color-thumbs" id="colorthumb-pager"> 
+            <a data-slide-index="0" href=""><img src="images/honda-mobilio/car-color/color-thumb-1.png" alt="Honda Mobilio Car Color Crystal Black Pearl"></a> 
+            <a data-slide-index="1" href=""><img src="images/honda-mobilio/car-color/color-thumb-2.png" alt="Honda Mobilio Car Color Tafeta White"></a> 
+            <a data-slide-index="2" href=""><img src="images/honda-mobilio/car-color/color-thumb-3.png" alt="Honda Mobilio Car Color Brilliant Gold Metallic"></a> 
+            <a data-slide-index="3" href=""><img src="images/honda-mobilio/car-color/color-thumb-4.png" alt="Honda Mobilio Car Color Carnelian Red Pearl"></a> 
+            <a data-slide-index="4" href=""><img src="images/honda-mobilio/car-color/color-thumb-5.png" alt="Honda Mobilio Car Color Majestic Blue Mattic"></a> 
+            <a data-slide-index="5" href=""><img src="images/honda-mobilio/car-color/color-thumb-6.png" alt="Honda Mobilio Car Color Alabaster Silver Metallic"></a>
+            <a data-slide-index="6" href=""><img src="images/honda-mobilio/car-color/color-thumb-7.png" alt="Honda Mobilio Car Color Urban Titanium Metallic"></a> </div>
+          </div>
+        </div>
+        <div class="safetypoints">
+        <h1>Honda Mobilio</h1>
+          <h2>Don't just drive it, flaunt it with style</h2>
+          <div class="ticker-points">
+            <ul>
+              <li>Solid Wing Face Front Chrome Grille </li>
+              <li>Rear Defogger and High Mount Stop LED Lamp </li>
+              <li>Lightning Bolt Belt Line </li>
+              <li>Electrically Adjustable ORVM </li>
+              <li>Attractive Rear Combi Lamps</li>
+            </ul>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </section>
+  <div class="model-types">
+    <div class="tabCnt">
+      <div class="tabNav">
+        <div class="container">
+          <ul>
+            <li><a href="javascript:void(0)" rel="tab1" class="active">E <span></span> </a>
+              <div class="activetab"><img src="images/active-tab.png" alt="Active Tab"></div>
+            </li>
+            <li><a href="javascript:void(0)" rel="tab2">S <span></span> </a>
+              <div class="activetab"><img src="images/active-tab.png" alt="Active Tab"></div>
+            </li>
+            <li><a href="javascript:void(0)" rel="tab3">V <span></span> </a>
+              <div class="activetab"><img src="images/active-tab.png" alt="Active Tab"></div>
+            </li>
+            <li><a href="javascript:void(0)" rel="tab4">V (O) <span></span> </a>
+              <div class="activetab"><img src="images/active-tab.png" alt="Active Tab"></div>
+            </li>
+            <li><a href="javascript:void(0)" rel="tab5">RS<span></span> </a>
+              <div class="activetab"><img src="images/active-tab.png" alt="Active Tab"></div>
+            </li>
+            <li><a href="javascript:void(0)" rel="tab6">RS (O) <span></span> </a>
+              <div class="activetab"><img src="images/active-tab.png" alt="Active Tab"></div>
+            </li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="tabResult">
+        <div class="right-cornerspcifctn"> <img src="images/specification-corner.png"> </div>
+         <div class="tabBx overview" id="tab1" style="display:block">
+          <div class="content container">
+            <div class="tabNav">
+              <div class="container">
+                <ul>
+                  <li><a href="javascript:void(0)" rel="features1" class="active">Features </a>
+                    <div class="activetab"><img src="images/active-tab.png" alt="Active Tab"></div>
+                  </li>
+                  <li><a href="javascript:void(0)" rel="specification1" >Specification (Petrol)</a>
+                    <div class="activetab"><img src="images/active-tab.png" alt="Active Tab"></div>
+                  </li>
+                  <li><a href="javascript:void(0)" rel="specification2">Specification (Diesel)</a>
+                    <div class="activetab"><img src="images/active-tab.png" alt="Active Tab"></div>
+                  </li>
+                </ul>
+                <div class="clear"></div>
+              </div>
+            </div>
+            <div class="tabResult">
+            <div class="tabBx overview" id="features1" style="display:block">
+                <div class="content container">
+                  <div class="features">
+                  <ul>
+                  		<li>Front Chrome Grille</li>
+                        <li>AC with Heater</li>
+                        <li>2nd & 3rd Row Reclining</li>
+                        <li>Tilt Steering (Diesel Only)</li>
+                        <li>ABS (Diesel Only)</li>
+                        <li>Cup & Bottle Holders (3 Rows)</li>
+                   </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tabBx overview" id="specification1">
+                <div class="content container">
+                  <div class="all-specification">
+                    <table>
+                        <tr>
+                          <td>Engine Type:</td>
+                          <td>4 CYLINDER, SOHC i-VTEC</td>
+                        </tr>
+                        <tr>
+                          <td>Maximum Power:</td>
+                          <td>119 ps @ 6600 rmp</td>
+                        </tr>
+                        <tr>
+                          <td>Maximum Torque:</td>
+                          <td>145 Nm @ 4600 rpm</td>
+                        </tr>
+                        <tr>
+                          <td>Displacement:</td>
+                          <td>1497 cc</td>
+                        </tr>
+                        <tr>
+                          <td>Suspension:</td>
+                          <td>(Front) Mcpherson Strut</td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td>(Rear) Torsion Beam</td>
+                        </tr>
+                        <tr>
+                          <td>Transmission Type:</td>
+                          <td>Manual 5 forward & 1 Reverse</td>
+                        </tr>
+                        <tr>
+                          <td>Dimensions:</td>
+                          <td>Ground Clearance 189 mm</td>
+                        </tr>
+                        <tr>
+                          <td>Fuel:</td>
+                          <td>Petrol</td>
+                        </tr>
+					</table>
+                  </div>
+                </div>
+              </div>
+              <div class="tabBx overview" id="specification2">
+                <div class="content container">
+                  <div class="all-specification">
+                    <table>
+                        <tr>
+                          <td>Engine Type:</td>
+                          <td>4 CYLINDER, DOHC i-DTEC</td>
+                        </tr>
+                        <tr>
+                          <td>Maximum Power:</td>
+                          <td>100 ps @ 3600 rmp</td>
+                        </tr>
+                        <tr>
+                          <td>Maximum Torque:</td>
+                          <td>200 Nm @ 1750 rpm</td>
+                        </tr>
+                        <tr>
+                          <td>Displacement:</td>
+                          <td>1498 cc</td>
+                        </tr>
+                        <tr>
+                          <td>Suspension:</td>
+                          <td>(Front) Mcpherson Strut</td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td>(Rear) Torsion Beam</td>
+                        </tr>
+                        <tr>
+                          <td>Transmission Type:</td>
+                          <td>Manual 5 forward & 1 Reverse</td>
+                        </tr>
+                        <tr>
+                          <td>Dimensions:</td>
+                          <td>189 mm</td>
+                        </tr>
+                        <tr>
+                          <td>Fuel:</td>
+                          <td>Diesel</td>
+                        </tr>
+					</table>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="tabBx overview" id="tab2">
+          <div class="content container">
+            <div class="tabNav">
+              <div class="container">
+                <ul>
+                  <li><a href="javascript:void(0)" rel="features2" class="active">Features </a>
+                    <div class="activetab"><img src="images/active-tab.png" alt="Active Tab"></div>
+                  </li>
+                  <li><a href="javascript:void(0)" rel="specification3" >Specification (Petrol)</a>
+                    <div class="activetab"><img src="images/active-tab.png" alt="Active Tab"></div>
+                  </li>
+                  <li><a href="javascript:void(0)" rel="specification4">Specification (Diesel)</a>
+                    <div class="activetab"><img src="images/active-tab.png" alt="Active Tab"></div>
+                  </li>
+                </ul>
+                <div class="clear"></div>
+              </div>
+            </div>
+            <div class="tabResult">
+            <div class="tabBx overview" id="features2" style="display:block">
+                <div class="content container">
+                  <div class="features">
+                  <ul>
+                  		<li>In addition to E</li>
+                        <li>Rear AC Vents</li>
+                        <li>2 DIN Integrated Audio</li>
+                        <li>Steering Mounted Audio Controls</li>
+                        <li>Electrically Adjustable ORVM</li>
+                        <li>Driver Seat Height Adjust</li>
+                        <li>Rear Defogger</li>
+                   </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tabBx overview" id="specification3">
+                <div class="content container">
+                  <div class="all-specification">
+                    <table>
+                        <tr>
+                          <td>Engine Type:</td>
+                          <td>4 CYLINDER, SOHC i-VTEC</td>
+                        </tr>
+                        <tr>
+                          <td>Maximum Power:</td>
+                          <td>119 ps @ 6600 rmp</td>
+                        </tr>
+                        <tr>
+                          <td>Maximum Torque:</td>
+                          <td>145 Nm @ 4600 rpm</td>
+                        </tr>
+                        <tr>
+                          <td>Displacement:</td>
+                          <td>1497 cc</td>
+                        </tr>
+                        <tr>
+                          <td>Suspension:</td>
+                          <td>(Front) Mcpherson Strut</td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td>(Rear) Torsion Beam</td>
+                        </tr>
+                        <tr>
+                          <td>Transmission Type:</td>
+                          <td>Manual 5 forward & 1 Reverse</td>
+                        </tr>
+                        <tr>
+                          <td>Dimensions:</td>
+                          <td>Ground Clearance 189 mm</td>
+                        </tr>
+                        <tr>
+                          <td>Fuel:</td>
+                          <td>Petrol</td>
+                        </tr>
+					</table>
+                  </div>
+                </div>
+              </div>
+              <div class="tabBx overview" id="specification4">
+                <div class="content container">
+                  <div class="all-specification">
+                    <table>
+                        <tr>
+                          <td>Engine Type:</td>
+                          <td>4 CYLINDER, DOHC i-DTEC</td>
+                        </tr>
+                        <tr>
+                          <td>Maximum Power:</td>
+                          <td>100 ps @ 3600 rmp</td>
+                        </tr>
+                        <tr>
+                          <td>Maximum Torque:</td>
+                          <td>200 Nm @ 1750 rpm</td>
+                        </tr>
+                        <tr>
+                          <td>Displacement:</td>
+                          <td>1498 cc</td>
+                        </tr>
+                        <tr>
+                          <td>Suspension:</td>
+                          <td>(Front) Mcpherson Strut</td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td>(Rear) Torsion Beam</td>
+                        </tr>
+                        <tr>
+                          <td>Transmission Type:</td>
+                          <td>Manual 5 forward & 1 Reverse</td>
+                        </tr>
+                        <tr>
+                          <td>Dimensions:</td>
+                          <td>189 mm</td>
+                        </tr>
+                        <tr>
+                          <td>Fuel:</td>
+                          <td>Diesel</td>
+                        </tr>
+					</table>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="tabBx overview" id="tab3">
+          <div class="content container">
+            <div class="tabNav">
+              <div class="container">
+                <ul>
+                  <li><a href="javascript:void(0)" rel="features3" class="active">Features </a>
+                    <div class="activetab"><img src="images/active-tab.png" alt="Active Tab"></div>
+                  </li>
+                  <li><a href="javascript:void(0)" rel="specification5" >Specification (Petrol)</a>
+                    <div class="activetab"><img src="images/active-tab.png" alt="Active Tab"></div>
+                  </li>
+                  <li><a href="javascript:void(0)" rel="specification6">Specification (Diesel)</a>
+                    <div class="activetab"><img src="images/active-tab.png" alt="Active Tab"></div>
+                  </li>
+                </ul>
+                <div class="clear"></div>
+              </div>
+            </div>
+            <div class="tabResult">
+            <div class="tabBx overview" id="features3" style="display:block">
+                <div class="content container">
+                  <div class="features">
+                  <ul>
+                  		<li>IN addition to S</li>
+                        <li>Front Dual SRS Airbags</li>
+                        <li>Alloy Wheels</li>
+                        <li>Rear Wiper & Washer</li>
+                        <li>Front Fog Lamps</li>
+                        <li>2nd Row Sliding</li>
+                        <li>2nd Row Seat Center Armrest</li>
+                        <li>Security Alarm</li>
+                   </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tabBx overview" id="specification5">
+                <div class="content container">
+                  <div class="all-specification">
+                    <table>
+                        <tr>
+                          <td>Engine Type:</td>
+                          <td>4 CYLINDER, SOHC i-VTEC</td>
+                        </tr>
+                        <tr>
+                          <td>Maximum Power:</td>
+                          <td>119 ps @ 6600 rmp</td>
+                        </tr>
+                        <tr>
+                          <td>Maximum Torque:</td>
+                          <td>145 Nm @ 4600 rpm</td>
+                        </tr>
+                        <tr>
+                          <td>Displacement:</td>
+                          <td>1497 cc</td>
+                        </tr>
+                        <tr>
+                          <td>Suspension:</td>
+                          <td>(Front) Mcpherson Strut</td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td>(Rear) Torsion Beam</td>
+                        </tr>
+                        <tr>
+                          <td>Transmission Type:</td>
+                          <td>Manual 5 forward & 1 Reverse</td>
+                        </tr>
+                        <tr>
+                          <td>Dimensions:</td>
+                          <td>Ground Clearance 189 mm</td>
+                        </tr>
+                        <tr>
+                          <td>Fuel:</td>
+                          <td>Petrol</td>
+                        </tr>
+					</table>
+                  </div>
+                </div>
+              </div>
+              <div class="tabBx overview" id="specification6">
+                <div class="content container">
+                  <div class="all-specification">
+                    <table>
+                        <tr>
+                          <td>Engine Type:</td>
+                          <td>4 CYLINDER, DOHC i-DTEC</td>
+                        </tr>
+                        <tr>
+                          <td>Maximum Power:</td>
+                          <td>100 ps @ 3600 rmp</td>
+                        </tr>
+                        <tr>
+                          <td>Maximum Torque:</td>
+                          <td>200 Nm @ 1750 rpm</td>
+                        </tr>
+                        <tr>
+                          <td>Displacement:</td>
+                          <td>1498 cc</td>
+                        </tr>
+                        <tr>
+                          <td>Suspension:</td>
+                          <td>(Front) Mcpherson Strut</td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td>(Rear) Torsion Beam</td>
+                        </tr>
+                        <tr>
+                          <td>Transmission Type:</td>
+                          <td>Manual 5 forward & 1 Reverse</td>
+                        </tr>
+                        <tr>
+                          <td>Dimensions:</td>
+                          <td>189 mm</td>
+                        </tr>
+                        <tr>
+                          <td>Fuel:</td>
+                          <td>Diesel</td>
+                        </tr>
+					</table>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        
+        <div class="tabBx overview" id="tab4">
+          <div class="content container">
+            <div class="tabNav">
+              <div class="container">
+                <ul>
+                  <li><a href="javascript:void(0)" rel="features4" class="active">Features </a>
+                    <div class="activetab"><img src="images/active-tab.png" alt="Active Tab"></div>
+                  </li>
+                  <li><a href="javascript:void(0)" rel="specification7" >Specification (Petrol)</a>
+                    <div class="activetab"><img src="images/active-tab.png" alt="Active Tab"></div>
+                  </li>
+                  <li><a href="javascript:void(0)" rel="specification8">Specification (Diesel)</a>
+                    <div class="activetab"><img src="images/active-tab.png" alt="Active Tab"></div>
+                  </li>
+                </ul>
+                <div class="clear"></div>
+              </div>
+            </div>
+            <div class="tabResult">
+            <div class="tabBx overview" id="features4" style="display:block">
+                <div class="content container">
+                  <div class="features">
+                  <ul>
+                  		<li>In addition to V</li>
+                        <li>15.7cm Touch Screen Audio Visual Navigation <br>
+                        (DVD/CD, Bluetooth, USB, AUX, i-POD, MP3, FM/AM)</li>
+                        <li>Rear Parking Camera</li>
+                        <li>Woody Garnish on Center Console</li>
+                        <li>Woody Garnish on Door Armrest</li>
+                   </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tabBx overview" id="specification7">
+                <div class="content container">
+                  <div class="all-specification">
+                    <table>
+                        <tr>
+                          <td>Engine Type:</td>
+                          <td>4 CYLINDER, SOHC i-VTEC</td>
+                        </tr>
+                        <tr>
+                          <td>Maximum Power:</td>
+                          <td>119 ps @ 6600 rmp</td>
+                        </tr>
+                        <tr>
+                          <td>Maximum Torque:</td>
+                          <td>145 Nm @ 4600 rpm</td>
+                        </tr>
+                        <tr>
+                          <td>Displacement:</td>
+                          <td>1497 cc</td>
+                        </tr>
+                        <tr>
+                          <td>Suspension:</td>
+                          <td>(Front) Mcpherson Strut</td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td>(Rear) Torsion Beam</td>
+                        </tr>
+                        <tr>
+                          <td>Transmission Type:</td>
+                          <td>Manual 5 forward & 1 Reverse</td>
+                        </tr>
+                        <tr>
+                          <td>Dimensions:</td>
+                          <td>Ground Clearance 189 mm</td>
+                        </tr>
+                        <tr>
+                          <td>Fuel:</td>
+                          <td>Petrol</td>
+                        </tr>
+					</table>
+                  </div>
+                </div>
+              </div>
+              <div class="tabBx overview" id="specification8">
+                <div class="content container">
+                  <div class="all-specification">
+                    <table>
+                        <tr>
+                          <td>Engine Type:</td>
+                          <td>4 CYLINDER, DOHC i-DTEC</td>
+                        </tr>
+                        <tr>
+                          <td>Maximum Power:</td>
+                          <td>100 ps @ 3600 rmp</td>
+                        </tr>
+                        <tr>
+                          <td>Maximum Torque:</td>
+                          <td>200 Nm @ 1750 rpm</td>
+                        </tr>
+                        <tr>
+                          <td>Displacement:</td>
+                          <td>1498 cc</td>
+                        </tr>
+                        <tr>
+                          <td>Suspension:</td>
+                          <td>(Front) Mcpherson Strut</td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td>(Rear) Torsion Beam</td>
+                        </tr>
+                        <tr>
+                          <td>Transmission Type:</td>
+                          <td>Manual 5 forward & 1 Reverse</td>
+                        </tr>
+                        <tr>
+                          <td>Dimensions:</td>
+                          <td>189 mm</td>
+                        </tr>
+                        <tr>
+                          <td>Fuel:</td>
+                          <td>Diesel</td>
+                        </tr>
+					</table>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        
+        <div class="tabBx overview" id="tab5">
+          <div class="content container">
+            <div class="tabNav">
+              <div class="container">
+                <ul>
+                  <li><a href="javascript:void(0)" rel="features5" class="active">Features </a>
+                    <div class="activetab"><img src="images/active-tab.png" alt="Active Tab"></div>
+                  </li>
+                  <li><a href="javascript:void(0)" rel="specification9" >Specification (Petrol)</a>
+                    <div class="activetab"><img src="images/active-tab.png" alt="Active Tab"></div>
+                  </li>
+                  <li><a href="javascript:void(0)" rel="specification10">Specification (Diesel)</a>
+                    <div class="activetab"><img src="images/active-tab.png" alt="Active Tab"></div>
+                  </li>
+                </ul>
+                <div class="clear"></div>
+              </div>
+            </div>
+            <div class="tabResult">
+            <div class="tabBx overview" id="features5" style="display:block">
+                <div class="content container">
+                  <div class="features">
+                  <ul>
+                  		<li>In addition to V</li>
+                        <li>Projector Headlamps with LED Position lamps
+						<br>- RS Exclusive</li>
+                        <li>Front Grille</li>
+                        <li>Front & Rear Bumper</li>
+                        <li>Alloy Wheels</li>
+                        <li>Tailgate Spoiler</li>
+                        <li>Side Sill Garnish</li>
+                        <li>Retractable ORVM with Turn lights</li>
+                        <li>Chrome Outer Door Handle</li>
+                   </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tabBx overview" id="specification9">
+                <div class="content container">
+                  <div class="all-specification">
+                    <table>
+                      <tr>
+                        <td>Engine Type:3</td>
+                        <td>4 Cylinder, DOHC i-DTEC</td>
+                      </tr>
+                      <tr>
+                        <td>Maximum Power: </td>
+                        <td>100ps @ 3600rpm</td>
+                      </tr>
+                      <tr>
+                        <td>Maximum Torque: </td>
+                        <td>200Nm @ 1500-3500rpm</td>
+                      </tr>
+                      <tr>
+                        <td>Displacement: </td>
+                        <td>1498 cc</td>
+                      </tr>
+                      <tr>
+                        <td>Suspension: </td>
+                        <td>(Front) McPherson Strut<br>
+                          (Rear) Torsion Beam</td>
+                      </tr>
+                      <tr>
+                        <td>Transmission Type:</td>
+                        <td>Manual</td>
+                      </tr>
+                      <tr>
+                        <td>Dimensions: </td>
+                        <td>Length (3990mm) x Width (1682mm) x Height (1505mm)</td>
+                      </tr>
+                      <tr>
+                        <td>Fuel: </td>
+                        <td>Diesel</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="tabBx overview" id="specification10">
+                <div class="content container">
+                  <div class="all-specification">
+                    <table>
+                      <tr>
+                        <td>Engine Type:3</td>
+                        <td>4 Cylinder, DOHC i-DTEC</td>
+                      </tr>
+                      <tr>
+                        <td>Maximum Power: </td>
+                        <td>100ps @ 3600rpm</td>
+                      </tr>
+                      <tr>
+                        <td>Maximum Torque: </td>
+                        <td>200Nm @ 1500-3500rpm</td>
+                      </tr>
+                      <tr>
+                        <td>Displacement: </td>
+                        <td>1498 cc</td>
+                      </tr>
+                      <tr>
+                        <td>Suspension: </td>
+                        <td>(Front) McPherson Strut<br>
+                          (Rear) Torsion Beam</td>
+                      </tr>
+                      <tr>
+                        <td>Transmission Type:</td>
+                        <td>Manual</td>
+                      </tr>
+                      <tr>
+                        <td>Dimensions: </td>
+                        <td>Length (3990mm) x Width (1682mm) x Height (1505mm)</td>
+                      </tr>
+                      <tr>
+                        <td>Fuel: </td>
+                        <td>Diesel</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        
+        <div class="tabBx overview" id="tab6">
+          <div class="content container">
+            <div class="tabNav">
+              <div class="container">
+                <ul>
+                  <li><a href="javascript:void(0)" rel="features6" class="active">Features </a>
+                    <div class="activetab"><img src="images/active-tab.png" alt="Active Tab"></div>
+                  </li>
+                  <li><a href="javascript:void(0)" rel="specification11" >Specification (Petrol)</a>
+                    <div class="activetab"><img src="images/active-tab.png" alt="Active Tab"></div>
+                  </li>
+                  <li><a href="javascript:void(0)" rel="specification12">Specification (Diesel)</a>
+                    <div class="activetab"><img src="images/active-tab.png" alt="Active Tab"></div>
+                  </li>
+                </ul>
+                <div class="clear"></div>
+              </div>
+            </div>
+            <div class="tabResult">
+            <div class="tabBx overview" id="features6" style="display:block">
+                <div class="content container">
+                  <div class="features">
+                  <ul>
+                  		<li>In addition to RS</li>
+                        <li>15.7cm Touch Screen Audio Visual Navigation (DVD/CD,<br>
+                         Bluetooth, USB, AUX, i-POD, MP3, FM/AM)</li>
+                        <li>Rear Parking Camera</li>
+                        <li>Woody Garnish on Center Console</li>
+                        <li>Woody Garnish on Door Armrest</li>
+                   </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="tabBx overview" id="specification11">
+                <div class="content container">
+                  <div class="all-specification">
+                    <table>
+                        <tr>
+                          <td>Engine Type:</td>
+                          <td>4 CYLINDER, SOHC i-VTEC</td>
+                        </tr>
+                        <tr>
+                          <td>Maximum Power:</td>
+                          <td>119 ps @ 6600 rmp</td>
+                        </tr>
+                        <tr>
+                          <td>Maximum Torque:</td>
+                          <td>145 Nm @ 4600 rpm</td>
+                        </tr>
+                        <tr>
+                          <td>Displacement:</td>
+                          <td>1497 cc</td>
+                        </tr>
+                        <tr>
+                          <td>Suspension:</td>
+                          <td>(Front) Mcpherson Strut</td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td>(Rear) Torsion Beam</td>
+                        </tr>
+                        <tr>
+                          <td>Transmission Type:</td>
+                          <td>Manual 5 forward & 1 Reverse</td>
+                        </tr>
+                        <tr>
+                          <td>Dimensions:</td>
+                          <td>Ground Clearance 189 mm</td>
+                        </tr>
+                        <tr>
+                          <td>Fuel:</td>
+                          <td>Petrol</td>
+                        </tr>
+					</table>
+                  </div>
+                </div>
+              </div>
+              <div class="tabBx overview" id="specification12">
+                <div class="content container">
+                  <div class="all-specification">
+                    <table>
+                        <tr>
+                          <td>Engine Type:</td>
+                          <td>4 CYLINDER, DOHC i-DTEC</td>
+                        </tr>
+                        <tr>
+                          <td>Maximum Power:</td>
+                          <td>100 ps @ 3600 rmp</td>
+                        </tr>
+                        <tr>
+                          <td>Maximum Torque:</td>
+                          <td>200 Nm @ 1750 rpm</td>
+                        </tr>
+                        <tr>
+                          <td>Displacement:</td>
+                          <td>1498 cc</td>
+                        </tr>
+                        <tr>
+                          <td>Suspension:</td>
+                          <td>(Front) Mcpherson Strut</td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td>(Rear) Torsion Beam</td>
+                        </tr>
+                        <tr>
+                          <td>Transmission Type:</td>
+                          <td>Manual 5 forward & 1 Reverse</td>
+                        </tr>
+                        <tr>
+                          <td>Dimensions:</td>
+                          <td>189 mm</td>
+                        </tr>
+                        <tr>
+                          <td>Fuel:</td>
+                          <td>Diesel</td>
+                        </tr>
+					</table>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="show-textbox modelshowtxt">
+    <div class="container">
+      <div class="textshowcntr">
+        <ul>
+          <li class="icon-rupee">
+            <h2><i><img src="images/rupee.png" alt="Easy Finance"></i><a href="pdfs/easy-finance.pdf" target="_blank"><span>Easy</span> Finance</a> </h2>
+          </li>
+          <li>
+            <h2><span>Call Now</span> 8652122222 </h2>
+          </li>
+          <li>
+            <h2><span>Email</span> <a href="mailto:marketing@linkwayhonda.com"> marketing@linkwayhonda.com </a> </h2>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="at-contactus aftersale-form model-scheduledtest" id="book-test-drive">
+    <div class="container">
+      <h2>Schedule Test Drive <span>We would get back to you in 24 HRS. </span></h2>
+      <div class="auto-ter-form">
+        <form method="post" action="contact.html" onSubmit="return form_validate_jquery('.auto-ter-form')">
+        <div class="at-layout">
+          <div class="at-form-row">
+            <div class="atfgrid-6">
+              <input type="text" name="full_name" validation="text" title="Name" placeholder="Name">
+            </div>
+            <div class="atfgrid-6 margingbetwn">
+              <input type="text" name="email" validation="email" title="Email" placeholder="Email">
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="at-form-row">
+            <div class="atfgrid-6">
+              <input type="text" name="contact_no" onKeyPress="return onlyNos(event,this);" validation="mobile" maxlength="10" title="Contact No." placeholder="Contact No.">
+            </div>
+            <div class="atfgrid-6 margingbetwn">
+              <div class="input-type-select">
+                <select name="car_model" id="car_model" validation="text">
+                  <option value="">Model</option>
+                </select>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="at-form-row">
+            <div class="atfgrid-6">
+              <input type="text" name="schedule_date" autocomplete="off" validation="text" title="Date" placeholder="Date" id="datepicker">
+            </div>
+            <div class="atfgrid-6 margingbetwn">
+              <input type="text" name="schedule_time" validation="text" class="time" title="Preffered Time" placeholder="Preffered Time">
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="at-form-row">
+            <div class="atfgrid-6">
+              <input type="submit" name="testdrive" value="SUBMIT >">
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+        </form>
+      </div>
+      <div class="at-conact-img"> <img src="images/sterring.png" alt="Sterring"> </div>
+    </div>
+  </section>
+  <div class="other-logocntr">
+    <div class="container">
+      <div class="other-logohm">
+        <div class="display-otherlogo">
+          <div class="hmotherlogo-cell">
+            <ul>
+              <li class="honda-care-icon"> <a target="_blank" href="pdfs/honda-extended-warranty.pdf"><img src="images/honda-care.png" alt="Honda Care"></a> </li>
+              <li class="honda-assure-icon"> <a target="_blank" href="pdfs/honda-assure.pdf"><img src="images/honda-assure.png" alt="Honda Assure"></a> </li>
+              <li> <a target="_blank" href="pdfs/honda-road-assistance.pdf"><img src="images/road-side-assisatance.png" alt="Road Side Assisatance"></a> </li>
+              <li class="last-threeicon"> <a  href="auto-terrance.html"> <img src="images/auto-terannce.png" alt="Honda Auto Terannce"></a> </li>
+              <li class="last-threeicon"><a target="_blank" href="pdfs/honda-periodic-maintainance.pdf"><img src="images/periodic-maintenance.png" alt="Honda Periodic Maintainance"></a></li>
+              <li class="last-threeicon"><img src="images/one2one.png" alt="Honda one2one"></li>
+              <li> <a target="_blank" href="http://www.hondabuddyloyalty.com"><img src="images/improbe-mileagenew.png" alt="Honda Improbe Mileagenew"></a> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <ul>
+          <li>
+            <dl>
+              <dt class="openmbltab"> Andheri (E) Showroom & Service </dt>
+              <dd style="display:block">
+                <p> Tel. : (91-22) 6612 3000 </p>
+                <p>Fax : (91-22) 6612 3299</p>
+              </dd>
+            </dl>
+            <!--<dl>
+              <dt class="openmbltab"> Goregaon (W) Showroom & Service </dt>
+              <dd style="display:block">
+                <p> Tel. : (91-22) 6612 3700 </p>
+                <p> Fax : (91-22) 6612 3737 </p>
+              </dd>
+            </dl>-->
+            <dl>
+              <dt class="openmbltab"> Kanjurmarg Workshop </dt>
+              <dd style="display:block">
+                <p> Tel. : (91-22) 6612 3300 </p>
+                <p> Fax : (91-22) 6612 3344 </p>
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <dl class="nomarginmbl">
+              <dt>Models</dt>
+              <dd>
+                <ul>
+                  <li> <a href="honda-brio.html">- Honda Brio</a> </li>
+                  <li> <a href="honda-amaze.html">- Honda Amaze</a> </li>
+                  <li> <a href="honda-all-new-jazz.html">- Honda All New Jazz</a> </li>
+                  <li> <a href="honda-city.html">- Honda City</a> </li>
+                  <!--<li> <a href="honda-mobilio.html">- Honda Mobilio</a> </li>-->
+                  <li> <a href="honda-br-v.html">- Honda BRV</a> </li>
+                  <li> <a href="honda-cr-v.html">- Honda CRV</a> </li>
+                  <li> <a href="honda-wr-v.html">- Honda WRV</a> </li>
+
+                </ul>
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>Customer Guidance</dt>
+              <dd>
+                <ul>
+                  <li> <a href="emi-calculator.html">- EMI Calculator</a> </li>
+                  <li> <a href="car-models.html#book-test-drive">- Book a Test Drive</a>  </li>
+                  <li> <a href="after-sale.html#request-service">- Service Request</a> </li>
+                  <li> <a class="showroomtym-anchor">- Showroom Timings (9AM - 8PM)</a> </li>
+                  <li> <a href="contact.html">- Contact</a> </li>
+                </ul>
+              </dd>
+            </dl>
+            <div class="social-box"> <a href="#"><img src="images/you-tube-icon.png" alt="YouTub Icon"></a> <a href="#"><img src="images/twitter-icon.png" alt="Twitter Icon"></a> <a href="#"><img src="images/fb-icon.png" alt="Facebook Icon"></a> </div>
+            <div class="copyright-box"> ©2017  Linkway Honda Pvt. Ltd. <span class="privacy-policy"><a href="#"> Privacy</a> | <a href="#">Sitemap</a></span>
+              <div class="siteby">Site by <a href="http://kalptech.com/" target="_blank">Kalptech Systems</a></div>
+              <div class="footer-autohanger"> <a href="http://www.autohangar.com/" target="_blank"><img src="images/auto-hanger.png" alt="Auto Hangar"></a> </div>
+            </div>
+          </li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </footer>
+</div>
+<div class="overlay otherclose-btn" id="exteriors" data-animation-in="fadeIn" data-animation-out="fadeInOut">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-header">Honda Mobilio 360 Exterior View</div>
+      <div class="overlay-content  car-mangment-info">
+      <div class="img360"><img src="images/360img.png" alt="Honda Mobilio 360 View"></div>
+        <div id="myCar"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="overlay otherclose-btn" id="interior" data-animation-in="fadeIn" data-animation-out="fadeInOut">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-header">Honda Mobilio 360 Interior View</div>
+      <div class="overlay-content mobilio-pd">
+        <div ><iframe src="https://www.hondacarindia.com/mobilio/360_degree/Panorama_360.html" style="width: 975px; height: 620px;"></iframe></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="scripts/3deye.min.js"></script>
+<script>
+$(document).ready(function(){
+	
+	$("#myCar").vc3dEye({
+		imagePath:"images/honda-mobilio/360/",
+		totalImages:75,
+		imageExtension:"jpg"
+	});
+	
+});
+
+</script>
+<script>
+	$(function(){
+		var slider;
+		slider=$('.model-cars').bxSlider({
+			mode: 'horizontal',auto: false,autoControls: false,controls:false,pause:700000,speed:1000,
+			pagerCustom: '#thumbnails-pager'
+		})
+		$('.modlecolor-slider').bxSlider({
+			mode: 'fade',auto: false,autoControls: false,controls:false,pause:5000,speed:1000,
+			pagerCustom: '#colorthumb-pager'
+		})
+		$('#thumbnails-pager a').click(function() {
+    setTimeout(function() {
+        slider.startAuto();
+            },1000);
+    });
+	})
+</script> 
+<script>
+	var parameter = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+	var decodedparameter = decodeURIComponent(parameter)
+	var param = decodedparameter.split('=');
+	if(param[0] == "enquiry")
+	{
+		alert( param[1] + ", kindly check your email for the same");
+	}
+  $( "#datepicker" ).datepicker({
+	changeMonth: true,
+	changeYear: true,
+	yearRange: "c-50:c",	 
+	dateFormat: "dd/mm/yy"
+	
+  });
+  </script> 
+<script src="scripts/common.js" type="text/javascript"></script>
+</body>
+</html>

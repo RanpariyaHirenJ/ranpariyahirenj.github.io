@@ -1,0 +1,514 @@
+﻿<!doctype html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<title>After Sale | Linkway Honda</title>
+<link rel="stylesheet" type="text/css" href="styles/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="styles/owl.theme.css">
+<link rel="stylesheet" type="text/css" href="styles/prettyPhoto.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<script src="scripts/jquery-min.js" type="text/javascript"></script>
+<script src="scripts/jquery.bxslider.min.js"></script>
+<script src="scripts/jquery.prettyPhoto.js"></script>
+<script src="scripts/owl.carousel.min.js"></script>
+<script src="scripts/js_class.js" type="text/javascript"></script>
+<script>
+$(document).ready(function() {
+	var car_name = $('input[type="hidden"]').val();
+	var func  = "get_car_model";
+	$.ajax({
+		method: "POST",
+		url: "ajax_functions.php",
+		data: { car_model: car_name , "function": func }
+	})
+	.done(function( msg ) {
+		if(msg)
+		{
+			$("#car_model").empty();
+			$("#car_model").append(msg);
+		}
+	});
+});
+</script>
+<style>.preowncars-box {display: block !important;}</style>
+</head>
+
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div class="short-header">
+      <div class="container">
+        <div class="short-toplinks">
+          <div class="abt-contct-link">
+            <ul>
+              <li> <a href="about.html">About</a> </li>
+              <li> <a href="events.html">Events </a> </li>
+              <li> <a href="careers.html">Careers</a> </li>
+              <li> <a href="contact.html">Contact </a> </li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+          <div class="healp-lineno"> 24hrs Service Helpline : 9223547000 </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div class="page-header">
+      <div class="container">
+        <div class="main-menulinks">
+          <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="Linkway Honda log"></a> </div>
+          <div class="nav-icon">
+            <button class="menu-icon mobil-icon-toggle"> <span>toggle menu</span> </button>
+          </div>
+          <div class="navigation">
+            <ul>
+              <li class="dropdown-menu"> <a class="removelink-mbl" href="car-models.html">Select a Model <span>Buy a New Car</span> </a>
+                <div class="submenu-dropdown animated fadeInDown">
+                  <ul>
+                    <li><a href="honda-brio.html">Brio</a></li>
+                    <li><a href="honda-amaze.html">New Amaze</a></li>
+                    <li><a href="honda-all-new-jazz.html">All New Jazz</a></li>
+                    <li><a href="honda-city.html">City</a></li>
+                    <!--<li><a href="honda-mobilio.html">Mobilio</a></li>-->
+                    <li><a href="honda-br-v.html">BR-V</a></li>
+                    <li><a href="honda-cr-v.html">CR-V</a></li>
+                  </ul>
+                </div>
+                <div class="destopnavigation">
+                  <div class="container">
+                    <div class="main-imge-menu">
+                      <ul>
+                        <li> <a href="honda-brio.html">
+                          <div class="car-image-menu"><img src="images/brio.png" alt="Honda Brio"></div>
+                          Brio</a> </li>
+                        <li> <a href="honda-amaze.html">
+                          <div class="car-image-menu"><img src="images/amaze.png" alt="Honda Amaze"></div>
+                          New Amaze </a> </li>
+                        <li> <a href="honda-all-new-jazz.html">
+                          <div class="car-image-menu"><img src="images/all-new-amaze.png" alt="Honda All New Jazz"></div>
+                          All New Jazz</a> </li>
+                        <li> <a href="honda-city.html">
+                          <div class="car-image-menu"><img src="images/city.png" alt="Honda City"></div>
+                          City </a> </li>
+                        <!--<li> <a href="honda-mobilio.html">
+                          <div class="car-image-menu"><img src="images/mobilo.png" alt="Honda Mobilio"></div>
+                          Mobilio </a> </li>-->
+                        <li> <a href="honda-br-v.html">
+                          <div class="car-image-menu"><img src="images/brv.png" alt="Honda BR-V"></div>
+                          BR-V</a> </li>
+                        <li> <a href="honda-cr-v.html">
+                          <div class="car-image-menu"><img src="images/cr-v.png" alt="Honda CR-V"></div>
+                          CR-V</a> </li>
+                        <li> <a href="honda-wr-v.html">
+                          <div class="car-image-menu"><img src="images/wr-v.png" alt="Honda WR-V"></div>
+                          WR-V</a> </li>
+                      </ul>
+                      <div class="clear"></div>
+                    </div>
+                    <div class="hm-featr-readmore"> <a href="car-models.html">VIEW ALL +</a> </div>
+                  </div>
+                </div>
+              </li>
+              <li> <a href="auto-terrance.html">Auto Terrace <span>Exchange a Car</span> </a> </li>
+              <li> <a href="after-sale.html" class="active">After Sales <span>Service a Car</span> </a> </li>
+              <li class="desktoplast"> <a href="corporate-sale.html">Corporate Sales <span>Attractive Schemes</span> </a> </li>
+              <li class="mobileonly-link"><a href="about.html">About</a></li>
+              <li class="mobileonly-link"><a href="events.html">Events </a></li>
+              <li class="mobileonly-link"><a href="careers.html">Careers</a></li>
+              <li class="mobileonly-link"><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="career-heading corporatesaleheading aftersaleheadng">
+    <div class="container">
+      <h2>After Sales</h2>
+      <div class="bannergallery">
+      	<!--<div class="register-redbox">
+        	<div class="redbox-text">
+          	 <span>Register @<br>
+Linkway Honda and get</span> 
+Rs 500/off* 
+          </div>
+          <div class="smalltext-box">
+          	* For first service/first time visit to any Linkway Honda outlet 
+          </div>
+        </div>-->
+        <ul class="after-salebnnr">
+          <li><img src="images/after-sales1.jpg" alt="After Sales Images 1"></li>
+          <li><img src="images/after-sales2.jpg" alt="After Sales Images 2"></li>
+          <li><img src="images/after-sales3.jpg" alt="After Sales Images 3"></li>
+          <li><img src="images/after-sales4.jpg" alt="After Sales Images 4"></li>
+        </ul>
+        
+      </div>
+        <div class="online-offer">
+           	<div class="green-icon"><img src="images/green-batch.png" alt="Online Offer"><span>Online Offer</span></div>
+            <div class="clear"></div>
+			<p>Rs. 500/- flat off for new customer and Wax Polish FREE* for existing customer. <br/>
+            <span class="condition">* Offer valid for 2 visits</span></p>
+            <a href="#request-service" class="slide">Request Service&nbsp;></a>
+            <div class="clear"></div>
+        </div>
+        
+
+    </div>
+  </section>
+  <section class="aftersaleinfo">
+    <div class="container">
+      <div class="infotextsale">
+        <ul>
+          <!--<li>
+            <h3>Andheri</h3>
+            <div class="branch-mangr">Ms Priti Dhuri:</div>
+            <p>T : <span>(+91) 9223547020</span></p>
+            <p>E: <a href="mailto:appointment7@linkwayhonda.com"> <span>appointment7@linkwayhonda.com</span></a></p>
+            <div class="view-details"> <a href="andheri_east.html"> KNOW MORE +</a></div>
+          </li>
+          <li>
+            <h3>Kanjurmarg </h3>
+            <div class="branch-mangr">Ms Reena Nazareth:</div>
+            <p>T : <span>(+91) 9223292230</span></p>
+            <p>E: <a href="mailto:kanjur@autohangar.com"> <span>kanjur@autohangar.com</span></a></p>
+            <div class="view-details"> <a href="kanjurmarg.html"> KNOW MORE +</a></div>
+          </li>
+          <li>
+            <h3>Goregaon </h3>
+            <div class="branch-mangr">Ms Shraddha Anavkar:</div>
+            <p>T : <span>(+91) 8108181177</span></p>
+            <p>E: <a href="mailto:relations.goregaon@linkwayhonda.com"> <span>relations.goregaon@linkwayhonda.com</span></a></p>
+            <div class="view-details"> <a href="goregaon.html"> KNOW MORE +</a></div>
+          </li>-->
+          <li>
+            <h3>Andheri</h3>
+            <div class="branch-mangr">Ms. Richa Dixit</div>
+            <p>T : <span>(+91) 7506501846</span></p>
+            <p>E: <a href="mailto:customercarelinkway@autohangar.com"> <span>customercarelinkway@autohangar.com</span></a></p>
+            <div class="view-details"> <a href="andheri_east.html"> KNOW MORE +</a></div>
+          </li>
+          <li>
+            <h3>Kanjurmarg </h3>
+            <div class="branch-mangr">Ms. Geeta Mehra</div>
+            <p>T : <span>(+91) 7045793326</span></p>
+            <p>E: <a href="mailto:kanjur@autohangar.com"> <span>kanjur@autohangar.com</span></a></p>
+            <div class="view-details"> <a href="kanjurmarg.html"> KNOW MORE +</a></div>
+          </li>
+          <!--<li>
+            <h3>Goregaon </h3>
+            <div class="branch-mangr">Ms Priti Dhuri</div>
+            <p>T : <span>(+91) 8108181177</span></p>
+            <p>E: <a href="mailto:customer_relations.goregaon@linkway.com"> <span>customer_relations.goregaon@linkway.com</span></a></p>
+            <div class="view-details"> <a href="goregaon.html"> KNOW MORE +</a></div>
+          </li>-->
+        </ul>
+        <div class="clear"></div>
+      </div>
+      <!--<div class="request-servicebox text-center">
+        <p>We offer free pick up & drop facility</p>
+        <a href="#request-service" class="slide">REQUEST SERVICE > </a> </div>-->
+    </div>
+  </section>
+  <section class="after-sale-points">
+    <div class="aftersale-pointbanr">
+      <div class="abt-bancorner"> <img src="images/about-banner-cross.png" alt="About Banner Cross"> </div>
+      <div class="container">
+        <div class="aftersale-points">
+          <h4>Come to us for:</h4>
+          <div class="ticker-points">
+            <ul>
+              <li> Personal panel Painting jobs </li>
+              <li> INSURANCE PANEL </li>
+              <li> VAS </li>
+              <li> ACCESSORIES FITMENTS </li>
+              <li> EXTENDED WARRANTY /  Any time warranty </li>
+              <li> RSA </li>
+              <li> Service Package </li>
+            </ul>
+          </div>
+          <div class="ticker-points ticker-pointsleft">
+            <ul>
+              <li> Overcoat – Same Color / Color Change /Exotic colors. </li>
+              <li> Towing Assistance/ 24 Hrs Helpline Breakdown Service </li>
+              <li> Vehicle Checkup / Inspection </li>
+              <li> Tire Rotation </li>
+              <li> BODYSHOP –Accidental Repairs under insurance claim & 
+                Cashless Facility  Tie up with all major insurance company </li>
+            </ul>
+          </div>
+          <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+      <div class="points-rytslider">
+        <ul class="sliderpoints">
+          <li class="slide1"> <a href="images/men-at-work/01.jpg" rel="prettyPhoto[mens-at-work]" class="thumbnail-galry"></a>
+            <div style="display:none"> <a href="images/men-at-work/02.jpg" rel="prettyPhoto[mens-at-work]"></a> <a href="images/men-at-work/03.jpg" rel="prettyPhoto[mens-at-work]"></a> <a href="images/men-at-work/04.jpg" rel="prettyPhoto[mens-at-work]"></a> <a href="images/men-at-work/05.jpg" rel="prettyPhoto[mens-at-work]"></a> <a href="images/men-at-work/06.jpg" rel="prettyPhoto[mens-at-work]"></a> <a href="images/men-at-work/07.jpg" rel="prettyPhoto[mens-at-work]"></a> <a href="images/men-at-work/08.jpg" rel="prettyPhoto[mens-at-work]"></a> <a href="images/men-at-work/09.jpg" rel="prettyPhoto[mens-at-work]"></a> <a href="images/men-at-work/10.jpg" rel="prettyPhoto[mens-at-work]"></a> <a href="images/men-at-work/11.jpg" rel="prettyPhoto[mens-at-work]"></a> <a href="images/men-at-work/12.jpg" rel="prettyPhoto[mens-at-work]"></a> <a href="images/men-at-work/13.jpg" rel="prettyPhoto[mens-at-work]"></a> <a href="images/men-at-work/14.jpg" rel="prettyPhoto[mens-at-work]"></a> <a href="images/men-at-work/15.jpg" rel="prettyPhoto[mens-at-work]"></a> <a href="images/men-at-work/16.jpg" rel="prettyPhoto[mens-at-work]"></a> <a href="images/men-at-work/17.jpg" rel="prettyPhoto[mens-at-work]"></a> <a href="images/men-at-work/18.jpg" rel="prettyPhoto[mens-at-work]"></a> <a href="images/men-at-work/19.jpg" rel="prettyPhoto[mens-at-work]"></a> <a href="images/men-at-work/20.jpg" rel="prettyPhoto[mens-at-work]"></a> <a href="images/men-at-work/21.jpg" rel="prettyPhoto[mens-at-work]"></a> </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="period-maintainace">
+    <div class="container">
+      <div class="periodic-maintance">
+        <h2>Period Maintenance Plan</h2>
+        <p>To keep your car going on and on for miles together, its imperative to keep it in a peak performing condition. For that you would need a Periodic Maintenance Plan (PMP) to review your car's performance over a period of time and ensure that it always up and ready for you. <span class="view-details"> <a href="pdfs/honda-periodic-maintainance.pdf" target="_blank"> VIEW DETAILS +</a></span></p>
+      </div>
+    </div>
+  </section>
+  <section class="preowncars-box accessories-box">
+    <div class="container">
+      <h2><span>Accessories</span>
+      </h2>
+        <div class="clear"></div>
+      <div class="viewmore-slider">
+        <div id="view-more" class="owl-carousel">
+          <div class="item">
+            <div class="preowncar-img"> <a href="images/accessories-01.jpg" rel="prettyPhoto[accesories]"> <img src="images/accesories1.jpg" alt="Linkway Honda Accesories Image 1"> </a>
+              <!--<h3> Acessory Name </h3>
+              <p>Description Goes Here ....</p>-->
+            </div>
+          </div>
+          <div class="item">
+            <div class="preowncar-img"> <a href="images/acessories-02.jpg" rel="prettyPhoto[accesories]"> <img src="images/accesories2.jpg" alt="Linkway Honda Accesories Image 2"> </a>
+              <!--<h3> Acessory Name </h3>
+              <p>Description Goes Here ....</p>-->
+            </div>
+          </div>
+          <div class="item">
+            <div class="preowncar-img"> <a href="images/accessories-03.jpg" rel="prettyPhoto[accesories]"> <img src="images/accesories3.jpg" alt="Linkway Honda Accesories Image 3"> </a>
+              <!--<h3> Acessory Name </h3>
+              <p>Description Goes Here ....</p>-->
+            </div>
+          </div>
+          <div class="item">
+            <div class="preowncar-img"> <a href="images/accessories-04.jpg" rel="prettyPhoto[accesories]"> <img src="images/accesories4.jpg" alt="Linkway Honda Accesories Image 4"> </a>
+              <!--<h3> Acessory Name </h3>
+              <p>Description Goes Here ....</p>-->
+            </div>
+          </div>
+          <div class="item">
+            <div class="preowncar-img"> <a href="images/accessories-05.jpg" rel="prettyPhoto[accesories]"> <img src="images/accesories5.jpg" alt="Linkway Honda Accesories Image 5"> </a>
+              <!--<h3> Acessory Name </h3>
+              <p>Description Goes Here ....</p>-->
+            </div>
+          </div>
+          <div class="item">
+            <div class="preowncar-img"> <a href="images/accessories-06.jpg" rel="prettyPhoto[accesories]"> <img src="images/accesories6.jpg" alt="Linkway Honda Accesories Image 6"> </a>
+              <!--<h3> Acessory Name </h3>
+              <p>Description Goes Here ....</p>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="at-contactus aftersale-form" id="request-service">
+    <div class="container">
+      <h2>Please fill details below to Request a Service <span>We would get back to you in 24 HRS. </span></h2>
+      <div class="auto-ter-form">
+        <form method="post" action="saveinfo.php" onSubmit="return form_validate_jquery('.auto-ter-form')">
+        <div class="at-layout">
+          <div class="at-form-row">
+            <div class="atfgrid-6">
+              <input type="text" name="full_name" validation="text" title="Name" placeholder="Name">
+            </div>
+            <div class="atfgrid-6 margingbetwn">
+              <input type="text" name="email" validation="email" title="Email" placeholder="Email">
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="at-form-row">
+            <div class="atfgrid-6">
+              <input type="text" name="contact_no" onKeyPress="return onlyNos(event,this);" validation="mobile" maxlength="10" title="Contact No." placeholder="Contact No.">
+            </div>
+            <div class="atfgrid-6 margingbetwn">
+              <div class="input-type-select">
+                <select name="car_model" id="car_model" validation="text">
+                  <option value="">Model</option>
+                </select>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="at-form-row">
+             <div class="atfgrid-6 ">
+              <input type="text" name="vehicle_no" validation="text" title="Vehicle No." placeholder="Vehicle No.">
+             </div>
+          	 <div class="atfgrid-6 input-type-select margingbetwn">
+              <select name="location" id="location" validation="text">
+                  <option value="">Location</option>
+                  <option value="Andheri">Andheri</option>
+                  <option value="Kanjurmarg">Kanjurmarg</option>
+                </select>
+            </div>
+            <div class="clear"></div>
+          </div>
+            <div class="atfgrid-6 ">
+              <input type="submit" name="service_car" value="SUBMIT >">
+            </div>
+            <div class="clear"></div>
+
+        </div>
+        </form>
+      </div>
+      <div class="at-conact-img"> <img src="images/after-salebottom.jpg"> </div>
+    </div>
+  </section>
+<div class="other-logocntr">
+    <div class="container">
+      <div class="other-logohm">
+        <div class="display-otherlogo">
+          <div class="hmotherlogo-cell">
+            <ul>
+              <li class="honda-care-icon"> <a target="_blank" href="pdfs/honda-extended-warranty.pdf"><img src="images/honda-care.png" alt="Honda Care"></a> </li>
+              <li class="honda-assure-icon"> <a target="_blank" href="pdfs/honda-assure.pdf"><img src="images/honda-assure.png" alt="Honda Assure"></a> </li>
+              <li> <a target="_blank" href="pdfs/honda-road-assistance.pdf"><img src="images/road-side-assisatance.png" alt="Road Side Assisatance"></a> </li>
+              <li class="last-threeicon"> <a  href="auto-terrance.html"> <img src="images/auto-terannce.png" alt="Honda Auto Terannce"></a> </li>
+              <li class="last-threeicon"><a target="_blank" href="pdfs/honda-periodic-maintainance.pdf"><img src="images/periodic-maintenance.png" alt="Honda Periodic Maintainance"></a></li>
+              <li class="last-threeicon"><img src="images/one2one.png" alt="Honda one2one"></li>
+              <li> <a target="_blank" href="http://www.hondabuddyloyalty.com"><img src="images/improbe-mileagenew.png" alt="Honda Improbe Mileagenew"></a> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <ul>
+          <li>
+            <dl>
+              <dt class="openmbltab"> Andheri (E) Showroom & Service </dt>
+              <dd style="display:block">
+                <p> Tel. : (91-22) 6612 3000 </p>
+                <p>Fax : (91-22) 6612 3299</p>
+              </dd>
+            </dl>
+            <!--<dl>
+              <dt class="openmbltab"> Goregaon (W) Showroom & Service </dt>
+              <dd style="display:block">
+                <p> Tel. : (91-22) 6612 3700 </p>
+                <p> Fax : (91-22) 6612 3737 </p>
+              </dd>
+            </dl>-->
+            <dl>
+              <dt class="openmbltab"> Kanjurmarg Workshop </dt>
+              <dd style="display:block">
+                <p> Tel. : (91-22) 6612 3300 </p>
+                <p> Fax : (91-22) 6612 3344 </p>
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <dl class="nomarginmbl">
+              <dt>Models</dt>
+              <dd>
+                <ul>
+                  <li> <a href="honda-brio.html">- Honda Brio</a> </li>
+                  <li> <a href="honda-amaze.html">- Honda Amaze</a> </li>
+                  <li> <a href="honda-all-new-jazz.html">- Honda All New Jazz</a> </li>
+                  <li> <a href="honda-city.html">- Honda City</a> </li>
+                  <!--<li> <a href="honda-mobilio.html">- Honda Mobilio</a> </li>-->
+                  <li> <a href="honda-br-v.html">- Honda BRV</a> </li>
+                  <li> <a href="honda-cr-v.html">- Honda CRV</a> </li>
+                  <li> <a href="honda-wr-v.html">- Honda WRV</a> </li>
+
+                </ul>
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>Customer Guidance</dt>
+              <dd>
+                <ul>
+                  <li> <a href="emi-calculator.html">- EMI Calculator</a> </li>
+                  <li> <a href="car-models.html#book-test-drive">- Book a Test Drive</a>  </li>
+                  <li> <a href="after-sale.html#request-service">- Service Request</a> </li>
+                  <li> <a class="showroomtym-anchor">- Showroom Timings (9AM - 8PM)</a> </li>
+                  <li> <a href="contact.html">- Contact</a> </li>
+                </ul>
+              </dd>
+            </dl>
+            <div class="social-box"> <a href="#"><img src="images/you-tube-icon.png" alt="YouTub Icon"></a> <a href="#"><img src="images/twitter-icon.png" alt="Twitter Icon"></a> <a href="#"><img src="images/fb-icon.png" alt="Facebook Icon"></a> </div>
+            <div class="copyright-box"> ©2017  Linkway Honda Pvt. Ltd. <span class="privacy-policy"><a href="#"> Privacy</a> | <a href="#">Sitemap</a></span>
+              <div class="siteby">Site by <a href="http://kalptech.com/" target="_blank">Kalptech Systems</a></div>
+              <div class="footer-autohanger"> <a href="http://www.autohangar.com/" target="_blank"><img src="images/auto-hanger.png" alt="Auto Hangar"></a> </div>
+            </div>
+          </li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </footer>
+</div>
+<script>
+
+	$(function(){
+
+		var slider;
+
+		slider=$('.after-salebnnr').bxSlider({
+
+			mode: 'horizontal',auto: true,pager:false,autoControls: false,controls:true,pause:5000,speed:1000,
+
+		});
+
+		$('.bx-controls-direction a').click(function() {
+
+    setTimeout(function() {
+
+        slider.startAuto();
+
+            },1000);
+
+    });
+
+		/*$('.sliderpoints').bxSlider({
+
+			mode: 'fade',auto: true,pager:false,controls:true,pause:5000,speed:1000,
+
+		});*/
+		
+	})
+	$(function(){
+		$("a[rel^='prettyPhoto']").prettyPhoto({theme:'light_square',social_tools: false,show_title: 3, autoplay_slideshow: false});
+	})
+</script> 
+<script>
+	var parameter = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+	var decodedparameter = decodeURIComponent(parameter)
+	var param = decodedparameter.split('=');
+	if(param[0] == "enquiry")
+	{
+		alert( param[1] + ", kindly check your email for the same");
+	}
+    $(document).ready(function() {
+
+      var owl = $("#view-more");
+      owl.owlCarousel({
+       itemsCustom : [
+        [0, 1],
+				[400, 1],
+        [480, 1],
+        [767, 2],
+        [768, 2],
+        [1000, 3]
+      ],
+      });
+			
+    });
+    </script> 
+<script src="scripts/common.js" type="text/javascript"></script>
+</body>
+</html>

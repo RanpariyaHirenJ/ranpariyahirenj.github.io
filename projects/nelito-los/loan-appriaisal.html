@@ -1,0 +1,1699 @@
+﻿<!doctype html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<title>Nelito: LOS UI Screens</title>
+<link rel="stylesheet" type="text/css" href="styles/los-style.css">
+<link href="styles/jquery-ui.css" rel="stylesheet">
+<script src="scripts/jquery-min.js" type="text/javascript"></script>
+<script src="scripts/jquery-ui.js"></script>
+<script>
+$(function() {
+$( "#datepicker-1" ).datepicker();
+$( "#datepicker-2" ).datepicker();
+$( "#datepicker-3" ).datepicker();
+$( "#datepicker-4" ).datepicker();
+$( "#datepicker-5" ).datepicker();
+$( "#datepicker-6" ).datepicker();
+});
+
+if ($(window).width() > 1024){
+	$(window).scroll(function(){
+		var wind_height_cntr = $(window).height();
+		var wind_height = wind_height_cntr - 120;
+		var height=$(window).scrollTop();
+		if(height>220){
+			$(".fix-application-view").addClass("fix-view")
+			$(".application-view").css("height",wind_height)
+		}
+		if(height<220){
+			$(".fix-application-view").removeClass("fix-view")
+			$(".application-view").css("height", "100%")
+		}
+	});
+}
+//$(function(){
+//
+//	/*Animate label form*/
+//    $('.animate-label .input-group').click(function(){
+//		alert("hello")
+//	});
+//
+//})
+
+
+</script>
+<style>
+.fix-label {
+	position: unset !important;
+	top: 0px !important;
+	right: 0px !important;
+	left: 0px !important;
+	padding: 0 !important;
+	font-size: 14px !important;
+	font-weight: 500 !important;
+}
+.tab-navigation.fix-bar {
+	position: unset;
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div class="header-area">
+      <div class="logo-container">
+        <div class="logo"> <a href="#"><img src="images/logo.png" alt="logo"></a></div>
+        <div class="clear"></div>
+      </div>
+      <div class="navigation">
+        <ul>
+          <li> <a href="#">
+            <div class="menu-icon">
+              <div><i><img src="images/customer.png" alt="customer"></i></div>
+            </div>
+            <div class="menu-name">
+              <div><span>Customer</span></div>
+            </div>
+            </a> </li>
+          <li> <a href="#">
+            <div class="menu-icon">
+              <div><i><img src="images/accounts.png" alt="accounts"></i></div>
+            </div>
+            <div class="menu-name">
+              <div><span>Accounts</span></div>
+            </div>
+            </a> </li>
+          <li> <a href="#">
+            <div class="menu-icon">
+              <div><i><img src="images/transaction.png" alt="transaction"></i></div>
+            </div>
+            <div class="menu-name">
+              <div><span>Transactions</span></div>
+            </div>
+            </a> </li>
+          <li> <a href="locker/index.html">
+            <div class="menu-icon">
+              <div><i><img src="images/locker.png" alt="services"></i></div>
+            </div>
+            <div class="menu-name">
+              <div><span>Locker</span></div>
+            </div>
+            </a> </li>
+          <li> <a href="#">
+            <div class="menu-icon">
+              <div><i><img src="images/services.png" alt="services"></i></div>
+            </div>
+            <div class="menu-name">
+              <div><span>Services</span></div>
+            </div>
+            </a> </li>
+          <li> <a href="#">
+            <div class="menu-icon">
+              <div><i><img src="images/clearing.png" alt="clearing"></i></div>
+            </div>
+            <div class="menu-name">
+              <div><span>clearing</span></div>
+            </div>
+            </a> </li>
+          <li> <a href="#">
+            <div class="menu-icon">
+              <div><i><img src="images/inquiery.png" alt="inquiery"></i></div>
+            </div>
+            <div class="menu-name">
+              <div><span>Inquiry</span></div>
+            </div>
+            </a> </li>
+          <li> <a href="#">
+            <div class="menu-icon">
+              <div><i><img src="images/bills.png" alt="bills"></i></div>
+            </div>
+            <div class="menu-name">
+              <div><span>Bills </span></div>
+            </div>
+            </a> </li>
+          <li> <a href="#">
+            <div class="menu-icon">
+              <div><i><img src="images/ho-module.png" alt="ho-module"></i></div>
+            </div>
+            <div class="menu-name">
+              <div><span>HO <br>
+                Modules </span></div>
+            </div>
+            </a> </li>
+          <li> <a href="cash-module/index.html">
+            <div class="menu-icon">
+              <div><i><img src="images/cash-icon.png" alt="branch-jobs"></i></div>
+            </div>
+            <div class="menu-name">
+              <div><span>Cash<br>
+                Module</span></div>
+            </div>
+            </a> </li>
+          <li> <a href="#">
+            <div class="menu-icon">
+              <div><i><img src="images/utilities.png" alt="utilities"></i></div>
+            </div>
+            <div class="menu-name">
+              <div><span>Utilities</span></div>
+            </div>
+            </a> </li>
+          <li> <a href="#">
+            <div class="menu-icon">
+              <div><i><img src="images/reports.png" alt="reports"></i></div>
+            </div>
+            <div class="menu-name">
+              <div><span>Reports</span></div>
+            </div>
+            </a> </li>
+          <li> <a href="#" class="active">
+            <div class="menu-icon">
+              <div><i><img src="images/loan-proccessing.png" alt="loan-proccessing"></i></div>
+            </div>
+            <div class="menu-name">
+              <div><span>Loan <br>
+                Processing</span></div>
+            </div>
+            </a>
+            <div class="sub-dropdown">
+              <ul>
+                <li> <a href="required-documents.html">Required Documents</a> </li>
+                <li> <a href="lead-generation.html">Lead Generation</a> </li>
+                <li> <a href="loan-application.html">Loan Application</a></li>
+                <li> <a href="loan-appriaisal.html">Loan Appriaisal </a></li>
+                <li> <a href="loan-approval.html">Loan Approval </a></li>
+              </ul>
+            </div>
+          </li>
+          <li> <a href="#">
+            <div class="menu-icon">
+              <div><i><img src="images/info-reports.png" alt="info-reports"></i></div>
+            </div>
+            <div class="menu-name">
+              <div><span>INFO <br>
+                reports</span></div>
+            </div>
+            </a> </li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+      <div class="logout-cntr">
+        <div class="login-info">
+          <div>Welcome Hiren <span>Oct 23 2017 12:36 PM</span></div>
+        </div>
+        <div class="logout-btns">
+          <div>
+            <input type="submit" value="Logout" class="logout-btn">
+            <a href="javascript:void(0)" class="small-menu"></a>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="logo-band">
+    <div class="chk-cntr">
+      <ul>
+        <li>Loan Appriaisal</li>
+      </ul>
+    </div>
+
+      <input type="button" value="expand all" class="expand-all">
+      <input type="button" value="collapse all" class="collapse-all">
+    <div class="branch-info"> Base Branch: <span class="bold-txt">Koparkhairane 00242</span> </div>
+    <div class="clear"></div>
+  </div>
+  <!--<div class="tab-navigation">
+    <div class="container">
+      <div class="tab-section">
+        <div class="tab-navcntr SMfont">
+          <ul>
+            <li> <a href="index.html" class="active">Customer Validity analysis</a> </li>
+            <li> <a href="cash-transfer.html">Cash Transfer</a> </li>
+            <li> <a href="verify-cash-transfer.html">Verify Cash Transfer</a> </li>
+            <li> <a href="exchange.html">Exchange</a> </li>
+            <li> <a href="auto-transfer.html">Cash Auto Transfer</a> </li>
+            <li> <a href="cash-token.html">Cash Token Issue/Cancellation</a> </li>
+            <li>
+                <div class="menu-type-select">
+                <select class="menu-select-M search active"  onchange="location = this.options[this.selectedIndex].value;">
+                <option value="" disabled selected>Cashier Balances</option>
+                <option value="scroll.html">Scroll Issue/Cancellation</option>
+                <option value="token-pay.html">Token Pay</option>
+                <option value="scroll-receive.html">Scroll Receive</option>
+                <option value="view-token-scroll.html">View Token/Scroll</option>
+                <option value="cashier-transactions.html">Cashier Transactions</option>
+                <option value="cashier-balances.html">Cashier Balances</option>
+                <option value="cashier-exchange.html">Cash Exchange View</option>
+                <option value="cash-scroll-book.html">Cash Scroll Book</option>
+                <option value="branchwise-cash-balance.html">Branchwise-Cash Balances</option>
+                <option value="denomination.html">Denomination</option>
+                <option value="soiled-notes-details.html">Soiled Notes Details</option>
+                <option value="lost-token.html">Lost Token</option>
+                <option value="reports.html">Reports</option>
+                </select>
+                </div>
+                </li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>-->
+  <div class="main-fields-cntr">
+    <div class="container">
+      <div class="fields-holder">
+        <div class="financDetails">
+          <div class="border-box mt10">
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group" style="float:none"><label>Existing  Loan Application No </label>
+                    <input type="text" class="left-Textbx-M">
+                    <span type="button" class="advancesearch"></span></td>
+                  <td class="pn"><label style="font-weight: 400;">Date:- <strong>10/19/2017</strong> | Member no :- <strong>52</strong> | Receipt no :- <strong>1221</strong> | Application No :- <strong>1542</strong> </label></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="left-cntr">
+          <div class="border-box-heading myaccordian" targetaccordian="#accordian" initialdirection="up" onClick="showfieldsnew('loan-details')">
+            <h2>Loan Details</h2>
+          </div>
+          <div class="border-box loan-details">
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group  mandatory"><label>Application No </label>
+                    <input type="text" class="left-Textbx-M"></td>
+                  <td class="input-group mandatory"><label>Receipt Date</label>
+                    <input type="text" class="left-Textbx-M date-picker" id="datepicker-1"></td>
+                </tr>
+              </table>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group mandatory"><label>Application Type</label>
+                    <select class="left-select-M">
+                      <option  value="">Select</option>
+                      <option>Loan Application</option>
+                    </select></td>
+                  <td class="input-group mandatory"><label>Application Category</label>
+                    <select class="left-select-M">
+                      <option  value="">Select</option>
+                      <option>New Loan</option>
+                      <option>Renewal</option>
+                      <option>Cancel</option>
+                      <option>Enhance</option>
+                    </select></td>
+                </tr>
+              </table>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Received Location</label>
+                    <select class="left-select-M">
+                      <option  value="">Select</option>
+                      <option>Division</option>
+                      <option>Branch</option>
+                      <option>Member</option>
+                      <option>Agency</option>
+                      <option>Customer</option>
+                      <option>Work Shop</option>
+                    </select></td>
+                  <td class="input-group"><label>Channel</label>
+                    <select class="left-select-M">
+                      <option  value="">Select</option>
+                      <option>Internet Banking</option>
+                      <option>Mobile Bankng</option>
+                      <option>Agenecy Office</option>
+                      <option>Hand Delivery</option>
+                      <option>Branch Docket</option>
+                    </select></td>
+                    </tbody>
+              </table>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Location Details</label>
+                    <input type="text" class="left-Textbx-M">
+                    <span type="button" class="advancesearch"></span></td>
+                  <td class="input-group"><label>Loan Type </label>
+                    <select class="left-select-M">
+                      <option  value="">Select</option>
+                    </select></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="row-box animate-label padT0">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="input-group"><label>Product</label>
+                      <input type="text" class="left-Textbx-M">
+                      <span type="button" class="advancesearch"></span></td>
+                    <td class="input-group"><label>Currency</label>
+                      <input type="text" class="left-Textbx-M">
+                      <span type="button" class="advancesearch"></span></td>
+                  </tr>
+              </table>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="input-group"><label>Received From </label>
+                      <input type="text" class="left-Textbx-M">
+                      <span type="button" class="advancesearch"></span></td>
+                    <td class="input-group"><label>Received By </label>
+                      <input type="text" class="left-Textbx-M"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tbody>
+                  <tr class="half-cntr">
+                    <td class="input-group"><label>Receipt Reference No </label>
+                      <input type="text" class="left-Textbx-M"></td>
+                  </tr>
+                  <tr class="half-cntr">
+                    <td  class="input-group" rowspan="2"><label>Application Status </label>
+                      <textarea class="left-Textbx-M"></textarea></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="border-box-heading myaccordian" targetaccordian="#accordian" initialdirection="down" onClick="showfieldsnew('personal-details')">
+            <h2>Personal Details</h2>
+          </div>
+          <div class="border-box personal-details" style="display:none">
+            <div class="row-box animate-label padT0">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="input-group"><label>Member No </label>
+                      <input type="text" class="left-Textbx-S">
+                      <span type="button" class="advancesearch"></span></td>
+                    <td class="input-group"><label>Applicant Name </label>
+                      <input type="text" class="left-Textbx-XM"></td>
+                  </tr>
+              </table>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Address</label>
+                    <textarea class="left-Textbx-L"></textarea></td>
+                </tr>
+              </table>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Designation </label>
+                    <input type="text" class="left-Textbx-L"></td>
+                </tr>
+              </table>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Contact </label>
+                    <input type="text" class="left-Textbx-M"></td>
+                  <td class="input-group"><label>Ticket No </label>
+                    <input type="text" class="left-Textbx-M"></td>
+                </tr>
+              </table>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>PF Account no </label>
+                    <input type="text" class="left-Textbx-S"></td>
+                  <td class="input-group"><label>PAN NO </label>
+                    <input type="text" class="left-Textbx-S"></td>
+                  <td class="input-group"><label>Adhaar No </label>
+                    <input type="text" class="left-Textbx-S"></td>
+                </tr>
+              </table>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label >Constitution</label>
+                    <input type="text" class="left-Textbx-S">
+                    <span type="button" class="advancesearch"></span></td>
+                  <td class="input-group"><label>Occupation</label>
+                    <input type="text" class="left-Textbx-S">
+                    <span type="button" class="advancesearch"></span></td>
+                  <td class="input-group"><label>Purpose</label>
+                    <input type="text" class="left-Textbx-S">
+                    <span type="button" class="advancesearch"></span></td>
+                </tr>
+              </table>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Sub Purpose</label>
+                    <input type="text" class="left-Textbx-M">
+                    <span type="button" class="advancesearch"></span></td>
+                  <td class="input-group"><label>Activity</label>
+                    <input type="text" class="left-Textbx-M">
+                    <span type="button" class="advancesearch"></span></td>
+                    </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="border-box-heading myaccordian" targetaccordian="#accordian" initialdirection="down" onClick="showfieldsnew('amount-details')">
+            <h2>Amount Details</h2>
+          </div>
+          <div class="border-box amount-details" style="display:none">
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Share Amount To be Deducted</label>
+                    <input type="text" class="left-Textbx-M"></td>
+                  <td class="input-group"><label>Processing Feee</label>
+                    <input type="text" class="left-Textbx-M"></td>
+                </tr>
+              </table>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Insurance Premium</label>
+                    <input type="text" class="left-Textbx-S"></td>
+                  <td class="input-group"><label>Stability Fund</label>
+                    <input type="text" class="left-Textbx-S"></td>
+                  <td class="input-group"><label>Other Charges</label>
+                    <input type="text" class="left-Textbx-S"></td>
+                </tr>
+              </table>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Remarks </label>
+                    <textarea class="left-Textbx-L"></textarea></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+          </div>
+          <div class="border-box-heading myaccordian" targetaccordian="#accordian" initialdirection="down" onClick="showfieldsnew('existing-customer')">
+            <h2>Existing Customer</h2>
+          </div>
+          <div class="border-box existing-customer" style="display:none">
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td><label class="fix-label">Existing Customer</label>
+                    <table border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <td style="padding:0px;"><input type="radio" class="radio" name="radio-btn1"></td>
+                          <td><label style="position: unset;">Yes</label></td>
+                          <td style="padding:0px;"><input type="radio" class="radio" name="radio-btn1"></td>
+                          <td><label style="position: unset;">No</label></td>
+                        </tr>
+                      </tbody>
+                    </table></td>
+                </tr>
+              </table>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group pad0"><label class="fix-label">Relationship with bank in Months</label>
+                    <table border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <td class="input-group"><label>Period in Months </label>
+                            <select class="left-select-M">
+                              <option  value="">Select</option>
+                              <option>3 Months</option>
+                              <option>6 Months</option>
+                              <option>9 Months</option>
+                              <option>12 Months</option>
+                            </select></td>
+                        </tr>
+                      </tbody>
+                    </table></td>
+                  <td class="input-group pad0"><label class="fix-label">Total Balance in Deposit Account </label>
+                    <table border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <td class="input-group"><label>Deposit Amount </label>
+                            <input type="text" class="left-Textbx-M"></td>
+                        </tr>
+                      </tbody>
+                    </table></td>
+                </tr>
+              </table>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Total Outstanding Balance in Loan Accounts</label>
+                    <input type="text" class="left-Textbx-L"></td>
+                  <td class="input-group"><label>No Of cheques Return During Financial years</label>
+                    <input type="text" class="left-Textbx-L"></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Operations in Account </label>
+                    <input type="text" class="left-Textbx-M"></td>
+                  <td class="input-group VAbtm"><input type="button" value="Process Compliance" class="box-btn secondary-btn" onclick="overlayBox('operations-account')"></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+            <div class="row-box" style="padding-top:15px;">
+              <table class="W100">
+                <tbody>
+                  <tr>
+                    <td><h4 class="">Internal Black List Check </h4></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="diffborder" style="border-bottom:0px; margin-bottom:0px;">
+              <div class="row-box animate-label">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="input-group"><label>Borrower</label>
+                        <select class="left-select-M">
+                          <option value="">Select</option>
+                          <option>Black Listed </option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select></td>
+                      <td class="input-group"><label>Co-Borrower</label>
+                        <select class="left-select-M">
+                          <option value="">Select</option>
+                          <option>Black Listed </option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row-box animate-label">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="input-group"><label>Guarantors</label>
+                        <select class="left-select-M">
+                          <option value="">Select</option>
+                          <option>Black Listed </option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select></td>
+                      <td class="input-group VAbtm"><input type="button" value="Process Compliance" class="box-btn secondary-btn" onclick="overlayBox('operations-account')"></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="row-box">
+              <table class="W100">
+                <tbody>
+                  <tr>
+                    <td><h4 class="">KYC Complience</h4></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="diffborder" style="margin-bottom:0px; padding-bottom:0px; border-bottom:0px;">
+              <div class="row-box animate-label">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="input-group"><label>Identifcation Proof</label>
+                        <select class="left-select-S">
+                          <option value="">Select</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select></td>
+                      <td class="input-group"><label>Residence Proof</label>
+                        <select class="left-select-S">
+                          <option value="">Select</option>
+                          <option>Black Listed </option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select></td>
+                      <td class="input-group"><label>PAN No Details </label>
+                        <select class="left-select-S">
+                          <option value="">Select</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row-box animate-label">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td class="input-group"><label>Aadhar Card Details </label>
+                        <select class="left-select-M">
+                          <option value="">Select</option>
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select></td>
+                      <td class="input-group VAbtm"><input type="button" value="Process Compliance" class="box-btn secondary-btn" onclick="overlayBox('operations-account')"></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </div>
+          <div class="border-box-heading myaccordian" targetaccordian="#accordian" initialdirection="down" onClick="showfieldsnew('income-analysis')">
+            <h2>Income Analysis</h2>
+          </div>
+          <div class="border-box income-analysis" style="display:none">
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Employment Status</label>
+                    <select class="left-select-M">
+                      <option value="">Select</option>
+                      <option>Confirm</option>
+                      <option>Contract</option>
+                    </select></td>
+                  <td class="input-group"><label>No OF years in service</label>
+                    <input type="text" class="left-Textbx-M date-picker" id="datepicker-1"></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Remaining Service</label>
+                    <input type="text" class="left-Textbx-S"></td>
+                  <td class="input-group"><label>Net worth</label>
+                    <input type="text" class="left-Textbx-S"></td>
+                  <td class="input-group"><label>Net Income</label>
+                    <input type="text" class="left-Textbx-S"></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Times of Gross Salary</label>
+                    <input type="text" class="left-Textbx-M"></td>
+                  <td class="input-group"><label>Age bar Period</label>
+                    <input type="text" class="left-Textbx-M"></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+            <div class="border-box" style="padding-top:20px;">
+              <div class="table-text-grid financDetails scroll-horizontal" style="width: 96.3%;">
+                <table class="table-text-grid W100" border="1">
+                  <tr>
+                    <th><label>Month</label></th>
+                    <th><label>Year</label></th>
+                    <th><label>Basic</label></th>
+                    <th><label>DA</label></th>
+                    <th><label>Other Allowances</label></th>
+                    <th><label>Gross Salary </label></th>
+                    <th><label>PF </label></th>
+                    <th><label>Our Bank Loan </label></th>
+                    <th><label>Other Bank Loan </label></th>
+                    <th><label>Total Deduction </label></th>
+                    <th><label>Net Salary </label></th>
+                    <th><label>Instal Amt as Per Applied</label></th>
+                    <th><label>25% of net salary-Instlmt as per applied</label></th>
+                  </tr>
+                  <tr>
+                    <td>XXXXXXX</td>
+                    <td>XXXXX</td>
+                    <td>XXXXXX</td>
+                    <td>XXXXX</td>
+                    <td>XXXXXXXXXX</td>
+                    <td>XXXXXXXX</td>
+                    <td>XXXXX</td>
+                    <td>XXXXXXXXXXX</td>
+                    <td>XXXXXXXX</td>
+                    <td>XXXXXXX</td>
+                    <td>XXXXXXXXXX</td>
+                    <td>XXXXXXXXXX</td>
+                    <td>XXXXXXXXXX</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group VAbtm"><input type="button" value="Process Compliance" class="box-btn secondary-btn" onclick="overlayBox('operations-account')"></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+          </div>
+          <div class="border-box-heading myaccordian" targetaccordian="#accordian" initialdirection="down" onClick="showfieldsnew('anicipated-recovery-analysis')">
+            <h2>Anicipated Recovery Analysis</h2>
+          </div>
+          <div class="border-box anicipated-recovery-analysis" style="display:none">
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>No Of Installments</label>
+                    <input type="text" class="left-Textbx-M"></td>
+                  <td class="input-group"><label>Principle Recovery </label>
+                    <input type="text" class="left-Textbx-M"></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Interest Recovery</label>
+                    <input type="text" class="left-Textbx-S"></td>
+                  <td class="input-group"><label>Total Recovery</label>
+                    <input type="text" class="left-Textbx-S"></td>
+                  <td class="input-group VAbtm"><input type="button" value="Process Compliance" class="box-btn secondary-btn" onclick="overlayBox('operations-account')"></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+          </div>
+          <div class="border-box-heading myaccordian" targetaccordian="#accordian" initialdirection="down" onClick="showfieldsnew('existing-facility-analysis')">
+            <h2>Existing Facility Analysis</h2>
+          </div>
+          <div class="border-box existing-facility-analysis" style="display:none">
+            <div class="row-box" style="padding-top:15px;">
+              <table class="W100">
+                <tbody>
+                  <tr>
+                    <td><h4 class="">Borrower</h4></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Name </label>
+                    <input type="text" class="left-Textbx-L"></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group VAbtm"><input type="button" value="Process Compliance" class="box-btn secondary-btn" onclick="overlayBox('operations-account')"></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+            <div class="border-box" style="padding-top:20px;">
+              <div class="table-text-grid financDetails scroll-horizontal" style="width: 96.3%;">
+                <table class="table-text-grid" border="1">
+                  <tbody>
+                    <tr>
+                      <th><label>Srl No</label></th>
+                      <th><label>Type</label></th>
+                      <th><label>Product</label></th>
+                      <th colspan="2"><label>Account no</label></th>
+                      <th><label>Sanction Limit</label></th>
+                      <th><label>Santion date </label></th>
+                      <th><label>Tenure </label></th>
+                      <th><label>Expiry Date</label></th>
+                      <th><label>Outstanding Balance </label></th>
+                      <th colspan="2"><label>Overdue amount </label></th>
+                      <th><label>No Of InstDue </label></th>
+                      <th><label>NPA status </label></th>
+                    </tr>
+                    <tr>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><label>No</label></td>
+                      <td><label>Name</label></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td colspan="2"><label>View details </label></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                    </tr>
+                    <tr>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                    </tr>
+                    <tr>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                    </tr>
+                    <tr>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td colspan="2"><label>Total Liability</label></td>
+                      <td colspan="2"><label>As Borrower</label></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="row-box" style="padding-top:15px;">
+              <table class="W100">
+                <tbody>
+                  <tr>
+                    <td><h4 class="">CoBorrower/Gurantor</h4></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Name </label>
+                    <input type="text" class="left-Textbx-L"></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group VAbtm"><input type="button" value="Process Compliance" class="box-btn secondary-btn" onclick="overlayBox('operations-account')"></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+            <div class="border-box" style="padding-top:20px;">
+              <div class="table-text-grid financDetails scroll-horizontal" style="width: 96.3%;">
+                <table class="table-text-grid" border="1">
+                  <tbody>
+                    <tr>
+                      <th><label>Srl No</label></th>
+                      <th><label>Type</label></th>
+                      <th><label>Product</label></th>
+                      <th colspan="2"><label>Account no</label></th>
+                      <th><label>Sanction Limit</label></th>
+                      <th><label>Santion date </label></th>
+                      <th><label>Tenure </label></th>
+                      <th><label>Expiry Date</label></th>
+                      <th><label>Outstanding Balance </label></th>
+                      <th colspan="2"><label>Overdue amount </label></th>
+                      <th><label>No Of InstDue </label></th>
+                      <th><label>NPA status </label></th>
+                    </tr>
+                    <tr>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><label>No</label></td>
+                      <td><label>Name</label></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td colspan="2"><label>View details </label></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                    </tr>
+                    <tr>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                    </tr>
+                    <tr>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                    </tr>
+                    <tr>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td colspan="2"><label>Total</label></td>
+                      <td colspan="2"><label>Liability as Gurantor </label></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="border-box-heading myaccordian" targetaccordian="#accordian" initialdirection="down" onClick="showfieldsnew('guarantor-analysis')">
+            <h2>Guarantor Analysis </h2>
+          </div>
+          <div class="border-box guarantor-analysis" style="display:none">
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Total No Of guarantors</label>
+                    <input type="text" class="left-Textbx-M"></td>
+                  <td class="input-group"><label>Totl Networth of Guarantors</label>
+                    <input type="text" class="left-Textbx-M"></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Eligible Loan Amount </label>
+                    <input type="text" class="left-Textbx-M"></td>
+                  <td class="input-group"><label>Name</label>
+                    <input type="text" class="left-Textbx-M"></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Member No</label>
+                    <input type="text" class="left-Textbx-M"></td>
+                  <td class="input-group"><label>Ticket No</label>
+                    <input type="text" class="left-Textbx-M"></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+            <div class="border-box" style="padding-top:20px;">
+              <div class="table-text-grid financDetails scroll-horizontal" style="width: 96.3%;">
+                <table class="table-text-grid W100" border="1">
+                  <tr>
+                    <th><label>Month</label></th>
+                    <th><label>Year</label></th>
+                    <th><label>Basic</label></th>
+                    <th><label>DA</label></th>
+                    <th><label>Other Allowances</label></th>
+                    <th><label>Gross Salary </label></th>
+                    <th><label>PF </label></th>
+                    <th><label>Our Bank Loan </label></th>
+                    <th><label>Other Bank Loan </label></th>
+                    <th><label>Total Deduction </label></th>
+                    <th><label>Net Salary </label></th>
+                    <th><label>25% of Net Salary</label></th>
+                  </tr>
+                  <tr>
+                    <td>XXXXXXX</td>
+                    <td>XXXXX</td>
+                    <td>XXXXXX</td>
+                    <td>XXXXX</td>
+                    <td>XXXXXXXXXX</td>
+                    <td>XXXXXXXX</td>
+                    <td>XXXXX</td>
+                    <td>XXXXXXXXXXX</td>
+                    <td>XXXXXXXXXXXX</td>
+                    <td>XXXXXXX</td>
+                    <td>XXXXXXXXXX</td>
+                    <td>XXXXXXXXXX</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Employment Status</label>
+                    <input type="text" class="left-Textbx-M"></td>
+                  <td class="input-group"><label>No OF years in service</label>
+                    <input type="text" class="left-Textbx-M"></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Remaining Service </label>
+                    <input type="text" class="left-Textbx-S"></td>
+                  <td class="input-group"><label>Net worth</label>
+                    <input type="text" class="left-Textbx-S"></td>
+                  <td class="input-group"><label>Net Income </label>
+                    <input type="text" class="left-Textbx-S"></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Times of Gross Salary</label>
+                    <input type="text" class="left-Textbx-M"></td>
+                  <td class="input-group"><label>Age bar Period</label>
+                    <input type="text" class="left-Textbx-M"></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+            <div class="row-box" style="padding-top:15px;">
+              <table class="W100">
+                <tbody>
+                  <tr>
+                    <td><h4 class="">Borrower Liability</h4></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Name </label>
+                    <input type="text" class="left-Textbx-L"></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+            <div class="border-box" style="padding-top:20px;">
+              <div class="table-text-grid financDetails scroll-horizontal" style="width: 96.3%;">
+                <table class="table-text-grid" border="1">
+                  <tbody>
+                    <tr>
+                      <th><label>Srl No</label></th>
+                      <th><label>Type</label></th>
+                      <th><label>Product</label></th>
+                      <th colspan="2"><label>Account no</label></th>
+                      <th><label>Sanction Limit</label></th>
+                      <th><label>Santion date </label></th>
+                      <th><label>Tenure </label></th>
+                      <th><label>Expiry Date</label></th>
+                      <th><label>Outstanding Balance </label></th>
+                      <th colspan="2"><label>Overdue amount </label></th>
+                      <th><label>No Of InstDue </label></th>
+                      <th><label>NPA status </label></th>
+                    </tr>
+                    <tr>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><label>No</label></td>
+                      <td><label>Name</label></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                    </tr>
+                    <tr>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                    </tr>
+                    <tr>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                    </tr>
+                    <tr>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td colspan="2"><label>Total Liability</label></td>
+                      <td colspan="2"><label>As Borrower</label></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="row-box" style="padding-top:15px;">
+              <table class="W100">
+                <tbody>
+                  <tr>
+                    <td><h4 class="">Gurantor Liability </h4></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Name </label>
+                    <input type="text" class="left-Textbx-L"></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+            <div class="border-box" style="padding-top:20px;">
+              <div class="table-text-grid financDetails scroll-horizontal" style="width: 96.3%;">
+                <table class="table-text-grid" border="1">
+                  <tbody>
+                    <tr>
+                      <th><label>Srl No</label></th>
+                      <th><label>Type</label></th>
+                      <th><label>Product</label></th>
+                      <th colspan="2"><label>Account no</label></th>
+                      <th><label>Sanction Limit</label></th>
+                      <th><label>Santion date </label></th>
+                      <th><label>Tenure </label></th>
+                      <th><label>Expiry Date</label></th>
+                      <th><label>Outstanding Balance </label></th>
+                      <th colspan="2"><label>Overdue amount </label></th>
+                      <th><label>No Of InstDue </label></th>
+                      <th><label>NPA status </label></th>
+                    </tr>
+                    <tr>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><label>No</label></td>
+                      <td><label>Name</label></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                    </tr>
+                    <tr>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                    </tr>
+                    <tr>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                    </tr>
+                    <tr>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td colspan="2"><label>Total</label></td>
+                      <td colspan="2"><label>Liability as Gurantor </label></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group VAbtm"><input type="button" value="Process Compliance" class="box-btn secondary-btn" onclick="overlayBox('operations-account')"></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+          </div>
+          <div class="border-box-heading myaccordian" targetaccordian="#accordian" initialdirection="down" onClick="showfieldsnew('document-compliance')">
+            <h2>Document Compliance</h2>
+          </div>
+          <div class="border-box document-compliance" style="display:none">
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Compliance Rating </label>
+                    <input type="text" class="left-Textbx-XM"></td>
+                  <td class="input-group VAbtm"><input type="button" value="Process Compliance" class="box-btn secondary-btn" onclick="overlayBox('operations-account')"></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+          </div>
+          <div class="border-box-heading myaccordian" targetaccordian="#accordian" initialdirection="down" onClick="showfieldsnew('credit-rating')">
+            <h2>Credit Rating</h2>
+          </div>
+          <div class="border-box credit-rating" style="display:none">
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Credit Rating </label>
+                    <input type="text" class="left-Textbx-M"></td>
+                  <td class="input-group"><label>External Avg. Rating </label>
+                    <input type="text" class="left-Textbx-M"></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+            <div class="border-box" style="padding-top:10px;">
+              <div class="table-text-grid financDetails scroll-horizontal" style="width: 96.3%;">
+                <table class="table-text-grid" border="1">
+                  <tbody>
+                    <tr>
+                      <th><label>Srl no</label></th>
+                      <th><label>Facility Type </label></th>
+                      <th><label>Currency </label></th>
+                      <th><label>Facility Requested </label></th>
+                      <th><label>Facility as Per Bank Rule </label></th>
+                      <th><label>Loan amount As Per LoanPurpose</label></th>
+                      <th><label>Loan amount As Per Loan Request</label></th>
+                      <th><label>Loan Amt. As Per Repayent Capacity</label></th>
+                      <th><label>ROI </label></th>
+                      <th><label>Tenure </label></th>
+                      <th><label>Installment Amt </label></th>
+                      <th><label>Morotorium</label></th>
+                    </tr>
+                    <tr>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                      <td><input type="text" class="table-tbox-xs"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group VAbtm"><input type="button" value="Process Compliance" class="box-btn secondary-btn" onclick="overlayBox('operations-account')"></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+          </div>
+          <div class="border-box-heading myaccordian" targetaccordian="#accordian" initialdirection="down" onClick="showfieldsnew('eligible-loan-amount')">
+            <h2>Computation Of Eligible Loan amount </h2>
+          </div>
+          <div class="border-box eligible-loan-amount" style="display:none">
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Eligible Loan Amount</label>
+                    <input type="text" class="left-Textbx-M"></td>
+                  <td class="input-group"><label>Repayment Capacity</label>
+                    <input type="text" class="left-Textbx-M"></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+          </div>
+          <div class="border-box-heading myaccordian" targetaccordian="#accordian" initialdirection="down" onClick="showfieldsnew('appraisal-summery')">
+            <h2>Appraisal Summery (Swot analysis)</h2>
+          </div>
+          <div class="border-box appraisal-summery" style="display:none">
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Recomonded for Sanction</label>
+                    <select class="left-select-M">
+                      <option value="">Select</option>
+                      <option>Yes</option>
+                      <option>No</option>
+                    </select></td>
+                  <td class="input-group"><label>Put On Hold</label>
+                    <select class="left-select-M">
+                      <option value="">Select</option>
+                      <option>Yes</option>
+                      <option>No</option>
+                    </select></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Refer To Higher Authority</label>
+                    <select class="left-select-M">
+                      <option value="">Select</option>
+                      <option>Yes</option>
+                      <option>No</option>
+                    </select></td>
+                  <td class="input-group"><label>Rejected Reason</label>
+                    <input type="text" class="left-Textbx-M">
+                    <span type="button" class="advancesearch"></span></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Recomondation criterion</label>
+                    <select class="left-select-M">
+                      <option value="">Select</option>
+                      <option>Yes</option>
+                      <option>No</option>
+                    </select></td>
+                  <td class="input-group"><label>Amount Applied </label>
+                    <input type="text" class="left-Textbx-M"></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Eligible Loan Amount </label>
+                    <input type="text" class="left-Textbx-M"></td>
+                  <td class="input-group"><label>Recomonded Amount </label>
+                    <input type="text" class="left-Textbx-M"></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>ROI</label>
+                    <input type="text" class="left-Textbx-S"></td>
+                  <td class="input-group"><label>Rate Code</label>
+                    <input type="text" class="left-Textbx-S"></td>
+                  <td class="input-group"><label>Diffrential </label>
+                    <input type="text" class="left-Textbx-S"></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Tenure as Per Remaining Service </label>
+                    <input type="text" class="left-Textbx-M"></td>
+                  <td class="input-group"><label>Tenure </label>
+                    <input type="text" class="left-Textbx-M"></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Morotorium Period </label>
+                    <input type="text" class="left-Textbx-S"></td>
+                  <td class="input-group"><label>No Of installment</label>
+                    <input type="text" class="left-Textbx-S"></td>
+                  <td class="input-group"><label>Installment Amount</label>
+                    <input type="text" class="left-Textbx-S"></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Share Amount</label>
+                    <input type="text" class="left-Textbx-S"></td>
+                  <td class="input-group"><label>Insurance Amount </label>
+                    <input type="text" class="left-Textbx-S"></td>
+                  <td class="input-group"><label>Security Deposit</label>
+                    <input type="text" class="left-Textbx-S"></td>
+                </tr>
+              </table>
+              <div class="clear"></div>
+            </div>
+            <div class="row-box animate-label">
+              <table>
+                <tr>
+                  <td class="input-group"><label>Remarks </label>
+                    <textarea class="left-Textbx-L"></textarea></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="save-next-step container">
+            <input type="submit" class="active" value="SAVE">
+            <input type="submit" value="CLEAR">
+          </div>
+        </div>
+        <div class="right-cntr">
+          <div class="fix-application-view">
+            <div class="">
+              <div class="border-box-heading myaccordian" targetaccordian="#accordian" initialdirection="up" onClick="showfieldsnew('application-view')">
+                <h2>Application View</h2>
+              </div>
+              <div class="border-box application-view">
+                <div class="row-box animate-label padT0">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td class="input-group"><img src="images/doc-view.png"></td>
+                      </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clear"></div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="copy-ryt"> Copyright © 2017 Nelito. <img src="images/fin-logo.png"  class="finlogo"></div>
+  </div>
+</div>
+<div class="floating-navigation">
+  <div class="animate-menu">
+    <div class="closing-float"> <a href="#"> <img src="images/setting.png" alt="menu"> </a> </div>
+    <div class="floting-menu">
+      <ul>
+        <li><a href="#s1"><i class="icon1"></i><span>SYNOPSIS</span></a></li>
+        <li><a href="#s2"><i class="icon2"></i><span>Calculator</span></a></li>
+        <li><a href="#s3"><i class="icon3"></i><span>RELATIVE BOOKS</span></a></li>
+        <li><a href="#s3"><i class="icon4"></i><span>RELATIVE BOOKS</span></a></li>
+        <li><a href="#s3"><i class="icon5"></i><span>RELATIVE BOOKS</span></a></li>
+        <li><a href="#s3"><i class="icon6"></i><span>RELATIVE BOOKS</span></a></li>
+      </ul>
+    </div>
+    <div class="fav-star"> <a href="#"> <img src="images/fav-star.png" alt="fav-star"> </a>
+      <div class="float-submenu">
+        <ul>
+          <li><a href="#">Communication</a></li>
+          <li><a href="#">Accounts</a></li>
+          <li><a href="#">Personal Details</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="scripts/common.js" type="text/javascript"></script> 
+<!--overlay start-->
+
+<div class="overlay-box search-overlay" id="operations-account">
+  <div class="overlay-content">
+    <div class="left-cntr"> </div>
+    <h3>Process Compliance</h3>
+    <div class="border-box fl">
+      <div class="row-box animate-label">
+        <table>
+          <tr>
+            <td class="input-group"><label>Analysis</label>
+              <input type="text" class=" left-Textbx-S"></td>
+            <td class="input-group"><label>Description</label>
+              <input type="text" class="left-Textbx-XM"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="row-box animate-label">
+        <table>
+          <tr>
+            <td class="input-group"><label>Business Rule</label>
+              <input type="text" class=" left-Textbx-S"></td>
+            <td class="input-group"><label>Description</label>
+              <input type="text" class="left-Textbx-XM"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="row-box animate-label">
+        <table>
+          <tr>
+            <td class="input-group"><label>Criterion</label>
+              <input type="text" class=" left-Textbx-S"></td>
+            <td class="input-group"><label>Description</label>
+              <input type="text" class="left-Textbx-XM"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="row-box animate-label">
+        <table>
+          <tr>
+            <td class="input-group"><label>Ratings Range</label>
+              <input type="text" class="left-Textbx-S"></td>
+            <td class="input-group"><label>System Compliance</label>
+              <input type="text" class="left-Textbx-S"></td>
+            <td class="input-group"><label>User Compliance</label>
+              <input type="text" class="left-Textbx-S"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="row-box animate-label">
+        <table>
+          <tr>
+            <td class="input-group"><label>Remarks </label>
+              <textarea class="left-Textbx-L"></textarea></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="right-cntr fr"> </div>
+    <div class="clear"></div>
+    <div class="row-box">
+      <table>
+        <tr>
+          <td><input type="submit" class="active" value="SAVE"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<!--overlay end-->
+</body>
+</html>

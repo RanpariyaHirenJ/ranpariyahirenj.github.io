@@ -1,0 +1,737 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="../images/favicon.png" />
+<title>Nelito | News</title>
+<meta name="description" content="">
+
+<link rel="stylesheet" type="text/css" href="../styles/animate.css">
+<link rel="stylesheet" type="text/css" href="../styles/style.css">
+<link rel="stylesheet" type="text/css" href="../styles/float-icon.css">
+<script src="../scripts/jquery-min.js" type="text/javascript"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+<script src="../scripts/jquery.bxslider.min.js"></script>
+<script src="../scripts/parallax.js"></script>
+<script>
+$(window).load(function () {
+	
+  var liMaxHeight = -1;
+    var node;
+    $(".news-list li").each(function(index) {
+        if ($(this).outerHeight() > liMaxHeight) {
+            liMaxHeight = $(this).outerHeight();
+            node = index;
+        }
+    });
+
+    $('.news-list li').css('height', liMaxHeight +1);
+    /*Maximum height li*/
+})
+</script>
+
+<style>
+ul.news li {margin: 0 50px 80px !important;}
+p.ulp{padding-bottom: 10px;}
+@media screen and (min-width:320px) and (max-width:767px) {
+ul.news li {margin:0 0 23px !important;}
+
+}
+</style>
+
+
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Software Solutions for Banking and Financial Services | Nelito">
+<meta property="og:description" content="Nelito software solutions offer core & mobile banking solutions. We provide Microfinance, custom application software services, swift and finacle solutions to banking and financial industries.">
+<meta property="og:url" content="https://www.nelito.com/">
+<meta property="og:image" content="https://www.nelito.com/images/logo.png">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@nelitosystem">
+<meta name="twitter:title" content="Software Solutions for Banking and Financial Services | Nelito">
+<meta name="twitter:description" content="Nelito software solutions offer core & mobile banking solutions. We provide Microfinance, custom application software services, swift and finacle solutions to banking and financial industries.">
+<meta name="twitter:image" content="https://www.nelito.com/images/logo.png">
+<meta name="twitter:image:alt" content="Nelito Logo">
+
+</head>
+<body>
+<div class="overlay" id="enquiryform" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+  <div class="overlay-box">
+    <div class="content">
+      <div class="overlay-header">Send Enquiry</div>
+      <form class="checkForm" action="../send-enquiry-php/mail.php" method="post" onSubmit="return form_validate_jquery('.overlay-content')">
+        <div class="overlay-content">
+          <div class="form-layout">
+            <div class="form-row">
+            <div class="grid-6 pl0">
+              <div class="form-field mandatory">
+                <input type="text" name="name" placeholder="Full name *" validation="text" title="Full name">
+                <input type="hidden" name="subject" value="NBFC Software">
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-field mandatory">
+                <input type="email" name="email" placeholder="Email Address *" validation="email" title="Email address">
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-field mandatory">
+                <input type="text" name="phone" placeholder="Contact Number" validation="number" title="Contact number">
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-field mandatory">
+                <textarea name="message" placeholder="Message..." validation="text" title="Message"></textarea>
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="form-row">
+              <div class="form-field mandatory captcha-field">
+                <div id="recaptcha1"></div>
+                <div class="clear"></div>
+              </div>
+              <div class="clear"></div>
+            </div>
+          </div>
+        </div>
+        <div class="overlay-footer">
+          <input type="submit" value="Send Enquiry" name="action">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="send-enquiery-btn"><a class="box-btn" href="javascript:void(0);" onClick="overlayBox('enquiryform')">Send Enquiry</a> </div>
+<div class="loader"></div>
+<div class="wrapper"> 
+  <header class="header">
+    <div class="container">
+      <div class="logo"> <a href="https://www.nelito.com"><img src="../images/logo.png" alt="Nelito" title="Nelito"></a> </div>
+      <div class="search-btn"><a href="javascript:void(0)"></a>			
+            <div class="search-container">
+            <gcse:search class="search-box">
+            <input type="text" placeholder="">
+            <input type="button" class="search-btn">
+            </gcse:search>
+            </div>
+            <script>
+            (function() {
+            var cx = '004993930039708631685:vstz0rtzmtq';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+            })();
+            </script>
+            </div>
+      <nav class="nav">
+        <div class="container menu-wraper">
+          <ul class="menuL">
+            <li class="has-sub-menu small"> <a href="javascript:void(0)">Digital Banking</a>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href="../digital-banking/core-banking-solution.html">Core Banking</a></li>
+                  <li><a href="javascript:void(0)">Mobile Banking</a></li>
+                  <li><a href="javascript:void(0)">Internet Banking</a></li>
+                  <li><a href="../digital-banking/doorstep-banking-solution.html">Doorstep Banking</a></li>
+                  <li><a href="javascript:void(0)">Check Truncation System</a></li>
+                  <li><a href="javascript:void(0)">Enterprise Reporting</a></li>
+                  <li><a href="../digital-banking/data-archival-retrieval.html">Data Archival and Retrieval</a></li>
+                  <li><a href="javascript:void(0)">Anti Money Laundering</a></li>
+                  <li><a href="javascript:void(0)">NACH – MMS</a></li>
+                  <li><a href="javascript:void(0)">Data Ware Housing</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="has-sub-menu small"> <a href="javascript:void(0)">Lending Solutions</a>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href="javascript:void(0)">FinCraft for NBFCs</a></li>
+                  <li><a href="javascript:void(0)">FinCraft for MFIs</a></li>
+                  <li><a href="javascript:void(0)">Loan Origination Solution</a></li>
+                  <li><a href="javascript:void(0)">Loan Management Solution</a></li>
+                  <li><a href="javascript:void(0)">Collections </a></li>
+                  <li><a href="javascript:void(0)">Lending Analytics</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="has-sub-menu"> <a href="../services/index.html">Services</a>
+              <div class="sub-menu">
+                <div class="container">
+                  <div class="">
+                    <div class="grid-2">
+                      <h4><a href="javascript:void(0)">Custom Application Development</a></h4>
+                      <ul>
+                        <li><a href="javascript:void(0)">Application Development</a></li>
+                        <li><a href="javascript:void(0)">Application Testing</a></li>
+                        <li><a href="javascript:void(0)">Application maintenance </a></li>
+                        <li><a href="javascript:void(0)">Dedicated Development Lab</a></li>
+                      </ul>
+                    </div>
+                    <div class="grid-2">
+                      <h4><a href="javascript:void(0)">IT Infrastructure services</a></h4>
+                      <ul>
+                        <li><a href="javascript:void(0)">Infrastructure Management</a></li>
+                        <li><a href="javascript:void(0)">Managed Services</a></li>
+                      </ul>
+                    </div>
+                    <div class="grid-2">
+                      <h4><a href="javascript:void(0)">SWIFT Services</a></h4>
+                      <ul>
+                        <li><a href="javascript:void(0)">Service Bureau</a></li>
+                        <li><a href="javascript:void(0)">SWIFT Annual Maintenance</a></li>
+                        <li><a href="javascript:void(0)">SWIFT Disaster Recovery Service</a></li>
+                        <li><a href="javascript:void(0)">SWIFT Integration & Consultancy Service</a></li>
+                        <li><a href="javascript:void(0)">SWIFT on-boarding & offering</a></li>
+                      </ul>
+                    </div>
+                    <div class="grid-2">
+                      <h4><a href="javascript:void(0)">Third Party CBS Implementation</a></h4>
+                      <ul>
+                        <li><a href="javascript:void(0)">CBS Swift Integration</a></li>
+                        <li><a href="javascript:void(0)">Data Migration</a></li>
+                        <li><a href="javascript:void(0)">Customization</a></li>
+                        <li><a href="javascript:void(0)">Testing – UAT / SIT</a></li>
+                        <li><a href="javascript:void(0)">Training & Go Live</a></li>
+                        <li><a href="javascript:void(0)">Project Management</a></li>
+                        <li><a href="javascript:void(0)">Application Support Services</a></li>
+                        <li><a href="javascript:void(0)">L1 / L2 Support</a></li>
+                      </ul>
+                    </div>
+                    <div class="grid-2">
+                      <h4><a href="javascript:void(0)">Business Process Management</a></h4>
+                      <ul>
+                        <li><a href="javascript:void(0)">Customer Care Outsourcing</a></li>
+                        <li><a href="javascript:void(0)">Form Processing</a></li>
+                        <li><a href="javascript:void(0)">Technical Helpdesk</a></li>
+                        <li><a href="javascript:void(0)">B2B / B2C Collections</a></li>
+                        <li><a href="javascript:void(0)">Manpower & Consultancy Services</a></li>
+                      </ul>
+                    </div>
+                    <div class="grid-2">
+                      <h4><a href="javascript:void(0)">Testing Services</a></h4>
+                    </div>
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="has-sub-menu small"> <a href="javascript:void(0)">Industries</a>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href="javascript:void(0)">Banking</a></li>
+                  <li><a href="javascript:void(0)">Financial Services</a></li>
+                  <li><a href="javascript:void(0)">NBFCs</a></li>
+                  <li><a href="javascript:void(0)">MFIs</a></li>
+                  <li><a href="javascript:void(0)">Government</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="has-sub-menu small"> <a href="javascript:void(0)">Technologies</a>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href="javascript:void(0)">Mobility</a></li>
+                  <li><a href="javascript:void(0)">Blockchain</a></li>
+                  <li><a href="javascript:void(0)">Artificial Intelligence</a></li>
+                  <li><a href="javascript:void(0)">Design Thinking</a></li>
+                  <li><a href="javascript:void(0)">Cloud</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="has-sub-menu small"> <a href="javascript:void(0)">Insights</a>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href="index.html">News</a></li>
+                  <li><a href="javascript:void(0)">Events</a></li>
+                  <li><a href="javascript:void(0)">Blogs</a></li>
+                  <li><a href="javascript:void(0)">Highlights</a></li>
+                  <li><a href="javascript:void(0)">Success Stories</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="menuR">
+            <li class="has-sub-menu small"> <a href="javascript:void(0)">About</a>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href="javascript:void(0)">Company</a></li>
+                  <li><a href="javascript:void(0)">Management Team</a></li>
+                  <li><a href="javascript:void(0)">Quality</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="has-sub-menu small"> <a href="javascript:void(0)">Clients</a>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href="javascript:void(0)">Client Overview</a></li>
+                  <li><a href="javascript:void(0)">Client Testimonials</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="has-sub-menu small"> <a href="javascript:void(0)">Contact</a>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href="javascript:void(0)">Locations</a></li>
+                  <li><a href="javascript:void(0)">Careers</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="search-btn"><a href="javascript:void(0)"></a>			
+            <div class="search-container">
+            <gcse:search class="search-box">
+            <input type="text" placeholder="">
+            <input type="button" class="search-btn">
+            </gcse:search>
+            </div>
+            <script>
+            (function() {
+            var cx = '004993930039708631685:vstz0rtzmtq';
+            var gcse = document.createElement('script');
+            gcse.type = 'text/javascript';
+            gcse.async = true;
+            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(gcse, s);
+            })();
+            </script>
+            </li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+      </nav>
+      <div class="clear"></div>
+    </div>
+    <div class="toggle-btn"> <span></span> <span></span> <span></span> </div>
+    <div class="toggle-search"> <span></span> <span></span> <span></span> </div>
+  </header>
+  
+  <section class="content-area common-top news-index-banner">    
+    <div class="block">
+      <div class="container">
+      <div class="breadcrumb">
+      <div class="container">
+        <ul>
+          <li><a href="https://www.nelito.com">Home</a></li>
+          <li>News</li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+    </div>
+        <div class="news-list">
+    	<h2>News</h2>
+          <ul>
+              <li>
+                  <h3>We are pleased to announce that Manappuram Finance Ltd. engages Nelito Systems for its FinCraft<sup>TM</sup> Integrated Lending Management Solution.</h3>
+                  <span class="news-heading-title">Updated On : June 2018 </span></span>
+                  <p>Manappuram Finance Ltd. is one of India’s leading gold loan NBFCs.Promoted by Shri. V.P. Nandakumar, the current MD & CEO...</p>
+                  <div class="cta"> <a href="manappuram-finance-selects-nelito-lending-management-solution.html" class="box-btn">Read More</a> </div>
+              </li>
+              <li>
+                  <h3>Nelito wins "Best Integrated Lending Management of the Year" award at 3rd NBFC 100 Tech Summit 2018</h3>
+                  <span class="news-heading-title">Updated On : April 2018 </span></span>
+                  <p>We are delighted to announce that we have won the “Best Integrated Lending Management of the Year” award under the BFSI Leadership Awards 2018 category during 3rd NBFC 100 Tech Summit...</p>
+                  <div class="cta"> <a href="nelito-wins-best-integrated-lending-management-of-the-year-award-at-3rd-nbfc-100-tech-summit-2018.html" class="box-btn">Read More</a> </div>
+              </li>
+              <li>
+                  <h3>Nelito got featured in India's leading publication - The Economic Times</h3>
+                  <span class="news-heading-title">Updated On : March 2018 </span></span>
+                  <p>Agility is very important as it sets the banks apart. Banks function slower as compared to the NBFCs, which is why agility is important. Technological advancements like the use of mobile phones...</p>
+                  <div class="cta"> <a href="nelito-got-featured-in-the-economic-times-nbfc-mfi-summit.html" class="box-btn">Read More</a> </div>
+              </li>
+              <li>
+                  <h3>Solutions For The BFS Market</h3>
+                  <span class="news-heading-title">Updated On : March 2018 </span></span>
+                  <p>Punit Jain has 28 years’ of rich experience in the IT and BPO industry in which he has successfully managed global sales teams, set-up delivery systems, managed product development and quality systems in various organizations.</p>
+                  <div class="cta"> <a href="solutions-for-the-bfs-market.html" class="box-btn">Read More</a> </div>
+              </li>
+              <li>
+                  <h3>Nelito Systems Receives Global Accolades for Innovation in Lending Management Software</h3>
+                  <span class="news-heading-title">Updated On :  February 2018 </span></span>
+                  <p>Known for being India’s leading financial technology solution provider for over two decades, Nelito Systems Ltd today announced on having bagged five prestigious awards across innovative solutions and people management categories in India and South Africa.</p>
+                  <div class="cta"> <a href="nelito-systems-receives-global-accolades-for-innovation-in-lending-management-software.html" class="box-btn">Read More</a> </div>
+              </li>
+              <li>
+                  <h3>FinCraft<sup>TM</sup> ILMS making waves in the Lending Industry</h3>
+                  <span class="news-heading-title">Updated On :  February 2018 </span></span>
+                  <p>We are proud to announce; Nelito Systems Ltd. has been awarded Technoviti Award 2018 for its FinCraft<sup>TM</sup> Integrated Lending Management Solution built using the mobile-first and cloud-first approach.</p>
+                  <div class="cta"> <a href="lending-management-solution-wins-technoviti-award-2018.html" class="box-btn">Read More</a> </div>
+              </li>
+            <li>
+              <h3>Nelito bags "Enterprise Mobility Management Solution of the Year" award at Indian ISV Awards 2017</h3>
+              <span class="news-heading-title">Updated On :  january 2018 </span></span>
+              <p>We are proud to announce; Nelito Systems Ltd. has been awarded "Enterprise Mobility Management Solution of the Year" at the prestigious Indian ISV Awards 2017.</p>
+              <div class="cta"> <a href="indian-isv-awards.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>Jharkhand State Cooperative Bank, Ranchi, recently announced that they have chosen Nelito System's...</h3>
+              <span class="news-heading-title">Updated On :  january 2018 </span></span>
+              <p>FinCraft<sup>TM</sup> CTS Solution has been developed to provide participating members, an option to use a cost effective solution.</p>
+              <div class="cta"> <a href="jharkhand-state-cooperative-bank.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>Nelito receives a token of appreciation from Jalgaon DCC Bank.</h3>
+              <span class="news-heading-title">Updated On :  November 2017 </span></span>
+              <p>It’s the moment of great pride for a service provider to get to see the clients feel overwhelmed and eventually contented with the services delivered to them.</p>
+              <div class="cta"> <a href="nelito-receives-token-of-appreciation-from-jalgaon-dcc-bank.html" class="box-btn">Read More</a> </div>
+            </li>
+              <li>
+                  <h3>Double Glory: Nelito bags two TT100 2017 Awards</h3>
+                  <span class="news-heading-title">Updated On :  November 2017 </span></span>
+                  <p>We are proud to announce that Nelito was the only international company who has won two awards in the SA TT100 awards this year.</p>
+                  <div class="cta"> <a href="double-glory-nelito-bags-two-tt100-2017-awards.html" class="box-btn">Read More</a> </div>
+              </li>
+            <li>
+              <h3>Nelito Features in IBS Intelligence's Annual Sale League Table 2017 (Payments)</h3>
+              <span class="news-heading-title">Updated On :  November 2017 </span></span>
+              <p>Nelito's award winning <strong>FinCraft<sup>TM</sup> H2H Solution</strong> has been included in <strong>IBS Intelligence's Annual Sales League Table 2017 (Payments)</strong>.</p>
+              <div class="cta"> <a href="nelito-intelligence-in-ibs-annual-sales-league-table-2017.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>Sonata Finance implements Nelito System's Microfinance Solution IBS Journal October 2017 Case Study</h3>
+              <span class="news-heading-title">Updated On :  November 2017 </span></span>
+              <p>Sonata Finance Private Limited is a microfinance company set up with a vision to make microfinance financially self-sustainable.</p>
+              <div class="cta"> <a href="nelito-core-microfinance-solution-in-ibs-annual-sales-league-table-2017.html" class="box-btn">Read More</a> </div>
+            </li>
+            
+            <li>
+              <h3>Nelito's award winning FinCraft<sup>TM</sup> Integrated Lending Management Solution has been included in IBS's Annual Sales League Table 2017 (Lending).</h3>
+              <span class="news-heading-title">Updated On :  November 2017 </span></span>
+              <p>Nelito thanks its customers for placing their faith in FinCraft<sup>TM</sup> Integrated Lending Management Solution. Nelito remains agile and ensures Excellence through Agility.</p>
+              <div class="cta"> <a href="nelito-lending-solution-in-ibs-annual-sales-league-table-2017.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>Nelito Systems To Expand Footprints In Non-Banking Financial Segments</h3>
+              <span class="news-heading-title">Updated On :  July 2017 | Source : <a href="http://www.cxotoday.com/story/nelito-systems-to-expand-footprints-in-non-banking-financial-segments/" target="_blank"> http://www.cxotoday.com/story/nelito-systems-to-expand-footprints-in-non-banking-financial-segments </a></span></span>
+              <p>Nelito Systems, a Mumbai based digital consulting and solutions company catering to banks and governments, is expanding its horizons to provide IT solutions.</p>
+              <div class="cta"> <a href="nelito-systems-expand-footprints-non-banking-financial-segments.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>National Housing Bank's 'PMAY CLSS' Mobile App launch – Developed by Nelito</h3>
+              <span class="news-heading-title">Updated On : July 2017</span>
+              <p>Nelito is pleased to be associated with National Housing Bank for the launch of 'PMAY CLSS' Mobile App. Nelito has developed an android application for Pradhan Mantri Awas Yojana (PMAY) – CLSS (credit linked subsidy scheme) </p>
+              <div class="cta"> <a href="national-housing-bank-pmay-clss-mobile-app-launch.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>Mr. Punit Jain elected to the NASSCOM Domestic Council 2017-19</h3>
+              <span class="news-heading-title">Updated On : March 2017</span>
+              <p>The Domestic Council election was conducted for the first time and attracted 31 nominations from a cross-section of NASSCOM member companies. Through a 3 week voting process, 347 members voted for contestants of their choice.</p>
+              <div class="cta"> <a href="nasscom-domestic-council.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>Nelito aims to more than double revenue to Rs 200 cr by 2020</h3>
+              <span class="news-heading-title">Updated On : May 2017 | Source : <a href="http://timesofindia.indiatimes.com/business/india-business/nelito-aims-to-more-than-double-revenue-to-rs-200-cr-by-2020/articleshow/58600525.cms" target="_blank"> Times Of India </a></span>
+              <p>Nelito Systems, in which Japan's DTS Corporation owns a majority stake, is aiming to more than double its revenues to Rs 200 crore by the end of this decade, betting on the country's digital push.</p>
+              <div class="cta"> <a href="nelito-aims.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>Nelito Systems to expand global footprint, eyes Rs 200 crore by 2020</h3>
+              <span class="news-heading-title">Updated On : May 2017 | Source : <a href="http://www.newindianexpress.com/business/2017/may/11/nelito-systems-to-expand-global-footprint-eyes-rs-200-crore-by-2020-1603447.html" target="_blank">The New Indian Express</a></span>
+              <p>Banking and financial services firm Nelito Systems Ltd has chalked out plans to expand its global footprint, besides setting up an ambitious revenue target of Rs 200 crore in next two years. </p>
+              <div class="cta"> <a href="nelito-systems-to-expand-global-footprint-eyes.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>Nelito included in Forrester's Global Banking Platform Deals Survey 2017</h3>
+              <span class="news-heading-title">Updated On : April 2017</span>
+              <p>Nelito's award winning FinCraftT Core Banking Solution has been included in Forrester's Global Banking Platform Deals Survey 2017 (April 5, 2017) report.</p>
+              <div class="cta"> <a href="nelito-included-forresters-global-banking-platform-deals-survey.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>SAVE Solutions selects Nelito's FinCraft Micro Finance Solution</h3>
+              <span class="news-heading-title">Updated On : March 2017</span>
+              <p>AVE as one of the largest Business Correspondent Network in India has established 6349 Kiosks in 20 states of India with an special focus on rural areas.</p>
+              <div class="cta"> <a href="micro-finance-solution.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>WheelsEMI engages Nelito Systems as Technology Partner for FinCraft NBFC Software</h3>
+              <span class="news-heading-title">Updated On : March 2017</span>
+              <p>Nelito is pleased to be associated with WheelsEMI for their Loan Origination (LOS), Loan Management (LMS) and Finance module software.</p>
+              <div class="cta"> <a href="nelito-systems-technology-partner.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>Nelito successfully commissions knowledge management portal for Govt. of Sikkim</h3>
+              <span class="news-heading-title">Updated On : December 2016</span>
+              <p>Nelito has successfully commissions knowledge management portal <a href="http://indiaskillpedia.com" target="_blank">http://indiaskillpedia.com</a> for Govt. of Sikkim in a record time.</p>
+              <div class="cta"> <a href="nelito-successfully-commissions-knowledge-management-portal-govt.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>Nelito successfully support demonetization initiative in its customer banks</h3>
+              <span class="news-heading-title">Updated On : December 2016</span>
+              <p>Nelito has successfully supported more than 100 Banks which use its FinCraft CBS to smoothly implement the demonetisation announcement made by Prime Minister of India on 08 Nov 2016.</p>
+              <div class="cta"> <a href="nelito-successfully-support-demonetization-initiative-customer-banks.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>Nelito included in Forrester's Vendor Landscape: Banking Platforms in the Cloud 2016 report.</h3>
+              <span class="news-heading-title">Updated On : November  2016</span>
+              <p>Nelito's award winning FinCraft™ Core Banking Solution has been included in Forrester's Vendor Landscape: Banking Platforms in the Cloud October 2016 report.</p>
+              <div class="cta"> <a href="nelito-included-forrester.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>The Nainital Bank upgrades itself to FinCraft CBS 3.0, Nelito's latest CBS offering.</h3>
+              <span class="news-heading-title">Updated On : October 2016</span>
+              <p>Nelito FinCraft's long-time customer The Nainital Bank Ltd. Has decided itself to upgrade its core banking to FinCraft CBS 3.0.</p>
+              <div class="cta"> <a href="the-nainital-bank-upgrades-itself.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>The Banaskantha Mercantile Co-op Bank Ltd., Palanpur becomes FinCraft's latest customer.</h3>
+              <span class="news-heading-title">Updated On : October 2016</span>
+              <p>The Banaskantha Mercantile Co-op Bank Ltd. Based in Palanpur, Gujarat has chosen FinCraft CBS for its core banking requirements.</p>
+              <div class="cta"> <a href="the-banaskantha-mercantile-co-op-bank-ltd.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>The Hindu Co-op Bank Ltd. , Pathankot  upgrades to the latest FinCraft CBS.</h3>
+              <span class="news-heading-title">Updated On : October 2016</span>
+              <p>The Hindu Co-op Bank Ltd. Based in Pathankot , Punjab has chosen to upgrade its proven and reliable warhorse the FinCraft CBS to the latest one.</p>
+              <div class="cta"> <a href="the-hindu-co-op-bank-ltd.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>Nelito’s FinCraft<sup>TM</sup> Enterprise Reporting Solution selected by new payment bank PayTM for its regulatory reporting requirement. (June 2016)</h3>
+              <span class="news-heading-title">Updated On : June 2016</span>
+              <p>PayTM has selected Nelito’s FinCraft Enterprise Reporting for its MIS ADF requirements as a payment bank.</p>
+              <div class="cta"> <a href="enterprise-reporting-solution.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>Utkarsh Financial Services selects FinCraft<sup>TM</sup> Enterprise Reporting Solution as its engine for regulatory reporting. (June 2016)</h3>
+              <span class="news-heading-title">Updated On : June 2016</span>
+              <p>For its MIS-ADF requirements Utkarsh has selected Nelito’s FinCraft Enterprise Reporting engine.</p>
+              <div class="cta"> <a href="utkarsh-financial-services.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>Corporation Bank selects FinDART for its Data Archival and Retrieval reporting solution (June 2016)</h3>
+              <span class="news-heading-title">Updated On : June 2016</span>
+              <p>Nelito's data archival and retrieval solution FinDART has been chosen by Corporation Bank for its data archival requirements.</p>
+              <div class="cta"> <a href="coperation-bank-data-archival-and-retrieval.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>Indian Overseas Bank (IOB) chooses FinDART solution for its Data Archival and Retrieval reporting solution (May 2016)</h3>
+              <span class="news-heading-title">Updated On : May 2016</span>
+              <p>For its data archival and retrieval requirements IOB has chosen Nelito's FinDART which is a data retrieval and archival solution.</p>
+              <div class="cta"> <a href="data-archival-and-retrieval-system.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>One of the largest private sector bank in India chooses FinDART for its archival requirement for its core banking (May 2016)</h3>
+              <span class="news-heading-title">Updated On : May 2016</span>
+              <p>After proving highly effective in the first phase, Nelito's FinDART has again been chosen for the second phase of the data archival project by one of the largest private sector bank in India...</p>
+              <div class="cta"> <a href="largest-private-sector-bank-in-india.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>Nelito FinCraft<sup>TM</sup> DoorStep Banking solution chosen by Idukki DCCB for its financial inclusion project. (March 2016)</h3>
+              <span class="news-heading-title">Updated On : March 2016</span>
+              <p>Idukki DCCB has chosen FinCraft<sup>TM</sup> DoorStep Banking solution for its field operations in the Kerala region.</p>
+              <div class="cta"> <a href="nelito-doorstep-banking.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>Nelito Systems’ FinCraft<sup>TM</sup> Regulatory Reporting solution selected by a leading Financial Organization in Republic of Mauritius. (March 2016)</h3>
+              <span class="news-heading-title">Updated On : March 2016</span>
+              <p>Nelito’s FinCraft<sup>TM</sup> Regulatory Reporting solution based on Automated Data Flow and XBRL is selected by a leading financial organization in Republic of Mauritius...</p>
+              <div class="cta"> <a href="leading-financial-organization.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>Nelito Systems chosen as the Software System Integrator by a Leading Bank in Bhutan. (March 2016)</h3>
+              <span class="news-heading-title">Updated On : March 2016</span>
+              <p>Nelito has emerged as the preferred software system integrator for one of the top four banks in Bhutan...</p>
+              <div class="cta"> <a href="nelito-chosen-software-system.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>Nelito Systems delivers its cloud based FinCraft<sup>TM</sup> Core Banking Solution to 200 PACS in Idukki District in state of Kerala, India. (April 2016)</h3>
+              <span class="news-heading-title">Updated On : April 2016</span>
+              <p>Nelito Systems has successfully completed and delivered its FinCraft<sup>TM</sup> Core Banking Solution for nearly 200 PACS (Primary Agricultural Credit Societies / Credit Unions)...</p>
+              <div class="cta"> <a href="nelito-delivering-its-cloud-based-cbs.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>Nelito Systems’ FinCraft<sup>TM</sup> Regulatory Reporting solution selected by newly licensed Small Finance Bank in South India. (March 2016)</h3>
+              <span class="news-heading-title">Updated On : March 2016</span>
+              <p>A South India based newly licensed small finance bank has chosen Nelito’s FinCraft<sup>TM</sup> Regulatory Reporting solution for its MIS-ADF requirements...</p>
+              <div class="cta"> <a href="fincraft-regulatory-reporting-system.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>Nelito’s FinCraft<sup>TM</sup> Core Banking Suite included in Forrester’s Global banking Platform Deal Survey 2016. (24 March 2016)</h3>
+              <span class="news-heading-title">Updated On : 24 March 2016</span>
+              <p>Forrester’s Global banking Platform Deal Survey 2016 has included Nelito’s FinCraft<sup>TM</sup> Core Banking Suite as a Solid Player for the second time in a row...</p>
+              <div class="cta"> <a href="nelito-incraft-suite-included-forrester.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>Nelito included in independent research firm’s Global Banking Platform Deals 2014 report.</h3>
+              <span class="news-heading-title">Updated On : March 2014</span>
+              <p>After being featured in Gartner’s International Magic Quadrant report 2014 for CBS, Nelito’s FinCraft<sup>TM</sup> CBS has been recognized in yet another international research ...</p>
+              <div class="cta"> <a href="nelito-included-in-independent-research-firms-global-banking-platform-deals-2014-report.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>Nelito’s solutions powers Foreign Banks</h3>
+              <span class="news-heading-title">Updated On : 28 March 2014</span>
+              <p>Nelito’s time tested expertise in providing banking solutions has been proven yet again when two Foreign Banks have placed their faith in Nelito’s ability for providing solutions that perform.</p>
+              <div class="cta"> <a href="nelitos-solutions-powers-foreign-banks.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>Multi State Credit Societies choose Nelito’s FinCraft<sup>TM</sup> suite.</h3>
+              <span class="news-heading-title">Updated On : 28 March 2014</span>
+              <p>Two of the prominent Multi State Credit Societies based in the Marathwada region in Maharashtra have chosen the FinCraft<sup>TM</sup> CBS suite to power their business. </p>
+              <div class="cta"> <a href="multi-state-credit-societies-choose-nelitos-fincraft-suite.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>Nelito wins contract for Village encoding project from one of India’s largest PSB.</h3>
+              <span class="news-heading-title">Updated On : 23 March 2014</span>
+              <p>Recently Nelito won mandates from three Urban Cooperative banks based in Mumbai and Kerala to standardize, and cleanse data for the purposes of achieving unique customer identification code (UCIC).as mandated by RBI. </p>
+              <div class="cta"> <a href="nelito-wins-contract-village-encoding-project-one-indias-largest-psb.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>New wins for Nelito’s DoorStep Banking</h3>
+              <span class="news-heading-title">Updated On : 21 March 2014</span>
+              <p>In one of the first instances of a forward looking urban cooperative bank leveraging AADHAR based biometric authentication, Kannur cooperative Bank has selected FinCraft<sup>TM</sup> – Doorstep Banking  ...</p>
+              <div class="cta"> <a href="new-wins-nelitos-doorstep-banking.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>New orders from Akola DCCB</h3>
+              <span class="news-heading-title">Updated On : 17 March 2014</span>
+              <p>Akola DCCB is one of the largest cooperative banks in Western Maharashtra which uses FinCraft<sup>TM</sup> suite. <a href="https://www.nelito.com/banking-solutions/core-banking.html" class="links"> The bank wanted to enhance its infrastructure, upgrade FinCraft<sup>TM</sup> Core Banking System and create a Disaster Management site.</a> </p>
+              <div class="cta"> <a href="new-orders-akola-dccb.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>Orders for PACS</h3>
+              <span class="news-heading-title">Updated On : 15 March 2014</span>
+              <p>Nelito is a supplier of choice of PACS software. Recently Nelito has bagged several orders in multiple states like Karnataka for end to end PACS solution.</p>
+              <div class="cta"> <a href="orders-pacs.html" class="box-btn">Read More</a> </div>
+            </li>
+            <li>
+              <h3>New order for MIS</h3>
+              <span class="news-heading-title">Updated On : 4 March 2014</span>
+              <p>One of the larger public sector banks have decided to implement Enterprise Data warehousing bank wide. A critical component is RBI’s MIS ADF requirement. The product will be Fincraft-MIS-ADF solution through the system operator Wipro. </p>
+              <div class="cta"> <a href="new-order-mis.html" class="box-btn">Read More</a> </div>
+            </li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    
+    
+  
+  <aside id="sticky-social">
+    <ul>
+      <li><a href="https://www.linkedin.com/company/nelito-systems-ltd?trk=tyah&trkInfo=idx%3A2-1-6%2CtarId%3A1421990639778%2Ctas%3Anelito" class="entypo-linkedin" target="_blank"><span>LinkedIn</span></a></li>
+      <li><a href="https://plus.google.com/+NelitoSystemsLimited" class="entypo-gplus" target="_blank"><span>Google+</span></a></li>
+      <li><a href="https://twitter.com/nelitosystem" class="entypo-twitter" target="_blank"><span>Twitter</span></a></li>
+      <li><a href="https://www.facebook.com/NelitoSystems" class="entypo-facebook" target="_blank"><span>Facebook</span></a></li>
+    </ul>
+  </aside>
+  <section class="content-area">
+    <div class="footer">
+      <div class="footer-wrapper">
+        <div class="container">
+          <div class="footer-links">
+            <dl>
+              <dt><a href="../digital-banking/index.html">Digital Banking</a></dt>
+              <dd>
+                <ul>
+                  <li><a href="../digital-banking/core-banking-solution.html">Core Banking</a></li>
+                  <li><a href="../digital-banking/mobile-banking-solution.html">Mobile Banking</a></li>
+                  <li><a href="../digital-banking/internet-banking-solution.html">Internet Banking</a></li>
+                  <li><a href="../digital-banking/doorstep-banking-solution.html">Doorstep Banking</a></li>
+                  <li><a href="../digital-banking/cheque-truncation-system.html">Check Truncation System</a></li>
+                  <li><a href="../digital-banking/enterprise-reporting.html">Enterprise Reporting</a></li>
+                  <li><a href="../digital-banking/data-archival-retrieval.html">Data Archival and Retrieval</a></li>
+                  <li><a href="../digital-banking/anti-money-laundering-solution.html">Anti Money Laundering</a></li>
+                  <li><a href="../digital-banking/nach-mms.html">NACH – MMS</a></li>
+                </ul>
+              </dd>
+            </dl>
+            <dl>
+              <dt><a href="index.html">Lending Solutions</a></dt>
+              <dd>
+                <ul>
+                  <li><a href="../lending-solutions/nbfc.html">FinCraft for NBFCs</a></li>
+                  <li><a href="../lending-solutions/fincraft-core-microfinance-solution.html">FinCraft for MFIs</a></li>
+                  <li><a href="../lending-solutions/loan-origination-solution.html">Loan Origination Solution</a></li>
+                  <li><a href="../lending-solutions/loan-management-solution.html">Loan Management Solution</a></li>
+                  <li><a href="../lending-solutions/collections-recovery.html">Collections and Recovery</a></li>
+                  <li><a href="../lending-solutions/lending-analytics.html">Lending Analytics</a></li>
+                </ul>
+              </dd>
+            </dl>
+            <dl>
+              <dt><a href="../services/index.html">Services</a></dt>
+              <dd>
+                <ul>
+                  <li><a href="../services/custom-application-development.html">Custom Application Development</a></li>
+                  <li><a href="../services/it-infrastructure-services.html">IT Infrastructure services</a></li>
+                  <li><a href="../services/swift-services.html">SWIFT<sup class="menutm">TM</sup> Services</a></li>
+                  <li><a href="../services/finacle-cbs-implementation.html">Third Party CBS Implementation</a></li>
+                  <li><a href="../services/business-process-management.html">Business Process Management</a></li>
+                  <li><a href="javascript:void(0)">Testing Services</a></li>
+                  <!--<li><a href="../services/data-warehousing.html">Data Ware Housing</a></li>-->
+                </ul>
+              </dd>
+            </dl>
+            <dl>
+              <dt><a href="javascript:void(0)">Technologies</a></dt>
+              <dd>
+                <ul>
+                  <li><a href="../technologies/mobility-solution.html">Mobility</a></li>
+                  <li><a href="../blog/blockchain-technology-in-banking-and-finance.html">Blockchain</a></li>
+                  <li><a href="../blog/ai-and-its-impact-on-the-finance-industry.html">Artificial Intelligence</a></li>
+                  <li><a href="../technologies/cloud.html">Cloud</a></li>
+                </ul>
+              </dd>
+            </dl>
+            <dl>
+              <dt><a href="javascript:void(0)">Industries</a></dt>
+              <dd>
+                <ul>
+                  <li><a href="../industries/banking.html">Banking</a></li>
+                  <li><a href="../industries/financial-services.html">Financial Services</a></li>
+                  <li><a href="nbfc.html">NBFCs</a></li>
+                  <li><a href="fincraft-core-microfinance-solution.html">MFIs</a></li>
+                  <li><a href="../industries/goverment.html">Government</a></li>
+                </ul>
+              </dd>
+            </dl>
+            <dl>
+              <dt>More </dt>
+              <dd>
+                <ul>
+                  <li><a href="https://helpdesk.nelito.com"  target="_blank">Customer Login</a></li>
+                  <li><a href="http://webmail.nelito.com"  target="_blank">Webmail</a></li>
+                  <li><a href="https://myhris.adrenalin.in/myadrenalin/Login.aspx" target="_blank">HRMS</a></li>
+                  <li><a href="../faqs.html">FAQ's</a></li>
+                  <li><a href="../sitemap.html">Site Map</a></li>
+                </ul>
+              </dd>
+            </dl>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <div class="copywrite">
+        <div class="container p0">
+        	<div class="grid-3 fr p0">
+          		<p class="text-right">&copy; <script>document.write(new Date().getFullYear());</script> Nelito Systems Ltd. <a href="terms.html">Terms &amp; Privacy</a> </p>
+          	</div>
+        	<div class="grid-3 fl p0 cmmi-logo text-left">
+            	<a href="https://sas.cmmiinstitute.com/pars/pars_detail.aspx?a=3175" target="_blank"><img src="../images/CMMI-DEV-logo.png"></a>
+            </div>
+        </div>
+            <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script src="../scripts/wow.js"></script> 
+<script>
+new WOW().init();
+</script> 
+<script src="../scripts/common.js" type="text/javascript"></script> 
+</body>
+</html>

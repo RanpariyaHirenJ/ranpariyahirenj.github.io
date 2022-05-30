@@ -1,0 +1,740 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="utf-8">
+<link rel="canonical" href="https://www.nelito.com/" />
+<link rel="icon" type="image/png" href="../images/favicon.png" />
+<title>Meet Nelito at Sibos 2018 in Sydney</title>
+<link rel="stylesheet" type="text/css" href="../styles/animate.css">
+<link rel="stylesheet" type="text/css" href="../styles/sibos-style-home.css">
+<link rel="stylesheet" type="text/css" href="../styles/style.css">
+<link rel="stylesheet" type="text/css" href="../styles/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../styles/float-icon.css">
+<link rel="stylesheet" href="../styles/jquery-ui.css">
+<script src="../scripts/jquery-min.js" type="text/javascript"></script>
+<script src="../scripts/tweenmax.min.js" type="text/javascript"></script>
+<script src="../scripts/sticky-kit.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+<script src="../scripts/jquery-ui.js"></script>
+<script>
+$(function(){
+$("#meeting_date").datepicker({
+	changeMonth: false,
+	changeYear: false,
+	yearRange: '2018:2018',
+	dateFormat: "dd/mm/yy",
+	defaultDate: "22/10/2018",
+	beforeShow: function () {
+	    sessionStorage.setItem("date_val", $("#meeting_date").val())
+		$("#meeting_date").datepicker("setDate", "22/10/2018");
+
+	    var date2 = $('#meeting_date').datepicker('getDate');
+	    var date3 = $('#meeting_date').datepicker('getDate');
+
+	    date2.setDate(date2.getDate() + 3);
+	    date3.setDate(date2.getDate() - 3);
+		
+		jQuery(this).datepicker('option', 'maxDate', date2);
+	    jQuery(this).datepicker('option', 'minDate', date3);
+	    
+		if (sessionStorage.getItem("date_val") != "" || sessionStorage.getItem("date_val") != null) {
+	        $("#meeting_date").val(sessionStorage.getItem("date_val"))
+	        sessionStorage.removeItem("date_val")
+	    }
+	},
+}).focus(function () {
+      $(".ui-datepicker-next").hide();
+      $(".ui-datepicker-prev").hide();
+});
+});
+</script>
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Software Solutions for Banking and Financial Services | Nelito">
+<meta property="og:description" content="Nelito software solutions offer core & mobile banking solutions. We provide Microfinance, custom application software services, swift and finacle solutions to banking and financial industries.">
+<meta property="og:url" content="https://www.nelito.com/">
+<meta property="og:image" content="https://www.nelito.com/images/logo.png">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@nelitosystem">
+<meta name="twitter:title" content="Software Solutions for Banking and Financial Services | Nelito">
+<meta name="twitter:description" content="Nelito software solutions offer core & mobile banking solutions. We provide Microfinance, custom application software services, swift and finacle solutions to banking and financial industries.">
+<meta name="twitter:image" content="https://www.nelito.com/images/logo.png">
+<meta name="twitter:image:alt" content="Nelito Logo">
+
+</head>
+<body>
+    <div class="overlay" id="schedule-meeting" data-animation-in="fadeInDown" data-animation-out="fadeOutUp">
+        <div class="overlay-box">
+            <div class="content">
+                <div class="overlay-header">Schedule a Meeting</div>
+                <form name="meetingform" method="post" action="../send-enquiry-php/mail.php" class="meetingform" onSubmit="return form_validate_jquery('.meetingform')">
+                <div class="overlay-content">
+                    <div class="form-layout">
+                        <div class="form-row">
+                            <div class="grid-6">
+                                <div class="form-field mandatory">
+                                    <input type="text" name="meeting_date" autocomplete="off" id="meeting_date" validation="text" title="Meeting Date" placeholder="Meeting Date">
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="grid-6">
+                                <div class="form-field mandatory">
+                                    <!--<select>
+                                        <option value="">You wish to talk about?</option>
+                                    </select>-->
+                                    <input type="text" name="meeting_subject" id="meeting_subject" validation="text" title="You wish to talk about?" placeholder="You wish to talk about?">
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="grid-6 form-cntr-left">
+                                <div class="form-field mandatory">
+                                    <input type="text" name="first_name" id="first_name" validation="text" title="First Name" placeholder="First Name *">
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="grid-6 form-cntr-right">
+                                <div class="form-field mandatory">
+                                    <input type="text" name="last_name" id="last_name" validation="text" title="Last Name" placeholder="Last Name *">
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="grid-6 form-cntr-left">
+                                <div class="form-field mandatory">
+                                    <input type="email" name="email_address" id="email_address" validation="email" title="Work Email" placeholder="Work Email *">
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="grid-6 form-cntr-right">
+                                <div class="form-field mandatory">
+                                    <input type="text" name="phone_number" id="phone_number" maxlength="13" onKeyPress="return onlyNos(event,this);" validation="number" title="Phone Number" placeholder="Phone Number *">
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="form-row">
+                            <div class="grid-6 form-cntr-left">
+                                <div class="form-field mandatory">
+                                    <input type="text" name="company_name" id="company_name" validation="text" title="Company" placeholder="Company *">
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="grid-6 form-cntr-right">
+                                <div class="form-field mandatory">
+                                    <select name="country_name" id="country_name" title="Country" validation="text" style="border:1px solid #cdcdcd">
+                                        <option value=""> Country </option>
+                                        <option>Afghanistan</option>
+                                        <option>Aland Islands</option>
+                                        <option>Albania</option>
+                                        <option>Algeria</option>
+                                        <option>American Samoa</option>
+                                        <option>Andorra</option>
+                                        <option>Angola</option>
+                                        <option>Anguilla</option>
+                                        <option>Antarctica</option>
+                                        <option>Antigua And Barbuda</option>
+                                        <option>Argentina</option>
+                                        <option>Armenia</option>
+                                        <option>Aruba</option>
+                                        <option>Australia</option>
+                                        <option>Austria</option>
+                                        <option>Azerbaijan</option>
+                                        <option>Bahamas</option>
+                                        <option>Bahrain</option>
+                                        <option>Bangladesh</option>
+                                        <option>Barbados</option>
+                                        <option>Belarus</option>
+                                        <option>Belgium</option>
+                                        <option>Belize</option>
+                                        <option>Benin</option>
+                                        <option>Bermuda</option>
+                                        <option>Bhutan</option>
+                                        <option>Bolivia</option>
+                                        <option>Bosnia And Herzegovina</option>
+                                        <option>Botswana</option>
+                                        <option>Bouvet Island</option>
+                                        <option>Brazil</option>
+                                        <option>British Indian Ocean Territory</option>
+                                        <option>Brunei Darussalam</option>
+                                        <option>Bulgaria</option>
+                                        <option>Burkina Faso</option>
+                                        <option>Burundi</option>
+                                        <option>Cambodia</option>
+                                        <option>Cameroon</option>
+                                        <option>Canada</option>
+                                        <option>Cape Verde</option>
+                                        <option>Cayman Islands</option>
+                                        <option>Central African Republic</option>
+                                        <option>Chad</option>
+                                        <option>Chile</option>
+                                        <option>China</option>
+                                        <option>Christmas Island</option>
+                                        <option>Cocos (Keeling) Islands</option>
+                                        <option>Colombia</option>
+                                        <option>Comoros</option>
+                                        <option>Congo</option>
+                                        <option>Congo, Democratic Republic</option>
+                                        <option>Cook Islands</option>
+                                        <option>Costa Rica</option>
+                                        <option>Cote D'Ivoire</option>
+                                        <option>Croatia</option>
+                                        <option>Cuba</option>
+                                        <option>Cyprus</option>
+                                        <option>Czech Republic</option>
+                                        <option>Denmark</option>
+                                        <option>Djibouti</option>
+                                        <option>Dominica</option>
+                                        <option>Dominican Republic</option>
+                                        <option>Ecuador</option>
+                                        <option>Egypt</option>
+                                        <option>El Salvador</option>
+                                        <option>Equatorial Guinea</option>
+                                        <option>Eritrea</option>
+                                        <option>Estonia</option>
+                                        <option>Ethiopia</option>
+                                        <option>Falkland Islands (Malvinas)</option>
+                                        <option>Faroe Islands</option>
+                                        <option>Fiji</option>
+                                        <option>Finland</option>
+                                        <option>France</option>
+                                        <option>French Guiana</option>
+                                        <option>French Polynesia</option>
+                                        <option>French Southern Territories</option>
+                                        <option>Gabon</option>
+                                        <option>Gambia</option>
+                                        <option>Georgia</option>
+                                        <option>Germany</option>
+                                        <option>Ghana</option>
+                                        <option>Gibraltar</option>
+                                        <option>Greece</option>
+                                        <option>Greenland</option>
+                                        <option>Grenada</option>
+                                        <option>Guadeloupe</option>
+                                        <option>Guam</option>
+                                        <option>Guatemala</option>
+                                        <option>Guernsey</option>
+                                        <option>Guinea</option>
+                                        <option>Guinea-Bissau</option>
+                                        <option>Guyana</option>
+                                        <option>Haiti</option>
+                                        <option>Heard Island &amp; Mcdonald Islands</option>
+                                        <option>Holy See</option>
+                                        <option>Honduras</option>
+                                        <option>Hong Kong</option>
+                                        <option>Hungary</option>
+                                        <option>Iceland</option>
+                                        <option>India</option>
+                                        <option>Indonesia</option>
+                                        <option>Iran</option>
+                                        <option>Iraq</option>
+                                        <option>Ireland</option>
+                                        <option>Isle Of Man</option>
+                                        <option>Israel</option>
+                                        <option>Italy</option>
+                                        <option>Jamaica</option>
+                                        <option>Japan</option>
+                                        <option>Jersey</option>
+                                        <option>Jordan</option>
+                                        <option>Kazakhstan</option>
+                                        <option>Kenya</option>
+                                        <option>Kiribati</option>
+                                        <option>Korea</option>
+                                        <option>Kuwait</option>
+                                        <option>Kyrgyzstan</option>
+                                        <option>Lao People's Democratic Republic</option>
+                                        <option>Latvia</option>
+                                        <option>Lebanon</option>
+                                        <option>Lesotho</option>
+                                        <option>Liberia</option>
+                                        <option>Libyan Arab Jamahiriya</option>
+                                        <option>Liechtenstein</option>
+                                        <option>Lithuania</option>
+                                        <option>Luxembourg</option>
+                                        <option>Macao</option>
+                                        <option>Macedonia</option>
+                                        <option>Madagascar</option>
+                                        <option>Malawi</option>
+                                        <option>Malaysia</option>
+                                        <option>Maldives</option>
+                                        <option>Mali</option>
+                                        <option>Malta</option>
+                                        <option>Marshall Islands</option>
+                                        <option>Martinique</option>
+                                        <option>Mauritania</option>
+                                        <option>Mauritius</option>
+                                        <option>Mayotte</option>
+                                        <option>Mexico</option>
+                                        <option>Micronesia, Federated States Of</option>
+                                        <option>Moldova</option>
+                                        <option>Monaco</option>
+                                        <option>Mongolia</option>
+                                        <option>Montenegro</option>
+                                        <option>Montserrat</option>
+                                        <option>Morocco</option>
+                                        <option>Mozambique</option>
+                                        <option>Myanmar</option>
+                                        <option>Namibia</option>
+                                        <option>Nauru</option>
+                                        <option>Nepal</option>
+                                        <option>Netherlands</option>
+                                        <option>Netherlands Antilles</option>
+                                        <option>New Caledonia</option>
+                                        <option>New Zealand</option>
+                                        <option>Nicaragua</option>
+                                        <option>Niger</option>
+                                        <option>Nigeria</option>
+                                        <option>Niue</option>
+                                        <option>Norfolk Island</option>
+                                        <option>Northern Mariana Islands</option>
+                                        <option>Norway</option>
+                                        <option>Oman</option>
+                                        <option>Pakistan</option>
+                                        <option>Palau</option>
+                                        <option>Palestinian Territory, Occupied</option>
+                                        <option>Panama</option>
+                                        <option>Papua New Guinea</option>
+                                        <option>Paraguay</option>
+                                        <option>Peru</option>
+                                        <option>Philippines</option>
+                                        <option>Pitcairn</option>
+                                        <option>Poland</option>
+                                        <option>Portugal</option>
+                                        <option>Puerto Rico</option>
+                                        <option>Qatar</option>
+                                        <option>Reunion</option>
+                                        <option>Romania</option>
+                                        <option>Russian Federation</option>
+                                        <option>Rwanda</option>
+                                        <option>Saint Barthelemy</option>
+                                        <option>Saint Helena</option>
+                                        <option>Saint Kitts And Nevis</option>
+                                        <option>Saint Lucia</option>
+                                        <option>Saint Martin</option>
+                                        <option>Saint Pierre And Miquelon</option>
+                                        <option>Saint Vincent And Grenadines</option>
+                                        <option>Samoa</option>
+                                        <option>San Marino</option>
+                                        <option>Sao Tome And Principe</option>
+                                        <option>Saudi Arabia</option>
+                                        <option>Senegal</option>
+                                        <option>Serbia</option>
+                                        <option>Seychelles</option>
+                                        <option>Sierra Leone</option>
+                                        <option>Singapore</option>
+                                        <option>Slovakia</option>
+                                        <option>Slovenia</option>
+                                        <option>Solomon Islands</option>
+                                        <option>Somalia</option>
+                                        <option>South Africa</option>
+                                        <option>South Georgia And Sandwich Isl.</option>
+                                        <option>Spain</option>
+                                        <option>Sri Lanka</option>
+                                        <option>Sudan</option>
+                                        <option>Suriname</option>
+                                        <option>Svalbard And Jan Mayen</option>
+                                        <option>Swaziland</option>
+                                        <option>Sweden</option>
+                                        <option>Switzerland</option>
+                                        <option>Syrian Arab Republic</option>
+                                        <option>Taiwan</option>
+                                        <option>Tajikistan</option>
+                                        <option>Tanzania</option>
+                                        <option>Thailand</option>
+                                        <option>Timor-Leste</option>
+                                        <option>Togo</option>
+                                        <option>Tokelau</option>
+                                        <option>Tonga</option>
+                                        <option>Trinidad And Tobago</option>
+                                        <option>Tunisia</option>
+                                        <option>Turkey</option>
+                                        <option>Turkmenistan</option>
+                                        <option>Turks And Caicos Islands</option>
+                                        <option>Tuvalu</option>
+                                        <option>Uganda</option>
+                                        <option>Ukraine</option>
+                                        <option>United Arab Emirates</option>
+                                        <option>United Kingdom</option>
+                                        <option>United States</option>
+                                        <option>United States Outlying Islands</option>
+                                        <option>Uruguay</option>
+                                        <option>Uzbekistan</option>
+                                        <option>Vanuatu</option>
+                                        <option>Venezuela</option>
+                                        <option>Viet Nam</option>
+                                        <option>Virgin Islands, British</option>
+                                        <option>Virgin Islands, U.S.</option>
+                                        <option>Wallis And Futuna</option>
+                                        <option>Western Sahara</option>
+                                        <option>Yemen</option>
+                                        <option>Zambia</option>
+                                        <option>Zimbabwe</option>
+                                    </select>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-field mandatory captcha-field">
+                            <div id="recaptcha1"></div>
+                            <div class="clear"></div>
+                          </div>
+                          <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay-footer">
+                    <input type="submit" name="actionmeeting" value="Submit">
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+        <div class="send-enquiery-btn"><a class="box-btn" href="javascript:void(0);" onClick="overlayBox('schedule-meeting')">Schedule a Meeting</a> </div>
+
+    <div class="loader"></div>
+    <div class="wrapper">
+        <header class="header">
+    <div class="container">
+      <div class="logo"> <a href="https://www.nelito.com"><img src="../images/logo.png" alt="Nelito" title="Nelito"></a> </div>
+      <div class="search-btn mobdisp"><a href="javascript:void(0)"></a>
+        <div class="search-container">
+          <gcse:search class="search-box">
+            <input type="text" placeholder="">
+            <input type="button" class="search-btn">
+          </gcse:search>
+        </div>
+      </div>
+      <nav class="nav">
+        <div class="container menu-wraper">
+          <ul class="menuL">
+            <li class="has-sub-menu small"> <a href="../digital-banking/index.html">Digital Banking</a>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href="../digital-banking/core-banking-solution.html">Core Banking</a></li>
+                  <li><a href="../digital-banking/mobile-banking-solution.html">Mobile Banking</a></li>
+                  <li><a href="../digital-banking/internet-banking-solution.html">Internet Banking</a></li>
+                  <li><a href="../digital-banking/doorstep-banking-solution.html">Doorstep Banking</a></li>
+                  <li><a href="../digital-banking/cheque-truncation-system.html">Check Truncation System</a></li>
+                  <li><a href="../digital-banking/enterprise-reporting.html">Enterprise Reporting</a></li>
+                  <li><a href="../digital-banking/data-archival-retrieval.html">Data Archival and Retrieval</a></li>
+                  <li><a href="../digital-banking/anti-money-laundering-solution.html">Anti Money Laundering</a></li>
+                  <li><a href="../digital-banking/nach-mms.html">NACH – MMS</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="has-sub-menu small"> <a href="../lending-solutions/index.html">Lending Solutions</a>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href="../lending-solutions/nbfc.html">FinCraft for NBFCs</a></li>
+                  <li><a href="../lending-solutions/fincraft-core-microfinance-solution.html">FinCraft for MFIs</a></li>
+                  <li><a href="../lending-solutions/loan-origination-solution.html">Loan Origination Solution</a></li>
+                  <li><a href="../lending-solutions/loan-management-solution.html">Loan Management Solution</a></li>
+                  <li><a href="../lending-solutions/collections-recovery.html">Collections and Recovery</a></li>
+                  <li><a href="../lending-solutions/lending-analytics.html">Lending Analytics</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="has-sub-menu small"> <a href="../services/index.html">Services</a>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href="../services/custom-application-development.html">Custom Application Development</a></li>
+                  <li><a href="../services/it-infrastructure-services.html">IT Infrastructure services</a></li>
+                  <li><a href="../services/swift-services.html">SWIFT<sup class="menutm">TM</sup> Services</a></li>
+                  <li><a href="../services/finacle-cbs-implementation.html">Third Party CBS Implementation</a></li>
+                  <li><a href="../services/business-process-management.html">Business Process Management</a></li>
+                  <li><a href="javascript:void(0)">Testing Services</a></li>
+                  <!--<li><a href="../services/data-warehousing.html">Data Ware Housing</a></li>-->
+                </ul>
+              </div>
+            </li>
+            <li class="has-sub-menu small"> <a href="javascript:void(0)">Industries</a>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href="../industries/banking.html">Banking</a></li>
+                  <li><a href="../industries/financial-services.html">Financial Services</a></li>
+                  <li><a href="../lending-solutions/nbfc.html">NBFCs</a></li>
+                  <li><a href="../lending-solutions/fincraft-core-microfinance-solution.html">MFIs</a></li>
+                  <li><a href="../industries/goverment.html">Government</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="has-sub-menu small"> <a href="javascript:void(0)">Technologies</a>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href="../technologies/mobility-solution.html">Mobility</a></li>
+                  <li><a href="../blog/blockchain-technology-in-banking-and-finance.html">Blockchain</a></li>
+                  <li><a href="../blog/ai-and-its-impact-on-the-finance-industry.html">Artificial Intelligence</a></li>
+                  <li><a href="../technologies/cloud.html">Cloud</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="has-sub-menu small"> <a href="javascript:void(0)">Insights</a>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href="../news/index.html">News</a></li>
+                  <li><a href="../events/index.html">Events</a></li>
+                  <li><a href="index.html">Blogs</a></li>
+                  <li><a href="../highlights/index.html">Highlights</a></li>
+                  <li><a href="../case-study.html">Success Stories</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <ul class="menuR">
+            <li class="has-sub-menu small"> <a href="javascript:void(0)">About</a>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href="../about.html">Company</a></li>
+                  <li><a href="../board-of-directors.html">Board of Directors</a></li>
+                  <li><a href="../management-team.html">Management Team</a></li>
+                  <li><a href="../quality-policy.html">Quality</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="has-sub-menu small"> <a href="javascript:void(0)">Clients</a>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href="../clients.html">Client Overview</a></li>
+                  <li><a href="../testimonial.html">Client Testimonials</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="has-sub-menu small"> <a href="javascript:void(0)">Contact</a>
+              <div class="sub-menu">
+                <ul>
+                  <li><a href="../contact.html">Locations</a></li>
+                  <li><a href="../careers.html">Careers</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="search-btn"><a href="javascript:void(0)"></a>
+              <div class="search-container">
+                <gcse:search class="search-box">
+                  <input type="text" placeholder="">
+                  <input type="button" class="search-btn">
+                </gcse:search>
+              </div>
+            </li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+      </nav>
+      <div class="clear"></div>
+    </div>
+    <div class="toggle-btn"> <span></span> <span></span> <span></span> </div>
+    <div class="toggle-search"> <span></span> <span></span> <span></span> </div>
+  </header>
+        <div class="banner">
+            <div class="banner-img"><img src="../images/saibos/sibos-banner.jpg" class="desktop-only"><img src="../images/saibos/mob-sibos-banner.jpg" class="mobile-only"></div>
+            <div class="banner-cntr-wrap">
+                <div class="container">
+                    <div class="dis-table">
+                        <div class="dis-tablecell">
+                            <div class="grid-4 sibos-logo"><img src="../images/saibos/sibos-logo.png"></div>
+                            <div class="grid-8 banner-thumb">
+                                <div class="banner-thumb-cntr">
+                                    <ul>
+                                        <li><h1 class="wow animated fadeIn" data-wow-delay="0.2s" data-wow-offset="50"><span class="banner-text1">Enabling the Digital Economy</span></h1></li>
+                                        <li class="wow animated fadeIn" data-wow-delay="0.4s" data-wow-offset="50"><img src="../images/saibos/sibos-banner-thumb.jpg"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+
+        <div class="about-sibos-cntr">
+            <div class="container">
+                <div class="grid-6 about-sibos-txt">
+                    <p class="wow animated fadeInUp" data-wow-delay="0.2s" data-wow-offset="50">Nelito Systems Ltd. is excited to be exhibiting at the Sibos, which is the biggest event for the financial services industry. Catch up with our latest products and services at our <strong>Booth E50</strong> or join our experts for in-depth discussions on current industry topics.</p>
+                    <p class="wow animated fadeInUp" data-wow-delay="0.2s" data-wow-offset="50">Nelito is a leading Financial Technology provider and serves Banking, Financial Services, Non-Banking Financial Companies and Government verticals with its FinCraft<sup>TM</sup> suite of products globally. Nelito has served more than 220 customers globally in 17 countries across 4 continents and earned a unique reputation for its solutions and delivery excellence with its esteemed customers, industry peers and independent research firms.</p>
+                    <p class="wow animated fadeInUp" data-wow-delay="0.4s" data-wow-offset="50">We look forward to meeting you.<br></p>
+                    <a href="javascript:void(0);" class="sibos-btn wow animated fadeIn" data-wow-delay="0.6s" data-wow-offset="50" onClick="overlayBox('schedule-meeting')">Schedule a Meeting</a>
+                    <p class="wow animated fadeInUp" data-wow-delay="0.4s" data-wow-offset="50">Gain insights from how Nelito helped its client - <a href="https://www.nelito.com/case-study.html" target="_blank" class="links">Success Stories</a></p>
+                </div>                                                                 
+                <div class="grid-6 about-banner"><img src="../images/saibos/about-sibos-image.jpg"></div>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+
+        <div class="sibios-digital-cntr">
+            <div class="container">
+                <ul>
+                    <li>
+                        <div class="digital-banner"><img src="../images/saibos/omnichannel-digital-banking.jpg"></div>
+                        <div class="digital-txt wow animated fadeIn" data-wow-delay="0.2s" data-wow-offset="50">
+                            <h2><a href="https://www.nelito.com/banking-solutions/digital-banking.html" target="_blank">Omnichannel Digital Banking - Customer Centric</a></h2>
+                            <p>Providing an omnichannel experience allows customers to enjoy seamless, personalized service across every touch point. As the world becomes even more digital, capitalizing on the omnichannel opportunity could be the difference between those banks that flourish in the coming years and those that can no longer compete.</p>
+                            <p>Are banks and financial institutions ready for the rise of the digital-only consumers?</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="digital-banner"><img src="../images/saibos/digital-lending.jpg"></div>
+                        <div class="digital-txt wow animated fadeIn" data-wow-delay="0.4s" data-wow-offset="50">
+                            <h2><a href="https://www.nelito.com/lending-solutions/index.html" target="_blank">Digital Lending Innovation - Transition and Opportunities</a></h2>
+                            <p>The lending of future will involve the extensive usage of a wide range of technologies including Artificial Intelligence, Analytics, Chatbots, Internet of Things, Voice based interactions, Wearables, Virtual Reality, Augmented Reality, Robotics Process Automation and Distributed Ledger Technologies amongst others.</p>
+                            <p>Are You Ready for Tomorrow's Digital Lending?</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="digital-banner"><img src="../images/saibos/data-archival.jpg"></div>
+                        <div class="digital-txt wow animated fadeIn" data-wow-delay="0.6s" data-wow-offset="50">
+                            <h2><a href="https://www.nelito.com/banking-solutions/archival-and-retrieval.html" target="_blank">Archiving Compliance for Financial & Banking Institutions - FinDART</a></h2>
+                            <p>The need for Data Archival arises as your business is regulated and thus, mandated to do so. Another reason o archive data is to prevent Data Leakage, protection against threats and to boost business productivity. An archive is an untapped source of business insight that is available at your fingertips.</p>
+                            <p>Wondering how your compliance archive can increase operational efficiency?</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div class="sibos-servivces-cntr">
+            <div class="container">
+                <h2 class="wow animated fadeInDown" data-wow-delay="0.2s" data-wow-offset="50">Sibos is the world's premier financial services event.</h2>
+                <p class="wow animated fadeInUp" data-wow-delay="0.4s" data-wow-offset="50">Sibos is the global financial services networking event organised by SWIFT. The annual conference and exhibition connects more than 8,000 executives, decision makers and thought leaders from across the industry.</p>
+                <p class="wow animated fadeInUp" data-wow-delay="0.6s" data-wow-offset="50">Learn more about the conference at <strong><a href="https://www.sibos.com/" target="_blank">SIBOS.com</a></strong></p>
+                <a href="https://www.sibos.com/file/whats-agenda-sibos-2018" target="_blank" class="sibos-btn wow animated fadeIn" data-wow-delay="0.6s" data-wow-offset="50">What's on the agenda for Sibos 2018?</a>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div class="nelito-systems-cntr">
+            <div class="container">
+                <h2 class="wow animated fadeInDown" data-wow-delay="0.2s" data-wow-offset="50">Nelito Systems</h2>
+                <p class="wow animated fadeInUp" data-wow-delay="0.4s" data-wow-offset="50">Nelito is engaged in the business of providing software solutions and services for Banking, Financial Services and Government sectors, primarily in India and South Asian countries. Formed in the year 1995, the key shareholders are <strong>DTS Corporation Japan, Tata Group, Sunnynook Capital.</strong></p>
+                <p class="wow animated fadeInUp" data-wow-delay="0.4s" data-wow-offset="50">With more than two decades of deep banking domain experience & execution capabilities, Nelito provides <strong>"Excellence with Agility".</strong></p>
+                <div class="clear"></div>
+            </div>
+        </div>
+  <aside id="sticky-social">
+    <ul>
+      <li><a href="https://www.linkedin.com/company/nelito-systems-ltd?trk=tyah&trkInfo=idx%3A2-1-6%2CtarId%3A1421990639778%2Ctas%3Anelito" class="entypo-linkedin" target="_blank"><span>LinkedIn</span></a></li>
+      <li><a href="https://plus.google.com/+NelitoSystemsLimited" class="entypo-gplus" target="_blank"><span>Google+</span></a></li>
+      <li><a href="https://twitter.com/nelitosystem" class="entypo-twitter" target="_blank"><span>Twitter</span></a></li>
+      <li><a href="https://www.facebook.com/NelitoSystems" class="entypo-facebook" target="_blank"><span>Facebook</span></a></li>
+    </ul>
+  </aside>
+  <section class="content-area">
+    <div class="footer">
+      <div class="footer-wrapper">
+        <div class="container">
+          <div class="footer-links">
+            <dl>
+              <dt><a href="../digital-banking/index.html">Digital Banking</a></dt>
+              <dd>
+                <ul>
+                  <li><a href="../digital-banking/core-banking-solution.html">Core Banking</a></li>
+                  <li><a href="../digital-banking/mobile-banking-solution.html">Mobile Banking</a></li>
+                  <li><a href="../digital-banking/internet-banking-solution.html">Internet Banking</a></li>
+                  <li><a href="../digital-banking/doorstep-banking-solution.html">Doorstep Banking</a></li>
+                  <li><a href="../digital-banking/cheque-truncation-system.html">Check Truncation System</a></li>
+                  <li><a href="../digital-banking/enterprise-reporting.html">Enterprise Reporting</a></li>
+                  <li><a href="../digital-banking/data-archival-retrieval.html">Data Archival and Retrieval</a></li>
+                  <li><a href="../digital-banking/anti-money-laundering-solution.html">Anti Money Laundering</a></li>
+                  <li><a href="../digital-banking/nach-mms.html">NACH – MMS</a></li>
+                </ul>
+              </dd>
+            </dl>
+            <dl>
+              <dt><a href="../lending-solutions/index.html">Lending Solutions</a></dt>
+              <dd>
+                <ul>
+                  <li><a href="../lending-solutions/nbfc.html">FinCraft for NBFCs</a></li>
+                  <li><a href="../lending-solutions/fincraft-core-microfinance-solution.html">FinCraft for MFIs</a></li>
+                  <li><a href="../lending-solutions/loan-origination-solution.html">Loan Origination Solution</a></li>
+                  <li><a href="../lending-solutions/loan-management-solution.html">Loan Management Solution</a></li>
+                  <li><a href="../lending-solutions/collections-recovery.html">Collections and Recovery</a></li>
+                  <li><a href="../lending-solutions/lending-analytics.html">Lending Analytics</a></li>
+                </ul>
+              </dd>
+            </dl>
+            <dl>
+              <dt><a href="../services/index.html">Services</a></dt>
+              <dd>
+                <ul>
+                  <li><a href="../services/custom-application-development.html">Custom Application Development</a></li>
+                  <li><a href="../services/it-infrastructure-services.html">IT Infrastructure services</a></li>
+                  <li><a href="../services/swift-services.html">SWIFT<sup class="menutm">TM</sup> Services</a></li>
+                  <li><a href="../services/finacle-cbs-implementation.html">Third Party CBS Implementation</a></li>
+                  <li><a href="../services/business-process-management.html">Business Process Management</a></li>
+                  <li><a href="javascript:void(0)">Testing Services</a></li>
+                  <!--<li><a href="../services/data-warehousing.html">Data Ware Housing</a></li>-->
+                </ul>
+              </dd>
+            </dl>
+            <dl>
+              <dt><a href="javascript:void(0)">Industries</a></dt>
+              <dd>
+                <ul>
+                  <li><a href="../industries/banking.html">Banking</a></li>
+                  <li><a href="../industries/financial-services.html">Financial Services</a></li>
+                  <li><a href="../lending-solutions/nbfc.html">NBFCs</a></li>
+                  <li><a href="../lending-solutions/fincraft-core-microfinance-solution.html">MFIs</a></li>
+                  <li><a href="../industries/goverment.html">Government</a></li>
+                </ul>
+              </dd>
+            </dl>
+            <dl>
+              <dt><a href="javascript:void(0)">Technologies</a></dt>
+              <dd>
+                <ul>
+                  <li><a href="../technologies/mobility-solution.html">Mobility</a></li>
+                  <li><a href="../blog/blockchain-technology-in-banking-and-finance.html">Blockchain</a></li>
+                  <li><a href="../blog/ai-and-its-impact-on-the-finance-industry.html">Artificial Intelligence</a></li>
+                  <li><a href="../technologies/cloud.html">Cloud</a></li>
+                </ul>
+              </dd>
+            </dl>
+            <dl>
+              <dt>More </dt>
+              <dd>
+                <ul>
+                  <li><a href="https://helpdesk.nelito.com"  target="_blank">Customer Login</a></li>
+                  <li><a href="http://webmail.nelito.com"  target="_blank">Webmail</a></li>
+                  <li><a href="https://myhris.adrenalin.in/myadrenalin/Login.aspx" target="_blank">HRMS</a></li>
+                  <li><a href="../faqs.html">FAQ's</a></li>
+                  <li><a href="../sitemap.html">Site Map</a></li>
+                </ul>
+              </dd>
+            </dl>
+            <div class="clear"></div>
+          </div>
+        </div>
+        <div class="copywrite">
+        <div class="container p0">
+        	<div class="grid-3 fr p0">
+          		<p class="text-right">&copy; <script>document.write(new Date().getFullYear());</script> Nelito Systems Ltd. <a href="terms.html">Terms &amp; Privacy</a> </p>
+          	</div>
+        	<div class="grid-3 fl p0 cmmi-logo text-left">
+            	<a href="https://sas.cmmiinstitute.com/pars/pars_detail.aspx?a=3175" target="_blank"><img src="../images/CMMI-DEV-logo.png"></a>
+            </div>
+        </div>
+            <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<script src="../scripts/wow.js"></script> 
+<script>
+new WOW().init();
+</script> 
+<script src="../scripts/common.js" type="text/javascript"></script>
+</body>
+</html>

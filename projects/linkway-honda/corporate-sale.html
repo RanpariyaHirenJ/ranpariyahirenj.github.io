@@ -1,0 +1,387 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<title>Corporate Sale | Linkway Honda</title>
+<link rel="stylesheet" type="text/css" href="styles/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<script src="scripts/jquery-min.js" type="text/javascript"></script>
+<script src="scripts/js_class.js" type="text/javascript"></script>
+<script>
+$( document ).ready(function() {
+	var func_car  = "car_model_interested";
+	$.ajax({
+		method: "POST",
+		url: "ajax_functions.php",
+		data: { "function": func_car }
+	})
+	.done(function( msg ) {
+		if(msg)
+		{
+			$("#car_model_interest").empty();
+			$("#car_model_interest").append(msg);
+		}
+	});
+	
+    $("[name='clear']").click(function(){ 
+    	$("[name='full_name']").val("");
+		$("[name='email']").val("");
+		$("[name='contact_no']").val("");
+		$("[name='designation']").val("");
+		$("[name='company_name']").val("");
+		$("[name='car_model']")[0].selectedIndex = 0;
+		$("[name='message']").val("");
+	});
+});
+</script>
+
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div class="short-header">
+      <div class="container">
+        <div class="short-toplinks">
+          <div class="abt-contct-link">
+            <ul>
+              <li> <a href="about.html">About</a> </li>
+              <li> <a href="events.html">Events </a> </li>
+              <li> <a href="careers.html">Careers</a> </li>
+              <li> <a href="contact.html">Contact </a> </li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+          <div class="healp-lineno"> 24hrs Service Helpline : 9223547000 </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div class="page-header">
+      <div class="container">
+        <div class="main-menulinks">
+          <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="Linkway Honda logo"></a> </div>
+          <div class="nav-icon">
+            <button class="menu-icon mobil-icon-toggle"> <span>toggle menu</span> </button>
+          </div>
+          <div class="navigation">
+            <ul>
+              <li class="dropdown-menu"> <a class="removelink-mbl" href="car-models.html">Select a Model <span>Buy a New Car</span> </a>
+                <div class="submenu-dropdown animated fadeInDown">
+                  <ul>
+                    <li><a href="honda-brio.html">Brio</a></li>
+                    <li><a href="honda-amaze.html">New Amaze</a></li>
+                    <li><a href="honda-all-new-jazz.html">All New Jazz</a></li>
+                    <li><a href="honda-city.html">City</a></li>
+                    <!--<li><a href="honda-mobilio.html">Mobilio</a></li>-->
+                    <li><a href="honda-br-v.html">BR-V</a></li>
+                    <li><a href="honda-cr-v.html">CR-V</a></li>
+                  </ul>
+                </div>
+                <div class="destopnavigation">
+                  <div class="container">
+                    <div class="main-imge-menu">
+                      <ul>
+                        <li> <a href="honda-brio.html">
+                          <div class="car-image-menu"><img src="images/brio.png" alt="Honda Brio"></div>
+                          Brio</a> </li>
+                        <li> <a href="honda-amaze.html">
+                          <div class="car-image-menu"><img src="images/amaze.png" alt="Honda Amaze"></div>
+                          New Amaze </a> </li>
+                        <li> <a href="honda-all-new-jazz.html">
+                          <div class="car-image-menu"><img src="images/all-new-amaze.png" alt="Honda All New Jazz"></div>
+                          All New Jazz</a> </li>
+                        <li> <a href="honda-city.html">
+                          <div class="car-image-menu"><img src="images/city.png" alt="Honda City"></div>
+                          City </a> </li>
+                        <!--<li> <a href="honda-mobilio.html">
+                          <div class="car-image-menu"><img src="images/mobilo.png" alt="Honda Mobilio"></div>
+                          Mobilio </a> </li>-->
+                        <li> <a href="honda-br-v.html">
+                          <div class="car-image-menu"><img src="images/brv.png" alt="Honda BR-V"></div>
+                          BR-V</a> </li>
+                        <li> <a href="honda-cr-v.html">
+                          <div class="car-image-menu"><img src="images/cr-v.png" alt="Honda CR-V"></div>
+                          CR-V</a> </li>
+                        <li> <a href="honda-wr-v.html">
+                          <div class="car-image-menu"><img src="images/wr-v.png" alt="Honda WR-V"></div>
+                          WR-V</a> </li>
+                      </ul>
+                      <div class="clear"></div>
+                    </div>
+                    <div class="hm-featr-readmore"> <a href="car-models.html">VIEW ALL +</a> </div>
+                  </div>
+                </div>
+              </li>
+              <li> <a href="auto-terrance.html">Auto Terrace <span>Exchange a Car</span> </a> </li>
+              <li> <a href="after-sale.html">After Sales <span>Service a Car</span> </a> </li>
+              <li class="desktoplast"> <a href="corporate-sale.html" class="active">Corporate Sales <span>Attractive Schemes</span> </a> </li>
+              <li class="mobileonly-link"><a href="about.html">About</a></li>
+              <li class="mobileonly-link"><a href="events.html">Events </a></li>
+              <li class="mobileonly-link"><a href="careers.html">Careers</a></li>
+              <li class="mobileonly-link"><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="career-heading corporatesaleheading">
+    <div class="container">
+      <h2>Corporate <br>
+        Sales</h2>
+    </div>
+  </section>
+  <div class="auto-terrancebanner coporate-banner">
+    <div class="aterrancebannerbox">
+      <div class="right-crosstringle"><img src="images/right-cross.png" alt="Corporate cross"></div>
+      <div class="container">
+        <div class="at-imgelemnt"> <img src="images/corporate-sale-img.png" alt="Corporate Sales"> </div>
+        <div class="autoexchange-linkbox">
+          <p>At Linkway Honda our dedicated Corporate sales team caters to the vehicle needs of Corporate houses be it a fleet of cars or a single purchase. </p>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <section class="corporate-benifits">
+    <div class="container">
+      <div class="corp-benifitbox">
+        <h3>Sales to Corporate Houses -Buying in name of company or in the name of their individuals (including spouse)</h3>
+        <div class="benefits-options">
+          <ul>
+            <li>
+              <div class="befinit-icon"> <img src="images/platinum.png" alt="Canteen Stores Department (CSD) for Indian Defence Forces"> </div>
+              <div class="befinitname">Canteen Stores Department (CSD) for Indian Defence Forces</div>
+            </li>
+            <li>
+              <div class="befinit-icon"> <img src="images/gold.png" alt="Government Departments Under Special Government Prices"> </div>
+              <div class="befinitname">Government Departments Under Special Government Prices</div>
+            </li>
+            <li>
+              <div class="befinit-icon"> <img src="images/silver.png" alt="Diplomat Sales"> </div>
+              <div class="befinitname">Diplomat Sales</div>
+            </li>
+            <li>
+              <div class="befinit-icon"> <img src="images/bronze.png" alt="Special Excise Duty Exemption Sales"> </div>
+              <div class="befinitname">Special Excise Duty Exemption Sales</div>
+            </li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+        <div class="band-benifits"> We at Linkway has tie up with leasing companies to carter our wide customer: Orix,
+Tranzlease, Carz on rent, ALD, Mercury car rental (AVIS), ALD automotive, Lease plan, SMAS Leasing, Kotak Leasing. </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="honda-amaze-offer">
+  	<div class="container">
+    	<div class="corporate-points">
+      	<div class="amaze-offer-logo"><img src="images/honda-amaze-ola-uber.png" alt="Honda amaze is available for Ola & Uber"> </div>
+        <div class="offer-contant">
+        <div class="amaze-offer">
+        <h4>Honda amaze is available for</h4>
+        <img src="images/ola-uber-logo.jpg" alt="Ola & Uber Logo">
+        <p>for details contact <span>Sameer Shinde 9223547015</span></p>
+        </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </section>
+  <section class="corporate-available">
+  	<div class="container">
+    	<div class="corporate-points">
+      	<div class="defence-logo"><img src="images/defence-icon.png" alt="Honda Corporate sales Available in following sectors"> </div>
+        <h4>Honda Corporate sales Available in following sectors</h4>
+      	<div class="cp-pointleft">
+        	<ul>
+          	<li>Railways</li>
+            <li>Government state and Central</li>
+            <li>Judicial</li>
+            <li>Medical Doctor</li>
+            <li>Educational Institute</li>
+          </ul>
+        </div>
+        <div class="cp-pointryt">
+        	<ul>
+          	<li>IT Sectors</li>
+            <li>Police</li>
+            <li>Hotel and Hospitality sectors</li>
+            <li>Corporate customers under esteemed client list</li>
+            <li>Tourist</li>
+          </ul>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </section>
+  <section class="career-infoall contact-form">
+    <div class="container">
+      <h2>Enquiry Form</h2>
+      <p class="careertxt-color">For Corporate sales</p>
+      <div class="career-form">
+        <form method="post" action="saveinfo.php" onSubmit="return form_validate_jquery('.career-form')">
+        <div class="form-layout">
+          <div class="form-row">
+            <div class="grid-4">
+              <div class="form-field">
+                <input type="text" name="full_name" validation="text" title="Name" placeholder="Name">
+              </div>
+            </div>
+            <div class="grid-4 centerformpad">
+              <div class="form-field">
+                <input type="text" name="email" validation="email" title="Email" placeholder="Email">
+              </div>
+            </div>
+            <div class="grid-4">
+              <div class="form-field">
+                <input type="text" name="contact_no" onKeyPress="return onlyNos(event,this);" validation="mobile" maxlength="10" title="Contact No." placeholder="Contact No.">
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="form-row">
+            <div class="grid-4">
+              <div class="form-field">
+                <input type="text" name="designation" validation="text" title="Designation" placeholder="Designation">
+              </div>
+            </div>
+            <div class="grid-4 centerformpad">
+              <div class="form-field">
+                <input type="text" name="company_name" validation="text" title="Company Name" placeholder="Company Name">
+              </div>
+            </div>
+            <div class="grid-4">
+              <div class="form-field">
+                <div class="input-type-select">
+                	<select name="car_model" id="car_model_interest" validation="text">
+                  	<option value="">Model Interested in</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <textarea name="message" validation="text" title="Message" placeholder="Please type your Message here ......."></textarea>
+            </div>
+          </div>
+          <div class="form-row text-center">
+            <div class="form-field">
+              <input type="submit" name="corporate_sale" value="SEND >" style="margin-right:15px">
+              <input type="button" name="clear" value="CLEAR >">
+            </div>
+          </div>
+        </div>
+        </form>
+      </div>
+    </div>
+  </section>
+<div class="other-logocntr">
+    <div class="container">
+      <div class="other-logohm">
+        <div class="display-otherlogo">
+          <div class="hmotherlogo-cell">
+            <ul>
+              <li class="honda-care-icon"> <a target="_blank" href="pdfs/honda-extended-warranty.pdf"><img src="images/honda-care.png" alt="Honda Care"></a> </li>
+              <li class="honda-assure-icon"> <a target="_blank" href="pdfs/honda-assure.pdf"><img src="images/honda-assure.png" alt="Honda Assure"></a> </li>
+              <li> <a target="_blank" href="pdfs/honda-road-assistance.pdf"><img src="images/road-side-assisatance.png" alt="Road Side Assisatance"></a> </li>
+              <li class="last-threeicon"> <a  href="auto-terrance.html"> <img src="images/auto-terannce.png" alt="Honda Auto Terannce"></a> </li>
+              <li class="last-threeicon"><a target="_blank" href="pdfs/honda-periodic-maintainance.pdf"><img src="images/periodic-maintenance.png" alt="Honda Periodic Maintainance"></a></li>
+              <li class="last-threeicon"><img src="images/one2one.png" alt="Honda one2one"></li>
+              <li> <a target="_blank" href="http://www.hondabuddyloyalty.com"><img src="images/improbe-mileagenew.png" alt="Honda Improbe Mileagenew"></a> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <ul>
+          <li>
+            <dl>
+              <dt class="openmbltab"> Andheri (E) Showroom & Service </dt>
+              <dd style="display:block">
+                <p> Tel. : (91-22) 6612 3000 </p>
+                <p>Fax : (91-22) 6612 3299</p>
+              </dd>
+            </dl>
+            <!--<dl>
+              <dt class="openmbltab"> Goregaon (W) Showroom & Service </dt>
+              <dd style="display:block">
+                <p> Tel. : (91-22) 6612 3700 </p>
+                <p> Fax : (91-22) 6612 3737 </p>
+              </dd>
+            </dl>-->
+            <dl>
+              <dt class="openmbltab"> Kanjurmarg Workshop </dt>
+              <dd style="display:block">
+                <p> Tel. : (91-22) 6612 3300 </p>
+                <p> Fax : (91-22) 6612 3344 </p>
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <dl class="nomarginmbl">
+              <dt>Models</dt>
+              <dd>
+                <ul>
+                  <li> <a href="honda-brio.html">- Honda Brio</a> </li>
+                  <li> <a href="honda-amaze.html">- Honda Amaze</a> </li>
+                  <li> <a href="honda-all-new-jazz.html">- Honda All New Jazz</a> </li>
+                  <li> <a href="honda-city.html">- Honda City</a> </li>
+                  <!--<li> <a href="honda-mobilio.html">- Honda Mobilio</a> </li>-->
+                  <li> <a href="honda-br-v.html">- Honda BRV</a> </li>
+                  <li> <a href="honda-cr-v.html">- Honda CRV</a> </li>
+                  <li> <a href="honda-wr-v.html">- Honda WRV</a> </li>
+
+                </ul>
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>Customer Guidance</dt>
+              <dd>
+                <ul>
+                  <li> <a href="emi-calculator.html">- EMI Calculator</a> </li>
+                  <li> <a href="car-models.html#book-test-drive">- Book a Test Drive</a>  </li>
+                  <li> <a href="after-sale.html#request-service">- Service Request</a> </li>
+                  <li> <a class="showroomtym-anchor">- Showroom Timings (9AM - 8PM)</a> </li>
+                  <li> <a href="contact.html">- Contact</a> </li>
+                </ul>
+              </dd>
+            </dl>
+            <div class="social-box"> <a href="#"><img src="images/you-tube-icon.png" alt="YouTub Icon"></a> <a href="#"><img src="images/twitter-icon.png" alt="Twitter Icon"></a> <a href="#"><img src="images/fb-icon.png" alt="Facebook Icon"></a> </div>
+            <div class="copyright-box"> ©2017  Linkway Honda Pvt. Ltd. <span class="privacy-policy"><a href="#"> Privacy</a> | <a href="#">Sitemap</a></span>
+              <div class="siteby">Site by <a href="http://kalptech.com/" target="_blank">Kalptech Systems</a></div>
+              <div class="footer-autohanger"> <a href="http://www.autohangar.com/" target="_blank"><img src="images/auto-hanger.png" alt="Auto Hangar"></a> </div>
+            </div>
+          </li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script>
+var parameter = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+var decodedparameter = decodeURIComponent(parameter)
+var param = decodedparameter.split('=');
+if(param[0] == "enquiry")
+{
+	alert( param[1] + ", kindly check your email for the same");
+}
+</script>
+<script src="scripts/common.js" type="text/javascript"></script>
+</body>
+</html>

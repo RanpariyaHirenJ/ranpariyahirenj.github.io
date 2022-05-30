@@ -1,0 +1,8 @@
+RewriteEngine on
+
+RewriteRule latest-posts.htm index.php?action=latest [NC,L]
+RewriteRule posts-year-(.*)\.htm index.php?action=year&value=$1 [NC,L]
+RewriteRule blog-home.htm index.php [NC,L]
+RewriteRule (.*)\.htm&(.*) all-blocks.php?slug=$1&$2 [NC,L]
+RewriteRule (.*)\.htm all-blocks.php?slug=$1 [NC,L]
+#RewriteRule full-post-(.*)\.htm all-blocks.php?slug=$1 [NC,L]

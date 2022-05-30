@@ -1,0 +1,1005 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Reset CSS */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+textarea, select, input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"]{
+
+-webkit-box-sizing: border-box;
+
+-moz-box-sizing: border-box;
+
+box-sizing: border-box;
+
+-webkit-background-clip: padding;
+
+-moz-background-clip: padding;
+
+background-clip:padding-box;
+
+-webkit-border-radius:0;
+
+-moz-border-radius:0;
+
+-ms-border-radius:0;
+
+-o-border-radius:0;
+
+border-radius:0;
+
+-webkit-appearance:none;
+
+background-color:#fff;
+
+color:#000;
+
+outline:0;
+
+margin:0;
+
+padding:0;
+
+text-align: left;
+
+font-size:1em;
+
+height: 1em;
+
+vertical-align: middle;
+
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+img{max-width:100%;display: flex;}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.clear {
+	clear: both;
+}
+.no-bg {
+	background-color: transparent !important;
+	background-image: none !important;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1;
+	background-color: #f6f6f6;
+	
+}
+.admin-background{
+	height: auto;
+    width: auto;
+	background-image: url(../images/admin-bg.jpg);
+    background-size: cover;
+	background-repeat: no-repeat;
+}
+.login-process{
+	display:block;
+	color:#fff;
+	font-size: 26px;
+	font-weight: 100;
+	text-align: center;
+	padding: 10px 0;
+}
+.email input, .password input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 87%;
+    height: 27px;
+    color: #fff;
+    border-bottom: 1px solid #95887d;
+    padding-left: 0px;
+	margin-left: 20px;
+    font-size: 16px;
+    background: url(../images/wright.png) right 5px no-repeat;
+    background-size: 20px 13px;
+	margin-bottom: 20px;
+	font-weight: 100;
+}
+
+ .event-title input, .date-time input, .poll-title input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 87%;
+    height: 27px;
+    color: #fff;
+    border-bottom: 1px solid #95887d;
+    padding-left: 0px;
+	margin-left: 20px;
+    font-size: 16px;
+	margin-bottom: 20px;
+	font-weight: 100;
+}
+.regular-checkbox {
+    display: none;
+}
+.keep-me-login {
+    font-size: 14px;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+}
+.login-form .form input[type="checkbox"] {
+    margin: 0 12px 0 0!important;
+    border: 0px;
+    height: 1.5em;
+    width: 2.3%;
+    vertical-align: middle;
+    background-color: #fff;
+}
+
+.login-form .form label {
+    color: #000;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.regular-checkbox + label {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #cfcfcf;
+    box-shadow: 0 1px 2px rgba(255, 255, 255, 0), inset 0px -15px 10px -12px rgba(255, 255, 255, 0);
+    padding: 8px;
+    display: inline-block;
+    position: relative;
+    top: 4px;
+    right: 0px;
+    margin-right: 5px;
+}
+
+.regular-checkbox + label:after {
+    content: '\2714';
+    font-size: 16px;
+    position: absolute;
+    top: 1px;
+    left: -1px;
+    color: #99a1a7;
+    background: rgba(255, 255, 255, 0);
+    padding: 0px 3px;
+}
+.regular-checkbox:checked + label:after {
+    content: '';
+    font-size: 16px;
+    position: absolute;
+    top: 1px;
+    left: -1px;
+    color: #99a1a7;
+    background: rgba(255, 255, 255, 0);
+    padding: 0px 3px;
+}
+.login-form input[type="button"] {
+    background-color: #0e84fa;
+    outline: none;
+    border: none;
+    color: #fff;
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+	margin: 20px 0;
+}
+.creat-event-form input[type="button"] {
+    background-color: #0e84fa;
+    outline: none;
+    border: none;
+    color: #fff;
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+	margin: 20px 0;
+}
+
+
+nav {background-color:#494949; color:#fff;font-weight:100;font-size:18px;padding: 5px 0;}
+nav .profile {
+    padding: 10px 0;
+    width: 230px;
+    margin: 0 auto;
+}
+nav .profile .admin-logo img{
+    width: 130px;
+	float:left;
+}
+nav .profile a{
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.events a{text-decoration:none;color: #49cf60; font-size:14px}
+.active-event{
+	background-color: #fff !important;
+    color: #49cf60 !important;
+	}
+.current-events {
+    padding:8px 10px;
+    border-radius:  0px 7px 7px 0px;
+    border: 2px solid #fff;
+}
+.member {
+    padding: 8px 10px;
+    border-radius: 0px;
+    border: 2px solid #fff;
+    border-right: 0px;
+    border-left: 0px;
+}
+.past-events {
+    padding:8px 10px;
+    border-radius:7px 0px 0px 7px;
+	border: 2px solid #fff;
+}
+.game-img img{width:100%}
+.game-highlight{position:relative;}
+.shadow{
+    position: absolute;
+    bottom: 0px;
+    top: auto;
+    width: 100%;
+}
+.shadow img {
+    width: 100%;
+}
+.shadow p {
+    position: absolute;
+    bottom: 0px;
+    top: auto;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 100;
+	padding: 2%;
+	height: 69%;
+}
+.shadow p span {
+    font-size: 9px;
+}
+.your-judgement h2{
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+	padding: 20px 10px 10px;
+	background-color: #fff;
+}
+.your-judgement span{
+    color: #e20909;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.poll-judgement {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+	background-color: #fff;
+}
+.poll-judgement .grid-1 {
+    width: 46%;
+    float: left;
+    padding:20px 10px;
+	border-right: 1px solid #ccc;
+}
+.poll-judgement .grid-1 p{
+    font-size: 14px;
+    color: #666666;
+}
+.poll-judgement .grid-1 p span{
+    font-size: 10px;
+    display: block;
+}
+
+.poll-judgement .grid-2 {
+    width: 10%;
+    float: left;
+    padding:12px 6.5px;
+	border-right: 1px solid #ccc;
+
+}
+.poll-judgement .grid-2 p {
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+}
+	
+.poll-judgement .grid-2 p span {
+    color: #666666;
+    display: block;
+    font-size: 18px;
+}
+
+.poll-judgement .grid-3 {
+    width: 11%;
+    float: left;
+    padding: 12px 7.5px;
+}
+.poll-judgement .grid-3 p {
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+}
+	
+.poll-judgement .grid-3 p span {
+    color: #666666;
+    display: block;
+    font-size: 18px;
+}
+.poll-judgement .grid-4 {
+    background-color: #49cf60;
+    width: 14%;
+    float: left;
+    padding: 12px 5px;
+    margin: 4px 0 4px 0;
+}
+
+.poll-judgement .grid-4 p {
+    text-align: center;
+    font-size: 12px;
+    line-height: 16px;
+    color: #ffffff;
+}
+
+.poll-judgement .grid-4 p span{
+    display: block;
+    font-size: 14px;
+}
+
+.poll-judgement .grid-5 {
+    background-color: #49cf60;
+    width: 14%;
+    float: left;
+    padding: 12px 5px;
+    margin: 4px 0 4px 0;
+}
+.current-poll-events{padding-bottom:41px;}
+.current-poll-events ul li:first-child .poll-judgement {
+    border-top: 1px solid #ccc;
+}
+
+.current-poll-events ul li .poll-judgement{
+    border-top: 0px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.active-current-events .poll-judgement {background-color: #eea508;color: #fff}
+.active-current-events .poll-judgement p {background-color: #eea508;color: #fff}
+.active-current-events .poll-judgement p span {background-color: #eea508;color: #fff}
+.active-current-events .poll-judgement .grid-5{background-color:#fff;color:#eea508;}
+.active-current-events .poll-judgement .grid-5 p{background-color:#fff;color:#eea508;}
+.active-current-events .poll-judgement .grid-5 p span{background-color:#fff;color:#eea508; margin-left: -2px; font-size: 10px;}
+.in-active-events input[type="button"] {
+    background-color: #db5d09;
+    outline: none;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 2px;
+    margin: 0px 0;
+    font-size: 12px;
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    bottom: 0px;
+    height: 22px;
+	text-decoration:underline;
+}
+.poll-judgement .grid-5 p {
+    text-align: center;
+    font-size: 12px;
+    line-height: 16px;
+    color: #ffffff;
+}
+
+.poll-judgement .grid-5 p span{
+    display: block;
+    font-size: 14px;
+}
+.grid-6{
+    width: 17%;
+    float: left;
+    padding: 0px;
+	margin: 2px 0;
+}
+.poll-judgement .grid-6 .verdict-try {
+    text-align: center;
+    font-size: 12px;
+    padding: 8px 17px;
+    background-color: #49cf60;
+    color: #fff;
+    display: block;
+}
+.poll-judgement .grid-6 .verdict-no-try {
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    padding: 10px 3px;
+    background-color: #d16608;
+    color: #fff;
+    display: block;
+}
+.your-judgement{position:relative;}
+.your-judgement p {
+    float: right;
+    position: absolute;
+    right: 5px;
+    bottom: 8px;
+    top: auto;
+    color: #000;
+    font-size: 11px;
+    font-weight: bold;
+}
+.member-name{padding-bottom:41px;}
+.member-name ul li {
+    display: flex;
+}
+.member-name ul li:nth-child(even) {
+    background-color: #fff;
+}
+.member-name ul li .grid-1 {
+    float: left;
+    padding: 7px;
+    width: 48%;
+}
+
+.member-name ul li .grid-1 p{
+    font-size: 18px;
+    color: #666666;
+}
+
+.member-name ul li .grid-1 p span{
+    font-size: 16px;
+    display: block;
+}
+.member-name ul li .grid-2 {
+    float: right;
+    padding: 15px 5px;
+	width: 45%;
+}
+
+.member-name ul li .grid-2 p{
+    color: #49cf60;
+	text-align: right;
+}
+
+
+
+.submi-judgement{
+    padding: 30px 0;
+}
+.submi-judgement p{
+    color: #e30606;
+    text-align: center;
+}
+.try-no-try-btn{width:240px;margin:0px auto;}
+.try input[type="button"] {
+    background-color: #0e84fa;
+    outline: none;
+    border: none;
+    color: #fff;
+    width: 117px;
+    height: 40px;
+    border-radius: 2px;
+    margin: 20px 6px 20px 0;
+	float: left;
+}
+
+.no-try input[type="button"] {
+    background-color: #0e84fa;
+    outline: none;
+    border: none;
+    color: #fff;
+    width: 117px;
+    height: 40px;
+    border-radius: 2px;
+    margin: 20px 0;
+}
+.view-opolls{padding-bottom:41px;}
+.view-opolls ul li .poll-judgement{
+    border-top: 0px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.view-opolls ul li:first-child .poll-judgement{
+    border-top: 1px solid #ccc;
+}
+
+.view-opolls ul li .poll-judgement .grid-1 {
+    width: 46%;
+    float: left;
+    padding: 13px 10px 10px 10px;
+    border-right: 1px solid #ccc;
+}
+
+.view-opolls ul li .poll-judgement .grid-1 p a{
+    font-size: 12px;
+    text-decoration: underline;
+    padding-top: 4px;
+    display: inline-block;
+    color: #2196F3;
+
+}
+.my-events-bg{
+	height: auto;
+    width: auto;
+	background-image: url(../images/wallpaper.jpg);
+    background-size: cover;
+	background-repeat: no-repeat;
+    background-position: 0px 10px;
+}
+input.break {
+    word-wrap: break-word;
+    word-break: break-all;
+    height: 80px;
+}
+.game-polls{
+    height: 449px;
+    overflow: auto;
+    padding-bottom: 41px;
+}
+.view-polls{position: relative;border-bottom: 1px solid #000;}
+.polls-game-img{z-index:1}
+.polls-game-img img {
+	width: 20%;
+    height: 16%;
+}
+.event-details{
+    position: absolute;
+    bottom: 0px;
+    top: auto;
+	z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+.event-shasow{
+    height: 100%;
+    width: 100%;
+}
+.event-shasow img{
+    width: 100%;
+    height: 100%;
+}
+.event-details p {
+    position: absolute;
+    bottom: 0px;
+    top: auto;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 100;
+    padding-left: 95px;
+    padding: 20px 10px 14px 24%;
+    height: 70%;
+}
+
+.event-details p span {
+    font-size: 10px;
+    display: block;
+    margin-top: 2px;
+}
+.event-details p .total-poll-details{
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+}
+
+.view-polls-details {
+    position: absolute;
+    bottom: 0px;
+    top: 2px;
+    right: 10px;
+}
+.view-polls-details input[type="button"] {
+    background-color: #2f3035;
+    outline: none;
+    border: none;
+    color: #fff;    
+	padding: 5px 10px;
+    border-radius: 5px;
+    margin: 14px 0;
+    font-size: 12px;
+}
+.create-event-footer input {
+    background-color: #0e84fa;
+    outline: none;
+    border: none;
+    color: #fff;
+    width: 100%;
+    height: 40px;
+    border-radius: 1px;
+    margin: 0px;
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    background-image: url(../images/create-events.png);
+    background-repeat: no-repeat;
+    background-position: 95px 5px;
+    background-size: 30px;
+    padding-left: 30px;
+}
+.member-details {
+    height: 449px;
+    overflow: auto;
+    padding-bottom: 40px;
+
+}
+.member-details ul li {
+    padding: 10px 5px;
+    display: inline-block;
+    border-bottom: 1px solid #fff;
+    width: 97%;
+}
+.member-info {
+    float: left;
+    font-size: 14px;
+    color: #fff;
+    padding: 10px 5px;
+    width: 50%;
+    font-weight: 100;
+}
+.member-poll {
+    float: right;
+    background-color: #2f3035;
+    color: #fff;
+    padding: 10px 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 100;
+    margin-right: 5px;
+    width: 130px;
+}
+
+.member-poll ul li span{float:right;margin-left: 10px;}
+.member-poll ul li {
+    padding: 0px;
+    border-bottom: 0px solid #fff;
+    display: block;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.member-info p {
+    font-size: 14px;
+}
+
+.member-info p span {
+    font-size: 10px;
+    display: block;
+    margin-top: 2px;
+}
+
+.member-info p .email-id{
+    font-size: 12px;
+    display: block;
+    margin-top: 8px;
+}
+
+.member-info p .mob-number{
+    font-size: 12px;
+    display: block;
+    margin-top: 2px;
+}
+
+.scroll-height {
+    height: 449px;
+    overflow: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:1920px) {
+html{width:360px; height: 640px; margin:0 auto}
+.sign-in {width: 250px; margin: 0px auto;}
+.my-events-bg{
+	width:360px; 
+	height: 640px;
+	background-image: url(../images/my-events-bg.jpg);
+    background-size: cover;
+	background-repeat: no-repeat;	
+    background-position: 0px 26px;
+}
+.game-polls {
+    height: 570px;
+    overflow: auto;
+}
+.logo {
+    width: 250px;
+    margin: 35px auto;
+}
+.login-form{padding:5% 0;}
+.login-form .container {
+    width: 320px;
+    margin: 0 auto;
+}
+.creat-event-form {
+    padding: 35% 0;
+}
+.creat-event-form .container {
+    width: 320px;
+    margin: 0 auto;
+}
+.sign-in {width:250px; margin:0px auto;}
+.events {
+    text-align: center;
+    padding: 5px 0;
+    display: flex;
+    width: 236px;
+    margin: 0 auto;
+}
+}
+@media screen and (min-width:1028px) and (max-width:1919px) {
+html{width:360px; height: 640px; margin:0 auto}
+.sign-in {width: 250px; margin: 0px auto;}
+.my-events-bg{
+	width:360px; 
+	height: 640px;
+	background-image: url(../images/my-events-bg.jpg);
+    background-size: cover;
+	background-repeat: no-repeat;	
+    background-position: 0px 26px;
+}
+.game-polls {
+    height: 570px;
+    overflow: auto;
+}
+.logo {
+    width: 250px;
+    margin: 35px auto;
+}
+.login-form{padding:5% 0;}
+.login-form .container {
+    width: 320px;
+    margin: 0 auto;
+}
+.creat-event-form {
+    padding: 35% 0;
+}
+.creat-event-form .container {
+    width: 320px;
+    margin: 0 auto;
+}
+.sign-in {width:250px; margin:0px auto;}
+.events {
+    text-align: center;
+    padding: 5px 0;
+    display: flex;
+    width: 236px;
+    margin: 0 auto;
+}
+}
+@media screen and (min-width:1024px) and (max-width:1027px) {
+html{width:360px; height: 640px; margin:0 auto}
+.sign-in {width: 250px; margin: 0px auto;}
+.my-events-bg{
+	width:360px; 
+	height: 640px;
+	background-image: url(../images/my-events-bg.jpg);
+    background-size: cover;
+	background-repeat: no-repeat;	
+    background-position: 0px 26px;
+}
+.game-polls {
+    height: 570px;
+    overflow: auto;
+}
+.logo {
+    width: 250px;
+    margin: 35px auto;
+}
+.login-form{padding:5% 0;}
+.login-form .container {
+    width: 320px;
+    margin: 0 auto;
+}
+.creat-event-form {
+    padding: 35% 0;
+}
+.creat-event-form .container {
+    width: 320px;
+    margin: 0 auto;
+}
+.sign-in {width:250px; margin:0px auto;}
+.events {
+    text-align: center;
+    padding: 5px 0;
+    display: flex;
+    width: 236px;
+    margin: 0 auto;
+}
+
+
+}
+@media screen and (min-width:720px) and (max-width:1023px) {
+.logo {
+    width: 250px;
+    margin: 35px auto;
+}
+.container {
+    width: 320px;
+    margin: 0 auto;
+}
+.login-form{padding:20px 0;}
+
+.login-form .container{
+    width: 90%;
+    margin: 0 auto;
+}
+.creat-event-form {
+    padding: 35% 0;
+}
+.creat-event-form .container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.sign-in {width:250px; margin:0px auto;}
+.events {
+    text-align: center;
+    padding: 5px 0;
+    display: flex;
+    width: 280px;
+    margin: 0 auto;
+}	
+.polls-game-img img {
+    width: 17%;
+    height: 16%;
+}
+.event-details p {
+    font-size: 20px;  
+	padding: 20px 10px 14px 21%;
+    height: 70%;
+}
+.event-details p span {
+    font-size: 12px;
+    display: block;
+    margin-top: 4px;
+}
+.event-details p .total-poll-details {
+    font-size: 14px;
+    display: block;
+    margin-top: 8px;
+}
+
+.view-polls-details input[type="button"] {
+    margin: 38% 0;
+    font-size: 14px;
+}
+.my-events-bg{
+	width:auto; 
+	height:auto;
+	background-image: url(../images/my-events-bg.jpg);
+    background-size: cover;
+	background-repeat: no-repeat;	
+    background-position: 0px -127px;
+}
+.game-polls {
+    height: 926px;
+    overflow: auto;
+}
+}
+
+@media screen and (min-width:720px) and (max-width:1024px) {
+.poll-judgement .grid-1 {width: 52%;padding: 15px 10px;}
+.poll-judgement .grid-2 {width: 13%;}
+.poll-judgement .grid-3 {width: 13%;}
+
+/*---------------------current-event-----------------------*/
+.view-opolls ul li .poll-judgement .grid-1 {width: 52%;}
+.view-opolls ul li .poll-judgement .grid-2 {width: 13%;}
+.view-opolls ul li .poll-judgement .grid-3 {width: 13%;}
+
+.shadow p {font-size: 20px;padding: 1% 2%;height: 69%;}
+.shadow p span {font-size: 14px;}
+.poll-judgement .grid-1 p {font-size: 20px;}
+.poll-judgement .grid-1 p span {font-size: 14px;}
+.your-judgement h2 {font-size: 20px;}
+}
+@media screen and (min-width:620px) and (max-width:719px) {
+.poll-judgement .grid-1 {width: 52%;}
+.poll-judgement .grid-2 {width: 12%;}
+.poll-judgement .grid-3 {width: 12%;}
+
+.view-opolls ul li .poll-judgement .grid-1 {width: 52%;}
+.view-opolls ul li .poll-judgement .grid-2 {width: 12%;}
+.view-opolls ul li .poll-judgement .grid-3 {width: 12%;}
+}
+@media screen and (min-width:520px) and (max-width:619px) {
+.poll-judgement .grid-1 {width: 50%;}
+.poll-judgement .grid-2 {width: 12%;}
+.poll-judgement .grid-3 {width: 12%;}
+
+.view-opolls ul li .poll-judgement .grid-1 {width: 50%;}
+.view-opolls ul li .poll-judgement .grid-2 {width: 12%;}
+.view-opolls ul li .poll-judgement .grid-3 {width: 12%;}
+}
+@media screen and (min-width:420px) and (max-width:519px) {
+.poll-judgement .grid-1 { width: 50%;}
+.view-opolls ul li .poll-judgement .grid-1 { width: 50%;}
+
+}
+@media screen and (min-width:360px) and (max-width:419px) {
+.poll-judgement .grid-1 {width: 46%;}
+.poll-judgement .grid-2 {width: 11%;}
+.poll-judgement .grid-3 {width: 12%;}
+
+.view-opolls ul li .poll-judgement .grid-1 {width: 46%;}
+.view-opolls ul li .poll-judgement .grid-2 {width: 11%;}
+.view-opolls ul li .poll-judgement .grid-3 {width: 12%;}
+.game-polls {
+    height: 508px;
+    overflow: auto;
+}
+.scroll-height {
+    height: 508px;
+    overflow: auto;
+}
+.member-details {
+    height: 508px;
+    overflow: auto;
+}
+}
+@media screen and (min-width:320px) and (max-width:359px) {
+.event-details p {height: 58%;}
+}
+@media screen and (min-width:320px) and (max-width:719px) {
+.logo {
+    width: 250px;
+    margin: 35px auto;
+}
+.login-form{padding:5% 0;}
+.login-form .container {
+    width: 320px;
+    margin: 0 auto;
+}
+.creat-event-form {
+    padding: 35% 0;
+}
+.creat-event-form .container {
+    width: 320px;
+    margin: 0 auto;
+}
+.sign-in {width:250px; margin:0px auto;}
+.events {
+    text-align: center;
+    padding: 5px 0;
+    display: flex;
+    width: 268px;
+    margin: 0 auto;
+}
+}

@@ -1,0 +1,511 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<title>Auto Terrance | Linkway Honda</title>
+<link rel="stylesheet" type="text/css" href="styles/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="styles/owl.theme.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<script src="scripts/jquery-min.js" type="text/javascript"></script>
+<script src="scripts/js_class.js" type="text/javascript"></script>
+<script src="scripts/owl.carousel.min.js"></script>
+<script>
+$( document ).ready(function() {
+	var value = "<option value=''>Year</option>";
+	var lastyear = (new Date).getFullYear() - 15;
+	var year = (new Date).getFullYear();
+	for (i = lastyear; i <= year; i++) {
+		value += "<option value='"+ i +"'>"+ i +"</option>";
+	}
+	$('#selectyear').append(value);
+	
+	$('[id^=send_enquiry]').click(function() {
+		number = $.trim(this.id.match(/\d+/));
+		var car_value = $('#enquiryform'+number).find("input[name=car_model]").val();
+		var car_val = car_value.split('|');
+		$('#auto-terrace').find("input[name=car_model]").val(car_val[0]);
+		$('select[name="month"] option[value="1"]').prop('selected',true);
+		$('select[name="year"] option:selected').prop('selected',false);
+		$('select[name="year"] option[value="'+ car_val[1] +'"]').prop('selected',true);
+		$('#auto-terrace').find("input[name=kilometer]").val(car_val[2]);
+		$('#auto-terrace').find("input[name=color]").val(car_val[3]);
+		$('#auto-terrace').find("input[name=expected_price]").val(car_val[4]);
+		document.location.href='#exchange-car';
+	});
+});
+</script>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div class="short-header">
+      <div class="container">
+        <div class="short-toplinks">
+          <div class="abt-contct-link">
+            <ul>
+              <li> <a href="about.html">About</a> </li>
+              <li> <a href="events.html">Events </a> </li>
+              <li> <a href="careers.html">Careers</a> </li>
+              <li> <a href="contact.html">Contact </a> </li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+          <div class="healp-lineno"> 24hrs Service Helpline : 9223547000 </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div class="page-header">
+      <div class="container">
+        <div class="main-menulinks">
+          <div class="logo"> <a href="index.html"><img src="images/logo.png" alt="Linkway Honda log"></a> </div>
+          <div class="nav-icon">
+            <button class="menu-icon mobil-icon-toggle"> <span>toggle menu</span> </button>
+          </div>
+          <div class="navigation">
+            <ul>
+              <li class="dropdown-menu"> <a class="removelink-mbl" href="car-models.html">Select a Model <span>Buy a New Car</span> </a>
+                <div class="submenu-dropdown animated fadeInDown">
+                  <ul>
+                    <li><a href="honda-brio.html">Brio</a></li>
+                    <li><a href="honda-amaze.html">New Amaze</a></li>
+                    <li><a href="honda-all-new-jazz.html">All New Jazz</a></li>
+                    <li><a href="honda-city.html">City</a></li>
+                    <!--<li><a href="honda-mobilio.html">Mobilio</a></li>-->
+                    <li><a href="honda-br-v.html">BR-V</a></li>
+                    <li><a href="honda-cr-v.html">CR-V</a></li>
+                  </ul>
+                </div>
+                <div class="destopnavigation">
+                  <div class="container">
+                    <div class="main-imge-menu">
+                      <ul>
+                        <li> <a href="honda-brio.html">
+                          <div class="car-image-menu"><img src="images/brio.png" alt="Honda Brio"></div>
+                          Brio</a> </li>
+                        <li> <a href="honda-amaze.html">
+                          <div class="car-image-menu"><img src="images/amaze.png" alt="Honda Amaze"></div>
+                          New Amaze </a> </li>
+                        <li> <a href="honda-all-new-jazz.html">
+                          <div class="car-image-menu"><img src="images/all-new-amaze.png" alt="Honda All New Jazz"></div>
+                          All New Jazz</a> </li>
+                        <li> <a href="honda-city.html">
+                          <div class="car-image-menu"><img src="images/city.png" alt="Honda City"></div>
+                          City </a> </li>
+                        <!--<li> <a href="honda-mobilio.html">
+                          <div class="car-image-menu"><img src="images/mobilo.png" alt="Honda Mobilio"></div>
+                          Mobilio </a> </li>-->
+                        <li> <a href="honda-br-v.html">
+                          <div class="car-image-menu"><img src="images/brv.png" alt="Honda BR-V"></div>
+                          BR-V</a> </li>
+                        <li> <a href="honda-cr-v.html">
+                          <div class="car-image-menu"><img src="images/cr-v.png" alt="Honda CR-V"></div>
+                          CR-V</a> </li>
+                        <li> <a href="honda-wr-v.html">
+                          <div class="car-image-menu"><img src="images/wr-v.png" alt="Honda WR-V"></div>
+                          WR-V</a> </li>
+                      </ul>
+                      <div class="clear"></div>
+                    </div>
+                    <div class="hm-featr-readmore"> <a href="car-models.html">VIEW ALL +</a> </div>
+                  </div>
+                </div>
+              </li>
+              <li> <a href="auto-terrance.html" class="active">Auto Terrace <span>Exchange a Car</span> </a> </li>
+              <li> <a href="after-sale.html">After Sales <span>Service a Car</span> </a> </li>
+              <li class="desktoplast"> <a href="corporate-sale.html">Corporate Sales <span>Attractive Schemes</span> </a> </li>
+              <li class="mobileonly-link"><a href="about.html">About</a></li>
+              <li class="mobileonly-link"><a href="events.html">Events </a></li>
+              <li class="mobileonly-link"><a href="careers.html">Careers</a></li>
+              <li class="mobileonly-link"><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="auto-terrancebanner">
+    <div class="aterrancebannerbox">
+      <div class="right-crosstringle"><img src="images/right-cross.png" alt="Corporate cross"></div>
+      <div class="container">
+        <div class="at-imgelemnt"> <img src="images/autoterrance-banner.png" alt="Autoterrance Banner"> </div>
+        <div class="autoexchange-linkbox">
+          <div class="auto-terrancelogo"> <img src="images/auto-terrance-logo.jpg" alt="Auto Terrance Logo"> </div>
+          <p>At Linkway Honda we give you an option to trade-in your existing car for a brand new Honda of your choice. </p>
+          <div class="exchanglink"> <a href="#exchange-car" class="slide">EXCHANGE MY OLD CAR > </a> </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <section class="welcome-txtautoter">
+    <div class="container">
+      <h2>Welcome to Auto Terrace </h2>
+      <p>Honda's one-stop facility for Exchange and Pre-Owned Car Purchase. Auto Terrace helps you exchange your existing car for a Brand New Honda.</p>
+      <p> Auto Terrace is also the right place if you are looking for a Quality Pre-Owned Honda.</p>
+      <p>Our expert Car Evaluators would offer you the best price for your existing car in the pre owned market which can be adjusted in the purchase of your brand new Honda.</p>
+      <p class="at-boldtxt">The Mission of Auto Terrace is to provide its customers with an extremely convenient, transparent and delightful pre owned car buying and selling experience.</p>
+      <div class="echange-infographics">
+        <div class="ex-off-graphics"> <img src="images/exchange-banner-txt.jpg" alt="Exchange Banner"> </div>
+        <div class="auto-ter-points">
+          <h3>At Honda AutoTerrace, you can :</h3>
+          <p>Exchange your existing car – any make, any model – for a Brand New Honda car.</p>
+          <p>Buy a Certified Pre-Owned Honda with 1 year/20,000 km warranty*.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--<section class="preowncars-box">
+    <div class="container">
+      <h2><span>Pre-owned Cars</span>
+        <div class="clear"></div>
+      </h2>
+      <div class="viewmore-slider">
+        <div id="view-more" class="owl-carousel">
+        
+          <div class="item">
+            <div class="preowncar-img"> <a href="#"> <img src="images/pre-owncar.jpg">
+              <div class="price-strip-band"> Rs.12.75 Lac  </div>
+              </a>
+              <h3> Accord 3.5 V6 AT <br><span>Urban Titanium </span></h3>
+              <p>2012 - 38,000 kms - First Owner</p>
+              <form id="enquiryform1" name="enquiryform">
+          	  <input type="hidden" name="car_model" value="Honda Accord 3.5 V6 AT|2012|38000|Urban Titanium|1275000">
+              <div class="view-details"> <a href="javascript:void(0)" id="send_enquiry1"> SEND ENQUIRY + </a></div>
+              </form>
+            </div>
+          </div>
+          
+          <div class="item">
+            <div class="preowncar-img"> <a href="#"> <img src="images/pre-owncar4.jpg">
+              <div class="price-strip-band"> Rs.6.85 Lac </div>
+              </a>
+              <h3>  City 1.5 V MT <br><span>New Sparkling Brown	</span></h3>
+              <p>2012 - 25,000 kms - First Owner</p>
+              <form id="enquiryform2" name="enquiryform">
+          	  <input type="hidden" name="car_model" value="Honda City 1.5 V MT|2012|25000|New Sparkling Brown|685000">
+              <div class="view-details"> <a href="javascript:void(0)" id="send_enquiry2"> SEND ENQUIRY + </a></div>
+              </form>
+            </div>
+          </div>
+          
+          
+          <div class="item">
+            <div class="preowncar-img"> <a href="#"> <img src="images/pre-owncar5.jpg">
+              <div class="price-strip-band"> Rs.9.25 Lac </div>
+              </a>
+              <h3> City 1.5 SV CVT <br><span>Alabster Silver</span></h3>
+              <p>2014 - 11,000 kms - First Owner</p>
+              <form id="enquiryform3" name="enquiryform">
+          	  <input type="hidden" name="car_model" value="Honda City 1.5 SV CVT|2014|11000|Alabster Silver|925000">
+              <div class="view-details"> <a href="javascript:void(0)" id="send_enquiry3"> SEND ENQUIRY + </a></div>
+              </form>
+            </div>
+          </div>
+          <div class="item">
+            <div class="preowncar-img"> <a href="#"> <img src="images/pre-owncar2.jpg">
+              <div class="price-strip-band"> Rs.4.55 Lac </div>
+              </a>
+              <h3> Brio 1.2 SMT<br><span>Alabaster Silver</span> </h3>
+              <p>2014 - 14,000 kms - First Owner</p>
+              <form id="enquiryform4" name="enquiryform">
+          	  <input type="hidden" name="car_model" value="Honda Brio 1.2 SMT|2014|14000|Alabaster Silver|455000">
+              <div class="view-details"> <a href="javascript:void(0)" id="send_enquiry4"> SEND ENQUIRY + </a></div>
+              </form>
+            </div>
+          </div>
+          
+          <div class="item">
+            <div class="preowncar-img"> <a href="#"> <img src="images/pre-owncar6.jpg">
+              <div class="price-strip-band"> Rs.5.55 Lac </div>
+              </a>
+              <h3> City 1.5 V MT <br><span>Bold Beige</span></h3>
+              <p>2011 - 48,000 kms - First Owner</p>
+              <form id="enquiryform5" name="enquiryform">
+          	  <input type="hidden" name="car_model" value="Honda City 1.5 V MT|2011|48000|Bold Beige|555000">
+              <div class="view-details"> <a href="javascript:void(0)" id="send_enquiry5"> SEND ENQUIRY + </a></div>
+              </form>
+            </div>
+          </div>
+          
+          <div class="item">
+            <div class="preowncar-img"> <a href="#"> <img src="images/pre-owncar7.jpg">
+              <div class="price-strip-band"> Rs.4.85 Lac </div>
+              </a>
+              <h3> City 1.5 V MT <br><span>Urban Titanium</span></h3>
+              <p>2011 - 92,000 kms - First Owner</p>
+              <form id="enquiryform6" name="enquiryform">
+          	  <input type="hidden" name="car_model" value="Honda City 1.5 V MT|2011|92000|Urban Titanium|485000">
+              <div class="view-details"> <a href="javascript:void(0)" id="send_enquiry6"> SEND ENQUIRY + </a></div>
+              </form>
+            </div>
+          </div>
+          
+          <div class="item">
+            <div class="preowncar-img"> <a href="#"> <img src="images/pre-owncar8.jpg">
+              <div class="price-strip-band"> Rs.4.50 Lac </div>
+              </a>
+              <h3> Jazz 1.2 V o MT<br><span>Ralley Red</span> </h3>
+              <p>2012 - 30,000 kms- First Owner</p>
+              <form id="enquiryform7" name="enquiryform">
+          	  <input type="hidden" name="car_model" value="Honda Jazz 1.2 V o MT|2012|30000|Ralley Red|450000">
+              <div class="view-details"> <a href="javascript:void(0)" id="send_enquiry7"> SEND ENQUIRY + </a></div>
+              </form>
+            </div>
+          </div>
+          
+          
+          <div class="item">
+            <div class="preowncar-img"> <a href="#"> <img src="images/pre-owncar3.jpg">
+              <div class="price-strip-band"> Rs.6.85 Lac </div>
+              </a>
+              <h3> City 1.5 V MT <br> <span>New Sparkling Brown</span></h3>
+              <p>2012 - 40,000 kms - First Owner</p>
+              <form id="enquiryform8" name="enquiryform">
+          	  <input type="hidden" name="car_model" value="Honda City 1.5 V MT|2012|40000|New Sparkling Brown|685000">
+              <div class="view-details"> <a href="javascript:void(0)" id="send_enquiry8"> SEND ENQUIRY + </a></div>
+              </form>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>-->
+  <section class="why-auto-terrance">
+    <div class="container">
+      <h2>Why Honda AutoTerrace?</h2>
+      <div class="why-points">
+        <ul>
+          <li>
+            <div class="why-points-icon"> <img src="images/one-stop-shop.png" alt="One-Stop Shop"> </div>
+            <div class="why-icon-names"> One-Stop<br> Shop </div>
+          </li>
+          <li class="secondwhy">
+            <div class="why-points-icon"> <img src="images/fair-price-deal.png" alt="Fair Price Deals"> </div>
+            <div class="why-icon-names"> Fair Price <br> Deals </div>
+          </li>
+          <li>
+            <div class="why-points-icon"> <img src="images/transparent-documents.png" alt="Transparent Documentation"> </div>
+            <div class="why-icon-names"> Transparent <br> Documentation </div>
+          </li>
+          <li>
+            <div class="why-points-icon"> <img src="images/warranty-price.png" alt="Warranty on Pre-Owned Honda cars*"> </div>
+            <div class="why-icon-names"> Warranty on Pre-Owned <br> Honda cars* </div>
+          </li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </section>
+  <section class="at-contactus at-formcntr" id="exchange-car">
+    <div class="container">
+      <h2>Want to Sell/Exchange your car? <span>We would require some information to help you.</span></h2>
+      <div class="auto-ter-form">
+      	<form id="auto-terrace" method="post" action="saveinfo.php" onSubmit="return form_validate_jquery('.auto-ter-form')">
+        <div class="at-layout">
+        <div class="at-form-row">
+            <div class="atfgrid-6">
+              <input type="text" name="full_name" validation="text" title="Name" placeholder="Name">
+            </div>
+            <div class="atfgrid-6 margingbetwn">
+              <input type="text" name="email" validation="email" title="Email" placeholder="Email">
+            </div>
+            <div class="clear"></div>
+          </div>
+          
+          
+          <div class="at-form-row">
+          <div class="atfgrid-6">
+              <input type="text" name="contact_no" onKeyPress="return onlyNos(event,this);" validation="mobile" maxlength="10" title="Contact No." placeholder="Contact No.">
+            </div>
+            <div class="atfgrid-6 margingbetwn">
+              	<input type="text" name="car_model" validation="text" title="Model" placeholder="Model">
+            </div>
+            
+            <div class="clear"></div>
+          </div>
+          
+          
+          <div class="at-form-row">
+          <div class="atfgrid-6 ">
+              <div class="atfgrid-6 noborderline">
+                <div class="input-type-select">
+                  <select name="month" validation="text">
+                  	<option value="">Month</option>
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                    <option value="4">04</option>
+                    <option value="5">05</option>
+                    <option value="6">06</option>
+                    <option value="7">07</option>
+                    <option value="8">08</option>
+                    <option value="9">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                  </select>
+                </div>
+              </div>
+              <div class="atfgrid-6 noborder-radius">
+                <div class="input-type-select">
+                  <select id="selectyear" name="year" validation="text">
+	              </select>
+                </div>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="atfgrid-6 margingbetwn">
+              <input type="text" name="kilometer" validation="number" onKeyPress="return onlyNos(event,this);" title="Kilometers Driven" placeholder="Kilometers Driven">
+            </div>
+            
+            <div class="clear"></div>
+          </div>
+          
+          
+          <div class="at-form-row">
+          
+          <div class="atfgrid-6">
+              <input type="text" name="color" validation="text" title="Color" placeholder="Color">
+            </div>
+            <div class="atfgrid-6 margingbetwn">
+              <input type="text" name="expected_price" validation="number" onKeyPress="return onlyNos(event,this);" title="Expected Price" placeholder="Expected Price">
+            </div>
+            <div class="clear"></div>
+          </div>
+          
+          
+          <div class="at-form-row">
+            <div class="atfgrid-6">
+              <input type="submit" name="exchange" value="SUBMIT >">
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+        </form>
+      </div>
+      <div class="at-conact-img"> <img src="images/why-exchange-img.png"> </div>
+    </div>
+  </section>
+<div class="other-logocntr">
+    <div class="container">
+      <div class="other-logohm">
+        <div class="display-otherlogo">
+          <div class="hmotherlogo-cell">
+            <ul>
+              <li class="honda-care-icon"> <a target="_blank" href="pdfs/honda-extended-warranty.pdf"><img src="images/honda-care.png" alt="Honda Care"></a> </li>
+              <li class="honda-assure-icon"> <a target="_blank" href="pdfs/honda-assure.pdf"><img src="images/honda-assure.png" alt="Honda Assure"></a> </li>
+              <li> <a target="_blank" href="pdfs/honda-road-assistance.pdf"><img src="images/road-side-assisatance.png" alt="Road Side Assisatance"></a> </li>
+              <li class="last-threeicon"> <a  href="auto-terrance.html"> <img src="images/auto-terannce.png" alt="Honda Auto Terannce"></a> </li>
+              <li class="last-threeicon"><a target="_blank" href="pdfs/honda-periodic-maintainance.pdf"><img src="images/periodic-maintenance.png" alt="Honda Periodic Maintainance"></a></li>
+              <li class="last-threeicon"><img src="images/one2one.png" alt="Honda one2one"></li>
+              <li> <a target="_blank" href="http://www.hondabuddyloyalty.com"><img src="images/improbe-mileagenew.png" alt="Honda Improbe Mileagenew"></a> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <ul>
+          <li>
+            <dl>
+              <dt class="openmbltab"> Andheri (E) Showroom & Service </dt>
+              <dd style="display:block">
+                <p> Tel. : (91-22) 6612 3000 </p>
+                <p>Fax : (91-22) 6612 3299</p>
+              </dd>
+            </dl>
+            <!--<dl>
+              <dt class="openmbltab"> Goregaon (W) Showroom & Service </dt>
+              <dd style="display:block">
+                <p> Tel. : (91-22) 6612 3700 </p>
+                <p> Fax : (91-22) 6612 3737 </p>
+              </dd>
+            </dl>-->
+            <dl>
+              <dt class="openmbltab"> Kanjurmarg Workshop </dt>
+              <dd style="display:block">
+                <p> Tel. : (91-22) 6612 3300 </p>
+                <p> Fax : (91-22) 6612 3344 </p>
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <dl class="nomarginmbl">
+              <dt>Models</dt>
+              <dd>
+                <ul>
+                  <li> <a href="honda-brio.html">- Honda Brio</a> </li>
+                  <li> <a href="honda-amaze.html">- Honda Amaze</a> </li>
+                  <li> <a href="honda-all-new-jazz.html">- Honda All New Jazz</a> </li>
+                  <li> <a href="honda-city.html">- Honda City</a> </li>
+                  <!--<li> <a href="honda-mobilio.html">- Honda Mobilio</a> </li>-->
+                  <li> <a href="honda-br-v.html">- Honda BRV</a> </li>
+                  <li> <a href="honda-cr-v.html">- Honda CRV</a> </li>
+                  <li> <a href="honda-wr-v.html">- Honda WRV</a> </li>
+
+                </ul>
+              </dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt>Customer Guidance</dt>
+              <dd>
+                <ul>
+                  <li> <a href="emi-calculator.html">- EMI Calculator</a> </li>
+                  <li> <a href="car-models.html#book-test-drive">- Book a Test Drive</a>  </li>
+                  <li> <a href="after-sale.html#request-service">- Service Request</a> </li>
+                  <li> <a class="showroomtym-anchor">- Showroom Timings (9AM - 8PM)</a> </li>
+                  <li> <a href="contact.html">- Contact</a> </li>
+                </ul>
+              </dd>
+            </dl>
+            <div class="social-box"> <a href="#"><img src="images/you-tube-icon.png" alt="YouTub Icon"></a> <a href="#"><img src="images/twitter-icon.png" alt="Twitter Icon"></a> <a href="#"><img src="images/fb-icon.png" alt="Facebook Icon"></a> </div>
+            <div class="copyright-box"> ©2017  Linkway Honda Pvt. Ltd. <span class="privacy-policy"><a href="#"> Privacy</a> | <a href="#">Sitemap</a></span>
+              <div class="siteby">Site by <a href="http://kalptech.com/" target="_blank">Kalptech Systems</a></div>
+              <div class="footer-autohanger"> <a href="http://www.autohangar.com/" target="_blank"><img src="images/auto-hanger.png" alt="Auto Hangar"></a> </div>
+            </div>
+          </li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </footer>
+</div>
+<script>
+	var parameter = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+	var decodedparameter = decodeURIComponent(parameter)
+	var param = decodedparameter.split('=');
+	if(param[0] == "enquiry")
+	{
+		alert( param[1] + ", kindly check your email for the same");
+	}
+    $(document).ready(function() {
+
+      var owl = $("#view-more");
+      owl.owlCarousel({
+       itemsCustom : [
+        [0, 1],
+		[400, 1],
+        [480, 1],
+        [767, 2],
+        [768, 2],
+        [1000, 3]
+      ],
+      });
+			
+    });
+    </script> 
+<script src="scripts/common.js" type="text/javascript"></script>
+</body>
+</html>
