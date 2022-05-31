@@ -1,123 +1,204 @@
-$(function() {
-AOS.init();
-
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 50) {
-            $('.scrollTop').fadeIn();
-			$('body').addClass('isscrolled');
-           // $('.nav').addClass('fixed');
-        } else {
-            $('.scrollTop').fadeOut();
-			$('body').removeClass('isscrolled');
-            //$('.nav').removeClass('fixed');
-        }
-    });
-        if ($(this).scrollTop() > 50) {
-            $('.scrollTop').fadeIn();
-			$('body').addClass('isscrolled');
-           // $('.nav').addClass('fixed');
-        } else {
-            $('.scrollTop').fadeOut();
-			$('body').removeClass('isscrolled');
-            //$('.nav').removeClass('fixed');
-        }
-    $(document).on('click', '.scrollTop a', function() {
-        $('body,html').animate({
-            scrollTop: 0
-        }, 800);
-    });
+/*Doucment resize Function*/
+$(window).resize(function () {
+  fixedFooter();
+})
+/*Docuemnt load function*/
+$(window).load(function () {
+  fixedFooter()
+  $('.loader').fadeOut();
+})
+$('.loader').fadeOut();
+/*Ready Funtion*/
+$(function () {
+  fixedFooter()
+  $
+  /*Back to top Function start*/
+  $('body').append('<div class="scrollTop"><a href="javascript:void(0)"></a></div>');
+//  $('body').append('<div id="empDtlError" class="overlay-box"><div class="seisson-message error"><span></span> Overlay id is not defined </div></div>');
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      $('.scrollTop').fadeIn();
+    } else {
+      $('.scrollTop').fadeOut();
+    }
+  });
+  $(document).on('click', '.scrollTop a', function () {
+    $('body,html').animate({scrollTop: 0}, 800);
+  });
+  /*Back to top Function End*/
+  
+  /*Header footer loading*/
+  /*accordion start*/
+  $('.accordion dl dt').click(function () {
+    var trigger = $(this);
+    var target = trigger.next('dd');
+    if (target.css('display') == 'none')
+    {
+      $('.accordion dl').removeClass('active')
+      $('.accordion dl dd').slideUp();
+      target.slideDown();
+      trigger.parents('dl').addClass('active');
+    }
+    else
+    {
+      $('.accordion dl').removeClass('active')
+      $('.accordion dl dd').slideUp();
+    }
+  });
+  /*accordion start*/
 	
-    $('.toggle-btn').click(function() {
-        if ($('.wrapper').hasClass('opened')) {
-            $('.wrapper').removeClass('opened');
-        } else {
-            $('.wrapper').addClass('opened');
-        }
-    });
-    $('.has-sub-menu').click(function() {
-        var target = $(this).find('.sub-menu');
-        var trigger = $(this);
-        if (trigger.hasClass('opened')) {
-            $('.has-sub-menu').removeClass('opened');
-            trigger.removeClass('opened');
-        } else {
-            $('.has-sub-menu').removeClass('opened');
-            trigger.addClass('opened');
-        }
-    });
-
-   
-	var swiper = new Swiper('.swiper-container-home-banner', {
-	  loop: true,
-	  speed: 1500,
-	  effect: 'fade',
-	  navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	  },
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-	  pagination: {
-		el: '.swiper-pagination',
-	  },
-	  on: {
-		slideChangeTransitionStart: function () {
-		  $('.banner-text').hide(0);
-		  $('.banner-text').removeClass('aos-init').removeClass('aos-animate');
-		},
-		slideChangeTransitionEnd: function () {
-		  $('.banner-text').show(0);
-		  AOS.init();
-		},
-	  } 
-	});
-	
-});
-
-setTimeout(function(){ 
-	$(".start-page").hide();
-}, 1000);
-
-
-if ($(window).width() < 1024) {
-	//$('body').addClass('isscrolled');
-	$('.logo img').attr('src','images/logo-b.png');
-}
-if ($(window).width() > 1024) {
-	$(window).scroll(function(){
-		var fromtop = $(window).scrollTop();
-		if($(document).scrollTop() > 50)
+	/*Tabination*/
+	$('.tabNav li').each(function(){
+		/*$(this).css({
+			'width' : (100 / ( $('li:last-child').index('li') + 1 ) ) +  '%'
+		})*/
+		var tabContent = $(this).html();
+		var relation = $(this).find('a').attr('rel')
+		var resultCnt =  $(this).parents('.tabNav').next('.tabResult');
+		resultCnt.children('div#'+relation).prepend('<div class="mobile-menu">'+ tabContent +'</div>')
+	})
+	/*script for mobile navigation */
+	$(document).on('click','.mobile-menu',function(){
+		if($(this).next('.content').css('display') == 'none')
 		{
-			$('.logo img').attr('src','images/logo-b.png');
+			$(this).closest('.tabResult').find('.content').slideUp();
+			$(this).next('.content').slideDown();
 		}
 		else
 		{
-			$('.logo img').attr('src','images/logo-w.png');
+			$('.tabResult .tabBx .content').slideUp();
 		}
-	});
-		if($(document).scrollTop() > 50)
+	})
+	/*script for desktop navigation */
+	$('.tabNav li a').click(function(){
+		var relation = $(this).attr('rel')
+		var tabNavigation = $(this).parents('.tabNav')
+		var resultCnt =  $(this).parents('.tabNav').next('.tabResult');
+		
+		tabNavigation.children().find('a').removeClass('active');
+		tabNavigation.children().find('li').removeClass('activeli')
+		$(this).addClass('active');
+		$(this).parents('li').addClass('activeli');
+		
+		if(resultCnt.children('div#'+relation).css('display') == 'none')
 		{
-			$('.logo img').attr('src','images/logo-b.png');
+			resultCnt.children('div').slideUp();
+			resultCnt.children('div#'+relation).slideDown();
 		}
 		else
 		{
-			$('.logo img').attr('src','images/logo-w.png');
+			//resultCnt.children('div#'+relation).slideUp();
 		}
-}
-$(document).ready(function (){
-  $('.post-module').hover(function() {
-    $(this).find('.description').stop().animate({
-      height: "toggle",
-      opacity: "toggle"
-    }, 300);
+	})
+	/*Tabination end*/
+ 
   });
-});
 
-$(function() {
-  $('a[href*=#]').on('click', function(e) {
-	e.preventDefault();
-	$('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top - 80}, 500, 'linear');
+
+function fixedFooter()
+{
+  $('body').css('min-height', $(window).height());
+  
+}
+
+
+/*Overlay function*/
+var animationIn, target, animationOut;
+function overlayBox(popupID)
+{
+  target = $('#' + popupID)
+  animationIn = target.attr('data-animation-in');
+  animationOut = target.attr('data-animation-out');
+  if (typeof (animationIn) == 'undefined' || animationIn === '(an empty string)' || animationIn === null || animationIn === '')
+  {    
+    animationIn = 'zoomIn';
+  }
+  if (typeof (animationOut) == 'undefined' || animationOut === '(an empty string)' || animationOut === null || animationOut === '')
+  {
+    animationOut = 'zoomOut';
+  }
+  $('body').append('<div class="overlay-bg"></div>')
+  target.find('.overlay-header').append('<div class="closeBtn">X</div>');
+  target.css('visibility', 'visible').css('display', 'block').find('.overlay-box').addClass('animated').addClass(animationIn);
+  $(document).on('click', '.closeBtn', function () {
+    $('.overlay').find('.overlay-box').removeClass('animated').removeClass(animationIn).addClass('animated ' + animationOut);
+    $('body .overlay-bg').fadeOut(1000, function () {
+      $(this).remove();
+      $('.overlay').css('visibility', 'hidden').css('display', 'none').find('.overlay-box').removeClass('animated').removeClass(animationIn).removeClass(animationOut);
+    });
   });
+}
+
+/*Overlay function end*/
+
+(function() {
+  "use strict";
+
+  var toggles = document.querySelectorAll(".menu-icon");
+
+  for (var i = toggles.length - 1; i >= 0; i--) {
+    var toggle = toggles[i];
+    toggleHandler(toggle);
+  };
+
+  function toggleHandler(toggle) {
+    toggle.addEventListener( "click", function(e) {
+      e.preventDefault();
+      (this.classList.contains("open") === true) ? this.classList.remove("open") : this.classList.add("open");
+      
+    });
+  }
+	$('.menu-icon').click(function() {
+    if ($(this).hasClass('open')) {
+        $('.header').addClass('show-nav');
+        $('#nav').addClass('active');
+    } else {
+        $('.header').removeClass('show-nav');
+        $('#nav').removeClass('active');
+    }
 });
+	/*Animate label form*/
+		$('.animate-label .input-group').click(function(){
+		 if ($(this).find('select').size() > 0) {
+        // $(this).find('label').addClass('active');
+         
+        // var id = $(this).find('select').attr('id');
+        // console.log(id);
+          
+         
+        }  else {
+                $(this).find('input').focus();
+                $(this).find('label').addClass('active');
+          
+        }     
+        if ($(this).find('.custom-select-options,.custom-selct-bg').size() > 0) {
+				$(this).find('.custom-select-options,.custom-selct-bg').fadeIn();
+		}
+       
+	});
+	$('.animate-label .input-group input,.animate-label .input-group textarea').blur(function(){
+		if (this.value.length > 0) {
+			return false;
+		}
+		else
+		{
+			$(this).prev('label').removeClass('active');
+		}
+		});
+		
+    $('.input-group').on('focus', 'input, select, textarea', function () {
+        $(this).prev('label').addClass('active');
+    });
+	
+  $('.input-group textarea, .input-group input,.input-group select').each(function () {
+        if (this.value.length > 0) {
+            var div = $(this).prev('label').addClass('active');
+        }
+    });
+		$('.input-group').click(function(){
+			$(this).find('input').focus();
+			$(this).find('label').addClass('active');
+    });
+	/*Animate label form*/
+	
+})();
