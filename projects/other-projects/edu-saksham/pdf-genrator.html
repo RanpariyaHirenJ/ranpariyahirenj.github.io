@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="content/css/bootstrap-grid.min.css">
+		
+		<link rel="stylesheet" href="content/css/scroll.css">
+		<link rel="stylesheet" href="content/css/style.css">
+		<title>EduSaksham</title>
+	</head>
+	<body class="light-bg-gray">
+		<header>
+			<div class="top-header new-dashboard">
+				<div class="top-new-header">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-3">
+							<div class="left-part">
+								<a href="dashboard.html" class="logo">
+									<img src="content/images/logo.png" class="img-fluid">
+								</a>
+								<div class="mobile-bar">
+									<a href="javascript:void(0);" class="bar">
+										<span></span>
+										<span></span>
+										<span></span>
+									</a>
+								</div>
+								
+							</div>
+						</div>
+						<div class="col-lg-9">
+							<div class="common-wrap">
+								<div class="score-div">
+									<ul>
+										<li>
+											Tests taken
+											<span>10</span>
+										</li>
+										<li>
+											Questions attempted
+											<span>21</span>
+										</li>
+										<li>
+											Average score
+											<span>18/20</span>
+										</li>
+										<li>
+											Subjects studied
+											<span>	4</span>
+										</li>
+									</ul>
+								</div>
+								<div class="upload-pdf">
+									<a href="my-courses.html" class="course-btn">View Books</a>
+									<a href="pdf-genrator.html" class="pdf-btn">
+										Upload PDF
+									</a>
+								</div>
+								<div class="right-part">
+									<div class="left-side">
+										<strong>Hi, Sunil</strong>
+										<a href="index.html">LOGOUT</a>
+									</div>
+									<div class="thumb-user">
+										<img src="content/images/user-thumb.png" class="img-fluid">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+			
+		</header>
+		<div class="popular-books pdf-generator">
+			
+			<div class="clear"></div>
+				<h2>Generate Assessment</h2>
+			<div class="content-pdf">
+				<div class="file-upload">
+					<div class="file-select">
+						<div class="file-select-button" id="fileName">Choose File</div>
+						<div class="file-select-name" id="noFile">No file chosen...</div>
+						<input type="file" name="chooseFile" id="chooseFile">
+					</div>
+				</div>
+				<div class="choose-answer">
+					<div class="form-check active">
+						<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+						<label class="form-check-label" for="flexRadioDefault1">
+							MCQ
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+						<label class="form-check-label" for="flexRadioDefault2">
+							Fill in the Blanks
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" >
+						<label class="form-check-label" for="flexRadioDefault3">
+							True or False
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" >
+						<label class="form-check-label" for="flexRadioDefault4">
+							Mixed Type
+						</label>
+					</div>
+					
+				</div>
+				<div class="clear"></div>
+				<a href="javascript:void(0);" class="pdf-button">
+					Generate
+				</a>
+			</div>
+		</div>
+		
+		<div id='toTop' class="click-top">
+			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+				<path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+			</svg>
+		</div>
+		<!-- <script src="content/js/jquery-3.6.0.min.js"></script> -->
+		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="content/js/scroll.js"></script>
+		<script src="content/js/custom.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+		$('#chooseFile').bind('change', function () {
+		var filename = $("#chooseFile").val();
+		if (/^\s*$/.test(filename)) {
+		$(".file-upload").removeClass('active');
+		$("#noFile").text("No file chosen...");
+		}
+		else {
+		$(".file-upload").addClass('active');
+		$("#noFile").text(filename.replace("C:\\fakepath\\", ""));
+		}
+		});
+			});
+		</script>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!--Google Fonts link-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!--Google Fonts link-->
+  <title>Brisa - Candidate-Form</title>
+</head>
+
+<body>
+  <section class="candidate-form">
+    <div class="confirm-bg1"><img src="images/confirm-bg1.png" alt=""></div>
+    <div class="confirm-bg2"><img src="images/confirm-bg2.png" alt=""></div>
+    <div class="container">
+      <div class="video-wrapper">
+        <div class="video-header">
+          <div class="video-header-img"><img src="images/client-logo.png" alt=""></div>
+          <div class="video-header-text">
+            <h2>Raju Dev</h2>
+            <h4>Connected 00 : 15 </h4>
+          </div>
+        </div>
+        <div class="row question-text-area">
+          <div class="col-12 col-md-12 col-lg-12">
+            <div class="video-cntr">
+                <img src="images/video-img.png" alt=""></div>
+                <!-- <video loop="" muted="" autoplay="">
+                  <source src="video/banner.mp4" type="video/mp4">
+                </video> -->
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="clear-both"></div>
+  </section>
+
+  <script type="text/javascript">
+    $(window, document, undefined).ready(function() {
+      $('input, textarea, select').blur(function() {
+          var $this = $(this);
+          if ($this.val())
+              $this.addClass('used');
+          else
+              $this.removeClass('used');
+      });
+    setInterval(function(){
+      $('input, select, textarea').each(function () {
+        if (this.value.length > 0) {
+          $(this).addClass('used');
+        }
+      });
+    }, 300);
+  });
+  </script>
+</body>
+
+</html>

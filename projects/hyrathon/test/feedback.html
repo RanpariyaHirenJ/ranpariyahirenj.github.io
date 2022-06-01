@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!--Google Fonts link-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!--Google Fonts link-->
+  <title>Brisa - Candidate-Form</title>
+</head>
+
+<body>
+  <section class="candidate-form">
+    <div class="attention-bg1"><img src="images/attention-bg1.png" alt=""></div>
+    <div class="attention-bg2"><img src="images/attention-bg2.png" alt=""></div>
+    <div class="container">
+      <div class="feedback-wrapper">
+        <div class="page-area">
+          <div class="popup-header">
+            <div class="icon-img"><img src="images/feedback-icon.png" alt=""></div>
+            <h2>Submit Feedback</h2> 
+          </div>
+          <div class="popup-box">
+            <h2>Your opinion is important for us. <br>This way we can keep improve out tool.</h2>
+            <p class="font-bold">Please rate the following with 5 being ‘very satisfied’ and 1 bring ‘least satisfied’</p>
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-6">
+                <div class="row feedback-star-text">
+                  <div class="col-6 col-md-6 col-lg-6 mar-bott">
+                    <h4>Quality of Question</h4>
+                  </div>
+                  <div class="col-6 col-md-6 col-lg-6">
+                    <div>
+                      <img src="images/fill-star.png" alt="">
+                      <img src="images/fill-star.png" alt="">
+                      <img src="images/fill-star.png" alt="">
+                      <img src="images/fill-star.png" alt="">
+                      <img src="images/fill-star.png" alt="">
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-6 col-lg-6 mar-bott">
+                    <h4>Navigation</h4>
+                  </div>
+                  <div class="col-6 col-md-6 col-lg-6">
+                    <div>
+                      <img src="images/fill-star.png" alt="">
+                      <img src="images/star.png" alt="">
+                      <img src="images/star.png" alt="">
+                      <img src="images/star.png" alt="">
+                      <img src="images/star.png" alt="">
+                    </div>
+                  </div>
+                  <div class="col-6 col-md-6 col-lg-6">
+                    <h4>User Friendly</h4>
+                  </div>
+                  <div class="col-6 col-md-6 col-lg-6">
+                    <div>
+                      <img src="images/fill-star.png" alt="">
+                      <img src="images/star.png" alt="">
+                      <img src="images/star.png" alt="">
+                      <img src="images/star.png" alt="">
+                      <img src="images/star.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-6"></div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-6 feedback-text-field">
+                <h4>List things you liked the best</h4>
+                <div class="feedback-text-area">
+                  <form>
+                  <input type="text" name="message" rows="10" cols="30" class="feedback-text-cont"></input>
+                </form>
+                </div>
+                <div class="feedback-text-area">
+                  <form>
+                  <input type="text" name="message" rows="10" cols="30" class="feedback-text-cont"></input>
+                </form>
+                </div>
+                <div class="feedback-text-area">
+                  <form>
+                  <input type="text" name="message" rows="10" cols="30" class="feedback-text-cont"></input>
+                </form>
+                </div>
+                <h5>Add More</h5>
+              </div>
+              <div class="col-12 col-md-6 col-lg-6 feedback-text-field">
+                <h4>List things you would like to improve</h4>
+                <div class="feedback-text-area">
+                  <form>
+                  <input type="text" name="message" rows="10" cols="30" class="feedback-text-cont"></input>
+                </form>
+                </div>
+                <div class="feedback-text-area">
+                  <form>
+                  <input type="text" name="message" rows="10" cols="30" class="feedback-text-cont"></input>
+                </form>
+                </div>
+                <div class="feedback-text-area">
+                  <form>
+                  <input type="text" name="message" rows="10" cols="30" class="feedback-text-cont"></input>
+                </form>
+                </div>
+                <h5>Add More</h5>
+              </div>
+            </div>
+            <div class="other-comm">
+              <h4>Other Comment (if any)</h4>
+              <div class="fgroup">
+                  <input type="text" name="name" placeholder="" /> 
+                  <label for="">Write your comment here</label>
+                </div>
+            </div>
+          </div>
+          <div class="feedback-button"><a href="start-test-python.html">Submit</a></div>
+        </div>
+        <div class="botton-logo">
+          <h5>Powered by</h5>
+          <div class="botton-logo-img"><img src="images/client-logo2.png" alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="clear-both"></div>
+  </section>
+
+  <script type="text/javascript">
+    $(window, document, undefined).ready(function() {
+      $('input, textarea, select').blur(function() {
+          var $this = $(this);
+          if ($this.val())
+              $this.addClass('used');
+          else
+              $this.removeClass('used');
+      });
+    setInterval(function(){
+      $('input, select, textarea').each(function () {
+        if (this.value.length > 0) {
+          $(this).addClass('used');
+        }
+      });
+    }, 300);
+  });
+  </script>
+</body>
+
+</html>

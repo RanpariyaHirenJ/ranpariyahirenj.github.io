@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!--Google Fonts link-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!--Google Fonts link-->
+  <title>Brisa - Candidate-Form</title>
+</head>
+
+<body>
+  <section class="candidate-form">
+    <div class="attention-bg1"><img src="images/attention-bg1.png" alt=""></div>
+    <div class="attention-bg2"><img src="images/attention-bg2.png" alt=""></div>
+    <div class="container">
+      <div class="attention-wrapper">
+        <div class="page-area mar-top2">
+          <div class="popup-header">
+            <div class="icon-img"><img src="images/warning.png" alt=""></div>
+            <h2>Attention</h2> 
+          </div>
+          <div class="popup-box">
+            <h2>Click on the button below to <span>start the test</span></h2>
+            <div class="row attention">
+              <div class="col-12 col-md-6 col-lg-6 attention-box">
+                <div class="attention-img-text"><img src="images/question-icon.png" alt=""><span>Total no of question</span></div>
+                <h4>10</h4>
+              </div>
+              <div class="col-12 col-md-6 col-lg-6 attention-box">
+                <div class="attention-img-text"><img src="images/clock-icon.png" alt=""><span>Total Duration</span></div>
+                <h4>10 Mins</h4>
+              </div>
+            </div>
+            <p>Take a Quick Tour to familiarize yourself with the Test Format. <span>Click Now</span> for the Tour.</p>
+            <h3><span>Don’t change the tab or exit from full screen while writing test. Test will close automatically if tab/full screen is inactive for more than 10 seconds</span></h3>
+          </div>
+          <div class="all-the-best-button"><a href="question.html">All the Best<span>! </span>Start Test</a></div>
+        </div>
+        <div class="botton-logo">
+          <h5>Powered by</h5>
+          <div class="botton-logo-img"><img src="images/client-logo2.png" alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="clear-both"></div>
+  </section>
+
+  <script type="text/javascript">
+    $(window, document, undefined).ready(function() {
+      $('input, textarea, select').blur(function() {
+          var $this = $(this);
+          if ($this.val())
+              $this.addClass('used');
+          else
+              $this.removeClass('used');
+      });
+    setInterval(function(){
+      $('input, select, textarea').each(function () {
+        if (this.value.length > 0) {
+          $(this).addClass('used');
+        }
+      });
+    }, 300);
+  });
+  </script>
+</body>
+
+</html>

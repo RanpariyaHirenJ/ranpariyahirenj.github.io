@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!--Google Fonts link-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!--Google Fonts link-->
+  <title>Brisa - Candidate-Form</title>
+</head>
+
+<body>
+  <section class="candidate-form">
+    <div class="confirm-bg1"><img src="images/confirm-bg1.png" alt=""></div>
+    <div class="confirm-bg2"><img src="images/confirm-bg2.png" alt=""></div>
+    <div class="container">
+      <!-- Mobile view -->
+        <div class="mob-question-progrm-header">
+          <div class="mob-question-progrm-header-text">
+            <h4>Applied for Job Position</h4>
+            <h2>Programming Language : Python</h2>
+          </div>
+          <div class="mob-question-progrm-user-img"><img src="images/user-img.jpg" alt=""></div>
+        </div>
+        
+        <!-- Mobile view -->
+      <div class="question-wrapper">
+        <div class="question-header">
+          <div class="question-header-text">
+            <h4>Applied for Job Position</h4>
+            <h2>Programming Language : Python</h2>
+          </div>
+          <div class="question-header-img"><img src="images/client-logo.png" alt=""></div>
+        </div>
+        <div class="row question-text-area">
+          <div class="col-12 col-md-9 col-lg-9">
+            <div class="row question-text">
+              <div class="col-12 col-md-8 col-lg-8">
+                <h5><span>Question 1</span><span class="question-timer">00:15</span></h5>
+                <h3>Write a python program to print given number is armstrong number or not?</h3>
+              </div>
+              <div class="col-12 col-md-4 col-lg-4">
+              </div>
+            </div>
+            <div class="row question-text">
+              <div class="col-12 col-md-12 col-lg-12">
+                <form>
+                  <textarea name="message" rows="10" cols="30" class="text-area"></textarea>
+                </form>
+              </div>
+            </div>
+            <div class="sub-ans-button2"><a href="video.html">Run</a></div>
+          </div>
+          <div class="col-12 col-md-3 col-lg-3">
+            <div class="question-img-area">
+              <div class="question-img-patch">
+                <div class="user-img"><img src="images/user-img.jpg" alt=""></div>
+                <div class="user-img-details">
+                  <h4>Raju Dev - B2B</h4>
+                  <h5>Connected - 00:15</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="botton-logo">
+        <h5>Powered by</h5>
+        <div class="botton-logo-img"><img src="images/client-logo2.png" alt=""></div>
+      </div>
+    </div>
+    <div class="clear-both"></div>
+  </section>
+
+  <script type="text/javascript">
+    $(window, document, undefined).ready(function() {
+      $('input, textarea, select').blur(function() {
+          var $this = $(this);
+          if ($this.val())
+              $this.addClass('used');
+          else
+              $this.removeClass('used');
+      });
+    setInterval(function(){
+      $('input, select, textarea').each(function () {
+        if (this.value.length > 0) {
+          $(this).addClass('used');
+        }
+      });
+    }, 300);
+  });
+  </script>
+</body>
+
+</html>

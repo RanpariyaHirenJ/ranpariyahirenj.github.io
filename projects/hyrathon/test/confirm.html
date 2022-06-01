@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!--Google Fonts link-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!--Google Fonts link-->
+  <title>Brisa - Candidate-Form</title>
+</head>
+
+<body>
+  <section class="candidate-form">
+    <div class="confirm-bg1"><img src="images/confirm-bg1.png" alt=""></div>
+    <div class="confirm-bg2"><img src="images/confirm-bg2.png" alt=""></div>
+    <div class="container">
+      <div class="confirm-wrapper">
+        <div class="page-area mar-top">
+          <!-- <div class="confirm-closed"><img src="images/confirm-closed.png" alt=""></div> -->
+          <div class="popup-header">
+            <div class="icon-img"><img src="images/confirm.png" alt=""></div>
+            <h2>Confirm</h2> 
+          </div>
+          <div class="popup-box">
+            <h2>Do you really want to finish your test?</span></h2>
+            
+          </div>
+          <div class="confirm-button-btn">
+            <div class="confirm-btn"><a href="test-finished.html">Finish</a><span>Save and Exit</span></div>
+            <div class="confirm-btn"><a class="fill-btn" href="test-finished.html">Cancel</a><span>Continue the test</span></div>
+          </div>
+        </div>
+        <div class="botton-logo">
+          <h5>Powered by</h5>
+          <div class="botton-logo-img"><img src="images/client-logo2.png" alt=""></div>
+        </div>
+      </div>
+    </div>
+    <div class="clear-both"></div>
+  </section>
+
+  <script type="text/javascript">
+    $(window, document, undefined).ready(function() {
+      $('input, textarea, select').blur(function() {
+          var $this = $(this);
+          if ($this.val())
+              $this.addClass('used');
+          else
+              $this.removeClass('used');
+      });
+    setInterval(function(){
+      $('input, select, textarea').each(function () {
+        if (this.value.length > 0) {
+          $(this).addClass('used');
+        }
+      });
+    }, 300);
+  });
+  </script>
+</body>
+
+</html>
