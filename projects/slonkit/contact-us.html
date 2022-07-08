@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+<meta charset='utf-8'>
+<title>Slonkit :: Mobile App</title>
+<link href="css/styles.css" media="screen" rel="stylesheet" type="text/css" />
+<meta content='width=device-width, initial-scale=1, user-scalable=no' name='viewport'>
+<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
+<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
+<style type="text/css" media="screen">
+	.gm-style img{max-width:none; !important; background:none !important;}
+	.gm-style-iw span {height:auto !important; display:block; white-space:nowrap; 
+	overflow:hidden !important;}
+	.gm-style-iw strong {font-weight:400;}
+	.map-data{ position:absolute;top:-1668px;}
+	.gm-style-iw{ height:auto !important;color:#000000; display:block;white-space:nowrap; width:auto !important;
+	line-height:18px; overflow:hidden !important;}
+</style>
+<style>.maps-style_map:initreaction=attempt10</style>
+<script type="text/javascript">
+	var map; 
+function initialize() {
+		var myLatlng = new google.maps.LatLng(19.178301,72.972269);
+		var mapOptions = {
+			zoom: 7,
+			center: myLatlng
+		}
+		var map = new google.maps.Map(document.getElementById('gmap_canvas'), mapOptions);
+	
+		var marker = new google.maps.Marker({
+				position: myLatlng,
+				map: map,
+				title: 'Hello World!'
+		});
+	}
+	$(document).ready(function() {
+		
+		initialize();
+		google.maps.event.addDomListener(window, "resize", function() {
+			initialize();
+		 var center = map.getCenter();
+		 google.maps.event.trigger(map, "resize",initialize);
+		 map.setCenter(center); 
+		 
+		});
+		})
+</script>
+</head>
+<body>
+<div id='top'></div>
+<div id='header'>
+  <div class='inner'> 
+  	<a href="index.html" class="logo">Slonkit</a>
+    <a href="javascript:void(0);" class="mobile-icon"></a>
+    <ul class='nav'>
+      <li><a href="about.html" >About Slonkit </a></li>
+      <li><a href="get-started.html"> Get Started </a></li>
+      <li><a href="nextgen-shoppers.html">NextGen Shoppers  </a></li>
+      <li><a href="parents-corner.html"> Parents Corner </a></li>
+      <li><a href="merchants-corner.html"> Merchants Corner </a></li>     
+      <li><a href="sign-in.html" class="launch signin">Log In</a></li>
+      <li><a href="sign-up.html" class="launch signup">Register</a></li>
+    </ul>
+  </div>
+</div>
+<div class='mobilenav'>
+    <ul class='nav'>
+      <li><a href="about.html" >About Slonkit</a></li>
+       <li><a href="get-started.html"> Get Started </a></li>
+      <li><a href="nextgen-shoppers.html">NextGen Shoppers  </a></li>
+      <li><a href="parents-corner.html"> Parents Corner </a></li>
+      <li><a href="merchants-corner.html"> Merchants Corner </a></li>   
+      <li class="mobilesignup"><a href="sign-in.html" class="launch signin">Log In</a></li>
+      <li class="mobilesignup"><a href="sign-up.html" class="launch signup">Register</a></li>
+    </ul>
+</div>
+<div class="commontop aboutuscntr">
+	<div class="inner">
+  	<h1 class="aboutheadng">Contact Us</h1>
+    <div id="mapCon">
+        	<div id="gmap_canvas"></div>
+    </div>
+    <div class="contactCntr">
+    	<div class="contact-left">
+      	<h3>Address</h3>
+        <p>
+        	Clover Infotech<br>
+2nd Floor, Dhana Singh Processors Building,<br>
+Vazir Glass Lane, J B Nagar, Andheri (East)<br>
+Mumbai - 400 059<br>
+Maharashtra, India
+        </p>
+        <p>
+        	<span>E</span>-
+          <a href="mailto:marketing@slonkit.com">marketing@slonkit.com</a>
+          <br>
+          <span>P</span>-
+          +91 (22) 29261650
+          <br>
+          <span>Fax:</span>-
+          +91 (22) 29261704
+        </p>
+      </div>
+      <div class="contact-ryt">
+      	<div class="page-signup-body">
+        <div class="ng-isolate-scope ys-sign-up-form">
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" name="first-name">
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="text" name="first-name">
+          </div>
+          <div class="form-group">
+            <label>Subject</label>
+            <input type="text" name="first-name">
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea name="" cols="" rows=""></textarea>
+          </div>
+        <div class="form-group">
+        	<input type="submit" value="SUBMIT" style="margin-right:10px;">
+          <input type="submit" value="RESET">
+        </div>
+      </div>
+      
+    </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+</div>
+<div id='connect'>
+  <h2>Connect with Slonkit</h2>
+  <ul class="appfollw">
+    <li> <a href='#' target='_blank'> <img alt="Connect-facebook" height="51" src="images/connect-facebook.png" width="50" />
+      <p>Like on Facebook</p>
+      </a> </li>
+    <li> <a href='#' target='_blank'> <img alt="Connect-twitter" height="51" src="images/connect-twitter.png" width="50" />
+      <p>Follow on Twitter</p>
+      </a> </li>
+    <li> <a href='#' target='_blank'> <img alt="Connect-google" height="51" src="images/connect-google.png" width="50" />
+      <p>Follow on Google+</p>
+      </a> </li>
+      <li> <a href='#' target='_blank'> <img alt="Connect-google" height="51" src="images/linkedin.png" width="50" />
+      <p>Follow on Linkedin</p>
+      </a> </li>
+      <li> <a href='#' target='_blank'> <img alt="Connect-google" height="51" src="images/instagram.png" width="50" />
+      <p>Find on Instagram</p>
+      </a> </li>
+  	
+  </ul>
+    <p class="copyryt">
+    
+    &copy;  Slonkit
+    2014. <a href="contact-us.html">Contact </a>| <a href="faqs.html">FAQs</a>
+  </p>
+</div>
+<script src="js/common.js" type="text/javascript"></script>
+</body>
+</html>

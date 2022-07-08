@@ -1,0 +1,475 @@
+  @import "_variable.scss";
+
+  @function bg($imageName){
+   @return url($image-path + $imageName);
+  };
+
+  @mixin sprite($positions) {
+    background: bg('sprite.png') no-repeat $positions transparent;
+  }
+
+  @mixin iconSprite($spriteDtls...){
+    .is{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    @each $iconName,$spritePos,$spriteWidth,$spriteHeight in $spriteDtls{
+      .is-#{$iconName}{
+        @include sprite($spritePos);
+        width: $spriteWidth + px;
+        height: $spriteHeight + px;
+      }
+    }
+  }
+  @function pxtoem($size,$baseFont:16){
+    @return ($size/$baseFont)+ em;
+  }
+
+  @mixin css-transition($property, $time ,$easing){
+    transition:$property $time $easing;
+    -webkit-transition: $property $time $easing;
+    -moz-transition: $property $time $easing;
+  }
+
+  @mixin socialMedia($medialist...) {
+    @each $media in $medialist{
+      .social-media{
+        li{
+          a.#{$media}{
+
+          }
+        }
+      }
+    }
+  }
+
+  @mixin sizing($property){
+    -webkit-box-sizing:$property; -moz-box-sizing: $property; box-sizing:$property;
+  }
+  @mixin break-word($property){
+    -ms-word-break: $property; word-break: $property; -webkit-word-break: $property; -moz-word-break: $property;
+  }
+  @mixin clrfix{
+    &:after{
+      clear:both;
+      content:'';
+      display:block;
+    }
+  }
+  %clear,.clear{
+    clear:both;
+  }
+  @mixin clear($count , $increment){
+    @for $i from 1 through $count{
+      .clear#{$increment *$i}{@extend %clear;height:$increment * $i+px}
+    }
+  }
+  %reset{
+    margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline
+  }
+  @mixin reset{
+    /*Reset css start*/
+
+    html, body, div, span,  object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike tt, var,  center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+      @extend %reset;
+    }
+    article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block }
+    ol, ul { list-style: none }
+    blockquote, q {
+      quotes: none;
+      &:before,&:after{
+        content: '';
+      }
+    }
+    table { border-collapse: collapse; border-spacing: 0 }
+    /*Reset css end*/
+  }
+  @mixin headings($count){
+    @for $i from 2 through 6{
+      $heading-size : $heading-size - $count;
+      h#{$i}{
+        font-size:pxtoem($heading-size);
+        @extend %h1;
+      }
+    }
+  }
+
+  @mixin globalCss{
+    /*Global Css starts*/
+    a {
+      color:$link-color;text-decoration: none; outline: none;
+      @include css-transition(all,0.5ms,ease);
+    }
+    body {
+      line-height: 1; font:pxtoem($body-size) $pf; color:$body-color; padding-bottom:$footer-height; position: relative;background:$body-bg;
+    }
+    *{
+      @include sizing(border-box);@include break-word(keep-all);
+      &:after,&:before{
+        @extend *;
+      }
+    }
+    img{
+      max-width: 100%; vertical-align: middle;
+    }
+    .container {
+      margin: 0 auto; width:$cntWidth;max-width: $cntMxWidth;
+    }
+    .fl { float: left}
+    .fr { float: right }
+    .text-right { text-align: right }
+    .text-left { text-align: left }
+    .text-center { text-align: center }
+    .error { color: #F00; }
+
+    p {
+      font:300 pxtoem($para-size)  / pxtoem($para-line-height) $fv1;
+      padding-bottom: 14px;
+       &.info {
+         background: bg('icon-info.png') no-repeat scroll left center;
+         font: 16px "Open Sans",serif;padding: 10px 0 10px 33px;
+       }
+    }
+
+    // including clear
+    @include clear(3, 20);
+    // heading property
+    %h1,
+    h1{
+      color:$heading-color;
+      font:300 pxtoem($heading-size) $pf;
+      padding-bottom: $headingSpacer;
+    }
+
+
+    @include headings($heading-size-differnce);
+
+    .desktop-only { display: block }
+    .mobile-only, .tab-only, .tab-mobile-only { display: none }
+    .loader {background: bg('loader.gif') no-repeat scroll center center rgba(0, 0, 0, 0.8);height: 100%; left: 0;position: fixed;top: 0; width: 100%;z-index:99999;}
+    .loader.loaded{top:-100%;}
+    /*Global Css End*/
+  }
+  @mixin defaultForm{
+    .form-layout {
+      padding:20px 0;
+      .form-row {
+        .form-field {
+          padding-bottom: 20px;
+          &.mandatory {
+            position: relative;
+            label{
+              &:after{
+                color: #f00; content: "*"; display: inline-block; margin-left: 4px; vertical-align: top; z-index: 100;
+              }
+            }
+          }
+        }
+
+        &:last-child{
+          .form-field{
+            padding-bottom: 0;
+          }
+        }
+        label {display: block;padding:10px 0;font:14px $pf;}
+      }
+    }
+    /*form tag*/
+    input[type="text"], input[type="password"], input[type="email"], input[type="number"], input[type="date"], select, textarea {
+      width: 100%;
+      padding:9px 10px; border: 1px solid #ddd;margin:0;font:14px $pf;
+      outline: none;
+    }
+    select { background: none; width: 100%; padding:9px 10px;border:none;outline:none;cursor:pointer;}
+    textarea { height: $txth; resize: none; font: $txtfs $pf; }
+    input[type="checkbox"], input[type="radio"] { display: inline-block; vertical-align: middle; margin: 0 5px 0 0; }
+    /*Form Tag end*/
+
+    span.has-error {
+      background: none repeat scroll 0 0 #f00; color: #fff; display: inline-block; font-size: 14px; margin-top: 10px; padding: 4px 10px; position: relative;
+      &:before {
+        background: bg('error-bg.png') no-repeat scroll center center rgba(0, 0, 0, 0); content: ""; display: block; height: 6px; left: 12px; position: absolute; top: -6px; width: 12px;
+      }
+    }
+
+    /*Common Buttons*/
+    input[type=button], input[type=submit], input[type=reset], a.box-btn, button.box-btn {
+      display: inline-block; margin: 0 5px 0 0; background-color: $boxBtnBg; border: none; cursor: pointer; padding: 15px 25px; color: $boxBtnColor; font:800 pxtoem(14) $pf;
+      letter-spacing: .25px;
+      text-transform: uppercase;
+      vertical-align: middle; text-decoration: none; text-align: center;
+      backface-visibility: hidden;
+      position: relative;
+      transform: translateZ(0px);
+      vertical-align: middle;
+      border-radius: 25px;
+      border:1px solid $btnBrdClr;
+
+      &:hover,&.active{
+        background-color: #e42f45;
+        color: #fff;
+        border-color: #e42f45;
+      }
+      &::before,&.active:before{
+          border: 4px solid #e42f45;
+          border-radius: 35px;
+          bottom: 0;
+          content: "";
+          left: 0;
+          position: absolute;
+          right: 0;
+          top: 0;
+          transition-duration: 0.3s;
+          transition-property: top, right, bottom, left;
+          opacity: 0;
+      }
+      &:hover::before,&.active::before {
+          bottom: -8px;
+          left: -8px;
+          right: -8px;
+          top: -8px;
+          opacity: 1;
+      }
+      @include css-transition(all,0.5ms,ease);
+      &.full-btn{
+        display: block;
+        width: 100%;
+      }
+      &:hover,&.active{
+        background-color:  $boxBtnBgHvr;
+      }
+      &.secondary-btn {
+        background-color: $secondBoxBtnBg; color:$secondBoxBtnColor;border-color: $scndbtnBrdClr;
+        &:hover,&.active{
+          background-color: $boxBtnBgHvr;
+          color:$secondBoxBtnColor;
+          border-color: $boxBtnBgHvr;
+        }
+      }
+    }
+    /*hack for mozzila */
+    @-moz-document url-prefix() {
+       a.box-btn {
+       padding-top:16px;
+       padding-bottom:16px;
+      }
+    }
+    /*hack for mozzila end*/
+  // Common buttons end
+    // Custom input types
+    .input-type-select {
+      border: 1px solid #ddd;overflow: hidden;position: relative;
+      &:after{
+        background: bg('custom-select.png') no-repeat scroll center center;content: ""; display: block;height: 40px;position: absolute; right: 0; top: 0; width: 41px; z-index: 99999;
+      }
+    }
+
+    /*form end*/
+  }
+
+  @mixin renderInto($viewport,$size){
+    @media($viewport:$size){
+      @content;
+    }
+  }
+
+  @mixin grid($ext,$totalClums:12){
+    .grid-layout{margin:0 -1%}
+    .grid-#{$ext}{
+      float: left;
+      padding:0 1%;
+    }
+    @for $i from 1 through $totalClums{
+      $k : (100% / $totalClums) ;
+      .grid-#{$ext}-#{$i}{
+        width:$k * $i;
+        @extend .grid-#{$ext};
+      }
+    }
+  }
+
+  @mixin listItem($types...){
+
+    ul.list,ol.list {
+      margin-left: 27px;
+      padding-bottom: 14px;
+      font:pxtoem(20) $sf;
+      li {
+        padding: 5px 0 5px 7px;
+      }
+      &.bullet {
+        margin-left: 10px;
+        li{
+          background: bg('bullet.png') no-repeat scroll left center rgba(0, 0, 0, 0);
+          padding: 5px 0 5px 18px;
+        }
+      }
+    }
+    @each $listType in $types{
+      ul.#{$listType},ol.#{$listType}{
+        li{
+          list-style-type:$listType;
+        }
+      }
+    }
+  }
+
+  @mixin messages($params...){
+    /*Session Error messages*/
+    .message{
+      border: medium none; font: 18px $pf;
+      margin: 0 0 15px;
+      padding: 10px;
+      position: relative;
+      @each $session-message, $bg-color,$txt-color in $params{
+        &.#{$session-message}{
+          background-color:$bg-color;color: $txt-color;
+        }
+      }
+    }
+    /*Session error message end*/
+  }
+
+  @mixin pagination{
+    /*Pagination*/
+    .pagination {
+      padding-bottom: 20px;
+      @include clrfix;
+      &.at-right{
+        text-align: right;
+      }
+      &.at-left{
+        text-align: left;
+      }
+      &.at-center{
+        text-align: center;
+      }
+      ul{
+        display: inline-block;
+        border:1px solid #b2b2b2;
+        background-color: #eee;
+        border-left:none;
+      }
+      %paginationHover{
+        background-color: #0079C1;
+        color: #fff;
+      }
+      li{
+        border-left: 1px solid #b2b2b2; padding: 0; vertical-align: middle;
+        float:left;
+        a,span{
+          display: block;
+          padding: 5px 13px;
+          &:hover{
+            @extend %paginationHover
+          }
+        }
+        &.active{
+          a{
+            @extend %paginationHover
+          }
+        }
+
+      }
+    }
+    /*Pagination End*/
+  }
+  @mixin table{
+    %td{
+      color: #535353; margin: 0; min-width: 120px; padding: 10px; text-align: left; width: 120px;
+    }
+    .table {
+      width: 100%;
+      background:#fff; font-size: 12px; margin-bottom: 15px;
+      &.with-strip{
+        tr:nth-child(2n+1){
+          td{
+            background-color: #eee;
+          }
+        }
+      }
+      &.with-border{
+         border-left: 1px solid #dbdbe9; border-top: 1px solid #dbdbe9;
+         td{
+           border-bottom: 1px solid #dbdbe9; border-right: 1px solid #dbdbe9;
+         }
+      }
+      td{
+        @extend %td;
+      }
+      th{
+        background:#444; color: #fff; font-size: pxtoem(16); text-transform: uppercase;
+        @extend %td;
+      }
+      .status { color: #16930d; }
+    }
+    /*Table end*/
+  }
+  @mixin overlay{
+    /*overlay */
+    .overlay-bg{background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5); height: 100%; left: 0; margin: 0 auto; position: fixed; top: 0; width: 100%; z-index: 100000;}
+    .overlay {
+      height: 100%; left: 0; margin: 0 auto; position: fixed; top: 0; width: 100%; z-index: 100001;visibility:hidden;
+      .overlay-box {
+        display: table; height: inherit; margin: 0 auto; width: 600px;
+        .content {
+          display: table-cell; vertical-align: middle;
+        }
+        .closeBtn {
+          background: none repeat scroll 0 0 #FFFFFF; border-radius: 5px; color: #2A78CB; cursor: pointer; font: bold 17px/25px Arial, Helvetica, sans-serif; height: 25px; padding: 0; position: absolute; right: 10px; text-align: center; top: 10px; width: 25px; z-index: 1002;
+
+        }
+        .overlay-header { background: none repeat scroll 0 0 #4066ae; color: #fff; font: 600 19px "Open Sans", serif; padding: 9px 10px; position:relative;}
+        .overlay-content{ padding: 20px 10px; background: none repeat scroll 0 0 #fff }
+        .overlay-footer{ padding: 9px 10px; background: #e3e3e3; text-align: right }
+      }
+    }
+  }
+
+  @mixin cssDisplay {
+    .ds-table{display: table;width: 100%;height:inherit;}
+    .ds-table-cell { display: table-cell; vertical-align: middle; }
+    .ds-block {display: block;}
+    .ds-inline-block{display: inline-block;vertical-align: middle;}
+    .ds-inline{display: inline;}
+  }
+
+  @mixin prefix($property,$value){
+    -webkit-#{$property}: $value;
+    -o-#{$property}: $value;
+    -moz-#{$property}: $value;
+    -ms-#{$property}: $value;
+    #{$property}: $value;
+  }
+
+
+  @mixin keyframes($animationName) {
+    @keyframes #{$animationName} {
+        @content;
+    }
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+  }
+  @mixin animation($animate...) {
+      $max: length($animate);
+      $animations: '';
+
+      @for $i from 1 through $max {
+          $animations: #{$animations + nth($animate, $i)};
+
+          @if $i < $max {
+              $animations: #{$animations + ", "};
+          }
+      }
+      -webkit-animation: $animations;
+      -moz-animation:    $animations;
+      -o-animation:      $animations;
+      animation:         $animations;
+  }

@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="images/favicon.png" />
+<title>:: CHEP ::</title>
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link rel="stylesheet" type="text/css" href="styles/sprite.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+<script src="scripts/slick.min.js"></script>
+</head>
+<body>
+<div class="loader"></div>
+<div class="wrapper">
+  <div class="header">
+    <div class="container">
+      <div class="quick-links"> <i class="is is-call"></i> GET IN TOUCH - <strong><a href="tel:12345678">12345678</a></strong> </div>
+      <div class="logo grid-md-12"> <a href="index.html"><img src="images/logo.jpg" alt="Chep" title="Chep"></a> </div>
+      <div class="header-right">
+        <div class="grid-layout">
+          <form class="checkform">
+            <div class="grid-3  grid-md-3 grid-xs-6 category">
+              <div class="input-type-select">
+                <select>
+                  <option value="option1">Option1</option>
+                  <option value="option2">Option2</option>
+                  <option value="option3">Option3</option>
+                  <option value="option4">Option4</option>
+                </select>
+              </div>
+            </div>
+            <div class="grid-7  grid-md-6  grid-xs-6">
+              <div class="search-container">
+                <input type="text" placeholder="Search Product here">
+                <button class="search-btn"><i class="is is-search"></i></button>
+              </div>
+            </div>
+          </form>
+          <div class="grid-2  grid-md-3  grid-xs-3">
+            <div class="cart">
+              <button class="box-btn full"><i class="is is-cart-bucket"></i> (<span class="cart-count">5</span>) ITEMS </button>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <div class="nav">
+    <div class="container">
+    	<div class="toggle-btn">
+      	<span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </div>
+      <ul class="clearfix">
+        <li class="home"><a href="#"><i class="is is-home"></i></a></li>
+        <li><a href="category.html">CATEGORY 01</a></li>
+        <li><a href="category.html">CATEGORY 02</a></li>
+        <li><a href="category.html">CATEGORY 03</a></li>
+        <li><a href="category.html">CATEGORY 04</a></li>
+        <li><a href="category.html">CATEGORY 05</a></li>
+        <li class="has-sub-menu"><a href="#">View All <i class="is is-drop-down"></i></a>
+          <div class="sub-menu">
+            <ul>
+              <li><a href="category.html">Category 06 </a></li>
+              <li><a href="category.html">Category 07 </a></li>
+              <li><a href="category.html">Category 08 </a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="sign-in"><a href="javascript:void(0)">SIGN IN / SIGN UP</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="content-area">
+    <div class="container">
+      <div class="breadcrumbs">
+        <ul class="clearfix">
+          <li><a href="#">Level 1</a></li>
+          <li><a href="#">Level 2</a></li>
+          <li>Current Level</li>
+        </ul>
+      </div>
+      <h2 class="type3">MY ACCOUNT <span>your order</span></h2>
+      <div class="block my-account">
+        <div class="grid-layout">
+          <div class="grid-3">
+            <div class="left-nav">
+              <ul>
+                <li><a href="my-account.html" class="active"><i class="is is-your-order"></i><span>your order</span></a></li>
+                <li><a href="my-notification.html"><i class="is is-alerts"></i><span>alerts &amp; notifications</span></a></li>
+                <li><a href="my-wishlist.html"><i class="is is-my-wishlist"></i><span>MY WISHLIST</span></a></li>
+                <li><a href="my-profile.html"><i class="is is-my-profile"></i><span>MY PROFILE</span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="grid-9">
+            <div class="orderlist">
+              <dl>
+                <dt><strong>Order No:</strong> ORD 1101 (Items: 5 | QTY: 10)</dt>
+                <dd>
+                  <ul class="clearfix">
+                    <li><strong>Date:</strong> 12th March’16 </li>
+                    <li><strong>Date:</strong> AUD$XXXX</li>
+                    <li><strong>Date:</strong> AUD$XXXX</li>
+                    <li><strong>Date:</strong> AUD$XXXX</li>
+                  </ul>
+                  <div class="clear"></div>
+                  <div class="cta">
+                    <button class="box-btn">PAYMENTS</button>
+                    <button class="box-btn">VIEW INVOICE</button>
+                    <button class="box-btn sucess" onclick="overlayBox('paymentDtls')"> <i class="is"></i>DELIVERED</button>
+                    <button class="box-btn error"> <i class="is"></i>UNDELIVERED</button>
+                  </div>
+                </dd>
+              </dl>
+              <dl>
+                <dt>Order No: ORD 1101 (Items: 5 | QTY: 10)</dt>
+                <dd>
+                  <ul class="clearfix">
+                    <li><strong>Date:</strong>12th March’16 </li>
+                    <li><strong>Date:</strong>AUD$XXXX</li>
+                    <li><strong>Date:</strong>AUD$XXXX</li>
+                    <li><strong>Date:</strong></li>
+                  </ul>
+                  <div class="clear"></div>
+                  <div class="cta">
+                    <button class="box-btn">PAYMENTS</button>
+                    <button class="box-btn">VIEW INVOICE</button>
+                    <button class="box-btn pending"> WAITING PAYMENT</button>
+                  </div>
+                </dd>
+              </dl>
+              <div class="total-amt">
+                TOTAL OUTSTANDING: AUD$ XXXXX
+              </div>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container">
+      <div class="grid-layout">
+        <div class="grid-5 grid-md-5 grid-xs-6">
+          <h5>About us</h5>
+          <p>Founded in Australia in 1945, CHEP is a leading provider of pallet and container pooling services for the Aerospace, Automotive, Chemical, Consumer Goods, Fresh Food and Manufacturing industries. </p>
+          <a href="#">+ Know More</a> </div>
+        <div class="grid-3 grid-md-3  grid-xs-6">
+          <h5>Top Categories</h5>
+          <div class="footer-links">
+            <ul>
+              <li><a href="#">Category 02</a></li>
+              <li><a href="#">Category 01</a></li>
+              <li><a href="#">Category 01</a></li>
+              <li><a href="#">Category 01</a></li>
+              <li><a href="#">Category 01</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="grid-4  grid-md-4  grid-xs-12">
+          <h5>Stay Updated with our Monthly Newsletter</h5>
+          <div class="subscribe">
+            <form class="checkform">
+              <input type="text" placeholder="Enter  your email here...">
+              <input type="button" value="SUBMIT">
+            </form>
+          </div>
+          <div class="social-media">
+            <h6>Follow us:</h6>
+            <ul>
+              <li><a href="#" class="icon facebook"><i class="is is-facebook"></i></a></li>
+              <li><a href="#" class="icon twitter"><i class="is is-twitter"></i></a></li>
+              <li><a href="#" class="icon google-plus"><i class="is is-google-plus"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div class="copy-write">
+      <div class="container">
+        <p>Copyright CHEP 2016. <a href="#">Terms &amp; Privacy</a> | <a href="#">Disclaimer</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="scroll-top"><i class="is is-scroll-top"></i></div>
+<div class="overlay-box" id="paymentDtls">
+  <div class="overlay-header">
+    <p>ORDER STATUS</p>
+  </div>
+  <div class="overlay-content">
+    <div class="grid-layout">
+      <div class="grid-6">ORDER NUMBER: 1f2022 </div>
+      <div class="grid-6 text-right">DATE: 12th March’16 </div>
+      <div class="clear"></div>
+    </div>
+    <div class="table-format custom-width type2"> <!--  Change class here  -->
+    <dl>
+      <dt>
+        <ul>
+          <li>
+            <div class="col">SR. NO</div>
+          </li>
+          <li>
+            <div class="col">DATE</div>
+            <div class="col">TIME</div>
+          </li>
+          <li>
+            <div class="col">LOCATION</div>
+            <div class="col">STATUS</div>
+          </li>
+          <li>
+            <div class="col">DETAILS</div>
+          </li>
+        </ul>
+      </dt>
+      <dd>
+        <ul>
+          <li>
+            <div class="col">1</div>
+          </li>
+          <li>
+            <div class="col">11/04/2016</div>
+            <div class="col">10:10:20</div>
+          </li>
+          <li>
+            <div class="col">Location 1</div>
+            <div class="col">Packing</div>
+          </li>
+          <li>
+            
+            <div class="col">Here goes status details</div>
+          </li>
+        </ul>
+      </dd>
+    </dl>
+  </div>
+  </div>
+  
+</div>
+<script>
+	$(function(){
+		$('.banner-slider').slick({arrows: false,dots:true});
+	})
+</script> 
+<script src="scripts/common.js" type="text/javascript"></script>
+</body>
+</html>
