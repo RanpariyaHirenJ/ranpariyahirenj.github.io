@@ -1,7 +1,7 @@
 ﻿<?php
 
 // Replace this with your own email address
-$to = 'louiejiemahusay@gmail.com';
+$to = 'hiren.websitedeveloper@gmail.com';
 
 function url(){
   return sprintf(
@@ -19,12 +19,12 @@ if($_POST) {
    $contact_message = trim(stripslashes($_POST['message']));
 
    
-	if ($subject == '') { $subject = "Contact Form Submission"; }
+	if ($subject == '') { $subject = "Contact Form Submission from migrantgroup"; }
 
    // Set Message
    $message .= "Email from: " . $name . "<br />";
-	 $message .= "Email address: " . $email . "<br />";
-   $message .= "Message: <br />";
+	$message .= "Email address: " . $email . "<br />";
+   $message .= "Message: ";
    $message .= nl2br($contact_message);
    $message .= "<br /> ----- <br /> This email was sent from your site " . url() . " contact form. <br />";
 
