@@ -59,3 +59,12 @@ $(document).on("click", "#send-it", function() {
         .addClass("show")
         .removeClass("hide");
     });
+
+    
+    AOS.init({
+      once: true,
+      duration: 1000,
+      disable: 'mobile',
+      once: true,
+      mirror: false,
+  });
