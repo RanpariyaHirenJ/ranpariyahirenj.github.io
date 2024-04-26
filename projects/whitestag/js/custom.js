@@ -60,7 +60,6 @@ $(document).on("click", "#send-it", function() {
         .removeClass("hide");
     });
 
-    
     AOS.init({
       once: true,
       duration: 1000,
