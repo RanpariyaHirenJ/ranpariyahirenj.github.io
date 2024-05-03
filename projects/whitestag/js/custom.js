@@ -5,7 +5,7 @@ $(window).scroll(function() {
         $('.fix-items').fadeOut('slow');
     }
 
-    
+
     if ($(this).scrollTop() > 0) {
         $('.navbar').addClass('moved');
     } else {
@@ -75,25 +75,3 @@ $(document).on("click", "#send-it", function() {
       mirror: false,
   });
 
-  $('.owl-carousel').owlCarousel({
-    loop: true,
-    margin: 10,
-    autoplay: true,
-    autoplayTimeout:1000,
-		smartSpeed: 250,
-    autoplayHoverPause: true,
-		center: true,
-		autoWidth: false,
-    responsive: {
-      0: {
-        items: 2,
-        center: false,
-      },
-      600: {
-        items: 3
-      },
-      1000: {
-        items: 5
-      }
-    }
-  })

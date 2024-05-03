@@ -171,25 +171,44 @@
                     <div class="tab-content col-lg-9 m-auto" id="myTabContent">
                         <div class="tab-pane show active" id="sale-tab-pane" role="tabpanel" aria-labelledby="sale-tab" tabindex="0">
                             <form action="">
-                                <div class="input-group rounded-2">
-                                    <input type="text" class="form-control me-2 rounded-2 w-md-100 Propertysearch" placeholder="Enter an address, state, city, area or zip code" aria-label="Recipient's username" aria-describedby="button-addon2" style="width: 40%;">
-                                    <select class="form-select me-2 rounded-2" aria-label="Default select example">
-                                        <option selected>Property Type</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
+                                <div class="input-group rounded-2 filtering trainee-filter">
+                                    <!-- <input type="text" class="form-control me-2 rounded-2 w-md-100 Propertysearch" placeholder="Enter an address, state, city, area or zip code" aria-label="Recipient's username" aria-describedby="button-addon2" style="width: 40%;"> -->
+                                    <select name="categories" class="form-select me-2 rounded-2" aria-label="Default select example">
+                                        <option value="">Categories</option>
+                                        <option value="*">All</option>
+                                        <option value=".corporate">Corporate</option>
+                                        <option value=".personal">Personal</option>
+                                        <option value=".agency">Agency</option>
+                                        <option value=".portal">Portal</option>
                                     </select>
-                                    <select class="form-select me-2 rounded-2" aria-label="Default select example">
-                                        <option selected>Sell or Rent</option>
-                                        <option value="1">Sell</option>
-                                        <option value="2">Rent</option>
-                                        <option value="3">Three</option>
+                                    <select name="types" class="form-select me-2 rounded-2" aria-label="Default select example">
+                                        <option value="">Types</option>
+                                        <option value="*">All</option>
+                                        <option value=".sell">Sell</option>
+                                        <option value=".rent">Rent</option>
                                     </select>
-                                    <button class="btn d-flex justify-content-center align-items-center" type="button" id="button-addon2">
+                                    <select name="areas" class="form-select me-2 rounded-2" aria-label="Default select example">
+                                        <option value="">Areas</option>
+                                        <option value="*">All</option>
+                                        <option value=".190">190</option>
+                                        <option value=".300">300</option>
+                                        <option value=".350">350</option>
+                                        <option value=".400">400</option>
+                                        <option value=".450">450</option>
+                                        <option value=".500">500</option>
+                                    </select>
+                                    <select name="states" class="form-select me-2 rounded-2" aria-label="Default select example">
+                                        <option value="">States</option>
+                                    </select>
+                                    <select name="cities" class="form-select me-2 rounded-2" aria-label="Default select example">
+                                        <option value="">Cities</option>
+                                    </select>
+                                    <button id="rf-view-all" class="btn d-flex justify-content-center align-items-center" value="*">Clear All</button>
+                                    <!-- <button class="btn d-flex justify-content-center align-items-center" type="button" id="button-addon2">
                                         <div class="img-box">
                                             <i class="fas fa-search"></i>
                                         </div>
-                                    </button>
+                                    </button> -->
                                 </div>
                             </form>
                         </div>
@@ -198,9 +217,9 @@
             </div>
         </section>
         <section class="listing-sec">
-            <div class="container">
-                <div class="row g-4">
-                    <div class="col-12 col-md-4" data-aos="fade-in" data-aos-duration="500">
+            <div class="container ">
+                <div class="row g-4 grid trainee-grid">
+                    <div class="grid-item col-12 col-md-4 all corporate rent 190">
                         <a href="property-details.html" class="text-dark">
                             <div class="f-p-block shadow rounded-3">
                                 <div class="img-block position-relative">
@@ -245,7 +264,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-12 col-md-4" data-aos="fade-in">
+                    <div class="grid-item col-12 col-md-4 all personal sell 300">
                         <a href="property-details.html" class="text-dark">
                             <div class="f-p-block shadow rounded-3">
                                 <div class="img-block position-relative">
@@ -283,14 +302,14 @@
                                     <ul class="mb-1 d-flex align-items-center">
                                         <li>2 Bedrooms ·</li>
                                         <li>3 Bathrooms ·</li>
-                                        <li>Size 190 ft ·</li>
+                                        <li>Size 300 ft ·</li>
                                     </ul>
                                     <div class="price">AED11,000,000</div>
                                 </div>
                             </div>
                         </a>
                     </div>
-                    <div class="col-12 col-md-4" data-aos="fade-in" data-aos-duration="1500">
+                    <div class="grid-item col-12 col-md-4 all agency rent 350">
                         <a href="property-details.html" class="text-dark">
                             <div class="f-p-block shadow rounded-3">
                                 <div class="img-block position-relative">
@@ -328,14 +347,14 @@
                                     <ul class="mb-1 d-flex align-items-center">
                                         <li>2 Bedrooms ·</li>
                                         <li>3 Bathrooms ·</li>
-                                        <li>Size 190 ft ·</li>
+                                        <li>Size 350 ft ·</li>
                                     </ul>
                                     <div class="price">AED11,000,000</div>
                                 </div>
                             </div>
                         </a>
                     </div>
-                    <div class="col-12 col-md-4" data-aos="fade-in" data-aos-duration="2000">
+                    <div class="grid-item col-12 col-md-4 all portal sell 400">
                         <a href="property-details.html" class="text-dark">
                             <div class="f-p-block shadow rounded-3">
                                 <div class="img-block position-relative">
@@ -373,14 +392,14 @@
                                     <ul class="mb-1 d-flex align-items-center">
                                         <li>2 Bedrooms ·</li>
                                         <li>3 Bathrooms ·</li>
-                                        <li>Size 190 ft ·</li>
+                                        <li>Size 400 ft ·</li>
                                     </ul>
                                     <div class="price">AED11,000,000</div>
                                 </div>
                             </div>
                         </a>
                     </div>
-                    <div class="col-12 col-md-4" data-aos="fade-in" data-aos-duration="2500">
+                    <div class="grid-item col-12 col-md-4 all agency rent 450">
                         <a href="property-details.html" class="text-dark">
                             <div class="f-p-block shadow rounded-3">
                                 <div class="img-block position-relative">
@@ -418,14 +437,14 @@
                                     <ul class="mb-1 d-flex align-items-center">
                                         <li>2 Bedrooms ·</li>
                                         <li>3 Bathrooms ·</li>
-                                        <li>Size 190 ft ·</li>
+                                        <li>Size 450 ft ·</li>
                                     </ul>
                                     <div class="price">AED11,000,000</div>
                                 </div>
                             </div>
                         </a>
                     </div>
-                    <div class="col-12 col-md-4" data-aos="fade-in" data-aos-duration="3000">
+                    <div class="grid-item col-12 col-md-4 all portal rent 500">
                         <a href="property-details.html" class="text-dark">
                             <div class="f-p-block shadow rounded-3">
                                 <div class="img-block position-relative">
@@ -463,7 +482,7 @@
                                     <ul class="mb-1 d-flex align-items-center">
                                         <li>2 Bedrooms ·</li>
                                         <li>3 Bathrooms ·</li>
-                                        <li>Size 190 ft ·</li>
+                                        <li>Size 500 ft ·</li>
                                     </ul>
                                     <div class="price">AED11,000,000</div>
                                 </div>
@@ -472,7 +491,7 @@
                     </div>
                 </div>
             </div>
-            <div class="pg mt-5 pt-3">
+            <!-- <div class="pg mt-5 pt-3">
                 <nav aria-label="Page navigation example">
                     <ul class="pagination d-flex justify-content-center">
                       <li class="page-item">
@@ -490,7 +509,7 @@
                       </li>
                     </ul>
                   </nav>
-            </div>
+            </div> -->
         </section>
     </main>
 
@@ -636,8 +655,60 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <!-- <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script> -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src="js/custom.js"></script>
+
+    <script>
+        (function($) {
+        var $traineeGrid = $(".trainee-grid"),
+            $trainees = $traineeGrid.find(".grid-item"),
+            $categories = $('select[name="categories"]'),
+            $types = $('select[name="types"]'),
+            $areas = $('select[name="areas"]'),
+            $select = $(".trainee-filter select"),
+            $viewAll = $("#rf-view-all");
+
+        function showAll() {
+            $categories.prop("selectedIndex", 0);
+            $types.prop("selectedIndex", 0);
+            $areas.prop("selectedIndex", 0);
+            $trainees.show().removeClass('selected third');
+            $traineeGrid.removeClass('filtered');
+        }
+        function filterItems() {
+            var $activeClass = "";
+            if ($categories.val() !== "*") {
+                $activeClass += $categories.val();
+            }
+            if ($types.val() !== "*") {
+                $activeClass += $types.val();
+            }
+            if ($areas.val() !== "*") {
+                $activeClass += $areas.val();
+            }
+
+            if ($activeClass !== "") {
+                    $trainees.hide().removeClass('selected').removeClass('third');
+                    $traineeGrid.addClass('filtered').find($activeClass).show().addClass('selected').filter(function(index, element){
+                    return index % 3 == 2;
+                    }).addClass("third");
+            } 
+            else {
+                showAll();
+            }
+        }
+
+        $select.on("change", function() {
+            filterItems();
+        });
+
+        $viewAll.on("click", function(e) {
+            e.preventDefault();
+            showAll();
+        });
+        })(jQuery);
+    </script>
 </body>
 
 </html>
