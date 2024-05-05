@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@font-face {
+  font-family: castelar;
+  src: url(castelar.ttf);
+  font-weight: 400;
+}
+
 :root {
   --primary-color: linear-gradient(0deg, #BDA76E, #BDA76E), linear-gradient(90deg, rgba(0, 0, 0, 0) 50%, #BDA76E 50%);
   --surface-color: hsla(0, 100%, 99%, 1);
@@ -7,7 +13,7 @@
   --dark-color: hsla(0, 0%, 0%, 1);
   /* --dark-80-color: hsla(0, 0%, 27%, 1); */
   --dark-80-color: #464646;
-  --heading-font: "Bodoni Moda", serif;
+  --heading-font: castelar;
   --text-font: "Roboto", sans-serif;
 }
 
@@ -63,19 +69,16 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading-font);
-  font-weight: 700;
 }
 
 h1 {
   font-size: 67px;
-  font-weight: 700;
   line-height: 1.2;
   text-align: center;
 }
 
 h2 {
   font-size: 42px;
-  font-weight: 700;
   line-height: 1.6;
 }
 .btn{font-family: var(--text-font);}
@@ -560,8 +563,8 @@ section.contact-cntr .input-group ::-ms-input-placeholder { /* Edge 12 -18 */
 
 label {
   font-size: 12px;
-  color: #000;
-  font-weight: 600;
+  color: #464646;
+  font-weight: 400;
 }
 
 .about-us-hero {
@@ -1069,6 +1072,54 @@ a.close-chat {
     align-items: center;
 }
 
+.form-group {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.form-group input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+.form-group label {
+  position: relative;
+  cursor: pointer;
+}
+
+.form-group label:before {
+  content:'';
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid #BDA76E;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.form-group input:checked + label:before{  
+  background-color: #BDA76E;
+}
+.form-group input:checked + label:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 9px;
+  width: 6px;
+  height: 14px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
 
 @media screen and (max-width: 768px) {
   body {font-size: 14px;}
