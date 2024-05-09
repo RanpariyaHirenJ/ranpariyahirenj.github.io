@@ -10,15 +10,6 @@ $('.scroll-top').click(function(event) {
     event.preventDefault();
     $('html, body').animate({scrollTop: 0}, 600);
 });
-
-AOS.init({
-    once: true,
-    duration: 1000,
-    disable: 'mobile',
-    once: true,
-    mirror: false,
-});
-
 $('.owl-carousel').owlCarousel({
     loop: true,
     margin: 20,
@@ -56,8 +47,16 @@ let duration = Math.floor(interval / endValue);
 let counter = setInterval(function () {
     startValue += 1;
     valueDisplay.textContent = startValue;
-    if (startValue == endValue) {
-    clearInterval(counter);
-    }
-}, duration);
+        if (startValue == endValue) {
+            clearInterval(counter);
+        }
+    }, duration);
+});
+
+AOS.init({
+    once: true,
+    duration: 1000,
+    disable: 'mobile',
+    once: true,
+    mirror: false,
 });
