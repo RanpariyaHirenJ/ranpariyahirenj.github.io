@@ -61,3 +61,47 @@ AOS.init({
     mirror: false,
 });
 
+if (!window.Cypress) AOS.init({
+    useClassNames: true,
+    initClassName: false,
+    animatedClassName: 'animated',
+    duration: 800, // values from 0 to 3000, with step 50ms
+  });
+
+window.MotiongerInitd9c9073 = function () {
+    let motiongerIndex = 1;
+    const wrapper = document.querySelector('.bitcoinism-wrapper');
+    animationHeader(motiongerIndex);
+    function nextMotionger() {
+        animationHeader(motiongerIndex += 1);
+    }
+    function animationHeader(n) {
+        let items = wrapper.querySelectorAll('.bitcoinism-drop-in-active-header');
+        let itemsLength = items.length;
+        if (n > itemsLength) {
+            motiongerIndex = 1
+        }
+        if (n < 1) {
+            motiongerIndex = itemsLength;
+        }
+        for (let i = 0; i < itemsLength; i++) {
+            if (items[i].classList.contains('bitcoinism-drop-in-inactive')) {
+                items[i].classList.add('bitcoinism-hide');
+            }
+            if (items[i].classList.contains('bitcoinism-drop-in-active')) {
+                items[i].classList.remove('bitcoinism-drop-in-active');
+                items[i].classList.add('bitcoinism-drop-in-inactive');
+                setTimeout(function () {
+                    items[i].classList.add('bitcoinism-hide');
+                }, 500);
+            }
+        }
+        setTimeout(function () {
+            items[motiongerIndex - 1].classList.remove('bitcoinism-hide');
+            items[motiongerIndex - 1].classList.remove('bitcoinism-drop-in-inactive');
+            items[motiongerIndex - 1].classList.add('bitcoinism-drop-in-active');
+        }, 500);
+    }
+    setInterval(nextMotionger, 8000);
+}
+document.addEventListener("DOMContentLoaded", window.MotiongerInitd9c9073);

@@ -66,6 +66,8 @@
 .capsulecntr {font-size: 15px;font-weight: 600;text-transform: None;line-height: 1em;letter-spacing: 0em;border-style: none;height: 44px;padding: 15px 20px;background-color: #f8922a !important;border: 1px solid #f8922a;color: #fff;display: inline-block;}
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -369,12 +371,19 @@ ul.fancylist li{margin: 15px 0;}
   height: 44px;
 }
 
-.Roadmap{
+.Roadmap{position: relative;overflow: hidden;padding-bottom: 80px !important;}
+.Roadmapimg{
   background: url(../images/BFC_Tesla2.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
 }
+.Roadmap .titlecntr{margin-bottom: 100px !important;}
 .owl-carousel ul {padding-left: 20px;min-height: 190px;}
 .owl-carousel ul li{
   font-size: 14px;
@@ -430,7 +439,75 @@ ul.fancylist li{margin: 15px 0;}
   .subscribecntr input{margin-bottom: 10px;}
   .subscribecntr button{}
 }
+.bitcoinism-wrapper{
+  display: inline-block;
+  perspective: 400px;
+  text-align: center;
 
+}
+.bitcoinism-drop-in-active-header{
+  display: inline-block;
+  opacity: 0;
+  transform-origin: 50% 100%;
+  width: 100%;
+}
+.bitcoinism-drop-in-inactive{
+  -webkit-animation: motionger-drop-in-out .6s;
+  animation: motionger-drop-in-out .6s;
+}
+.bitcoinism-drop-in-active{
+  opacity: 1;
+  -webkit-animation: motionger-drop-in-in .6s;
+  animation: motionger-drop-in-in .6s;
+}
+
+@-webkit-keyframes motionger-drop-in-in {
+  0% {
+      opacity: 0;
+      transform: translateZ(300px)
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateZ(0)
+  }
+}
+
+@keyframes motionger-drop-in-in {
+  0% {
+      opacity: 0;
+      transform: translateZ(300px)
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateZ(0)
+  }
+}
+
+@-webkit-keyframes motionger-drop-in-out {
+  0% {
+      opacity: 1;
+      transform: translateZ(0)
+  }
+
+  100% {
+      opacity: 0;
+      transform: translateZ(-300px)
+  }
+}
+
+@keyframes motionger-drop-in-out {
+  0% {
+      opacity: 1;
+      transform: translateZ(0)
+  }
+
+  100% {
+      opacity: 0;
+      transform: translateZ(-300px)
+  }
+}
 
 @media screen and (max-width: 640px) {  
   h1 {font-size: 26px;line-height: 32px;}
