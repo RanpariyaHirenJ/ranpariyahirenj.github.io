@@ -72,7 +72,7 @@
                         </li>
                         <li class="border-start border-end">
                             <a href="tel:+971528853388" class="nav-link">
-                                +971 5288 53388
+                                +971504288455
                             </a>
                         </li>
                     </ul>
@@ -92,14 +92,14 @@
                         <li class="nav-item">
                             <a class="nav-link" href="about-us.html">About Us</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="property-listing.html">Properties</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="property-for-sale.html">For Sale</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="property-for-rent.html">For Rent</a>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Properties
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item  active" href="property-for-sell.html">For Sell</a></li>
+                            <li><a class="dropdown-item" href="property-for-rent.html">For Rent</a></li>
+                          </ul>
                         </li>
                         <li class="nav-item d-block d-lg-none">
                             <a class="nav-link" href="contact-us.html">Careers</a>
@@ -109,7 +109,7 @@
                         </li>
                         <li class="nav-item d-block d-lg-none">
                             <a class="nav-link active d-flex" href="javascript:void(0);">
-                                +971 5288 53388
+                                +971504288455
                             </a>
                         </li>
                     </ul>
@@ -155,13 +155,21 @@
         </section>
         <section class="hero listing-hero banner2 bannerh3">
             <div class="container d-flex justify-content-center flex-column" data-aos="fade-up">
-                <h1 class="text-white col-lg-8 m-auto mb-lg-2 mb-0 mt-0">Properties for Sale</h1>
-                <p class="text-white text-center col-lg-7 m-auto mb-3 mt-0">professional real estate agents at your service</p>
+                <h1 class="text-white col-lg-8 m-auto mb-lg-2 mb-0 mt-0">Properties For Sell</h1>
                 <div class="hero-tabs">
                     <div class="tab-content col-lg-9 m-auto" id="myTabContent">
-                        <div class="tab-pane show active" id="sale-tab-pane" role="tabpanel" aria-labelledby="sale-tab" tabindex="0">
+                        <div class="tab-pane show active" id="sell-tab-pane" role="tabpanel" aria-labelledby="sell-tab" tabindex="0">
                             <form action="">
                                 <div class="input-group rounded-2 filtering trainee-filter">
+                                    <select name="types" class="form-select me-2 rounded-2" aria-label="Default select example">
+                                        <option value="">Types</option>
+                                        <option value="*">All</option>
+                                        <option value=".sell">For Sell</option>
+                                        <option value=".rent">For Rent</option>
+                                    </select>
+                                    <select name="cities" class="form-select me-2 rounded-2" aria-label="Default select example">
+                                        <option value="">Cities</option>
+                                    </select>
                                     <select name="areas" class="form-select me-2 rounded-2" aria-label="Default select example">
                                         <option value="">Areas</option>
                                         <option value="*">All</option>
@@ -171,9 +179,6 @@
                                         <option value=".400">400</option>
                                         <option value=".450">450</option>
                                         <option value=".500">500</option>
-                                    </select>
-                                    <select name="cities" class="form-select me-2 rounded-2" aria-label="Default select example">
-                                        <option value="">Cities</option>
                                     </select>
                                     <select name="Price" class="form-select me-2 rounded-2" aria-label="Default select example">
                                         <option value="">Price</option>
@@ -190,7 +195,7 @@
             <div class="container">
                 <div class="row g-4">
                     <div class="col-12 col-md-4" data-aos="fade-in" data-aos-duration="500">
-                        <a href="property-details.html" class="text-dark">
+                        <a href="property-details.html" class="text-dark hover2">
                             <div class="f-p-block shadow rounded-3">
                                 <div class="img-block position-relative">
                                     <div id="carouselExample1" class="carousel slide">
@@ -225,7 +230,7 @@
                         </a>
                     </div>
                     <div class="col-12 col-md-4" data-aos="fade-in">
-                        <a href="property-details.html" class="text-dark">
+                        <a href="property-details.html" class="text-dark hover2">
                             <div class="f-p-block shadow rounded-3">
                                 <div class="img-block position-relative">
                                     <div id="carouselExample2" class="carousel slide">
@@ -260,7 +265,7 @@
                         </a>
                     </div>
                     <div class="col-12 col-md-4" data-aos="fade-in">
-                        <a href="property-details.html" class="text-dark">
+                        <a href="property-details.html" class="text-dark hover2">
                             <div class="f-p-block shadow rounded-3">
                                 <div class="img-block position-relative">
                                     <div id="carouselExample2" class="carousel slide">
@@ -302,7 +307,7 @@
                 <div class="row d-flex justify-content-between align-items-center">
                     <div class="col-lg-6 col-12 pe-lg-0" data-aos="fade-right">
                         <div class="img-box">
-                            <img src="assets/images/letsconnect.png" alt="Vineeth" class="w-100">
+                            <img src="assets/images/letsconnect1.png" alt="Vineeth" class="w-100">
                         </div>
                     </div>
                     <div class="col-lg-6 col-12 ps-lg-0 bg-white" data-aos="fade-left">
@@ -318,21 +323,25 @@
                                         <div class="col-lg-6"><input type="text" id="mobile_code" class="form-control rounded-2 border border-1" placeholder="Mobile"></div>
                                     </div>
                                     <div class="row input-group mb-3">
-                                        <div class="col-12">
-                                            <textarea cols="30" rows="10" class="form-control rounded-2 border border-1">Type your message</textarea>
-                                        </div>
-                                    </div>
-                                    <div class="row input-group mb-3">
-                                        <div class="col-12">
-                                            <div class="form-group">
-                                                <input type="checkbox" id="Sale">
-                                                <label for="Sale">By submitting, you consent to contact via email, phone and whatsapp</label>
+                                        <p class="m-0">Tick Box for Prefered Mode of Communication</p>
+                                        <div class="col-12 d-flex">
+                                            <div class="form-group me-3">
+                                                <input type="checkbox" id="sell">
+                                                <label for="sell">Email</label>
+                                            </div>
+                                            <div class="form-group me-3">
+                                                <input type="checkbox" id="sell">
+                                                <label for="sell">Phone</label>
+                                            </div>
+                                            <div class="form-group me-3">
+                                                <input type="checkbox" id="sell">
+                                                <label for="sell">Whatsapp</label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row input-group mb-3">
                                         <div class="col-12">
-                                            <button class="btn btn-primary w-100">Send Email</button>
+                                            <button class="btn btn-primary w-100">Submit</button>
                                         </div>
                                     </div>
                                 </div>
@@ -345,105 +354,91 @@
     </main>
 
     <footer class="navbar-dark">
-        <div class="row container-fluid d-lg-flex justify-content-between">
-            <div class="l col-lg-7 col-12 mb-lg-0 mb-5">
-                <a href="" class="navbar-logo">
-                    <img src="assets/images/header-logo.png" alt="">
-                </a>
-                <p class="my-3">
-                    We are committed to providing the most personalized real estate services from listing to close. We
-                    have exceptional results which are confirmed by the number of clients we serve. Discover our
-                    selection of income-generating rental properties and commercial ventures.
-                </p>
-                <div class="bottom-bar-social-box">
-                    <ul class="d-flex align-items-center">
-                        <li class="">
-                            <a href="https://www.facebook.com/whitestagproperties" target="_blank" class="nav-link">
-                                <div class="img-box">
-                                    <i class="fab fa-facebook-f"></i>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="">
-                            <a href="https://web.whatsapp.com/send?phone=9029043966&amp;text=Hi White Stag, I want to get an inquiry about White Stag Properties" target="_blank" class="nav-link">
-                                <div class="img-box">
-                                    <i class="fab fa-whatsapp"></i>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="">
-                            <a href="https://www.instagram.com/whitestagproperties/" target="_blank" class="nav-link">
-                                <div class="img-box">
-                                    <i class="fab fa-instagram"></i>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="">
-                            <a href="https://www.linkedin.com/company/whitestagproperties/" target="_blank" class="nav-link">
-                                <div class="img-box">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="">
-                            <a href="https://www.youtube.com/@WhiteStagProperties" target="_blank" class="nav-link">
-                                <div class="img-box">
-                                    <i class="fab fa-youtube"></i>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
+        <div class="container">
+            <div class="row d-lg-flex justify-content-between">
+                <div class="l col-lg-6 col-12 mb-lg-0 mb-lg-5">
+                    <a href="" class="navbar-logo">
+                        <img src="assets/images/header-logo.png" alt="">
+                    </a>
+                    <p class="my-3">
+                        We are committed to providing the most personalized real estate services from listing to close. We
+                        have exceptional results which are confirmed by the number of clients we serve. Discover our
+                        selection of income-generating rental properties and commercial ventures.
+                    </p>
+                </div>
+                <div class="r col-lg-6 col-12 float-end p-0">
+                    <div class="d-flex justify-content-lg-end">
+                        <ul class="d-flex">
+                            <li class="px-lg-3 px-2">
+                                <a href="index.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="px-lg-3 px-2">
+                                <a href="about-us.html" class="nav-link">About Us</a>
+                            </li>
+                            <li class="px-lg-3 px-2">
+                                <a href="property-for-sell.html" class="nav-link">For Sell</a>
+                            </li>
+                            <li class="px-lg-3 px-2">
+                                <a href="property-for-rent.html" class="nav-link">For Rent</a>
+                            </li>
+                            <li class="px-lg-3 px-2">
+                                <a href="contact-us.html" class="nav-link">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bottom-bar-social-box mt-3">
+                        <ul class="d-flex align-items-center justify-content-lg-end  justify-content-center">
+                            <li class="">
+                                <a href="https://www.facebook.com/whitestagproperties" target="_blank" class="">
+                                    <div class="img-box">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="https://web.whatsapp.com/send?phone=9029043966&amp;text=Hi White Stag, I want to get an inquiry about White Stag Properties" target="_blank" class="">
+                                    <div class="img-box">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="https://www.instagram.com/whitestagproperties/" target="_blank" class="">
+                                    <div class="img-box">
+                                        <i class="fab fa-instagram"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="https://www.linkedin.com/company/whitestagproperties/" target="_blank" class="">
+                                    <div class="img-box">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="https://www.youtube.com/@WhiteStagProperties" target="_blank" class="">
+                                    <div class="img-box">
+                                        <i class="fab fa-youtube"></i>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="r col-lg-3 col-12 float-end">
-                <div class="d-flex">
-                    <ul class="pe-5 me-4">
-                        <li>
-                            <a href="index.html" class="nav-link">Home</a>
-                        </li>
-                        <li>
-                            <a href="about-us.html" class="nav-link">About Us</a>
-                        </li>
-                        <li>
-                            <a href="property-listing.html" class="nav-link">Propeties</a>
-                        </li>
-                        <li>
-                            <a href="property-for-sale.html" class="nav-link">For Sale</a>
-                        </li>
-                        <li>
-                            <a href="property-for-rent.html" class="nav-link">For Rent</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <a href="contact-us.html" class="nav-link">Careers</a>
-                        </li>
-                        <li>
-                            <a href="contact-us.html" class="nav-link">Contact Us</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="nav-link">Site Map</a>
-                        </li>
-                        <li>
-                            <a href="terms-of-use.html" class="nav-link">Terms & Conditions</a>
-                        </li>
-                        <li>
-                            <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
-                        </li>
-                    </ul>
+            <div class="py-2 mt-3 position-relative row">
+                <div class="copy col-lg-4 d-flex justify-content-between align-items-center">© 2024, Whitestag.ae, All rights reserved</div>
+                <div class="col-lg-5 nav d-flex justify-content-lg-center">
+                    <a href="javascript:void(0);" class="nav-link text-grey">Site Map</a>
+                    <a href="terms-of-use.html" class="nav-link text-grey">Terms of Use</a>
+                    <a href="privacy-policy.html" class="nav-link text-grey">Privacy Policy</a>
                 </div>
-            </div>
-        </div>
-        <div class="container-fluid py-2 position-relative row">
-            <div class="copy col-lg-4 d-flex justify-content-between align-items-center">© 2024, Whitestag.ae, All rights reserved</div>
-            <div class="col-lg-4 nav d-flex justify-content-lg-center">
-                <a href="terms-of-use.html" class="nav-link text-grey">Terms of Use</a>
-                <a href="privacy-policy.html" class="nav-link text-grey">Privacy Policy</a>
             </div>
         </div>
     </footer>
 
-    <div id='whatsapp-chat' class='hide'>
+    <div id='whatsapp-chat' class='whatsapphide'>
         <div class='whatsapp-chat-header'>
             <div class='whatsapp-chat-avatar'>
               <img src='assets/images/whitestag-wp.svg' alt="Tedbree Logo" />

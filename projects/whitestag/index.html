@@ -71,7 +71,7 @@
                         </li>
                         <li class="border-start border-end">
                             <a href="tel:+971528853388" class="nav-link">
-                                +971 5288 53388
+                                +971504288455
                             </a>
                         </li>
                     </ul>
@@ -91,14 +91,14 @@
                         <li class="nav-item">
                             <a class="nav-link" href="about-us.html">About Us</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="property-listing.html">Properties</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="property-for-sale.html">For Sale</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="property-for-rent.html">For Rent</a>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Properties
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="property-for-sell.html">For Sell</a></li>
+                            <li><a class="dropdown-item" href="property-for-rent.html">For Rent</a></li>
+                          </ul>
                         </li>
                         <li class="nav-item d-block d-lg-none">
                             <a class="nav-link" href="contact-us.html">Careers</a>
@@ -108,7 +108,7 @@
                         </li>
                         <li class="nav-item d-block d-lg-none">
                             <a class="nav-link active d-flex" href="javascript:void(0);">
-                                +971 5288 53388
+                                +971504288455
                             </a>
                         </li>
                     </ul>
@@ -143,13 +143,6 @@
                         <div class="d-lg-block d-none">Chat With Us</div>
                     </a>
                 </li>
-                <!-- <li class="ms-3">
-                    <a href="javascript:void(0);">
-                        <div class="img-box">
-                            <i class="fa-solid fa-envelope text-black"></i>
-                        </div>
-                    </a>
-                </li> -->
                 <li class="ms-lg-3 ms-2">
                     <a href="javascript:void(0);" class="scroll-top">
                         <div class="img-box">
@@ -161,24 +154,20 @@
         </section>
         <section class="hero listing-hero">
             <div class="container d-flex justify-content-center flex-column" data-aos="fade-up">
-                <h1 class="text-white col-lg-8 m-auto mb-lg-5 mb-3 mt-0">Top Real Estate Listings in Dubai</h1>
+                <h1 class="text-white col-lg-8 m-auto mb-lg-5 mb-3 mt-0">Top Real Estate Listings in UAE</h1>
                 <div class="hero-tabs">
                     <div class="tab-content col-lg-9 m-auto" id="myTabContent">
-                        <div class="tab-pane show active" id="sale-tab-pane" role="tabpanel" aria-labelledby="sale-tab" tabindex="0">
+                        <div class="tab-pane show active" id="sell-tab-pane" role="tabpanel" aria-labelledby="sell-tab" tabindex="0">
                             <form action="">
                                 <div class="input-group rounded-2 filtering trainee-filter">
-                                    <select name="categories" class="form-select me-2 rounded-2" aria-label="Default select example">
-                                        <option value="">Categories</option>
-                                        <option value="*">All</option>
-                                        <option value=".about-us">Apartments</option>
-                                        <option value=".villas">Villas</option>
-                                        <option value=".commercial">Commercial</option>
-                                    </select>
                                     <select name="types" class="form-select me-2 rounded-2" aria-label="Default select example">
                                         <option value="">Types</option>
                                         <option value="*">All</option>
                                         <option value=".sell">For Sell</option>
                                         <option value=".rent">For Rent</option>
+                                    </select>
+                                    <select name="cities" class="form-select me-2 rounded-2" aria-label="Default select example">
+                                        <option value="">Cities</option>
                                     </select>
                                     <select name="areas" class="form-select me-2 rounded-2" aria-label="Default select example">
                                         <option value="">Areas</option>
@@ -190,18 +179,10 @@
                                         <option value=".450">450</option>
                                         <option value=".500">500</option>
                                     </select>
-                                    <select name="cities" class="form-select me-2 rounded-2" aria-label="Default select example">
-                                        <option value="">Cities</option>
-                                    </select>
                                     <select name="Price" class="form-select me-2 rounded-2" aria-label="Default select example">
                                         <option value="">Price</option>
                                     </select>
                                     <button id="rf-view-all" class="btn d-flex justify-content-center align-items-center" value="*">Clear All</button>
-                                    <!-- <button class="btn d-flex justify-content-center align-items-center" type="button" id="button-addon2">
-                                        <div class="img-box">
-                                            <i class="fas fa-search"></i>
-                                        </div>
-                                    </button> -->
                                 </div>
                             </form>
                         </div>
@@ -210,9 +191,9 @@
                 <!-- <div class="hero-tabs">
                     <ul class="nav nav-tabs d-flex justify-content-center border-0" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="sale-tab" data-bs-toggle="tab"
-                                data-bs-target="#sale-tab-pane" type="button" role="tab" aria-controls="sale-tab-pane" aria-selected="true">
-                                For Sale
+                            <button class="nav-link active" id="sell-tab" data-bs-toggle="tab"
+                                data-bs-target="#sell-tab-pane" type="button" role="tab" aria-controls="sell-tab-pane" aria-selected="true">
+                                For Sell
                             </button>
                         </li>
                         <li class="nav-item" role="presentation">
@@ -222,7 +203,7 @@
                         </li>
                     </ul>
                     <div class="tab-content col-lg-5 m-auto" id="myTabContent">
-                        <div class="tab-pane show active" id="sale-tab-pane" role="tabpanel" aria-labelledby="sale-tab" tabindex="0">
+                        <div class="tab-pane show active" id="sell-tab-pane" role="tabpanel" aria-labelledby="sell-tab" tabindex="0">
                             <form action="">
                                 <div class="input-group">
                                     <input type="text" class="form-control"
@@ -259,14 +240,13 @@
         <section class="services">
             <div class="container text-center">
                 <h2 data-aos="fade-down">Featured Property Listings</h2>
-                <p class="mb-5 text-center col-lg-7 col-12 m-auto" data-aos="fade-up">Leap Onwards And Upwards</p>
-                <div class="row g-4">
+                <div class="row g-4 mt-3">
                     <div class="col-12 col-md-4" data-aos="fade-right">
-                        <a href="javascript:void(0);" class="home-search d-flex justify-content-between align-items-center text-center text-white imhhover">
+                        <a href="javascript:void(0);" class="home-search d-flex justify-content-between align-items-center text-center text-white imhhover hover1">
                             <img src="assets/images/home-search.png">
                             <div class="cardcntr text-center">
                                 <h3>Apartments</h3>
-                                <button class="btn d-flex align-items-center bg-primary text-w m-auto" type="button" id="button-addon2">
+                                <button class="btn d-flex align-items-center bg-primary text-light m-auto" type="button" id="button-addon2">
                                     <div class="img-box">
                                         <i class="fas fa-search"></i>
                                     </div>
@@ -275,11 +255,11 @@
                         </a>
                     </div>
                     <div class="col-12 col-md-4" data-aos="fade-up">
-                        <a href="javascript:void(0);" class="home-valuation d-flex justify-content-between align-items-center text-center text-white imhhover">
+                        <a href="javascript:void(0);" class="home-valuation d-flex justify-content-between align-items-center text-center text-white imhhover hover1">
                             <img src="assets/images/home-valuation.png">
                             <div class="cardcntr text-center">
                                 <h3>Villas</h3>
-                                <button class="btn d-flex align-items-center bg-primary text-w m-auto" type="button" id="button-addon2">
+                                <button class="btn d-flex align-items-center bg-primary text-light m-auto" type="button" id="button-addon2">
                                     <div class="img-box">
                                         <i class="fas fa-search"></i>
                                     </div>
@@ -288,11 +268,11 @@
                         </a>
                     </div>
                     <div class="col-12 col-md-4" data-aos="fade-left">
-                        <a href="javascript:void(0);" class="lets-connect d-flex justify-content-between align-items-center text-center text-white imhhover">
+                        <a href="javascript:void(0);" class="lets-connect d-flex justify-content-between align-items-center text-center text-white imhhover hover1">
                             <img src="assets/images/lets-connect.png">
                             <div class="cardcntr text-center">
                                 <h3>Commercial</h3>
-                                <button class="btn d-flex align-items-center bg-primary text-w m-auto" type="button" id="button-addon2">
+                                <button class="btn d-flex align-items-center bg-primary text-light m-auto" type="button" id="button-addon2">
                                     <div class="img-box">
                                         <i class="fas fa-search"></i>
                                     </div>
@@ -308,7 +288,6 @@
                 <div class="col-12 col-md-6" data-aos="fade-in">
                     <div class="sellers">
                         <div class="container d-flex flex-column justify-content-center h-100 text-center align-items-center">
-                            <span class="text-white text-uppercase mb-2">For Sellers</span>
                             <h3 class="text-white my-3">list your properties with us</h3>
                             <a href="javascript:void(0);" class="btn-secondary border rounded-2 text-white border-white px-4 py-2">Get Estimation</a>
                         </div>
@@ -317,8 +296,7 @@
                 <div class="col-12 col-md-6" data-aos="fade-in" data-aos-duration="1500">
                     <div class="buyers">
                         <div class="container d-flex flex-column justify-content-center h-100 text-center align-items-center">
-                            <span class="text-white text-uppercase mb-2">For Buyes</span>
-                            <h3 class="text-white my-3">what are you looking for</h3>
+                            <h3 class="text-white my-3">what are you looking for?</h3>
                             <a href="javascript:void(0);" class="btn-secondary border rounded-2 text-white border-white px-4 py-2">Search Lisitings</a>
                         </div>
                     </div>
@@ -330,8 +308,8 @@
                 <h2 class="text-center" data-aos="fade-down">Our Premium Collection</h2>
                 <p class="mb-5 text-center col-lg-7 col-12 m-auto" data-aos="fade-up">Our curated selection showcases the finest in luxury living. Each property, meticulously chosen by our experts, embodies excellence and desirability. With superior amenities and attention to detail, these Featured Properties redefine upscale real estate</p>
                 <div class="row g-4">
-                    <div class="col-12 col-md-4 mb-lg-0 mb-5" data-aos="fade-right">
-                        <a href="property-details.html" class="text-dark">
+                    <div class="col-12 col-md-4 mb-lg-0 mb-3" data-aos="fade-right">
+                        <a href="property-details.html" class="text-dark hover2">
                             <div class="f-p-block shadow rounded-3">
                                 <div class="img-block position-relative">
                                     <div id="carouselExample1" class="carousel slide">
@@ -356,7 +334,7 @@
                                         <div class="t d-flex justify-content-between align-items-center">
                                             <div class="tag" style="background-color: rgba(0, 0, 0, 0.85);">Featured</div>
                                             <div class="tags d-flex">
-                                                <div class="tag me-1">For Sale</div>
+                                                <div class="tag me-1">For Sell</div>
                                                 <div class="tag">Active</div>
                                             </div>
                                         </div>
@@ -364,7 +342,7 @@
                                 </div>
                                 <div class="f-p-content p-3">
                                     <p class="fw-bold mb-1" style="font-size: 14px;">27th Floor Unit In Aykon Tower C</p>
-                                    <div class="mb-1">Duplexes · For Sale · Active</div>
+                                    <div class="mb-1">Duplexes · For Sell · Active</div>
                                     <ul class="mb-1 d-flex align-items-center">
                                         <li>2 Bedrooms ·</li>
                                         <li>3 Bathrooms ·</li>
@@ -375,8 +353,8 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col-12 col-md-4 mb-lg-0 mb-5" data-aos="fade-in">
-                        <a href="property-details.html" class="text-dark">
+                    <div class="col-12 col-md-4 mb-lg-0 mb-3" data-aos="fade-in">
+                        <a href="property-details.html" class="text-dark hover2">
                             <div class="f-p-block shadow rounded-3">
                                 <div class="img-block position-relative">
                                     <div id="carouselExample2" class="carousel slide">
@@ -400,7 +378,7 @@
                                     <div class="top-info p-4 d-flex flex-column justify-content-between">
                                         <div class="t d-flex justify-content-end align-items-center">
                                             <div class="tags d-flex">
-                                                <div class="tag me-1">For Sale</div>
+                                                <div class="tag me-1">For Sell</div>
                                                 <div class="tag">Active</div>
                                             </div>
                                         </div>
@@ -408,7 +386,7 @@
                                 </div>
                                 <div class="f-p-content p-3">
                                     <p class="fw-bold mb-1" style="font-size: 14px;">27th Floor Unit In Aykon Tower C</p>
-                                    <div class="mb-1">Duplexes · For Sale · Active</div>
+                                    <div class="mb-1">Duplexes · For Sell · Active</div>
                                     <ul class="mb-1 d-flex align-items-center">
                                         <li>2 Bedrooms ·</li>
                                         <li>3 Bathrooms ·</li>
@@ -420,7 +398,7 @@
                         </a>
                     </div>
                     <div class="col-12 col-md-4 mb-lg-0 mb-2" data-aos="fade-left">
-                        <a href="property-details.html" class="text-dark">
+                        <a href="property-details.html" class="text-dark hover2">
                             <div class="f-p-block shadow rounded-3">
                                 <div class="img-block position-relative">
                                     <div id="carouselExample3" class="carousel slide">
@@ -444,7 +422,7 @@
                                     <div class="top-info p-4 d-flex flex-column justify-content-between">
                                         <div class="t d-flex justify-content-end align-items-center">
                                             <div class="tags d-flex">
-                                                <div class="tag me-1">For Sale</div>
+                                                <div class="tag me-1">For Sell</div>
                                                 <div class="tag">Active</div>
                                             </div>
                                         </div>
@@ -452,7 +430,7 @@
                                 </div>
                                 <div class="f-p-content p-3">
                                     <p class="fw-bold mb-1" style="font-size: 14px;">27th Floor Unit In Aykon Tower C</p>
-                                    <div class="mb-1">Duplexes · For Sale · Active</div>
+                                    <div class="mb-1">Duplexes · For Sell · Active</div>
                                     <ul class="mb-1 d-flex align-items-center">
                                         <li>2 Bedrooms ·</li>
                                         <li>3 Bathrooms ·</li>
@@ -480,7 +458,7 @@
                             <ul class="row d-flex mb-lg-0 mb-5">
                                 <li class="me-lg-4 col-lg-6 col-6">
                                     <span class="fw-bold">10 Years</span> <br>
-                                    of Sales Experience
+                                    of sells Experience
                                 </li>
                             </ul>
                         </div>
@@ -493,252 +471,94 @@
                 </div>
             </div>
         </section>
-        
-        <section class="ab-test">
-            <div class="container">
-                <h2 class="text-center text-white mb-5">TESTIMONIALS</h2>
-                <div class="test-caro col-lg-8 m-auto">
-                    <div id="carouselTest" class="carousel slide">
-                        <div class="carousel-inner shadow rounded-3">
-                          <div class="carousel-item active">
-                            <div class="c-card p-0">
-                                <div class="row d-flex">
-                                    <div class="col-12 col-md-8">
-                                        <div class="p-lg-5 p-4">
-                                            <p>Great real estate service. Strong and trusted brand. Transparent. All consultants are very professional and trained to assist clients with courtesy and knowledge based solution.</p>
-                                            <div class="d-flex align-items-center">                                                
-                                                <div class="img-box col-3 me-3 d-lg-none">
-                                                    <img src="assets/images/testimonial/abhinav-singh.png" alt="" class="w-100 h-100 rounded-circle">
-                                                </div>
-                                                <div class="">
-                                                    <span class="fw-bold">-Abhinav Singh</span> <br>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-4 d-lg-block d-none">
-                                        <div class="img-box">
-                                            <img src="assets/images/testimonial/abhinav-singh.png" alt="" class="w-100 h-100">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <div class="c-card p-0">
-                                <div class="row d-flex">
-                                    <div class="col-12 col-md-8">
-                                        <div class="p-lg-5 p-4">
-                                            <p>White Stag Properties turned my dream of owning a home in Dubai into a reality! Their expertise in catering to NRI and international investors like me was evident from the start. They guided me through every step with patience and professionalism, ensuring I found the perfect property to call home.</p>
-                                            <div class="d-flex align-items-center">                                                
-                                                <div class="img-box col-3 me-3 d-lg-none">
-                                                    <img src="assets/images/testimonial/maria.png" alt="" class="w-100 h-100 rounded-circle">
-                                                </div>
-                                                <div class="">
-                                                    <span class="fw-bold">-Maria</span> <br>
-                                                    Dubai, UAE
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-4 d-lg-block d-none">
-                                        <div class="img-box">
-                                            <img src="assets/images/testimonial/maria.png" alt="" class="w-100 h-100">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <div class="c-card p-0">
-                                <div class="row d-flex">
-                                    <div class="col-12 col-md-8">
-                                        <div class="p-lg-5 p-4">
-                                            <p>As an NRI investor, I was impressed by White Stag Properties' understanding of the Dubai real estate market and their extensive network. They made the entire process seamless, from property selection to paperwork. Thanks to their expertise, I now have a valuable investment in Dubai.</p>
-                                            <div class="d-flex align-items-center">                                                
-                                                <div class="img-box col-3 me-3 d-lg-none">
-                                                    <img src="assets/images/testimonial/rajesh.png" alt="" class="w-100 h-100 rounded-circle">
-                                                </div>
-                                                <div class="">
-                                                    <span class="fw-bold">-Rajesh</span> <br>
-                                                    India
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-4 d-lg-block d-none">
-                                        <div class="img-box">
-                                            <img src="assets/images/testimonial/rajesh.png" alt="" class="w-100 h-100">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <div class="c-card p-0">
-                                <div class="row d-flex">
-                                    <div class="col-12 col-md-8">
-                                        <div class="p-lg-5 p-4">
-                                            <p>I couldn't be happier with my experience with White Stag Properties! Despite being based in the USA, they made it easy for me to invest in Dubai. Their knowledge of the market and dedication to their international investors set them apart. I highly recommend them to anyone looking to invest in Dubai.</p>
-                                            <div class="d-flex align-items-center">                                                
-                                                <div class="img-box col-3 me-3 d-lg-none">
-                                                    <img src="assets/images/testimonial/emily.png" alt="" class="w-100 h-100 rounded-circle">
-                                                </div>
-                                                <div class="">
-                                                    <span class="fw-bold">-Emily</span> <br>
-                                                    USA
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-4 d-lg-block d-none">
-                                        <div class="img-box">
-                                            <img src="assets/images/testimonial/emily.png" alt="" class="w-100 h-100">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          </div>
-                          <div class="carousel-item">
-                            <div class="c-card p-0">
-                                <div class="row d-flex">
-                                    <div class="col-12 col-md-8">
-                                        <div class="p-lg-5 p-4">
-                                            <p>White Stag Properties exceeded my expectations in every way! Their team's expertise in catering to international investors like myself was truly impressive. They provided valuable insights and guidance throughout the entire process, making my investment journey in Dubai smooth and successful.</p>
-                                            <div class="d-flex align-items-center">                                                
-                                                <div class="img-box col-3 me-3 d-lg-none">
-                                                    <img src="assets/images/testimonial/luca.png" alt="" class="w-100 h-100 rounded-circle">
-                                                </div>
-                                                <div class="">
-                                                    <span class="fw-bold">-Luca</span> <br>
-                                                    Italy
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 col-md-4 d-lg-block d-none">
-                                        <div class="img-box">
-                                            <img src="assets/images/testimonial/luca.png" alt="" class="w-100 h-100">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselTest" data-bs-slide="prev">
-                          <span class="carousel-control-prev-icon d-flex justify-content-center align-items-center" aria-hidden="true"><i class="fa-solid fa-arrow-left text-black"></i></span>                          
-                          <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselTest" data-bs-slide="next">
-                          <span class="carousel-control-next-icon d-flex justify-content-center align-items-center" aria-hidden="true"><i class="fa-solid fa-arrow-right text-black"></i></span>                          
-                          <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer class="navbar-dark">
-        <div class="row container-fluid d-lg-flex justify-content-between">
-            <div class="l col-lg-7 col-12 mb-lg-0 mb-5">
-                <a href="" class="navbar-logo">
-                    <img src="assets/images/header-logo.png" alt="">
-                </a>
-                <p class="my-3">
-                    We are committed to providing the most personalized real estate services from listing to close. We
-                    have exceptional results which are confirmed by the number of clients we serve. Discover our
-                    selection of income-generating rental properties and commercial ventures.
-                </p>
-                <div class="bottom-bar-social-box">
-                    <ul class="d-flex align-items-center">
-                        <li class="">
-                            <a href="https://www.facebook.com/whitestagproperties" target="_blank" class="nav-link">
-                                <div class="img-box">
-                                    <i class="fab fa-facebook-f"></i>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="">
-                            <a href="https://web.whatsapp.com/send?phone=9029043966&amp;text=Hi White Stag, I want to get an inquiry about White Stag Properties" target="_blank" class="nav-link">
-                                <div class="img-box">
-                                    <i class="fab fa-whatsapp"></i>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="">
-                            <a href="https://www.instagram.com/whitestagproperties/" target="_blank" class="nav-link">
-                                <div class="img-box">
-                                    <i class="fab fa-instagram"></i>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="">
-                            <a href="https://www.linkedin.com/company/whitestagproperties/" target="_blank" class="nav-link">
-                                <div class="img-box">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="">
-                            <a href="https://www.youtube.com/@WhiteStagProperties" target="_blank" class="nav-link">
-                                <div class="img-box">
-                                    <i class="fab fa-youtube"></i>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
+        <div class="container">
+            <div class="row d-lg-flex justify-content-between">
+                <div class="l col-lg-6 col-12 mb-lg-0 mb-lg-5">
+                    <a href="" class="navbar-logo">
+                        <img src="assets/images/header-logo.png" alt="">
+                    </a>
+                    <p class="my-3">
+                        We are committed to providing the most personalized real estate services from listing to close. We
+                        have exceptional results which are confirmed by the number of clients we serve. Discover our
+                        selection of income-generating rental properties and commercial ventures.
+                    </p>
+                </div>
+                <div class="r col-lg-6 col-12 float-end p-0">
+                    <div class="d-flex justify-content-lg-end">
+                        <ul class="d-flex">
+                            <li class="px-lg-3 px-2">
+                                <a href="index.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="px-lg-3 px-2">
+                                <a href="about-us.html" class="nav-link">About Us</a>
+                            </li>
+                            <li class="px-lg-3 px-2">
+                                <a href="property-for-sell.html" class="nav-link">For Sell</a>
+                            </li>
+                            <li class="px-lg-3 px-2">
+                                <a href="property-for-rent.html" class="nav-link">For Rent</a>
+                            </li>
+                            <li class="px-lg-3 px-2">
+                                <a href="contact-us.html" class="nav-link">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bottom-bar-social-box mt-3">
+                        <ul class="d-flex align-items-center justify-content-lg-end  justify-content-center">
+                            <li class="">
+                                <a href="https://www.facebook.com/whitestagproperties" target="_blank" class="">
+                                    <div class="img-box">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="https://web.whatsapp.com/send?phone=9029043966&amp;text=Hi White Stag, I want to get an inquiry about White Stag Properties" target="_blank" class="">
+                                    <div class="img-box">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="https://www.instagram.com/whitestagproperties/" target="_blank" class="">
+                                    <div class="img-box">
+                                        <i class="fab fa-instagram"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="https://www.linkedin.com/company/whitestagproperties/" target="_blank" class="">
+                                    <div class="img-box">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="https://www.youtube.com/@WhiteStagProperties" target="_blank" class="">
+                                    <div class="img-box">
+                                        <i class="fab fa-youtube"></i>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="r col-lg-3 col-12 float-end">
-                <div class="d-flex">
-                    <ul class="pe-5 me-4">
-                        <li>
-                            <a href="index.html" class="nav-link">Home</a>
-                        </li>
-                        <li>
-                            <a href="about-us.html" class="nav-link">About Us</a>
-                        </li>
-                        <li>
-                            <a href="property-listing.html" class="nav-link">Propeties</a>
-                        </li>
-                        <li>
-                            <a href="property-for-sale.html" class="nav-link">For Sale</a>
-                        </li>
-                        <li>
-                            <a href="property-for-rent.html" class="nav-link">For Rent</a>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <a href="contact-us.html" class="nav-link">Careers</a>
-                        </li>
-                        <li>
-                            <a href="contact-us.html" class="nav-link">Contact Us</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" class="nav-link">Site Map</a>
-                        </li>
-                        <li>
-                            <a href="terms-of-use.html" class="nav-link">Terms & Conditions</a>
-                        </li>
-                        <li>
-                            <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
-                        </li>
-                    </ul>
+            <div class="py-2 mt-3 position-relative row">
+                <div class="copy col-lg-4 d-flex justify-content-between align-items-center">© 2024, Whitestag.ae, All rights reserved</div>
+                <div class="col-lg-5 nav d-flex justify-content-lg-center">
+                    <a href="javascript:void(0);" class="nav-link text-grey">Site Map</a>
+                    <a href="terms-of-use.html" class="nav-link text-grey">Terms of Use</a>
+                    <a href="privacy-policy.html" class="nav-link text-grey">Privacy Policy</a>
                 </div>
-            </div>
-        </div>
-        <div class="container-fluid py-2 position-relative row">
-            <div class="copy col-lg-4 d-flex justify-content-between align-items-center">© 2024, Whitestag.ae, All rights reserved</div>
-            <div class="col-lg-4 nav d-flex justify-content-lg-center">
-                <a href="terms-of-use.html" class="nav-link text-grey">Terms of Use</a>
-                <a href="privacy-policy.html" class="nav-link text-grey">Privacy Policy</a>
             </div>
         </div>
     </footer>
 
-    <div id='whatsapp-chat' class='hide'>
+    <div id='whatsapp-chat' class='whatsapphide'>
         <div class='whatsapp-chat-header'>
             <div class='whatsapp-chat-avatar'>
               <img src='assets/images/whitestag-wp.svg' alt="Tedbree Logo" />

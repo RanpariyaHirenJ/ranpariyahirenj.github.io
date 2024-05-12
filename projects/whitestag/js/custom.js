@@ -42,11 +42,11 @@ $(document).on("click", "#send-it", function() {
         .children(".my-number")
         .text()),
         $(".start-chat,.get-new")
-          .addClass("show")
-          .removeClass("hide"),
+          .addClass("whatsappshow")
+          .removeClass("whatsapphide"),
         $(".home-chat,.head-home")
-          .addClass("hide")
-          .removeClass("show"),
+          .addClass("whatsapphide")
+          .removeClass("whatsappshow"),
         (document.getElementById("get-nama").innerHTML = $(this)
           .children(".info-chat")
           .children(".chat-nama")
@@ -58,13 +58,13 @@ $(document).on("click", "#send-it", function() {
     }),
     $(document).on("click", ".close-chat", function() {
       $("#whatsapp-chat")
-        .addClass("hide")
-        .removeClass("show");
+        .addClass("whatsapphide")
+        .removeClass("whatsappshow");
     }),
     $(document).on("click", ".blantershow-chat", function() {
       $("#whatsapp-chat")
-        .addClass("show")
-        .removeClass("hide");
+        .addClass("whatsappshow")
+        .removeClass("whatsapphide");
     });
 
     AOS.init({
