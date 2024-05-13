@@ -61,12 +61,7 @@ AOS.init({
     mirror: false,
 });
 
-if (!window.Cypress) AOS.init({
-    useClassNames: true,
-    initClassName: false,
-    animatedClassName: 'animated',
-    duration: 800, // values from 0 to 3000, with step 50ms
-  });
+
 
 window.MotiongerInitd9c9073 = function () {
     let motiongerIndex = 1;
@@ -105,3 +100,51 @@ window.MotiongerInitd9c9073 = function () {
     setInterval(nextMotionger, 8000);
 }
 document.addEventListener("DOMContentLoaded", window.MotiongerInitd9c9073);
+
+
+gsap.registerPlugin(ScrollTrigger);
+        
+gsap.to(".Roadmapimg", {
+  scale: 1.5,
+  scrollTrigger: {
+    trigger: ".Roadmapimg",
+    start: "top center",
+    end: "bottom top",
+    scrub: 1
+  }
+});
+
+
+var $animation_elements = $('.basic');
+var $window = $(window);
+
+function check_if_in_view() {
+  var window_height = $window.height();
+  var window_top_position = $window.scrollTop();
+  var window_bottom_position = (window_top_position + window_height);
+
+  $.each($animation_elements, function() {
+    var $element = $(this);
+    var element_height = $element.outerHeight();
+    var element_top_position = $element.offset().top;
+    var element_bottom_position = (element_top_position + element_height);
+
+    if ((element_bottom_position >= window_top_position) &&
+      (element_top_position <= window_bottom_position)) {    
+        $('.basic').trigger('click');
+    } 
+  });
+}
+
+$window.on('scroll resize', check_if_in_view);
+$window.trigger('scroll');
+
+$('.basic').one("click", function () {
+    confetti({
+        particleCount: 200,
+        spread: 100,
+        origin: { y: 0.6 },
+        colors: ['#f8922a', '#023FBA'],
+    });
+});
+
