@@ -75,3 +75,20 @@ $(document).on("click", "#send-it", function() {
       mirror: false,
   });
 
+  var inputQuantity = [];
+  $(function() {     
+    $(".mobilenumber").on("keyup", function (e) {
+      var $field = $(this),
+          val=this.value,
+          $thisIndex=parseInt($field.data("idx"),10); 
+      if (this.validity && this.validity.badInput || isNaN(val) || $field.is(":invalid") ) {
+          this.value = inputQuantity[$thisIndex];
+          return;
+      } 
+      if (val.length > Number($field.attr("maxlength"))) {
+        val=val.slice(0, 10);
+        $field.val(val);
+      }
+      inputQuantity[$thisIndex]=val;
+    });      
+  });

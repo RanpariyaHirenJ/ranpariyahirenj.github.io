@@ -160,10 +160,11 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading-font);
+  font-weight: 400;
 }
 
 h1 {
-  font-size: 67px;
+  font-size: 50px;
   line-height: 1.2;
   text-align: center;
 }
@@ -413,31 +414,31 @@ section {
 
 .bs .col-12{overflow: hidden;}
 .bs .buyers:hover, 
-.bs .sellers:hover{
+.bs .saleers:hover{
   transform: scale(1.1);
 }
 .bs .buyers, 
-.bs .sellers {
+.bs .saleers {
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 .bs .buyers, 
-.bs .sellers {
+.bs .saleers {
   background-size: cover;
   background-repeat: no-repeat;
   height: 580px;
 }
-.bs .sellers {
-  background-image: url(../assets/images/sellers.jpg);
+.bs .saleers {
+  background-image: url(../assets/images/salers.jpg);
 }
 .bs .buyers {
   background-image: url(../assets/images/buyers.jpg);
 }
 
 .bs .buyers:hover .btn-secondary, 
-.bs .sellers:hover .btn-secondary{
+.bs .saleers:hover .btn-secondary{
   background: #BDA76E !important;
   color: #fff !important;
   border: 1px solid #BDA76E !important;
@@ -590,7 +591,9 @@ section.contact-cntr::after {
   z-index: -1;
   border-top-left-radius: 20px;
 }
-section.contact-cntr .input-group input,
+section.contact-cntr .input-group input[type="text"],
+section.contact-cntr .input-group input[type="number"],
+section.contact-cntr .input-group input[type="email"],
 section.contact-cntr .input-group textarea,
 section.contact-cntr .input-group select{
   width: 100%;
@@ -598,6 +601,7 @@ section.contact-cntr .input-group select{
   padding: 12px 24px;
   color: #909090 !important;
 }
+.iti--allow-dropdown{width: 100%;}
 section.contact-cntr .input-group textarea{height: 100px;}
 section.contact-cntr .input-group ::placeholder {
   color: #909090 !important;
@@ -1259,7 +1263,17 @@ a.close-chat {
   transform: translate(-50%, -50%);
   }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
 
 
@@ -1285,7 +1299,7 @@ a.close-chat {
   section {padding: 50px 0;}
   .services a {height: 150px;background-position: center;position: relative;overflow: hidden;}
   .services a img{width: 100%;}
-  .bs .buyers, .bs .sellers {height: 300px;}
+  .bs .buyers, .bs .saleers {height: 300px;}
   .Propertysearch{width: 100% !important;margin-right: 0 !important;margin-bottom: 5px;}
   .imhhover .cardcntr .btn {opacity: 1;}
   footer .container-fluid {padding: 50px 20px;}
