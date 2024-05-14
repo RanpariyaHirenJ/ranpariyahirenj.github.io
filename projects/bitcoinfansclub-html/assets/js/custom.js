@@ -11,7 +11,7 @@ $('.scroll-top').click(function(event) {
     $('html, body').animate({scrollTop: 0}, 600);
 });
 $('.owl-carousel').owlCarousel({
-    loop: true,
+    loop: false,
     margin: 20,
     autoplay: true,
     autoplayTimeout:3000,
