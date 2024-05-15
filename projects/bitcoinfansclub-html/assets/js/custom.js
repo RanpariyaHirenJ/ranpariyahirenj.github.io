@@ -25,6 +25,7 @@ $('.owl-carousel').owlCarousel({
     0: {
         items: 1,
         center: false,
+        autoplay: false,
     },
     600: {
         items: 1
