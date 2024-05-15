@@ -17,7 +17,7 @@ $('.owl-carousel').owlCarousel({
     autoplayTimeout:3000,
     smartSpeed: 250,
     autoplayHoverPause: false,
-    center: true,
+    center: false,
     autoWidth: false,
     navigation:false,
     nav:true,
