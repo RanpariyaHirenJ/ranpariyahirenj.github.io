@@ -10,8 +10,8 @@ if(isset($_POST['submit']))
     $mail->isSMTP(); // send as HTML
     $mail->Host = "smtp.gmail.com"; // SMTP servers
     $mail->SMTPAuth = true; // turn on SMTP authentication
-    $mail->Username = "hiren.websitedeveloper@gmail.com"; // Your mail
-    $mail->Password = 'Hiren@3620'; // Your password mail
+    $mail->Username = " Your mail"; // Your mail
+    $mail->Password = 'Your password mail'; // Your password mail
     $mail->Port = 587; //specify SMTP Port
     $mail->SMTPSecure = 'tls';                               
     $mail->setFrom($_POST['email'],$_POST['name']);
